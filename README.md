@@ -8,5 +8,5 @@ I'm testing some things here
 
 ![ResultsGifTHANKYOU.gif](ResultsGifTHANKYOU.gif)
 
-![marbles.webp](maarbles.webp)
+![marbles.webp](marbles.webp)
 
