@@ -2,18 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My New Hugo Site</title>
-    <link>http://localhost:62652/</link>
+    <link>https://example.org/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Feb 2025 17:42:42 +0100</lastBuildDate>
-    <atom:link href="http://localhost:62652/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My First Post</title>
-      <link>http://localhost:62652/posts/my-first-post/</link>
-      <pubDate>Mon, 10 Feb 2025 17:42:42 +0100</pubDate>
-      <guid>http://localhost:62652/posts/my-first-post/</guid>
-      <description>&lt;h2 id=&#34;qué-pacha&#34;&gt;Qué pacha&lt;/h2&gt;&#xA;&lt;p&gt;Menuda página más guapa estoy haciendo&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
