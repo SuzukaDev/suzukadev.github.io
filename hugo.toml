@@ -4,3 +4,12 @@ title = 'SZK | Suzuka Ka'
 theme = 'gallery'
 [markup.goldmark.renderer]
 unsafe= true
+[params]
+  [params.socialIcons]
+    facebook = "https://www.facebook.com/"
+    instagram = "https://www.instagram.com/"
+    github = "https://github.com/SuzukaDev"
+    youtube = "https://www.youtube.com/@SuzukaKa"
+    twitter = "https://x.com/SuzukaKDev"
+    email = "mailto:suzukakadev@gmail.com"
+    linkedin = "https://linkedin.com/"
