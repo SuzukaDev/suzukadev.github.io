@@ -1,6 +1,6 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'SZK | Suzuka Ka'
 theme = 'gallery'
 [markup.goldmark.renderer]
 unsafe= true
