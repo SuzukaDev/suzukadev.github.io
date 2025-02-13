@@ -40,13 +40,17 @@
 		{{/*  {{ if not ( $extension in [".webp", ".gif"] ) }}  */}}
 		  {{ $thumbnail = $image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
 		  {{ $full = $image.Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) }}
-		  <p>NO ES UN WEBP o GIF! {{ $image.RelPermalink }}</p>
-		  <p>nwaaaaaaaahhhh {{ $image.RelPermalink }}</p>
-		  {{ else }}
-		  <p>Es un {{$extension}}! {{ $image.RelPermalink }}</p>
+		{{/*  {{ else }}  */}}
+		  {{/*  <p>Es un {{$extension}}! {{ $image.RelPermalink }}</p>  */}}
 		
-		{{ end }}  */}}
-  
+		{{ end }}
+		 <script class="debug-script">
+			function showDebugAlert() {
+				alert("jsonify . = " + {{ jsonify .site }});
+			}
+			showDebugAlert()
+		</script>
+
 		{{/*  {{ $full := $image.Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) }}  */}}
 		{{ $color := index $thumbnail.Colors 0 | default "transparent" }}
 		<a class="gallery-item" href="{{ $image.RelPermalink }}" data-pswp-src="{{ $full.RelPermalink }}" data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}" data-pswp-target="{{ $image.Name | urlize }}" title="{{ .Title }}" itemscope itemtype="https://schema.org/ImageObject" style="aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
