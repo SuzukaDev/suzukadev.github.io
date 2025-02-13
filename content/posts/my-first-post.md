@@ -1,15 +1,11 @@
 +++
 date = '2025-02-10T17:42:42+01:00'
-draft = false
+draft = true
 title = 'My First Post'
 +++
 
-## Hola
+## Introduction
 
-Menuda página más guapa estoy haciendo
+This is **bold** text, and this is _emphasized_ text.
 
-woooow
-
-🤡🤡🤡🤡🤡
-
-🐺🐺🐺🐺🐺🐺🐺🐺🐺🐺🐺🐺🐺🐺🐺🐺🐺🐺
+Visit the [Hugo](https://gohugo.io) website!

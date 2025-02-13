@@ -2,8 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/functions/</loc>
+    <lastmod>2025-02-12T20:41:28+01:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-02-10T19:14:28+01:00</lastmod>
+    <lastmod>2025-02-12T20:41:28+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/functions/test_function_2/</loc>
+    <lastmod>2025-02-12T20:41:28+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/functions/test_function/</loc>
+    <lastmod>2025-02-12T20:40:04+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/galleries/dextercillo/</loc>
+    <lastmod>2025-02-11T22:49:40+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/galleries/</loc>
+    <lastmod>2025-02-11T22:49:40+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/prueba-fuera/</loc>
+    <lastmod>2025-02-11T22:35:45+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-02-10T19:14:28+01:00</lastmod>
