@@ -8,8 +8,14 @@
         <div class="relative w-100 w-30-l mb4 bg-white">
           {{ .Render "summary" }}
         </div>
-      {{ end }}
+        {{ end }}
+        {{ range $key, $value := .Site.Data.szk_info }}
+          {{/*  <p> {{ .Site.Data.szk_info }}</p>  */}}
+          <p><strong>{{ $key }}:</strong> {{ $value }}</p>
+        {{ end }}
     </section>
+    <p>{{ .Site.Data.szk_info.TwitterURL }}</p>
     {{- template "_internal/pagination.html" . -}}
   </article>
+
 {{ end }}

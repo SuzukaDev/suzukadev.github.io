@@ -1,0 +1,4 @@
+{{/*  <{{ .Get "tag" | safeHTML }}>{{ .Get "text" | safeHTML }}</{{ .Get "tag" | safeHTML }}>  */}}
+{{/*  <{{ .Get "tag" }}>{{ .Get "text" }}</{{ .Get "tag" }}>  */}}
+
+{{ printf "<%s style=\"color: pink\">%s</%s>" (.Get "tag") (.Get "text") (.Get "tag") | safeHTML }}
