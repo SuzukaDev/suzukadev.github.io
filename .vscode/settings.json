@@ -1,0 +1,8 @@
+{
+    "local_host_url": "http://localhost:1313/",
+    // "win_dir": "build_windows",
+	// "local_host_url": "http://localhost:1313/about/",
+    // "linux_dir": "build",
+    // "osx_dir": "build_osx",
+    // "configure": "../configure --with-bash-malloc=no CFLAGS=\"-O3 -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free\" LDFLAGS=-L/usr/local/lib LIBS=\"-ltcmalloc -lcurl\" CC=clang"
+}
