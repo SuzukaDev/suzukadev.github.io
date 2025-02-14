@@ -1,11 +1,40 @@
-{{/*  <section class="social-icons">
-  {{ range $key, $value := .Site.Params.socialIcons }}
-  <a href="{{ $value }}" target="_blank" rel="noopener noreferrer">
-    {{ $key | title }}
+<section class="social-icons">
+  {{/*  {{ range $key, $value := .Site.Params.socialIcons }}  */}}
+  {{ range .Site.Params.socialIcons }}
+  <a target="_blank" rel="noopener" title="{{ .name }}" href="{{ .url }}">
+     {{/*  <script class="debug-script">
+      function showDebugAlert() {
+        alert(".name = " + {{ .name }});
+      }
+      showDebugAlert()
+    </script>  */}}
+    {{/*  {{ $key | title }}  */}}
+    {{/*  {{ $value.name | title }}  */}}
+    
+    {{/*  <svg width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true">
+      {{ range .svg}}
+      <path d="{{ . }}" />
+      {{ end }}
+    </svg>  */}}
+    
+    {{/*  <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">  */}}
+    
+    {{ $viewBox := .viewBox | default "0 0 24 24" }} <!-- Set default viewBox to "0 0 24 24" if missing -->
+    <svg width="24" height="24" fill="currentColor" viewBox={{ $viewBox }} aria-hidden="true">
+      {{ range .svg}}
+        <path
+        fill-rule="evenodd"
+        d="{{ . }}"
+        clip-rule="evenodd"
+        ></path>
+      {{ end }}
+    </svg>
   </a>
   {{ end }}
-</section>  */}}
-  
+</section>
+
+
+{{/*  
 {{ with .Site.Params.socialIcons }}
   <section class="social-icons">
     {{ with .website }}
@@ -101,7 +130,6 @@
         </svg>
       </a>
     {{ end }}
-    {{/*  Itchio  */}}
     {{ with .itchio }}
       <a target="_blank" rel="noopener" title="Itchio" href="{{ . }}">
         <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -113,3 +141,4 @@
     {{ end }}
   </section>
 {{ end }}
+ */}}
