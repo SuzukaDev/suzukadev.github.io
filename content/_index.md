@@ -13,4 +13,10 @@ menus:
 # sub-galleries on list pages are sorted by date and weight (descending)
 ---
 
-hola soy el index
+Si la imagen tiene espacios, meter la url entre <>
+</images/yo - copia.jpg>:
+![hola](</images/yo - copia.jpg>)
+</images/yo.jpg> o /images/yo.jpg
+![hola](</images/yo.jpg>)
+
+hola soy el indexx
