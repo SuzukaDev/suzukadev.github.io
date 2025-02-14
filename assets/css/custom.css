@@ -1,0 +1,16 @@
+/* custom.css */
+:root {
+	/* --hover-color: {{ .Site.Params.colors.hover }}; */
+	--hover-color: #fe9234;
+}
+
+section.social-icons svg:hover {
+	color: var(--hover-color);
+}
+
+blockquote {
+	/* background-color: pink; */
+	/* TODO cambiar style blockquote */
+	border-left: 10px solid var(--hover-color);
+	padding-left: 10px;
+}
