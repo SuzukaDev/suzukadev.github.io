@@ -21,7 +21,9 @@
 			"label": "Run with drafts and go to localhost",
 			"type": "shell",
 			// "command": "start http://localhost:1313/;hugo server -D",
-			"command": "explorer http://localhost:1313/;hugo server -D",
+			// "command": "explorer http://localhost:1313/;hugo server -D",
+			// TODO poner la variable local_host_url en todos los comandos
+			"command": "explorer ${config:local_host_url};hugo server -D",
 			"options": {
 				"statusbar": {
 					"label": "$(browser) Run (Draft)",
