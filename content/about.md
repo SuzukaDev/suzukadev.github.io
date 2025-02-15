@@ -7,6 +7,15 @@ menu:
     weight: 90
 ---
 
+Index `ref`: {{< ref "index.html" >}}
+<br>
+Home ref: {{< ref "home.html" >}}
+<br>
+<br>
+Home relref: {{< relref "home.html" >}}
+<br>
+Index relref: {{< relref "index.html" >}}
+
 (about.md) This is a demonstration site for the Hugo Gallery theme.
 
 <!-- TODO about me -->
@@ -48,3 +57,12 @@ Graffiti
 
 
 No creo que haya una fuerza superior que nos haga venir a la vida a aprender C# o Python (bueno, C++ tal vez)
+
+
+
+- In my humble opinion, one of today's biggest challenges when it comes to gamedevelopment (or any media) is to catch the attention. I do think that personality plays a big role
+
+Im not interested in being a clone of a clone
+
+
+Hablar del tutorial de BBullet, de lo orgulloso que estaba de que estuviera tan integrado.
