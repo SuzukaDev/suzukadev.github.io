@@ -9,10 +9,6 @@ menu:
 
 Index `ref`: {{< ref "index.html" >}}
 <br>
-Home ref: {{< ref "home.html" >}}
-<br>
-<br>
-Home relref: {{< relref "home.html" >}}
 <br>
 Index relref: {{< relref "index.html" >}}
 
