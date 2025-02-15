@@ -1,6 +1,7 @@
-{{ if .Title }}
+{{/*  {{ if .Title }}  */}}
   <hgroup>
     {{/*  TODO seguir  */}}
+    {{/*  REFACTOR seguir  */}}
     {{/*  <h1>{{ .Title }}</h1>
     {{ with .Params.Description }}
       <p>{{ . | markdownify }}</p>
@@ -10,13 +11,27 @@
 
     {{/*  <img id="szk_pfp" src="{{ .Params.profile_picture }}">  */}}
     {{/*  <img id="szk_pfp" src="{{ .Site.profile_picture }}">  */}}
-    <img id="szk_pfp" src="{{ .Site.Params.profile_picture }}">
-    <p>2</p>
+    {{/*  <img id="szk_pfp" src="{{ .Site.Params.profile_picture }}">  */}}
+    {{ if .Title }}
+      <h2>{{ .Title }}</h2>
+    {{ end }}
+    {{/*  <a href="{{ 'about' | relURL }}">  */}}
+    {{/*  <a href={{< ref "about.md" >}}> <h1>VAS O NO VAS</h1></a>  */}}
+    {{/*  <a href='{{< ref "/about.md" >}}'> <h1>VAS O NO VAS</h1></a>  */}}
+    {{/*  <h2>{{ ref . "about.md" }}</h2>  */}}
+    {{/*  <h2>{{ ref "about.md" }}</h2>  */}}
+    {{/*  <a href={{< ref "about.md" >}}> <h1>VAS O NO VAS</h1></a>  */}}
+    {{/*  <a href= "{{ about | relURL }}""> <h1>VAS O NO VAS</h1></a>  */}}
+    <a href='{{ ref . "about.md" }}'>
+      <img id="szk_pfp" src="{{ .Params.profile_picture }}">
+    </a>
     {{/*  <h1>profile pixture -> {{ .Site.profile_picture }}</h1>  */}}
-    <h2> PROFILE RESUME Suzuka Ka joder  {{ .Title }}</h2>
-    <p>{{ .Params.profile_picture }}</p>
-    <h3>{{ .Params.profile_picture }}</h3>
+    {{/*  <h2> {{ .Params.profile_picture }}</h2>  */}}
+    {{/*  <p>{{ .Params.profile_picture }}</p>  */}}
+    {{/*  <p>{{ .Params.profile_picture }}</p>  */}}
+    {{/*  <h3>{{ .Params.profile_picture }}</h3>  */}}
     {{/*  <h3>{{ .Site.Params.name_profile }}</h3>  */}}
-    <h3>{{ .Params.name_profile }}</h3>
+    {{/*  <h3>{{ .Params.name_profile }}</h3>  */}}
+    {{ .Content | markdownify}}
   </hgroup>
-{{ end }}
+{{/*  {{ end }}  */}}

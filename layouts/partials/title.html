@@ -4,6 +4,5 @@
     {{ with .Params.Description }}
       <p>{{ . | markdownify }}</p>
     {{ end }}
-    <p>{{ .Content | markdownify }}</p>
   </hgroup>
 {{ end }}
