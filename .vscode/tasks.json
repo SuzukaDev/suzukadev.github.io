@@ -23,7 +23,18 @@
 			// "command": "start http://localhost:1313/;hugo server -D",
 			// "command": "explorer http://localhost:1313/;hugo server -D",
 			// TODO poner la variable local_host_url en todos los comandos
-			"command": "explorer ${config:local_host_url};hugo server -D",
+			// "command": "explorer ${config:local_host_url};hugo server -D",
+			"command": "explorer ${config:local_host_url};hugo server -D --noHTTPCache",
+			// "command": "explorer ${config:local_host_url};hugo serve --noHTTPCache --ignoreCache --disableFastRender",
+			// "command": "explorer ${config:local_host_url};hugo server --disableFastRender -l --noHTTPCache",
+			// "command": "explorer ${config:local_host_url};hugo serve --noHTTPCache --ignoreCache",
+
+			// "command": "start msedge ${config:local_host_url};hugo serve --noHTTPCache --ignoreCache",
+			// "command": "start msedge ${config:local_host_url};hugo serve --noHTTPCache --ignoreCache --disableFastRender",
+			// "command": "start msedge ${config:local_host_url};hugo serve --noHTTPCache",
+			// "command": "start msedge ${config:local_host_url};hugo serve --disableFastRender",
+			// "command": "start msedge ${config:local_host_url};hugo serve --noHTTPCache --ignoreCache --disableFastRender --cleanDestinationDir --renderToMemory",
+			// "command": "explorer ${config:local_host_url};hugo serve --noHTTPCache --ignoreCache --disableFastRender --cleanDestinationDir --renderToMemory",
 			"options": {
 				"statusbar": {
 					"label": "$(browser) Run (Draft)",
