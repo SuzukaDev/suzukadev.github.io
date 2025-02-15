@@ -1,0 +1,22 @@
+{{ if .Title }}
+  <hgroup>
+    {{/*  TODO seguir  */}}
+    {{/*  <h1>{{ .Title }}</h1>
+    {{ with .Params.Description }}
+      <p>{{ . | markdownify }}</p>
+    {{ end }}  */}}
+    {{/*  <p>{{ .Content | markdownify }}</p>  */}}
+    {{/*  <img id="szk_pfp" src="/images/yo.jpg">  */}}
+
+    {{/*  <img id="szk_pfp" src="{{ .Params.profile_picture }}">  */}}
+    {{/*  <img id="szk_pfp" src="{{ .Site.profile_picture }}">  */}}
+    <img id="szk_pfp" src="{{ .Site.Params.profile_picture }}">
+    <p>2</p>
+    {{/*  <h1>profile pixture -> {{ .Site.profile_picture }}</h1>  */}}
+    <h2> PROFILE RESUME Suzuka Ka joder  {{ .Title }}</h2>
+    <p>{{ .Params.profile_picture }}</p>
+    <h3>{{ .Params.profile_picture }}</h3>
+    {{/*  <h3>{{ .Site.Params.name_profile }}</h3>  */}}
+    <h3>{{ .Params.name_profile }}</h3>
+  </hgroup>
+{{ end }}
