@@ -2,6 +2,7 @@
 :root {
 	/* --hover-color: {{ .Site.Params.colors.hover }}; */
 	--hover-color: #fe9234;
+	--profile-scale: 1.1;
 }
 
 section.social-icons svg:hover {
@@ -15,7 +16,6 @@ blockquote {
 	padding-left: 10px;
 }
 
-
 #szk_pfp {
 	/* height: 100px; */
 	// height: 30vh;
@@ -24,4 +24,55 @@ blockquote {
 	border-radius: 50%;
 	// padding-left: 100px;
 	/* background-color: red; */
+}
+
+#szk_pfp:hover {
+	// -webkit-box-shadow:0px 0px 41px 0px var(--hover-color);
+	// -moz-box-shadow: 0px 0px 41px 0px var(--hover-color);
+	// box-shadow: 0px 0px 41px 0px var(--hover-color);
+
+	-webkit-box-shadow: 0px 0px 13px 0px rgba(254, 146, 52, 0.9);
+	-moz-box-shadow: 0px 0px 13px 0px rgba(254, 146, 52, 0.9);
+	box-shadow: 0px 0px 13px 0px rgba(254, 146, 52, 0.9);
+
+	// transform:scale(1.1);
+	animation: scaleAnim .1s ease 0s 2 alternate both;
+}
+
+#szk_pfp::not(:hover) {
+	animation: scaleAnim2 .1s ease 0s 1 alternate both;
+
+}
+
+
+@keyframes scaleAnim {
+	0% {
+		transform: scale(1.0);
+	}
+
+	100% {
+		transform: scale(var(--profile-scale));
+	}
+}
+
+@keyframes scaleAnim2 {
+	0% {
+		transform: scale(1.0);
+	}
+
+	100% {
+		transform: scale(var(--profile-scale));
+	}
+}
+
+// .profile-resume a:hover {
+// 	// background-color: red;;
+// 	color: var(--hover-color);
+// 	font-weight: lighter;
+// }
+
+.profile-resume a:hover {
+	// background-color: red;;
+	color: var(--hover-color);
+	font-weight: bold;
 }
