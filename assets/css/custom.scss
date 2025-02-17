@@ -41,9 +41,13 @@ blockquote {
 
 #szk_pfp::not(:hover) {
 	animation: scaleAnim2 .1s ease 0s 1 alternate both;
-
 }
 
+nav.categories ul li a:hover {
+	color: var(--hover-color);
+	border: 1px solid var(--hover-color);
+	font-weight: bold;
+}
 
 @keyframes scaleAnim {
 	0% {
