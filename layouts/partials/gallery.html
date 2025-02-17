@@ -44,12 +44,13 @@
 		  {{/*  <p>Es un {{$extension}}! {{ $image.RelPermalink }}</p>  */}}
 		
 		{{ end }}
-		 <script class="debug-script">
+		{{/*  TODO borrar comentarios debug  */}}
+		 {{/*  <script class="debug-script">
 			function showDebugAlert() {
 				alert("jsonify . = " + {{ jsonify .site }});
 			}
 			showDebugAlert()
-		</script>
+		</script>  */}}
 
 		{{/*  {{ $full := $image.Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) }}  */}}
 		{{ $color := index $thumbnail.Colors 0 | default "transparent" }}
