@@ -1,5 +1,5 @@
 ---
-title: Imprint
+title: Imprint Custom Title
 rss_ignore: true
 layout: page
 menu:
@@ -8,3 +8,4 @@ menu:
 ---
 
 (Put your imprint here)
+Custom Imprint
