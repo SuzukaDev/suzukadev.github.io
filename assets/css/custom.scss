@@ -11,6 +11,7 @@ section.social-icons svg:hover {
 
 blockquote {
 	/* TODO cambiar style blockquote */
+	// IDEAS https://getcssscan.com/css-box-shadow-examples
 	border-left: 10px solid var(--hover-color);
 	padding-left: 10px;
 }
@@ -35,11 +36,11 @@ blockquote {
 	box-shadow: 0px 0px 13px 0px rgba(254, 146, 52, 0.9);
 
 	// transform:scale(1.1);
-	animation: scaleAnim .1s ease 0s 2 alternate both;
+	// animation: scaleAnim 0.1s ease 0s 2 alternate both;
 }
 
 #szk_pfp::not(:hover) {
-	animation: scaleAnim2 .1s ease 0s 1 alternate both;
+	animation: scaleAnim2 0.1s ease 0s 1 alternate both;
 }
 
 nav.categories ul li a:hover {
