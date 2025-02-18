@@ -10,7 +10,6 @@ section.social-icons svg:hover {
 }
 
 blockquote {
-	/* background-color: pink; */
 	/* TODO cambiar style blockquote */
 	border-left: 10px solid var(--hover-color);
 	padding-left: 10px;
@@ -51,7 +50,7 @@ nav.categories ul li a:hover {
 
 @keyframes scaleAnim {
 	0% {
-		transform: scale(1.0);
+		transform: scale(1);
 	}
 
 	100% {
@@ -61,7 +60,7 @@ nav.categories ul li a:hover {
 
 @keyframes scaleAnim2 {
 	0% {
-		transform: scale(1.0);
+		transform: scale(1);
 	}
 
 	100% {
