@@ -49,6 +49,14 @@ nav.categories ul li a:hover {
 	font-weight: bold;
 }
 
+.description-link {
+	color: var(--hover-color);
+	&:hover{
+		font-weight: bold;
+	}
+}
+
+
 @keyframes scaleAnim {
 	0% {
 		transform: scale(1);
