@@ -24,6 +24,11 @@ blockquote {
 	border-radius: 50%;
 	// padding-left: 100px;
 	/* background-color: red; */
+
+	// ROTATION TEST
+	// overflow: hidden;
+    // transition-duration: 10.5s;
+    // transition-property: transform;
 }
 
 #szk_pfp:hover {
@@ -35,8 +40,12 @@ blockquote {
 	-moz-box-shadow: 0px 0px 13px 0px rgba(254, 146, 52, 0.9);
 	box-shadow: 0px 0px 13px 0px rgba(254, 146, 52, 0.9);
 
-	// transform:scale(1.1);
-	// animation: scaleAnim 0.1s ease 0s 2 alternate both;
+	// ROTATION TEST
+	// transform: rotate(360deg);
+    // -webkit-transform: rotate(2*360deg);
+
+	transform:scale(1.1);
+	animation: scaleAnim 0.1s ease 0s 2 alternate both;
 }
 
 #szk_pfp::not(:hover) {
