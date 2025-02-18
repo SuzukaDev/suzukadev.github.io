@@ -5,6 +5,7 @@ theme = 'gallery'
 [markup.goldmark.renderer]
 unsafe= true
 [params]
+  keywords = ['gamedev', 'gamedeveloper', 'engeneer', 'multimedia engineer', '2D art', '3D art', 'music production', 'alicante', 'spain']
     [[params.socialIcons]]
       name = "GitHub"
       color = "#181717"
