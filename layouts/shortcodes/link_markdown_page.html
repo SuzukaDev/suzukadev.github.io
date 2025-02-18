@@ -1,0 +1,15 @@
+{{/*  Returns a <a> </a> tag with a link to a markdown page*/}}
+
+{{/*  USE EXAMPLE  */}}
+{{/*  {{< link_markdown_page text="This go to about.md page" page="about" >}}  */}}
+
+{{ $page := ( .Get "page" ) }}
+{{ $page_url := ref . $page }}
+{{/*  <p>Debug: $page = {{$page}}</p>  */}}
+{{/*  <p>Debug: $page_url ={{$page_url}}</p>  */}}
+
+
+
+{{/*  <a href="{{ ref . $page }}"> {{ .Get "text"}} </a>  */}}
+{{/*  <a class="description-link" href="{{ $page_url }}"> {{ .Get "text"}} </a>  */}}
+<a class="description-link" href="{{ $page_url }}"><span title="{{$page_url}}">{{ .Get "text"}}</span></a>
