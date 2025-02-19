@@ -1,0 +1,41 @@
+{{/*  Returns a number with the total albums*/}}
+
+{{/*  USE EXAMPLE  */}}
+{{/*  {{< link_markdown_page text="This go to about.md page" page="about" >}}  */}}
+
+{{/*  <pre>. = {{ debug.Dump . }}</pre>  */}}
+{{/*  {{ $section := .Page.Section }}  */}}
+{{/*  {{ $pages := where site.RegularPages "Section" $section }}  */}}
+{{/*  {{$param := .Get 0}}  */}}
+{{/*  {{$param.Title}}  */}}
+{{/*  <pre>. = {{ debug.Dump $param }}</pre>  */}}
+{{/*  {{ with .Page }}{{ .Title }}{{ end }}  */}}
+
+{{/*  {{.Page.Title}}  */}}
+
+{{/*  {{.Title}}  */}}
+{{ if .Page.IsHome}}
+	this is home page!
+{{ else }}
+	{{ $pages := .Page.Pages }}
+	{{ len $pages }}
+{{ end }}
+
+
+
+
+
+
+{{/*  2  */}}
+{{/*  {{len .Page.Pages}}  */}}
+
+{{/*  {{ $page := ( .Get "page" ) }}  */}}
+{{/*  {{ $page_url := ref . $page }}  */}}
+{{/*  <p>Debug: $page = {{$page}}</p>  */}}
+{{/*  <p>Debug: $page_url ={{$page_url}}</p>  */}}
+
+
+
+{{/*  <a href="{{ ref . $page }}"> {{ .Get "text"}} </a>  */}}
+{{/*  <a class="description-link" href="{{ $page_url }}"> {{ .Get "text"}} </a>  */}}
+{{/*  <a class="description-link" href="{{ $page_url }}"><span title="{{$page_url}}">{{ .Get "text"}}</span></a>  */}}
