@@ -44,6 +44,18 @@
 			}
 		},
 		{
+			"label": "Run server only (no cache)",
+			"type": "shell",
+			"command": "hugo server -D --noHTTPCache",
+			"options": {
+				"statusbar": {
+					"label": "$(browser) Server (-D, No cache)",
+					"color": "#27b0ff",
+					"detail": "Runs the server (with drafts included)"
+				}
+			}
+		},
+		{
 			"label": "Run and go to localhost",
 			"type": "shell",
 			// "command": "start http://localhost:1313/;hugo server -D",
