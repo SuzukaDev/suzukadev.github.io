@@ -1,0 +1,18 @@
+{{/*  <ul id="breadcrumbs">
+    {{- range .Ancestors.Reverse }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{- end }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+</ul>  */}}
+<div id="breadcrumbs">
+    {{- range .Ancestors.Reverse }}
+        {{ if not .Page.IsHome}}
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a><span> → </span>
+        {{ else }}
+            <a href="{{ .RelPermalink }}">Index</a><span> → </span>
+        {{ end }}
+    {{- end }}
+    {{/*  <a class="selected-breadcrumb" href="{{ .RelPermalink }}">{{ .Title }}</a>  */}}
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{/*  <span class="selected-breadcrumb" href="{{ .RelPermalink }}">{{ .Title }}</span>  */}}
+</div>
