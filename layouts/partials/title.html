@@ -1,5 +1,7 @@
 {{ if .Title }}
   <hgroup>
+    {{/*  REFACTOR breadcrumbs  */}}
+    {{/*  {{ partial "breadcrumbs.html" . }}  */}}
     <h1>{{ .Title }}</h1>
     {{ with .Params.Description }}
       <p>{{ . | markdownify }}</p>

@@ -16,6 +16,24 @@
 //   font-size: inherit;
 // }
 
+.selected-breadcrumb {
+	// color: #fd0000;
+	color: var(--hover-color);
+
+}
+
+#breadcrumbs {
+	// colorgb(100, 100, 100)3a3;
+	font-style: italic;
+	color: #6b6b6b;
+	margin-top: 0px;
+	padding-top: 0px;
+	&>a:hover{
+		// color: pink;
+		text-decoration: underline;
+	}
+}
+
 section.social-icons svg:hover {
 	color: var(--hover-color);
 }
