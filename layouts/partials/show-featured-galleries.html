@@ -6,7 +6,11 @@
 
 {{/*  Get only pages that have 'galleries' as ancestor and that have the 'featured_gallery' param as 'true' */}}
 {{/*  {{ range where (where site.RegularPages "Ancestors" "intersect" (slice $galleries)) "Params.featured_gallery" true }}  */}}
-{{ $featured_albums := where (where site.RegularPages "Ancestors" "intersect" (slice $galleries)) "Params.featured_gallery" true }}
+
+{{/*  This don't get 'sections', only pages */}}
+{{/*  {{ $featured_albums := where (where site.RegularPages "Ancestors" "intersect" (slice $galleries)) "Params.featured_gallery" true }}  */}}
+
+{{ $featured_albums := where (where site.Pages "Ancestors" "intersect" (slice $galleries)) "Params.featured_gallery" true }}
 {{/*  <h1>Total featured albums: {{len $featured_albums }}</h1>  */}}
 
 {{ if gt (len $featured_albums) 0 }}
