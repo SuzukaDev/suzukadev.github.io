@@ -1,5 +1,13 @@
 {{ $gallery := "" }}
 {{ $images := .Resources.ByType "image" }}
+
+{{/*  {{ $images := .Resources.Match "images/*" }}  */}}
+
+{{/*  {{ if gt (len $images) 0 }}
+  {{ $images := .Resources.Match "images/*" }}
+  {{ warnf "DEBUG: $images= %v" $images}}
+{{ end }}  */}}
+
 {{ if gt (len $images) 0 }}
   {{ $index := 0 }}
   {{ range $i, $image := $images }}
