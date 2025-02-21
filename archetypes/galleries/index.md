@@ -20,6 +20,13 @@ menus: "main"
 #     params:
 #       cover: true
 
+# resources:
+#   - src: images/cat-1.jpg # NOTE don't forget the relative route! (If the image is inside 'images/' add it!)
+#     title: Brown tabby cat on white stairs
+#     params:
+#       cover: true
+#       date: 2024-02-18T13:04:30+0100
+
 # title – title of the album, shown in the album list and on the album page.
 # date – album date, used for sorting (newest first).
 # description – description shown on the album page. Rendered as markdown to enable adding links and some formatting.
