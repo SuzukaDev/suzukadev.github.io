@@ -7,9 +7,9 @@ author: "Suzuka Ka"
 menus: "main"
 # categories: ["nature"]
 # weight: 3
-# params:
+params:
 #   private: false
-#   featured: false
+  featured: true
 #   featured_image: azzedine-rouichi-ZS_XuDZmxpM-unsplash.jpg
 #   theme: dark
 #   sort_order: desc
