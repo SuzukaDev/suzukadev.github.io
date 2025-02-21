@@ -8,8 +8,9 @@ menus: "main"
 # categories: ["nature"]
 # weight: 3
 # params:
-#   private: false
-#   featured: false
+#   private: true
+#   featured: true # If true the gallery will be featured in home with a big picture
+#   featured_gallery: true # If true, the gallery will be featured in the home page (with an smaller size)
 #   featured_image: azzedine-rouichi-ZS_XuDZmxpM-unsplash.jpg
 #   theme: dark
 #   sort_order: desc
