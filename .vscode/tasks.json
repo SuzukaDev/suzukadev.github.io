@@ -49,9 +49,9 @@
 			"command": "hugo server -D --noHTTPCache",
 			"options": {
 				"statusbar": {
-					"label": "$(browser) Server (-D, No cache)",
+					"label": "$(broadcast) Server (-D, No cache)",
 					"color": "#27b0ff",
-					"detail": "Runs the server (with drafts included)"
+					"detail": "Runs the server only (no opening explorer) with drafts included"
 				}
 			}
 		},
