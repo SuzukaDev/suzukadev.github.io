@@ -8,7 +8,20 @@
     {{ end }}
   {{ end }}
   {{ $featured := ($images.GetMatch (.Params.featured_image | default "*feature*")) | default (index $images $index) }}
-  {{ $thumbnail := $featured.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
+
+  {{/*  Fix for .webps  */}}
+  {{/*  Do not process the image if the image is a gif or webp  */}}
+  {{ $thumbnail := $featured }}
+  {{/*  {{ if and (ne $featured.MediaType.SubType "gif") (ne $featured.MediaType.SubType "webp") }}  */}}
+  {{ if or (eq $featured.MediaType.SubType "gif") (eq $featured.MediaType.SubType "webp") }}
+    {{ $thumbnail := $featured }}
+  {{ else }}
+    {{ $thumbnail := $featured.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
+  {{ end }}
+  
+  {{/*  Original code  */}}
+  {{/*  {{ $thumbnail := $featured.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}  */}}
+
   {{ $color := index $thumbnail.Colors 0 | default "transparent" }}
   {{ $imageCount := 0 }}
   {{ $albumCount := 0 }}
