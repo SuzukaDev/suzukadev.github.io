@@ -1,6 +1,6 @@
 ---
 title: 'Dessign'
-description: (Galery description)
+description: Logos, icons, etc
 date: '2025-02-21T12:43:29+01:00'
 draft: false
 author: "Suzuka Ka"
