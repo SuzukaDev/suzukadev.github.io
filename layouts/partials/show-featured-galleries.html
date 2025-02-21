@@ -1,0 +1,18 @@
+{{/*  Shows an album-card of the galleries INSIDE the 'galleries' content folder which have the "Params.featured_gallery" set to 'true' */}}
+
+{{/* INFO https://discourse.gohugo.io/t/how-can-i-list-all-pages-in-a-sub-folder/32029/4  */}}
+{{/*  {{ $galleries := site.GetPage "galleries" }}  */}}
+{{ $galleries := site.GetPage "section" "galleries" }}
+
+{{/*  Get only pages that have 'galleries' as ancestor and that have the 'featured_gallery' param as 'true' */}}
+{{/*  {{ range where (where site.RegularPages "Ancestors" "intersect" (slice $galleries)) "Params.featured_gallery" true }}  */}}
+{{ $featured_albums := where (where site.RegularPages "Ancestors" "intersect" (slice $galleries)) "Params.featured_gallery" true }}
+{{/*  <h1>Total featured albums: {{len $featured_albums }}</h1>  */}}
+
+{{ if gt (len $featured_albums) 0 }}
+	<section class="galleries">
+		{{ range $featured_albums }}
+			{{ partial "album-card.html" . }}
+		{{ end }}
+	</section>
+{{ end }}
