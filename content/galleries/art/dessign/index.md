@@ -10,6 +10,16 @@ weight: 1
 params:
   private: false
   featured: true
+resources:
+  - src: images/lettering-hitchiker.png
+    title: Logo for a song (I know hitchhiker is with 2 h's, is on purppose :D )
+    params:
+      cover: true
+  - src: images/simple-texture-merger-icon.png
+    title: Logo for a song (I know hitchhiker is with 2 h's, is on purppose :D )
+    params:
+      cover: false
+    #   date: 2024-02-18T13:04:30+0100
 #   featured_image: azzedine-rouichi-ZS_XuDZmxpM-unsplash.jpg
 #   theme: dark
 #   sort_order: desc
