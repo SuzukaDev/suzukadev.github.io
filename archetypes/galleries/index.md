@@ -36,7 +36,7 @@ menus: "main"
 # params.featured_image – name of the image file used for the album thumbnail. If not set, the first image which contains feature in its filename is used, otherwise the first image in the album.
 # params.private – if set to true, this album is not shown in the album overview and is excluded from RSS feeds.
 # params.featured – if set to true, this album is featured on the homepage (even if private).
-# params.sort_by – property used for sorting images in an album. Default is Name (filename), but can also be Date.
+# params.sort_by – property used for sorting images in an album. Default is Name (filename), but can also be Date. Or Params.weight, Params.src
 # params.sort_order – sort order. Default is asc.
 # params.theme – color theme for this page. Defaults to defaultTheme from configuration.
 ---
