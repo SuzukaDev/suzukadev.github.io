@@ -33,10 +33,9 @@
 		{{/*  {{ $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}  */}}
   
 		{{/*  Fix for .webps  */}}
-		{{ $extension := lower (path.Ext $image.RelPermalink) }}
 		{{ $thumbnail := $image }}
 		{{ $full := $image }}
-		{{ if and (not (eq $extension ".webp")) (not (eq $extension ".gif")) }}
+		{{ if and (ne $image.MediaType.SubType "gif") (ne $image.MediaType.SubType "webp") }}
 		{{/*  {{ if not ( $extension in [".webp", ".gif"] ) }}  */}}
 		  {{ $thumbnail = $image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
 		  {{ $full = $image.Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) }}
