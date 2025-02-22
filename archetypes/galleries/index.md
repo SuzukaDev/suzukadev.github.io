@@ -12,6 +12,7 @@ menus: "main"
 #   featured: true # If true the gallery will be featured in home with a big picture
 #   featured_gallery: true # If true, the gallery will be featured in the home page (with an smaller size)
 #   featured_image: azzedine-rouichi-ZS_XuDZmxpM-unsplash.jpg
+#   gifs_transparent_bg: true # if true, the background of the .gifs will be transparent
 #   show_text_on_top: true # if true, shows the markdown text on top of the gallery. If false or not set, shows the markdown at the bottom
 #   theme: dark
 #   sort_order: desc
