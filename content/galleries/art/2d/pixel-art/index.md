@@ -7,7 +7,8 @@ author: "Suzuka Ka"
 menus: "main"
 # categories: ["nature"]
 # weight: 3
-# params:
+params:
+  gifs_transparent_bg: true # if true, the background of the .gifs will be transparent
 #   private: true
 #   featured: true # If true the gallery will be featured in home with a big picture
 #   featured_gallery: true # If true, the gallery will be featured in the home page (with an smaller size)
