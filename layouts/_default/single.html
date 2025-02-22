@@ -1,10 +1,20 @@
 {{ define "main" }}
   {{ partial "title.html" . }}
-  {{ partial "gallery.html" . }}
+
+  {{ if not .Params.show_text_on_top }}
+    {{ partial "gallery.html" . }}
+  {{ end }}
+
+  {{/*  Markdown content  */}}
   {{ with .Content }}
   <section class="prose">
     {{ . }}
   </section>
   {{ end }}
+
+  {{ if .Params.show_text_on_top }}
+    {{ partial "gallery.html" . }}
+  {{ end }}
+
   {{ partial "related.html" . }}
 {{ end }}
