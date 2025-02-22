@@ -7,14 +7,16 @@
 
   {{/*  Markdown content  */}}
   {{ with .Content }}
-  <section class="prose">
-    {{ . }}
-  </section>
+  <hgroup>
+    <section class="prose">
+      {{ . }}
+    </section>
+  </hgroup>
   {{ end }}
 
   {{ if .Params.show_text_on_top }}
     {{ partial "gallery.html" . }}
   {{ end }}
 
-  {{ partial "related.html" . }}
+    {{ partial "related.html" . }}
 {{ end }}
