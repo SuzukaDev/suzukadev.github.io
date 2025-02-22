@@ -27,6 +27,7 @@ menus: "main"
 #     params:
 #       cover: true
 #       date: 2024-02-18T13:04:30+0100
+#       weight: 20
 
 # title – title of the album, shown in the album list and on the album page.
 # date – album date, used for sorting (newest first).
