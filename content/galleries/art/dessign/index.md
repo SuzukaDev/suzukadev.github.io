@@ -10,6 +10,7 @@ weight: 1
 params:
   private: false
   featured: true
+  # show_text_on_top: true # if true, shows the markdown text on top of the gallery. If false or not set, shows the markdown at the bottom
 resources:
   - src: images/lettering-hitchiker.png
     title: Logo for a song (I know hitchhiker is with 2 h's, is on purppose :D )
