@@ -31,6 +31,7 @@
 	  
 	  {{/*  Get the param here before . context changes  */}}
 	  {{ $_transparent_bg_gifs := .Params.transparent_bg_for_gifs }}
+	  {{ $_transparent_bg_pngs := .Params.transparent_bg_for_pngs }}
 	  
 	  {{ range sort $images (.Params.sort_by | default "Name") (.Params.sort_order | default "asc") }}
 		{{ $image := .image }}
@@ -60,6 +61,10 @@
 
 		{{ $_is_gif := eq $image.MediaType.SubType "gif"}}
 		{{ if eq $_is_gif $_transparent_bg_gifs }}
+			{{ $color = "transparent" }}
+		{{ end }}
+
+		{{ if eq (eq $image.MediaType.SubType "png") $_transparent_bg_pngs }}
 			{{ $color = "transparent" }}
 		{{ end }}
 		
