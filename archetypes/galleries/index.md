@@ -8,7 +8,7 @@ menus: "main"
 # categories: ["nature"]
 # weight: 3
 # params:
-#   private: true
+#   private: true # This gallery does not show in lists, RSS, sitemaps, etc. On list pages, use cascade to hide descendants.
 #   featured: true # If true the gallery will be featured in home with a big picture
 #   featured_gallery: true # If true, the gallery will be featured in the home page (with an smaller size)
 #   featured_image: azzedine-rouichi-ZS_XuDZmxpM-unsplash.jpg
