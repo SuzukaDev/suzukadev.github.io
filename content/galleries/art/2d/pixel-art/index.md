@@ -1,6 +1,7 @@
 ---
 title: 'Pixel Art'
-description: (Galery description)
+# TODO poner el link de K-Sprite
+description: Tools; Photoshop, Aseprite and mostly Krita and {{< link_markdown_page text="K-Sprite, my own pixel art editor" page="about" >}} [SZK Pixel Art Suite](https://orb91.gumroad.com/l/szk-krita-pixel-art-suite?layout=profile) haciendo `proyectos`
 date: '2025-02-22T23:13:24+01:00'
 draft: false
 author: "Suzuka Ka"
