@@ -8,7 +8,8 @@ menus: "main"
 # categories: ["nature"]
 # weight: 3
 params:
-  transparent_bg_for_gifs: true # if true, the background of the .gifs will be transparent
+  transparent_bg_for_gifs: true # if true, the background of the .gif's will be transparent
+  transparent_bg_for_pngs: true # if true, the background of the .png's will be transparent
 #   private: true
 #   featured: true # If true the gallery will be featured in home with a big picture
 #   featured_gallery: true # If true, the gallery will be featured in the home page (with an smaller size)
