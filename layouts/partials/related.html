@@ -6,6 +6,7 @@
   </hgroup>
   <section class="galleries">
     {{ range . }}
+      {{/*  <h1>{{.Title}}</h1>  */}}
       {{ partial "album-card.html" . }}
     {{ end }}
   </section>
