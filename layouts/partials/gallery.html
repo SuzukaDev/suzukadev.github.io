@@ -30,7 +30,7 @@
 	  {{ end }}
 	  
 	  {{/*  Get the param here before . context changes  */}}
-	  {{ $_transparent_bg_gifs := .Params.gifs_transparent_bg }}
+	  {{ $_transparent_bg_gifs := .Params.transparent_bg_for_gifs }}
 	  
 	  {{ range sort $images (.Params.sort_by | default "Name") (.Params.sort_order | default "asc") }}
 		{{ $image := .image }}
