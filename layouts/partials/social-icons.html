@@ -1,7 +1,16 @@
 <section class="social-icons">
   {{/*  {{ range $key, $value := .Site.Params.socialIcons }}  */}}
-  {{ range .Site.Params.socialIcons }}
-  <a target="_blank" rel="noopener" title="{{ .name }}" href="{{ .url }}">
+  {{$socials := .Site.Data.social_sites}}
+
+
+  {{/*  <h1> {{ $socials}}</h1>  */}}
+  {{/*  <pre>$socials = {{ debug.Dump $socials }}</pre>  */}}
+  {{ range .Site.Params.socials }}
+    {{ $key := .}}
+    {{$social_data := index $socials .}}
+    {{/*  <p>{{.}}</p>  */}}
+
+    <a target="_blank" rel="noopener" title="{{ $social_data.name }}" href="{{ $social_data.url }}">
      {{/*  <script class="debug-script">
       function showDebugAlert() {
         alert(".name = " + {{ .name }});
@@ -19,17 +28,23 @@
     
     {{/*  <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">  */}}
     
-    {{ $viewBox := .viewBox | default "0 0 24 24" }} <!-- Set default viewBox to "0 0 24 24" if missing -->
+    {{/*  <p>{{$social_data.svg_content}}</p>  */}}
+
+    {{ $viewBox := $social_data.viewBox | default "0 0 24 24" }} <!-- Set default viewBox to "0 0 24 24" if missing -->
     <svg width="24" height="24" fill="currentColor" viewBox={{ $viewBox }} aria-hidden="true">
-      {{ range .svg}}
+    {{ if $social_data.svg_content }}
+      {{$social_data.svg_content | safeHTML}}
+    {{ else }}
+      {{ range $social_data.svg_paths}}
         <path
         fill-rule="evenodd"
         d="{{ . }}"
         clip-rule="evenodd"
         ></path>
       {{ end }}
+    {{ end }}
     </svg>
-  </a>
+    </a>
   {{ end }}
 </section>
 
