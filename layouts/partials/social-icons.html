@@ -31,7 +31,7 @@
     {{/*  <p>{{$social_data.svg_content}}</p>  */}}
 
     {{ $viewBox := $social_data.viewBox | default "0 0 24 24" }} <!-- Set default viewBox to "0 0 24 24" if missing -->
-    <svg width="24" height="24" fill="currentColor" viewBox={{ $viewBox }} aria-hidden="true">
+    <svg width="24" height="24" fill="currentColor" viewBox={{ $viewBox }} aria-hidden="true" style="svg:hover">
     {{ if $social_data.svg_content }}
       {{$social_data.svg_content | safeHTML}}
     {{ else }}
