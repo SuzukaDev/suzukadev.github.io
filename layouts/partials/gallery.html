@@ -2,32 +2,35 @@
 	<div id="gallery" style="visibility: hidden; height: 1px; overflow: hidden">
 	  {{ $images := slice }}
 	  {{ range $image := .Resources.ByType "image" }}
-		{{ $title := "" }}
-		{{ $date := "" }}
-		{{ with $image.Exif }}
-		  {{ $date = .Date }}
-		  {{ with .Tags.ImageDescription }}
-			{{/* Title from EXIF ImageDescription */}}
-			{{ $title = . }}
-		  {{ end }}
-		{{ end }}
-		{{ if ne $image.Title $image.Name }}
-		  {{/* Title from front matter */}}
-		  {{ $title = $image.Title }}
-		{{ end }}
-		{{ if $image.Params.Date }}
-		  {{/* Date from front matter */}}
-		  {{ $date = time $image.Params.Date }}
-		{{ end }}
-		{{ $images = $images | append (dict
-		  "Name" $image.Name
-		  "Title" $title
-		  "Date" $date
-		  "image" $image
-		  "Params" $image.Params
-		  )
-		}}
-	  {{ end }}
+	  	{{/*  Exclude images in hidden folder  */}}
+		{{ if not (strings.Contains $image.RelPermalink "hidden/") }}
+			{{ $title := "" }}
+			{{ $date := "" }}
+			{{ with $image.Exif }}
+			{{ $date = .Date }}
+			{{ with .Tags.ImageDescription }}
+				{{/* Title from EXIF ImageDescription */}}
+				{{ $title = . }}
+			{{ end }}
+			{{ end }}
+			{{ if ne $image.Title $image.Name }}
+			{{/* Title from front matter */}}
+			{{ $title = $image.Title }}
+			{{ end }}
+			{{ if $image.Params.Date }}
+			{{/* Date from front matter */}}
+			{{ $date = time $image.Params.Date }}
+			{{ end }}
+			{{ $images = $images | append (dict
+			"Name" $image.Name
+			"Title" $title
+			"Date" $date
+			"image" $image
+			"Params" $image.Params
+			)
+			}}
+		{{ end }} {{/*   if  */}}
+	  {{ end }} {{/*   range  */}}
 	  
 	  {{/*  Get the param here before . context changes  */}}
 	  {{ $_transparent_bg_gifs := .Params.transparent_bg_for_gifs }}
