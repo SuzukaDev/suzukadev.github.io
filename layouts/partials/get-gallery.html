@@ -1,5 +1,24 @@
 {{ $gallery := "" }}
-{{ $images := .Resources.ByType "image" }}
+{{/*  ORIGINAL: Gets all images  */}}
+{{/*  {{ $images := .Resources.ByType "image" }}  */}}
+
+{{/*  Exclude images in hidden folder  */}}
+{{ $_all_images := .Resources.ByType "image" }}
+{{ $images := slice }}
+{{ range $_all_images }}
+  {{ if not (strings.Contains .RelPermalink "hidden/") }}
+    {{/*  {{ warnf "ADDED: RelPermalink= %v" .RelPermalink}}  */}}
+    {{ $images = $images | append . }}
+  {{ end }}
+{{ end }}
+
+
+{{/*  DEBUG  */}}
+{{/*  {{range $images}}
+{{ warnf "DEBUG: RelPermalink= %v" .RelPermalink}}
+{{ end }}  */}}
+
+
 
 {{/*  {{ $images := .Resources.Match "images/*" }}  */}}
 
