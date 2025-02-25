@@ -6,4 +6,4 @@ theme = 'gallery'
 unsafe= true
 [params]
   keywords = ['gamedev', 'gamedeveloper', 'engeneer', 'multimedia engineer', '2D art', '3D art', 'music production', 'alicante', 'spain']
-  socials = ['instagram', 'github', 'twitter', 'youtube','gumroad', 'itchio', 'artstation', 'email']
+  socials = ['github', 'twitter', 'youtube','gumroad', 'itchio', 'email']
