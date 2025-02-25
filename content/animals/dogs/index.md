@@ -5,7 +5,7 @@ title: Dogs
 description: Descripción {{< link_markdown_page text="cambiar este texto y link a la página de K-Sprite" page="about" >}}
 categories: ["animals", "nature", "perretes"]
 params:
-  featured: true
+  featured: false
 resources:
   - src: images/dani.png
     title: Brown tabby cat on white <a href="https://gohugo.io/content-management/shortcodes/#article"> hola </a>  {{< link_markdown_page text="texto" >}}

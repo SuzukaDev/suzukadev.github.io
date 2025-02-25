@@ -9,7 +9,7 @@ menus: "main"
 # weight: 3
 params:
 #   private: false
-  featured: true
+  featured: false
 #   featured_image: azzedine-rouichi-ZS_XuDZmxpM-unsplash.jpg
 #   theme: dark
 #   sort_order: desc
