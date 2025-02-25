@@ -12,6 +12,7 @@ sort_by: Params.src
 params:
   private: false
   featured: true
+  transparent_bg_for_gifs: true # if true, the background of the .gif's will be transparent
   # show_text_on_top: true # if true, shows the markdown text on top of the gallery. If false or not set, shows the markdown at the bottom
 resources:
   - src: images/lettering-hitchiker.png
