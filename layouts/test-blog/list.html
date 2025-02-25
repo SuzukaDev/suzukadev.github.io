@@ -1,0 +1,59 @@
+{{ define "main" }}
+
+{{ $blogPages := where .Site.Pages "Section" "private" }}
+{{/*  {{ $blogPages := where .Site.Pages "Pages" "private" }}  */}}
+{{/*  {{ $blogCategories := $blogPages.Params.categories | uniq }}  */}}
+{{/*  {{ $uniqueCategories := $blogPages | apply .Params.categories | uniq | sort }}  */}}
+
+
+{{ $categories := slice }}
+{{ range $blogPages }}
+  {{ range .Params.categories }}
+    {{ $categories = $categories | append . }}
+  {{ end }}
+{{ end }}
+{{ $uniqueCategories := $categories | uniq | sort }}
+
+
+{{/*  {{ $blogCategories := $blogPages.categories | uniq }}  */}}
+<h1>LIST PRIVATE</h1>
+<nav class="categories">
+    <ul>
+        {{/*  {{ range $blogCategories }}  */}}
+        {{ range $uniqueCategories }}
+        {{/*  {{ range $blogPages }}  */}}
+
+            <li>
+              {{/*  <p>{{.Params.categories}}</p>  */}}
+              {{/*  <p>aaa {{.Categories}}</p>  */}}
+              {{/*  <p>aaa {{.Categories}}</p>  */}}
+                <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+            </li>
+        {{ end }}
+    </ul>
+</nav>
+{{/*  
+{{ with site.Taxonomies.categories }}
+  <nav class="categories">
+    <ul>
+      {{ range . }}
+        <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+{{ end }}  */}}
+
+<h1>PAGINAS:</h1>
+<ul>
+
+  {{ range .RegularPages }}
+  {{/*  {{ range .Site.RegularPages }}  */}}
+  {{/*  <h1>list private oleeee</h1>  */}}
+  <li>
+    {{/*  <h1>{{ .Title}}</h1>  */}}
+    <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+  </li>
+  
+  {{ end }}
+</ul>
+{{ end }}
