@@ -14,7 +14,7 @@ description: Esta es la descripcion del Deck Motif
 <!-- <iframe src="/game/Deck Motif.html" style="border:none; background-color:transparent; height:100vh; "></iframe> -->
 <!-- <iframe src="/game/Deck Motif.html" style="border:none; background-color:transparent; height:100vh;"></iframe> -->
 hola que tal estamos pues aqui bien asdfasdjh sdkfjghs dkjfgh skjdfhgksdfkjgh sdfghksj dhfgkjsdfkjg h
-<iframe src="/apps/deck-motif/Deck Motif.html" style="border:none; background-color:transparent; height:100vh; width:100%"></iframe>
+<iframe src="/apps/deck-motif/Deck Motif.html" style="border:none; background-color:transparent; height:95vh; width:100%"></iframe>
 <!-- <section> -->
 <!-- <iframe src="/game/Deck Motif.html" style="border:none; background-color:transparent; width:90vw; height:90vh;"></iframe> -->
 <!-- </section> -->
