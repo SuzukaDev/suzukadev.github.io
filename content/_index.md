@@ -17,8 +17,6 @@ menus:
 ---
 Engineer 🧠 and Gamedev 🎮with -a **strong**- passion for arts 🎨
 
-[Read more about me]({{< relref "about.md" >}}) or [check my work here (❗cambiar el link de esto❗)]({{< relref "about.md" >}})
+Read more [about me]({{< relref "about.md" >}}) or [check my work here]({{< relref "about.md" >}})
 
-Check my work here or know more about me
-
-Or get to know me better
+(TODO: ❗cambiar el link de "check my work here")
