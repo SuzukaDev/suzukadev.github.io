@@ -7,6 +7,13 @@ menu:
     weight: 90
 ---
 
+We are here for learning. I personally think that is a positive philosophy, because it means that no matter what is coming to your life, positive 
+I think it
+each day, when it comes to your mind, your habilities
+
+I'm amazed by today's possibilities
+
+
 Index `ref`: {{< ref "index.html" >}}
 <br>
 <br>
