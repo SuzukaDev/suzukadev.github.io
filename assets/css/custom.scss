@@ -183,8 +183,26 @@ nav.categories ul li a:hover {
 // 	font-weight: lighter;
 // }
 
-.profile-resume a:hover {
-	// background-color: red;;
+// Links at the profile-resume (at index)
+.profile-resume a {
+	// background-color: pink;
+	// font-weight: bold;
 	color: var(--hover-color);
-	font-weight: bold;
+	&:hover {
+		// background-color: red;;
+		// color: var(--hover-color);
+		// font-weight: bold;
+		text-decoration: underline;
+	}
 }
+// .profile-resume a {
+// 	// background-color: pink;
+// 	// font-weight: bold;
+// 	text-decoration: underline;
+// 	&:hover {
+// 		color: var(--hover-color);
+// 		// background-color: red;;
+// 		// color: var(--hover-color);
+// 		// font-weight: bold;
+// 	}
+// }
