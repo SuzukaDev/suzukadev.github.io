@@ -2,8 +2,17 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'SZK | Suzuka Ka'
 theme = 'gallery'
+[markup]
+  # INFO https://gohugo.io/methods/page/tableofcontents/
+  [markup.tableOfContents]
+    endLevel = 3
+    # ordered = false
+    ordered = true
+    startLevel = 1
+
 [markup.goldmark.renderer]
 unsafe= true
 [params]
+  is_debug = true
   keywords = ['gamedev', 'gamedeveloper', 'engeneer', 'multimedia engineer', '2D art', '3D art', 'music production', 'alicante', 'spain']
   socials = ['github', 'twitter', 'youtube','gumroad', 'itchio', 'email']
