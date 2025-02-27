@@ -1,13 +1,16 @@
 {{ define "main" }}
-  <h1>ARTICLES (single)</h1>
-  <h1>Section = {{.Section}}</h1>
+  {{ if .Site.Params.is_debug}}
+    <pre>Section: {{.Section}} (single.html)</pre>
+    <pre>.ReadingTime: {{.ReadingTime}} minutes</pre>
+  {{ end }}
   {{ partial "title.html" . }}
 
   {{/*  {{ if not .Params.show_text_on_top }}
     {{ partial "gallery.html" . }}
   {{ end }}  */}}
 
-  <aside>
+  {{/*  <aside>  */}}
+  <aside class="articles-index" >
     {{ .TableOfContents }}
   </aside>
 
