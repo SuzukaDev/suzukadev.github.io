@@ -17,6 +17,9 @@ menus:
 ---
 Engineer 🧠 and Gamedev 🎮with -a **strong**- passion for arts 🎨
 
-Read more [about me]({{< relref "about.md" >}}) or [check my work here]({{< relref "about.md" >}})
+Read more [about me]({{< relref "about.md" >}}) or [check my work here]({{< relref "articulo-tres.md" >}})
 
-(TODO: ❗cambiar el link de "check my work here")
+<!-- [Articles]({{< relref "articles/" >}}) -->
+[Articles]({{< relref "articles" >}}), [Blog]({{< relref "articles" >}}), [Interviews]({{< relref "articles" >}})
+
+(TODO❗: cambiar el link de "check my work here"❗)
