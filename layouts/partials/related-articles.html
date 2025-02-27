@@ -1,0 +1,22 @@
+
+{{/*  .Section gets the folder name (in this case 'articles')  */}}
+{{ $section := .Section }}
+{{ $related := where (site.RegularPages.Related .) "Section" "eq" $section }}
+{{ $related := where $related "Params.private" "ne" true | first 3 }}
+
+
+{{/*  {{ $related := where (site.RegularPages.Related .) "Params.private" "ne" true | first 3 }}  */}}
+{{ with $related }}
+  <hr class="full-separator">
+  <hgroup style="margin-top: 8rem">
+    <h2>{{ T "relatedArticles" }}</h2>
+  </hgroup>
+  <section class="galleries">
+    {{ range . }}
+      {{/*  <h1>{{.Title}}</h1>  */}}
+	  <a href="{{.RelPermalink}}">{{.Title}}</a>
+	  {{/*  TODO hacer un article-card.html  */}}
+      {{ partial "album-card.html" . }}
+    {{ end }}
+  </section>
+{{ end }}
