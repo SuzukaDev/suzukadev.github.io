@@ -1,0 +1,30 @@
+{{ define "main" }}
+  <h1>ARTICLES (single)</h1>
+  <h1>Section = {{.Section}}</h1>
+  {{ partial "title.html" . }}
+
+  {{/*  {{ if not .Params.show_text_on_top }}
+    {{ partial "gallery.html" . }}
+  {{ end }}  */}}
+
+  <aside>
+    {{ .TableOfContents }}
+  </aside>
+
+  {{/*  Markdown content  */}}
+  {{ with .Content }}
+  <hgroup class="articles">
+    {{/*  <section class="articles">  */}}
+      {{/*  <section class="prose">  */}}
+        {{ . }}
+      {{/*  </section>  */}}
+    {{/*  </section>  */}}
+  </hgroup>
+  {{ end }}
+
+  {{ if .Params.show_text_on_top }}
+    {{ partial "gallery.html" . }}
+  {{ end }}
+
+    {{ partial "related-articles.html" . }}
+{{ end }}

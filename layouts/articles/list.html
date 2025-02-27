@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <h1>ARTICLES (LIST)</h1>
+  <h1>.Section = {{.Section}}</h1>
+  {{ partial "title.html" . }}
+  <section class="galleries">
+    {{ range where .Pages "Params.private" "ne" true }}
+      {{/*  {{ partial "album-card.html" . }}  */}}
+
+      {{/*  TODO esto debería cambiarlo por un article-card.html o algo así  */}}
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+
+
+
+    {{ end }}
+    <hgroup>
+      {{ .Content | markdownify }}
+      {{/*  {{ .Content }}  */}}
+    </hgroup>
+  </section>
+{{ end }}
