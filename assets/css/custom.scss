@@ -214,6 +214,46 @@ nav.categories ul li a{
 
 /*#region hgroup.articles*/
 
+.articles-index{
+	color: var(--text-2);
+	font-size: .8rem;
+
+	border: 2px solid #ff6550;
+	border-radius: 10px;
+	// margin-left: 10px;
+	width: 90%;
+	margin: auto; //centers the block
+	margin-bottom: 10px;
+}
+
+.articles-index a:hover{
+	color: pink;
+}
+
+.articles-index ol{
+	list-style-type: disc;
+	list-style-position: inside;
+	// padding-inline-start: 2%;
+	padding-inline-start: 15px;
+}
+.articles-index ol li{
+	// tab-size: 4;
+	// margin: 0px;
+	// list-style-position: inside;
+}
+
+// .articles-index li {
+// 	position: relative;
+// 	// padding-left: 35px;
+// 	margin-left: 0px;
+// }
+
+// .articles-index li:before {
+// 	margin-left: 0px;
+// 	// position: absolute;
+// 	// left: -5px;
+//   }
+
 // hgroup.articles
 // hgroup.articles p, ul{
 hgroup.articles p, hgroup.articles ul{
