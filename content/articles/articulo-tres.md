@@ -1,9 +1,11 @@
 +++
 title = 'Articulo Tres'
 date = '2025-02-26T21:33:06+01:00'
-description = ""
+description = "Describiendo el artículo 3"
 draft = true
 private = false
+tags = ["skate", "fun", "dexter"]
+# tags = []
 +++
 
 <!-- TODO poner el texto normal, no centrado -->
