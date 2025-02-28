@@ -5,6 +5,37 @@
 	--profile-scale: 1.1;
 }
 
+/*#region fixed header and menu*/
+// NOTE commented since I personally think that it takes space, and that means having less space for the content.
+// And since the page is meant to be a portfolio, being able to perfectly see the content comes before than being able to navigate the site fast.
+// Also, is not that there would be lots of pages or anything to need that handy absolute header.
+
+// header{
+// 	position: fixed;
+// 	// background-color: pink;
+// 	background-color: var(--surface-1);
+// 	z-index: 1;
+// 	padding-top: 10px;
+// 	max-height: 10px;
+// }
+
+// menu#menu{
+// 	z-index: 2;
+// 	position: fixed;
+// 	background-color: var(--surface-1);
+// 	// background-color: var(--surface-2);
+// 	// padding-top: 100px;
+// 	margin-top: 60px;
+// 	// width: 100%;
+// 	max-width: none;
+
+// }
+
+// main{
+// 	padding-top: 80px;
+// }
+/*#endregion fixed header and menu*/
+
 
 // h1.mi-header,
 // h2.mi-header,
