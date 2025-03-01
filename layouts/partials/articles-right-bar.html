@@ -1,7 +1,16 @@
 <aside class="articles-right-bar" >
 	{{/*  <hgroup>  */}}
-	<h2>All tags</h2>
-	<p>poner tags</p>
+	<h3>TAGS</h3>
+	{{/*  <p>poner tags</p>  */}}
+	{{/*  NOTE test  */}}
+	{{ $test_tags := "art 3d 2d drawing blender krita coding music reaper blender k-sprite"}}
+	{{ $test_tags_array := split $test_tags " "}}
+	{{ range $test_tags_array}}
+		<a class="article-tag">{{.}}</a>
+	{{ end }}
+
+
+
 	<hr class="full-separator">
 	
 	<h2>About me</h2>
