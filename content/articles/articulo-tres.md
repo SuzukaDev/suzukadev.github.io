@@ -20,6 +20,7 @@ Es una pasada el artículo tres. Es una pasada el artículo tres. Es una pasada 
 Me cambió la vida
 ## Razones
 
+### h tres
 - El 3 es un poderoso número
 	- jaja
     - hola
@@ -34,3 +35,27 @@ Alejandro Sanz considera el artículo 3 como el mejor artículo de la historia d
 > El artículo 3? El mejor - Alejandro Sanz
 
 " Efectivamente, así es
+
+# El mito, ¿es cierto?
+
+No se sabe
+
+## Es M una ameba encubierta?
+
+Todo parece indicar que sí
+
+## Hay algo en su cerebelo?
+
+Probablemente no
+
+### Evidencias científicas
+
+La ciencia lo corrobora
+
+### Claro
+
+venga
+
+# otro más
+
+pues eso
