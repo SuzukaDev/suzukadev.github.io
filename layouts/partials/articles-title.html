@@ -22,7 +22,7 @@
             {{/*  <a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ . | humanize }}</a>{{ if ne $key (sub (len $.Params.tags) 1) }},{{ end }}  */}}
             {{/*  {{.}}  */}}
             {{/*  <a href="{{ $tag.RelPermalink }}">{{- $tag -}}</a>  */}}
-            <a class="article-link">{{- $tag -}}</a>
+            <a class="article-tag">{{- $tag -}}</a>
             {{/*  {{- if ne $index $lastIndex -}}
             ,
             {{- else -}}
