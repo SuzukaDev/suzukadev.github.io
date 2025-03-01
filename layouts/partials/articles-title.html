@@ -1,0 +1,37 @@
+{{ if .Title }}
+  <hgroup>
+    {{/*  REFACTOR breadcrumbs  */}}
+    {{/*  {{ partial "breadcrumbs.html" . }}  */}}
+    <h1>{{ .Title }}</h1>
+    {{/*  {{ with .Params.Description }}
+      <p>{{ . | markdownify }}</p>
+    {{ end }}  */}}
+    <p class="centered-text">
+    <time datetime="{{ .Date }}" class="centered-text">🕒{{ .Date | time.Format ":date_medium" }}</time>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <time datetime="PT{{.ReadingTime}}M">⌛{{ .ReadingTime }} {{ if gt .ReadingTime 1}} mins. {{else}} min. {{end}}</time>
+    </p>
+    {{ $tags := .Params.tags }}
+    <p class="centered-text">
+      {{ if $tags }}
+      {{ $lastIndex := sub (len $tags) 1 }}
+        {{/*  Tags:   */}}
+        {{/*  {{ range .Params.tags }}  */}}
+        {{ range $index, $tag := $tags }}
+          {{/*  TODO add tags links - Mostrar solo articles  */}}
+            {{/*  <a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ . | humanize }}</a>{{ if ne $key (sub (len $.Params.tags) 1) }},{{ end }}  */}}
+            {{/*  {{.}}  */}}
+            {{/*  <a href="{{ $tag.RelPermalink }}">{{- $tag -}}</a>  */}}
+            <a class="article-link">{{- $tag -}}</a>
+            {{/*  {{- if ne $index $lastIndex -}}
+            ,
+            {{- else -}}
+            .
+            {{ end }}  */}}
+        {{ end }}
+      {{ end }}
+      
+      {{/*  Reading time  */}}
+    </p>
+  </hgroup>
+{{ end }}
