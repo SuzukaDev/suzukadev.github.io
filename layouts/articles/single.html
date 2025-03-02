@@ -11,27 +11,31 @@
   
   {{/*  <aside>  */}}
     <div class="article-and-navbar">
+    {{ if .Params.show_table_of_contents }}
       <aside class="articles-index" >
         <h3 class="uppercase">{{ T "articleIndexContent" }}</h3>
         {{ .TableOfContents }}
       </aside>
-      {{$context := .}}
-      {{/*  Markdown content  */}}
-      {{ with .Content }}
-      <hgroup class="articles-content">
-        {{ partial "articles-title.html" $context }}
-        {{/*  <section class="articles-content">  */}}
-          {{/*  <section class="prose">  */}}
-            {{ . }}
-            {{/*  </section>  */}}
-            {{/*  </section>  */}}
-      </hgroup>
     {{ end }}
+    {{$context := .}}
+    {{/*  Markdown content  */}}
+      {{ with .Content }}
+        <hgroup class="articles-content">
+          {{ partial "articles-title.html" $context }}
+          {{/*  <section class="articles-content">  */}}
+            {{/*  <section class="prose">  */}}
+              {{ . }}
+              {{/*  </section>  */}}
+              {{/*  </section>  */}}
+        </hgroup>
+        {{ end }}
         
         
-    {{ partial "articles-right-bar.html" . }}
+    {{ if .Params.show_right_bar }}
+      {{ partial "articles-right-bar.html" . }}
+    {{ end }}
 
-  </div>
+    </div>
 
   {{ if .Params.show_text_on_top }}
     {{ partial "gallery.html" . }}

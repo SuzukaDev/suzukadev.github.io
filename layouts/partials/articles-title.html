@@ -6,7 +6,11 @@
     {{/*  {{ with .Params.Description }}
       <p>{{ . | markdownify }}</p>
     {{ end }}  */}}
-    <p class="centered-text"> <a id="articles-author" href="{{ .Site.BaseURL }}about">{{ .Site.Params.articles_author }}, </a>
+    {{ if not .Params.show_right_bar}}
+      <p class="centered-text"> <a id="author" href="{{ .Site.BaseURL }}about">{{ .Site.Params.articles_author }}, </a>
+    {{ else }}
+      <p class="centered-text"> <a id="articles-author" href="{{ .Site.BaseURL }}about">{{ .Site.Params.articles_author }}, </a>
+    {{ end }}
     {{/*  <p class="centered-text"> <a id="articles-author" href="{{ relref . 'about' }}">{{ .Site.Params.articles_author }}, </a>  */}}
     <time datetime="{{ .Date }}" class="centered-text">🕒{{ .Date | time.Format ":date_medium" }}</time>
     &nbsp;&nbsp;
