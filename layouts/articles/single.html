@@ -1,29 +1,37 @@
 {{ define "main" }}
-  {{ if .Site.Params.is_debug}}
+  {{/*  {{ if .Site.Params.is_debug}}
     <pre>Section: {{.Section}} (single.html)</pre>
     <pre>.ReadingTime: {{.ReadingTime}} minutes</pre>
-  {{ end }}
-  {{ partial "title.html" . }}
-
-  {{/*  {{ if not .Params.show_text_on_top }}
-    {{ partial "gallery.html" . }}
   {{ end }}  */}}
-
+  {{/*  {{ partial "articles-title.html" . }}  */}}
+  
+  {{/*  {{ if not .Params.show_text_on_top }}
+  {{ partial "gallery.html" . }}
+  {{ end }}  */}}
+  
   {{/*  <aside>  */}}
-  <aside class="articles-index" >
-    {{ .TableOfContents }}
-  </aside>
+    <div class="article-and-navbar">
+      <aside class="articles-index" >
+        <h3 class="uppercase">{{ T "articleIndexContent" }}</h3>
+        {{ .TableOfContents }}
+      </aside>
+      {{$context := .}}
+      {{/*  Markdown content  */}}
+      {{ with .Content }}
+      <hgroup class="articles-content">
+        {{ partial "articles-title.html" $context }}
+        {{/*  <section class="articles-content">  */}}
+          {{/*  <section class="prose">  */}}
+            {{ . }}
+            {{/*  </section>  */}}
+            {{/*  </section>  */}}
+      </hgroup>
+    {{ end }}
+        
+        
+    {{ partial "articles-right-bar.html" . }}
 
-  {{/*  Markdown content  */}}
-  {{ with .Content }}
-  <hgroup class="articles-content">
-    {{/*  <section class="articles-content">  */}}
-      {{/*  <section class="prose">  */}}
-        {{ . }}
-      {{/*  </section>  */}}
-    {{/*  </section>  */}}
-  </hgroup>
-  {{ end }}
+  </div>
 
   {{ if .Params.show_text_on_top }}
     {{ partial "gallery.html" . }}
