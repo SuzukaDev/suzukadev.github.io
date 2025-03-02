@@ -1,28 +1,52 @@
 <aside class="articles-right-bar" >
 	{{/*  <hgroup>  */}}
-	<h3>TAGS</h3>
-	{{/*  <p>poner tags</p>  */}}
-	{{/*  NOTE test  */}}
-	{{ $test_tags := "art 3d 2d drawing blender krita coding music reaper blender k-sprite"}}
-	{{ $test_tags_array := split $test_tags " "}}
-	{{ range $test_tags_array}}
-		<a class="article-tag">{{.}}</a>
-	{{ end }}
 
 
 
-	<hr class="full-separator">
-	
-	<h2>About me</h2>
+
+		
+	{{/*  <h3>About me</h3>  */}}
+	{{/*  <h3>{{ T "articleAboutMe" }}</h3>  */}}
+	<h3 class="uppercase">{{ T "articleAboutMe" }}</h3>
+	{{/*  <h3 class="uppercase">{{ T "articleAboutMe" | upper }}</h3>  */}}
+	{{/*  <h3>{{ T "articleAboutMe" | title}}</h3>  */}}
 	{{/*  <img href="">  */}}
 	{{/*  <img id="szk_pfp" src="{{ .Params.profile_picture }}">  */}}
 	{{/*  <img id="szk_pfp" src="/images/yo.jpg">  */}}
 	<img id="articles-pfp" src="/images/yo.jpg">
-	<h2>Suzuka Ka</h2>
+	{{/*  <h2>Suzuka Ka</h2>  */}}
+	<p>{{ T "articleAboutMeDescription" }}</p>
 	{{/*  <img src="/images/yo.jpg">  */}}
 	{{/*  </hgroup>  */}}
-	{{partial "social-icons.html" .}}
-
+	{{/*  <div class="flexi">  */}}
+		{{partial "social-icons.html" .}}
+	{{/*  </div>  */}}
+	{{/*  <hr>  */}}
+	{{/*  <p>pensar</p>  */}}
 	<hr>
+
+	<h3 class="uppercase">TAGS</h3>
+	{{/*  NOTE test  */}}
+	{{/*  {{ $test_tags := "art 3d 2d drawing blender krita coding music reaper blender k-sprite"}}  */}}
+	{{/*  {{ $test_tags_array := split $test_tags " "}}  */}}
+	<div class="article-tags">
+		{{/*  {{ range $test_tags_array}}  */}}
+		{{/*  {{ range .Site.Taxonomies.tags }}  */}}
+			{{/*  <pre>. = {{ debug.Dump . }}</pre>  */}}
+			{{/*  <a class="article-tag">{{.}}</a>  */}}
+		{{/*  {{ end }}  */}}
+
+		{{range $name, $taxonomy := .Site.Taxonomies.tags}} 
+			{{ $cnt := .Count }}
+			{{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+				{{/*  <div class="tagbutton">  */}}
+				{{/*  <a class="article-tag" href={{ .RelPermalink }} title="All pages with tag <i>{{$name}}</i>">{{$name}}</a>  */}}
+				{{/*  <sup>{{$cnt}}</sup>  */}}
+				<a class="article-tag" href={{ .RelPermalink }} title="All pages with tag <i>{{$name}}</i>">{{$name}}<sup>{{$cnt}}</sup></a>
+				{{/*  </div>  */}}
+			{{end}}
+		{{end}}
+
+	</div>
 
 </aside>
