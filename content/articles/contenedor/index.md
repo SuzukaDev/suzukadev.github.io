@@ -3,6 +3,7 @@ title = 'Article in contenedor'
 date = '2025-02-26T21:13:58+01:00'
 description = "El geníal artículo contenedor"
 draft = true
+tags = ["dexter"]
 +++
 
 # Comenzando el mítico Artículo contenedor h1

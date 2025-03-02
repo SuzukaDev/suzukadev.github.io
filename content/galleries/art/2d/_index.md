@@ -5,6 +5,7 @@ date: '2025-02-21T12:43:04+01:00'
 draft: false
 author: "Suzuka Ka"
 menus: "main"
+categories: ["art"]
 # categories: ["nature"]
 # weight: 3
 params:
