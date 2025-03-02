@@ -399,10 +399,17 @@ nav.categories ul li a{
 	#articles-author{
 		display: inline-block;
 		font-style: italic;
-	
+		
 		&:hover{
 			color: var(--hover-color);
 		}
+	}
+}
+
+a#author{
+	font-style: italic;
+	&:hover{
+		color: var(--hover-color);
 	}
 }
 

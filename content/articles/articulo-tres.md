@@ -6,6 +6,8 @@ draft = true
 private = false
 tags = ["skate", "fun", "dexter"]
 # tags = []
+# show_right_bar = true
+# show_table_of_contents = true
 +++
 
 <!-- TODO poner el texto normal, no centrado -->
