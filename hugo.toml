@@ -13,6 +13,7 @@ theme = 'gallery'
 [markup.goldmark.renderer]
 unsafe= true
 [params]
+  articles_author = 'Suzuka Ka'
   is_debug = true
   # is_debug = false
   keywords = ['gamedev', 'gamedeveloper', 'engeneer', 'multimedia engineer', '2D art', '3D art', 'music production', 'alicante', 'spain']
