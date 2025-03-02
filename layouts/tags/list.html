@@ -1,0 +1,15 @@
+{{/*  TODO tags list.html  */}}
+{{ define "main" }}
+  {{ if .Site.Params.is_debug }}
+    <pre>File = layouts/tags/list.html</pre>
+    <pre>Path = {{.Path}}</pre>
+    <pre>Debug .Kind = {{ debug.Dump .Kind }}</pre>
+  {{ end }}
+  {{ partial "title.html" . }}
+  <section class="galleries">
+    {{ range where .Pages "Params.private" "ne" true }}
+      {{ partial "album-card.html" . }}
+    {{ end }}
+    {{ .Content | markdownify }}
+  </section>
+{{ end }}
