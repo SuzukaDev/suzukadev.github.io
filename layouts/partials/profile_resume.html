@@ -22,7 +22,8 @@
     {{/*  <h2>{{ ref "about.md" }}</h2>  */}}
     {{/*  <a href={{< ref "about.md" >}}> <h1>VAS O NO VAS</h1></a>  */}}
     {{/*  <a href= "{{ about | relURL }}""> <h1>VAS O NO VAS</h1></a>  */}}
-    <a href='{{ ref . "about.md" }}'>
+    {{/*  <a href='{{ ref . "about.md" }}'>  */}}
+    <a href='{{ ref . "about" }}'>
       <img id="szk_pfp" src="{{ .Params.profile_picture }}">
     </a>
     {{/*  <h1>profile pixture -> {{ .Site.profile_picture }}</h1>  */}}
