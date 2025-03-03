@@ -43,7 +43,7 @@
     },
     "email":{
         "name":"Email",
-        "color":"#D44638",
+        "color":"#386dfd",
         "url":"mailto:suzukakadev@gmail.com",
         "svg_paths":[
             "M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z",
@@ -82,7 +82,7 @@
     "reddit":{
         "name":"Reddit",
         "color":"#ff4500",
-        "url":"",
+        "url":"https://www.reddit.com/user/SuzukaDev/",
         "viewBox":"-3 6 45 45",
         "svg_paths":[
        ],
