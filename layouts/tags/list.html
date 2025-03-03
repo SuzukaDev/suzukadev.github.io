@@ -3,13 +3,47 @@
   {{ if .Site.Params.is_debug }}
     <pre>File = layouts/tags/list.html</pre>
     <pre>Path = {{.Path}}</pre>
-    <pre>Debug .Kind = {{ debug.Dump .Kind }}</pre>
+    <pre>Debug .Kind = {{ debug.Dump .Kind }}</pre> 
+    <pre>.Section = {{.Section}}</pre>
   {{ end }}
-  {{ partial "title.html" . }}
-  <section class="galleries">
-    {{ range where .Pages "Params.private" "ne" true }}
-      {{ partial "album-card.html" . }}
-    {{ end }}
-    {{ .Content | markdownify }}
-  </section>
+  {{/*  {{ partial "title.html" . }}  */}}
+  <hgroup>
+    <h1 class="accent-color">#{{ .Title }}</h1>
+  </hgroup>
+  {{/*  <section class="galleries">  */}}
+  <section>
+    {{ if eq .Kind "term"}}
+    {{/*  ARTICLES in a CERTAIN TAG  */}}
+      {{ range where .Pages "Params.private" "ne" true }}
+      {{/*  {{ partial "album-card.html" . }}  */}}
+      <pre>.Section = {{.Section}}</pre>
+    <pre>traducida? = {{.IsTranslated}}</pre>
+
+        {{ partial "article-card.html" . }}
+        {{/*  {{ partial "articles/article-card.html" . }}  */}}
+      {{ end }}
+    {{ else if eq .Kind "taxonomy"}}
+    {{/*  TAGS LIST  */}}
+      {{/*  {{ range where .Pages "Params.private" "ne" true }}
+        <p>{{.Title}}</p>
+
+      {{ end }}  */}}
+
+
+      {{range $name, $taxonomy := .Site.Taxonomies.tags}} 
+        {{ $cnt := .Count }}
+        {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+          {{/*  <div class="tagbutton">  */}}
+          {{/*  <a class="article-tag" href={{ .RelPermalink }} title="All pages with tag <i>{{$name}}</i>">{{$name}}</a>  */}}
+          {{/*  <sup>{{$cnt}}</sup>  */}}
+          <a class="article-tag" href={{ .RelPermalink }} title="All pages with tag <i>{{$name}}</i>">{{$name}}<sup>{{$cnt}}</sup></a>
+          {{/*  </div>  */}}
+        {{end}}
+      {{end}}
+
+      {{ end }}
+      
+      {{ .Content | markdownify }}
+    </section>
+    {{ partial "tag-cloud.html" . }}
 {{ end }}
