@@ -18,7 +18,10 @@
 		{{/*  <img id="szk_pfp" src="/images/yo.jpg">  */}}
 		<img id="articles-pfp" src="/images/yo.jpg">
 		{{/*  <h2>Suzuka Ka</h2>  */}}
-		<p>{{ T "articleAboutMeDescription" }}</p>
+		{{/*  <p>{{ T "articleAboutMeDescription" }}</p>  */}}
+		{{ with $about_page.Params.articles_description }}
+			<p>{{ . }}</p>
+		{{ end }}
 	</a>
 	{{/*  <img src="/images/yo.jpg">  */}}
 	{{/*  </hgroup>  */}}
