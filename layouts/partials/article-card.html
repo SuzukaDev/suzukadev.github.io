@@ -26,14 +26,14 @@
 	{{ $featured := ($images.GetMatch (.Params.featured_image | default "*feature*")) | default (index $images $index) }}
 {{ end }}
 
-  <a class="card" href="{{ .RelPermalink }}" title="{{ .Title }}">
-    {{/*  <figure style="background-color: {{ .color }}">  */}}
-	{{ if $featured }}
-    	<figure>
-    	  {{/*  <img class="lazyload" width="{{ .thumbnail.Width }}" height="{{ .thumbnail.Height }}" data-src="{{ .thumbnail.RelPermalink }}" alt="{{ .page.Title }}" />  */}}
-    	  <img class="lazyload" width="{{ $featured.Width }}" height="{{ $featured.Height }}" data-src="{{ $featured.RelPermalink }}" alt="{{ .Title }}" />
-    	</figure>
-	{{ end }}
+<a class="card" href="{{ .RelPermalink }}" title="{{ .Title }}">
+  {{/*  <figure style="background-color: {{ .color }}">  */}}
+    {{ if $featured }}
+    <figure>
+      {{/*  <img class="lazyload" width="{{ .thumbnail.Width }}" height="{{ .thumbnail.Height }}" data-src="{{ .thumbnail.RelPermalink }}" alt="{{ .page.Title }}" />  */}}
+      <img class="lazyload" width="{{ $featured.Width }}" height="{{ $featured.Height }}" data-src="{{ $featured.RelPermalink }}" alt="{{ .Title }}" />
+    </figure>
+    {{ end }}
     <div>
       <h2 class="accent-color hover-underline">{{ .Title }}</h2>
 	  <h3>{{.Description}}</h3>
@@ -57,8 +57,8 @@
         {{ else }}
           {{ T "photoCount" (.imageCount | lang.FormatNumber 0) }}
         {{ end }}  */}}
+        <hr class="solid-separator">
       </p>
     </div>
   </a>
-  <hr class="solid-separator">
 {{/*  {{ end }}  */}}
