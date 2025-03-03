@@ -17,7 +17,6 @@ albumCount:
   one: "{{ .photoCount }} en {{ .count }} álbum"
   other: "{{ .photoCount }} en {{ .count }} álbumes"
 articleAboutMe: Sobre mí
-articleAboutMeDescription: Ingeniero multimedia, apasionado por el arte
 articleIndexContent: Contenido
 articlesCount:
   one: 1 artículo
