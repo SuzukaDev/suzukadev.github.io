@@ -1,0 +1,64 @@
+{{/*  TODO WIP article-card  */}}
+{{/*  {{ $gallery := partial "get-gallery.html" . }}  */}}
+{{/*  {{ with $gallery }}  */}}
+  {{/*  <a class="card" href="{{ .page.RelPermalink }}" title="{{ .page.Title }}">  */}}
+
+{{ $_all_images := .Resources.ByType "image" }}
+{{ $images := slice }}
+{{ range $_all_images }}
+  {{ if not (strings.Contains .RelPermalink "hidden/") }}
+    {{/*  {{ warnf "ADDED: RelPermalink= %v" .RelPermalink}}  */}}
+    {{ $images = $images | append . }}
+  {{ end }}
+{{ end }}
+
+{{/*  <pre>. = {{ debug.Dump . }}</pre>  */}}
+
+{{ $index := 0 }}
+{{ range $i, $image := $images }}
+  {{ if index $image.Params "cover" }}
+	{{ $index = $i }}
+  {{ end }}
+{{ end }}
+
+{{ $featured := false }}
+{{ if $images }}
+	{{ $featured := ($images.GetMatch (.Params.featured_image | default "*feature*")) | default (index $images $index) }}
+{{ end }}
+
+  <a class="card" href="{{ .RelPermalink }}" title="{{ .Title }}">
+    {{/*  <figure style="background-color: {{ .color }}">  */}}
+	{{ if $featured }}
+    	<figure>
+    	  {{/*  <img class="lazyload" width="{{ .thumbnail.Width }}" height="{{ .thumbnail.Height }}" data-src="{{ .thumbnail.RelPermalink }}" alt="{{ .page.Title }}" />  */}}
+    	  <img class="lazyload" width="{{ $featured.Width }}" height="{{ $featured.Height }}" data-src="{{ $featured.RelPermalink }}" alt="{{ .Title }}" />
+    	</figure>
+	{{ end }}
+    <div>
+      <h2 class="accent-color hover-underline">{{ .Title }}</h2>
+	  <h3>{{.Description}}</h3>
+	  <h4>{{.Date | time.Format ":date_medium"}}</h4>
+    {{ if ne .Date .Lastmod}}
+      {{ with .Lastmod }}
+      {{/*  {{ if .LastMod}}  */}}
+	      <h5>Mod.{{. | time.Format ":date_medium"}}</h5>
+      {{ end }}
+    {{ end }}
+      <p>
+        {{ range .Params.tags}}
+          {{$tag_name := . }}
+          {{/*  {{$tag_page := .Site.GetPage (printf "/tags/%s" $tag) }}  */}}
+          {{/*  {{$tag_page := .Site.GetPage ("/tags/"+$tag_name) }}  */}}
+          {{ $tag_page := site.GetPage (printf "tags/%s" $tag_name) }}
+          <a class="article-tag" href="{{$tag_page.RelPermalink}}">{{$tag_name}}</a>
+        {{ end }}
+        {{/*  {{ if gt .albumCount 0 }}
+          {{ T "albumCount" (dict "count" (.albumCount | lang.FormatNumber 0) "photoCount" (.imageCount | lang.FormatNumber 0 | lang.Translate "photoCount")) }}
+        {{ else }}
+          {{ T "photoCount" (.imageCount | lang.FormatNumber 0) }}
+        {{ end }}  */}}
+      </p>
+    </div>
+  </a>
+  <hr class="solid-separator">
+{{/*  {{ end }}  */}}
