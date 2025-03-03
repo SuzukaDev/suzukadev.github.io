@@ -3,7 +3,18 @@
 <pre>❗ Don't forget to turn 'false' the `is_debug` flag in `hugo.toml` ❗</pre>
 <pre>Languages: {{ .Site.Languages }}</pre>
 <pre>🦜.Site.Language.LanguageName = {{.Site.Language.LanguageName}}</pre>
-<pre>Permalink: {{ .Permalink }}</pre>
-<pre>RelPermalink: {{ .RelPermalink }}</pre>
-<pre>IsTranslated = {{.IsTranslated}}</pre>
+<pre>.IsTranslated = {{.IsTranslated}}</pre>
+<pre>.Permalink: {{ .Permalink }}</pre>
+<pre>.RelPermalink: {{ .RelPermalink }}</pre>
+<pre>💾 .File: {{ .File }}</pre>
+{{/*  <pre>.GetInfo: {{ .GetInfo }}</pre>  */}}
+
+{{/*  {{ $file := .Get 0 }}  */}}
+{{/*  <pre>💾 $file: {{ $file }}</pre>  */}}
+{{/*  {{ $currentPage := .Site.CurrentPage }}  */}}
+<pre></pre>
+<pre>.Section: {{ .Section }}</pre>
+<pre>.Path: {{ .Path }}</pre>
+<pre>.Kind: {{ .Kind }}</pre>
+
 <hr class="full-separator">
