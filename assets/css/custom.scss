@@ -27,6 +27,17 @@
 // 	  }
 // }
 
+.accent-color{
+	color: var(--hover-color);
+}
+.hover-accent-color:hover{
+	color: var(--hover-color);
+}
+
+.hover-underline:hover{
+	text-decoration: underline;
+}
+
 // hgroup.articles-content > p:first-child {
 // Indentation for the first paragraph in the article
 hgroup.articles-content > p:first-of-type {
