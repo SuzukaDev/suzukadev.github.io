@@ -1,7 +1,37 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
+# languageCode = 'en-us'
+# languageCode = 'es-es'
 title = 'SZK | Suzuka Ka'
 theme = 'gallery'
+
+# Multilingual
+# INFO https://gohugo.io/content-management/multilingual/
+# defaultContentLanguage = 'en'
+defaultContentLanguage = 'es'
+# defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
+[languages]
+  [languages.es]
+    # contentDir = 'content/de'
+    disabled = false
+    languageCode = 'es-ES'
+    languageDirection = 'ltr'
+    languageName = 'Spanish'
+    # title = 'Projekt Dokumentation'
+    weight = 1
+    # [languages.de.params]
+      # subtitle = 'Referenz, Tutorials und Erklärungen'
+  [languages.en]
+    contentDir = 'content/en'
+    disabled = false
+    languageCode = 'en-US'
+    languageDirection = 'ltr'
+    languageName = 'English'
+    # title = 'Project Documentation'
+    weight = 2
+    # [languages.en.params]
+      # subtitle = 'Reference, Tutorials, and Explanations'
+
 [markup]
   # INFO https://gohugo.io/methods/page/tableofcontents/
   [markup.tableOfContents]
@@ -15,7 +45,7 @@ unsafe= true
 [params]
   articles_author = 'Suzuka Ka'
   # is_debug = false # Set to false for relase
-is_debug = true
+  is_debug = true
   keywords = ['gamedev', 'gamedeveloper', 'engeneer', 'multimedia engineer', '2D art', '3D art', 'music production', 'alicante', 'spain']
   socials = ['github', 'twitter', 'youtube','gumroad', 'itchio', 'email']
 
