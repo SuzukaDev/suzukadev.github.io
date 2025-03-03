@@ -14,7 +14,8 @@ theme = 'gallery'
 unsafe= true
 [params]
   articles_author = 'Suzuka Ka'
-  is_debug = true
-  # is_debug = false
+  # is_debug = false # Set to false for relase
+is_debug = true
   keywords = ['gamedev', 'gamedeveloper', 'engeneer', 'multimedia engineer', '2D art', '3D art', 'music production', 'alicante', 'spain']
   socials = ['github', 'twitter', 'youtube','gumroad', 'itchio', 'email']
+
