@@ -1,21 +1,25 @@
 <aside class="articles-right-bar" >
 	{{/*  <hgroup>  */}}
 
+{{/*  REFACTOR eliminar comentarios  */}}
 
 
-
+	{{ $about_page := .Site.GetPage "about" }}
+	{{ $about_url := $about_page.RelPermalink }}
 		
 	{{/*  <h3>About me</h3>  */}}
 	{{/*  <h3>{{ T "articleAboutMe" }}</h3>  */}}
-	<h3 class="uppercase">{{ T "articleAboutMe" }}</h3>
-	{{/*  <h3 class="uppercase">{{ T "articleAboutMe" | upper }}</h3>  */}}
-	{{/*  <h3>{{ T "articleAboutMe" | title}}</h3>  */}}
-	{{/*  <img href="">  */}}
-	{{/*  <img id="szk_pfp" src="{{ .Params.profile_picture }}">  */}}
-	{{/*  <img id="szk_pfp" src="/images/yo.jpg">  */}}
-	<img id="articles-pfp" src="/images/yo.jpg">
-	{{/*  <h2>Suzuka Ka</h2>  */}}
-	<p>{{ T "articleAboutMeDescription" }}</p>
+	<a class="hover-accent-color" href="{{$about_url}}">
+		<h3 class="uppercase">{{ T "articleAboutMe" }}</h3>
+		{{/*  <h3 class="uppercase">{{ T "articleAboutMe" | upper }}</h3>  */}}
+		{{/*  <h3>{{ T "articleAboutMe" | title}}</h3>  */}}
+		{{/*  <img href="">  */}}
+		{{/*  <img id="szk_pfp" src="{{ .Params.profile_picture }}">  */}}
+		{{/*  <img id="szk_pfp" src="/images/yo.jpg">  */}}
+		<img id="articles-pfp" src="/images/yo.jpg">
+		{{/*  <h2>Suzuka Ka</h2>  */}}
+		<p>{{ T "articleAboutMeDescription" }}</p>
+	</a>
 	{{/*  <img src="/images/yo.jpg">  */}}
 	{{/*  </hgroup>  */}}
 	{{/*  <div class="flexi">  */}}
@@ -25,7 +29,8 @@
 	{{/*  <p>pensar</p>  */}}
 	<hr>
 
-	<h3 class="uppercase">TAGS</h3>
+	{{ $tags_page := .Site.GetPage "/tags/" }}
+	<a class="hover-accent-color" href="{{ $tags_page.RelPermalink }}"><h3 class="uppercase">TAGS</h3></a>
 	{{/*  NOTE test  */}}
 	{{/*  {{ $test_tags := "art 3d 2d drawing blender krita coding music reaper blender k-sprite"}}  */}}
 	{{/*  {{ $test_tags_array := split $test_tags " "}}  */}}
