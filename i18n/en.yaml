@@ -18,4 +18,7 @@ albumCount:
   other: "{{ .photoCount }} in {{ .count }} albums"
 articleAboutMe: About me
 articleAboutMeDescription: Multimedia engineer, with passion for arts
-articleIndexContent: Content
+articleIndexContent: Content 
+articlesCount:
+  one: 1 article
+  other: "{{ . }} articles"

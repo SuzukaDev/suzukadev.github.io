@@ -19,3 +19,6 @@ albumCount:
 articleAboutMe: Sobre mí
 articleAboutMeDescription: Ingeniero multimedia, apasionado por el arte
 articleIndexContent: Contenido
+articlesCount:
+  one: 1 artículo
+  other: "{{ . }} artículos"

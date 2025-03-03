@@ -23,7 +23,18 @@
             {{/*  <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" style="font-size:{{$currentFontSize}}{{$fontUnit}}">{{ $name }}</a>  */}}
             {{/*  <a class="article-tag" href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" style="font-size:{{$currentFontSize}}{{$fontUnit}}">{{ $name }} <sup>{{$count}}</sup></a>  */}}
             {{/*  <a class="article-tag" href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" style="font-size:{{$currentFontSize}}{{$fontUnit}}">{{ $name }} <sup style="font-size:{{$smallestFontSize}}{{$fontUnit}}">{{$count}}</sup></a>  */}}
-            <a class="hover-accent-color" href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" style="font-size:{{$currentFontSize}}{{$fontUnit}}">{{ $name }} <sup style="font-size:.7{{$fontUnit}}">{{$count}}</sup></a>
+            {{/*  <a class="hover-accent-color" href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" style="font-size:{{$currentFontSize}}{{$fontUnit}}">{{ $name }} <sup style="font-size:.7{{$fontUnit}}">{{$count}}</sup></a>  */}}
+            
+			{{/*  <a class="hover-accent-color" title='{{$count}} {{ T "articles"}}' href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" style="font-size:{{$currentFontSize}}{{$fontUnit}}">{{ $name }} <sup style="font-size:.7{{$fontUnit}}">{{$count}}</sup></a>  */}}
+			{{/*  <p>{{$count | T "articles"}}</p>  */}}
+			{{/*  <p>{{$count T "articlesCount"}}</p>  */}}
+			{{/*  <a class="hover-accent-color" title='{{$count | lang.Translate "articlesCount"}}' href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" style="font-size:{{$currentFontSize}}{{$fontUnit}}">{{ $name }} <sup style="font-size:.7{{$fontUnit}}">{{$count}}</sup></a>  */}}
+
+			{{/*  With count  */}}
+			{{/*  <a class="hover-accent-color" title='{{$count | T "articlesCount"}}' href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" style="font-size:{{$currentFontSize}}{{$fontUnit}}">{{ $name }} <sup style="font-size:.7{{$fontUnit}}">{{$count}}</sup></a>  */}}
+			{{/*  Without count  */}}
+			<a class="hover-accent-color" title='{{$count | T "articlesCount"}}' href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" style="font-size:{{$currentFontSize}}{{$fontUnit}}">{{ $name }}</a>
+
         {{ end }}
     </div>
 {{ end }}
