@@ -16,5 +16,14 @@
 <pre>.Section: {{ .Section }}</pre>
 <pre>.Path: {{ .Path }}</pre>
 <pre>.Kind: {{ .Kind }}</pre>
+<pre>.IsNode: {{ .IsNode }}</pre>
+<pre>.IsPage: {{ .IsPage }}</pre>
+<pre>.BundleType: {{ .BundleType }}</pre>
+{{ if .NextInSection }}
+	<pre>.NextInSection.Title: {{ .NextInSection.Title }}</pre>
+{{ end }}
+{{ if .PrevInSection }}
+	<pre>.PrevInSection.Title: {{ .PrevInSection.Title }}</pre>
+{{ end }}
 
 <hr class="full-separator">
