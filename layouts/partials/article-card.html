@@ -26,6 +26,7 @@
 	{{ $featured := ($images.GetMatch (.Params.featured_image | default "*feature*")) | default (index $images $index) }}
 {{ end }}
 
+<div class="article-card">
 <a class="card" href="{{ .RelPermalink }}" title="{{ .Title }}">
   {{/*  <figure style="background-color: {{ .color }}">  */}}
     {{ if $featured }}
@@ -34,10 +35,9 @@
       <img class="lazyload" width="{{ $featured.Width }}" height="{{ $featured.Height }}" data-src="{{ $featured.RelPermalink }}" alt="{{ .Title }}" />
     </figure>
     {{ end }}
-    <div>
-      <h2 class="accent-color hover-underline">{{ .Title }}</h2>
+      <h1 class="accent-color hover-underline super-bold">{{ .Title }}</h1>
+      <h4 class="clock-font">{{.Date | time.Format ":date_medium"}}, ⌛{{.ReadingTime | T "minutesCount" }}.</h4>
 	  <h3>{{.Description}}</h3>
-	  <h4>{{.Date | time.Format ":date_medium"}}</h4>
     {{ if ne .Date .Lastmod}}
       {{ with .Lastmod }}
       {{/*  {{ if .LastMod}}  */}}
@@ -57,8 +57,8 @@
         {{ else }}
           {{ T "photoCount" (.imageCount | lang.FormatNumber 0) }}
         {{ end }}  */}}
-        <hr class="solid-separator">
       </p>
-    </div>
-  </a>
+        {{/*  <hr class="solid-separator">  */}}
+    </a>
+  </div>
 {{/*  {{ end }}  */}}
