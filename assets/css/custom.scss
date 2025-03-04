@@ -38,6 +38,38 @@
 	text-decoration: underline;
 }
 
+.super-bold{
+	font-weight: 900;
+}
+
+.article-card{
+	padding: 15px 15px;
+	border-radius: 15px;
+	// -webkit-box-shadow: -1px 2px 15px -1px rgba(0,0,0,0.75);
+	// -moz-box-shadow: -1px 2px 15px -1px rgba(0,0,0,0.75);
+	// box-shadow: -1px 2px 15px -1px rgba(0,0,0,0.75);
+	
+	-webkit-box-shadow: -1px 6px 15px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 6px 15px 0px rgba(0,0,0,0.75);
+	box-shadow: -1px 6px 15px 0px rgba(0,0,0,0.75);
+	border: 3px solid var(--hover-color-soft) ;
+	&:hover{
+		// margin-top: 3px;
+		-webkit-box-shadow: -1px 6px 15px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: -1px 6px 15px 0px rgba(0,0,0,0.75);
+		box-shadow: -1px 6px 15px 0px rgba(0,0,0,0.75);
+		
+		border: 3px solid var(--hover-color) ;
+	}
+}
+
+.article-card h1{
+	font-size: 1.3em;
+}
+
+
+
+
 // hgroup.articles-content > p:first-child {
 // Indentation for the first paragraph in the article
 hgroup.articles-content > p:first-of-type {
