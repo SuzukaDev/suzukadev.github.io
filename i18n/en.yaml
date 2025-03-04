@@ -21,3 +21,6 @@ articleIndexContent: Content
 articlesCount:
   one: 1 article
   other: "{{ . }} articles"
+minutesCount:
+  one: 1 min
+  other: "{{ . }} mins"
