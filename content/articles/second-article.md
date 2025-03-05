@@ -5,7 +5,7 @@ description = ""
 draft = true
 show_right_bar = true
 show_table_of_contents = true
-article_cover = "t.webp"
+# article_cover = "t.webp"
 +++
 
 
