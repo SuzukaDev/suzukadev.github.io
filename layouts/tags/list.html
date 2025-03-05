@@ -1,10 +1,10 @@
 {{/*  TODO tags list.html  */}}
 {{ define "main" }}
   {{ if .Site.Params.is_debug }}
-    <pre>File = layouts/tags/list.html</pre>
-    <pre>Path = {{.Path}}</pre>
-    <pre>Debug .Kind = {{ debug.Dump .Kind }}</pre> 
-    <pre>.Section = {{.Section}}</pre>
+  <pre>File = layouts/tags/list.html</pre>
+  <pre>Path = {{.Path}}</pre>
+  <pre>Debug .Kind = {{ debug.Dump .Kind }}</pre> 
+  <pre>.Section = {{.Section}}</pre>
   {{ end }}
   {{/*  {{ partial "title.html" . }}  */}}
   <hgroup>
@@ -12,13 +12,14 @@
   </hgroup>
   <section class="galleries">
     {{/*  <section>  */}}
-    {{ if eq .Kind "term"}}
-    {{/*  ARTICLES in a CERTAIN TAG  */}}
+      {{ if eq .Kind "term"}}
+      {{/*  ARTICLES in a CERTAIN TAG  */}}
       {{ range where .Pages "Params.private" "ne" true }}
       {{/*  {{ partial "album-card.html" . }}  */}}
-      <pre>.Section = {{.Section}}</pre>
-    <pre>traducida? = {{.IsTranslated}}</pre>
-
+      {{ if .Site.Params.is_debug }}
+        <pre>.Section = {{.Section}}</pre>
+        <pre>traducida? = {{.IsTranslated}}</pre>
+      {{ end }}
         {{ partial "article-card.html" . }}
         {{/*  {{ partial "articles/article-card.html" . }}  */}}
       {{ end }}
