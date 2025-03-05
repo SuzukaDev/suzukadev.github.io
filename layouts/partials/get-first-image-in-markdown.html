@@ -9,7 +9,8 @@ Returns: (string) Path with the image
 
 {{/*  {{ $markdown_raw := .RawContent}}  */}}
 {{/*  Delete all comments in the .RawContent  */}}
-{{ $markdown_raw := .RawContent | replaceRE "<!--[\\s\\S]*?-->" "" }}
+{{/*  {{ $markdown_raw := .RawContent | replaceRE "<!--[\\s\\S]*?-->" "" }}  */}}
+{{ $markdown_raw := .RawContent | replaceRE "<!--.*?-->" "" }}
 
 {{/*  {{ $markdown_raw := .Content}}  */}}
 
