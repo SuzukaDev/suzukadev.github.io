@@ -68,6 +68,111 @@
 }
 
 
+/*#region article card internet*/
+// https://codepen.io/Cowl88/pen/EaxmYap
+// * {
+//   box-sizing: border-box;
+// }
+
+// body {
+//   display: grid;
+//   place-items: center;
+//   min-height: 100vh;
+// }
+
+
+// TODO cambiar el nombre, las cards de las galleries también tienen esta clase y fastidia su visualización
+.card {
+//   --blur: 16px;
+  --blur: 10px;
+  --size: clamp(300px, 50vmin, 600px);
+  width: var(--size);
+  aspect-ratio: 4 / 3;
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  color: #000;
+  transform: translateZ(0);
+
+//   box-shadow:  5px 15px -5px #000000
+}
+
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(calc(1 + (var(--hover, 0) * 0.25))) rotate(calc(var(--hover, 0) * -5deg));
+  transition: transform 0.2s;
+}
+
+.card__footer {
+//   padding: 0 1.5rem;
+  padding: 1.5rem 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: red;
+  display: grid;
+//   grid-template-row: auto auto;
+  gap: 0.5ch;
+//   background: hsl(0 0% 100% / 0.5);
+//   background: hsl(0, 0%, 100% / 0.5);
+//   background: hsla(0, 0%, 100%, 0.5);
+  background: hsla(41, 100%, 50%, 0.5);
+  backdrop-filter: blur(var(--blur));
+//   backdrop-filter: blur(10px);
+//   filter: blur(var(--blur));
+  height: 30%;
+  align-content: center;
+}
+
+.card__action {
+  position: absolute;
+  aspect-ratio: 1;
+  width: calc(var(--size) * 0.15);
+  bottom: 30%;
+  right: 1.5rem;
+  transform: translateY(50%)
+    translateY(
+      calc(
+        (var(--size) * 0.4)
+      )
+    )
+    translateY(calc(var(--hover, 0) * (var(--size) * -0.4)));
+  background: purple;
+  display: grid;
+  place-items: center;
+  border-radius: 0.5rem;
+//   background: hsl(0 0% 100% / 0.5);
+//   background: hsl(0, 0%, 100% / 0.5);
+  background: hsla(0, 0%, 100%, 0.5);
+	backdrop-filter: blur(calc(var(--blur) * 0.5));
+  transition: transform 0.2s;
+}
+
+.card__action svg {
+  aspect-ratio: 1;
+//   width: 50%;
+  width: 70%;
+  position: absolute;
+}
+
+.card__footer span:nth-of-type(1) {
+	font-size: calc(var(--size) * 0.065);
+	position: absolute;
+	padding-left: 10px;
+}
+
+.card__footer span:nth-of-type(2) {
+  font-size: calc(var(--size) * 0.035);
+}
+
+.card:is(:hover, :focus-visible) {
+  --hover: 1;
+}
+/*#endregion article card internet*/
+
 
 
 // hgroup.articles-content > p:first-child {
