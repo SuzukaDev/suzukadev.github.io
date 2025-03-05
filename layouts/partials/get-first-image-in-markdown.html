@@ -1,0 +1,26 @@
+{{/*  
+Returns the first image path (following the markdown syntax for images: ![text](path))
+found in the markdown.
+Note: Ignores images in comments.
+
+. = Page
+Returns: (string) Path with the image
+*/}}
+
+{{/*  {{ $markdown_raw := .RawContent}}  */}}
+{{/*  Delete all comments in the .RawContent  */}}
+{{ $markdown_raw := .RawContent | replaceRE "<!--[\\s\\S]*?-->" "" }}
+
+{{/*  {{ $markdown_raw := .Content}}  */}}
+
+{{ $first_image_path := "" }}
+
+{{/*  {{ $reg := findRE `!\[.*?\]\((.*?)\)` $markdown_raw 1 }}  */}}
+
+{{ $reg := findRESubmatch `!\[.*?\]\((.*?)\)` $markdown_raw 1 }}
+
+{{ if $reg }}
+	{{ $first_image_path = index (index $reg 0) 1 }}
+{{ end }}
+
+{{ return $first_image_path }}

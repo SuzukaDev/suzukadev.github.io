@@ -1,0 +1,44 @@
+{{/*  
+-- Returns the PATH (string) of the cover image of an article --
+
+If the .md has set the param 'article_cover', it will use that image. 
+
+If not, it will:
+- If the article is a 'leaf bundle' (this means is an article in its own folder (with an index.md)), 
+it CAN has its own resources, and will look automatically for an image with the name "cover.*" (will match any extension)
+
+- If is not a leaf bundle, it will use a default image stored in "static/article-covers/"
+
+*/}}
+
+{{ $cover_image_path := "" }}
+{{ $DEFAULT_IMAGE_PATH := "/images/articles/default-article-cover.png" }}
+
+
+{{ if .Params.article_cover }}
+	{{ $cover_image_path = .Params.article_cover }}
+{{ else }}
+	{{ if eq .BundleType "leaf"}}
+		{{ $images := .Resources.Match "cover.*"}}
+		{{ if gt (len $images) 0 }}
+			{{ $cover_image := index $images 0 }}
+			{{ $cover_image_path = $cover_image.RelPermalink }}
+		{{ else }}
+			{{ $first_image_path := partial "get-first-image-in-markdown.html" . }}
+			{{ if $first_image_path }}
+				{{ $cover_image_path = $first_image_path }}
+
+				{{ $cover_image_path = (printf "%s/%s" .Path $first_image_path) }}
+				{{/*  {{$res := .Resources.Get $first_image_path}}  */}}
+				{{/*  {{ $cover_image_path = $res.RelPermalink }}  */}}
+
+			{{ else }}
+				{{ $cover_image_path = $DEFAULT_IMAGE_PATH }}
+			{{ end }}
+		{{ end }}
+	{{ else }}
+		{{ $cover_image_path = $DEFAULT_IMAGE_PATH }}
+	{{ end }}
+{{ end }}
+
+{{ return $cover_image_path }}
