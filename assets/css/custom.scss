@@ -82,7 +82,8 @@
 
 
 // TODO cambiar el nombre, las cards de las galleries también tienen esta clase y fastidia su visualización
-.card {
+// .card {
+.card-article {
 //   --blur: 16px;
   --blur: 10px;
   --size: clamp(300px, 50vmin, 600px);
@@ -168,7 +169,7 @@
   font-size: calc(var(--size) * 0.035);
 }
 
-.card:is(:hover, :focus-visible) {
+.card-article:is(:hover, :focus-visible) {
   --hover: 1;
 }
 /*#endregion article card internet*/
