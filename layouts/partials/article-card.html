@@ -1,4 +1,10 @@
 {{/*  <a href="#" class="card">  */}}
+{{/*  REFACTOR delete all comments  */}}
+  {{ $article_cover_url := partial "get-article-card-cover.html" . }}
+{{/*  <pre>$article_cover_url = {{ $article_cover_url }}</pre>  */}}
+{{/*  <pre>.RawContent = {{ .RawContent }}</pre>  */}}
+{{/*  <pre>.Path = {{ .Path }}</pre>  */}}
+{{/*  <pre>.File = {{ .File }}</pre>  */}}
 
 {{$article_image_url := .Params.article_cover}}
 {{ $image := .Page.Resources.GetMatch .Params.article_cover }}
@@ -7,27 +13,31 @@
 <pre>name = {{.Name}}</pre>
 <pre>file = {{.File}}</pre>  */}}
 
+
+
+
+
 {{$image_cover_filename := .File }}
 {{ if strings.Contains .File "."}}
   {{$image_cover_filename = index (split .File ".") 0}}
 {{/*  {{ else }}  */}}
 {{ end }}
 
-<pre>contiene .? = {{ strings.Contains .File "."}}</pre>
-<pre>image_cover_filename = {{ $image_cover_filename }}</pre>
+{{/*  <pre>contiene .? = {{ strings.Contains .File "."}}</pre>  */}}
+{{/*  <pre>image_cover_filename = {{ $image_cover_filename }}</pre>  */}}
 
 
 {{/*  {{ $images := .Resources.Match (printf "%s.*" .File)}}  */}}
-<pre>(printf "%s.*" $image_cover_filename) = {{ (printf "%s.*" $image_cover_filename) }}</pre>
+{{/*  <pre>(printf "%s.*" $image_cover_filename) = {{ (printf "%s.*" $image_cover_filename) }}</pre>  */}}
 {{ $images := .Resources.Match (printf "%s.*" $image_cover_filename)}}
-<pre>len images = {{ len $images}}</pre>
+{{/*  <pre>len images = {{ len $images}}</pre>  */}}
 {{ $cover_image := index $images 0}}
 
 
 {{/*  {{ printf "SOY %#v" .File }}  */}}
 {{ $_all_images := .Resources.ByType "image" }}
 {{ range $_all_images }}
-<pre>soy = {{ .RelPermalink  }}</pre>
+{{/*  <pre>soy = {{ .RelPermalink  }}</pre>  */}}
 {{/*  {{ printf "SOY imagen %#v" . }}  */}}
 
 {{ end }}
@@ -35,13 +45,19 @@
 
 <a href="{{.RelPermalink}}" class="card-article">
   {{/*  {{ if $article_image_url }}  */}}
-  {{ if $cover_image }}
+
+
+  {{/*  {{ if $cover_image }}  */}}
     {{/*  <img src="{{.Permalink}}/{{$article_image_url}}" alt="balloon with an emoji face" class="card__img">  */}}
     {{/*  <img src="{{ $image.RelPermalink  }}" alt="balloon with an emoji face" class="card__img">  */}}
-    <img src="{{ $cover_image.RelPermalink  }}" alt="balloon with an emoji face" class="card__img">
-  {{ else }}
-    <img src="https://images.unsplash.com/photo-1526297003708-f5a1c2c9c6e7?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NjI0OTY1ODM&ixlib=rb-1.2.1&q=80" alt="balloon with an emoji face" class="card__img">
-  {{ end }}
+    {{/*  <img src="{{ $cover_image.RelPermalink  }}" alt="balloon with an emoji face" class="card__img">  */}}
+    {{/*  {{ else }}  */}}
+    {{/*  <img src="https://images.unsplash.com/photo-1526297003708-f5a1c2c9c6e7?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NjI0OTY1ODM&ixlib=rb-1.2.1&q=80" alt="balloon with an emoji face" class="card__img">  */}}
+    {{/*  {{ end }}  */}}
+    
+    {{/*  TODO cambiar el alt message  */}}
+  <img src="{{ $article_cover_url }}" alt="balloon with an emoji face" class="card__img">
+
   <span class="card__footer">
     {{/*  <span>Awesome speedy card</span>  */}}
     <span class="super-bold">{{ .Title }}</span>
