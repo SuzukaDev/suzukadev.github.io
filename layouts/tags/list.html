@@ -10,8 +10,8 @@
   <hgroup>
     <h1 class="accent-color">#{{ .Title }}</h1>
   </hgroup>
-  {{/*  <section class="galleries">  */}}
-  <section>
+  <section class="galleries">
+    {{/*  <section>  */}}
     {{ if eq .Kind "term"}}
     {{/*  ARTICLES in a CERTAIN TAG  */}}
       {{ range where .Pages "Params.private" "ne" true }}
