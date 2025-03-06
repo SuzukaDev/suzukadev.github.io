@@ -24,3 +24,4 @@ articlesCount:
 minutesCount:
   one: 1 min
   other: "{{ . }} mins"
+articleImgAlt: Foto de portada para el artículo '{{ . }}'
