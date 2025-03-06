@@ -1,7 +1,7 @@
 +++
-title = 'Article in contenedor'
+title = 'Article in contenedor in its own -awesome- folder'
 date = '2025-02-26T21:13:58+01:00'
-description = "El geníal artículo contenedor"
+description = "The freaking awesome -and wholesome- article in contenedor"
 draft = true
 tags = ["dexter"]
 # article_cover = "cover.png"
