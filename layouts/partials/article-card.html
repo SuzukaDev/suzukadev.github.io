@@ -1,78 +1,25 @@
-{{/*  <a href="#" class="card">  */}}
+
 {{/*  REFACTOR delete all comments  */}}
-  {{ $article_cover_url := partial "get-article-card-cover.html" . }}
-{{/*  <pre>$article_cover_url = {{ $article_cover_url }}</pre>  */}}
-{{/*  <pre>.RawContent = {{ .RawContent }}</pre>  */}}
-{{/*  <pre>.Path = {{ .Path }}</pre>  */}}
-{{/*  <pre>.File = {{ .File }}</pre>  */}}
-
-{{$article_image_url := .Params.article_cover}}
-{{ $image := .Page.Resources.GetMatch .Params.article_cover }}
-
-{{/*  <pre>image = {{$image}}</pre>
-<pre>name = {{.Name}}</pre>
-<pre>file = {{.File}}</pre>  */}}
-
-
-
-
-
-{{$image_cover_filename := .File }}
-{{ if strings.Contains .File "."}}
-  {{$image_cover_filename = index (split .File ".") 0}}
-{{/*  {{ else }}  */}}
-{{ end }}
-
-{{/*  <pre>contiene .? = {{ strings.Contains .File "."}}</pre>  */}}
-{{/*  <pre>image_cover_filename = {{ $image_cover_filename }}</pre>  */}}
-
-
-{{/*  {{ $images := .Resources.Match (printf "%s.*" .File)}}  */}}
-{{/*  <pre>(printf "%s.*" $image_cover_filename) = {{ (printf "%s.*" $image_cover_filename) }}</pre>  */}}
-{{ $images := .Resources.Match (printf "%s.*" $image_cover_filename)}}
-{{/*  <pre>len images = {{ len $images}}</pre>  */}}
-{{ $cover_image := index $images 0}}
-
-
-{{/*  {{ printf "SOY %#v" .File }}  */}}
-{{ $_all_images := .Resources.ByType "image" }}
-{{ range $_all_images }}
-{{/*  <pre>soy = {{ .RelPermalink  }}</pre>  */}}
-{{/*  {{ printf "SOY imagen %#v" . }}  */}}
-
-{{ end }}
-
+{{ $article_cover_url := partial "get-article-card-cover.html" . }}
 
 <a href="{{.RelPermalink}}" class="card-article">
-  {{/*  {{ if $article_image_url }}  */}}
-
-
-  {{/*  {{ if $cover_image }}  */}}
-    {{/*  <img src="{{.Permalink}}/{{$article_image_url}}" alt="balloon with an emoji face" class="card__img">  */}}
-    {{/*  <img src="{{ $image.RelPermalink  }}" alt="balloon with an emoji face" class="card__img">  */}}
-    {{/*  <img src="{{ $cover_image.RelPermalink  }}" alt="balloon with an emoji face" class="card__img">  */}}
-    {{/*  {{ else }}  */}}
-    {{/*  <img src="https://images.unsplash.com/photo-1526297003708-f5a1c2c9c6e7?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NjI0OTY1ODM&ixlib=rb-1.2.1&q=80" alt="balloon with an emoji face" class="card__img">  */}}
-    {{/*  {{ end }}  */}}
-    
-    {{/*  TODO cambiar el alt message  */}}
-  <img src="{{ $article_cover_url }}" alt="balloon with an emoji face" class="card__img">
+  <img src="{{ $article_cover_url }}" alt='{{ T "articleImgAlt" .Title }}' class="card__img">
 
   <span class="card__footer">
     {{/*  <span>Awesome speedy card</span>  */}}
-    <span class="super-bold">{{ .Title }}</span>
+    <span class="super-bold accent-color">{{ .Title }}</span>
     {{/*  <span>2 minutes!</span>  */}}
     <span>{{.Date | time.Format ":date_medium"}}, ⌛{{.ReadingTime | T "minutesCount" }}.</span>
   </span>
   <span class="card__action">
+    {{/*  Play icon  */}}
     {{/*  <svg viewBox="0 0 448 512" title="play">
       <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" />
     </svg>  */}}
 
+    {{/*  Book icon  */}}
     {{/*  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M440-278v-394q-41-24-87-36t-93-12q-36 0-71.5 7T120-692v396q35-12 69.5-18t70.5-6q47 0 91.5 10.5T440-278Zm40 118q-48-38-104-59t-116-21q-42 0-82.5 11T100-198q-21 11-40.5-1T40-234v-482q0-11 5.5-21T62-752q46-24 96-36t102-12q74 0 126 17t112 52q11 6 16.5 14t5.5 21v418q44-21 88.5-31.5T700-320q36 0 70.5 6t69.5 18v-481q15 5 29.5 11t28.5 14q11 5 16.5 15t5.5 21v482q0 23-19.5 35t-40.5 1q-37-20-77.5-31T700-240q-60 0-116 21t-104 59Zm140-240v-440l120-40v440l-120 40Zm-340-99Z"/></svg>  */}}
     {{/*  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="100 -860 700 700" width="24px" ><path d="M440-278v-394q-41-24-87-36t-93-12q-36 0-71.5 7T120-692v396q35-12 69.5-18t70.5-6q47 0 91.5 10.5T440-278Zm40 118q-48-38-104-59t-116-21q-42 0-82.5 11T100-198q-21 11-40.5-1T40-234v-482q0-11 5.5-21T62-752q46-24 96-36t102-12q74 0 126 17t112 52q11 6 16.5 14t5.5 21v418q44-21 88.5-31.5T700-320q36 0 70.5 6t69.5 18v-481q15 5 29.5 11t28.5 14q11 5 16.5 15t5.5 21v482q0 23-19.5 35t-40.5 1q-37-20-77.5-31T700-240q-60 0-116 21t-104 59Zm140-240v-440l120-40v440l-120 40Zm-340-99Z"/></svg>  */}}
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 950 950" fill="currentColor"><path d="M440-278v-394q-41-24-87-36t-93-12q-36 0-71.5 7T120-692v396q35-12 69.5-18t70.5-6q47 0 91.5 10.5T440-278Zm40 118q-48-38-104-59t-116-21q-42 0-82.5 11T100-198q-21 11-40.5-1T40-234v-482q0-11 5.5-21T62-752q46-24 96-36t102-12q74 0 126 17t112 52q11 6 16.5 14t5.5 21v418q44-21 88.5-31.5T700-320q36 0 70.5 6t69.5 18v-481q15 5 29.5 11t28.5 14q11 5 16.5 15t5.5 21v482q0 23-19.5 35t-40.5 1q-37-20-77.5-31T700-240q-60 0-116 21t-104 59Zm140-240v-440l120-40v440l-120 40Zm-340-99Z"/></svg>
-
-    
   </span>
 </a>
