@@ -86,7 +86,8 @@
 .card-article {
 //   --blur: 16px;
   --blur: 10px;
-  --size: clamp(300px, 50vmin, 600px);
+//   --size: clamp(300px, 50vmin, 600px);
+  --size: clamp(400px, 50vmin, 600px);
 //   width: var(--size);
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -122,8 +123,10 @@
 //   background: hsl(0 0% 100% / 0.5);
 //   background: hsl(0, 0%, 100% / 0.5);
 //   background: hsla(0, 0%, 100%, 0.5);
-  background: hsla(41, 100%, 50%, 0.5);
-  backdrop-filter: blur(var(--blur));
+  background: hsla(0, 0%, 17%, 0.5);
+//   background: hsla(41, 100%, 50%, 0.5); // previous
+//   backdrop-filter: blur(var(--blur));
+  backdrop-filter: blur(4px) brightness(1.17) contrast(159%) grayscale(70%);
 //   backdrop-filter: blur(10px);
 //   filter: blur(var(--blur));
   height: 30%;
@@ -134,6 +137,7 @@
   position: absolute;
   aspect-ratio: 1;
   width: calc(var(--size) * 0.15);
+//   width: 20%;
   bottom: 30%;
   right: 1.5rem;
   transform: translateY(50%)
@@ -154,11 +158,38 @@
   transition: transform 0.2s;
 }
 
+.card__date svg{
+	display: inline-block;
+}
+.card__date{
+	position: absolute;
+	// color: white;
+	z-index: 0;
+	top: 0px;
+	right: 0px;
+	padding-top: 10px;
+	// padding-left: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	// background-colorgba(254, 146, 52, 0.377)234;
+	background-color: #fe92346e;
+	backdrop-filter: blur(calc(var(--blur) * 0.5));
+	// border-radius: 0% 100% 0% 100% / 10% 0% 100% 90% ;
+
+	// height: 100%;
+}
+
 .card__action svg {
   aspect-ratio: 1;
 //   width: 50%;
   width: 70%;
   position: absolute;
+}
+
+.card__action time{
+	position: absolute;
+	bottom: -1px;
 }
 
 .card__footer span:nth-of-type(1) {
