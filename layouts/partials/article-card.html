@@ -1,14 +1,11 @@
 
-{{/*  REFACTOR delete all comments  */}}
 {{ $article_cover_url := partial "get-article-card-cover.html" . }}
 
 <a href="{{.RelPermalink}}" class="card-article">
   <img src="{{ $article_cover_url }}" alt='{{ T "articleImgAlt" .Title }}' class="card__img">
 
   <span class="card__footer">
-    {{/*  <span>Awesome speedy card</span>  */}}
     <span class="super-bold accent-color">{{ .Title }}</span>
-    {{/*  <span>2 minutes!</span>  */}}
     <span>{{.Date | time.Format ":date_medium"}}, ⌛{{.ReadingTime | T "minutesCount" }}.</span>
   </span>
   <span class="card__action">
