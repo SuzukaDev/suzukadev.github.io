@@ -5,11 +5,19 @@
   <img src="{{ $article_cover_url }}" alt='{{ T "articleImgAlt" .Title }}' class="card__img">
 
   <span class="card__footer">
-    <span class="super-bold accent-color">{{ .Title }}</span>
-    <span>{{.Date | time.Format ":date_medium"}}, ⌛{{.ReadingTime | T "minutesCount" }}.</span>
+    {{/*  <span class="super-bold accent-color">{{ .Title }}</span>  */}}
+    <span class="super-bold light1-color">{{ .Title }}</span>
+    {{/*  <span>{{.Date | time.Format ":date_medium"}}, ⌛{{.ReadingTime | T "minutesCount" }}.</span>  */}}
+    {{/*  <section>
+      {{ range .Params.tags}}
+        {{$tag_name := . }}
+        {{ $tag_page := site.GetPage (printf "tags/%s" $tag_name) }}
+        <a class="article-tag" href="{{$tag_page.RelPermalink}}">{{$tag_name}}</a>
+      {{ end }}
+    </section>  */}}
   </span>
   
-  <span class="card__date super-bold">
+  <span class="card__date super-bold light2-color">
     <time>{{.Date | time.Format ":date_medium"}}</time>
     {{/*  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-520q66 0 113-47t47-113v-120H320v120q0 66 47 113t113 47ZM160-80v-80h80v-120q0-61 28.5-114.5T348-480q-51-32-79.5-85.5T240-680v-120h-80v-80h640v80h-80v120q0 61-28.5 114.5T612-480q51 32 79.5 85.5T720-280v120h80v80H160Z"/></svg>  */}}
     
@@ -32,6 +40,8 @@
     {{/*  <p class="super-bold">{{.ReadingTime | T "minutesCount" }}</p>  */}}
     <time datetime="PT{{.ReadingTime}}M" class="super-bold">{{.ReadingTime | T "minutesCount" }}</time>
   </span>
+
+
 </a>
 
 
