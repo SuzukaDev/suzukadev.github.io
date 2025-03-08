@@ -219,12 +219,15 @@ background: linear-gradient(0deg, rgba(0,0,0,1.0) 0%, rgba(0,0,0,0.6110644941570
 	z-index: 0;
 	// top: 0px;
 	bottom: 0px;
-	right: 0px;
+	// right: 0px;
+	left: 0px;
 	padding-top: 10px;
 	// padding-left: 10px;
-	padding-left: 10px;
+	// padding-left: 10px;
+	padding-left: 10%;
 	padding-right: 10px;
 	padding-bottom: 5px;
+	font-size: 1.2em;
 	// background-colorgba(254, 146, 52, 0.377)234;
 	// background-color: #fe92346e;
 	// backdrop-filter: blur(calc(var(--blur) * 0.5));
