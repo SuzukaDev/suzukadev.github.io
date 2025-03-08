@@ -4,18 +4,19 @@
 <a href="{{.RelPermalink}}" class="card-article">
   <img src="{{ $article_cover_url }}" alt='{{ T "articleImgAlt" .Title }}' class="card__img">
 
+  {{/*  REFACTOR rename class a... articlecard__blur-bg  */}}
   <span class="card__footer">
     {{/*  <span class="super-bold accent-color">{{ .Title }}</span>  */}}
-    <span class="super-bold light1-color">{{ .Title }}</span>
     {{/*  <span>{{.Date | time.Format ":date_medium"}}, ⌛{{.ReadingTime | T "minutesCount" }}.</span>  */}}
     {{/*  <section>
       {{ range .Params.tags}}
-        {{$tag_name := . }}
-        {{ $tag_page := site.GetPage (printf "tags/%s" $tag_name) }}
-        <a class="article-tag" href="{{$tag_page.RelPermalink}}">{{$tag_name}}</a>
+      {{$tag_name := . }}
+      {{ $tag_page := site.GetPage (printf "tags/%s" $tag_name) }}
+      <a class="article-tag" href="{{$tag_page.RelPermalink}}">{{$tag_name}}</a>
       {{ end }}
     </section>  */}}
   </span>
+  <span class="card__title super-bold light1-color">{{ .Title }}</span>
   
   <span class="card__date super-bold light2-color">
     <time>{{.Date | time.Format ":date_medium"}}</time>
