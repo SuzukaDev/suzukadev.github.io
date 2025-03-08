@@ -9,7 +9,7 @@ tags = ["patinaje", "diversion", "dexter", "wellington", "quiw", "campeon", "zap
 # tags = []
 show_right_bar = true
 show_table_of_contents = true
-article_cover = "articulo-tres.png"
+# article_cover = "articulo-tres.png"
 +++
 
 <!-- TODO poner el texto normal, no centrado -->

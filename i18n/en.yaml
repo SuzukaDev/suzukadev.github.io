@@ -24,4 +24,4 @@ articlesCount:
 minutesCount:
   one: 1 min
   other: "{{ . }} mins"
-articleImgAlt: Cover image of the article '{.}'
+articleImgAlt: Cover image of the article '{{ . }}'

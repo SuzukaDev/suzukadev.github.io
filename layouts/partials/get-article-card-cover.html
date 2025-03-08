@@ -17,6 +17,32 @@ it CAN has its own resources, and will look automatically for an image with the 
 
 {{ if .Params.article_cover }}
 	{{ $cover_image_path = .Params.article_cover }}
+	{{/*  {{ $cover_image_path = (printf "%s%s" .RelPermalink .Params.article_cover) }}  */}}
+	{{/*  {{ $cover_image_path = (printf "%s/%s/%s" site.Language.Lang .Section .Params.article_cover) }}  */}}
+	
+	{{/*  {{ $cover_image_path = (printf "/%s/%s/%s" site.Params.defaultContentLanguage .Section .Params.article_cover) }}  */}}
+	
+	{{/*  NOTE Funciona, pero claro...  */}}
+	{{/*  {{ $cover_image_path = (printf "/%s/%s/%s" "es" .Section .Params.article_cover) }}   */}}
+	{{/*  NOTE Better  */}}
+	{{/*  {{ $cover_image_path = (printf "/%s/%s/%s" .Site.Params.default_language .Section .Params.article_cover) }}   */}}
+
+
+
+	{{/*  {{ $cover_image_path = (printf "/%s/%s/%s" (.Site.LanguagePrefix | absURL) .Section .Params.article_cover) }}   */}}
+	{{/*  {{ $cover_image_path = (printf "%s/%s/%s" (.Site.DefaultContentLanguage) .Section .Params.article_cover) }}   */}}
+	{{/*  {{ $cover_image_path = (printf "%s/%s/%s" (.Site.Language.Lang) .Section .Params.article_cover) }}   */}}
+	{{/*  {{ $cover_image_path = (printf "%s/%s/%s" ($.Site.LanguageCode) .Section .Params.article_cover) }}   */}}
+	
+
+
+	{{/*  {{ $cover_image_path = (printf "/%s" site.Params.defaultContentLanguage) }}  */}}
+	{{/*  {{ $cover_image_path = (printf "%s" .Site.LanguagePrefix) }}  */}}
+	{{/*  {{ $cover_image_path = (printf "%s" .Site.defaultContentLanguage) }}  */}}
+	{{/*  {{ $cover_image_path = (printf "%s" .Site.Language.Lang) }}  */}}
+
+	{{/*  {{ $cover_image_path = (printf "%s%s" .Permalink .Params.article_cover) }}  */}}
+	{{/*  {{ $cover_image_path = (printf "/%s/%s" "en" .Params.article_cover) }}  */}}
 {{ else }}
 	{{ if eq .BundleType "leaf"}}
 		{{ $images := .Resources.Match "cover.*"}}
