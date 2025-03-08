@@ -893,7 +893,27 @@ hgroup.articles-content ul ul ul ul li{
 
 .language-switcher{
 	position: absolute;
-	right: 60px;
+	right: 55px;
+	width: 20px;
+	// height: 30px;
 	// top: 19px;
 	// bottom: 10px;
+	transition: all 50ms;
+
+	&:hover{
+		// border: 3px solid var(--hover-color-soft);
+		// outline: 3px solid var(--hover-color);
+		// outline-offset: 2px;
+
+		border-bottom: 4px solid var(--hover-color);
+// border-radius: 5px;
+
+		// width: 100px;
+		// height: 100px;
+		// background: #33ff00;
+		// border-bottom: 5px solid;
+		// margin-bottom: 5px;
+	}
+}
+
 }
