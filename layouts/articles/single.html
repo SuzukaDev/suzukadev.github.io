@@ -10,6 +10,7 @@
   {{ end }}  */}}
   
   {{/*  <aside>  */}}
+    {{ $page := .Page}}
     <div class="article-and-navbar">
     {{ if .Params.show_table_of_contents }}
       <aside class="articles-index" >
@@ -27,6 +28,8 @@
               {{ . }}
               {{/*  </section>  */}}
               {{/*  </section>  */}}
+
+          {{ partial "next-and-previous-article.html" $page }}
         </hgroup>
         {{ end }}
         

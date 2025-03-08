@@ -876,3 +876,17 @@ hgroup.articles-content ul ul ul ul li{
     margin-left: 20px;
 }
 /*#endregion hgroup.articles-content*/
+
+.previous-article{
+	position: absolute;
+	left: 0;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.next-article{
+	position: absolute;
+	right: 0;
+	padding-right: 10px;
+	padding-top: 10px;
+}
