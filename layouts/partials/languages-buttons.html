@@ -14,8 +14,8 @@
         {{/*  <a href="{{ .RelPermalink }}">{{ .Language.Lang.languageCode  }}</a>  */}}
         {{/*  <a href="{{ .RelPermalink }}">{{ .Site.Language.Lang }}</a>  */}}
         {{/*  <a href="{{ .RelPermalink }}">{{ $language_abreviation }}</a>  */}}
-        <a class="hover-accent-color" href="{{ .RelPermalink }}">{{ $language_abreviation }}
-
+        {{/*  <a class="hover-accent-color" href="{{ .RelPermalink }}">{{ $language_abreviation }}  */}}
+        <a class="hover-accent-color" href="{{ .RelPermalink }}">
 			{{ if eq $language_abreviation "ES"}}
 			<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-es" viewBox="0 0 640 480">
 				<path fill="#AA151B" d="M0 0h640v480H0z"/>
