@@ -1,0 +1,37 @@
+{{/*  <ul>
+    {{ range .Site.Languages }}
+        <li>
+            <a href="{{ .Lang | relLangURL }}">{{ .LanguageName }}</a>
+        </li>
+    {{ end }}
+</ul>  */}}
+
+
+{{/*  <ul>
+    {{ range .Site.Languages }}
+        <li>
+            <a href="{{ $.Page.Permalink | relLangURL .Lang }}">{{ .LanguageName }}</a>
+        </li>
+    {{ end }}
+</ul>  */}}
+
+{{/*  {{ range . }}
+	{{ if eq .Language.Lang $.Language.Lang }}
+		<a class="active" aria-current="page" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+	{{ else }}
+		<a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+	{{ end }}
+{{ end }}  */}}
+
+
+{{ with .Translations }}
+  <nav class="language-switcher">
+    {{ range . }}
+      {{ if eq .Language.Lang $.Language.Lang }}
+        <a class="active" aria-current="page" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+      {{ else }}
+        <a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+      {{ end }}
+    {{ end }}
+  </nav>
+{{ end }}

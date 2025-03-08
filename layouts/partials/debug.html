@@ -27,3 +27,13 @@
 {{ end }}
 
 <hr class="full-separator">
+{{ range .Site.Languages }}
+<li>
+	{{/*  <a href="{{ $.Page.Permalink | relLangURL .Lang }}">{{ .LanguageName }}</a>  */}}
+	<span>{{ $.Page.Permalink }}</span>
+	<span>{{ .LanguageName }}</span>
+</li>
+{{ end }}
+
+<hr class="full-separator">
+<hr class="full-separator">

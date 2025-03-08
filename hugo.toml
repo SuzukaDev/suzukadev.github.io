@@ -6,10 +6,11 @@ theme = 'gallery'
 
 # Multilingual
 # INFO https://gohugo.io/content-management/multilingual/
-# defaultContentLanguage = 'en'
-defaultContentLanguage = 'es'
-# defaultContentLanguageInSubdir = true
-defaultContentLanguageInSubdir = false
+defaultContentLanguage = 'en' #NOTE This must match 'default_language'
+# defaultContentLanguage = 'es'
+defaultContentLanguageInSubdir = true
+# defaultContentLanguageInSubdir = false
+
 [languages]
   [languages.es]
     # contentDir = 'content/de'
@@ -43,9 +44,10 @@ defaultContentLanguageInSubdir = false
 [markup.goldmark.renderer]
 unsafe= true
 [params]
+  # default_language = 'en' # NOTE this must match 'defaultContentLanguage'
   articles_author = 'Suzuka Ka'
-  # is_debug = false # Set to false for relase
-  is_debug = true
+  is_debug = false # Set to false for relase
+  # is_debug = true
   keywords = ['gamedev', 'gamedeveloper', 'engeneer', 'multimedia engineer', '2D art', '3D art', 'music production', 'alicante', 'spain']
   socials = ['github', 'twitter', 'youtube','gumroad', 'itchio', 'email']
 

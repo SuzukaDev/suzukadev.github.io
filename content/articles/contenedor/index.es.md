@@ -4,7 +4,7 @@ date = '2025-02-26T21:13:58+01:00'
 description = "El geníal -y alucinante- artículo contenedor"
 draft = true
 tags = ["dexter"]
-# article_cover = "cover.png"
+# article_cover = "zzzcover.png"
 +++
 
 # Comenzando el mítico Artículo contenedor h1
