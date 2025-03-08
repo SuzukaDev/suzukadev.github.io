@@ -8,7 +8,6 @@
   </a>
   {{/*  REFACTOR breadcrumbs Lo dejo aquí? */}}
   {{ partial "breadcrumbs.html" . }}
-  {{ partial "languages-buttons.html" $current_page }}
   {{ else }}
     <a class="btn" href="{{ .Site.Home.RelPermalink }}">
       {{/*  DEXTER SVG ICON  */}}
@@ -47,6 +46,7 @@
       {{ .Site.Title }}
     </a>
   {{ end }}
+  {{ partial "languages-buttons.html" . }}
   {{ if site.Menus.main }}
     <ul>
       <li>
