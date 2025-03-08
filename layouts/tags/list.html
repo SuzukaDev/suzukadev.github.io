@@ -1,12 +1,6 @@
 {{/*  TODO tags list.html  */}}
 {{ define "main" }}
-  {{ if .Site.Params.is_debug }}
-  <pre>File = layouts/tags/list.html</pre>
-  <pre>Path = {{.Path}}</pre>
-  <pre>Debug .Kind = {{ debug.Dump .Kind }}</pre> 
-  <pre>.Section = {{.Section}}</pre>
-  {{ end }}
-  {{/*  {{ partial "title.html" . }}  */}}
+    {{/*  {{ partial "title.html" . }}  */}}
   <hgroup>
     <h1 class="accent-color">#{{ .Title }}</h1>
   </hgroup>
