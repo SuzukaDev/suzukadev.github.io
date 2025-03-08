@@ -23,14 +23,24 @@
 	{{ end }}
 {{ end }}  */}}
 
-
+{{/*  <pre>{{.Site.Language}}</pre>  */}}
+{{$current_language := .Site.Language | lower}}
 {{ with .Translations }}
-  <nav class="language-switcher">
+<nav class="language-switcher light2-color">
+    {{/*  <span class="super-bold">{{$current_language}}</span> <span>/</span>  */}}
     {{ range . }}
+    {{/*  <pre>{{.}}</pre>  */}}
+      {{ $language_abreviation := .Lang | upper }}
       {{ if eq .Language.Lang $.Language.Lang }}
-        <a class="active" aria-current="page" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+        {{/*  <a class="active" aria-current="page" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>  */}}
+        {{/*  <a class="active" aria-current="page" href="{{ .RelPermalink }}">{{ .Site.Language.Lang }}</a>  */}}
+        <a class="active" aria-current="page" href="{{ .RelPermalink }}">{{ $language_abreviation }}</a>
       {{ else }}
-        <a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+        {{/*  <a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>  */}}
+        {{/*  <a href="{{ .RelPermalink }}">{{ .Language.Lang.languageCode  }}</a>  */}}
+        {{/*  <a href="{{ .RelPermalink }}">{{ .Site.Language.Lang }}</a>  */}}
+        {{/*  <a href="{{ .RelPermalink }}">{{ $language_abreviation }}</a>  */}}
+        <a class="hover-accent-color" href="{{ .RelPermalink }}">{{ $language_abreviation }}</a>
       {{ end }}
     {{ end }}
   </nav>
