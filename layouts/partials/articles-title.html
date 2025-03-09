@@ -28,7 +28,8 @@
             {{/*  {{.}}  */}}
             {{/*  <a href="{{ $tag.RelPermalink }}">{{- $tag -}}</a>  */}}
             {{/*  <a class="article-tag">{{- $tag -}}</a>  */}}
-            <a class="article-tag" href="/tags/{{$tag}}">{{- $tag -}}</a>
+            {{/*  <a class="article-tag" href="/tags/{{$tag}}">{{- $tag -}}</a>  */}}
+            <a class="article-tag" href="{{absLangURL "tags/"}}{{$tag}}">{{- $tag -}}</a>
             {{/*  {{- if ne $index $lastIndex -}}
             ,
             {{- else -}}
