@@ -46,6 +46,7 @@ defaultContentLanguageInSubdir = true
 [markup.goldmark.renderer]
 unsafe= true
 [params]
+  # REFACTOR delete default_language
   # default_language = 'en' # NOTE this must match 'defaultContentLanguage'
   articles_author = 'Suzuka Ka'
   # is_debug = false # Set to false for relase
