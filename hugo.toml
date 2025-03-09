@@ -19,6 +19,7 @@ defaultContentLanguageInSubdir = true
     languageDirection = 'ltr'
     languageName = 'Spanish'
     # title = 'Projekt Dokumentation'
+    title = 'Portfolio de Suzuka Ka'
     weight = 1
     # [languages.de.params]
       # subtitle = 'Referenz, Tutorials und Erklärungen'
@@ -29,6 +30,7 @@ defaultContentLanguageInSubdir = true
     languageDirection = 'ltr'
     languageName = 'English'
     # title = 'Project Documentation'
+    title = "Suzuka Ka's Portfolio"
     weight = 2
     # [languages.en.params]
       # subtitle = 'Reference, Tutorials, and Explanations'
@@ -46,8 +48,8 @@ unsafe= true
 [params]
   # default_language = 'en' # NOTE this must match 'defaultContentLanguage'
   articles_author = 'Suzuka Ka'
-  is_debug = false # Set to false for relase
-  # is_debug = true
+  # is_debug = false # Set to false for relase
+  is_debug = true
   keywords = ['gamedev', 'gamedeveloper', 'engeneer', 'multimedia engineer', '2D art', '3D art', 'music production', 'alicante', 'spain']
   socials = ['github', 'twitter', 'youtube','gumroad', 'itchio', 'email']
 
