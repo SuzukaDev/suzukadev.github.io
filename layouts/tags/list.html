@@ -37,7 +37,7 @@
             {{/*  <div class="tagbutton">  */}}
             {{/*  <a class="article-tag" href={{ .RelPermalink }} title="All pages with tag <i>{{$name}}</i>">{{$name}}</a>  */}}
             {{/*  <sup>{{$cnt}}</sup>  */}}
-            <a class="article-tag big-article-tag" href={{ .RelPermalink }} title="All pages with tag <i>{{$name}}</i>"><span class="center-text">{{$name}}<sup>{{$cnt}}</sup></span></a>
+            <a class="article-tag big-article-tag" href={{ .RelPermalink }} title="All pages with tag <i>{{$name}}</i>"><span class="center-text">{{$name}}<sup class="tag-count">{{$cnt}}</sup></span></a>
             {{/*  </div>  */}}
           {{end}}
       {{end}}
