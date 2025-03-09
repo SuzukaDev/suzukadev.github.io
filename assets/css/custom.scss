@@ -39,6 +39,24 @@
 	color: var(--text-2-light);
 }
 
+.center-text{
+	// text-align: center;
+	// display: block;
+
+	// margin: auto;
+	// position: absolute;
+	// right: 50%;
+
+	display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically if needed */
+}
+
+.big-article-tag{
+	font-size: 1.4em;
+}
+
+
 .accent-color{
 	color: var(--hover-color);
 }
