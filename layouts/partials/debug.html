@@ -1,11 +1,32 @@
 {{/*  Partial for debugging  */}}
-<h1>Debug Code</h1>
-<pre>❗ Don't forget to turn 'false' the `is_debug` flag in `hugo.toml` ❗</pre>
+<h1 class="accent-color super-bold">---------------------- [Debug Code] ----------------------</h1>
+<pre class="super-bold">❗ Don't forget to turn 'false' the `is_debug` flag in `hugo.toml` ❗</pre>
+{{$template_type := "list.html"}}
+{{ if eq .Kind "page" }}
+{{ $template_type = "single.html" }}
+{{ end }}
+{{/*  <pre>TEMPLATE: "{{$template_type}}"</pre>  */}}
+<h1 class="super-bold"> >> "{{$template_type}}"</h1>
+{{/*  <p>NOTA❗: </p>
+	<pre>"page"</pre> uses SINGLE.HTML
+	<pre>"section", "taxonomy", "term"</pre> uses LIST.HTML  */}}
+<h1 class="super-bold">---------------------- Sites 🏠</h1>
+<pre>hugo.IsDevelopment  = {{ hugo.IsDevelopment }}</pre>
+<pre>.Site.Title  = {{ .Site.Title }}</pre>
+<pre>Sites {{ .Sites }}:</pre>
+<ul>
+	{{ range .Site.Sites }}
+	  <li><a href="{{ .Home.Permalink }}"> - {{ .Title }}</a></li>
+	{{ end }}
+</ul>
+
+
 <pre>Languages: {{ .Site.Languages }}</pre>
 <pre>🦜.Site.Language.LanguageName = {{.Site.Language.LanguageName}}</pre>
 <pre>.IsTranslated = {{.IsTranslated}}</pre>
 <pre>.Permalink: {{ .Permalink }}</pre>
 <pre>.RelPermalink: {{ .RelPermalink }}</pre>
+<pre>.Title: {{ .Title }}</pre>
 <pre>💾 .File: {{ .File }}</pre>
 {{/*  <pre>.GetInfo: {{ .GetInfo }}</pre>  */}}
 
