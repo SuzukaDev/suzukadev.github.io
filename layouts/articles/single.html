@@ -28,8 +28,9 @@
               {{ . }}
               {{/*  </section>  */}}
               {{/*  </section>  */}}
-
-          {{ partial "next-and-previous-article.html" $page }}
+          {{ if ne $page.Params.show_next_and_previous_arrows false }}
+            {{ partial "next-and-previous-article.html" $page }}
+          {{ end }}
         </hgroup>
         {{ end }}
         

@@ -11,7 +11,7 @@ show_right_bar = true
 show_table_of_contents = true
 # article_cover = "second-article.png"
 article_cover = "articulo-tres.png"
-
+# show_next_and_previous_arrows = false
 +++
 
 <!-- TODO poner el texto normal, no centrado -->
