@@ -27,6 +27,22 @@
 // 	  }
 // }
 
+#theme-toggle svg{
+	color: var(--text-2);
+	& :hover{
+		color: var(--hover-color);
+	}
+}
+
+.light #theme-toggle svg:last-child{
+	display: none;
+}
+
+.dark #theme-toggle svg:first-child{
+	display: none;
+}
+
+
 .debug{
 	color: greenyellow;
 }
