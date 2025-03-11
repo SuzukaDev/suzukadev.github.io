@@ -970,11 +970,14 @@ hgroup.articles-content ul ul ul ul li{
 	transition: all 50ms;
 
 	&:hover{
-		// border: 3px solid var(--hover-color-soft);
+		// border: 3px solid var(--hover-color);
 		// outline: 3px solid var(--hover-color);
+		// box-shadow: 0px 2px 3px #0000008a;
+		box-shadow: 0px 2px 3px var(--hover-color);
 		// outline-offset: 2px;
 
-		border-bottom: 4px solid var(--hover-color);
+		// border-bottom: 4px solid var(--hover-color);
+		// transform: scale(1.2);
 // border-radius: 5px;
 
 		// width: 100px;
