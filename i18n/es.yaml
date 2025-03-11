@@ -25,3 +25,4 @@ minutesCount:
   one: 1 min
   other: "{{ . }} mins"
 articleImgAlt: Foto de portada para el artículo '{{ . }}'
+goBack: Ir a la página principal

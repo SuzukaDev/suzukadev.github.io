@@ -995,6 +995,7 @@ hgroup.articles-content ul ul ul ul li{
 
 /*#region Fancy animations*/
 .shadow-dance-text {
+	letter-spacing: -2px;
     // font-size: 4rem;
     // color: #fff;
 
@@ -1025,13 +1026,16 @@ hgroup.articles-content ul ul ul ul li{
 
 @keyframes shadow-dance2 {
     0%, 100% {
-
+		letter-spacing: -2px;
         // text-shadow: 5px 5px 0 #ff005e, 10px 10px 0 #00d4ff;
         text-shadow: var(--distance) var(--distance) 50px #ff005e, var(--distance2) var(--distance2) 0 #00d4ff;
     }
     50% {
+		letter-spacing: -3px;
         // text-shadow: -5px -5px 0 #00d4ff, -10px -10px 0 #ff005e;
         text-shadow: calc(var(--distance)*-1) calc(var(--distance)*-1) 0 #00d4ff, calc(var(--distance2)*-1) calc(var(--distance2)*-1) 0 #ff005e;
+        // text-shadow: calc(-var(--distance)) calc(var(--distance)*-1) 0 #00d4ff, calc(var(--distance2)*-1) calc(var(--distance2)*-1) 0 #ff005e;
+        // text-shadow: calc(-var(--distance)) calc(-var(--distance)) 0 #00d4ff, calc(-var(--distance2)) calc(-var(--distance2)) 0 #ff005e;
         // text-shadow: -5px -5px 10px #00d4ff, -10px -10px 0 #ff005e;
     }
 }
@@ -1225,7 +1229,7 @@ hgroup.articles-content ul ul ul ul li{
     50% {
 		// transform: rotate(0deg);
 		// transform: translateX(-100px) rotate(0deg);
-		transform: translateX(-100px) translateY(-10px) rotate(0deg);
+		transform: translateX(-100px) translateY(-27px) rotate(0deg);
         // text-shadow: -5px -5px 0 #00d4ff, -10px -10px 0 #ff005e;
         // text-shadow: calc(var(--distance)*-1) calc(var(--distance)*-1) 0 #00d4ff, calc(var(--distance2)*-1) calc(var(--distance2)*-1) 0 #ff005e;
         // text-shadow: -5px -5px 10px #00d4ff, -10px -10px 0 #ff005e;
