@@ -1,0 +1,138 @@
+{{ define "main" }}
+  <hgroup >
+
+
+    <div class="wave-container text1-color">
+      <h1 class="wave-text shadow-dance-text">
+          {{/*  <span>4</span><span>0</span><span>4</span><span>E</span>  */}}
+          <span>E</span><span>r</span><span>r</span><span>o</span><span>r</span> 
+<span>4</span><span>0</span><span>4</span>
+      </h1>
+  </div>
+
+
+  {{/*  {{ $error_404 := "Error 404" }}  */}}
+  {{ $error_404 := T "pageNotFound" }}
+  {{ $error_404_chars := split $error_404 "" }}
+  {{ $mid_index := div (len $error_404_chars) 2 | math.Ceil}}
+  <h1>
+  {{ range $index, $char := $error_404_chars }}
+    {{$distance_to_mid := sub $index $mid_index}}
+    {{/*  <span class="shadow-dance-text" style="--animation-delay: {{mul $index .03}}s">{{$mid_index}}{{$char}}</span>  */}}
+    <span class="shadow-dance-text" style="--distance-to-mid: {{$distance_to_mid}}px;--animation-delay: {{mul $index .03}}s">{{$char}}</span>
+  {{ end }}
+  </h1>
+
+  {{/*  SMILE FACE  */}}
+  {{/*  <h2><span class="rotate-animation">:</span> <span class="rotate-animation">(</span></h2>  */}}
+  <h1><span class="rotate-animation">:</span> <span class="rotate-animation" style="animation-delay: .1s;">(</span></h1>
+
+
+  {{/*  <iframe width="560" height="315" src="https://www.youtube.com/embed/vlT1Ee52EAY?si=pMUi-Uxp_zJxbQ90" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  */}}
+  {{/*  <iframe width="560" height="315" src="https://www.youtube.com/embed/vlT1Ee52EAY?si=pMUi-Uxp_zJxbQ90?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  */}}
+
+  {{/*  <iframe width="560" height="315" src="https://www.youtube.com/embed/vlT1Ee52EAY?si=jYUktkmeiAAhpXiF&amp;controls=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  */}}
+  {{/*  <iframe width="560" height="315" src="https://www.youtube.com/embed/vlT1Ee52EAY?si=jYUktkmeiAAhpXiF&autoplay=1&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  */}}
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/vlT1Ee52EAY?si=jYUktkmeiAAhpXiF&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  {{/*  <iframe width="560" height="315" src="https://www.youtube.com/embed/vlT1Ee52EAY?si=jYUktkmeiAAhpXiF&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  */}}
+    {{/*  <div class="shadow-dance-container">
+      <h1 class="shadow-dance-text">404</h1>
+      <h1 class="shadow-dance">404</h1>
+      <h1 class="shadow-dance">404</h1>
+    </div>  */}}
+    {{/*  <p class="shadow-dance-text">{{ T "pageNotFound" }}</p>  */}}
+    
+
+    <div class="content">
+      <h1 class="text-shadows">{{ T "pageNotFound" }}</h1>
+    </div>
+
+
+
+    {{/*  {{$text := "hola soy un texto"}}  */}}
+    {{/*  {{$text := (T "pageNotFound")}}  */}}
+    {{$text := "Page not found | Página no encontrada | Page non trouvée | Seite nicht gefunden | Pagina non trovata | Página não encontrada | Pagina niet gevonden | Страница не найдена | 页面未找到 | ページが見つかりません | 페이지를 찾을 수 없습니다 | الصفحة غير موجودة | הדף לא נמצא | Sayfa bulunamadı | पृष्ठ नहीं मिला | ไม่พบหน้าที่ร้องขอ | Η σελίδα δεν βρέθηκε | Strona nie została znaleziona | Sidan hittades inte | Az oldal nem található | Sivua ei löytynyt | Stránka nebyla nalezena | Pagina nu a fost găsită" }}
+    {{$text_chars := split $text "" }}
+    
+    {{/*  <h1 class="wave-text shadow-dance-text">  */}}
+    <h1 class="wave-text">
+    {{$y_translate := 100}}
+    {{$total_count := 0}}
+    {{/*  {{ range $i := seq 11 }}  */}}
+      {{ range $index, $char := ($text_chars := split $text "") }}
+        {{/*  <p>{{ printf "Character at index %d: %s" $index (string $char) }}</p>  */}}
+        {{/*  <span style="--n:{{$index}};">{{(string $char)}}</span>  */}}
+        {{/*  <span style="--anim-delay:{{$index}};">{{(string $char)}}</span>  */}}
+        
+        {{/*  <span style="--anim-delay:{{$total_count}};">{{(string $char)}}</span>  */}}
+        {{/*  <span style="--anim-delay:{{$total_count}}; --is-active:1;">{{(string $char)}}</span>  */}}
+        {{/*  <span style="--anim-delay:{{$total_count}}; --is-active:0;">{{(string $char)}}</span>  */}}
+        {{/*  <span style="--anim-delay:{{$total_count}};">{{(string $char)}}</span>  */}}
+        {{/*  <span style="--anim-delay:{{$total_count}}; --y-translate:100px">{{(string $char)}}</span>  */}}
+        
+        {{/*  <span style="--anim-delay:{{$total_count}}; --y-translate:{{ math.Rand | mul 60 | math.Ceil | add 20}}px">{{(string $char)}}</span>  */}}
+        {{/*  <span style="--anim-delay:{{$total_count}}; --y-translate:100px">{{(string $char)}}</span>  */}}
+        <span style="--anim-delay:{{mul $total_count 0.8}}; ">{{(string $char)}}</span>
+
+        {{/*  <span style="--anim-delay:{{$total_count}}; --is-active:9999999999999999999s;">{{(string $char)}}</span>  */}}
+        {{ $total_count = add $total_count 1 }}
+      {{ end }}
+    {{/*  {{ end }}  */}}
+    </h1>
+
+
+    {{ $page_not_found := slice
+      "Pate not found" 
+      "Página no encontrada" 
+      "Pàgina no trobada" 
+      "Page non trouvée" 
+      "Seite nicht gefunden" 
+      "Pagina non trovata" 
+      "Página não encontrada" 
+      "Pagina niet gevonden" 
+      "Страница не найдена" 
+      "页面未找到" 
+      "ページが見つかりません" 
+      "페이지를 찾을 수 없습니다" 
+      "الصفحة غير موجودة" 
+      "הדף לא נמצא" 
+      "Sayfa bulunamadı" 
+      "पृष्ठ नहीं मिला" 
+      "ไม่พบหน้าที่ร้องขอ" 
+      "Η σελίδα δεν βρέθηκε" 
+      "Strona nie została znaleziona" 
+      "Sidan hittades inte" 
+      "Az oldal nem található" 
+      "Sivua ei löytynyt" 
+      "Stránka nebyla nalezena" 
+      "Pagina nu a fost găsită"
+      }}
+
+      {{/*  {{ $page_not_found := slice "Página no encontrada" "Page non trouvée" "Seite nicht gefunden" "Pagina non trovata" "Página não encontrada" "Pagina niet gevonden" "Страница не найдена" "页面未找到" "ページが見つかりません" "페이지를 찾을 수 없습니다" "الصفحة غير موجودة" "הדף לא נמצא" "Sayfa bulunamadı" "पृष्ठ नहीं मिला" "ไม่พบหน้าที่ร้องขอ" "Η σελίδα δεν βρέθηκε" "Strona nie została znaleziona" "Sidan hittades inte" "Az oldal nem található" "Sivua ei löytynyt" "Stránka nebyla nalezena" "Pagina nu a fost găsită"}}  */}}
+
+    {{/*  {{ $page_not_found := ["Página no encontrada","Page non trouvée","Seite nicht gefunden","Pagina non trovata","Página não encontrada","Pagina niet gevonden","Страница не найдена","页面未找到","ページが見つかりません","페이지를 찾을 수 없습니다","الصفحة غير موجودة","הדף לא נמצא","Sayfa bulunamadı","पृष्ठ नहीं मिला","ไม่พบหน้าที่ร้องขอ","Η σελίδα δεν βρέθηκε","Strona nie została znaleziona","Sidan hittades inte","Az oldal nem található","Sivua ei löytynyt","Stránka nebyla nalezena","Pagina nu a fost găsită"] }}  */}}
+
+    {{ range $page_not_found}}
+      {{$rand_hue := mul math.Rand 1000 | math.Ceil}}
+      {{/*  {{$style := (printf "color: hsl(%f, 100%%, 50%%);" $rand_hue )}}  */}}
+      {{$style := (printf "text-shadow: 0 0 20px hsl(%f, 100%%, 50%%);" $rand_hue )}}
+      {{/*  {{$style := ((printf "color: hsl(%s 100% 100%)" $rand_hue )| safeHTMLAttr)}}  */}}
+      {{/*  <h1 class="wave-text" style="{{$style}}">  */}}
+      {{/*  <h1 class="wave-text" style="{{$style}}">  */}}
+      <h1 class="wave-text" style="{{$style | safeCSS}}">
+      {{/*  <h1 class="wave-text">  */}}
+        {{$chars := (split . "")}}
+        {{ range $index, $char := $chars}}
+          <span>{{ $char }}</span>
+          {{/*  <span><span>{{ $char }}</span></span>  */}}
+        {{ end }}
+      </h1>
+    {{ end }}
+
+
+  
+
+
+  </hgroup>
+{{ end }}
