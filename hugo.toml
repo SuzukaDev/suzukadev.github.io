@@ -49,8 +49,8 @@ unsafe= true
   # REFACTOR delete default_language
   # default_language = 'en' # NOTE this must match 'defaultContentLanguage'
   articles_author = 'Suzuka Ka'
-  # is_debug = false # Set to false for relase
-  is_debug = true
+  is_debug = false # Set to false for relase
+  # is_debug = true
   keywords = ['gamedev', 'gamedeveloper', 'engeneer', 'multimedia engineer', '2D art', '3D art', 'music production', 'alicante', 'spain']
   socials = ['github', 'twitter', 'youtube','gumroad', 'itchio', 'email']
 
