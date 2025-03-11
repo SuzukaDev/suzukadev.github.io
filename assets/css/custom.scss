@@ -2,6 +2,8 @@
 :root {
 	/* --hover-color: {{ .Site.Params.colors.hover }}; */
 	--hover-color: #fe9234;
+	--pfp-color: #ff3300;
+	--pfp-color2: #008cff;
 	--hover-color-soft: #a0612a;
 	--profile-scale: 1.1;
 	--articles-side-margin: 20px;
@@ -497,23 +499,48 @@ blockquote {
 	// overflow: hidden;
     // transition-duration: 10.5s;
     // transition-property: transform;
+	transition: all 500ms;
+	// transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	// transition-timing-function: cubic-bezier(0,1.89,.54,.63);
+	// transition-timing-function: cubic-bezier(0,2.01,.89,-1.04);
+
+
+	-webkit-box-shadow: -1px 0px 3px 0px var(--hover-color), 1px 3px 2px 0px var(--pfp-color2), 
+			1px 0px 3px 0px var(--pfp-color), 1px -2px 3px 0px var(--pfp-color);
+	-moz-box-shadow: -1px 0px 3px 0px var(--hover-color), 1px 3px 2px 0px var(--pfp-color2), 
+			1px 0px 3px 0px var(--pfp-color), 1px -2px 3px 0px var(--pfp-color);
+	box-shadow: -1px 0px 3px 0px var(--hover-color), 1px 3px 2px 0px var(--pfp-color2), 
+			1px 0px 3px 0px var(--pfp-color), 1px -2px 3px 0px var(--pfp-color);
+
 }
 
 #szk_pfp:hover {
 	// -webkit-box-shadow:0px 0px 41px 0px var(--hover-color);
 	// -moz-box-shadow: 0px 0px 41px 0px var(--hover-color);
 	// box-shadow: 0px 0px 41px 0px var(--hover-color);
+	
+	// -webkit-box-shadow: 0px 0px 13px 0px rgba(254, 146, 52, 0.9);
+	// -moz-box-shadow: 0px 0px 13px 0px rgba(254, 146, 52, 0.9);
+	// box-shadow: 0px 0px 13px 0px rgba(254, 146, 52, 0.9);
+	
 
-	-webkit-box-shadow: 0px 0px 13px 0px rgba(254, 146, 52, 0.9);
-	-moz-box-shadow: 0px 0px 13px 0px rgba(254, 146, 52, 0.9);
-	box-shadow: 0px 0px 13px 0px rgba(254, 146, 52, 0.9);
+	// box-shadow: -1px 0px 3px 0px var(--hover-color), -1px 3px 2px 0px var(--pfp-color2), 
+	// 1px 0px 3px 0px var(--pfp-color), 1px -2px 3px 0px var(--pfp-color),
+	// // 1px 4px 3px 0px var(--pfp-color2)
+	// ;
 
+	
+	
 	// ROTATION TEST
 	// transform: rotate(360deg);
     // -webkit-transform: rotate(2*360deg);
-
-	transform:scale(1.1);
-	animation: scaleAnim 0.1s ease 0s 2 alternate both;
+	
+	// transform:scale(1.1);
+	transform:scale(1.1) rotate(-10deg);
+	// animation: scaleAnim 10.1s ease 0s 2 alternate both;
+	transition: all 200ms;
+	
 }
 
 #szk_pfp::not(:hover) {
