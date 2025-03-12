@@ -29,22 +29,6 @@
 // 	  }
 // }
 
-#theme-toggle svg{
-	color: var(--text-2);
-	& :hover{
-		color: var(--hover-color);
-	}
-}
-
-.light #theme-toggle svg:last-child{
-	display: none;
-}
-
-.dark #theme-toggle svg:first-child{
-	display: none;
-}
-
-
 html.light .debug{
 	color: rgb(255, 47, 47);
 }
@@ -555,7 +539,7 @@ blockquote {
 	transition: all 200ms;
 
 	& figure img{
-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.75);
+		box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.75);
 		// margin-top: 100px;
 		transition: all 200ms;
 	}
@@ -1021,33 +1005,65 @@ hgroup.articles-content ul ul ul ul li{
 	padding-top: 10px;
 }
 
-.language-switcher{
+#header-buttons-container{
+	// display: inline-block;
+	display: flex;
+	// gap: 10px;
+	// align-items: flex-end;
+	align-items: center;
+	// justify-content: end;
+	// width: auto;
+	flex-direction: row;
 	position: absolute;
+	right: 50px;
+	gap: 13px;
+	// justify-content: flex-end;
+}
+
+.header-buttons{
+	width: 20px;
+	// height: 20px;
+	// justify-content: end;
+	// align-items: flex-end;
+
+
+}
+
+.language-switcher{
+	// position: absolute;
 	right: 55px;
 	width: 20px;
-	// height: 30px;
-	// top: 19px;
-	// bottom: 10px;
 	transition: all 50ms;
 
 	&:hover{
-		// border: 3px solid var(--hover-color);
-		// outline: 3px solid var(--hover-color);
-		// box-shadow: 0px 2px 3px #0000008a;
 		box-shadow: 0px 2px 3px var(--hover-color);
-		// outline-offset: 2px;
-
-		// border-bottom: 4px solid var(--hover-color);
-		// transform: scale(1.2);
-// border-radius: 5px;
-
-		// width: 100px;
-		// height: 100px;
-		// background: #33ff00;
-		// border-bottom: 5px solid;
-		// margin-bottom: 5px;
 	}
 }
+
+
+#theme-toggle {
+	display: inline-block;
+	width:20px;
+	// position: absolute;
+	right:90px;
+}
+
+#theme-toggle svg{
+	color: var(--text-2);
+	& :hover{
+		color: var(--hover-color);
+	}
+}
+
+html.light #theme-toggle svg:last-child{
+	display: none;
+}
+
+html.dark #theme-toggle svg:first-child{
+	display: none;
+}
+
+
 
 #menu-toggle:hover, .btn-square:hover{
 	color: var(--hover-color);
