@@ -26,3 +26,4 @@ minutesCount:
   other: "{{ . }} mins"
 articleImgAlt: Cover image of the article '{{ . }}'
 goBack: Go to the main page
+allTags: All tags

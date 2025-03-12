@@ -4,7 +4,7 @@
     {{ range where .Pages "Params.private" "ne" true }}
       {{/*  {{ partial "album-card.html" . }}  */}}
       
-      {{/*  TODO esto debería cambiarlo por un article-card.html o algo así  */}}
+      {{/*  TODO esto debería cambiarlo por un article-card.html o algo así   ---->> HECHO, borrar comentario */}}
       {{/*  <a href="{{ .RelPermalink }}">{{ .Title }}</a>  */}}
       {{ partial "article-card.html" . }}
       {{/*  <p>{{.Summary}}</p>  */}}
@@ -15,5 +15,13 @@
   <hgroup>
     {{ .Content | markdownify }}
     {{/*  {{ .Content }}  */}}
+    {{/*  TODO show all tags  */}}
+    {{ $tags_page := .Site.GetPage "/tags/" }}
+    <h1><a class="hover-accent-color" href="{{$tags_page.RelPermalink}}">{{ T "allTags" }}</a></h1>
+    {{/*  <div id="tags-footer">  */}}
+    <div>
+      {{/*  {{ partial "tag-cloud.html" . }}  */}}
+      {{ partial "all-tags.html" . }}
+    </div>
   </hgroup>
 {{ end }}
