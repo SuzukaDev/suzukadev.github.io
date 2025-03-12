@@ -45,7 +45,10 @@
 }
 
 
-.debug{
+html.light .debug{
+	color: rgb(255, 47, 47);
+}
+html.dark .debug{
 	color: greenyellow;
 }
 
