@@ -23,4 +23,9 @@ Read more [about me]({{< relref "about.md" >}}) or [check my work here]({{< relr
 <!-- [Articles]({{< relref "articles/" >}}) -->
 [Articles]({{< relref "articles" >}}), [Blog]({{< relref "articles" >}}), [Interviews]({{< relref "articles" >}})
 
+[Article tres]({{< relref "articles/articulo-tres">}})
+[Article contenedor]({{< relref "articles/contenedor">}})
+
 (TODO❗: cambiar el link de "check my work here"❗)
+
+[2D]({{< relref "/galleries/art/2d">}})
