@@ -1,7 +1,7 @@
 ---
 layout: page
 rss_ignore: true
-title: About bu
+title: Sobre mí
 menu:
   main:
     weight: 90
