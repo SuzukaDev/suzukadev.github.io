@@ -541,7 +541,16 @@ blockquote {
 	& figure img{
 		box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.75);
 		// margin-top: 100px;
+		transition: all 200ms ease-in-out;
+	}
+	
+	& figure {
 		transition: all 200ms;
+	}
+
+	&:hover figure {
+		transition: all 100ms;
+		transform: scale(1.03);
 	}
 
 	&:hover {
@@ -549,7 +558,8 @@ blockquote {
 		// transition: transform 200ms;
 		// transition: box-shadow 20000ms;
 		// transform: translateY(-10px);
-		transform: translateY(-5px);
+		// transform: translateY(-5px);
+		// transform: scale(1.05);
 
 	}
 
