@@ -1,4 +1,24 @@
-{{ $related := where (site.RegularPages.Related .) "Params.private" "ne" true | first 3 }}
+{{/*  Get related pages of the same section  */}}
+
+{{/*  Original: This retrieved sometimes pages that were not the same section  */}}
+{{/*  {{ $related := where (site.RegularPages.Related .) "Params.private" "ne" true | first 3 }}  */}}
+
+{{/*  New:  */}}
+{{/*  Get related pages that are public  */}}
+{{ $related_public_pages := where (site.RegularPages.Related .) "Params.private" "ne" true }}
+{{/*  Filter those with the same section  */}}
+{{ $related := where $related_public_pages ".Section" "eq" $.Section | first 3 }}
+
+{{ if eq (len $related) 0 }}
+  {{/* 1 - Get the pages that are the same section as the global context ($.) */}}
+  {{/* 2 - Filter the ones that are private */}}
+  {{/* 3 - Get only the first 3 */}}
+  {{ $related = where .Site.RegularPages ".Section" $.Section}}
+  {{ $related = where $related "Params.private" "ne" true }}
+  {{ $related = first 3 $related}}
+
+{{ end}}
+
 {{ with $related }}
   <hr class="full-separator">
   <hgroup style="margin-top: 8rem">
