@@ -46,8 +46,10 @@
       {{ .Site.Title }}
     </a>
   {{ end }}
-  {{ partial "theme-button.html" . }}
-  {{ partial "languages-buttons.html" . }}
+  <div id="header-buttons-container">
+    {{ partial "theme-button.html" . }}
+    {{ partial "languages-buttons.html" . }}
+  </div>
   {{ if site.Menus.main }}
     <ul>
       <li>
