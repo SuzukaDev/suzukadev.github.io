@@ -550,6 +550,36 @@ blockquote {
 	animation: scaleAnim2 0.1s ease 0s 1 alternate both;
 }
 
+
+.card{
+	transition: all 300ms;
+
+	& img{
+
+		transition: all 500ms;
+	}
+
+	&:hover {
+		transition: all 200ms;
+		// transition: transform 200ms;
+		// transition: box-shadow 20000ms;
+		// transform: translateY(-10px);
+		// transform: translateY(-5px);
+
+	}
+
+
+	&:hover img, &:hover img:hover{
+		// color:pink;
+		// transform: translateX(10px);
+
+		box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.75);
+		transition: box-shadow 300ms ease-in-out; // Slow box-shadow transition
+	}
+
+}
+
+
 nav.categories ul li a{
 	border: 2px solid var(--border);
 	&:hover {
