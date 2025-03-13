@@ -2,8 +2,13 @@
 :root {
 	/* --hover-color: {{ .Site.Params.colors.hover }}; */
 	--hover-color: #fe9234;
-	--pfp-color: #ff3300;
-	--pfp-color2: #008cff;
+
+	
+	--pfp-color-light: #ff3300;
+	--pfp-color2-light: #008cff;
+	--pfp-color-dark: #ff00d4;
+	--pfp-color2-dark: #00ff22;
+
 	--hover-color-soft: #a0612a;
 	--profile-scale: 1.1;
 	--articles-side-margin: 20px;
@@ -12,11 +17,18 @@
 	--separator-color-dark: #f0f0f062;
 	--separator-color-soft-light: #8f8e8e6e;
 	--separator-color-soft-dark: #8d8d8d41;
+
 	--separator-color: var(--separator-color-light);
 	--separator-color-soft: var(--separator-color-soft-light);
 
+	--pfp-color: var(--pfp-color-light);
+	--pfp-color2: var(--pfp-color2-light);
+
+
 }
 
+/*#region Theme colors*/
+// This was before, when there was not theme toggle button (DEPRECATED)
 @media (prefers-color-scheme: dark) {
 	:root {
 		--separator-color: var(--separator-color-dark);
@@ -26,8 +38,29 @@
 // @media (prefers-color-scheme: light) {
 // 	:root {
 // 		--separator-color: var(--separator-color-light)
-// 	  }
+// 	}
 // }
+
+
+html.dark {
+	--separator-color: var(--separator-color-dark);
+	--separator-color-soft: var(--separator-color-soft-dark);
+
+	--pfp-color: var(--pfp-color-dark);
+	--pfp-color2: var(--pfp-color2-dark);
+}
+
+html.light {
+	// --hover-color: #0004ff;
+	--separator-color: var(--separator-color-light);
+	--separator-color-soft: var(--separator-color-soft-light);
+
+	--pfp-color: var(--pfp-color-light);
+	--pfp-color2: var(--pfp-color2-light);
+}
+
+/*#endregion Theme colors*/
+
 
 html.light .debug{
 	color: rgb(255, 47, 47);
