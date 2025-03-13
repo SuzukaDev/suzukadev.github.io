@@ -1,0 +1,16 @@
+{{/*  
+Returns ALL related RegularPages of the same section
+Arguments: "." = Page from which it will get the .Section
+*/}}
+
+{{/*  .Section gets the folder name */}}
+{{ $section := .Section }}
+{{ $related := where (site.RegularPages.Related .) "Section" "eq" $section }}
+{{ $related := where $related "Params.private" "ne" true }}
+
+{{/*  NOTE after calling this, one may want to filter the first X related pages, like:
+{{ $related = first 3 $related }}
+*/}}
+{{ return $related }}
+
+

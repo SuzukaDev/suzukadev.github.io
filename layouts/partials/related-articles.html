@@ -1,9 +1,7 @@
 
-{{/*  .Section gets the folder name (in this case 'articles')  */}}
-{{ $section := .Section }}
-{{ $related := where (site.RegularPages.Related .) "Section" "eq" $section }}
-{{ $related := where $related "Params.private" "ne" true | first 3 }}
-
+{{ $related := partial "utils/get-related-pages-in-section.html" . }}
+{{/*  Select only the first 3  */}}
+{{ $related = first 3 $related}}
 
 {{/*  {{ $related := where (site.RegularPages.Related .) "Params.private" "ne" true | first 3 }}  */}}
 {{ with $related }}
