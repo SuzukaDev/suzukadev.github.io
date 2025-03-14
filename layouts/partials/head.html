@@ -37,5 +37,20 @@
   }}
   {{ $js := resources.Get "js/main.js" | js.Build (dict "minify" true "params" $params) | resources.Fingerprint }}
   <script src="{{ $js.RelPermalink }}" defer></script>
+  
+  {{/*  NOTE This works if  "/js/theme-switch-shortcut.js" is in "static" folder */}}
+  {{/*  <script defer type="text/javascript"  src='{{ "/js/theme-switch-shortcut.js" | urlize | absURL }}'></script>  */}}
+
+  {{/*  For this to work, "/js/theme-switch-shortcut.js" must be in the assets folder. 
+  This allow to minify it!  
+  The only downside is that the script must be referenced through Hugo templates (not directly in HTML).*/}}
+  {{/*  {{ $theme_switch_script := resources.Get "/js/theme-switch-shortcut.js" | minify | fingerprint }}  */}}
+  {{/*  <script defer src="{{ $theme_switch_script.RelPermalink }}"></script>  */}}
+
+  {{/*  NOTE 2
+  Commented since I copied main.js to my assets/js folder and Im importing inside the main.js the theme-switch-shortcut.js, 
+  so everything is packed inside main.js and I dont need to process here .js files and add more script tags  */}}
+
+
   {{- partial "head-custom.html" . -}}
 </head>
