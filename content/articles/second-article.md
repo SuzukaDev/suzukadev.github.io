@@ -5,6 +5,8 @@ description = ""
 draft = true
 show_right_bar = true
 show_table_of_contents = true
+tags = ["art"]
+
 # article_cover = "t.webp"
 +++
 

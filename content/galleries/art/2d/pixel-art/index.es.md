@@ -5,6 +5,7 @@ description: Tools; Photoshop, Aseprite and mostly Krita and {{< link_markdown_p
 date: '2025-02-22T23:13:24+01:00'
 draft: false
 author: "Suzuka Ka"
+tags: ["art","skate", "fun", "dexter", "wellington", "quiw", "campeon", "zapato", "ameba"]
 menus: "main"
 # categories: ["nature"]
 # weight: 3
