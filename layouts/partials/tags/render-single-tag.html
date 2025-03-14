@@ -10,3 +10,20 @@
   {{ end }}
 </section>
 
+{{/*  Galeries with the same tag  */}}
+{{ $galleries_with_tag := partial "utils/get-galleries-with-tag" (dict "tag" .Title)}}
+{{ if gt (len $galleries_with_tag) 0 }}
+  <hgroup>
+    {{/*  <h1>{{len $galleries_with_tag}} galerias con el tag '{{.Title}}'</h1>  */}}
+    <h2>{{ T "albumWithTagCount" (dict "count" (len $galleries_with_tag) "tag" .Title) | safeHTML}}</h2>
+    {{/*  <h1>{{ T "relatedArticles" }}</h1>  */}}
+  </hgroup>
+  <section class="galleries">
+    {{ range $galleries_with_tag}}
+      {{ partial "album-card" . }}
+      {{/*  <h1>{{.Title}}</h1>  */}}
+    {{ end }}
+  </section>
+{{ else }}
+<h1>No related albums {{T "relatedAlbums"}} </h1>
+{{ end }}
