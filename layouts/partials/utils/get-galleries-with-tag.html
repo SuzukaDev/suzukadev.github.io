@@ -1,0 +1,27 @@
+{{/*  
+Returns ALL galleries that contains a tag
+Arguments: dict("tag" $tag_name) = Page from which it will get the .Section
+
+Use:
+{{ partial "utils/get-galleries-with-tag.html" (dict "tag" $tag_name) }}
+.tag
+
+
+*/}}
+
+
+{{ $tag := .tag | lower }}
+
+{{/*  .Section gets the folder name */}}
+{{ $section := "galleries" }}
+{{/*  {{ $galleries := where (site.RegularPages .) "Section" "eq" $section }}  */}}
+{{ $galleries := where (site.RegularPages) "Params.tags" "intersect" (slice $tag) }}
+{{ $galleries := where $galleries "Params.private" "ne" true }}
+{{ $galleries := where $galleries "Section" "eq" $section }}
+
+{{/*  NOTE after calling this, one may want to filter the first X related pages, like:
+{{ $galleries = first 3 $related }}
+*/}}
+{{ return $galleries }}
+
+
