@@ -14,37 +14,21 @@
   </hgroup>
 
   {{/*  section.galleries is displayed as grid  */}}
-  <section class="galleries">
     {{/*  <section>  */}}
     {{ if eq .Kind "term"}}
       {{/*  ARTICLES in a CERTAIN TAG  */}}
-      {{ range where .Pages "Params.private" "ne" true }}
-      {{/*  {{ partial "album-card.html" . }}  */}}
-        {{ partial "article-card.html" . }}
-        {{/*  {{ partial "articles/article-card.html" . }}  */}}
-      {{ end }}
+      {{ partial "tags/render-single-tag" . }}
+      
     {{ else if eq .Kind "taxonomy"}}
-    {{/*  TAGS LIST  */}}
-      {{/*  {{ range where .Pages "Params.private" "ne" true }}
-        <p>{{.Title}}</p>
-
-      {{ end }}  */}}
-
-
-        {{range $name, $taxonomy := .Site.Taxonomies.tags}} 
-          {{ $cnt := .Count }}
-          {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-            {{/*  <div class="tagbutton">  */}}
-            {{/*  <a class="article-tag" href={{ .RelPermalink }} title="All pages with tag <i>{{$name}}</i>">{{$name}}</a>  */}}
-            {{/*  <sup>{{$cnt}}</sup>  */}}
-            <a class="article-tag big-article-tag" href={{ .RelPermalink }} title="All pages with tag <i>{{$name}}</i>"><span class="center-text">{{$name}}<sup class="tag-count">{{$cnt}}</sup></span></a>
-            {{/*  </div>  */}}
-          {{end}}
-      {{end}}
+      {{ partial "tags/render-tags-list" . }}
 
     {{ end }}
       
-      {{ .Content | markdownify }}
-    </section>
+    {{ .Content | markdownify }}
+
+
+    {{/*  Galleries with the same tag  */}}
+
+
     {{/*  {{ partial "tag-cloud.html" . }}  */}}
 {{ end }}

@@ -1,0 +1,12 @@
+{{/*  {{ $source := .Request.URL.Query.Get "source" }}
+
+<h1>source = {{$source}}</h1>  */}}
+
+<section class="galleries">
+  {{ range where .Pages "Params.private" "ne" true }}
+  {{/*  {{ partial "album-card.html" . }}  */}}
+  {{ partial "article-card.html" . }}
+  {{/*  {{ partial "articles/article-card.html" . }}  */}}
+  {{ end }}
+</section>
+
