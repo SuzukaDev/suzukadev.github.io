@@ -4,9 +4,9 @@
 
 <section class="galleries">
   {{ range where .Pages "Params.private" "ne" true }}
-  {{/*  {{ partial "album-card.html" . }}  */}}
-  {{ partial "article-card.html" . }}
-  {{/*  {{ partial "articles/article-card.html" . }}  */}}
+    {{/*  {{ partial "album-card.html" . }}  */}}
+    {{ partial "article-card.html" . }}
+    {{/*  {{ partial "articles/article-card.html" . }}  */}}
   {{ end }}
 </section>
 
@@ -25,7 +25,7 @@
         {{/*  <h1>{{.Title}}</h1>  */}}
       {{ end }}
     </section>
-  {{ else }}
-  <h1>No related albums {{T "relatedAlbums"}} </h1>
+  {{/*  {{ else }}  */}}
+    {{/*  <h1>No related albums {{T "relatedAlbums"}} </h1>  */}}
   {{ end }}
 {{ end }}
