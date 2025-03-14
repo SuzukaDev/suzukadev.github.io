@@ -17,8 +17,8 @@ albumCount:
   one: "{{ .photoCount }} in {{ .count }} album"
   other: "{{ .photoCount }} in {{ .count }} albums"
 albumWithTagCount:
-  one: "{{ .count }} album tagged <span class='accent-color'>#{{ .tag }}<span>"
-  other: "{{ .count }} albums tagged <span class='accent-color'>#{{ .tag }}<span>"
+  one: "{{ .count }}<span class='text2-color'> album tagged </span><span class='accent-color'>#{{ .tag }}<span>"
+  other: "{{ .count }}<span class='text2-color'> albums tagged </span><span class='accent-color'>#{{ .tag }}<span>"
 articleAboutMe: About me
 articleIndexContent: Content 
 articlesCount:
