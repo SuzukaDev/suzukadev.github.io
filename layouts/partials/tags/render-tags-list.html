@@ -1,0 +1,21 @@
+<section class="galleries">
+
+  {{/*  TAGS LIST  */}}
+    {{/*  {{ range where .Pages "Params.private" "ne" true }}
+      <p>{{.Title}}</p>
+
+    {{ end }}  */}}
+
+
+      {{range $name, $taxonomy := .Site.Taxonomies.tags}} 
+        {{ $cnt := .Count }}
+        {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+          {{/*  <div class="tagbutton">  */}}
+          {{/*  <a class="article-tag" href={{ .RelPermalink }} title="All pages with tag <i>{{$name}}</i>">{{$name}}</a>  */}}
+          {{/*  <sup>{{$cnt}}</sup>  */}}
+          <a class="article-tag big-article-tag" href={{ .RelPermalink }} title="All pages with tag <i>{{$name}}</i>"><span class="center-text">{{$name}}<sup class="tag-count">{{$cnt}}</sup></span></a>
+          {{/*  </div>  */}}
+        {{end}}
+    {{end}}
+
+    </section>
