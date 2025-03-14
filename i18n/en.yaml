@@ -30,3 +30,5 @@ minutesCount:
 articleImgAlt: Cover image of the article '{{ . }}'
 goBack: Go to the main page
 allTags: All tags
+switchTheme: Switch theme
+switchLanguage: Switch language

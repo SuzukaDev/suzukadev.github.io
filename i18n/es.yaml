@@ -30,3 +30,5 @@ minutesCount:
 articleImgAlt: Foto de portada para el artículo '{{ . }}'
 goBack: Ir a la página principal
 allTags: Todos los tags
+switchTheme: Cambiar tema
+switchLanguage: Cambiar idioma
