@@ -565,6 +565,13 @@ kbd{
   }
 }
 
+// Remove dot in ul's list items that has an input of type "checkbox"
+ul li:has(input[type="checkbox"]), 
+ul li ul li:has(input[type="checkbox"]), 
+ul li ul li ul li:has(input[type="checkbox"]) {
+	list-style-type: none; /* Remove bullet if there's a checkbox */
+  }
+
 /*#region code flavour*/
 // pre{
 // 	background-color: rgb(0, 255, 64);
