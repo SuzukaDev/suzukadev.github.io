@@ -25,6 +25,12 @@
 	--pfp-color2: var(--pfp-color2-light);
 
 
+	// KBD element
+	--kbd-color-background: #616161;
+	--kbd-color-background-hover: #6e6e6e;
+	--kbd-color-border: rgb(66, 66, 66);
+	--kbd-color-text: rgba(228, 228, 228, 0.89);
+
 }
 
 /*#region Theme colors*/
@@ -495,6 +501,68 @@ blockquote {
 	// IDEAS https://getcssscan.com/css-box-shadow-examples
 	border-left: 10px solid var(--hover-color);
 	padding-left: 10px;
+}
+
+kbd{
+	
+  // Match the page defaults in light mode but
+  // switch to a light-ish grey in dark mode
+  background-color: var(--kbd-color-background);
+  color: var(--kbd-color-text);
+
+  // Round off the corners like physical keys have
+  border-radius: 0.25rem;
+
+  // Add a simple border
+  border: 2px solid var(--kbd-color-border);
+
+  // A sharp shadow (with no blur) really gives
+  // the old school keyboard look
+//   box-shadow: 0 2px 0 1px var(--kbd-color-border);
+  box-shadow: 0 2px 0 1px var(--kbd-color-border);
+
+  // Remove the text cursor — totally optional
+  // but I wanted it for my hover effect
+  cursor: default;
+
+  // By default, browsers style <kbd> with a monospace typeface
+//   font-family: var(--font-family-sans-serif);
+
+  // If we do all this with the default font size
+  // (mine is 18px on desktop) it’ll look massive
+  // and bump into lines above and below
+//   font-size: 0.75em;
+
+  // Remove any extra space so I can accurately tweak the padding
+  line-height: 1;
+
+  // Make narrow numbers and letters look less odd
+  min-width: 0.75rem;
+  // `min-width` doesn’t work on inline elements
+//   display: block;
+  // Keep the characters centred when narrower than the `max-width`
+  text-align: center;
+
+  // Seemed to look more key-like with more horizontal padding 🤷
+//   padding: 2px 5px;
+  padding: 3px 5px;
+
+  // These two lines pull the whole element up now that they’re
+  // bottom-heavy due to the `box-shadow`. This looks better
+  // against the cap height of regular paragraph text.
+  position: relative;
+  top: -1px;
+
+  // This is my favourite part of the whole thing. The key gets
+  // “pushed” down and the shadow gets reduced so it looks like
+  // it might when typing on a physical keyboard.
+  transition: all .3s;
+  &:hover {
+    box-shadow: 0 1px 0 0.5px var(--kbd-color-border);
+	background-color: var(--kbd-color-background-hover);
+    top: 1px;
+	transition: all .1s;
+  }
 }
 
 
