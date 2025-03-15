@@ -150,6 +150,12 @@ def foobar
 end
 ```
 
+```python
+def foobar():
+  puts "Hello world! asdfasdf wae asdf"
+  pass
+```
+
 # Horizontal rules
 
 Con asteriscos *
