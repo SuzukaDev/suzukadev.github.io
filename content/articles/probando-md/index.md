@@ -113,7 +113,17 @@ Boxes below without the 'x' are unchecked HTML checkboxes.
 This checkbox below will be a checked HTML checkbox.
 - [x] This task has been completed
 
+### Nested checkboxes
 
+[x] This task has been completed
+  - [x] this one too
+  - [ ] this not
+    - [ ] neither this
+      - [x] but this yes
+        - [x] but this yes
+        - [x] but this yes
+          - wow
+          - [x] but this yes
 ## Code
 
     This is code
