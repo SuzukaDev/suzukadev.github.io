@@ -1450,6 +1450,27 @@ h3.uppercase{
 // 	// left: -5px;
 //   }
 
+ul > li {
+    margin-left: 10px;
+}
+ol{
+	// padding-left: 0px;
+	padding-left: 25px;
+}
+
+// ol {
+hgroup.articles-content > ol{
+    padding-left: 10px;
+    // margin-left: 0; /* Reset default margin */
+}
+
+// ol > ol {
+//     padding-left: 20px; /* Add manual indentation for nested lists */
+// }
+
+// ol > li {
+//     margin-left: 10px;
+// }
 
 // hgroup.articles-content
 // hgroup.articles-content p, ul{
