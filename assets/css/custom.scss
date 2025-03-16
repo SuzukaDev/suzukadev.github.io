@@ -452,6 +452,11 @@ html.dark #article-title{
 	// 	0px 0px 20px var(--hover-color);
 }
 
+hgroup.articles-content li{
+	font-size: 1.125rem;
+	// line-height: 1.5556;
+}
+
 hgroup.articles-content h1{
 // hgroup.articles-content h1:not(:first-child){
 	// border-bottom: 10px solid #ff6550;
@@ -1499,6 +1504,7 @@ hgroup.articles-content ol {
 hgroup.articles-content ul {
 	list-style-type: disc;
 	margin: 0px;
+padding-left: auto;
 }
 
 hgroup.articles-content img {
