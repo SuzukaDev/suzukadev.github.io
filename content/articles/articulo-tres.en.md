@@ -40,6 +40,9 @@ Alejandro Sanz considera el artículo 3 como el mejor artículo de la historia d
 
 > El artículo 3? El mejor - Alejandro Sanz
 
+> <p>El artículo 3? El mejor, una auténtica maravilla en el mundo de los artículos que me deja anonadado y alegre </p><cite>Alejandro Sanz</cite>
+
+
 " Efectivamente, así es
 
 # El mito, ¿es cierto?
