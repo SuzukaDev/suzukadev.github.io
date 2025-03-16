@@ -834,7 +834,14 @@ ul li ul li ul li:has(input[type="checkbox"]) {
 // 	box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
 // }
 
-div.highlight pre {
+
+.articles-content img{
+	-webkit-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.75);
+	
+}
+
 	// content: attr(data-lang);
 	// background-color: red;
 	// position: inherit;
