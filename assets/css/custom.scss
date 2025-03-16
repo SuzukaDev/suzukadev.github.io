@@ -842,6 +842,49 @@ ul li ul li ul li:has(input[type="checkbox"]) {
 	
 }
 
+// Inline <code>
+// <code> elements inside .articles-content that do not have a <pre> element as their direct parent
+.articles-content code:not(pre > code){
+	font-family: 'Courier New', Courier, monospace;
+	background-color: #272822;
+	padding: 1px 7px;
+	border-radius: 5px;
+	margin-left: 2px;
+	margin-right: 2px;
+	// color: #d1d1d1;
+	// color: greenyellow;
+	// colorgb(235, 255, 206)14);
+	color: rgb(182, 228, 114);
+	// border-bottom: 2px solid var(--hover-color);
+	border-bottom: 2px solid #555555;
+	border-left: 2px solid #3f3f3f;
+	border-right: 2px solid #3f3f3f;
+	// border: 2px ridge var(--hover-color);
+	box-shadow: 0px 2px 5px var(--text-1-light);
+	// font-weight: bold;
+	// font-weight: 600;
+	
+	transition: all .5s;
+	&:hover{
+		// color: red;
+		// color: greenyellow;
+		filter: saturate(250%);
+		transition: all .2s;
+	}
+}
+
+.articles-content pre {
+	font-size: 1rem;
+	text-align: left;
+	background-color: #272822;
+	// color: var(--text-2-dark);
+	color: #d1d1d1;
+	min-width: 300px;
+	// min-height: 150px;
+}
+
+div.highlight pre, .articles-content pre {
+// div.highlight pre , pre code {
 	// content: attr(data-lang);
 	// background-color: red;
 	// position: inherit;
@@ -896,9 +939,9 @@ ul li ul li ul li:has(input[type="checkbox"]) {
 	}
 }
 
-div.highlight pre {
+div.highlight pre, .articles-content pre {
 	position: inherit;
-    background-color: #D1D1D0;
+    // background-color: #D1D1D0;
     overflow: auto;
     font-family: 'Monaco', monospace;
     // padding: 0 1em;
