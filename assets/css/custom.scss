@@ -1,8 +1,11 @@
 /* custom.css */
+// *{
+// 	transition: background-color .5s;
+// }
+
 :root {
 	/* --hover-color: {{ .Site.Params.colors.hover }}; */
 	--hover-color: #fe9234;
-
 	
 	--pfp-color-light: #ff3300;
 	--pfp-color2-light: #008cff;
@@ -31,6 +34,8 @@
 	--kbd-color-border: rgb(66, 66, 66);
 	--kbd-color-text: rgba(228, 228, 228, 0.89);
 
+	--soft-text-dark: #424242;
+	--soft-text-light: #c5c5c5;
 }
 
 /*#region Theme colors*/
@@ -54,6 +59,8 @@ html.dark {
 
 	--pfp-color: var(--pfp-color-dark);
 	--pfp-color2: var(--pfp-color2-dark);
+
+	--soft-text: var(--soft-text-dark);
 }
 
 html.light {
@@ -63,6 +70,8 @@ html.light {
 
 	--pfp-color: var(--pfp-color-light);
 	--pfp-color2: var(--pfp-color2-light);
+
+	--soft-text: var(--soft-text-light);
 }
 
 /*#endregion Theme colors*/
@@ -559,11 +568,36 @@ section.social-icons svg:hover {
 	color: var(--hover-color);
 }
 
+
+
 blockquote {
-	/* TODO cambiar style blockquote */
-	// IDEAS https://getcssscan.com/css-box-shadow-examples
-	border-left: 10px solid var(--hover-color);
-	padding-left: 10px;
+		// IDEAS https://getcssscan.com/css-box-shadow-examples
+	border-left: 3px solid var(--hover-color);
+	padding: 15px 20px;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+		&:hover cite{
+			color: var(--text-2);
+			transition: all .2s;
+			// text-decoration: underline;
+		}
+	}
+
+blockquote cite{
+	// font-weight: bold;
+	text-align: right;
+	float: right;
+	// padding-top: 20px;
+	padding: 3px 40px;
+	color: var(--soft-text);
+	transition: all 1s;
+
+	// color: var(--hover-color-soft);
+	// filter: blur(1px);
+	// box-shadow: 0px 0px 12px var(--hover-color);
+
+	// position: absolute;
+	// right: 80px;
 }
 
 kbd{
