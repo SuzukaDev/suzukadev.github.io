@@ -392,6 +392,8 @@ hgroup.articles-content{
 
 #article-title{
 	text-align: center;
+border-bottom: 0px solid transparent;
+
 	
 }
 html.light #article-title{
@@ -447,6 +449,28 @@ html.dark #article-title{
 	// color: #fdfdfe;
 	// text-shadow: 0px 0px 5px var(--hover-color), 0px 0px 10px var(--hover-color), 0px 0px 10px var(--hover-color),
 	// 	0px 0px 20px var(--hover-color);
+}
+
+hgroup.articles-content h1{
+// hgroup.articles-content h1:not(:first-child){
+	// border-bottom: 10px solid #ff6550;
+	// border-bottom: 2px solid var(--hover-color);
+	// border-bottom: 2px solid linear-gradient(90deg, transparent 0%, var(--separator-color) 20%, var(--separator-color) 50%, var(--separator-color) 80%, transparent 100%);
+	// border-top: 3px solid var(--hover-color);
+	// border-left: 3px solid var(--hover-color);
+	// border-right: 3px solid var(--hover-color);
+
+
+	// text-align:center;
+    border-bottom: 2px solid transparent;
+	// border-image: linear-gradient(0.25turn, rgb(255,249,34), rgb(255,0,128), rgba(56,2,155,0));
+	// border-image: linear-gradient(0.25turn, rgba(0, 0, 0, 0), var(--hover-color), rgba(0, 0, 0, 0));
+	// border-image: linear-gradient(0.25turn, transparent 0%, var(--hover-color) 5%, var(--hover-color) 70%, transparent 100%);
+	// border-image: linear-gradient(0.25turn, transparent 0%, var(--hover-color) 0%, var(--hover-color) 70%, transparent 100%);
+	border-image: linear-gradient(0.25turn, transparent 0%, var(--hover-color) 0%, var(--hover-color) 70%, transparent 100%);
+    border-image-slice: 1;
+    width:100%;
+
 }
 // hgroup.articles-content::before{
 // 	content: '';
