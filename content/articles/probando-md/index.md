@@ -23,13 +23,15 @@ Yes, I'm **scared**. I hope it shows correctly. _Esto es un texto en cursiva_. Y
 Pero bueno.
 
 ### Header 3
-tres
+
+tres asf sfgksdj lgkjerlkgj slkfjg skgj slkdjg oiejrgoi jsdlgkjs ghjdkg lhjdlkghj ldfgjh djghlk djfghlkj dlkf gjhitrejh oirejtohi jdfghj dkgjh rth i erjth iwejioeworijoityj eoritjyioe rjtyoiej rtiohjoi jghoidjfgo ihjreoithj oifdjghio djgh 
+
 #### Header 4
-cuatro
+cuatro asf sfgksdj lgkjerlkgj slkfjg skgj slkdjg oiejrgoi jsdlgkjs ghjdkg lhjdlkghj ldfgjh djghlk djfghlkj dlkf gjhitrejh oirejtohi jdfghj dkgjh rth i erjth iwejioeworijoityj eoritjyioe rjtyoiej rtiohjoi jghoidjfgo ihjreoithj oifdjghio djgh 
 ##### Header 5
-cinco
+cinco asf sfgksdj lgkjerlkgj slkfjg skgj slkdjg oiejrgoi jsdlgkjs ghjdkg lhjdlkghj ldfgjh djghlk djfghlkj dlkf gjhitrejh oirejtohi jdfghj dkgjh rth i erjth iwejioeworijoityj eoritjyioe rjtyoiej rtiohjoi jghoidjfgo ihjreoithj oifdjghio djgh 
 ###### Header 6
-seis
+seis asf sfgksdj lgkjerlkgj slkfjg skgj slkdjg oiejrgoi jsdlgkjs ghjdkg lhjdlkghj ldfgjh djghlk djfghlkj dlkf gjhitrejh oirejtohi jdfghj dkgjh rth i erjth iwejioeworijoityj eoritjyioe rjtyoiej rtiohjoi jghoidjfgo ihjreoithj oifdjghio djgh 
 
 
 [Visit **GitHub**!](www.github.com)
@@ -67,7 +69,7 @@ There's a <br /> above me!
 > wow
 
 # Listas
-
+Pues vamos a ver las listas como funcionan y vengaa...:
 * Item
 * Item
 * Another item
@@ -83,10 +85,16 @@ or
 - Item
 - Item
 - One last item
+  - sub item
+  - otro subitem
+    - susub item
 
 1. Item one
 2. Item two
 3. Item three
+    1. sub item
+    2. sub item 2
+        1. subsub 
 
 
 veamos
@@ -152,6 +160,10 @@ Esto ya no es código
 
 Esto -> `es un trozo de código`, y esto ya no.
 
+Esto -> `es un trozo de <strong>código</strong>`, y esto ya no. asdfsadf has fhaskdfh asjdhf kjashdf jashdfjsahfuiwher iuwh eiuhf iuwehifuh uihgsidfg sdjfghsk hfgsdiugh 
+
+Debería de ser `a:list[] = split(a, " ")`
+
 ### Flavoured code
 
 ```ruby
@@ -214,12 +226,18 @@ Con un huevo de asteriscos
 
 ![This is the alt-attribute for my image](http://imgur.com/myimage.jpg "An optional title")
 
+![This is theeeee alt-attribute for my image](https://i.imgur.com/b6XBklC.mp4 "An optional title")
+
+![Artee](https://i.imgur.com/4nGbkUF_d.webp?maxwidth=520&shape=thumb&fidelity=high "An optional title artee")
+
 # Misc
 
 ## Keyboard
 
 Your computer crashed? Try sending a
 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd>
+
+`<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd>`
 
 
 ## Tables
