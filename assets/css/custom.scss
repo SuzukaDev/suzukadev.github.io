@@ -82,10 +82,10 @@ html.light {
 	// --hover-color: #0004ff;
 	--separator-color: var(--separator-color-light);
 	--separator-color-soft: var(--separator-color-soft-light);
-
+	
 	--pfp-color: var(--pfp-color-light);
 	--pfp-color2: var(--pfp-color2-light);
-
+	
 	--soft-text: var(--soft-text-light);
 
 	--tablerow-bg-color1: var(--tablerow-bg-color1-light);
@@ -385,10 +385,10 @@ hgroup.articles-content > p:first-of-type {
 
 hgroup.articles-content{
 // hgroup.articles-content *{
-position: relative;
+	position: relative;
 	& p, li{
-	color: var(--text-2);
-}
+		color: var(--text-2);
+	}
 	// -webkit-box-shadow: 0px 4px 13px 0px rgba(0,0,0,0.75);
 	// -moz-box-shadow: 0px 4px 13px 0px rgba(0,0,0,0.75);
 	// box-shadow: 0px 4px 13px 0px rgba(0,0,0,0.75);
@@ -401,7 +401,7 @@ position: relative;
 	// -webkit-box-shadow: 0px 4px 13px 0px rgba(0,0,0,0.3);
 	// -moz-box-shadow: 0px 4px 13px 0px rgba(0,0,0,0.3);
 	// box-shadow: 0px 4px 13px 0px rgba(0,0,0,0.3);
-		// padding-left: var(--articles-side-margin);
+	// padding-left: var(--articles-side-margin);
 	// padding-right: var(--articles-side-margin);
 	// padding-top: calc(var(--articles-side-margin)/2);
 
@@ -414,7 +414,7 @@ position: relative;
 
 #article-title{
 	text-align: center;
-border-bottom: 0px solid transparent;
+    border-bottom: 0px solid transparent;
 }
 html.light #article-title{
 	// text-shadow: 1px 3px 3px #4b4b4b;
@@ -701,8 +701,8 @@ section.social-icons svg:hover {
 
 blockquote {
 		// IDEAS https://getcssscan.com/css-box-shadow-examples
-	border-left: 3px solid var(--hover-color);
-	padding: 15px 20px;
+		border-left: 3px solid var(--hover-color);
+		padding: 15px 20px;
 		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 		&:hover cite{
@@ -857,6 +857,157 @@ ul li ul li ul li:has(input[type="checkbox"]) {
 // 	// bottom: 10px;
 // 	box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
 // }
+
+// REFACTOR table old style code
+
+// .articles-content table{
+// 	-webkit-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.75);
+// 	-moz-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.75);
+// 	box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.75);
+// 	padding: 10px 30px;
+// 	border: 2px inset var(--hover-color);
+// 	// position: inherit;
+// 	position: relative;
+// 	display: flex;
+// 	flex-direction: column;
+// 	& thead{
+// 	border-bottom: 2px solid #ff0000;
+// 		color: pink;
+// 		background-color: red;
+// 		position: absolute;
+// 		left: 0;
+// 		top: 0;
+// 		// width: 100%;
+// 		// display:flex;
+// 	width:100%;
+// 	background:#000;
+// 	flex-grow: 1;
+// 	// padding:($half-spacing-unit * 1.5) 0;
+
+// 	}
+// }
+
+
+// table{
+// 	// border: 2px inset var(--hover-color);
+	
+// 	// & thead{
+// 	// 	border: 2px inset var(--hover-color);
+
+// 	// }
+
+// 	background: pink; 
+// 	border: 0; 
+// 	border-collapse: separate; 
+// 	border-spacing: 0 5px;
+// }
+// thead{
+// 	border-bottom: 1px solid red; 
+// 	border-collapse: separate; 
+// 	border-spacing: 5px 5px;
+
+// }
+
+
+
+
+
+
+/*#region borders after*/
+// // INFO fix for borders and padding https://stackoverflow.com/questions/6265123/border-top-from-tbody-and-border-bottom-from-thead-dont-work-at-the-same-time
+// // https://www.w3schools.com/css/css_table.asp
+// table {
+// 	// background: pink; 
+// 	border: 2px inset var(--hover-color);
+	
+// 	// border: 0; 
+// 	border-collapse: separate; 
+// 	border-spacing: 0 0px;
+// 	// border-spacing: 5px 5px;
+// 	// border-radius: 10px;
+	
+// }
+// thead{
+
+// 	// background: var(--hover-color-soft); 
+// }
+
+// thead tr th {
+// 	// background: var(--hover-color-soft); 
+// 	// border-radius: 20px;
+// 	  padding: 5px 10px;
+// 	border-bottom: 1px solid red; 
+// 	border-left: 1px solid red; 
+// 	border-collapse: separate; 
+// 	border-spacing: 5px 5px;
+//   } 
+/*#endregion borders after*/
+
+
+  
+//   tbody tr#first td {
+// 	border-top: 3px solid #4d4d4d; 
+// 	border-collapse: separate;
+// 	border-spacing: 5px 5px;
+//   }
+
+
+
+table {
+	// font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	// padding: 230px 10px;
+	border: 3px solid var(--hover-color);
+
+	// https://getcssscan.com/css-box-shadow-examples
+	// box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+	// box-shadow: rgb(77, 61, 38) 0px 10px 30px -10px;
+	// box-shadow: #1C1C1C 0px 10px 30px -10px;
+	box-shadow: var(--shadow-color) 0px 10px 10px -5px;
+}
+
+table td, table th {
+	// padding: 230px 10px;
+	// border: 1px solid #ddd;
+	// border: 1px inset var(--hover-color);
+	padding: 8px;
+}
+
+table tbody tr td{
+	// padding-top: 240px;
+	padding: 4px 10px;
+}
+
+table tr:nth-child(even){
+	// background-color: #dbdbdb;
+	background-color: var(--tablerow-bg-color2);
+}
+table tr:nth-child(odd){
+	// background-color: #dbdbdb;
+	background-color: var(--tablerow-bg-color1);
+}
+
+// table tr:hover {
+table tr:hover {
+	// background-color: #ddd;
+	// background-color: var(--hover-color-soft);
+	// filter: blur(10px);
+	filter: invert(.2);
+}
+
+table th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+// background-color: #04AA6D;
+background-color: var(--hover-color);
+color: white;
+}
+
+
+
+
 
 
 .articles-content img{
@@ -1523,7 +1674,7 @@ hgroup.articles-content ol {
 hgroup.articles-content ul {
 	list-style-type: disc;
 	margin: 0px;
-padding-left: auto;
+	padding-left: auto;
 }
 
 hgroup.articles-content img {

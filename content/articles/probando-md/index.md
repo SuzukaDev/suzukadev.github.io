@@ -7,6 +7,7 @@ lastmod = '2025-03-14T14:10:50+01:00'
 private = false # If true, the article wont be listed and will only be visible by knowing its url
 show_table_of_contents = true
 show_right_bar = true
+show_related_articles = false
 # article_cover = 'probando-md.png' # local path for the image used as the cover. NOTE: Check its extension! (.png set as a template)
 # NOTE Since this is a leaf bundle (page in its own folder), placing an image in the same folder with the name 'cover' (no matter its extension) will be used as the cover AUTOMATICALLY. BUT if 'article_cover' is set, it will use that (this is also useful for having different covers for each language, if that is needed).
 +++
@@ -123,7 +124,7 @@ This checkbox below will be a checked HTML checkbox.
 
 ### Nested checkboxes
 
-[x] This task has been completed
+- [x] This task has been completed
   - [x] this one too
   - [ ] this not
     - [ ] neither this
@@ -246,6 +247,9 @@ Your computer crashed? Try sending a
 | :----------- | :------: | ------------: | :---: | :-:
 | Left-aligned | Centered | Right-aligned | a ver | va bien
 | blah         | blah     | blah          | que tal| o eso creo
+| wow | que fantasia| no me lo creo wowowowow qué bien| se da| wow
+| wow | que fantasia| no me lo creo wowowowow qué bien venga vamos otra hugocentrico jserjashdfkjasdfkjhas da sdfasjdf haskjdfh aksjghfs kjdhgfsk dhfgiudshfg sjdfgksjdfghsdfhgkjsdfhgkjsdkfjgsdkjfghksjdfhg kjsdfg| se da| wow
+| wow | que fantasia| no me lo creo wowowowow qué bien| se da| wow
 | wow | que fantasia| no me lo creo wowowowow qué bien| se da| wow
 
 Ugly table
