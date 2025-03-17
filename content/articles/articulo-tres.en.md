@@ -2,7 +2,7 @@
 title = 'Articulo Tres'
 date = '2025-02-26T21:33:06+01:00'
 lastmod = '2025-02-26T21:33:06+01:00'
-description = "Describiendo el artículo 3"
+description = "Article 3 description"
 draft = true
 private = false
 tags = ["skate", "fun", "dexter", "wellington", "quiw", "campeon", "zapato", "ameba"]
