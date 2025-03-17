@@ -36,6 +36,17 @@
 
 	--soft-text-dark: #424242;
 	--soft-text-light: #c5c5c5;
+
+	--tablerow-bg-color1-light: #f3f3f3;
+	--tablerow-bg-color2-light: #e4e4e4;
+	--tablerow-bg-color1-dark: #30303088;
+	--tablerow-bg-color2-dark: #1C1C1C;
+	--tablerow-bg-color1: var(--tablerow-bg-color1-light);
+	--tablerow-bg-color2: var(--tablerow-bg-color2-light);
+
+	--shadow-color-light: #1a1a1abb;
+	--shadow-color-dark: #000000;
+	--shadow-color: var(--shadow-color-light);
 }
 
 /*#region Theme colors*/
