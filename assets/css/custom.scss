@@ -72,6 +72,10 @@ html.dark {
 	--pfp-color2: var(--pfp-color2-dark);
 
 	--soft-text: var(--soft-text-dark);
+
+	--tablerow-bg-color1: var(--tablerow-bg-color1-dark);
+	--tablerow-bg-color2: var(--tablerow-bg-color2-dark);
+	--shadow-color: var(--shadow-color-dark);
 }
 
 html.light {
@@ -83,6 +87,10 @@ html.light {
 	--pfp-color2: var(--pfp-color2-light);
 
 	--soft-text: var(--soft-text-light);
+
+	--tablerow-bg-color1: var(--tablerow-bg-color1-light);
+	--tablerow-bg-color2: var(--tablerow-bg-color2-light);
+	--shadow-color: var(--shadow-color-light);
 }
 
 /*#endregion Theme colors*/
