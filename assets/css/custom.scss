@@ -1010,6 +1010,13 @@ color: white;
 
 
 
+.articles-content a{
+	text-decoration: underline;
+	&:hover{
+		color: var(--hover-color);
+	}
+}
+
 .articles-content img{
 	-webkit-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.75);
