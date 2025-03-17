@@ -44,8 +44,9 @@
   {{/*  {{ if .Params.show_text_on_top }}
     {{ partial "gallery.html" . }}
   {{ end }}  */}}
-
-    {{ partial "related-articles.html" . }}
+    {{ if not (eq .Params.show_related_articles false) }}
+      {{ partial "related-articles.html" . }}
+    {{ end }}
 
     {{/*  TAGS  */}}
     <div id="tags-footer">
