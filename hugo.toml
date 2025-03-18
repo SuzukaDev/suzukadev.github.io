@@ -1,4 +1,5 @@
 baseURL = 'https://example.org/'
+copyright = "Suzuka Ka"
 # languageCode = 'en-us'
 # languageCode = 'es-es'
 title = 'SZK | Suzuka Ka'
