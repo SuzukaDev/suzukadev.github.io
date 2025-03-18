@@ -2,7 +2,7 @@
   <menu class="hidden" id="menu">
     {{ range . }}
       <li itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-        <a class="button two" aria-current="{{ or (page.IsMenuCurrent .Menu .) (page.HasMenuCurrent .Menu .) }}" href="{{ .URL }}" itemprop="url">
+        <a class="button two hover-scale" aria-current="{{ or (page.IsMenuCurrent .Menu .) (page.HasMenuCurrent .Menu .) }}" href="{{ .URL }}" itemprop="url">
           <span itemprop="name">{{ .Name }}</span>
         </a>
       </li>
