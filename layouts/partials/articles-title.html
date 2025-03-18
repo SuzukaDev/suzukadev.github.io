@@ -26,8 +26,20 @@
     {{- end -}}
     {{/*  <p class="centered-text"> <a id="articles-author" href="{{ relref . 'about' }}">{{ .Site.Params.articles_author }}, </a>  */}}
     {{- if $show_date -}}
-    <time datetime="{{ .Date }}" class="centered-text"><svg style="margin-left:5px; margin-right:2px; position:relative; display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -860 960 960" width="22px" fill="currentColor"><path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"/></svg>{{ .Date | time.Format ":date_medium" }}</time>
-    {{/*  &nbsp;&nbsp;  */}}
+      <time datetime="{{ .Date }}" class="centered-text">
+        {{- if ne .Date .Lastmod }}
+          {{/*  Shows edit icon (pencil) if it was edited */}}
+          <time class="centered-text" datetime="{{ .Lastmod }}"><svg style="margin-left:5px; margin-right:2px; position:relative; display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -860 960 960" width="24px" fill="currentColor"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/>
+            <title id="title">{{T "edited"}} ({{ .Lastmod | time.Format ":date_medium" }})</title>
+          </svg></time>
+        {{- else -}}
+          {{/*  Shows calendar icon if there is not edit date  */}}
+          <svg style="margin-left:5px; margin-right:2px; position:relative; display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -860 960 960" width="22px" fill="currentColor"><path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"/></svg>
+        {{- end -}}
+        {{ .Date | time.Format ":date_medium" }}
+      </time>
+      {{/*  &nbsp;&nbsp;  */}}
+
     {{- end -}}
     {{- if $show_reading_time -}}
       <time datetime="PT{{.ReadingTime}}M"><svg style="margin-left:4px; position:relative; display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -860 960 960" width="24px" fill="currentColor"><path d="M480-520q66 0 113-47t47-113v-120H320v120q0 66 47 113t113 47ZM160-80v-80h80v-120q0-61 28.5-114.5T348-480q-51-32-79.5-85.5T240-680v-120h-80v-80h640v80h-80v120q0 61-28.5 114.5T612-480q51 32 79.5 85.5T720-280v120h80v80H160Z"/></svg>{{ .ReadingTime }} {{ if gt .ReadingTime 1}} mins. {{else}} min. {{end}}</time>
