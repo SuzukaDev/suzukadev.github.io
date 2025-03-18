@@ -8,8 +8,14 @@ private = false # If true, the article wont be listed and will only be visible b
 show_table_of_contents = true
 show_right_bar = true
 show_related_articles = false
+tags = ["mierda", "test", "markdown"]
 # article_cover = 'probando-md.png' # local path for the image used as the cover. NOTE: Check its extension! (.png set as a template)
 # NOTE Since this is a leaf bundle (page in its own folder), placing an image in the same folder with the name 'cover' (no matter its extension) will be used as the cover AUTOMATICALLY. BUT if 'article_cover' is set, it will use that (this is also useful for having different covers for each language, if that is needed).
+# show_author = false
+# show_date = false
+# show_reading_time = false
+# show_tags = false
+
 +++
 This is an article for testing the markdown
 
