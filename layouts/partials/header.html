@@ -7,7 +7,10 @@
       </svg>
     </a>
     {{/*  REFACTOR breadcrumbs Lo dejo aquí? */}}
-    {{ partial "breadcrumbs.html" . }}
+    {{ $show_breadcrumbs := or (not (isset $.Params "show_breadcrumbs")) $.Params.show_breadcrumbs }}
+    {{ if $show_breadcrumbs }}
+      {{ partial "breadcrumbs.html" . }}
+    {{ end }}
   {{ else }}
     <a class="btn" href="{{ .Site.Home.RelPermalink }}">
       {{/*  DEXTER SVG ICON  */}}
