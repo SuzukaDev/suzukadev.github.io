@@ -5,6 +5,7 @@ description = ""
 lastmod = '{{ .Date }}'
 # draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
+show_breadcrumbs = false
 # show_author = false
 # show_date = false
 # show_reading_time = false
