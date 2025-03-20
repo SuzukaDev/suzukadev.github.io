@@ -2150,6 +2150,13 @@ html.dark #theme-toggle svg:first-child{
     // animation: rota var(--wave-rotation-time, 2s) ease-in-out infinite alternate, wave 2s ease-in-out infinite;
     // -webkit-animation: rota var(--wave-rotation-time, 2s) ease-in-out infinite alternate, wave 2s ease-in-out infinite;
 }
+
+span.wavy-text{
+    display: inline-block;
+    // animation: wave var(--wave-time, 2s) ease-in-out infinite;
+    animation: wave-min-max var(--wave-time, 2s) ease-in-out infinite;
+}
+
 // .wave-text span span{
 //     display: inline-block;
 //     font-size: 4rem;
@@ -2216,6 +2223,15 @@ html.dark #theme-toggle svg:first-child{
         // transform: translateY(calc(-20px*var(--is-active, 0)));
         // transform: translateY(calc(-20px*var(--is-active)));
         // transform: translateY(calc(-20px+var(--is-active)));
+    }
+}
+
+@keyframes wave-min-max {
+    0%, 100% {
+        transform: translateY(var(--y-wave-translate-min,20px));
+    }
+    50% {
+        transform: translateY(var(--y-wave-translate-max,-20px));
     }
 }
 
