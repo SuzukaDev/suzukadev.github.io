@@ -1194,14 +1194,22 @@ a.button.two:before, a.button.two:after{
   }
   a.button.two:before{
 	content: '[';
+	// content: '👉';
+	// content: '👆';
+
   }
   a.button.two:after{
 	content: ']';
+	// content: '👈';
+	// content: '☝';
+
   }
   
   a.button.two:hover:before{
 	margin-right: 10px;
 	content: '[';
+	// content: '👉';
+
 	-webkit-transform: translateX(20px);
 	-moz-transform: translateX(20px);
 	transform: translateX(20px);
@@ -1212,6 +1220,7 @@ a.button.two:before, a.button.two:after{
   a.button.two:hover:after{
 	margin-left: 10px;
 	content: ']';
+	// content: '👈';
 	-webkit-transform: translateX(-20px);
 	-moz-transform: translateX(-20px);
 	transform: translateX(-20px);
