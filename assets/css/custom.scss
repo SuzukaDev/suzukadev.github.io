@@ -1419,6 +1419,10 @@ div.highlight pre, .articles-content pre {
 #szk_pfp {
 	/* height: 100px; */
 	// height: 30vh;
+	// display: block;
+	// width: auto;
+	width: 100%;
+	object-fit: cover;
 	height: 30vh;
 	// height: 30%;
 	// width: auto;
