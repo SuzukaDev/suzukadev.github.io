@@ -1,0 +1,8 @@
+{{ define "main" }}
+  {{ partial "title.html" . }}
+  <hgroup class="articles-content">
+    {{/*  <section class="prose">  */}}
+      {{ .Content }}
+    {{/*  </section>  */}}
+  </hgroup>
+{{ end }}
