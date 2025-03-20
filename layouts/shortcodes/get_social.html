@@ -1,10 +1,16 @@
+{{/*  
+Returns a link for a social defined in social_sites.json
+
+Use:
+{{< get_social_url [social_sites KEY] [optional return icon (true/false) DEFAULT TRUE]>}}
+Example:
+{{< get_social_url instagram>}} -> returns icon by default
+{{< get_social_url INSTAGRAM>}} -> Is not case sensitive
+{{< get_social_url twitter true>}} -> returns icon
+{{< get_social_url twitter false >}} -> do NOT returns the icon/logo
+  */}}
 
 {{ $social_platform := .Get 0 | lower }}
-
-{{/*  {{if eq (.Get 1) true}}  */}}
-{{/*  {{if ne (.Get 1) true}}
-<p>heeeey {{$social_platform}}!!! que tal tio</p>
-{{ end }}  */}}
 
 {{ $socials := .Site.Data.social_sites }}
 {{ $data := index $socials $social_platform }}
@@ -15,57 +21,46 @@
 
 {{ $a_class := "button four"}}
 
-{{/*  {{ $svg_css_style := 'style="display: inline-block; width: 24px; height: 24px;" fill="currentColor"'}}  */}}
-{{ $svg_css_style := "style='display: inline-block; width: 24px; height: 24px;'" | safeHTMLAttr}}
-{{ $svg_config := "fill='currentColor'" | safeHTMLAttr}}
-{{ if $data.viewBox }}
-	{{/*  {{ $svg_css_style = printf "style='display: inline-block; width: 24px; height: 24px;' fill='currentColor' viewBox=%s" $data.viewBox | safeCSS}}  */}}
-	{{/*  {{ $svg_config = printf "fill='currentColor' viewBox=%s" $data.viewBox | safeHTMLAttr}}  */}}
-	{{ $svg_config = printf "fill='currentColor' viewBox='%s'" $data.viewBox | safeHTMLAttr}}
-{{ end }}
+{{/*  {{ $show_icon := and (.Get 1) (eq (.Get 1) true)}}  */}}
+{{/*  If (.Get 1) is empty or undefined, "true" will be used as the default.  */}}
+{{ $show_icon := .Get 1 | default true}}
 
-{{/*  <p>CONFIG: {{$svg_config}}</p>  */}}
-{{/*  <a href="{{$data.url}}">{{$data.nick}}</a>  */}}
-{{ if $data.svg_content }}
-	{{/*  <a href="{{$data.url}}"><svg style="display: inline-block; width: 24px; height: 24px;" fill="currentColor" viewBox="{{$data.viewBox}}">{{$data.svg_content}}</svg>{{$data.nick}}</a>  */}}
-	{{/*  <a href="{{$data.url}}"><svg {{$svg_css_style | safeCSS}}>{{$data.svg_content}}</svg>{{$data.nick}}</a>  */}}
-	<a href="{{$data.url}}" class={{$a_class}}>
-		<svg {{$svg_css_style }} {{ $svg_config }}>{{$data.svg_content | safeHTML }}</svg> {{$data.nick}}
-	</a>
-	{{/*  <p> caca</p>  */}}
-{{ else }}
-	<a href="{{$data.url}}" class="{{$a_class}}">
-	{{/*  <svg style="display: inline-block; width: 24px; height: 24px;" fill="currentColor" viewBox="{{$data.viewBox}}">  */}}
-	{{/*  <svg {{ $svg_css_style | safeCSS }}>  */}}
-	<svg {{ $svg_css_style }} {{ $svg_config }}>
-	{{ range $data.svg_paths}}
-		<path
-		fill-rule="evenodd"
-        d="{{ . }}"
-        clip-rule="evenodd"
-		></path>
+{{ if $show_icon }}
+
+	{{/*  {{ $svg_css_style := 'style="display: inline-block; width: 24px; height: 24px;" fill="currentColor"'}}  */}}
+	{{ $svg_css_style := "style='display: inline-block; width: 24px; height: 24px;'" | safeHTMLAttr}}
+	{{ $svg_config := "fill='currentColor'" | safeHTMLAttr}}
+	{{ if $data.viewBox }}
+		{{/*  {{ $svg_css_style = printf "style='display: inline-block; width: 24px; height: 24px;' fill='currentColor' viewBox=%s" $data.viewBox | safeCSS}}  */}}
+		{{/*  {{ $svg_config = printf "fill='currentColor' viewBox=%s" $data.viewBox | safeHTMLAttr}}  */}}
+		{{ $svg_config = printf "fill='currentColor' viewBox='%s'" $data.viewBox | safeHTMLAttr}}
 	{{ end }}
-	</svg> {{$data.nick}}</a>
+
+	{{/*  <p>CONFIG: {{$svg_config}}</p>  */}}
+	{{/*  <a href="{{$data.url}}">{{$data.nick}}</a>  */}}
+	{{ if $data.svg_content }}
+		{{/*  <a href="{{$data.url}}"><svg style="display: inline-block; width: 24px; height: 24px;" fill="currentColor" viewBox="{{$data.viewBox}}">{{$data.svg_content}}</svg>{{$data.nick}}</a>  */}}
+		{{/*  <a href="{{$data.url}}"><svg {{$svg_css_style | safeCSS}}>{{$data.svg_content}}</svg>{{$data.nick}}</a>  */}}
+		<a href="{{$data.url}}" class={{$a_class}}>
+			<svg {{$svg_css_style }} {{ $svg_config }}>{{$data.svg_content | safeHTML }}</svg> {{$data.nick}}
+		</a>
+	{{ else }}
+		<a href="{{$data.url}}" class="{{$a_class}}">
+		{{/*  <svg style="display: inline-block; width: 24px; height: 24px;" fill="currentColor" viewBox="{{$data.viewBox}}">  */}}
+		{{/*  <svg {{ $svg_css_style | safeCSS }}>  */}}
+		<svg {{ $svg_css_style }} {{ $svg_config }}>
+		{{ range $data.svg_paths}}
+			<path
+			fill-rule="evenodd"
+			d="{{ . }}"
+			clip-rule="evenodd"
+			></path>
+		{{ end }}
+		</svg> {{$data.nick}}</a>
+	{{ end }}
+
+{{ else }}
+	{{/*  Do not show icon  */}}
+	<a href="{{$data.url}}" class="{{$a_class}}">{{$data.nick}}</a>
 {{ end }}
-
-
-{{/*  <{{ .Get "tag" | safeHTMLAttr }}>{{ .Get "text" | safeHTMLAttr }}</{{ .Get "tag" | safeHTMLAttr }}>  */}}
-
-
-
-{{/*  <{{ .Get "tag" }}>{{ .Get "text" }}</{{ .Get "tag" }}>  */}}
-
-
-
-
-
-
-{{/*  <{{ .Get "tag" }}>{{ .Get "text" }}</{{ .Get "tag" }}>  */}}
-{{/*  <strong>{{ .Get "text" }}</strong>  */}}
-
-
-{{/*  <div>{{ .Get "text" }}</div>  */}}
-{{/*  <p>{{ .Get "text" }}</p>  */}}
-{{/*  <span style="background-color:'#990011'">{{ .Get "text" }}</span>  */}}
-
 
