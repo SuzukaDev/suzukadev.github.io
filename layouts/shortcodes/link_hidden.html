@@ -1,0 +1,22 @@
+{{/*  
+Returns a link with not a visible style.
+Useful when you want to write links that do not call the attention that much.
+
+Use:
+{{< link_hidden [link url] [optional text]>}}
+
+Example:
+{{< link_hidden "www.google.com">}}
+{{< link_hidden "www.google.com" "Google">}}
+  */}}
+
+{{ $url := .Get 0 }}
+{{ $text := .Get 1 }}
+
+{{ $css_class := "link-hidden" | safeHTML}}
+
+{{ if $text }}
+  <a href="{{$url}}" class="{{$css_class}}">{{$text}}</a>
+{{ else }}
+  <a href="{{$url}}" class="{{$css_class}}">{{$url}}</a>
+{{ end }}
