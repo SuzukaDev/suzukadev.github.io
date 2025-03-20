@@ -1897,6 +1897,27 @@ hgroup.articles-content > ol{
 //     margin-left: 10px;
 // }
 
+hgroup.articles-content p a:not([class]){
+	color: var(--hover-color);
+	&:hover{
+		text-decoration: underline !important;
+	}
+}
+
+a.link-underline{
+	text-decoration: underline;
+	&:hover{
+		color: var(--hover-color);
+	}
+}
+
+a.link-hidden{
+	text-decoration: none;
+	&:hover{
+		color: var(--hover-color);
+	}
+}
+
 // hgroup.articles-content
 // hgroup.articles-content p, ul{
 hgroup.articles-content p, hgroup.articles-content ul, hgroup.articles-content ol{
