@@ -18,14 +18,16 @@
 	color: var(--glitch-color-3, transparent); // esto no estaba
 	content: attr(data-text);
 	position: absolute;
-	left: -2px;
+	// left: -2px;
+	// left: cal(-2px*var(--glitch-intensity,1));
+	left: calc(-2px*var(--glitch-intensity,1)*var(--glitch-char-rand, 1));
 	// text-shadow: -5px 0 magenta; // original
-	text-shadow: -5px 0 var(--glitch-color-1, magenta);
+	// text-shadow: -5px 0 var(--glitch-color-1, magenta);
+	text-shadow: calc(-5px*var(--glitch-intensity,1)) 0 var(--glitch-color-1, magenta);
 	// text-shadow: -15px 0 magenta;
 	// background: black; // original
 	// background: white;
 	background: var(--surface-1);
-	overflow: hidden;
 	top: 0;
 	// animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite; // original
 	animation: noise-1 3s linear var(--glitch-noise-1-delay, 0s) infinite alternate-reverse, glitch 5s infinite;
@@ -36,7 +38,9 @@
 	position: absolute;
 	left: 2px;
 	// text-shadow: -5px 0 lightgreen; // original
-	text-shadow: -5px 0 var(--glitch-color-2, lightgreen);
+	// text-shadow: -5px 0 var(--glitch-color-2, lightgreen);
+	// text-shadow: calc(-5px*var(--glitch-intensity,1)) 0 var(--glitch-color-2, lightgreen);
+	text-shadow: calc(-5px*var(--glitch-intensity,1)*var(--glitch-char-rand, 1)) 0 var(--glitch-color-2, lightgreen);
 	// background: black; // original
 	// background: white;
 	background: var(--surface-1);
@@ -59,8 +63,8 @@
 //v2
   @keyframes glitch {
 	1%{
-	//   transform: rotateX(10deg) skewX(70deg);
-	  transform: rotateX(var(--glitch-rotation, 10deg)) skewX(70deg);
+	//   transform: rotateX(10deg) skewX(90deg);
+	  transform: rotateX(var(--glitch-rotation, 10deg)) skewX(79deg);
 	//   transform: rotateX(910deg) skewX(70deg);
 	//   transform: rotateX(910.2deg) skewX(70deg);
 	}
