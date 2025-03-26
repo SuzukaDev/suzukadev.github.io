@@ -13,12 +13,15 @@
   }
   
   .glitch::before {
-	  color:magenta; // esto no estaba
+	//   color:magenta; // esto no estaba
+	//   color: transparent; // esto no estaba
+	color: var(--glitch-color-3, transparent); // esto no estaba
 	content: attr(data-text);
 	position: absolute;
 	left: -2px;
 	// text-shadow: -5px 0 magenta; // original
-	text-shadow: -15px 0 magenta;
+	text-shadow: -5px 0 var(--glitch-color-1, magenta);
+	// text-shadow: -15px 0 magenta;
 	// background: black; // original
 	// background: white;
 	background: var(--surface-1);
@@ -32,7 +35,8 @@
 	content: attr(data-text);
 	position: absolute;
 	left: 2px;
-	text-shadow: -5px 0 lightgreen;
+	// text-shadow: -5px 0 lightgreen; // original
+	text-shadow: -5px 0 var(--glitch-color-2, lightgreen);
 	// background: black; // original
 	// background: white;
 	background: var(--surface-1);
