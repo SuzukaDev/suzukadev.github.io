@@ -10,6 +10,8 @@ sync = (bool true/false). If false, the noise FX happens at different times. Def
 color1 = color (hex, name). The color for the FX. Default: magenta
 color2 = color (hex, name). The color for the FX. Default: lightgreen
 color3 = color (hex, name). The color for the FX. Default: transparent
+intensity = (float) Displacement intensity. Default: 1.0
+randomness = (float) Displacement randomness. Default: 0.0
   */}}
 
 {{/*  {{ $text := .Get 0 }}  */}}
@@ -26,7 +28,10 @@ color3 = color (hex, name). The color for the FX. Default: transparent
 {{ $random_max := .Get "random_max" | default 1.0 }}
 {{ $random_min := .Get "random_min" | default 0.0 }}
 {{ $intensity := float ((.Get "intensity") | default 1.0) }}
+{{ $randomness := float ((.Get "random") | default 0.0) }}
 {{ $glitch_type := .Get "type" | default 1 }}
+
+
 
 {{ $skew_strength := $intensity }}
 
@@ -91,6 +96,9 @@ color3 = color (hex, name). The color for the FX. Default: transparent
 
 	{{ $data_text := $char }}
 
+	{{ $rand_value := math.Rand | mul 2 | sub 1 | mul $randomness }}
+	{{ $rand_p := printf "--glitch-char-rand:%f" $rand_value }}
+
 	{{ $glitch_direction := 1 }}
 	{{ if lt math.Rand 0.5 }}
 		{{ $glitch_direction = -1 }}
@@ -110,6 +118,7 @@ color3 = color (hex, name). The color for the FX. Default: transparent
 		{{ $duration := printf "animation-duration:%fs" $animation_time }}
 		{{ $glitch_direction_property := printf "--glitch-direction:%f" ($glitch_direction | mul $skew_strength) }}
 		{{ $rotation_p := printf "--glitch-rotation:%fdeg" (float $rotation | mul $glitch_direction) }}
+		{{ $intensity_p := printf "--glitch-intensity:%f" (float $intensity) }}
 
 		{{ if eq $sync false }}
 			{{/*  {{ $noise_delay1 = math.Rand | mul $animation_time }}  */}}
@@ -121,7 +130,7 @@ color3 = color (hex, name). The color for the FX. Default: transparent
 		{{ end }}
 
 
-		{{ $style_properties := slice $color_properties $noise1_delay_p $noise2_delay_p $rotation_p $duration $delay_property $glitch_direction_property }}
+		{{ $style_properties := slice $rand_p $intensity_p $color_properties $noise1_delay_p $noise2_delay_p $rotation_p $duration $delay_property $glitch_direction_property }}
 		{{ $non_empty_style_properties := complement (slice "") (slice nil) $style_properties }}
 
 		{{ $css_style := delimit $non_empty_style_properties ";"}}
