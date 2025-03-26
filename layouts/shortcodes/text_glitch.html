@@ -4,14 +4,14 @@ Adds a glitchy effect to a text
 Arguments:
 text = (string) Text with the glitch effect
 time = (float) The total time for the animation. Default: 5
-font = (bool true/false) if true, it uses a terminal font. Default: false
+font = (int (0,1,2)) 1 = Terminal font, 2 = Pixel art font. Default: 0 (do not change the original font)
 rotation = (int) the angle of rotation of the glitch FX (used to glitch the letters). Default 10
   */}}
 
 {{/*  {{ $text := .Get 0 }}  */}}
 {{ $text := .Get "text" }}
 {{ $animation_time := float ((.Get "time") | default 5) }}
-{{ $use_console_font := .Get "font" | default false }}
+{{ $font := .Get "font" | default 0 }}
 {{ $rotation := .Get "rotation" | default 10 }}
 {{ $random_max := .Get "random_max" | default 1.0 }}
 {{ $random_min := .Get "random_min" | default 0.0 }}
@@ -26,8 +26,10 @@ rotation = (int) the angle of rotation of the glitch FX (used to glitch the lett
 {{ end }}
 
 {{ $css_class := "glitch" }}
-{{ if $use_console_font }}
-	{{ $css_class = "glitch consolas" }}
+{{ if eq $font 1 }}
+	{{ $css_class = printf "%s %s" $css_class "consolas" }}
+{{ else if eq $font 2 }}
+	{{ $css_class = printf "%s %s" $css_class "pixel-font" }}
 {{ end }}
 
 {{/*  {{ if eq $sync false }}  */}}
