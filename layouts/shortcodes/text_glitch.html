@@ -15,6 +15,10 @@ sync = (bool true/false). If false, the noise FX happens at different times. Def
 {{ $font := .Get "font" | default 0 }}
 {{ $rotation := .Get "rotation" | default 10 }}
 {{ $sync := .Get "sync" | default true }}
+{{ $color1 := .Get "color1" | default "" }}
+{{ $color2 := .Get "color2" | default "" }}
+{{/*  {{ $color1 := .Get "color1" | default "magenta" }}  */}}
+{{/*  {{ $color2 := .Get "color2" | default "lightgreen" }}  */}}
 {{ $random_max := .Get "random_max" | default 1.0 }}
 {{ $random_min := .Get "random_min" | default 0.0 }}
 {{ $intensity := float ((.Get "intensity") | default 1.0) }}
@@ -38,6 +42,15 @@ sync = (bool true/false). If false, the noise FX happens at different times. Def
 {{ $noise1_delay_p := "" }}
 {{ $noise2_delay_p := "" }}
 
+{{ $color_properties := "" }}
+{{ if $color1 }}
+	{{ $color_properties = printf "--glitch-color-1: %s" $color1 }}
+	{{/*  {{ $color_properties = "PASAAA" }}  */}}
+{{ end }}
+{{ if $color2 }}
+	{{ $color_properties = printf "%s; --glitch-color-2: %s" $color_properties $color2 }}
+	{{/*  {{ $color_properties = "guasaaaaaaaaa" }}  */}}
+{{ end }}
 
 
 {{/*  {{ $color1 := .Get "color1" | default 0.0 }}  */}}
@@ -99,8 +112,23 @@ sync = (bool true/false). If false, the noise FX happens at different times. Def
 		{{ end }}
 
 
-		{{ $style_properties := slice $noise1_delay_p $noise2_delay_p $rotation_p $duration $delay_property $glitch_direction_property }}
-		{{ $css_style := delimit $style_properties ";"}}
+		{{ $style_properties := slice $color_properties $noise1_delay_p $noise2_delay_p $rotation_p $duration $delay_property $glitch_direction_property }}
+		{{/*  {{ $style_properties := slice $noise1_delay_p $noise2_delay_p $rotation_p $duration $delay_property $glitch_direction_property }}  */}}
+		{{ $non_empty_style_properties := slice }}
+		{{ range $style_properties }}
+			{{/*  {{ if ne . "" }}  */}}
+			{{ if . }}
+				{{ $non_empty_style_properties = $non_empty_style_properties | append . }}
+	  		{{ end }}
+		{{ end }}
+		{{/*  {{ $css_style := delimit $style_properties ";"}}  */}}
+		
+		{{/*  {{ $non_empty_style_properties := where "!=" "" }}  */}}
+		{{/*  {{ $non_empty_style_properties := where $style_properties "!=" "" }}  */}}
+		{{/*  {{ $non_empty_style_properties := ($style_properties | complement (slice "")) }}  */}}
+		{{ $non_empty_style_properties := complement (slice "") (slice nil) $style_properties }}
+
+		{{ $css_style := delimit $non_empty_style_properties ";"}}
 		{{ $output = printf "%s<span class='%s' data-text='%s' style='%s'>%s</span>" $output $css_class $data_text $css_style $char}}
 	{{ end }}
 {{- end -}}
