@@ -1,0 +1,116 @@
+<!-- raw html -->
+{{/*  {{.Inner}}  */}}
+
+{{/*  {{ $chars := split .Inner "" }}  */}}
+{{ $chars := split (.Get "text") "" }}
+{{/*  {{ $frequency := (.Get 1) | default .2 | mul -1.0}}  */}}
+{{/*  {{ $rawFrequency := (.Get 1) | default .2 }}  */}}
+{{ $rawFrequency := float ((.Get "delay") | default .1) }}
+{{/*  {{ $frequency := mul (math.Abs $rawFrequency) -1 }}  */}}
+{{ $frequency := mul (math.Abs $rawFrequency) 1.0 }}
+
+{{/*  {{ $amp := (.Get "amp") | default 20 }}  */}}
+{{ $amp := float ((.Get "amp") | default 20) }}
+{{ $half_amp := div $amp 2.0 }}
+
+{{ $color1 := ((.Get "color1") | default "white") }}
+{{ $color2 := ((.Get "color2") | default "white") }}
+
+{{ $color1light := ((.Get "color1-light") | default $color1) }}
+{{ $color2light := ((.Get "color2-light") | default $color2) }}
+{{ $color1dark := ((.Get "color1-dark") | default $color1) }}
+{{ $color2dark := ((.Get "color2-dark") | default $color2) }}
+
+
+
+
+{{/*  {{ $blur := ((.Get "blur") | default 12) }}  */}}
+{{ $blur := .Get "blur" }}
+{{ if eq $blur nil }}
+  {{ $blur = 12 }}
+{{ end }}
+{{ $blur_property := printf "--shimmer-blur-pixels: %dpx" $blur }}
+
+{{ $x := ((.Get "x") | default 0) }}
+{{ $y := ((.Get "y") | default 0) }}
+{{ $z := ((.Get "z") | default 0) }}
+
+
+{{ $shimmer_c1 := printf "--shimmer-color-1:%s; --shimmer-color-1-light:%s; --shimmer-color-1-dark:%s" $color1 $color1light $color1dark}}
+{{ $shimmer_c2 := printf "--shimmer-color-2:%s; --shimmer-color-2-light:%s; --shimmer-color-2-dark:%s" $color2 $color2light $color2dark}}
+
+{{/*  {{$max_y := 10}}
+{{$min_y := mul $max_y -1}}  */}}
+{{$max_y := $half_amp}}
+{{$min_y := mul $half_amp -1.0}}
+{{/*  {{$animation_time := (.Get "time") | default 1}}  */}}
+{{$animation_time := float ((.Get "time") | default 2.4) }}
+
+
+{{/*  {{ range $index, $char := $chars }}
+<pre>{{$char}}</pre>
+{{end}}  */}}
+{{ $_shimmer_scale := printf "--shimmer-scale:%f" (.Get "scale" | default 1.30) }}
+
+{{/*  <div class="wave-text">  */}}
+{{/*  {{$output := "<span class='shimmer'>"}}  */}}
+
+{{ $time_start_offset := ((.Get "offset") | default 0.0) }}
+{{ $_init_delay := add -99999.9 $time_start_offset}}
+
+{{ $speed_sign := 1 }}
+{{ if lt $rawFrequency 0.0 }}
+	{{ $speed_sign = -1 }}
+{{ end }}
+
+{{$output := "<span class='shimmer'>"}}
+{{- range $index, $char := $chars -}}
+	{{ $delay := mul $index ($frequency) }}
+	{{ $delay = mul $delay $speed_sign  }}
+	{{/*  {{ $delay := mul $index (0.3) }}  */}}
+	{{/*  {{ $delay = float $delay }}  */}}
+
+	{{ $delay = add $delay $_init_delay }}
+
+	{{/*  {{ if lt $speed_sign 0.0 }}
+		{{ $delay = sub $_init_delay $delay }}
+	{{ else }}
+		{{ $delay = add $_init_delay $delay }}
+	{{ end }}  */}}
+	
+	{{/*  {{ $delay = 0.0 }}  */}}
+
+	{{/*  DELETE tx y demás  */}}
+	{{$tx := 0.0 }}
+	{{$ty := 0.0 }}
+	{{$tz := 30.0 }}
+
+	
+	{{/*  {{ $_shimmer_translate := printf "--shimmer-translate:translate3D(%fpx, %fpx, %fpx)" $tx $ty $tz }}  */}}
+	{{ $_shimmer_translate := printf "--shimmer-translate:translate3D(%dpx, %dpx, %dpx)" $x $y $z }}
+
+	{{ $_shimmer_properties_slice := slice $_shimmer_translate $_shimmer_scale $shimmer_c1 $shimmer_c2 $blur_property }}
+	{{/*  {{ $_shimmer_translate = "" }}  */}}
+	{{/*  {{ $_shimmer_translate := printf "--shimmer-translate:perspective(100px) translate3D(%fpx, %fpx, %fpx)" $tx $ty $tz }}  */}}
+	{{/*  {{ $_shimmer_properties := printf "%s;%s;" $_shimmer_translate $_shimmer_scale }}  */}}
+	{{ $_shimmer_properties := delimit $_shimmer_properties_slice ";" }}
+	{{/*  NOTE THIS ADDS WHITESPACES!  */}}
+	{{/*  INFO  https://discourse.gohugo.io/t/hugo-range-function-adds-extra-whitespace-between-spans/33219 */}}
+	{{/*  <span class="wavy-text" style="animation-duration:{{$animation_time}}s; animation-delay: {{$delay | safeCSS}}s; --y-wave-translate-min:{{$min_y}}px; --y-wave-translate-max:{{$max_y}}px;">{{- $char -}}</span>  */}}
+	{{if eq $char " "}}
+		{{/*  {{ $output = printf "%s$nbsp;" ($output | safeHTMLAttr) }}  */}}
+		{{/*  {{ $output = printf "%s<span> </span>" ($output | safeHTMLAttr) }}  */}}
+		{{ $output = printf "%s<span style='display:inline;'> </span>" ($output | safeHTMLAttr) }}
+		{{/*  {{ $output = printf "%s<br style='display:inline;'> </br>" ($output | safeHTMLAttr) }}  */}}
+		{{/*  {{ $output = printf "%s$nbsp;" ($output) }}  */}}
+	{{ else }}
+		{{/*  {{ $output = printf "%s<span style='animation-duration:%fs; animation-delay:%fs; --y-wave-translate-min:%fpx; --y-wave-translate-max:%fpx;'>%s</span>" $output $animation_time ($delay) $min_y $max_y $char }}  */}}
+		{{/*  {{ $output = printf "%s<span style='--shimmer-translate:%s;animation-duration:%fs; animation-delay:%fs; --y-wave-translate-min:%fpx; --y-wave-translate-max:%fpx;'>%s</span>" $output $_shimmer_translate $animation_time ($delay) $min_y $max_y $char }}  */}}
+		{{ $output = printf "%s<span style='%s;animation-duration:%fs; animation-delay:%fs; --y-wave-translate-min:%fpx; --y-wave-translate-max:%fpx;'>%s</span>" $output $_shimmer_properties $animation_time ($delay) $min_y $max_y $char }}
+	{{ end }}
+{{- end -}}
+
+{{/*  {{ $output = printf "%s</span>" $output }}  */}}
+{{ $output = printf "%s</span>" $output }}
+{{/*  To avoid whitespaces in HTML  */}}
+{{ $output | safeHTML }}
