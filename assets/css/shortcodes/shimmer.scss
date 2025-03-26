@@ -1,0 +1,243 @@
+
+$theColor: #00ff55;
+$text: #ce1414;
+
+.shimmer{
+	// text-wrap: nowrap;
+	white-space: nowrap;
+	// text-wrap: stable;
+	// white-space: nowrap;
+	position: relative;
+	top: -.02em;
+
+}
+.dark .shimmer{
+	// display: inline-flex;
+	// display: block;
+//   color: $text;
+  color: currentColor;
+  --shimer-active-color: currentColor
+//   color: color-mix(in lab, currentColor 0%, white 100%);
+--shimer-coco: currentColor;
+
+
+//   color: var(--text-1);
+//   color: var(--text-2);
+//   font-size: 16px;
+//   font-family: 'Open-Sans', sans-serif;
+//   font-weight: 600;
+  perspective: 80px;
+//   perspective: 90px;
+//   perspective: 50px;
+  transform-style: preserve-3d;
+
+//   transform: perspective(33px) translate3D(0px,0px,60px) scale(1) rotateY(20deg);
+
+//   transform-style: flat;
+span{
+// span:has(.dark){
+	--shimer-active-color: currentColor
+
+	//   transform: translate3D(0px,0px,10px) scale(1) rotateY(100deg);
+	//   transform: translate3D(0px,0px,40px) scale(1) rotateY(30deg);
+	  position: relative;
+	  transition: all .3s ease;
+	  display: inline-block;
+	//   animation: shimmer 2.4s ease infinite;
+	// TODO puedo implementar lo de --shimer-animation para hacer distintos efectos
+	  animation: var(--shimer-animation, "shimmer") 2.4s ease infinite;
+	//   animation: bright-test 2.4s ease infinite;
+	letter-spacing: 0.01em;
+	transform-origin: 100% 50%;
+	transform-style: preserve-3d;
+	//border: 1px solid red
+	//   animation: shimmer 2.4s ease infinite;
+	}
+    
+    //span count
+    // @for $i from 1 through $count{
+    // @for $i from 1 through 100{
+	// 	&:nth-child(#{$i}){
+	// 		animation-delay: 10.05s * ($i - 1);
+	// 	}
+	// }
+}
+
+
+.light .shimmer{
+	color: currentColor;
+	--shimer-active-color: currentColor
+	--shimer-coco: currentColor;
+	perspective: 80px;
+	transform-style: preserve-3d;
+
+	span{
+		--shimer-active-color: currentColor
+		position: relative;
+		transition: all .3s ease;
+		display: inline-block;
+		animation: shimmer-light 2.4s ease infinite;
+		letter-spacing: 0.01em;
+		transform-origin: 100% 50%;
+		transform-style: preserve-3d;
+		}
+}
+
+@keyframes bright-test{  
+	0%{
+		// color:currentColor;
+		color:var(--shimer-coco);
+	}
+	50%{
+		// color: color-mix(in lab, var(--shimer-coco) 0%, white 100%);
+		// color: color-mix(in lab, currentColor 90%, white 100%);
+		// color: color-mix(in lab, currentColor 0%, white 100%);
+		// color: color-mix(in lab, currentColor 0%, greenyellow 100%);
+		color: color-mix(in lab, var(--shimer-coco) 0%, greenyellow 100%);
+	}
+	100%{
+		// color:currentColor;
+		color:var(--shimer-coco);
+	}
+}
+
+@keyframes shimmer{  
+	0%{
+		transform: translate3D(0,0,0) scale(1) rotateY(0);
+		color: currentColor;
+		--shimer-active-color: currentColor;
+		// text-shadow: 0 0 0 rgba(var(var(--shimer-active-color)),0);
+	}
+  12%{
+	  transform: var(--shimmer-translate, translate3D(100px,50px,20px)) scale(var(--shimmer-scale, 2.0)) rotateY(0deg);
+	//   color: color-mix(in lab, var(--shimer-active-color) 10%, white 100%);
+	//   color: color-mix(in lab, currentColor 10%, white 100%);
+	  color: color-mix(in lab, currentColor 10%, var(--shimmer-color-1-dark) 100%);
+	}
+  15%{
+		// text-shadow: 0 0 1px color-mix(in srgb, $text, white 30%);
+		// text-shadow: 0 0 1px color-mix(in srgb, var(--hover-color), white 30%);
+		
+		// text-shadow: 0 0 12px var(--hover-color);
+		// text-shadow: 0 0 0px var(--hover-color);
+		text-shadow: 0 0 var(--shimmer-blur-pixels, 12px) var(--hover-color);
+	}
+  24%{
+	  transform: translate3D(0,0,0) scale(1) rotateY(0);
+	//   color: color-mix(in lab, var(--shimer-active-color) 10%, white 100%);
+	//   color: color-mix(in lab, currentColor 54%, white 100%);
+	  color: color-mix(in lab, currentColor 54%, var(--shimmer-color-2-dark) 100%);
+	//   opacity: 1;
+	}
+  36%{
+	  transform: translate3D(0,0,0) scale(1);
+	}
+  100%{
+	  transform: scale(1);
+	  opacity: .8;
+	  color: var(--shimer-active-color);
+	}
+}
+
+@keyframes shimmer-light{  
+	0%{
+		transform: translate3D(0,0,0) scale(1) rotateY(0);
+		color: currentColor;
+		--shimer-active-color: currentColor;
+	}
+  12%{
+	  transform: var(--shimmer-translate, translate3D(100px,50px,20px)) scale(var(--shimmer-scale, 2.0)) rotateY(0deg);
+	  color: color-mix(in lab, currentColor 10%, var(--shimmer-color-1-light) 100%);
+	//   color: color-mix(in lab, currentColor 90%, var(--shimmer-color-1-light) 60%);
+	}
+  15%{
+		// text-shadow: 0 0 1px color-mix(in srgb, $text, white 30%);
+		// text-shadow: 0 0 1px color-mix(in srgb, var(--hover-color), white 30%);
+		
+		// text-shadow: 0 0 12px var(--hover-color);
+		// text-shadow: 0 0 0px var(--hover-color);
+		// text-shadow: 0 0 var(--shimmer-blur-pixels, 12px) var(--hover-color);
+		
+		// text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+		// text-shadow: -1px -1px 0 var(--shimmer-color-1), 1px -1px 0 var(--shimmer-color-1), -1px 1px 0 var(--shimmer-color-1), 1px 1px 0 var(--shimmer-color-1);
+		-webkit-text-stroke: 1px var(--shimmer-color-1-light);
+	}
+	24%{
+		-webkit-text-stroke: 0px var(--shimmer-color-1-light);
+	//   text-shadow: 0px 0px 0 #000, 0px 0px 0 #000, 0px 0px 0 #000, 0px 0px 0 #000;
+	//   text-shadow: 0px 0px 0 var(--shimmer-color-2), 0px 0px 0 var(--shimmer-color-2), 0px 0px 0 var(--shimmer-color-2), 0px 0px 0 var(--shimmer-color-2);
+
+
+	//   transform: translate3D(0,0,0) scale(1) rotateY(0);
+	//   color: color-mix(in lab, var(--shimer-active-color) 10%, white 100%);
+	//   color: color-mix(in lab, currentColor 54%, white 100%);
+	  color: color-mix(in lab, currentColor 54%, var(--shimmer-color-2-light) 100%);
+	//   opacity: 1;
+	}
+  36%{
+	  transform: translate3D(0,0,0) scale(1);
+	}
+  100%{
+	  transform: scale(1);
+	  opacity: .8;
+	  color: var(--shimer-active-color);
+	}
+}
+
+
+
+@keyframes shimmer-antes-CAOS{  
+	0%{
+		transform: translate3D(0,0,0) scale(1) rotateY(0);
+		// color: $text;
+		color: currentColor;
+		// color: var(--text-2);
+		// --shimer-active-color: currentColor
+		// color: var(--hover-color);
+		// color: currentColor;
+		// text-shadow: 0 0 0 rgba($text,0);
+		// text-shadow: 0 0 0 rgba(var(--hover-color),0);
+		text-shadow: 0 0 0 rgba(var(var(--shimer-active-color)),0);
+	}
+  12%{
+	//   transform: translate3D(2px,-1px,2px) scale(1.48) rotateY(6deg);
+	//   transform: translate3D(0px,-50px,20px) scale(var(--shimmer-scale, $shimmer_scale)) rotateY(6deg);
+	//   transform: var(--shimmer-translate, translate3D(100px,50px,20px)) scale(var(--shimmer-scale, $shimmer_scale)) rotateY(6deg);
+	  transform: var(--shimmer-translate, translate3D(100px,50px,20px)) scale(var(--shimmer-scale, 2.0)) rotateY(0deg);
+	//   transform: var(--shimmer-translate, translate3D(100px,50px,20px));
+	//   transform: var(--shimmer-translate, translate3D(0px,0px,50px));
+	//   color: lighten($text,54%);
+	//   color: lighten(var(--hover-color),54%);
+	//   color: lighten($theColor,54%);
+	  color: color-mix(in lab, var(--shimer-active-color) 0%, white 100%);
+	//   color: color-mix(in lab, white 50%, var(--shimer-active-color) 50%);
+	//   color: color-mix(in lab, red 100%, white 100%);
+	}
+  15%{
+	//   text-shadow: 0 0 1px lighten($text,30%);
+	//   text-shadow: 0 0 1px lighten(var(--hover-color),30%);
+	// text-shadow: 0 0 1px color-mix(in srgb, var(--hover-color), white 30%);
+	// text-shadow: 0 0 1px color-mix(in srgb, currentColor, white 30%);
+	text-shadow: 0 0 1px color-mix(in srgb, $text, white 30%);
+	//   text-shadow: 0 0 1px lighten($theColor,30%);
+	//   text-shadow: 0 0 1px lighten(#00ff22,30%);
+	}
+  24%{
+	  transform: translate3D(0,0,0) scale(1) rotateY(0);
+	//   color: lighten($text,10%);
+	//   color: lighten(var(--hover-color),10%);
+	// color: lighten($theColor,10%);
+	//   color: color-mix(in srgb, var(--shimer-active-color), white 30%);
+	//   color: color-mix(in srgb, var(--shimer-active-color) 10%, white 100%);
+	  color: color-mix(in lab, var(--shimer-active-color) 10%, white 100%);
+	  opacity: 1;
+	}
+  36%{
+	  transform: translate3D(0,0,0) scale(1);
+	}
+  100%{
+	  transform: scale(1);
+	  opacity: .8;
+	  color: var(--shimer-active-color);
+	}
+}
