@@ -30,9 +30,14 @@ rotation = (int) the angle of rotation of the glitch FX (used to glitch the lett
 	{{ $css_class = "glitch consolas" }}
 {{ end }}
 
-{{ if eq $sync false }}
+{{/*  {{ if eq $sync false }}  */}}
+{{ $noise_delay1 := 0.0 }}
+{{ $noise_delay2 := 0.0 }}
 
-{{ end }}
+{{ $noise1_delay_p := "" }}
+{{ $noise2_delay_p := "" }}
+
+
 
 {{/*  {{ $color1 := .Get "color1" | default 0.0 }}  */}}
 
@@ -83,7 +88,17 @@ rotation = (int) the angle of rotation of the glitch FX (used to glitch the lett
 		{{ $glitch_direction_property := printf "--glitch-direction:%f" ($glitch_direction | mul $skew_strength) }}
 		{{ $rotation_p := printf "--glitch-rotation:%fdeg" (float $rotation | mul $glitch_direction) }}
 
-		{{ $style_properties := slice $rotation_p $duration $delay_property $glitch_direction_property }}
+		{{ if eq $sync false }}
+			{{/*  {{ $noise_delay1 = math.Rand | mul $animation_time }}  */}}
+			{{/*  {{ $noise_delay2 = math.Rand | mul $animation_time }}  */}}
+			{{ $noise_delay1 = math.Rand | mul -1.0 }}
+			{{ $noise_delay2 = math.Rand | mul -1.0 }}
+			{{ $noise1_delay_p = printf "--glitch-noise-1-delay:%fs" $noise_delay1 }}
+			{{ $noise2_delay_p = printf "--glitch-noise-2-delay:%fs" $noise_delay2 }}
+		{{ end }}
+
+
+		{{ $style_properties := slice $noise1_delay_p $noise2_delay_p $rotation_p $duration $delay_property $glitch_direction_property }}
 		{{ $css_style := delimit $style_properties ";"}}
 		{{ $output = printf "%s<span class='%s' data-text='%s' style='%s'>%s</span>" $output $css_class $data_text $css_style $char}}
 	{{ end }}
