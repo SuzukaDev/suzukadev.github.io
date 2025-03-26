@@ -113,20 +113,7 @@ sync = (bool true/false). If false, the noise FX happens at different times. Def
 
 
 		{{ $style_properties := slice $color_properties $noise1_delay_p $noise2_delay_p $rotation_p $duration $delay_property $glitch_direction_property }}
-		{{/*  {{ $style_properties := slice $noise1_delay_p $noise2_delay_p $rotation_p $duration $delay_property $glitch_direction_property }}  */}}
-		{{ $non_empty_style_properties := slice }}
-		{{ range $style_properties }}
-			{{/*  {{ if ne . "" }}  */}}
-			{{ if . }}
-				{{ $non_empty_style_properties = $non_empty_style_properties | append . }}
-	  		{{ end }}
-		{{ end }}
-		{{/*  {{ $css_style := delimit $style_properties ";"}}  */}}
-		
-		{{/*  {{ $non_empty_style_properties := where "!=" "" }}  */}}
-		{{/*  {{ $non_empty_style_properties := where $style_properties "!=" "" }}  */}}
-		{{/*  {{ $non_empty_style_properties := ($style_properties | complement (slice "")) }}  */}}
-		{{ $non_empty_style_properties := complement (slice "") (slice nil) $style_properties }}
+				{{ $non_empty_style_properties := complement (slice "") (slice nil) $style_properties }}
 
 		{{ $css_style := delimit $non_empty_style_properties ";"}}
 		{{ $output = printf "%s<span class='%s' data-text='%s' style='%s'>%s</span>" $output $css_class $data_text $css_style $char}}
