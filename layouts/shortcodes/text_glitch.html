@@ -1,0 +1,93 @@
+{{/*  
+Adds a glitchy effect to a text
+
+Arguments:
+text = (string) Text with the glitch effect
+time = (float) The total time for the animation. Default: 5
+font = (bool true/false) if true, it uses a terminal font. Default: false
+rotation = (int) the angle of rotation of the glitch FX (used to glitch the letters). Default 10
+  */}}
+
+{{/*  {{ $text := .Get 0 }}  */}}
+{{ $text := .Get "text" }}
+{{ $animation_time := float ((.Get "time") | default 5) }}
+{{ $use_console_font := .Get "font" | default false }}
+{{ $rotation := .Get "rotation" | default 10 }}
+{{ $random_max := .Get "random_max" | default 1.0 }}
+{{ $random_min := .Get "random_min" | default 0.0 }}
+{{ $intensity := float ((.Get "intensity") | default 1.0) }}
+{{ $sync := .Get "sync" | default true }}
+{{ $glitch_type := .Get "type" | default 1 }}
+
+{{ $skew_strength := $intensity }}
+
+{{ if not $text }}
+  {{ errorf "shortcode text_glitch.html: 'text' argument not found" }}
+{{ end }}
+
+{{ $css_class := "glitch" }}
+{{ if $use_console_font }}
+	{{ $css_class = "glitch consolas" }}
+{{ end }}
+
+{{ if eq $sync false }}
+
+{{ end }}
+
+{{/*  {{ $color1 := .Get "color1" | default 0.0 }}  */}}
+
+
+{{ $chars := split $text "" }}
+{{ $rawFrequency := float ((.Get "delay") | default .1) }}
+{{ $frequency := mul (math.Abs $rawFrequency) -1 }}
+
+{{ $speed_sign := -1 }}
+{{ if lt $rawFrequency 0.0 }}
+	{{ $speed_sign = 1 }}
+{{ end }}
+
+
+{{ $amp := float ((.Get "amp") | default 20) }}
+{{ $half_amp := div $amp 2.0 }}
+
+
+
+{{$max_y := $half_amp}}
+{{$min_y := mul $half_amp -1.0}}
+
+{{$output := ""}}
+{{- range $index, $char := $chars -}}
+	{{/*  {{ $delay := math.Rand | mul 5 }}  */}}
+	{{ $delay := math.Rand | mul 5 | add 3 }}
+	{{/*  {{ $delay := (math.Rand | mul 5 | add 3) }}  */}}
+
+	{{ $data_text := $char }}
+
+	{{ $glitch_direction := 1 }}
+	{{ if lt math.Rand 0.5 }}
+		{{ $glitch_direction = -1 }}
+	{{ end }}
+
+	{{/*  NOTE THIS ADDS WHITESPACES!  */}}
+	{{/*  INFO  https://discourse.gohugo.io/t/hugo-range-function-adds-extra-whitespace-between-spans/33219 */}}
+	{{/*  <span class="wavy-text" style="animation-duration:{{$animation_time}}s; animation-delay: {{$delay | safeCSS}}s; --y-wave-translate-min:{{$min_y}}px; --y-wave-translate-max:{{$max_y}}px;">{{- $char -}}</span>  */}}
+	{{if eq $char " "}}
+		{{/*  {{ $output = printf "%s$nbsp;" ($output | safeHTMLAttr) }}  */}}
+		{{ $output = printf "%s<span> </span>" ($output | safeHTMLAttr) }}
+	{{ else }}
+		{{/*  {{ $output = printf "%s<span class='%s' data-text='%s' style='animation-duration:%fs; animation-delay:%fs; --y-wave-translate-min:%fpx; --y-wave-translate-max:%fpx;'>%s</span>" $output $css_class $data_text $animation_time ($delay) $min_y $max_y $char }}  */}}
+
+		{{/*  APROACH with styles slice  */}}
+		{{ $delay_property := printf "animation-delay:%fs" $delay }}
+		{{ $duration := printf "animation-duration:%fs" $animation_time }}
+		{{ $glitch_direction_property := printf "--glitch-direction:%f" ($glitch_direction | mul $skew_strength) }}
+		{{ $rotation_p := printf "--glitch-rotation:%fdeg" (float $rotation | mul $glitch_direction) }}
+
+		{{ $style_properties := slice $rotation_p $duration $delay_property $glitch_direction_property }}
+		{{ $css_style := delimit $style_properties ";"}}
+		{{ $output = printf "%s<span class='%s' data-text='%s' style='%s'>%s</span>" $output $css_class $data_text $css_style $char}}
+	{{ end }}
+{{- end -}}
+
+{{/*  To avoid whitespaces in HTML  */}}
+{{ $output | safeHTML }}
