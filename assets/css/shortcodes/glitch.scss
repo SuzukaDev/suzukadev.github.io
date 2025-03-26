@@ -32,7 +32,7 @@
 	overflow: hidden;
 	top: 0;
 	// animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite; // original
-	animation: noise-1 3s linear infinite alternate-reverse, glitch 5s infinite;
+	animation: noise-1 3s linear var(--glitch-noise-1-delay, 0s) infinite alternate-reverse, glitch 5s infinite;
   }
   
   .glitch::after {
@@ -46,7 +46,7 @@
 	overflow: hidden;
 	top: 0;
 	// animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite; // original
-	animation: noise-2 3s linear infinite alternate-reverse, glitch 5s infinite;
+	animation: noise-2 3s linear var(--glitch-noise-2-delay, 0s) infinite alternate-reverse, glitch 5s infinite;
   }
 
 // ORIGINAL
@@ -84,12 +84,31 @@
 // 	}
 //   }
   
+// ORIGINAL
+//   @keyframes noise-1 {
+// 	$steps: 30;
+// 	@for $i from 1 through $steps {
+// 	  #{percentage($i*(1/$steps))} {
+// 		$top: random(100);
+// 		$bottom: random(101 - $top);
+// 		clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+// 	  }
+// 	}
+//   }
+
   @keyframes noise-1 {
 	$steps: 30;
+	// $steps: 100;
+	// $random_max: 100;
+	$random_max: 50;
+	// $random_max: 40;
+	// $random_max: 60;
 	@for $i from 1 through $steps {
 	  #{percentage($i*(1/$steps))} {
-		$top: random(100);
-		$bottom: random(101 - $top);
+		// $top: random(100);
+		// $bottom: random(101 - $top);
+		$top: random($random_max);
+		$bottom: random(($random_max+1) - $top);
 		clip-path: inset(#{$top}px 0 #{$bottom}px 0);
 	  }
 	}
