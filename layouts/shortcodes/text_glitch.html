@@ -6,6 +6,7 @@ text = (string) Text with the glitch effect
 time = (float) The total time for the animation. Default: 5
 font = (int (0,1,2)) 1 = Terminal font, 2 = Pixel art font. Default: 0 (do not change the original font)
 rotation = (int) the angle of rotation of the glitch FX (used to glitch the letters). Default 10
+sync = (bool true/false). If false, the noise FX happens at different times. Default: true
   */}}
 
 {{/*  {{ $text := .Get 0 }}  */}}
@@ -13,10 +14,10 @@ rotation = (int) the angle of rotation of the glitch FX (used to glitch the lett
 {{ $animation_time := float ((.Get "time") | default 5) }}
 {{ $font := .Get "font" | default 0 }}
 {{ $rotation := .Get "rotation" | default 10 }}
+{{ $sync := .Get "sync" | default true }}
 {{ $random_max := .Get "random_max" | default 1.0 }}
 {{ $random_min := .Get "random_min" | default 0.0 }}
 {{ $intensity := float ((.Get "intensity") | default 1.0) }}
-{{ $sync := .Get "sync" | default true }}
 {{ $glitch_type := .Get "type" | default 1 }}
 
 {{ $skew_strength := $intensity }}
