@@ -80,13 +80,8 @@ time_variation = (float) random value for the time. Default: 0.0
 		{{ $var_rot := printf "%s%d:%fdeg" $css_vars_basename_rotation (sub $i 1) $random_rotation }}
 		
 		{{ if $scale_variation }}
-			{{/*  {{ $random_scale := math.Rand | mul $scale_variation | add 1.0 }}  */}}
-			{{/*  {{ $random_scale := math.Rand | sub 1 | mul $scale_variation | add 1.0 }}  */}}
 			{{/*  The random scales pivots around 1.0  */}}
 			{{ $random_scale := math.Rand | mul 2 | sub 1 | mul (mul $scale_variation $fx) | add 1.0 }}
-			{{/*  {{ $random_scale := math.Rand | sub 1 | mul $scale_variation }}  */}}
-			{{/*  {{ $random_scale := math.Rand | mul 2 | sub 1 | mul $scale_variation | add 1.0 }}  */}}
-			{{/*  {{ $random_scale := 1.0 }}  */}}
 			{{ $var_scale := printf "%s%d:%f" $css_vars_basename_scale (sub $i 1) $random_scale }}
 			{{ $hw_css_vars = $hw_css_vars | append $var_scale }}
 		{{ end }}
