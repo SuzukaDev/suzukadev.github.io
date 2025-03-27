@@ -87,8 +87,6 @@ time_variation = (float) random value for the time. Default: 0.0
 {{ $top_style := ""}}
 {{ if $letter_spacing }}
 	{{ $top_style = printf "--handwritten-space: %fem;" $letter_spacing | safeCSS }}
-	{{/*  {{ $letters_space := "" }}  */}}
-	{{/*  <span class="handwritten-space" style="{{- $letters_space_p -}}">  */}}
 	{{ $top_css_class = printf "%s %s" $top_css_class "handwritten-space" }}
 {{ end }}
 
@@ -96,7 +94,7 @@ time_variation = (float) random value for the time. Default: 0.0
 {{$output := ""}}
 {{- range $index, $char := $chars -}}
 
-	{{/*  CREATE HANDWRITEN VARS  */}}
+	{{/*  CREATE HANDWRITEN CSS VARS  */}}
 	{{ $hw_css_vars := slice }}
 	{{ range $i := (seq $steps) }}
 		{{ $random_displace_x := math.Rand | mul $offset | mul $fx | math.Ceil }}
@@ -143,19 +141,19 @@ time_variation = (float) random value for the time. Default: 0.0
 
 		{{/*  APROACH with styles slice  */}}
 		{{ $delay_property := printf "animation-delay:%fs" $delay }}
-		{{/*  {{ $duration := printf "animation-duration:%fs" $animation_time }}  */}}
+		{{/*  {{ $duration_p := printf "animation-duration:%fs" $animation_time }}  */}}
 		{{/*  Add the randomness to duration  */}}
 		{{/*  {{ $rand_dur := mul math.Rand 2 | sub 1 | mul $time_variation }}  */}}
 		{{ $rand_dur := mul (sub (mul math.Rand 2) -1) $time_variation }}
 		{{ $time_dur := (mul $frame_time $steps ) }}
 		{{ $time_dur = add $time_dur $rand_dur }}
-		{{ $duration := printf "animation-duration:%fs" $time_dur }}
+		{{ $duration_p := printf "animation-duration:%fs" $time_dur }}
 
 		{{ $glitch_direction_property := printf "--glitch-direction:%f" ($glitch_direction | mul $skew_strength) }}
 		{{ $intensity_p := printf "--glitch-intensity:%f" (float $offset) }}
 
-		{{/*  {{ $style_properties := slice $hw_css_vars_string $rand_p $intensity_p $color_properties $noise1_delay_p $noise2_delay_p $rotation_p $duration $delay_property $glitch_direction_property }}  */}}
-		{{ $style_properties := slice $duration $hw_css_vars_string}}
+		{{/*  {{ $style_properties := slice $hw_css_vars_string $rand_p $intensity_p $color_properties $noise1_delay_p $noise2_delay_p $rotation_p $duration_p $delay_property $glitch_direction_property }}  */}}
+		{{ $style_properties := slice $duration_p $hw_css_vars_string}}
 		{{ $non_empty_style_properties := complement (slice "") (slice nil) $style_properties }}
 
 		{{ $css_style := delimit $non_empty_style_properties ";"}}
