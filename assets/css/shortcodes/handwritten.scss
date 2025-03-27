@@ -5,7 +5,8 @@
 	// color: pink;
 	// animation: shake2 1s infinite;
 	// animation: shake5 5s infinite;
-	animation: shake-with-rotate 5s infinite;
+	// animation: shake-with-rotate 5s infinite;
+	animation: shake-with-rotate-and-scale 5s infinite;
 	// animation: name duration timing-function delay iteration-count direction fill-mode;
 	// animation: shake2 30s infinite;
 	animation-timing-function: steps(1, jump-end);
@@ -218,6 +219,69 @@
 		$var_name_rot: --handwritten-rot#{$steps - 1};
 		// transform: translate(#{$rx}px, #{$ry}px);
 		transform: translate(var($var_name_x, #{$rx}px), var($var_name_y, #{$ry}px)) rotateZ(var($var_name_rot, 0deg));
+
+	}
+  }
+
+@keyframes shake-with-rotate-and-scale {
+	$steps: 10;
+	$forcemax: 100;
+	$rx: random($forcemax)-$forcemax/2;
+	$ry: random($forcemax)-$forcemax/2;
+
+	// 0%{
+	// 	transform: translate(#{$rx}px, #{$ry}px);
+
+	// }
+
+	@for $i from 0 through $steps {
+		$var_name_x: --handwritten-x#{$i};
+		$var_name_y: --handwritten-y#{$i};
+		$var_name_x_next: --handwritten-x#{$i+1};
+		$var_name_y_next: --handwritten-y#{$i+1};
+		$var_name_rot: --handwritten-rot#{$i};
+		$var_name_next_rot: --handwritten-rot#{$i+1};
+		
+		$var_name_scale: --handwritten-scale#{$i};
+		$var_name_scale_next: --handwritten-scale#{$i+1};
+		@if $i == 0{
+			#{percentage($i*(1/$steps))} {
+				// transform: translate(#{$rx}px, #{$ry}px);
+				// transform: translate(var(#{"--handwritten-x#{$i}"}, #{$rx}px), var(#{"--handwritten-y#{$i}"}, #{$ry}px));
+				
+				// transform: translate(var(#{--handwritten-x#{$i}}, #{$rx}px), var(#{--handwritten-y#{$i}}, #{$ry}px));
+				// transform: translate(var($var_name_x, #{$rx}px), var($var_name_y, #{$ry}px)) rotateZ(var($var_name_rot, 80deg));
+				transform: translate(var($var_name_x, #{$rx}px), var($var_name_y, #{$ry}px)) rotateZ(var($var_name_rot, 80deg)) scale(var($var_name_scale, 1.0));
+
+			}
+		}
+		@if ($i+1)*(1/$steps) < 1{
+			#{percentage(($i+1)*(1/$steps))} {
+				// transform: translate(#{$rx}px, #{$ry}px);
+				// transform: translate(var($var_name_x_next, #{$rx}px), var($var_name_y_next, #{$ry}px)) rotateZ(var($var_name_next_rot, 0deg));
+				transform: translate(var($var_name_x_next, #{$rx}px), var($var_name_y_next, #{$ry}px)) rotateZ(var($var_name_next_rot, 0deg)) scale(var($var_name_scale_next, 1.0));
+
+			}
+			$rx: random($forcemax)-$forcemax/2;
+			$ry: random($forcemax)-$forcemax/2;
+			#{percentage(($i+1)*(1/$steps)) + percentage(0.01)} {
+				// transform: translate(#{$rx}px, #{$ry}px);
+				// transform: translate(var($var_name_x_next, #{$rx}px), var($var_name_y_next, #{$ry}px)) rotateZ(var($var_name_next_rot, 0deg));
+				transform: translate(var($var_name_x_next, #{$rx}px), var($var_name_y_next, #{$ry}px)) rotateZ(var($var_name_next_rot, 0deg)) scale(var($var_name_scale_next, 1.0));
+
+			}
+		}
+
+	}
+
+	100%{
+		$var_name_x: --handwritten-x#{$steps - 1};
+		$var_name_y: --handwritten-y#{$steps - 1};
+		$var_name_rot: --handwritten-rot#{$steps - 1};
+		$var_name_scale: --handwritten-scale#{$steps - 1};
+		// transform: translate(#{$rx}px, #{$ry}px);
+		// transform: translate(var($var_name_x, #{$rx}px), var($var_name_y, #{$ry}px)) rotateZ(var($var_name_rot, 0deg));
+		transform: translate(var($var_name_x, #{$rx}px), var($var_name_y, #{$ry}px)) rotateZ(var($var_name_rot, 0deg)) scale(var($var_name_scale, 1.0));
 
 	}
   }
