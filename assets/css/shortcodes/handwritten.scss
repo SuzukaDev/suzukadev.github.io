@@ -1,4 +1,6 @@
 
+$default_scale: 1.0;
+
 .handwritten{
 
 	display: inline-block;
@@ -251,7 +253,7 @@
 				
 				// transform: translate(var(#{--handwritten-x#{$i}}, #{$rx}px), var(#{--handwritten-y#{$i}}, #{$ry}px));
 				// transform: translate(var($var_name_x, #{$rx}px), var($var_name_y, #{$ry}px)) rotateZ(var($var_name_rot, 80deg));
-				transform: translate(var($var_name_x, #{$rx}px), var($var_name_y, #{$ry}px)) rotateZ(var($var_name_rot, 80deg)) scale(var($var_name_scale, 1.0));
+				transform: translate(var($var_name_x, #{$rx}px), var($var_name_y, #{$ry}px)) rotateZ(var($var_name_rot, 80deg)) scale(var($var_name_scale, $default_scale));
 
 			}
 		}
@@ -259,7 +261,7 @@
 			#{percentage(($i+1)*(1/$steps))} {
 				// transform: translate(#{$rx}px, #{$ry}px);
 				// transform: translate(var($var_name_x_next, #{$rx}px), var($var_name_y_next, #{$ry}px)) rotateZ(var($var_name_next_rot, 0deg));
-				transform: translate(var($var_name_x_next, #{$rx}px), var($var_name_y_next, #{$ry}px)) rotateZ(var($var_name_next_rot, 0deg)) scale(var($var_name_scale_next, 1.0));
+				transform: translate(var($var_name_x_next, #{$rx}px), var($var_name_y_next, #{$ry}px)) rotateZ(var($var_name_next_rot, 0deg)) scale(var($var_name_scale_next, $default_scale));
 
 			}
 			$rx: random($forcemax)-$forcemax/2;
@@ -267,7 +269,7 @@
 			#{percentage(($i+1)*(1/$steps)) + percentage(0.01)} {
 				// transform: translate(#{$rx}px, #{$ry}px);
 				// transform: translate(var($var_name_x_next, #{$rx}px), var($var_name_y_next, #{$ry}px)) rotateZ(var($var_name_next_rot, 0deg));
-				transform: translate(var($var_name_x_next, #{$rx}px), var($var_name_y_next, #{$ry}px)) rotateZ(var($var_name_next_rot, 0deg)) scale(var($var_name_scale_next, 1.0));
+				transform: translate(var($var_name_x_next, #{$rx}px), var($var_name_y_next, #{$ry}px)) rotateZ(var($var_name_next_rot, 0deg)) scale(var($var_name_scale_next, $default_scale));
 
 			}
 		}
@@ -281,7 +283,7 @@
 		$var_name_scale: --handwritten-scale#{$steps - 1};
 		// transform: translate(#{$rx}px, #{$ry}px);
 		// transform: translate(var($var_name_x, #{$rx}px), var($var_name_y, #{$ry}px)) rotateZ(var($var_name_rot, 0deg));
-		transform: translate(var($var_name_x, #{$rx}px), var($var_name_y, #{$ry}px)) rotateZ(var($var_name_rot, 0deg)) scale(var($var_name_scale, 1.0));
+		transform: translate(var($var_name_x, #{$rx}px), var($var_name_y, #{$ry}px)) rotateZ(var($var_name_rot, 0deg)) scale(var($var_name_scale, $default_scale));
 
 	}
   }
