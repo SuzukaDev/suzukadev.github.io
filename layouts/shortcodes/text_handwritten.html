@@ -7,9 +7,6 @@ time = (float) The total time for the animation. Default: 5
 font = (int (0,1,2)) 1 = Terminal font, 2 = Pixel art font. Default: 0 (do not change the original font)
 spacing = (float) Space between letters. Default: nil (inherited value)
 rotation = (int) the angle of rotation of the glitch FX (used to glitch the letters). Default 10
-color1 = color (hex, name). The color for the FX. Default: magenta
-color2 = color (hex, name). The color for the FX. Default: lightgreen
-color3 = color (hex, name). The color for the FX. Default: transparent
 intensity = (float) Displacement intensity. Default: 1.0
 randomness = (float) Displacement randomness. Default: 0.0
 time_variation = (float) random value for the time. Default: 0.0
@@ -30,11 +27,7 @@ time_variation = (float) random value for the time. Default: 0.0
 {{ $frame_time := float ((.Get "frame_time") | default .5) }}
 {{ $font := .Get "font" | default 0 }}
 {{ $rotation := .Get "rotation" | default 10 }}
-{{ $color1 := .Get "color1" | default "" }}
-{{ $color2 := .Get "color2" | default "" }}
-{{ $color3 := .Get "color3" | default "" }}
-{{/*  {{ $color1 := .Get "color1" | default "magenta" }}  */}}
-{{/*  {{ $color2 := .Get "color2" | default "lightgreen" }}  */}}
+
 {{ $random_max := .Get "random_max" | default 1.0 }}
 {{ $random_min := .Get "random_min" | default 0.0 }}
 {{ $intensity := float ((.Get "intensity") | default 1.0) }}
@@ -65,21 +58,6 @@ time_variation = (float) random value for the time. Default: 0.0
 {{ $noise1_delay_p := "" }}
 {{ $noise2_delay_p := "" }}
 
-{{ $color_properties := slice }}
-{{ if $color1 }}
-	{{ $c1 := printf "--glitch-color-1: %s" $color1 }}
-	{{ $color_properties = $color_properties | append $c1}}
-{{ end }}
-{{ if $color2 }}
-	{{ $c2 := printf "--glitch-color-2: %s" $color2 }}
-	{{ $color_properties = $color_properties | append $c2}}
-{{ end }}
-{{ if $color3 }}
-	{{ $c3 := printf "--glitch-color-3: %s" $color3 }}
-	{{ $color_properties = $color_properties | append $c3}}
-{{ end }}
-
-{{ $color_properties = delimit $color_properties ";"}}
 
 {{/*  {{ $color1 := .Get "color1" | default 0.0 }}  */}}
 
@@ -169,7 +147,6 @@ time_variation = (float) random value for the time. Default: 0.0
 		{{ $duration := printf "animation-duration:%fs" $time_dur }}
 
 		{{ $glitch_direction_property := printf "--glitch-direction:%f" ($glitch_direction | mul $skew_strength) }}
-		{{ $rotation_p := printf "--glitch-rotation:%fdeg" (float $rotation | mul $glitch_direction) }}
 		{{ $intensity_p := printf "--glitch-intensity:%f" (float $intensity) }}
 
 		{{/*  {{ $style_properties := slice $hw_css_vars_string $rand_p $intensity_p $color_properties $noise1_delay_p $noise2_delay_p $rotation_p $duration $delay_property $glitch_direction_property }}  */}}
