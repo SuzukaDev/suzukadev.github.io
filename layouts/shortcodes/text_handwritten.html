@@ -120,15 +120,6 @@ time_variation = (float) random value for the time. Default: 0.0
 	{{ $delay := math.Rand | mul 5 | add 3 }}
 	{{/*  {{ $delay := (math.Rand | mul 5 | add 3) }}  */}}
 
-	{{ $data_text := $char }}
-
-	{{ $rand_value := math.Rand | mul 2 | sub 1 | mul $randomness }}
-	{{ $rand_p := printf "--glitch-char-rand:%f" $rand_value }}
-
-	{{ $glitch_direction := 1 }}
-	{{ if lt math.Rand 0.5 }}
-		{{ $glitch_direction = -1 }}
-	{{ end }}
 
 	{{/*  NOTE THIS ADDS WHITESPACES!  */}}
 	{{/*  INFO  https://discourse.gohugo.io/t/hugo-range-function-adds-extra-whitespace-between-spans/33219 */}}
@@ -149,7 +140,6 @@ time_variation = (float) random value for the time. Default: 0.0
 		{{ $time_dur = add $time_dur $rand_dur }}
 		{{ $duration_p := printf "animation-duration:%fs" $time_dur }}
 
-		{{ $glitch_direction_property := printf "--glitch-direction:%f" ($glitch_direction | mul $skew_strength) }}
 		{{ $intensity_p := printf "--glitch-intensity:%f" (float $offset) }}
 
 		{{/*  {{ $style_properties := slice $hw_css_vars_string $rand_p $intensity_p $color_properties $noise1_delay_p $noise2_delay_p $rotation_p $duration_p $delay_property $glitch_direction_property }}  */}}
@@ -157,7 +147,7 @@ time_variation = (float) random value for the time. Default: 0.0
 		{{ $non_empty_style_properties := complement (slice "") (slice nil) $style_properties }}
 
 		{{ $css_style := delimit $non_empty_style_properties ";"}}
-		{{ $output = printf "%s<span class='%s' data-text='%s' style='%s'>%s</span>" $output $css_class $data_text $css_style $char}}
+		{{ $output = printf "%s<span class='%s' style='%s'>%s</span>" $output $css_class $css_style $char}}
 	{{ end }}
 {{- end -}}
 
