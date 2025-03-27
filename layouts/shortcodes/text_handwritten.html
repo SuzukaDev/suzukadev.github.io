@@ -7,7 +7,6 @@ time = (float) The total time for the animation. Default: 5
 font = (int (0,1,2)) 1 = Terminal font, 2 = Pixel art font. Default: 0 (do not change the original font)
 spacing = (float) Space between letters. Default: nil (inherited value)
 rotation = (int) the angle of rotation of the glitch FX (used to glitch the letters). Default 10
-sync = (bool true/false). If false, the noise FX happens at different times. Default: true
 color1 = color (hex, name). The color for the FX. Default: magenta
 color2 = color (hex, name). The color for the FX. Default: lightgreen
 color3 = color (hex, name). The color for the FX. Default: transparent
@@ -31,7 +30,6 @@ time_variation = (float) random value for the time. Default: 0.0
 {{ $frame_time := float ((.Get "frame_time") | default .5) }}
 {{ $font := .Get "font" | default 0 }}
 {{ $rotation := .Get "rotation" | default 10 }}
-{{ $sync := .Get "sync" | default true }}
 {{ $color1 := .Get "color1" | default "" }}
 {{ $color2 := .Get "color2" | default "" }}
 {{ $color3 := .Get "color3" | default "" }}
@@ -173,16 +171,6 @@ time_variation = (float) random value for the time. Default: 0.0
 		{{ $glitch_direction_property := printf "--glitch-direction:%f" ($glitch_direction | mul $skew_strength) }}
 		{{ $rotation_p := printf "--glitch-rotation:%fdeg" (float $rotation | mul $glitch_direction) }}
 		{{ $intensity_p := printf "--glitch-intensity:%f" (float $intensity) }}
-
-		{{ if eq $sync false }}
-			{{/*  {{ $noise_delay1 = math.Rand | mul $animation_time }}  */}}
-			{{/*  {{ $noise_delay2 = math.Rand | mul $animation_time }}  */}}
-			{{ $noise_delay1 = math.Rand | mul -1.0 }}
-			{{ $noise_delay2 = math.Rand | mul -1.0 }}
-			{{ $noise1_delay_p = printf "--glitch-noise-1-delay:%fs" $noise_delay1 }}
-			{{ $noise2_delay_p = printf "--glitch-noise-2-delay:%fs" $noise_delay2 }}
-		{{ end }}
-
 
 		{{/*  {{ $style_properties := slice $hw_css_vars_string $rand_p $intensity_p $color_properties $noise1_delay_p $noise2_delay_p $rotation_p $duration $delay_property $glitch_direction_property }}  */}}
 		{{ $style_properties := slice $duration $hw_css_vars_string}}
