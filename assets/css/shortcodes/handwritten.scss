@@ -1,0 +1,275 @@
+
+.handwritten{
+
+	display: inline-block;
+	// color: pink;
+	// animation: shake2 1s infinite;
+	// animation: shake5 5s infinite;
+	animation: shake-with-rotate 5s infinite;
+	// animation: name duration timing-function delay iteration-count direction fill-mode;
+	// animation: shake2 30s infinite;
+	animation-timing-function: steps(1, jump-end);
+	// animation-timing-function: steps(2, jump-end);
+	// animation-timing-function: steps(5, jump-start);
+	// animation-timing-function: steps(2, jump-both);
+	
+}
+
+
+
+
+@keyframes shake {
+	0%{
+		transform: translateX(100px);
+		
+	}
+	100%{
+		transform: translateX(10px);
+	}
+}
+
+@keyframes shake2 {
+	$steps: 100;
+	@for $i from 0 through $steps {
+	  #{percentage($i*(1/$steps))} {
+		// $top: random(100);
+		// $bottom: random(101 - $top);
+		// $top: random(50);
+		// $bottom: random(51 - $top);
+		// clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+		
+		$forcemax: 20;
+
+		$randvalue: random($forcemax)-$forcemax/2;
+		$randvalue2: random($forcemax)-$forcemax/2;
+		// $randvalue2: random(100)-50;
+		// transform: translateX(#{$randvalue}px);
+		// transform: translateX(#{$randvalue}px);
+		transform: translate(#{$randvalue}px, #{$randvalue2}px);
+		// transform: scale(#{$randvalue});
+		// transform: scale($randvalue);
+	  }
+	}
+  }
+
+
+// @keyframes shake3 {
+// 	$steps: 10;
+// 	$forcemax: 20;
+// 	$rx: random($forcemax)-$forcemax/2;
+// 	$ry: random($forcemax)-$forcemax/2;
+// 	@for $i from 0 through $steps {
+// 		#{percentage($i*(1/$steps))} {
+// 			transform: translate(#{$rx}px, #{$ry}px);
+// 		}
+// 		#{percentage(($i+1)*(1/$steps))} {
+// 			$forcemax: 20;
+// 			transform: translate(#{$rx}px, #{$ry}px);
+// 		}
+// 		$rx: random($forcemax)-$forcemax/2;
+// 		$ry: random($forcemax)-$forcemax/2;
+// 		#{percentage(($i+1)*(1/$steps)) + percentage(0.01)} {
+// 			transform: translate(#{$rx}px, #{$ry}px);
+// 		}
+// 	}
+//   }
+
+
+@keyframes shake4 {
+	$steps: 10;
+	$forcemax: 20;
+	$rx: random($forcemax)-$forcemax/2;
+	$ry: random($forcemax)-$forcemax/2;
+
+	// 0%{
+	// 	transform: translate(#{$rx}px, #{$ry}px);
+
+	// }
+
+	@for $i from 0 through $steps {
+		@if $i == 0{
+			#{percentage($i*(1/$steps))} {
+				transform: translate(#{$rx}px, #{$ry}px);
+			}
+		}
+		@if ($i+1)*(1/$steps) < 1{
+			#{percentage(($i+1)*(1/$steps))} {
+				transform: translate(#{$rx}px, #{$ry}px);
+			}
+			$rx: random($forcemax)-$forcemax/2;
+			$ry: random($forcemax)-$forcemax/2;
+			#{percentage(($i+1)*(1/$steps)) + percentage(0.01)} {
+				transform: translate(#{$rx}px, #{$ry}px);
+			}
+		}
+
+	}
+
+	100%{
+		transform: translate(#{$rx}px, #{$ry}px);
+	}
+  }
+
+@keyframes shake5 {
+	$steps: 10;
+	$forcemax: 100;
+	$rx: random($forcemax)-$forcemax/2;
+	$ry: random($forcemax)-$forcemax/2;
+
+	// 0%{
+	// 	transform: translate(#{$rx}px, #{$ry}px);
+
+	// }
+
+	@for $i from 0 through $steps {
+		$var_name_x: --handwritten-x#{$i};
+		$var_name_y: --handwritten-y#{$i};
+		$var_name_x_next: --handwritten-x#{$i+1};
+		$var_name_y_next: --handwritten-y#{$i+1};
+		@if $i == 0{
+			#{percentage($i*(1/$steps))} {
+				// transform: translate(#{$rx}px, #{$ry}px);
+				// transform: translate(var(#{"--handwritten-x#{$i}"}, #{$rx}px), var(#{"--handwritten-y#{$i}"}, #{$ry}px));
+				
+				// transform: translate(var(#{--handwritten-x#{$i}}, #{$rx}px), var(#{--handwritten-y#{$i}}, #{$ry}px));
+				transform: translate(var($var_name_x, #{$rx}px), var($var_name_y, #{$ry}px));
+
+			}
+		}
+		@if ($i+1)*(1/$steps) < 1{
+			#{percentage(($i+1)*(1/$steps))} {
+				// transform: translate(#{$rx}px, #{$ry}px);
+				transform: translate(var($var_name_x_next, #{$rx}px), var($var_name_y_next, #{$ry}px));
+
+			}
+			$rx: random($forcemax)-$forcemax/2;
+			$ry: random($forcemax)-$forcemax/2;
+			#{percentage(($i+1)*(1/$steps)) + percentage(0.01)} {
+				// transform: translate(#{$rx}px, #{$ry}px);
+				transform: translate(var($var_name_x_next, #{$rx}px), var($var_name_y_next, #{$ry}px));
+
+			}
+		}
+
+	}
+
+	100%{
+		$var_name_x: --handwritten-x#{$steps - 1};
+		$var_name_y: --handwritten-y#{$steps - 1};
+		// transform: translate(#{$rx}px, #{$ry}px);
+		transform: translate(var($var_name_x, #{$rx}px), var($var_name_y, #{$ry}px));
+
+	}
+  }
+
+
+@keyframes shake-with-rotate {
+	$steps: 10;
+	$forcemax: 100;
+	$rx: random($forcemax)-$forcemax/2;
+	$ry: random($forcemax)-$forcemax/2;
+
+	// 0%{
+	// 	transform: translate(#{$rx}px, #{$ry}px);
+
+	// }
+
+	@for $i from 0 through $steps {
+		$var_name_x: --handwritten-x#{$i};
+		$var_name_y: --handwritten-y#{$i};
+		$var_name_x_next: --handwritten-x#{$i+1};
+		$var_name_y_next: --handwritten-y#{$i+1};
+		$var_name_rot: --handwritten-rot#{$i};
+		$var_name_next_rot: --handwritten-rot#{$i+1};
+		@if $i == 0{
+			#{percentage($i*(1/$steps))} {
+				// transform: translate(#{$rx}px, #{$ry}px);
+				// transform: translate(var(#{"--handwritten-x#{$i}"}, #{$rx}px), var(#{"--handwritten-y#{$i}"}, #{$ry}px));
+				
+				// transform: translate(var(#{--handwritten-x#{$i}}, #{$rx}px), var(#{--handwritten-y#{$i}}, #{$ry}px));
+				transform: translate(var($var_name_x, #{$rx}px), var($var_name_y, #{$ry}px)) rotateZ(var($var_name_rot, 80deg));
+
+			}
+		}
+		@if ($i+1)*(1/$steps) < 1{
+			#{percentage(($i+1)*(1/$steps))} {
+				// transform: translate(#{$rx}px, #{$ry}px);
+				transform: translate(var($var_name_x_next, #{$rx}px), var($var_name_y_next, #{$ry}px)) rotateZ(var($var_name_next_rot, 0deg));
+
+			}
+			$rx: random($forcemax)-$forcemax/2;
+			$ry: random($forcemax)-$forcemax/2;
+			#{percentage(($i+1)*(1/$steps)) + percentage(0.01)} {
+				// transform: translate(#{$rx}px, #{$ry}px);
+				transform: translate(var($var_name_x_next, #{$rx}px), var($var_name_y_next, #{$ry}px)) rotateZ(var($var_name_next_rot, 0deg));
+
+			}
+		}
+
+	}
+
+	100%{
+		$var_name_x: --handwritten-x#{$steps - 1};
+		$var_name_y: --handwritten-y#{$steps - 1};
+		$var_name_rot: --handwritten-rot#{$steps - 1};
+		// transform: translate(#{$rx}px, #{$ry}px);
+		transform: translate(var($var_name_x, #{$rx}px), var($var_name_y, #{$ry}px)) rotateZ(var($var_name_rot, 0deg));
+
+	}
+  }
+
+
+
+
+// @keyframes shake3 {
+// 	$forcemax: 5;
+
+// 	$rx: random($forcemax)-$forcemax/2;
+// 	$ry: random($forcemax)-$forcemax/2;
+// 	0%{
+// 		transform: translate(#{$rx}px, #{$ry}px);
+// 	}
+// 	20%{
+// 		transform: translate(#{$rx}px, #{$ry}px);
+// 	}
+// 	$rx: random($forcemax)-$forcemax/2;
+// 	$ry: random($forcemax)-$forcemax/2;
+// 	21%{
+// 		transform: translate(#{$rx}px, #{$ry}px);
+		
+// 	}
+// 	40%{
+// 		transform: translate(#{$rx}px, #{$ry}px);
+		
+		
+// 	}
+// 	41%{
+// 		$rx: random($forcemax)-$forcemax/2;
+// 		$ry: random($forcemax)-$forcemax/2;
+// 		transform: translate(#{$rx}px, #{$ry}px);
+		
+// 	}
+// 	60%{
+// 		transform: translate(#{$rx}px, #{$ry}px);
+		
+// 	}
+// 	61%{
+// 		$rx: random($forcemax)-$forcemax/2;
+// 		$ry: random($forcemax)-$forcemax/2;
+// 		transform: translate(#{$rx}px, #{$ry}px);
+// 	}
+// 	80%{
+// 		transform: translate(#{$rx}px, #{$ry}px);
+		
+// 	}
+// 	81%{
+// 		$rx: random($forcemax)-$forcemax/2;
+// 		$ry: random($forcemax)-$forcemax/2;
+// 		transform: translate(#{$rx}px, #{$ry}px);
+		
+// 	}
+// 	100%{
+// 		transform: translate(#{$rx}px, #{$ry}px);
+		
+// 	}
+//   }

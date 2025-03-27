@@ -1,0 +1,176 @@
+{{/*  
+Adds a glitchy effect to a text
+
+Arguments:
+text = (string) Text with the glitch effect
+time = (float) The total time for the animation. Default: 5
+font = (int (0,1,2)) 1 = Terminal font, 2 = Pixel art font. Default: 0 (do not change the original font)
+rotation = (int) the angle of rotation of the glitch FX (used to glitch the letters). Default 10
+sync = (bool true/false). If false, the noise FX happens at different times. Default: true
+color1 = color (hex, name). The color for the FX. Default: magenta
+color2 = color (hex, name). The color for the FX. Default: lightgreen
+color3 = color (hex, name). The color for the FX. Default: transparent
+intensity = (float) Displacement intensity. Default: 1.0
+randomness = (float) Displacement randomness. Default: 0.0
+  */}}
+
+{{/*  {{ $text := .Get 0 }}  */}}
+
+{{ $css_vars_basename_x := "--handwritten-x" }}
+{{ $css_vars_basename_y := "--handwritten-y" }}
+{{ $css_vars_basename_rotation := "--handwritten-rot" }}
+
+
+{{ $text := .Get "text" }}
+{{ $steps := .Get "steps" | default 4 }}
+{{ $animation_time := float ((.Get "time") | default 5) }}
+{{ $frame_time := float ((.Get "frame_time") | default .5) }}
+{{ $font := .Get "font" | default 0 }}
+{{ $rotation := .Get "rotation" | default 10 }}
+{{ $sync := .Get "sync" | default true }}
+{{ $color1 := .Get "color1" | default "" }}
+{{ $color2 := .Get "color2" | default "" }}
+{{ $color3 := .Get "color3" | default "" }}
+{{/*  {{ $color1 := .Get "color1" | default "magenta" }}  */}}
+{{/*  {{ $color2 := .Get "color2" | default "lightgreen" }}  */}}
+{{ $random_max := .Get "random_max" | default 1.0 }}
+{{ $random_min := .Get "random_min" | default 0.0 }}
+{{ $intensity := float ((.Get "intensity") | default 1.0) }}
+{{ $randomness := float ((.Get "random") | default 0.0) }}
+{{ $glitch_type := .Get "type" | default 1 }}
+
+
+
+{{ $skew_strength := $intensity }}
+
+{{ if not $text }}
+  {{ errorf "shortcode text_glitch.html: 'text' argument not found" }}
+{{ end }}
+
+{{ $css_class := "handwritten" }}
+{{ if eq $font 1 }}
+	{{ $css_class = printf "%s %s" $css_class "consolas" }}
+{{ else if eq $font 2 }}
+	{{ $css_class = printf "%s %s" $css_class "pixel-font" }}
+{{ else if eq $font 3 }}
+	{{ $css_class = printf "%s %s" $css_class "handwritten-font" }}
+{{ end }}
+
+{{ $noise_delay1 := 0.0 }}
+{{ $noise_delay2 := 0.0 }}
+{{ $noise1_delay_p := "" }}
+{{ $noise2_delay_p := "" }}
+
+{{ $color_properties := slice }}
+{{ if $color1 }}
+	{{ $c1 := printf "--glitch-color-1: %s" $color1 }}
+	{{ $color_properties = $color_properties | append $c1}}
+{{ end }}
+{{ if $color2 }}
+	{{ $c2 := printf "--glitch-color-2: %s" $color2 }}
+	{{ $color_properties = $color_properties | append $c2}}
+{{ end }}
+{{ if $color3 }}
+	{{ $c3 := printf "--glitch-color-3: %s" $color3 }}
+	{{ $color_properties = $color_properties | append $c3}}
+{{ end }}
+
+{{ $color_properties = delimit $color_properties ";"}}
+
+{{/*  {{ $color1 := .Get "color1" | default 0.0 }}  */}}
+
+
+{{ $chars := split $text "" }}
+{{ $rawFrequency := float ((.Get "delay") | default .1) }}
+{{ $frequency := mul (math.Abs $rawFrequency) -1 }}
+
+{{ $speed_sign := -1 }}
+{{ if lt $rawFrequency 0.0 }}
+	{{ $speed_sign = 1 }}
+{{ end }}
+
+
+{{ $amp := float ((.Get "amp") | default 20) }}
+{{ $half_amp := div $amp 2.0 }}
+
+
+
+{{$max_y := $half_amp}}
+{{$min_y := mul $half_amp -1.0}}
+
+{{$output := ""}}
+{{- range $index, $char := $chars -}}
+
+	{{/*  CREATE HANDWRITEN VARS  */}}
+	{{ $hw_css_vars := slice }}
+	{{ range $i := (seq $steps) }}
+		{{ $random_displace_x := math.Rand | mul $intensity | math.Ceil}}
+		{{ $random_displace_y := math.Rand | mul $intensity | math.Ceil}}
+		{{ $var_x := printf "%s%d:%fpx" $css_vars_basename_x (sub $i 1) $random_displace_x }}
+		{{ $var_y := printf "%s%d:%fpx" $css_vars_basename_y (sub $i 1) $random_displace_y }}
+		
+		{{/*  {{ $random_rotation := math.Rand | mul $rotation | mul 2 }}  */}}
+		{{ $random_rotation := math.Rand | mul 2 | sub 1 | mul $rotation }}
+		{{ $random_rotation = sub $random_rotation (div $random_rotation 2) }}
+		{{ $var_rot := printf "%s%d:%fdeg" $css_vars_basename_rotation (sub $i 1) $random_rotation }}
+
+
+		{{ $hw_css_vars = $hw_css_vars | append $var_x }}
+		{{ $hw_css_vars = $hw_css_vars | append $var_y }}
+		{{ $hw_css_vars = $hw_css_vars | append $var_rot }}
+	{{ end }}
+	{{ $hw_css_vars_string := delimit $hw_css_vars ";" }}
+
+
+	{{/*  {{ $delay := math.Rand | mul 5 }}  */}}
+	{{ $delay := math.Rand | mul 5 | add 3 }}
+	{{/*  {{ $delay := (math.Rand | mul 5 | add 3) }}  */}}
+
+	{{ $data_text := $char }}
+
+	{{ $rand_value := math.Rand | mul 2 | sub 1 | mul $randomness }}
+	{{ $rand_p := printf "--glitch-char-rand:%f" $rand_value }}
+
+	{{ $glitch_direction := 1 }}
+	{{ if lt math.Rand 0.5 }}
+		{{ $glitch_direction = -1 }}
+	{{ end }}
+
+	{{/*  NOTE THIS ADDS WHITESPACES!  */}}
+	{{/*  INFO  https://discourse.gohugo.io/t/hugo-range-function-adds-extra-whitespace-between-spans/33219 */}}
+	{{/*  <span class="wavy-text" style="animation-duration:{{$animation_time}}s; animation-delay: {{$delay | safeCSS}}s; --y-wave-translate-min:{{$min_y}}px; --y-wave-translate-max:{{$max_y}}px;">{{- $char -}}</span>  */}}
+	{{if eq $char " "}}
+		{{/*  {{ $output = printf "%s$nbsp;" ($output | safeHTMLAttr) }}  */}}
+		{{ $output = printf "%s<span> </span>" ($output | safeHTMLAttr) }}
+	{{ else }}
+		{{/*  {{ $output = printf "%s<span class='%s' data-text='%s' style='animation-duration:%fs; animation-delay:%fs; --y-wave-translate-min:%fpx; --y-wave-translate-max:%fpx;'>%s</span>" $output $css_class $data_text $animation_time ($delay) $min_y $max_y $char }}  */}}
+
+		{{/*  APROACH with styles slice  */}}
+		{{ $delay_property := printf "animation-delay:%fs" $delay }}
+		{{/*  {{ $duration := printf "animation-duration:%fs" $animation_time }}  */}}
+		{{ $duration := printf "animation-duration:%fs" (mul $frame_time $steps ) }}
+		{{ $glitch_direction_property := printf "--glitch-direction:%f" ($glitch_direction | mul $skew_strength) }}
+		{{ $rotation_p := printf "--glitch-rotation:%fdeg" (float $rotation | mul $glitch_direction) }}
+		{{ $intensity_p := printf "--glitch-intensity:%f" (float $intensity) }}
+
+		{{ if eq $sync false }}
+			{{/*  {{ $noise_delay1 = math.Rand | mul $animation_time }}  */}}
+			{{/*  {{ $noise_delay2 = math.Rand | mul $animation_time }}  */}}
+			{{ $noise_delay1 = math.Rand | mul -1.0 }}
+			{{ $noise_delay2 = math.Rand | mul -1.0 }}
+			{{ $noise1_delay_p = printf "--glitch-noise-1-delay:%fs" $noise_delay1 }}
+			{{ $noise2_delay_p = printf "--glitch-noise-2-delay:%fs" $noise_delay2 }}
+		{{ end }}
+
+
+		{{/*  {{ $style_properties := slice $hw_css_vars_string $rand_p $intensity_p $color_properties $noise1_delay_p $noise2_delay_p $rotation_p $duration $delay_property $glitch_direction_property }}  */}}
+		{{ $style_properties := slice $duration $hw_css_vars_string}}
+		{{ $non_empty_style_properties := complement (slice "") (slice nil) $style_properties }}
+
+		{{ $css_style := delimit $non_empty_style_properties ";"}}
+		{{ $output = printf "%s<span class='%s' data-text='%s' style='%s'>%s</span>" $output $css_class $data_text $css_style $char}}
+	{{ end }}
+{{- end -}}
+
+{{/*  To avoid whitespaces in HTML  */}}
+{{ $output | safeHTML }}
