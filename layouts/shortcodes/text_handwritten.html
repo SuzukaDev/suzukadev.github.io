@@ -5,6 +5,7 @@ Arguments:
 text = (string) Text with the glitch effect
 time = (float) The total time for the animation. Default: 5
 font = (int (0,1,2)) 1 = Terminal font, 2 = Pixel art font. Default: 0 (do not change the original font)
+spacing = (float) Space between letters. Default: nil (inherited value)
 rotation = (int) the angle of rotation of the glitch FX (used to glitch the letters). Default 10
 sync = (bool true/false). If false, the noise FX happens at different times. Default: true
 color1 = color (hex, name). The color for the FX. Default: magenta
@@ -26,6 +27,7 @@ time_variation = (float) random value for the time. Default: 0.0
 {{ $steps := .Get "steps" | default 4 }}
 {{ $animation_time := float ((.Get "time") | default 5) }}
 {{ $time_variation := float ((.Get "time_variation") | default 0.0) }}
+{{ $letter_spacing := (.Get "spacing") }}
 {{ $frame_time := float ((.Get "frame_time") | default .5) }}
 {{ $font := .Get "font" | default 0 }}
 {{ $rotation := .Get "rotation" | default 10 }}
@@ -100,6 +102,13 @@ time_variation = (float) random value for the time. Default: 0.0
 {{$max_y := $half_amp}}
 {{$min_y := mul $half_amp -1.0}}
 
+{{ if $letter_spacing }}
+	{{ $letters_space_p := printf "--handwritten-space: %fem;" $letter_spacing | safeCSS }}
+	{{/*  {{ $letters_space := "" }}  */}}
+	<span class="handwritten-space" style="{{- $letters_space_p -}}">
+{{ else }}
+	<span>
+{{ end }}
 {{$output := ""}}
 {{- range $index, $char := $chars -}}
 
@@ -150,7 +159,7 @@ time_variation = (float) random value for the time. Default: 0.0
 		{{/*  APROACH with styles slice  */}}
 		{{ $delay_property := printf "animation-delay:%fs" $delay }}
 		{{/*  {{ $duration := printf "animation-duration:%fs" $animation_time }}  */}}
-{{/*  Add the randomness to duration  */}}
+		{{/*  Add the randomness to duration  */}}
 		{{/*  {{ $rand_dur := mul math.Rand 2 | sub 1 | mul $time_variation }}  */}}
 		{{ $rand_dur := mul (sub (mul math.Rand 2) -1) $time_variation }}
 		{{ $time_dur := (mul $frame_time $steps ) }}
@@ -182,3 +191,4 @@ time_variation = (float) random value for the time. Default: 0.0
 
 {{/*  To avoid whitespaces in HTML  */}}
 {{ $output | safeHTML }}
+</span>
