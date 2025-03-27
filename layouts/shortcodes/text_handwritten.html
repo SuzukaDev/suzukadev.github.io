@@ -52,12 +52,14 @@ time_variation = (float) random value for the time. Default: 0.0
 {{ end }}
 
 {{ $css_class := "handwritten" }}
+
+{{ $top_css_class := ""}}
 {{ if eq $font 1 }}
-	{{ $css_class = printf "%s %s" $css_class "consolas" }}
+	{{ $top_css_class = printf "%s %s" $top_css_class "consolas" }}
 {{ else if eq $font 2 }}
-	{{ $css_class = printf "%s %s" $css_class "pixel-font" }}
+	{{ $top_css_class = printf "%s %s" $top_css_class "pixel-font" }}
 {{ else if eq $font 3 }}
-	{{ $css_class = printf "%s %s" $css_class "handwritten-font" }}
+	{{ $top_css_class = printf "%s %s" $top_css_class "handwritten-font" }}
 {{ end }}
 
 {{ $noise_delay1 := 0.0 }}
@@ -102,13 +104,15 @@ time_variation = (float) random value for the time. Default: 0.0
 {{$max_y := $half_amp}}
 {{$min_y := mul $half_amp -1.0}}
 
+{{ $top_style := ""}}
 {{ if $letter_spacing }}
-	{{ $letters_space_p := printf "--handwritten-space: %fem;" $letter_spacing | safeCSS }}
+	{{ $top_style = printf "--handwritten-space: %fem;" $letter_spacing | safeCSS }}
 	{{/*  {{ $letters_space := "" }}  */}}
-	<span class="handwritten-space" style="{{- $letters_space_p -}}">
-{{ else }}
-	<span>
+	{{/*  <span class="handwritten-space" style="{{- $letters_space_p -}}">  */}}
+	{{ $top_css_class = printf "%s %s" $top_css_class "handwritten-space" }}
 {{ end }}
+
+<span class="{{ $top_css_class }}" style="{{ $top_style }}">
 {{$output := ""}}
 {{- range $index, $char := $chars -}}
 
