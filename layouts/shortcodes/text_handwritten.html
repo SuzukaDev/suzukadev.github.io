@@ -12,6 +12,7 @@ color2 = color (hex, name). The color for the FX. Default: lightgreen
 color3 = color (hex, name). The color for the FX. Default: transparent
 intensity = (float) Displacement intensity. Default: 1.0
 randomness = (float) Displacement randomness. Default: 0.0
+time_variation = (float) random value for the time. Default: 0.0
   */}}
 
 {{/*  {{ $text := .Get 0 }}  */}}
@@ -24,6 +25,7 @@ randomness = (float) Displacement randomness. Default: 0.0
 {{ $text := .Get "text" }}
 {{ $steps := .Get "steps" | default 4 }}
 {{ $animation_time := float ((.Get "time") | default 5) }}
+{{ $time_variation := float ((.Get "time_variation") | default 0.0) }}
 {{ $frame_time := float ((.Get "frame_time") | default .5) }}
 {{ $font := .Get "font" | default 0 }}
 {{ $rotation := .Get "rotation" | default 10 }}
@@ -148,7 +150,13 @@ randomness = (float) Displacement randomness. Default: 0.0
 		{{/*  APROACH with styles slice  */}}
 		{{ $delay_property := printf "animation-delay:%fs" $delay }}
 		{{/*  {{ $duration := printf "animation-duration:%fs" $animation_time }}  */}}
-		{{ $duration := printf "animation-duration:%fs" (mul $frame_time $steps ) }}
+{{/*  Add the randomness to duration  */}}
+		{{/*  {{ $rand_dur := mul math.Rand 2 | sub 1 | mul $time_variation }}  */}}
+		{{ $rand_dur := mul (sub (mul math.Rand 2) -1) $time_variation }}
+		{{ $time_dur := (mul $frame_time $steps ) }}
+		{{ $time_dur = add $time_dur $rand_dur }}
+		{{ $duration := printf "animation-duration:%fs" $time_dur }}
+
 		{{ $glitch_direction_property := printf "--glitch-direction:%f" ($glitch_direction | mul $skew_strength) }}
 		{{ $rotation_p := printf "--glitch-rotation:%fdeg" (float $rotation | mul $glitch_direction) }}
 		{{ $intensity_p := printf "--glitch-intensity:%f" (float $intensity) }}
