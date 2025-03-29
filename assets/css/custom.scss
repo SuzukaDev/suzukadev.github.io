@@ -714,9 +714,12 @@ blockquote {
 	}
 
 blockquote cite{
+	display: block;
+	// background-color: pink;
+
 	// font-weight: bold;
 	text-align: right;
-	float: right;
+	// float: right;
 	// padding-top: 20px;
 	padding: 3px 40px;
 	color: var(--soft-text);
