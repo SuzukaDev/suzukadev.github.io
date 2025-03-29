@@ -25,30 +25,18 @@ font = (int (0,1,2)) 1 = Terminal font, 2 = Pixel art font. Default: 0 (do not c
 {{/*  {{ $chars := split .Inner "" }}  */}}
 {{ $chars := split (.Get "text") "" }}
 {{ $animation_time := float ((.Get "time") | default 2.4) }}
-{{/*  {{ $time_offset := float ((.Get "time_offset") | default 0.0) }}  */}}
-{{ $font := .Get "font" | default 0 }}
-
-{{/*  {{ $absDelay := (.Get 1) | default .2 | mul -1.0}}  */}}
-{{/*  {{ $rawDelay := (.Get 1) | default .2 }}  */}}
+{{ $time_start_offset := ((.Get "time_offset") | default 0.0) }}
 {{ $rawDelay := float ((.Get "delay") | default .05) }}
-{{/*  {{ $absDelay := mul (math.Abs $rawDelay) -1 }}  */}}
 {{ $absDelay := math.Abs $rawDelay }}
-
-{{/*  {{ $amp := (.Get "amp") | default 20 }}  */}}
-{{ $amp := float ((.Get "amp") | default 20) }}
-{{ $half_amp := div $amp 2.0 }}
 
 {{ $color1 := ((.Get "color1") | default "white") }}
 {{ $color2 := ((.Get "color2") | default "white") }}
-
 {{ $color1light := ((.Get "color1-light") | default $color1) }}
 {{ $color2light := ((.Get "color2-light") | default $color2) }}
 {{ $color1dark := ((.Get "color1-dark") | default $color1) }}
 {{ $color2dark := ((.Get "color2-dark") | default $color2) }}
 
-
-{{/*  {{ $css_class := "shimmer" }}  */}}
-
+{{ $font := .Get "font" | default 0 }}
 {{ $top_css_class := "shimmer"}}
 {{ if eq $font 1 }}
 	{{ $top_css_class = printf "%s %s" $top_css_class "consolas" }}
@@ -57,8 +45,6 @@ font = (int (0,1,2)) 1 = Terminal font, 2 = Pixel art font. Default: 0 (do not c
 {{ else if eq $font 3 }}
 	{{ $top_css_class = printf "%s %s" $top_css_class "handwritten-font" }}
 {{ end }}
-
-
 
 {{/*  {{ $blur := ((.Get "blur") | default 12) }}  */}}
 {{ $blur := .Get "blur" }}
@@ -71,26 +57,12 @@ font = (int (0,1,2)) 1 = Terminal font, 2 = Pixel art font. Default: 0 (do not c
 {{ $y := ((.Get "y") | default 0) }}
 {{ $z := ((.Get "z") | default 0) }}
 
-
 {{ $shimmer_c1 := printf "--shimmer-color-1:%s; --shimmer-color-1-light:%s; --shimmer-color-1-dark:%s" $color1 $color1light $color1dark}}
 {{ $shimmer_c2 := printf "--shimmer-color-2:%s; --shimmer-color-2-light:%s; --shimmer-color-2-dark:%s" $color2 $color2light $color2dark}}
 
-{{/*  {{$max_y := 10}}
-{{$min_y := mul $max_y -1}}  */}}
-{{$max_y := $half_amp}}
-{{$min_y := mul $half_amp -1.0}}
-{{/*  {{$animation_time := (.Get "time") | default 1}}  */}}
 
-
-{{/*  {{ range $index, $char := $chars }}
-<pre>{{$char}}</pre>
-{{end}}  */}}
 {{ $_shimmer_scale := printf "--shimmer-scale:%f" (.Get "scale" | default 1.30) }}
 
-{{/*  <div class="wave-text">  */}}
-{{/*  {{$output := "<span class='shimmer'>"}}  */}}
-
-{{ $time_start_offset := ((.Get "time_offset") | default 0.0) }}
 {{ $_init_delay := add -99999.9 $time_start_offset}}
 
 {{ $speed_sign := 1 }}
@@ -98,19 +70,10 @@ font = (int (0,1,2)) 1 = Terminal font, 2 = Pixel art font. Default: 0 (do not c
 	{{ $speed_sign = -1 }}
 {{ end }}
 
-{{/*  {{$output := "<span class='shimmer'>"}}  */}}
-
-{{ $top_style := ""}}
-{{/*  {{ if $letter_spacing }}
-	{{ $top_style = printf "--handwritten-space: %fem;" $letter_spacing | safeCSS }}
-	{{ $top_css_class = printf "%s %s" $top_css_class "handwritten-space" }}
-{{ end }}  */}}
-{{/*  <span class="{{ $top_css_class }}" style="{{ $top_style }}">  */}}
 
 {{$output := printf "<span class='%s'>" $top_css_class }}
 
-
-{{- range $index, $char := $chars -}}
+	{{- range $index, $char := $chars -}}
 	{{ $delay := mul $index ($absDelay) }}
 	{{ $delay = mul $delay $speed_sign  }}
 	{{/*  {{ $delay := mul $index (0.3) }}  */}}
