@@ -73,7 +73,7 @@ font = (int (0,1,2)) 1 = Terminal font, 2 = Pixel art font. Default: 0 (do not c
 
 {{$output := printf "<span class='%s'>" $top_css_class }}
 
-	{{- range $index, $char := $chars -}}
+{{- range $index, $char := $chars -}}
 	{{ $delay := mul $index ($absDelay) }}
 	{{ $delay = mul $delay $speed_sign  }}
 	{{/*  {{ $delay := mul $index (0.3) }}  */}}
