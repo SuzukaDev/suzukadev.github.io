@@ -76,30 +76,15 @@ font = (int (0,1,2)) 1 = Terminal font, 2 = Pixel art font. Default: 0 (do not c
 {{- range $index, $char := $chars -}}
 	{{ $delay := mul $index ($absDelay) }}
 	{{ $delay = mul $delay $speed_sign  }}
-	{{/*  {{ $delay := mul $index (0.3) }}  */}}
-	{{/*  {{ $delay = float $delay }}  */}}
-
 	{{ $delay = add $delay $_init_delay }}
-
-	{{/*  {{ if lt $speed_sign 0.0 }}
-		{{ $delay = sub $_init_delay $delay }}
-	{{ else }}
-		{{ $delay = add $_init_delay $delay }}
-	{{ end }}  */}}
 	
-	{{/*  {{ $delay = 0.0 }}  */}}
-
-
-
-	
-	{{/*  {{ $_shimmer_translate := printf "--shimmer-translate:translate3D(%fpx, %fpx, %fpx)" $tx $ty $tz }}  */}}
 	{{ $_shimmer_translate := printf "--shimmer-translate:translate3D(%dpx, %dpx, %dpx)" $x $y $z }}
 
 	{{ $_shimmer_properties_slice := slice $_shimmer_translate $_shimmer_scale $shimmer_c1 $shimmer_c2 $blur_property }}
-	{{/*  {{ $_shimmer_translate = "" }}  */}}
-	{{/*  {{ $_shimmer_translate := printf "--shimmer-translate:perspective(100px) translate3D(%fpx, %fpx, %fpx)" $tx $ty $tz }}  */}}
-	{{/*  {{ $_shimmer_properties := printf "%s;%s;" $_shimmer_translate $_shimmer_scale }}  */}}
-	{{ $_shimmer_properties := delimit $_shimmer_properties_slice ";" }}
+	{{ $_shimmer_properties_slice_non_empty := complement (slice nil) (slice "") $_shimmer_properties_slice }}
+
+	{{/*  {{ $_shimmer_properties := delimit $_shimmer_properties_slice ";" }}  */}}
+	{{ $_shimmer_properties := delimit $_shimmer_properties_slice_non_empty ";" }}
 	{{/*  NOTE THIS ADDS WHITESPACES!  */}}
 	{{/*  INFO  https://discourse.gohugo.io/t/hugo-range-function-adds-extra-whitespace-between-spans/33219 */}}
 	{{/*  <span class="wavy-text" style="animation-duration:{{$animation_time}}s; animation-delay: {{$delay | safeCSS}}s; --y-wave-translate-min:{{$min_y}}px; --y-wave-translate-max:{{$max_y}}px;">{{- $char -}}</span>  */}}
