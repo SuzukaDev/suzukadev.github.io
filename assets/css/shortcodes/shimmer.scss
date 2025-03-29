@@ -1,3 +1,4 @@
+// Modified version of https://codepen.io/avstorm/pen/XWGodYr
 
 $theColor: #00ff55;
 $text: #ce1414;
@@ -122,6 +123,10 @@ span{
 		// text-shadow: 0 0 0px var(--hover-color);
 		text-shadow: 0 0 var(--shimmer-blur-pixels, 12px) var(--hover-color);
 	}
+//   22%{
+// 	transform: translate3D(0,0,0) scale(1) rotateY(0);
+
+//   }
   24%{
 	  transform: translate3D(0,0,0) scale(1) rotateY(0);
 	//   color: color-mix(in lab, var(--shimer-active-color) 10%, white 100%);
