@@ -16,6 +16,7 @@ scale = (float) Scale animation. Default: 1.3
 x = (int) X Displacement animation. Default: 0 (px)
 y = (int) Y Displacement animation. Default: 0 (px)
 z = (DEPRECATED) (int) Z Displacement animation Default: 0 (px)
+font = (int (0,1,2)) 1 = Terminal font, 2 = Pixel art font. Default: 0 (do not change the original font)
 */}}
 
 <!-- raw html -->
@@ -25,6 +26,7 @@ z = (DEPRECATED) (int) Z Displacement animation Default: 0 (px)
 {{ $chars := split (.Get "text") "" }}
 {{ $animation_time := float ((.Get "time") | default 2.4) }}
 {{/*  {{ $time_offset := float ((.Get "time_offset") | default 0.0) }}  */}}
+{{ $font := .Get "font" | default 0 }}
 
 {{/*  {{ $absDelay := (.Get 1) | default .2 | mul -1.0}}  */}}
 {{/*  {{ $rawDelay := (.Get 1) | default .2 }}  */}}
@@ -44,6 +46,17 @@ z = (DEPRECATED) (int) Z Displacement animation Default: 0 (px)
 {{ $color1dark := ((.Get "color1-dark") | default $color1) }}
 {{ $color2dark := ((.Get "color2-dark") | default $color2) }}
 
+
+{{/*  {{ $css_class := "shimmer" }}  */}}
+
+{{ $top_css_class := "shimmer"}}
+{{ if eq $font 1 }}
+	{{ $top_css_class = printf "%s %s" $top_css_class "consolas" }}
+{{ else if eq $font 2 }}
+	{{ $top_css_class = printf "%s %s" $top_css_class "pixel-font" }}
+{{ else if eq $font 3 }}
+	{{ $top_css_class = printf "%s %s" $top_css_class "handwritten-font" }}
+{{ end }}
 
 
 
@@ -85,7 +98,18 @@ z = (DEPRECATED) (int) Z Displacement animation Default: 0 (px)
 	{{ $speed_sign = -1 }}
 {{ end }}
 
-{{$output := "<span class='shimmer'>"}}
+{{/*  {{$output := "<span class='shimmer'>"}}  */}}
+
+{{ $top_style := ""}}
+{{/*  {{ if $letter_spacing }}
+	{{ $top_style = printf "--handwritten-space: %fem;" $letter_spacing | safeCSS }}
+	{{ $top_css_class = printf "%s %s" $top_css_class "handwritten-space" }}
+{{ end }}  */}}
+{{/*  <span class="{{ $top_css_class }}" style="{{ $top_style }}">  */}}
+
+{{$output := printf "<span class='%s'>" $top_css_class }}
+
+
 {{- range $index, $char := $chars -}}
 	{{ $delay := mul $index ($absDelay) }}
 	{{ $delay = mul $delay $speed_sign  }}
