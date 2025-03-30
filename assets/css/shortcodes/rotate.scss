@@ -1,0 +1,123 @@
+
+{{/*  REFACTOR rotate  */}}
+
+.rotation-letters{
+	display: inline-block;
+	// TODO cambiar esto
+	animation: rotation-shortcode 2.4s ease infinite;
+	// animation: skew-animation 2.4s ease infinite;
+	position: relative;
+	font-size: 1.02em;
+	// top: -1px;
+	// top: -.002rem;
+	// top: -.002em;
+
+	// top: -.025em; //esto iba bien
+
+	// margin-bottom: 20px;
+	// transform: rotateY(-40deg);
+	// transform: translateY(10px);
+	// transform-origin: 0% 100%;
+}
+
+// ROTATION Animation
+@keyframes rotation-shortcode-simple{  
+	0%{
+		transform: rotateY(0deg);
+	}
+	100%{
+		transform: rotateY(360deg);
+	}
+}
+
+@keyframes rotation-shortcode{  
+	0%{
+		// transform: rotateY(0deg);
+		transform: rotateY(0deg) scale(1.0);
+		// transform: rotateY(360deg);
+	}
+	// 30%{
+	// 	// transform: rotateY(-30deg);
+	// 	transform: rotateY(10deg);
+	// }
+	80%{
+		// transform: rotateY(-40deg);
+		transform: rotateY(20deg);
+	}
+	// 55%{
+	// 	transform: rotateY(0deg);
+	// }
+	// 70%{
+	// 	// transform: rotateY(-40deg);
+	// 	transform: rotateY(0deg);
+	// 	// transform: rotateY(360deg);
+	// }
+	// 90%{
+	// 	// transform: rotateY(360deg);
+	// 	transform: rotateY(0deg);
+	// }
+	77%{
+		// transform: rotateY(360deg);
+		// transform: rotateY(0deg);
+		transform: scale(1.0);
+	}
+	81%{
+		// transform: rotateY(0deg);
+		// transform: rotateY(360deg);
+		// transform: rotateY(360deg) scale(1.40);
+		transform: rotateY(360deg) scale(1.40);
+		// transform: scale(1.0);
+	}
+	// 99%{
+	// 	// transform: rotateY(360deg);
+	// 	// transform: rotateY(0deg);
+	// 	transform: scale(1.0);
+	// }
+}
+
+@keyframes skew-animation{  
+	0%{
+		// transform: rotateY(0deg);
+		// transform: skewX(40deg)
+		// transform: rotateY(360deg);
+	}
+	// 30%{
+	// 	// transform: rotateY(-30deg);
+	// 	transform: rotateY(10deg);
+	// }
+	80%{
+		// transform: rotateY(-40deg);
+		transform: rotateY(20deg);
+	}
+	// 55%{
+	// 	transform: rotateY(0deg);
+	// }
+	// 70%{
+	// 	// transform: rotateY(-40deg);
+	// 	transform: rotateY(0deg);
+	// 	// transform: rotateY(360deg);
+	// }
+	// 90%{
+	// 	// transform: rotateY(360deg);
+	// 	transform: rotateY(0deg);
+	// }
+	77%{
+		// transform: rotateY(360deg);
+		// transform: rotateY(0deg);
+		transform: scale(1.0);
+	}
+	81%{
+		// transform: rotateY(0deg);
+		// transform: rotateY(360deg);
+		// transform: rotateY(360deg) scale(1.40);
+		transform: rotateY(360deg) scale(1.40);
+		// transform: scale(1.0);
+	}
+	// 99%{
+	// 	// transform: rotateY(360deg);
+	// 	// transform: rotateY(0deg);
+	// 	transform: scale(1.0);
+	// }
+}
+
+

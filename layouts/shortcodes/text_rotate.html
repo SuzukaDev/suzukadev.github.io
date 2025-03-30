@@ -1,0 +1,46 @@
+{{/*  REFACTOR rotate  */}}
+{{ $chars := split (.Get "text") "" }}
+{{ $rawFrequency := float ((.Get "delay") | default .1) }}
+{{ $frequency := mul (math.Abs $rawFrequency) -1 }}
+
+{{ $speed_sign := -1 }}
+{{ if lt $rawFrequency 0.0 }}
+	{{ $speed_sign = 1 }}
+{{ end }}
+
+
+{{ $amp := float ((.Get "amp") | default 20) }}
+{{ $half_amp := div $amp 2.0 }}
+
+
+{{/*  {{$max_y := 10}}
+{{$min_y := mul $max_y -1}}  */}}
+{{$max_y := $half_amp}}
+{{$min_y := mul $half_amp -1.0}}
+{{/*  {{$animation_time := (.Get "time") | default 1}}  */}}
+{{$animation_time := float ((.Get "time") | default 1) }}
+
+{{/*  {{ range $index, $char := $chars }}
+<pre>{{$char}}</pre>
+{{end}}  */}}
+
+{{/*  <div class="wave-text">  */}}
+{{$output := ""}}
+{{- range $index, $char := $chars -}}
+	{{ $delay := mul $index ($frequency) }}
+	{{ $delay := mul $delay $speed_sign }}
+	{{ $delay = float $delay }}
+
+	{{/*  NOTE THIS ADDS WHITESPACES!  */}}
+	{{/*  INFO  https://discourse.gohugo.io/t/hugo-range-function-adds-extra-whitespace-between-spans/33219 */}}
+	{{/*  <span class="wavy-text" style="animation-duration:{{$animation_time}}s; animation-delay: {{$delay | safeCSS}}s; --y-wave-translate-min:{{$min_y}}px; --y-wave-translate-max:{{$max_y}}px;">{{- $char -}}</span>  */}}
+	{{if eq $char " "}}
+		{{/*  {{ $output = printf "%s$nbsp;" ($output | safeHTMLAttr) }}  */}}
+		{{ $output = printf "%s<span> </span>" ($output | safeHTMLAttr) }}
+	{{ else }}
+		{{ $output = printf "%s<span class='rotation-letters' style='animation-duration:%fs; animation-delay:%fs; --y-wave-translate-min:%fpx; --y-wave-translate-max:%fpx;'>%s</span>" $output $animation_time ($delay) $min_y $max_y $char }}
+	{{ end }}
+{{- end -}}
+
+{{/*  To avoid whitespaces in HTML  */}}
+{{ $output | safeHTML }}
