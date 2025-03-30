@@ -1,0 +1,132 @@
+@import "shortcodes/glitch";
+@import "shortcodes/shimmer";
+@import "shortcodes/handwritten";
+@import "shortcodes/rotate";
+
+{{/*  REFACTOR rotate  */}}
+
+
+// RAINBOW
+
+// .rainbow {
+// 	// font-size: 35px;
+// 	// font-family: Arial Black, Gadget, sans-serif;
+//   background-image: -webkit-linear-gradient(left, #f00, #ff2b00, #f50, #ff8000, #fa0, #ffd500, #ff0, #d4ff00, #af0, #80ff00, #5f0, #2bff00, #0f0, #00ff2a, #0f5, #00ff80, #0fa, #00ffd5, #0ff, #00d5ff, #0af, #0080ff, #05f, #002aff, #00f, #2b00ff, #50f, #8000ff, #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
+//     // -webkit-animation: animatedBackground_a 5s linear infinite alternate;
+//     -webkit-animation: animatedBackground_a 1s linear infinite;
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: #0000;
+//     background-clip: text;
+// }
+// .rainbow2{
+// 	-webkit-text-fill-color: #fff;
+// 	-webkit-background-clip: text;
+// 	font-size: 35px;
+// 	font-family: Arial Black, Gadget, sans-serif;
+// 	-webkit-text-stroke-width: 1px;
+// 	-webkit-text-stroke-color: #FF0000;
+// 	-webkit-animation: animatedBackground_c 2s infinite alternate;
+// }
+
+// @keyframes animatedBackground_a {
+//     0% { 
+// 		background-position: 0 0 
+// 	}
+//     100% { 
+// 		background-position: -400px 0 
+// 	}
+// }
+
+
+// .rainbow-text{
+// 	position: relative;
+// 	color: #000;
+// 	background: #fff;
+// 	mix-blend-mode: multiply;
+//   overflow: hidden;
+  
+//   text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+//   padding: 2px 4px 6px;
+//   margin: -2px -4px -6px;
+// }
+// .rainbow-text::before{
+// 	content: "";
+// 	position: absolute;
+// 	top:0;right:0;bottom:0;left:-100%;
+// 	background: white repeating-linear-gradient(90deg, #14ffe9 0%, #ffc800 16.66666%, #ff00e0 33.33333%, #14ffe9 50.0%);
+// 	mix-blend-mode: screen;
+// 	pointer-events: none;
+//   animation: move 1s linear infinite;
+// }
+
+// @keyframes move{
+//   0%{transform: translateX(0);}
+//   100%{transform: translateX(50%);}
+// }
+
+// @supports not (mix-blend-mode: multiply) {
+// 	.rainbow-text{
+// 	-webkit-text-fill-color: transparent;
+// 	background-clip: text !important;
+// 	background: white repeating-linear-gradient(90deg, #14ffe9, #ffc800, #ff00e0, #14ffe9);
+//     text-shadow: none;
+// 	}
+// 	.rainbow-text::before{ content: none; }
+// }
+
+
+
+
+///////////////
+/// 
+.rainbow-text .char { 
+  
+	color: hsl(
+	  calc(360deg * var(--char-percent)
+	  ), 
+	  90%, 
+	  65%
+	);
+   
+  }
+  
+  .rainbow-text.animated .char {
+	animation: rainbow-colors 2s linear infinite;
+	animation-delay: calc(-2s * var(--char-percent));
+  }
+  /* Unfortunately, browsers try to take the shortest distance between transition/animation properties, so a simple `0turn` to `1turn` doesn't get the proper effect. */
+  @keyframes rainbow-colors {
+	0% { color: hsl(0turn, 90%, 65%); }
+	25% { color: hsl(.25turn, 90%, 65%); }
+	50% { color: hsl(.5turn, 90%, 65%); }
+	75% { color: hsl(.75turn, 90%, 65%); }
+	100% { color: hsl(1turn, 90%, 65%); }
+  }
+
+$size: 220;
+$colors: #19F, #EA0, #E62, #C25;
+
+@mixin rainbow-shadow($colors, $offset: 0, $size: $size) {
+	$len: length($colors);
+	$outp: 0px 0px transparent;
+	@for $i from 1 through $size {
+	  $ind: floor( max($i + $offset, 1) / $size * length($colors) ) % $len + 1;
+	  $col: nth($colors, $ind);
+	  $outp: #{$outp}, #{$i}px #{$i}px #{$col};
+	}
+	
+	text-shadow: $outp;
+  }
+
+
+  .rainbow {
+	animation: animated-rainbow-shadow 1s infinite;
+  }
+  
+  @keyframes animated-rainbow-shadow {
+	@for $i from 0 to $size + 1 {
+	  #{$i / $size * 100}% {
+		@include rainbow-shadow($colors, $i);
+	  }
+	}
+  }
