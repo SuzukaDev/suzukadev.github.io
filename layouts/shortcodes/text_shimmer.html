@@ -53,8 +53,8 @@ font = (int (0,1,2)) 1 = Terminal font, 2 = Pixel art font. Default: 0 (do not c
 {{ $y := ((.Get "y") | default 0) }}
 {{ $z := ((.Get "z") | default 0) }}
 
-{{ $shimmer_c1 := printf "--shimmer-color-1:%s; --shimmer-color-1-light:%s; --shimmer-color-1-dark:%s" $color1 $color1light $color1dark}}
-{{ $shimmer_c2 := printf "--shimmer-color-2:%s; --shimmer-color-2-light:%s; --shimmer-color-2-dark:%s" $color2 $color2light $color2dark}}
+{{ $shimmer_c1 := printf "--shimmer-color-1-light:%s; --shimmer-color-1-dark:%s" $color1light $color1dark}}
+{{ $shimmer_c2 := printf "--shimmer-color-2-light:%s; --shimmer-color-2-dark:%s" $color2light $color2dark}}
 
 
 {{ $_shimmer_scale := printf "--shimmer-scale:%f" (.Get "scale" | default 1.30) }}
