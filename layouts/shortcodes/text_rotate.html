@@ -8,21 +8,6 @@ time = (float) Animation time. Default: 2.4 (s)
 time_offset = (float) Offset on which the animation starts (useful for making asynchronous effects). Default: 0.0 (s)
 delay = (float) Delay time for each char. Default: 0.05 (s)
 scale = (float) Scale animation. Default: 1.4
-
-blur = (int) Default: 12 (px)
-color1 = Bright color
-color2 = Secondary color (for the trail)
-color1-light = Light version of Color 1 (if not defined it will use color1)
-color2-light = Light version of Color 2 (if not defined it will use color2)
-color1-dark =  Dark version of Color 1 (if not defined it will use color1)
-color2-dark =  Dark version of Color 2 (if not defined it will use color2)
-x = (int) X Displacement animation. Default: 0 (px)
-y = (int) Y Displacement animation. Default: 0 (px)
-z = (DEPRECATED) (int) Z Displacement animation Default: 0 (px)
-font = (int (0,1,2)) 1 = Terminal font, 2 = Pixel art font. Default: 0 (do not change the original font)
-random_position = (float) Level of randomization of the position (x,y,z values). Default: 0.0
-random_scale = (float) Level of randomization of the scale. Default: 0.0
-random_scale_min = (float) Scale added to the random (useful if you want to avoid letters going very small). Default: 0.0
 */}}
 
 {{/*  REFACTOR rotate  */}}
@@ -42,41 +27,20 @@ random_scale_min = (float) Scale added to the random (useful if you want to avoi
 {{ end }}
 
 
-{{ $amp := float ((.Get "amp") | default 20) }}
-{{ $half_amp := div $amp 2.0 }}
-
-
-{{/*  {{$max_y := 10}}
-{{$min_y := mul $max_y -1}}  */}}
-{{$max_y := $half_amp}}
-{{$min_y := mul $half_amp -1.0}}
-{{/*  {{$animation_time := (.Get "time") | default 1}}  */}}
-
-{{/*  {{ range $index, $char := $chars }}
-<pre>{{$char}}</pre>
-{{end}}  */}}
-
-{{/*  <div class="wave-text">  */}}
-{{/*  {{$output := ""}}  */}}
-{{/*  {{$output := printf "<span class='rotation-letters' style='--rotate-scale: %f;'>" ($scale_property | safeHTMLAttr) }}  */}}
 {{$output := printf "<span class='rotation-letters' style='--rotate-scale: %f;'>" ($scale) }}
-{{/*  {{$output := printf "<span class='rotation-letters' style='--rotate-scale:%f'>" 59.0 }}  */}}
 {{- range $index, $char := $chars -}}
 	{{ $delay := mul $index ($frequency) }}
 	{{ $delay := mul $delay $speed_sign }}
-	{{/*  {{ $delay = float $delay }}  */}}
 	{{ $delay = add $delay $time_offset }}
 
 	{{/*  NOTE THIS ADDS WHITESPACES!  */}}
 	{{/*  INFO  https://discourse.gohugo.io/t/hugo-range-function-adds-extra-whitespace-between-spans/33219 */}}
 	{{/*  <span class="wavy-text" style="animation-duration:{{$animation_time}}s; animation-delay: {{$delay | safeCSS}}s; --y-wave-translate-min:{{$min_y}}px; --y-wave-translate-max:{{$max_y}}px;">{{- $char -}}</span>  */}}
 	{{if eq $char " "}}
-		{{/*  {{ $output = printf "%s$nbsp;" ($output | safeHTMLAttr) }}  */}}
-		{{/*  {{ $output = printf "%s<span> </span>" ($output | safeHTMLAttr) }}  */}}
+		{{/*  M  */}}
 		{{ $output = printf "%s<span style='display: inline;'> </span>" ($output | safeHTMLAttr) }}
 	{{ else }}
-		{{/*  {{ $output = printf "%s<span class='rotation-letters' style='animation-duration:%fs; animation-delay:%fs; --y-wave-translate-min:%fpx; --y-wave-translate-max:%fpx;'>%s</span>" $output $animation_time ($delay) $min_y $max_y $char }}  */}}
-		{{ $output = printf "%s<span style='animation-duration:%fs; animation-delay:%fs; --y-wave-translate-min:%fpx; --y-wave-translate-max:%fpx;'>%s</span>" $output $animation_time ($delay) $min_y $max_y $char }}
+		{{ $output = printf "%s<span style='animation-duration:%fs; animation-delay:%fs;'>%s</span>" $output $animation_time ($delay) $char }}
 	{{ end }}
 {{- end -}}
 
