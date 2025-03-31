@@ -1,60 +1,43 @@
 {{/*  
-Makes a rotation animation for a text.
+Hides a text until you hover it.
 
 
 Arguments:
 text = (string) Text with the effect
 time = (float) Animation time. Default: 2.4 (s)
 blur = (int) Pixels for the blur. Default: 5 (px)
-in_time = (float) The time for the reveal (fade in) effect. Default: .3 (s)
-out_time = (float) The time for the fade out effect. Default: 1.0 (s)
-
-
-time_offset = (float) Offset on which the animation starts (useful for making asynchronous effects). Default: 0.0 (s)
-delay = (float) Delay time for each char. Default: 0.05 (s)
-scale = (float) Scale animation. Default: 1.4
-spin = (float) Spin multiplicator. Default: 1.0 (1 perfect turn)
+opacity = (int 0.0 to 1.0) Initial opacity. Default: 1.0
+in_time = (float) The time for the reveal (fade in) effect. Default: .2 (s)
+out_time = (float) The time for the fade out effect. Default: .4 (s)
 */}}
 
-{{/*  REFACTOR rotate  */}}
-{{ $chars := split (.Get "text") "" }}
-{{ $animation_time := float ((.Get "time") | default 1) }}
-{{ $time_offset := float ((.Get "time_offset") | default 0.0) }}
-{{ $rawFrequency := float ((.Get "delay") | default .1) }}
-{{ $frequency := mul (math.Abs $rawFrequency) -1 }}
-{{ $blur := ((.Get "blur") | default 5) }}
-{{ $spin_multiplicator := float ((.Get "spin") | default 1.0) }}
+{{ $text := (.Get "text") }}
+{{ $chars := split $text "" }}
+{{/*  {{ $blur := ((.Get "blur") | default 5) }}  */}}
+{{ $blur := (.Get "blur") }}
+{{ if eq $blur nil }}
+	{{ $blur = 5 }}
+{{ end }}
+{{ $fade_in := float ((.Get "in") | default .13) }}
+{{ $fade_out := float ((.Get "out") | default .4) }}
+{{/*  {{ $opacity := (.Get "opacity") | default 1.0 }}  */}}
+{{ $opacity := (.Get "opacity") }}
+{{ if eq $opacity nil }}
+	{{ $opacity = 1.0 }}
+{{ end }}
 
 {{ $css_class := "spoiler-text" }}
 
 {{ $blur_property := printf "--spoiler-blur:%dpx" $blur}}
-{{/*  {{ $spin_property := printf "--rotate-spin:%f" $spin_multiplicator}}  */}}
-{{ $css_properties := slice $blur_property}}
+{{ $fade_in_property := printf "--spoiler-fade-in:%fs" $fade_in}}
+{{ $fade_out_property := printf "--spoiler-fade-out:%fs" $fade_out}}
+{{ $opacity_property := printf "--spoiler-opacity:%f" $opacity}}
+{{ $css_properties := slice $opacity_property $blur_property $fade_in_property $fade_out_property}}
 {{ $css_properties_string := delimit $css_properties ";" }}
 
 
-{{ $speed_sign := -1 }}
-{{ if lt $rawFrequency 0.0 }}
-	{{ $speed_sign = 1 }}
-{{ end }}
+{{$output := printf "<span class='%s' style='%s;'>%s" $css_class ($css_properties_string) $text }}
 
-
-{{$output := printf "<span class='%s' style='%s;'>" $css_class ($css_properties_string) }}
-{{- range $index, $char := $chars -}}
-	{{ $delay := mul $index ($frequency) }}
-	{{ $delay := mul $delay $speed_sign }}
-	{{ $delay = add $delay $time_offset }}
-
-	{{/*  NOTE THIS ADDS WHITESPACES!  */}}
-	{{/*  INFO  https://discourse.gohugo.io/t/hugo-range-function-adds-extra-whitespace-between-spans/33219 */}}
-	{{/*  <span class="wavy-text" style="animation-duration:{{$animation_time}}s; animation-delay: {{$delay | safeCSS}}s; --y-wave-translate-min:{{$min_y}}px; --y-wave-translate-max:{{$max_y}}px;">{{- $char -}}</span>  */}}
-	{{if eq $char " "}}
-		{{/*  M  */}}
-		{{ $output = printf "%s<span style='display: inline;'> </span>" ($output | safeHTMLAttr) }}
-	{{ else }}
-		{{ $output = printf "%s<span style='animation-duration:%fs; animation-delay:%fs;'>%s</span>" $output $animation_time ($delay) $char }}
-	{{ end }}
-{{- end -}}
 
 {{ $output = printf "%s</span>" $output}}
 
