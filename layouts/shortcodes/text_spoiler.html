@@ -1,0 +1,62 @@
+{{/*  
+Makes a rotation animation for a text.
+
+
+Arguments:
+text = (string) Text with the effect
+time = (float) Animation time. Default: 2.4 (s)
+blur = (int) Pixels for the blur. Default: 5 (px)
+in_time = (float) The time for the reveal (fade in) effect. Default: .3 (s)
+out_time = (float) The time for the fade out effect. Default: 1.0 (s)
+
+
+time_offset = (float) Offset on which the animation starts (useful for making asynchronous effects). Default: 0.0 (s)
+delay = (float) Delay time for each char. Default: 0.05 (s)
+scale = (float) Scale animation. Default: 1.4
+spin = (float) Spin multiplicator. Default: 1.0 (1 perfect turn)
+*/}}
+
+{{/*  REFACTOR rotate  */}}
+{{ $chars := split (.Get "text") "" }}
+{{ $animation_time := float ((.Get "time") | default 1) }}
+{{ $time_offset := float ((.Get "time_offset") | default 0.0) }}
+{{ $rawFrequency := float ((.Get "delay") | default .1) }}
+{{ $frequency := mul (math.Abs $rawFrequency) -1 }}
+{{ $blur := ((.Get "blur") | default 5) }}
+{{ $spin_multiplicator := float ((.Get "spin") | default 1.0) }}
+
+{{ $css_class := "spoiler-text" }}
+
+{{ $blur_property := printf "--spoiler-blur:%dpx" $blur}}
+{{/*  {{ $spin_property := printf "--rotate-spin:%f" $spin_multiplicator}}  */}}
+{{ $css_properties := slice $blur_property}}
+{{ $css_properties_string := delimit $css_properties ";" }}
+
+
+{{ $speed_sign := -1 }}
+{{ if lt $rawFrequency 0.0 }}
+	{{ $speed_sign = 1 }}
+{{ end }}
+
+
+{{$output := printf "<span class='%s' style='%s;'>" $css_class ($css_properties_string) }}
+{{- range $index, $char := $chars -}}
+	{{ $delay := mul $index ($frequency) }}
+	{{ $delay := mul $delay $speed_sign }}
+	{{ $delay = add $delay $time_offset }}
+
+	{{/*  NOTE THIS ADDS WHITESPACES!  */}}
+	{{/*  INFO  https://discourse.gohugo.io/t/hugo-range-function-adds-extra-whitespace-between-spans/33219 */}}
+	{{/*  <span class="wavy-text" style="animation-duration:{{$animation_time}}s; animation-delay: {{$delay | safeCSS}}s; --y-wave-translate-min:{{$min_y}}px; --y-wave-translate-max:{{$max_y}}px;">{{- $char -}}</span>  */}}
+	{{if eq $char " "}}
+		{{/*  M  */}}
+		{{ $output = printf "%s<span style='display: inline;'> </span>" ($output | safeHTMLAttr) }}
+	{{ else }}
+		{{ $output = printf "%s<span style='animation-duration:%fs; animation-delay:%fs;'>%s</span>" $output $animation_time ($delay) $char }}
+	{{ end }}
+{{- end -}}
+
+{{ $output = printf "%s</span>" $output}}
+
+{{/*  To avoid whitespaces in HTML  */}}
+{{ $output | safeHTML }}
