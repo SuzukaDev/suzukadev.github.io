@@ -8,6 +8,7 @@ time = (float) Animation time. Default: 2.4 (s)
 time_offset = (float) Offset on which the animation starts (useful for making asynchronous effects). Default: 0.0 (s)
 delay = (float) Delay time for each char. Default: 0.05 (s)
 scale = (float) Scale animation. Default: 1.4
+spin = (float) Spin multiplicator. Default: 1.0 (1 perfect turn)
 */}}
 
 {{/*  REFACTOR rotate  */}}
@@ -17,9 +18,14 @@ scale = (float) Scale animation. Default: 1.4
 {{ $rawFrequency := float ((.Get "delay") | default .1) }}
 {{ $frequency := mul (math.Abs $rawFrequency) -1 }}
 {{ $scale := float ((.Get "scale") | default 1.4) }}
+{{ $spin_multiplicator := float ((.Get "spin") | default 1.0) }}
 
 
-{{ $scale_property := printf "--rotate-scale:%f;" $scale}}
+{{ $scale_property := printf "--rotate-scale:%f" $scale}}
+{{ $spin_property := printf "--rotate-spin:%f" $spin_multiplicator}}
+{{ $css_properties := slice $scale_property $spin_property}}
+{{ $css_properties_string := delimit $css_properties ";" }}
+
 
 {{ $speed_sign := -1 }}
 {{ if lt $rawFrequency 0.0 }}
@@ -27,7 +33,7 @@ scale = (float) Scale animation. Default: 1.4
 {{ end }}
 
 
-{{$output := printf "<span class='rotation-letters' style='--rotate-scale: %f;'>" ($scale) }}
+{{$output := printf "<span class='rotation-letters' style='%s;'>" ($css_properties_string) }}
 {{- range $index, $char := $chars -}}
 	{{ $delay := mul $index ($frequency) }}
 	{{ $delay := mul $delay $speed_sign }}
