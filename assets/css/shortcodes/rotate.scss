@@ -1,13 +1,21 @@
 
 // {{/*  REFACTOR rotate  */}}
+$default_scale: 1.4;
+$default_spin: 1.0;
 
 .rotation-letters{
+	span{
+		// background-color: pink;
 	display: inline-block;
-	// TODO cambiar esto
-	animation: rotation-shortcode 2.4s ease infinite;
-	// animation: skew-animation 2.4s ease infinite;
 	position: relative;
 	font-size: 1.02em;
+	// &:hover span{
+
+		animation: rotation-shortcode 2.4s ease infinite;
+	// }
+	// TODO cambiar esto
+	// animation: skew-animation 2.4s ease infinite;
+	// animation: skew-animation 2.4s ease infinite;
 	// top: -1px;
 	// top: -.002rem;
 	// top: -.002em;
@@ -18,6 +26,7 @@
 	// transform: rotateY(-40deg);
 	// transform: translateY(10px);
 	// transform-origin: 0% 100%;
+	}
 }
 
 // ROTATION Animation
@@ -65,7 +74,9 @@
 		// transform: rotateY(0deg);
 		// transform: rotateY(360deg);
 		// transform: rotateY(360deg) scale(1.40);
-		transform: rotateY(360deg) scale(1.40);
+		// transform: rotateY(360deg) scale(var(--rotate-scale, $default_scale));
+		// transform: rotateY(calc(360deg*.2)) scale(var(--rotate-scale, $default_scale));
+		transform: rotateY(calc(360deg*var(--rotate-spin, $default_spin))) scale(var(--rotate-scale, $default_scale));
 		// transform: scale(1.0);
 	}
 	// 99%{
@@ -110,7 +121,7 @@
 		// transform: rotateY(0deg);
 		// transform: rotateY(360deg);
 		// transform: rotateY(360deg) scale(1.40);
-		transform: rotateY(360deg) scale(1.40);
+		transform: rotateY(360deg) scale(var(--rotate-scale, $default_scale));
 		// transform: scale(1.0);
 	}
 	// 99%{
