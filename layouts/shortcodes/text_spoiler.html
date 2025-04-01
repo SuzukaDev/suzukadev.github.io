@@ -23,7 +23,7 @@ out_time = (float) The time for the fade out effect. Default: .4 (s)
 {{ $fade_out := float ((.Get "out") | default .4) }}
 {{/*  {{ $opacity := (.Get "opacity") | default 1.0 }}  */}}
 {{ $opacity := (.Get "opacity") }}
-{{ if eq $opacity nil }}
+{{ if not $opacity }}
 	{{ $opacity = 1.0 }}
 {{ end }}
 
