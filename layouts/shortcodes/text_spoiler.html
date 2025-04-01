@@ -15,8 +15,9 @@ out_time = (float) The time for the fade out effect. Default: .4 (s)
 {{ $chars := split $text "" }}
 {{/*  {{ $blur := ((.Get "blur") | default 5) }}  */}}
 {{ $blur := (.Get "blur") }}
-{{ if eq $blur nil }}
-	{{ $blur = 5 }}
+{{/*  {{ if eq $blur nil }}  */}}
+{{ if not $blur }}
+	{{ $blur = 4 }}
 {{ end }}
 {{ $fade_in := float ((.Get "in") | default .13) }}
 {{ $fade_out := float ((.Get "out") | default .4) }}
