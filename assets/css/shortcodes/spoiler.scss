@@ -1,14 +1,30 @@
 
-$default_blur_pixels: 5px;
+$default_blur_pixels: 4px;
 $default_fade_in: .2s;
 $default_fade_out: .4s;
 $default_opacity: 1.0;
 
 .spoiler-text{
+// .spoiler-textaaaa{
 	opacity: var(--spoiler-opacity, $default_opacity);
 	filter: blur(var(--spoiler-blur, $default_blur_pixels));
 	transition: all var(--spoiler-fade-out, $default_fade_out);
 	&:hover{
+		transition-duration: var(--spoiler-fade-in, $default_fade_in);
+		opacity: 1.0;
+		filter:blur(0px);
+	}
+}
+
+.spoiler-text-black{
+	background-color: black;
+	color: black;
+	// opacity: var(--spoiler-opacity, $default_opacity);
+	filter: blur(var(--spoiler-blur, $default_blur_pixels));
+	transition: all var(--spoiler-fade-out, $default_fade_out);
+	&:hover{
+		background-color: transparent;
+		color: currentColor;
 		transition-duration: var(--spoiler-fade-in, $default_fade_in);
 		opacity: 1.0;
 		filter:blur(0px);
