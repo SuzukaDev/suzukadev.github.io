@@ -1,0 +1,94 @@
+{{/*  
+Makes a text strong with a bloom/shadow effect.
+Not animated.
+
+
+Arguments:
+text = (string) Text with the effect
+font_weight = (int from 1 to 5). The weight/boldness of the font (the higher, the bolder). Default: 5
+bloom_color = (color) The color of the bloom effect (in the dark theme). Default: web's focus color.
+bloom_size = (int) The size of the bloom effect. Default: 7 (px)
+
+DEPRECATED (Not used)
+time = (float) Animation time. Default: 2.4 (s)
+time_offset = (float) Offset on which the animation starts (useful for making asynchronous effects). Default: 0.0 (s)
+delay = (float) Delay time for each char. Default: 0.05 (s)
+scale = (float) Scale animation. Default: 1.4
+spin = (float) Spin multiplicator. Default: 1.0 (1 perfect turn)
+*/}}
+
+{{/*  REFACTOR rotate  */}}
+{{ $text := .Get "text" }}
+{{ $font_weight :=  ((.Get "font_weight") | default 5 ) }}
+{{ $animation_time := float ((.Get "time") | default 1) }}
+{{ $time_offset := float ((.Get "time_offset") | default 0.0) }}
+{{ $rawFrequency := float ((.Get "delay") | default .1) }}
+{{ $frequency := mul (math.Abs $rawFrequency) -1 }}
+{{ $scale := float ((.Get "scale") | default 1.2) }}
+{{ $scale_min := float ((.Get "scale_min") | default 1.0) }}
+{{ $spin_multiplicator := float ((.Get "spin") | default 1.0) }}
+{{ $bloom_color := ((.Get "bloom_color") | default 1.0) }}
+{{ $bloom_size := ((.Get "bloom_size") | default 7 ) }}
+
+{{ $chars := split $text "" }}
+
+{{ $css_class := "bloom-shadow" }}
+
+{{ $font_weight_property := printf "--text-weight:%s" $font_weight }}
+{{ if eq $font_weight 1 }}
+	{{ $font_weight_property = printf "--text-weight:%s" "lighter" }}	
+{{ else if eq $font_weight 2 }}
+	{{ $font_weight_property = printf "--text-weight:%s" "normal" }}
+{{ else if eq $font_weight 3 }}
+	{{ $font_weight_property = printf "--text-weight:%s" "bold" }}
+{{ else if eq $font_weight 4 }}
+	{{ $font_weight_property = printf "--text-weight:%s" "bolder" }}
+{{ else if eq $font_weight 5 }}
+	{{ $font_weight_property = printf "--text-weight:%s" 900 }}
+{{ end }}
+
+
+{{ $scale_property := printf "--misc-scale:%f" $scale}}
+{{ $scale_min_property := printf "--misc-scale-min:%f" $scale_min}}
+{{ $bloom_color_property := printf "--text-fx-bloom-color:%s" $bloom_color}}
+{{ $bloom_size_property := printf "--text-fx-bloom-size:%dpx" $bloom_size}}
+{{ $spin_property := printf "--rotate-spin:%f" $spin_multiplicator}}
+{{ $css_properties := slice $font_weight_property $bloom_size_property $bloom_color_property $scale_min_property $scale_property $spin_property}}
+{{ $css_properties_string := delimit $css_properties ";" }}
+
+
+{{ $speed_sign := -1 }}
+{{ if lt $rawFrequency 0.0 }}
+	{{ $speed_sign = 1 }}
+{{ end }}
+
+
+{{$output := printf "<span class='%s' style='%s;'>" $css_class ($css_properties_string) }}
+
+{{ $IS_ANIMATED := false }}
+{{ if $IS_ANIMATED }}
+
+	{{- range $index, $char := $chars -}}
+		{{ $delay := mul $index ($frequency) }}
+		{{ $delay := mul $delay $speed_sign }}
+		{{ $delay = add $delay $time_offset }}
+		{{ $delay = add $delay -9999.9 }}
+
+		{{/*  NOTE THIS ADDS WHITESPACES!  */}}
+		{{/*  INFO  https://discourse.gohugo.io/t/hugo-range-function-adds-extra-whitespace-between-spans/33219 */}}
+		{{/*  <span class="wavy-text" style="animation-duration:{{$animation_time}}s; animation-delay: {{$delay | safeCSS}}s; --y-wave-translate-min:{{$min_y}}px; --y-wave-translate-max:{{$max_y}}px;">{{- $char -}}</span>  */}}
+		{{if eq $char " "}}
+			{{ $output = printf "%s<span style='display: inline;'> </span>" ($output | safeHTMLAttr) }}
+		{{ else }}
+			{{ $output = printf "%s<span style='animation-duration:%fs; animation-delay:%fs;'>%s</span>" $output $animation_time ($delay) $char }}
+		{{ end }}
+	{{- end -}}
+
+{{ else }}
+	{{ $output = printf "%s%s" $output $text}}
+{{ end }}
+
+{{ $output = printf "%s</span>" $output}}
+
+{{/*  To avoid whitespaces in HTML  */}}
+{{ $output | safeHTML }}
