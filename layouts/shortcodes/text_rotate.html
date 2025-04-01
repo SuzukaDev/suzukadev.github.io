@@ -43,7 +43,6 @@ spin = (float) Spin multiplicator. Default: 1.0 (1 perfect turn)
 	{{/*  INFO  https://discourse.gohugo.io/t/hugo-range-function-adds-extra-whitespace-between-spans/33219 */}}
 	{{/*  <span class="wavy-text" style="animation-duration:{{$animation_time}}s; animation-delay: {{$delay | safeCSS}}s; --y-wave-translate-min:{{$min_y}}px; --y-wave-translate-max:{{$max_y}}px;">{{- $char -}}</span>  */}}
 	{{if eq $char " "}}
-		{{/*  M  */}}
 		{{ $output = printf "%s<span style='display: inline;'> </span>" ($output | safeHTMLAttr) }}
 	{{ else }}
 		{{ $output = printf "%s<span style='animation-duration:%fs; animation-delay:%fs;'>%s</span>" $output $animation_time ($delay) $char }}
