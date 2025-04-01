@@ -1,7 +1,7 @@
 ---
+title: Suzuka Ka Portfolio
 description: (DESCRIPTION EN EL content/_index.md)An example site for hugo-theme-gallery. Images from Unsplash.
 #lastmod: 2023-07-05
-title: 
 resources:
   - src: martin-martz-wRuhOOaG-Z4-unsplash.jpg
     params:
@@ -16,7 +16,7 @@ menus:
 # sub-galleries on list pages are sorted by date and weight (descending)
 # TODO cambiar links del indice (español)
 ---
-Ingeniero multimedia 🧠 y desarrollador de videojuegos 🎮 al que le molan bastante las artes 🎨.
+Ingeniero multimedia 🧠 y desarrollador de videojuegos {{< text_wavy text="multidisciplinario" time="1.0" freq="0.1" amp="5">}} 🎮 al que le molan bastante las artes 🎨.
 
 Lee más [sobre mí]({{< relref "about.md" >}}) o echa un vistazo a [mi trabajo aquí]({{< relref "/articles/articulo-tres" >}})
 
