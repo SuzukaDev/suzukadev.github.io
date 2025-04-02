@@ -38,10 +38,3 @@ Read more [about me]({{< relref "about.md" >}}) or [check my work here]({{< relr
 (TODO❗: cambiar el link de "check my work here"❗)
 
 [2D]({{< relref "/galleries/art/2d">}})
-
-# tests 🚂🚂🚂
-Probando a ver <mark>qué tal va esto de subrayar jeje parece que va bastante bien pero nunca se sabe, la verdad<mark> puede que ahora</mark> se vaya <mark>al carajo</mark>
-
-<span class="pixel-font">Gamedev</span>Gamedev
-
-<span class="pixel-font">Hola soy un texto pixelado</span>
