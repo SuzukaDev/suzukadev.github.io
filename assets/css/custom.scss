@@ -1780,6 +1780,18 @@ hr.solid-separator{
 	border: 0;
 }
 
+hr {
+	width: 100%;
+	// border: 1px solid green;
+	border: 1px solid var(--separator-color-soft);
+	border-radius: 5px;
+}	
+hr.main {
+	width: 100%;
+	border: 1px solid var(--hover-color);
+	border-radius: 5px;
+}
+
 .articles-right-bar hr{
 	// position: absolute;
 	width: auto;
