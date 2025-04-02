@@ -30,7 +30,7 @@ Read more [about me]({{< relref "about.md" >}}) or [check my work here]({{< relr
 
 
 <!-- [Articles]({{< relref "articles/" >}}) -->
-[Articles]({{< relref "articles" >}}), [Blog]({{< relref "articles" >}}), [Interviews]({{< relref "articles" >}})
+[Articles]({{< relref "articles" >}}) &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;[Blog]({{< relref "articles" >}}) &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;[Interviews]({{< relref "articles" >}})
 
 [Article tres]({{< relref "articles/articulo-tres">}})
 [Article contenedor]({{< relref "articles/contenedor">}})
