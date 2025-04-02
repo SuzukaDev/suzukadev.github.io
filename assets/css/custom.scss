@@ -713,8 +713,8 @@ blockquote {
 		border-left: 3px solid var(--hover-color);
 		padding: 15px 20px;
 		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-& strong {
+		
+		& strong {
 			transition: all 1s;
 		}
 		&:hover strong {
@@ -1696,6 +1696,16 @@ nav.categories ul li a{
 
 		transition-duration: 40ms;
 	}
+}
+
+.dark .article-tag:hover{
+	$color-mix: darken($main_color, 50%);
+	text-shadow: 0px 0px 7px $main_color, 0px 1px 2px $color-mix, 0px -1px 2px $color-mix, 1px 0px 2px $color-mix, 1px 0px 2px $color-mix
+			, 1px 1px 2px $color-mix, 1px -1px 2px $color-mix , -1px 1px 2px $color-mix , -1px -1px 2px $color-mix;
+	
+			-webkit-box-shadow:0px 0px 6px 0px $main_color;
+	-moz-box-shadow: 0px 0px 6px 0px $main_color;
+	box-shadow: 0px 0px 6px 0px $main_color;
 }
 
 
