@@ -9,6 +9,9 @@
     {{ $key := .}}
     {{$social_data := index $socials .}}
     {{/*  <p>{{.}}</p>  */}}
+    {{ if not $social_data.url }}
+      {{ warnf "(social-icons.html) Social platform url for '%s' not defined in social_sites.json [at %s] - " $social_data.name $.File }}
+    {{ end }}
 
     <a target="_blank" rel="noopener" title="{{ $social_data.name }}" href="{{ $social_data.url }}">
      {{/*  <script class="debug-script">
