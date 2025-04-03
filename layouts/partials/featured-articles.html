@@ -1,0 +1,83 @@
+{{/*  TODO cambiar esto para que muestre featured articles  */}}
+
+
+
+
+{{/*  {{ range where site.Pages.ByDate.Reverse "Params.featured" "=" true }}
+  {{ $gallery := partial "get-gallery.html" . }}
+  {{ if $gallery }}
+    {{ $images := .Resources.ByType "image" }}
+    {{ $index := 0 }}
+    {{ range $i, $image := $images }}
+      {{ if index $image.Params "cover" }}
+        {{ $index = $i }}
+      {{ end }}
+    {{ end }}
+    {{ $featured := ($images.GetMatch (.Params.featured_image | default "*feature*")) | default (index $images $index) }}
+
+    {{ $thumbnail := $featured }}
+    {{ if and (ne $featured.MediaType.SubType "gif") (ne $featured.MediaType.SubType "webp") }}
+      {{ $thumbnail := $featured.Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) }}
+    {{ end }}
+
+    {{ $color := index $thumbnail.Colors 0 | default "transparent" }}
+    <section class="featured">
+      <a class="featured-card" href="{{ .RelPermalink }}" style="background-color: {{ $color }}; background-image: url({{ $thumbnail.RelPermalink }})">
+        <div>
+          <h2>{{ .Title }}</h2>
+          <p>
+            {{ if gt $gallery.albumCount 0 }}
+              {{ T "albumCount" (dict "count" ($gallery.albumCount | lang.FormatNumber 0) "photoCount" ($gallery.imageCount | lang.FormatNumber 0 | lang.Translate "photoCount")) }}
+            {{ else }}
+              {{ T "photoCount" ($gallery.imageCount | lang.FormatNumber 0) }}
+            {{ end }}
+          </p>
+        </div>
+      </a>
+    </section>
+  {{ end }}
+{{ end }}  */}}
+
+
+
+
+
+
+{{/*  Shows an album-card of the galleries INSIDE the 'galleries' content folder which have the "Params.featured_gallery" set to 'true' */}}
+
+{{/* INFO https://discourse.gohugo.io/t/how-can-i-list-all-pages-in-a-sub-folder/32029/4  */}}
+{{/*  {{ $articles := site.GetPage "galleries" }}  */}}
+{{ $articles := site.GetPage "section" "articles" }}
+
+{{/*  Get only pages that have 'galleries' as ancestor and that have the 'featured_gallery' param as 'true' */}}
+{{/*  {{ range where (where site.RegularPages "Ancestors" "intersect" (slice $articles)) "Params.featured_gallery" true }}  */}}
+
+{{/*  This don't get 'sections', only pages */}}
+{{/*  {{ $featured_albums := where (where site.RegularPages "Ancestors" "intersect" (slice $articles)) "Params.featured_gallery" true }}  */}}
+{{/*  REFACTOR !!! featured_articles  */}}
+{{ $featured_albums := where (where site.Pages "Ancestors" "intersect" (slice $articles)) "Params.featured" true }}
+{{/*  Only those who are not private  */}}
+{{/*  {{ $featured_albums = where $featured_albums ".Params.private" "ne" true }}  */}}
+{{/*  At the moment it shows featured articles that are private
+I think there are some cases where you could want an article to be featured but not be listed in other places.
+If the user don't want it to appear in the feature, they always can remove the feature param  */}}
+
+{{ $featured_albums = sort $featured_albums ".Date" "desc" }}
+{{/*  <h1>Total featured albums: {{len $featured_albums }}</h1>  */}}
+
+{{ if gt (len $featured_albums) 0 }}
+	{{/*  <section class="galleries">  */}}
+	{{/*  <section class="featured-articles-container">  */}}
+	<hgroup class="featured-articles-container">
+    {{/*  <hgroup>  */}}
+      <h2>{{ T "featuredArticles" }}</h2>
+    <section>
+		{{ range $featured_albums }}
+			{{/*  {{ partial "album-card.html" . }}  */}}
+      {{/*  <a class="category-tag" href="{{.RelPermalink}}">  */}}
+        {{ partial "featured-article-card.html" . }}
+      {{/*  <p>Article title:  {{.Title}}</p>  */}}
+		{{ end }}
+	</section>
+    </hgroup>
+{{ end }}
