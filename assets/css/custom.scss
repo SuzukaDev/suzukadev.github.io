@@ -1,5 +1,7 @@
 /* custom.css */
 $main_color: #fe9234;
+$soft_color: change-color($main_color, $saturation: 60%, $lightness: 40%);
+
 
 @import "fonts.scss";
 @import "shortcodes.scss";
@@ -10,8 +12,6 @@ $main_color: #fe9234;
 
 :root {
 	/* --hover-color: {{ .Site.Params.colors.hover }}; */
-	// --hover-color: #fe9234;
-	// REFACTOR poner esto como una variable $ arriba
 	--hover-color: #{$main_color};
 	// --hover-color: #34fe56;
 	
@@ -20,8 +20,8 @@ $main_color: #fe9234;
 	--pfp-color-dark: #ff00d4;
 	--pfp-color2-dark: #00ff22;
 	
-	// REFACTOR poner esto como resultado de desaturarlo con una funcion de scss
-	--hover-color-soft: #a0612a;
+	// --hover-color-soft: #a0612a;
+	--hover-color-soft: #{$soft_color};
 	--profile-scale: 1.1;
 	--articles-side-margin: 20px;
 
