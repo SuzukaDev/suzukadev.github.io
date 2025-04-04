@@ -11,5 +11,7 @@
     {{ end }}  */}}
     {{/*  </section>  */}}
   {{ partial "featured-galleries.html" . }}
-  {{ partial "featured-articles.html" . }}
+  {{ if .Site.Params.show_featured_articles }}
+    {{ partial "featured-articles.html" . }}
+  {{ end }}
 {{ end }}
