@@ -1,0 +1,32 @@
+{{/*  
+
+Embeds a local video
+
+Arguments:
+url = (string) local path to the video
+autoplay = (bool) Animation time. Default: 2.4 (s)
+muted = (bool) Offset on which the animation starts (useful for making asynchronous effects). Default: 0.0 (s)
+
+Example:
+{{< video url="my_video.mp4" autoplay=true mute=true>}} -> Autoplays muted
+{{< video "my_video.mp4" true true>}} -> Autoplays muted
+*/}}
+
+{{ $video_url := (or (.Get 0) (.Get "url")) }}
+{{/*  {{ $controls := .Get 1 | default true }}  */}}
+{{ $autoplay_flag := (or (.Get 1) (.Get "autoplay")) | default false }}
+{{ $muted_flag := (or (.Get 2) (.Get "muted")) | default false }}
+
+{{ $autoplay := "" }}
+{{ if $autoplay_flag }}
+	{{ $autoplay = "autoplay" }}
+{{ end}}
+
+{{ $muted := "" }}
+{{ if $muted_flag }}
+	{{ $muted = "muted" }}
+{{ end}}
+
+<video controls {{ $autoplay | safeHTMLAttr  }} {{ $muted | safeHTMLAttr  }}>
+	<source src="{{ $video_url }}" type="video/mp4">
+</video>
