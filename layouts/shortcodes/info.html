@@ -1,0 +1,28 @@
+{{/*  
+Renders a text with a blue info box ℹ
+
+Example of use:
+{{< info >}}
+Inside the tags I can write normal markdown code.
+
+> This would be a quote
+
+# And this a header
+
+And will be rendered normall
+
+---
+
+After separator
+
+And then I close the shortcode
+{{< /info >}}
+*/}}
+
+{{/*  {{ $text := (.Get "text") or (.Get 0) }}  */}}
+<div class="text-box info-box">
+{{.Inner | markdownify }}
+{{/*  {{.Inner }}  */}}
+{{/*  {{ $text_with_emoji := printf "%s%s" "ℹ️" .Inner }}  */}}
+{{/*  {{ $text_with_emoji | markdownify }}  */}}
+</div>
