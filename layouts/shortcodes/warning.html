@@ -1,0 +1,24 @@
+{{/*  
+Renders a text with a yellow warning box. ⚠
+
+Example of use:
+{{< warning >}}
+Inside the tags I can write normal markdown code.
+
+> This would be a quote
+
+# And this a header
+
+And will be rendered normall
+
+---
+
+After separator
+
+And then I close the shortcode
+{{< /warning >}}
+*/}}
+
+<div class="text-box warning-box">
+{{.Inner | markdownify }}
+</div>
