@@ -1,10 +1,5 @@
 {{ $CLASS := .class }}
 {{ $ICON := .icon_arg | default .default_icon }}
-{{/*  {{ $ICON := .icon }}  */}}
-
-
-
-
 
 {{ if eq .icon_arg false }}
 	{{ $ICON = "" }}
@@ -13,12 +8,7 @@
 {{ $text := .Inner }} 
 
 {{- $inner_lines := len (split (.Inner | markdownify) "\n") -}} 
-{{/*  {{- $inner_lines := len (split (.context.Inner | markdownify) "\n") -}}   */}}
-{{/*  <div class='{{printf "%s" $CLASS}}' data-text="{{$ICON}}" style="--box-padding-left: 30px">  */}}
-{{/*  <div class='{{$CLASS}}' data-text="{{$ICON}}" style="--box-padding-left: 3330px">  */}}
 <div class='{{$CLASS}}' data-text="{{$ICON}}">
-{{/*  <p>{{$inner_lines}}</p>  */}}
-
 {{- if eq $inner_lines 1 -}} 
 <p>{{- $text | markdownify -}}</p>
 {{- else -}} 
