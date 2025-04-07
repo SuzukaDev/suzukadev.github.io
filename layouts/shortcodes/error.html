@@ -1,8 +1,8 @@
 {{/*  
-Renders a text with a blue info box ℹ
+Renders a text with a red error box ❌
 
 Example of use:
-{{< info >}}
+{{< error >}}
 Inside the tags I can write normal markdown code.
 
 > This would be a quote
@@ -16,12 +16,12 @@ And will be rendered normall
 After separator
 
 And then I close the shortcode
-{{< /info >}}
+{{< /error >}}
 */}}
 
 
-{{ $DEFAULT_ICON := "ℹ️" }}
-{{ $css_class := "info-background-color" }}
+{{ $DEFAULT_ICON := "❌" }}
+{{ $css_class := "error-background-color" }}
 {{ $emoji := (.Get 0) | default $DEFAULT_ICON }}
 
 {{partial "shortcodes_partials/text_box_base.html" (dict "emoji" $emoji "default_emoji" $DEFAULT_ICON "css_class" $css_class "Inner" .Inner ) }}

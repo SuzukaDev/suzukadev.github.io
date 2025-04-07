@@ -1,6 +1,9 @@
 {{/*  
 Renders a text with a yellow warning box. ⚠
 
+Arguments:
+false/string = do not show the icon (or pass a string with a custom emoji)
+
 Example of use:
 {{< warning >}}
 Inside the tags I can write normal markdown code.
@@ -18,7 +21,31 @@ After separator
 And then I close the shortcode
 {{< /warning >}}
 */}}
+{{ $DEFAULT_ICON := "⚠️" }}
+{{ $css_class := "warning-background-color" }}
 
-<div class="text-box warning-box">
-{{.Inner | markdownify }}
-</div>
+{{/*  ----------------------------------  */}}
+{{ $emoji := (.Get 0) | default $DEFAULT_ICON }}
+{{/*  {{ $emoji := (.Get 0) | default $DEFAULT_ICON }}
+
+{{ if eq $emoji true }}
+	{{ $emoji = $DEFAULT_ICON }}
+{{ end }}
+
+{{ $text := printf "<span class='non-selectable'>%s</span>%s" $emoji .Inner }}
+{{ if eq $emoji false }}
+	{{ $text = .Inner }}
+{{ end }}
+
+{{ $inner_lines := len (split (.Inner | markdownify) "\n") }}
+
+<div class='{{printf "%s" $CLASS }}'>
+{{ if gt $inner_lines 1 }}
+	{{ $text | markdownify }}
+{{ else }}
+	<p>{{ $text | markdownify }}</p>
+{{ end }}
+</div>  */}}
+
+{{/*  {{< text_box_base (dict "emoji" $DEFAULT_ICON "class" $CLASS ) >}}  */}}
+{{partial "shortcodes_partials/text_box_base.html" (dict "emoji" $emoji "default_emoji" $DEFAULT_ICON "css_class" $css_class "Inner" .Inner ) }}
