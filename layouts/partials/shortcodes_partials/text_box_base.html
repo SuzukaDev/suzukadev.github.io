@@ -1,0 +1,48 @@
+{{/*  DEPRECATED NOT used  */}}
+{{/*  DEPRECATED also:  */}}
+{{/*  DEPRECATED error.html  */}}
+{{/*  DEPRECATED warning.html  */}}
+{{/*  DEPRECATED info.html  */}}
+
+{{/*  
+Base for rendering text-boxes (coloured with an icon).
+
+Receives a dict:
+(dict "emoji" $emoji "default_emoji" $DEFAULT_EMOJI "css_class" $css_class "Inner" .Inner )
+*/}}
+{{/*  {{- $DEFAULT_EMOJI := "⚠️" -}}   */}}
+{{- $DEFAULT_EMOJI := .default_emoji -}} 
+{{/*  {{- $CLASS := printf "text-box %s" .class -}}   */}}
+{{- $CLASS := printf "text-box %s" .css_class -}} 
+
+{{/*  ----------------------------------  */}}
+{{/*  {{- $emoji := (.Get .emoji) | default $DEFAULT_EMOJI -}}   */}}
+{{- $emoji := .emoji -}} 
+
+{{- if eq $emoji true -}} 
+	{{- $emoji = $DEFAULT_EMOJI -}} 
+{{- end -}} 
+
+{{- $text := printf "<span class='non-selectable'>%s</span>%s" $emoji .Inner -}} 
+{{/*  {{- $text := printf "<span class='non-selectable'>%s</span>%s" $emoji .context.Inner -}}   */}}
+{{- if eq $emoji false -}} 
+	{{- $text = .Inner -}} 
+	{{/*  {{- $text = .context.Inner -}}   */}}
+{{- end -}} 
+
+{{- $inner_lines := len (split (.Inner | markdownify) "\n") -}} 
+{{/*  {{- $inner_lines := len (split (.context.Inner | markdownify) "\n") -}}   */}}
+<div class='{{printf "%s" $CLASS -}}'>
+{{- if gt $inner_lines 1 -}} 
+{{- $text | markdownify -}} 
+{{/*  {{- .Page.RenderString $text | markdownify -}}   */}}
+{{/*  {{- $text | safeHTML | markdownify -}}   */}}
+{{/*  {{- $text | markdownify | safeHTML  -}}   */}}
+{{/*  {{- $text -}}   */}}
+{{- else -}} 
+<p>{{- $text | markdownify -}} </p>
+{{/*  <p>{{- .Page.RenderString $text | markdownify -}} </p>  */}}
+{{/*  <p>{{- $text -}} </p>  */}}
+{{/*  <p>{{- $text | safeHTML -}} </p>  */}}
+{{- end -}} 
+</div>
