@@ -1,0 +1,54 @@
+{{/*  
+Makes a shimmer/bright animation with position and scale animations.
+
+Arguments:
+text = (string) Text with the effect
+
+*/}}
+
+{{ $full_shortcut := or (.Get "keys") (.Get 0) }}
+{{/*  {{ $join := .Get 1 | default false }}  */}}
+{{ $join := or (.Get "join") (.Get 1) | default false }}
+{{ $pre_text := .Get "pre" | default "" }}
+{{ $post_text := .Get "post" | default "" }}
+
+{{ if $join }}
+<kbd>{{$full_shortcut}}</kbd>
+{{ else }}
+	{{/*  {{ $output := ""}}  */}}
+	{{/*  {{ $output_slice := slice}}  */}}
+	{{ $init_output := printf "<span class='inline-block'>%s" $pre_text}}
+	{{ $output_slice := slice $init_output}}
+	{{ $keys := split $full_shortcut "+" }}
+	{{ $keys_count := len $keys }}
+	{{ range $index, $key := $keys }}
+		{{/*  <kbd>{{$key}}</kbd>  */}}
+		{{/*  {{$key_tag := printf "<kbd>%s</kbd>" $key }}  */}}
+		{{$key_tag := printf "<kbd class='inline-block'>%s</kbd>" $key }}
+		{{ $output_slice = $output_slice | append $key_tag }}
+		{{if lt $index (sub $keys_count 1 ) }}
+		{{/*  +  */}}
+			{{/*  {{ $output_slice = $output_slice | append "+" }}  */}}
+			{{ $output_slice = $output_slice | append "<span class='inline-block'>+</span>" }}
+			
+		{{ end }}
+	{{ end }}
+	{{/*  {{ $output_slice = $output_slice | append "</span>" }}  */}}
+	{{ $end_output := printf "%s</span>" $post_text}}
+	{{ $output_slice = $output_slice | append $end_output }}
+{{delimit $output_slice "" | safeHTML }}
+{{/*  {{delimit $output_slice "" | safeHTML | markdownify }}  */}}
+{{/*  {{delimit $output_slice "" | markdownify }}  */}}
+	
+	{{/*  {{ $da_output := delimit $output_slice "" }}  */}}
+	{{/*  {{ $da_output := delimit $output_slice "" | markdownify }}  */}}
+	{{/*  {{ $da_output := delimit $output_slice "" | safeHTML | markdownify }}  */}}
+	{{/*  {{ $da_output := delimit $output_slice "" | safeHTML }}  */}}
+	{{/*  {{- $da_output -}}  */}}
+
+{{/*  {{ $mierda_test := "<kbd>suputamadree</kbd>" }}  */}}
+	{{/*  {{ $mierda_test | safeHTML | markdownify }}  */}}
+{{/*  {{ $mierda_test | safeHTML  }}  */}}
+{{/*  {{ $mierda_test  }}  */}}
+{{ end }}
+
