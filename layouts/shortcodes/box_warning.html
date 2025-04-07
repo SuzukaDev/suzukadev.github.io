@@ -1,0 +1,18 @@
+{{/*  
+Renders a text with a yellow warning box. ⚠️
+
+Arguments:
+false/string = do not show the icon (or pass a string with a custom emoji)
+
+Example of use:
+{{< box_warning >}}
+Inside the tags I can write normal markdown code.
+{{< /box_warning >}}
+*/}}
+
+
+{{ $CLASS := "warning-box" }}
+{{ $DEFAULT_ICON := "⚠️" }}
+{{ $icon_arg := (or (.Get "icon") (.Get 0)) }}
+
+{{ partial "shortcodes_partials/box_text_wrapper_base" (dict "icon_arg" $icon_arg "default_icon" $DEFAULT_ICON "class" $CLASS "Inner" .Inner ) }}
