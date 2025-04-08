@@ -22,7 +22,7 @@ Lee más [sobre mí]({{< relref "about.md" >}}) o echa un vistazo a [mi trabajo 
 
 
 <!-- [Articles]({{< relref "articles/" >}}) -->
-[Articles]({{< relref "articles" >}}), [Blog]({{< relref "articles" >}}), [Interviews]({{< relref "articles" >}})
+[Artículos]({{< relref "articles" >}}) &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;[Álbumes]({{< relref "galleries" >}}) &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;[Interviews]({{< relref "articles" >}})
 
 (TODO❗: cambiar el link de "check my work here"❗)
 [Article tres]({{< relref "articles/articulo-tres">}})
