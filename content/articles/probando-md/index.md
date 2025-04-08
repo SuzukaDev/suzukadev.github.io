@@ -20,6 +20,27 @@ show_next_and_previous_arrows = false
 +++
 This is an article for testing the markdown
 
+# Video testing
+
+
+{{< video "skrillex.mp4" false >}}
+
+{{< video "skrillex.mp4" true >}}
+
+<!-- {{< video "https://www.youtube.com/watch?v=5nf24no8dKU" >}} -->
+
+<!-- {{< youtube id="5nf24no8dKU" class="youtube">}} -->
+
+{{< youtube id="5RfqB76eHTQ" autoplay=true mute=true >}}
+<!-- {{< youtube "5RfqB76eHTQ">}} -->
+
+# nada
+<!-- 
+<video width="320" height="240" controls>
+  <source src="skrillex.mp4" type="video/mp4">
+</video> -->
+
+
 # Why I'm doing it? 
 
 Basically for testing how it looks
