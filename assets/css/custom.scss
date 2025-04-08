@@ -6,6 +6,7 @@ $soft_color: change-color($main_color, $saturation: 60%, $lightness: 40%);
 @import "fonts.scss";
 @import "utility-classes.scss";
 @import "shortcodes.scss";
+@import "effects.scss";
 
 // *{
 // 	transition: background-color .5s;
