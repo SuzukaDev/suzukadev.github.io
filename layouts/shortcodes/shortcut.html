@@ -1,4 +1,3 @@
-{{/*  REFACTOR  */}}
 {{/*  
 Shows a shortcut wraped with <kbd></kbd> tags.
 
@@ -14,7 +13,6 @@ Usage:
 */}}
 
 {{ $full_shortcut := or (.Get "keys") (.Get 0) }}
-{{/*  {{ $join := .Get 1 | default false }}  */}}
 {{ $join := or (.Get "join") (.Get 1) | default false }}
 {{ $pre_text := .Get "pre" | default "" }}
 {{ $post_text := .Get "post" | default "" }}
