@@ -21,7 +21,7 @@
     {{$context := .}}
     {{/*  Markdown content  */}}
       {{ with .Content }}
-        <hgroup class="articles-content">
+        <article class="articles-content">
           {{ partial "articles-title.html" $context }}
           {{/*  <section class="articles-content">  */}}
             {{/*  <section class="prose">  */}}
@@ -31,7 +31,7 @@
           {{ if ne $page.Params.show_next_and_previous_arrows false }}
             {{ partial "next-and-previous-article.html" $page }}
           {{ end }}
-        </hgroup>
+        </article>
         {{ end }}
         
         
