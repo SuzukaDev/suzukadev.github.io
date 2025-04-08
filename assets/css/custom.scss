@@ -2519,18 +2519,6 @@ video{
 	box-shadow: rgb(0, 0, 0) 0px 2px 8px 0px, rgba(0, 0, 0, 0.658) 0px 2px 6px 2px;
 }
 
-.youtube-video {
-	@extend video;
-	height: 100%;
-	width: 100%;
-
-	// box-shadow: rgb(0, 0, 0) 0px 2px 8px 0px, rgba(0, 0, 0, 0.658) 0px 2px 6px 2px;
-	& iframe{
-		height: 100%;
-		width: 100%;
-	}
-}
-
 .youtube-video-container{
 	width: 100%;
 	height: fit-content;
