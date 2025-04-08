@@ -1,0 +1,38 @@
+
+.hover-underline-animation {
+	// display: inline;
+	// font-size: 2.4rem;
+	// text-align: center;
+	margin: auto;
+	// font-weight: 600;
+	// background-image: var(--red-to-pink-to-purple-horizontal-gradient);
+	background-image: var(--hover-color);
+	background-clip: text;
+	--webkit-background-clip: text;
+	width: fit-content;
+	position: relative;
+	cursor: pointer;
+  }
+  
+  .hover-underline-animation::after {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	// background: red;
+	transform: scaleX(0);
+	// background: var(--red-to-pink-to-purple-horizontal-gradient);
+	background: var(--hover-color);
+	transform-origin: bottom right;
+	transition: transform .3s ease;
+  }
+  
+  .hover-underline-animation:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+  }
+
+
+
