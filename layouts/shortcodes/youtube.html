@@ -29,7 +29,7 @@ Renders an embedded YouTube video.
     {{- /* Set defaults. */}}
     {{- $allowFullScreen := true }}
     {{- $autoplay := 0 }}
-    {{- $class := "youtube-video" }}
+    {{- $class := "" }}
     {{- $controls := 1 }}
     {{- $end := 0 }}
     {{- $loading := "eager" }}
@@ -101,6 +101,7 @@ Renders an embedded YouTube video.
     {{- $referrerpolicy := "strict-origin-when-cross-origin" }}
 
     {{- /* Render. */ -}}
+<div class="youtube-video-container">
     <div
       {{- with $class }} class="{{ . }}" {{- end }}
       {{- with $divStyle }} style="{{ . | safeCSS }}" {{- end -}}
@@ -114,6 +115,7 @@ Renders an embedded YouTube video.
         {{- with $title }} title="{{ . }}" {{- end -}}
       ></iframe>
     </div>
+</div>
   {{- else }}
     {{- errorf "The %q shortcode requires an id argument. See %s" .Name .Position }}
   {{- end }}
