@@ -14,6 +14,9 @@ $soft_color: change-color($main_color, $saturation: 60%, $lightness: 40%);
 // }
 
 :root {
+	// --red-to-pink-to-purple-horizontal-gradient: linear-gradient( 90deg, color-mix(in srgb, oklch(63.32% .24 31.68), white 20%) 0%, color-mix(in srgb, oklch(69.02% .277 332.77), white 70%) 50%, color-mix(in srgb, oklch(53.18% .28 296.97), white 70%) 100% );
+	// --red-to-pink-to-purple-horizontal-gradient: linear-gradient( 90deg, color-mix(in srgb, oklch(63.32% .24 31.68), white 20%) 0%, color-mix(in srgb, oklch(69.02% .277 332.77), white 70%) 50%, color-mix(in srgb, oklch(53.18% .28 296.97), white 70%) 100% );
+	// --red-to-pink-to-purple-horizontal-gradient: radial-gradient(circle, var(--hover-color-soft) 0%, var(--hover-color) 50%, var(--hover-color-soft) 100%);
 	/* --hover-color: {{ .Site.Params.colors.hover }}; */
 	--hover-color: #{$main_color};
 	// --hover-color: #34fe56;
@@ -390,10 +393,24 @@ background: linear-gradient(0deg, rgba(0,0,0,1.0) 0%, rgba(0,0,0,0.6110644941570
 // hgroup.articles-content > p:first-child {
 // Indentation for the first paragraph in the article
 hgroup.articles-content > p:first-of-type {
+// hgroup.articles-content > p:first-of-type p {
+// hgroup.articles-content > p:first-of-type:first-line {
+// hgroup.articles-content p:first-of-type {
+// hgroup.articles-content p:first-child{
 // hgroup.articles-content p {
 	// text-indent: 20px; /* Adjust the indentation as needed */
-	text-indent: 30px; /* Adjust the indentation as needed */
+	text-indent: 30px; /* Adjust the indentation as needed */ //THIS AFFECTED INDENTATION OF INNER ELEMENTS (like <kbd> in the first paragraph)
+	// padding-left: 30px;
+	// background-color: pink;
 }
+
+// hgroup.articles-content > p:first-of-type::before{
+// 	content: "";
+// 	width: 30px;
+// 	text-indent: 30px; /* Adjust the indentation as needed */
+// 	background-color: pink;
+// 	position: inherit;
+// }
 
 hgroup.articles-content{
 // hgroup.articles-content *{
