@@ -1,9 +1,16 @@
+{{/*  REFACTOR  */}}
 {{/*  
-Makes a shimmer/bright animation with position and scale animations.
+Shows a shortcut wraped with <kbd></kbd> tags.
 
 Arguments:
-text = (string) Text with the effect
+keys = (string) Shortcut
+join = (bool) true/false. If true, wraps the whole shortcut in a single <kbd></kbd> tag. Default: false.
+pre = (string) Text pre-shortcut.
+post = (string) Text post-shortcut.
 
+Usage:
+{{< shortcut "CTRL+ALT+V" >}}
+{{< shortcut keys="CTRL+ALT+V" pre="previous text" post="posterior text" >}}
 */}}
 
 {{ $full_shortcut := or (.Get "keys") (.Get 0) }}
