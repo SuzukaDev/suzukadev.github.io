@@ -35,7 +35,10 @@ $green-color-dark: rgba(87, 255, 9, 0.13);
 	position: absolute;
 }
 
+// REFACTOR
 // DELETE
+// DEPRECATED
+/*#region DEPRECATED*/
 // Info ℹ
 .dark .info-background-color{
 	background-color: $info-color-dark;
@@ -59,6 +62,7 @@ $green-color-dark: rgba(87, 255, 9, 0.13);
 .light .error-background-color{
 	background-color: $error-color-light;
 }
+/*#endregion DEPRECATED*/
 
 ////////////////////////////
 
