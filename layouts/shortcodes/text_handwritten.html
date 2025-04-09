@@ -1,4 +1,4 @@
-{{/*  
+{{- /*  
 Makes the text looks like it is handwritten animated.
 
 Arguments:
@@ -11,106 +11,106 @@ scale = (float) Random variation in the letter's scale. Default 0.0 (no variatio
 offset = (float) Letters displacement intensity. Default: 2.0
 fx = (float) Force of the effect (multiplies different values to increase the FX intensity). Default: 1.0
 time_variation = (float) random value for the time. Default: 0.0
-  */}}
+  */ -}}
 
-{{ $css_vars_basename_x := "--handwritten-x" }}
-{{ $css_vars_basename_y := "--handwritten-y" }}
-{{ $css_vars_basename_rotation := "--handwritten-rot" }}
-{{ $css_vars_basename_scale := "--handwritten-scale" }}
-
-
-{{ $text := .Get "text" }}
-{{ $font := .Get "font" | default 0 }}
-{{ $frame_time := float ((.Get "frame_time") | default .5) }}
-{{ $time_variation := float ((.Get "time_variation") | default 0.0) }}
-{{ $offset := float ((.Get "offset") | default 2.0) }}
-{{ $rotation := .Get "rotation" | default 10 }}
-{{ $scale_variation := (.Get "scale") }}
-{{ $fx := float ((.Get "fx") | default 1.0) }}
-{{ $letter_spacing := (.Get "spacing") }}
-
-{{/*  Must be the same as the steps in the keyframe animation in handwritten.scss  */}}
-{{ $STEPS := 10 }}
-
-{{/*  NOT USED  */}}
-{{ $random_max := .Get "random_max" | default 1.0 }}
-{{ $random_min := .Get "random_min" | default 0.0 }}
-{{ $randomness := float ((.Get "random") | default 0.0) }}
+{{- $css_vars_basename_x := "--handwritten-x" -}}
+{{- $css_vars_basename_y := "--handwritten-y" -}}
+{{- $css_vars_basename_rotation := "--handwritten-rot" -}}
+{{- $css_vars_basename_scale := "--handwritten-scale" -}}
 
 
-{{ if not $text }}
-  {{ errorf "shortcode text_glitch.html: 'text' argument not found" }}
-{{ end }}
+{{- $text := .Get "text" -}}
+{{- $font := .Get "font" | default 0 -}}
+{{- $frame_time := float ((.Get "frame_time") | default .5) -}}
+{{- $time_variation := float ((.Get "time_variation") | default 0.0) -}}
+{{- $offset := float ((.Get "offset") | default 2.0) -}}
+{{- $rotation := .Get "rotation" | default 10 -}}
+{{- $scale_variation := (.Get "scale") -}}
+{{- $fx := float ((.Get "fx") | default 1.0) -}}
+{{- $letter_spacing := (.Get "spacing") -}}
 
-{{ $css_class := "handwritten" }}
+{{- /*  Must be the same as the steps in the keyframe animation in handwritten.scss  */ -}}
+{{- $STEPS := 10 -}}
 
-{{ $top_css_class := ""}}
-{{ if eq $font 1 }}
-	{{ $top_css_class = printf "%s %s" $top_css_class "consolas-font" }}
-{{ else if eq $font 2 }}
-	{{ $top_css_class = printf "%s %s" $top_css_class "pixel-font" }}
-{{ else if eq $font 3 }}
-	{{ $top_css_class = printf "%s %s" $top_css_class "handwritten-font" }}
-{{ end }}
+{{- /*  NOT USED  */ -}}
+{{- $random_max := .Get "random_max" | default 1.0 -}}
+{{- $random_min := .Get "random_min" | default 0.0 -}}
+{{- $randomness := float ((.Get "random") | default 0.0) -}}
 
-{{ $top_style := ""}}
-{{ if $letter_spacing }}
-	{{ $top_style = printf "--handwritten-space: %fem;" $letter_spacing | safeCSS }}
-	{{ $top_css_class = printf "%s %s" $top_css_class "handwritten-space" }}
-{{ end }}
 
-<span class="{{ $top_css_class }}" style="{{ $top_style }}">
+{{- if not $text -}}
+  {{- errorf "shortcode text_glitch.html: 'text' argument not found" -}}
+{{- end -}}
 
-{{$output := ""}}
-{{ $chars := split $text "" }}
+{{- $css_class := "handwritten" -}}
+
+{{- $top_css_class := ""}}
+{{- if eq $font 1 -}}
+	{{- $top_css_class = printf "%s %s" $top_css_class "consolas-font" -}}
+{{- else if eq $font 2 -}}
+	{{- $top_css_class = printf "%s %s" $top_css_class "pixel-font" -}}
+{{- else if eq $font 3 -}}
+	{{- $top_css_class = printf "%s %s" $top_css_class "handwritten-font" -}}
+{{- end -}}
+
+{{- $top_style := ""}}
+{{- if $letter_spacing -}}
+	{{- $top_style = printf "--handwritten-space: %fem;" $letter_spacing | safeCSS -}}
+	{{- $top_css_class = printf "%s %s" $top_css_class "handwritten-space" -}}
+{{- end -}}
+
+<span class="{{- $top_css_class -}}" style="{{- $top_style -}}">
+
+{{- $output := "" -}}
+{{- $chars := split $text "" -}}
 {{- range $index, $char := $chars -}}
 
-	{{/*  CREATE HANDWRITEN CSS VARS  */}}
-	{{ $hw_css_vars := slice }}
-	{{ range $i := (seq $STEPS) }}
-		{{ $random_displace_x := math.Rand | mul $offset | mul $fx | math.Ceil }}
-		{{ $random_displace_y := math.Rand | mul $offset | mul $fx | math.Ceil }}
-		{{ $var_x := printf "%s%d:%fpx" $css_vars_basename_x (sub $i 1) $random_displace_x }}
-		{{ $var_y := printf "%s%d:%fpx" $css_vars_basename_y (sub $i 1) $random_displace_y }}
+	{{- /*  CREATE HANDWRITEN CSS VARS  */ -}}
+	{{- $hw_css_vars := slice -}}
+	{{- range $i := (seq $STEPS) -}}
+		{{- $random_displace_x := math.Rand | mul $offset | mul $fx | math.Ceil -}}
+		{{- $random_displace_y := math.Rand | mul $offset | mul $fx | math.Ceil -}}
+		{{- $var_x := printf "%s%d:%fpx" $css_vars_basename_x (sub $i 1) $random_displace_x -}}
+		{{- $var_y := printf "%s%d:%fpx" $css_vars_basename_y (sub $i 1) $random_displace_y -}}
 		
-		{{/*  {{ $random_rotation := math.Rand | mul $rotation | mul 2 }}  */}}
-		{{ $random_rotation := math.Rand | mul 2 | sub 1 | mul $rotation }}
-		{{ $random_rotation = sub $random_rotation (div $random_rotation 2) }}
-		{{ $random_rotation = mul $random_rotation $fx }}
-		{{ $var_rot := printf "%s%d:%fdeg" $css_vars_basename_rotation (sub $i 1) $random_rotation }}
+		{{- /*  {{- $random_rotation := math.Rand | mul $rotation | mul 2 -}}  */ -}}
+		{{- $random_rotation := math.Rand | mul 2 | sub 1 | mul $rotation -}}
+		{{- $random_rotation = sub $random_rotation (div $random_rotation 2) -}}
+		{{- $random_rotation = mul $random_rotation $fx -}}
+		{{- $var_rot := printf "%s%d:%fdeg" $css_vars_basename_rotation (sub $i 1) $random_rotation -}}
 		
-		{{ if $scale_variation }}
-			{{/*  The random scales pivots around 1.0  */}}
-			{{ $random_scale := math.Rand | mul 2 | sub 1 | mul (mul $scale_variation $fx) | add 1.0 }}
-			{{ $var_scale := printf "%s%d:%f" $css_vars_basename_scale (sub $i 1) $random_scale }}
-			{{ $hw_css_vars = $hw_css_vars | append $var_scale }}
-		{{ end }}
+		{{- if $scale_variation -}}
+			{{- /*  The random scales pivots around 1.0  */ -}}
+			{{- $random_scale := math.Rand | mul 2 | sub 1 | mul (mul $scale_variation $fx) | add 1.0 -}}
+			{{- $var_scale := printf "%s%d:%f" $css_vars_basename_scale (sub $i 1) $random_scale -}}
+			{{- $hw_css_vars = $hw_css_vars | append $var_scale -}}
+		{{- end -}}
 
 
-		{{ $hw_css_vars = $hw_css_vars | append $var_x }}
-		{{ $hw_css_vars = $hw_css_vars | append $var_y }}
-		{{ $hw_css_vars = $hw_css_vars | append $var_rot }}
-	{{ end }}
-	{{ $hw_css_vars_string := delimit $hw_css_vars ";" }}
+		{{- $hw_css_vars = $hw_css_vars | append $var_x -}}
+		{{- $hw_css_vars = $hw_css_vars | append $var_y -}}
+		{{- $hw_css_vars = $hw_css_vars | append $var_rot -}}
+	{{- end -}}
+	{{- $hw_css_vars_string := delimit $hw_css_vars ";" -}}
 
 
 	{{if eq $char " "}}
-		{{ $output = printf "%s<span> </span>" ($output | safeHTMLAttr) }}
-	{{ else }}
-		{{/*  Add the randomness to duration  */}}
-		{{ $rand_dur := mul (sub (mul math.Rand 2) -1) $time_variation }}
-		{{ $time_dur := (mul $frame_time $STEPS ) }}
-		{{ $time_dur = add $time_dur $rand_dur }}
-		{{ $duration_p := printf "animation-duration:%fs" $time_dur }}
+		{{- $output = printf "%s<span> </span>" ($output | safeHTMLAttr) -}}
+	{{- else -}}
+		{{- /*  Add the randomness to duration  */ -}}
+		{{- $rand_dur := mul (sub (mul math.Rand 2) -1) $time_variation -}}
+		{{- $time_dur := (mul $frame_time $STEPS ) -}}
+		{{- $time_dur = add $time_dur $rand_dur -}}
+		{{- $duration_p := printf "animation-duration:%fs" $time_dur -}}
 
-		{{ $style_properties := slice $duration_p $hw_css_vars_string}}
-		{{ $non_empty_style_properties := complement (slice "") (slice nil) $style_properties }}
+		{{- $style_properties := slice $duration_p $hw_css_vars_string}}
+		{{- $non_empty_style_properties := complement (slice "") (slice nil) $style_properties -}}
 
-		{{ $css_style := delimit $non_empty_style_properties ";"}}
-		{{ $output = printf "%s<span class='%s' style='%s'>%s</span>" $output $css_class $css_style $char}}
-	{{ end }}
+		{{- $css_style := delimit $non_empty_style_properties ";"}}
+		{{- $output = printf "%s<span class='%s' style='%s'>%s</span>" $output $css_class $css_style $char}}
+	{{- end -}}
 {{- end -}}
 
-{{/*  To avoid whitespaces in HTML  */}}
-{{ $output | safeHTML }}
+{{- /*  To avoid whitespaces in HTML  */ -}}
+{{- $output | safeHTML -}}
 </span>

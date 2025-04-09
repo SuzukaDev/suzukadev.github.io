@@ -1,4 +1,4 @@
-{{/*  
+{{- /*  
 Hides a text until you hover it.
 
 
@@ -9,38 +9,38 @@ blur = (int) Pixels for the blur. Default: 5 (px)
 opacity = (int 0.0 to 1.0) Initial opacity. Default: 1.0
 in_time = (float) The time for the reveal (fade in) effect. Default: .2 (s)
 out_time = (float) The time for the fade out effect. Default: .4 (s)
-*/}}
+*/ -}}
 
-{{ $text := (.Get "text") }}
-{{ $chars := split $text "" }}
-{{/*  {{ $blur := ((.Get "blur") | default 5) }}  */}}
-{{ $blur := (.Get "blur") }}
-{{/*  {{ if eq $blur nil }}  */}}
-{{ if not $blur }}
-	{{ $blur = 4 }}
-{{ end }}
-{{ $fade_in := float ((.Get "in") | default .13) }}
-{{ $fade_out := float ((.Get "out") | default .4) }}
-{{/*  {{ $opacity := (.Get "opacity") | default 1.0 }}  */}}
-{{ $opacity := (.Get "opacity") }}
-{{ if not $opacity }}
-	{{ $opacity = 1.0 }}
-{{ end }}
+{{- $text := (.Get "text") -}}
+{{- $chars := split $text "" -}}
+{{- /*  {{- $blur := ((.Get "blur") | default 5) -}}  */ -}}
+{{- $blur := (.Get "blur") -}}
+{{- /*  {{- if eq $blur nil -}}  */ -}}
+{{- if not $blur -}}
+	{{- $blur = 4 -}}
+{{- end -}}
+{{- $fade_in := float ((.Get "in") | default .13) -}}
+{{- $fade_out := float ((.Get "out") | default .4) -}}
+{{- /*  {{- $opacity := (.Get "opacity") | default 1.0 -}}  */ -}}
+{{- $opacity := (.Get "opacity") -}}
+{{- if not $opacity -}}
+	{{- $opacity = 1.0 -}}
+{{- end -}}
 
-{{ $css_class := "spoiler-text" }}
+{{- $css_class := "spoiler-text" -}}
 
-{{ $blur_property := printf "--spoiler-blur:%dpx" $blur}}
-{{ $fade_in_property := printf "--spoiler-fade-in:%fs" $fade_in}}
-{{ $fade_out_property := printf "--spoiler-fade-out:%fs" $fade_out}}
-{{ $opacity_property := printf "--spoiler-opacity:%f" $opacity}}
-{{ $css_properties := slice $opacity_property $blur_property $fade_in_property $fade_out_property}}
-{{ $css_properties_string := delimit $css_properties ";" }}
-
-
-{{$output := printf "<span class='%s' style='%s;'>%s" $css_class ($css_properties_string) $text }}
+{{- $blur_property := printf "--spoiler-blur:%dpx" $blur}}
+{{- $fade_in_property := printf "--spoiler-fade-in:%fs" $fade_in}}
+{{- $fade_out_property := printf "--spoiler-fade-out:%fs" $fade_out}}
+{{- $opacity_property := printf "--spoiler-opacity:%f" $opacity}}
+{{- $css_properties := slice $opacity_property $blur_property $fade_in_property $fade_out_property}}
+{{- $css_properties_string := delimit $css_properties ";" -}}
 
 
-{{ $output = printf "%s</span>" $output}}
+{{$output := printf "<span class='%s' style='%s;'>%s" $css_class ($css_properties_string) $text -}}
 
-{{/*  To avoid whitespaces in HTML  */}}
-{{ $output | safeHTML }}
+
+{{- $output = printf "%s</span>" $output}}
+
+{{- /*  To avoid whitespaces in HTML  */ -}}
+{{- $output | safeHTML -}}
