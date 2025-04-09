@@ -1,4 +1,4 @@
-{{/*  
+{{- /*  
 Returns only the url for the profile of a site
 
 Use:
@@ -7,15 +7,15 @@ Example:
 {{< get_social_url instagram>}}
 {{< get_social_url INSTAGRAM>}} -> Is not case sensitive
 {{< get_social_url twitter>}}
-  */}}
+  */ -}}
 
-{{ $social_platform := .Get 0 | lower }}
+{{- $social_platform := .Get 0 | lower -}}
 
-{{ $socials := .Site.Data.social_sites }}
-{{ $data := index $socials $social_platform }}
+{{- $socials := .Site.Data.social_sites -}}
+{{- $data := index $socials $social_platform -}}
 
-{{ if not $data }}
-  {{ errorf "Social platform '%s' not found in social_sites.json [at 'get_social_url %s' shortcode]" (.Get 0) (.Get 0) }}
-{{ end }}
+{{- if not $data -}}
+  {{- errorf "Social platform '%s' not found in social_sites.json [at 'get_social_url %s' shortcode]" (.Get 0) (.Get 0) -}}
+{{- end -}}
 
-{{ $data.url }}
+{{- $data.url -}}
