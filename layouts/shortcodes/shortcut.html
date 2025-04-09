@@ -1,4 +1,4 @@
-{{/*  
+{{- /*  
 Shows a shortcut wraped with <kbd></kbd> tags.
 
 Arguments:
@@ -10,39 +10,39 @@ post = (string) Text post-shortcut.
 Usage:
 {{< shortcut "CTRL+ALT+V" >}}
 {{< shortcut keys="CTRL+ALT+V" pre="previous text" post="posterior text" >}}
-*/}}
+*/ -}}
 
-{{ $full_shortcut := or (.Get "keys") (.Get 0) }}
-{{ $join := or (.Get "join") (.Get 1) | default false }}
-{{ $pre_text := .Get "pre" | default "" }}
-{{ $post_text := .Get "post" | default "" }}
+{{- $full_shortcut := or (.Get "keys") (.Get 0) -}}
+{{- $join := or (.Get "join") (.Get 1) | default false -}}
+{{- $pre_text := .Get "pre" | default "" -}}
+{{- $post_text := .Get "post" | default "" -}}
 
-{{ if $join }}
+{{- if $join -}}
 <kbd>{{$full_shortcut}}</kbd>
-{{ else }}
-	{{/*  {{ $output := ""}}  */}}
-	{{/*  {{ $output_slice := slice}}  */}}
-	{{ $init_output := printf "<span class='inline-block'>%s" $pre_text}}
-	{{ $output_slice := slice $init_output}}
-	{{ $keys := split $full_shortcut "+" }}
-	{{ $keys_count := len $keys }}
-	{{ range $index, $key := $keys }}
-		{{/*  <kbd>{{$key}}</kbd>  */}}
-		{{/*  {{$key_tag := printf "<kbd>%s</kbd>" $key }}  */}}
-		{{$key_tag := printf "<kbd class='inline-block'>%s</kbd>" $key }}
-		{{ $output_slice = $output_slice | append $key_tag }}
-		{{if lt $index (sub $keys_count 1 ) }}
-		{{/*  +  */}}
-			{{/*  {{ $output_slice = $output_slice | append "+" }}  */}}
-			{{ $output_slice = $output_slice | append "<span class='inline-block'>+</span>" }}
+{{- else -}}
+	{{- /*  {{- $output := ""}}  */ -}}
+	{{- /*  {{- $output_slice := slice}}  */ -}}
+	{{- $init_output := printf "<span class='inline-block'>%s" $pre_text -}}
+	{{- $output_slice := slice $init_output -}}
+	{{- $keys := split $full_shortcut "+" -}}
+	{{- $keys_count := len $keys -}}
+	{{- range $index, $key := $keys -}}
+		{{- /*  <kbd>{{$key}}</kbd>  */ -}}
+		{{- /*  {{$key_tag := printf "<kbd>%s</kbd>" $key -}}  */ -}}
+		{{$key_tag := printf "<kbd class='inline-block'>%s</kbd>" $key -}}
+		{{- $output_slice = $output_slice | append $key_tag -}}
+		{{if lt $index (sub $keys_count 1 ) -}}
+		{{- /*  +  */ -}}
+			{{- /*  {{- $output_slice = $output_slice | append "+" -}}  */ -}}
+			{{- $output_slice = $output_slice | append "<span class='inline-block'>+</span>" -}}
 			
-		{{ end }}
-	{{ end }}
-	{{/*  {{ $output_slice = $output_slice | append "</span>" }}  */}}
-	{{ $end_output := printf "%s</span>" $post_text}}
-	{{ $output_slice = $output_slice | append $end_output }}
-{{delimit $output_slice "" | safeHTML }}
-{{/*  {{delimit $output_slice "" | safeHTML | markdownify }}  */}}
-{{/*  {{delimit $output_slice "" | markdownify }}  */}}
-{{ end }}
+		{{- end -}}
+	{{- end -}}
+	{{- /*  {{- $output_slice = $output_slice | append "</span>" -}}  */ -}}
+	{{- $end_output := printf "%s</span>" $post_text -}}
+	{{- $output_slice = $output_slice | append $end_output -}}
+{{- delimit $output_slice "" | safeHTML -}}
+{{- /*  {{delimit $output_slice "" | safeHTML | markdownify -}}  */ -}}
+{{- /*  {{delimit $output_slice "" | markdownify -}}  */ -}}
+{{- end -}}
 

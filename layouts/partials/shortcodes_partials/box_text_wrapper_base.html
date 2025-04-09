@@ -1,17 +1,15 @@
-{{ $CLASS := .class }}
-{{ $ICON := .icon_arg | default .default_icon }}
-
-{{ if eq .icon_arg false }}
-	{{ $ICON = "" }}
-{{end}}
-
-{{ $text := .Inner }} 
-
+{{- $CLASS := .class -}}
+{{- $ICON := .icon_arg | default .default_icon -}}
+{{- if eq .icon_arg false -}}
+{{- $ICON = "" -}}
+{{- end -}}
+{{- $text := .Inner -}} 
 {{- $inner_lines := len (split (.Inner | markdownify) "\n") -}} 
-<div class='{{$CLASS}}' data-text="{{$ICON}}">
+<section class='{{- $CLASS -}}' data-text="{{- $ICON -}}">
 {{- if eq $inner_lines 1 -}} 
-<p>{{- $text | markdownify -}}</p>
+	<p>{{- $text | markdownify -}}</p>
 {{- else -}} 
-{{- $text | markdownify -}} 
-{{- end -}} 
-</div>
+	{{- $text | markdownify -}} 
+{{- end -}}
+{{/*  {{- $text | markdownify -}}   */}}
+</section>
