@@ -4,9 +4,9 @@
     {{ range where .Pages "Params.private" "ne" true }}
       {{/*  {{ partial "album-card.html" . }}  */}}
       
-      {{/*  TODO esto debería cambiarlo por un article-card.html o algo así   ---->> HECHO, borrar comentario */}}
+      {{/*  TODO esto debería cambiarlo por un articles/article-card.html o algo así   ---->> HECHO, borrar comentario */}}
       {{/*  <a href="{{ .RelPermalink }}">{{ .Title }}</a>  */}}
-      {{ partial "article-card.html" . }}
+      {{ partial "articles/article-card.html" . }}
       {{/*  <p>{{.Summary}}</p>  */}}
 
 
