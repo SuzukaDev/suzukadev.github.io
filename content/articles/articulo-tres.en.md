@@ -1,10 +1,10 @@
 +++
 title = 'Articulo Tres'
-date = '2025-02-26T21:33:06+01:00'
+date = '2023-01-26T21:33:06+01:00'
 lastmod = '2025-02-26T21:33:06+01:00'
 description = "Article 3 description"
 draft = true
-private = false
+private = true
 tags = ["skate", "fun", "dexter", "wellington", "quiw", "campeon", "zapato", "ameba"]
 # tags = []
 show_right_bar = true
@@ -12,6 +12,10 @@ show_table_of_contents = true
 # article_cover = "second-article.png"
 article_cover = "articulo-tres.png"
 # show_next_and_previous_arrows = false
+# [params]
+featured = true
+featured_description = "Esto es el artículo 3"
+featured_title = "webaa"
 +++
 
 <!-- TODO poner el texto normal, no centrado -->
