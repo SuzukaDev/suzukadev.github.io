@@ -1,4 +1,7 @@
-{{ range where site.Pages.ByDate.Reverse "Params.featured" "=" true }}
+{{- /*  This gets all pages with the featured param (included articles)  */ -}}
+{{- /*  {{ range where site.Pages.ByDate.Reverse "Params.featured" "=" true }}  */ -}}
+{{- /*  This only gets galleries  */ -}}
+{{ range where (where site.Pages.ByDate.Reverse ".Section" "=" "galleries" ) "Params.featured" "=" true }}
   {{ $gallery := partial "get-gallery.html" . }}
   {{ if $gallery }}
     {{ $images := .Resources.ByType "image" }}
