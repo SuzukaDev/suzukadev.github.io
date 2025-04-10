@@ -1,6 +1,6 @@
 +++
 title = 'Articulo Tres'
-date = '2025-02-26T21:33:06+01:00'
+date = '2025-01-26T21:33:06+01:00'
 lastmod = '2025-02-26T21:33:06+01:00'
 description = "Describiendo el artículo 3"
 draft = true
@@ -12,6 +12,8 @@ show_table_of_contents = true
 article_cover = "/imgs/articulo-tres.png"
 # article_cover = "imgs//articulo-tres.png"
 # article_cover = "articulo-tres.png"
+# [params]
+featured = true
 +++
 
 <!-- TODO poner el texto normal, no centrado -->
