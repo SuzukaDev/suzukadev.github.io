@@ -4,11 +4,12 @@
   {{ if .Params.featured_title }}
     {{ $title = .Params.featured_title }}
   {{ end }}
-  <h3>{{ $title }}</h3>
+  {{/*  <h3>{{ $title }}</h3>  */}}
+  <h3 class="hover-underline-animation">{{ $title }}</h3>
   {{/*  <h3>{{.Date}}</h3>  */}}
-  {{/*  {{ if .params.featured_description }}  */}}
-    {{/*  <p>{{ .Params.featured_description }}</p>  */}}
-  {{/*  {{ end }}  */}}
+  {{ if .Params.featured_description }}
+    <p>{{ .Params.featured_description }}</p>
+  {{ end }}
   <time datetime="{{ .Date }}" class="centered-text consolas-font">
     {{- if ne .Date .Lastmod }}
       {{/*  Shows edit icon (pencil) if it was edited */}}
