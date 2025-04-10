@@ -8,43 +8,86 @@ show_table_of_contents = true
 tags = ["art"]
 # [params]
 featured = true
-featured_description = "Esto va sobre el segundo artículo en la pagina en inglés"
+featured_description = "Testing boxes and inline shortcodes"
 
 # article_cover = "t.webp"
 +++
-prime chachi <kbd>Jean Cucu</kbd> sdf jhfgkjsdfgkj hsdfkjg hsdigh eiurhg sdhfgk jshfgu iwhe riuhsdfgh iuehrg jsdhfkg sdkfjg h jfkghsdkjfghksjdfhgkjsdfgkjh sdkjfgh ksjdhfgkjsdfkjghskd jfhgksj dhfgksdfg
 
-{{< youtube id="5RfqB76eHTQ" autoplay=false mute=true >}}
+aaa
 
+hola asdfhkjhf {{< text_glitch text="CTRL+ALT+T" >}} asdf
 
+hola asdfhkjhf {{< shortcut "CTRL+ALT+T" >}} asdf
 
-Jejejejeje
-
-Indent?
-
-# NEW
-{{< youtube id="5RfqB76eHTQ" autoplay=false mute=true >}}
+wow 
 
 
-joder tutube
-<div style="height:100%; width: 100%;">
-{{< youtube id="5RfqB76eHTQ" autoplay=false mute=true >}}
+{{< box_green >}}
 
-{{< youtube "5nf24no8dKU" >}}
-</div>
+hola asdfhkjhf {{< shortcut "CTRL+ALT+T" >}} asdf
 
-{{< box_error >}}
-verdeeee asdfas
-df 
-asdf
+hola twitter {{< get_social_url twitter true >}} jeje
 
-as d
-fasd asd 
+hola twitter {{< get_social twitter false >}} jeje
+
+hola twitter {{< get_social twitter true >}} jeje
+
+< >
+
+aa
+
+palitos Vamos a ver {{< text_rotate text="holaaa amigo" >}} Espero que sí
+
+Vamos a ver {{< text_wavy text="holaaa amigo" >}} Espero que sí
+
+Vamos a ver {{< text_strong text="holaaa amigo" >}} Espero que sí
+
+Vamos a ver {{< text_spoiler text="holaaa amigo" >}} Espero que sí
+
+Vamos a ver {{< text_glitch text="holaaa amigo" >}} Espero que sí
+
+Vamos a ver {{< text_handwritten text="holaaa amigo" >}} Espero que sí
+
+Vamos a ver {{< text_shimmer text="holaaa amigo" >}} Espero que sí
+
+con % Vamos a ver {{% text_shimmer text="holaaa amigo" %}} Espero que sí
 
 {{< youtube "5nf24no8dKU" >}}
 
 
 adsf
+{{< /box_green >}}
+
+
+{{% box_green %}}
+
+Porcentajesss
+
+
+Vamos a ver{{< text_shimmer text="holaaa" >}}Espero que sí
+
+con % Vamos a ver{{% text_shimmer text="holaaa" %}}Espero que sí
+
+{{< youtube "5nf24no8dKU" >}}
+
+
+adsf
+{{% /box_green %}}
+
+{{< box_error >}}
+	Con < >
+
+	Vamos a ver {{< text_shimmer text="holaaa" >}} Espero que sí
+
+	con % Vamos a ver {{% text_shimmer text="holaaa" %}} Espero que sí
+
+	as d
+	fasd asd 
+
+	{{< youtube "5nf24no8dKU" >}}
+
+
+	adsf
 {{< /box_error >}}
 
 {{< box_green >}}
@@ -252,3 +295,29 @@ Quiero que vaya bien
 
 
 Hubo vida antes del artículo 3.
+
+
+prime chachi <kbd>Jean Cucu</kbd> sdf jhfgkjsdfgkj hsdfkjg hsdigh eiurhg sdhfgk jshfgu iwhe riuhsdfgh iuehrg jsdhfkg sdkfjg h jfkghsdkjfghksjdfhgkjsdfgkjh sdkjfgh ksjdhfgkjsdfkjghskd jfhgksj dhfgksdfg
+
+{{< youtube id="5RfqB76eHTQ" autoplay=false mute=true >}}
+
+
+
+Jejejejeje
+
+Indent?
+
+# NEW
+{{< youtube id="5RfqB76eHTQ" autoplay=false mute=true >}}
+
+
+joder tutube
+<div style="height:100%; width: 100%;">
+{{< youtube id="5RfqB76eHTQ" autoplay=false mute=true >}}
+
+{{< youtube "5nf24no8dKU" >}}
+</div>
+
+con % Vamos a ver {{% text_shimmer text="holaaa" %}} Espero que sí
+
+con < Vamos a ver {{< text_shimmer text="holaaa" >}} Espero que sí
