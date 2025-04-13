@@ -165,7 +165,7 @@ $article-card-hover-brightness: 30%;
 		transform: rotateZ(var(--rand-rotation, 0));
 		transition: transform .4s;
 		& .image-container {
-			filter: brightness(50%) blur(3px);
+			filter: brightness(#{$article-card-hover-brightness}) blur(3px);
 		}
 
 		& .hover-underline-animation::after {
