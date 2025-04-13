@@ -82,7 +82,14 @@ it CAN has its own resources, and will look automatically for an image with the 
 			{{ end }}
 		{{ end }}
 	{{ else }}
-		{{ $cover_image_path = $DEFAULT_IMAGE_PATH }}
+		{{- /*  When is a Regular Page  */ -}}
+		{{- /*  {{ $cover_image_path = $DEFAULT_IMAGE_PATH }}  */ -}}
+		{{ $first_image_path := partial "get-first-image-in-markdown.html" . }}
+		{{ if $first_image_path }}
+			{{ $cover_image_path = $first_image_path }}
+		{{ else }}
+			{{ $cover_image_path = $DEFAULT_IMAGE_PATH }}
+		{{ end }}
 	{{ end }}
 {{ end }}
 
