@@ -1,9 +1,10 @@
 +++
 title = 'Article in contenedor in its own -awesome- folder'
 date = '2025-02-26T21:13:58+01:00'
-description = "The freaking awesome -and wholesome- article in contenedor"
+description = "The freaking awesome -and wholesome- article in contenedor jeje is the best I love it wow mola zoo pancho"
 draft = true
 tags = ["dexter"]
+featured = true
 # article_cover = "zcover.webp"
 +++
 
@@ -26,6 +27,7 @@ El caballo de troya, metido en una carpeta para pasar desapercibido y tener orga
 # Foto bonita del pubg
 <!-- ![alt text](/content/articles/contenedor/pubg.png) -->
 <!-- ![alt text](/content/articles/contenedor/pubg.png) -->
+eh?
 ![joder](pubg.png)
 
 <!-- ![asf](pubg.png) -->

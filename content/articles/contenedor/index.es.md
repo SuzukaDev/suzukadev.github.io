@@ -5,6 +5,8 @@ description = "El geníal -y alucinante- artículo contenedor"
 draft = true
 tags = ["dexter"]
 # article_cover = "zzzcover.png"
+featured = true
+
 +++
 
 # Comenzando el mítico Artículo contenedor h1
