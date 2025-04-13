@@ -1,0 +1,5 @@
+<time datetime="{{.Date}}" class="article-time-simple">
+    {{- /*  {{- $date := dateFormat "Jan" .Date -}}  */ -}}
+    {{- /*  <h1 class="day">{{ dateFormat "2 Jan 2006" .Date }}</h1>  */ -}}
+    {{ dateFormat "2 Jan 2006" .Date }}
+</time>
