@@ -1,0 +1,11 @@
+<time datetime="{{.Date}}" class="article-time-box">
+    {{- /*  {{- $t := .Date.Format "2 Jan 2006" -}}  */ -}}
+    {{- /*  {{- $month_abreviation := .Date.Format "Jan" -}}  */ -}}
+    {{- /*  {{- $month_abreviation := .Date.Format "Jan" -}}  */ -}}
+    {{- /*  INFO  https://stackoverflow.com/questions/71387017/hugo-how-to-set-date-language  */ -}}
+    {{- $month_abreviation := dateFormat "Jan" .Date -}}
+    <h1 class="day">{{.Date.Day }}</h1>
+    {{- /*  <h1>{{.Date.Month }}</h1>  */ -}}
+    <h3 class="month">{{$month_abreviation }}</h3>
+    <h3 class="year">{{.Date.Year }}</h3>
+</time>
