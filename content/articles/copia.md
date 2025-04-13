@@ -1,5 +1,5 @@
 +++
-title = 'Second Article'
+title = 'SZK Pixel Art Suite Manual'
 date = '2025-02-26T21:13:58+01:00'
 description = ""
 draft = true

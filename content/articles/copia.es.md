@@ -16,7 +16,6 @@ featured_description = "Testing boxes and inline shortcodes"
 aaa
 
 
-
 ![](/en/articles/second-article.png)
 
 hola asdfhkjhf {{< text_glitch text="CTRL+ALT+T" >}} asdf
