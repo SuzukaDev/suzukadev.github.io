@@ -4,6 +4,22 @@
 	box-shadow: #{$x} #{$y} #{$blur} #{$spread} #{$color} !important;
 }
 
+.accent-color{
+	color: var(--hover-color);
+}
+
+.hover-accent-color:hover{
+	color: var(--hover-color);
+}
+
+.hover-underline:hover{
+	text-decoration: underline;
+}
+
+.super-bold{
+	font-weight: 900;
+}
+
 .non-selectable {
 	display: inline-block;
 	-webkit-touch-callout: none; /* iOS Safari */
