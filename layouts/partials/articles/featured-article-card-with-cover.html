@@ -1,8 +1,8 @@
 {{$ANGLE := 20}}
 {{$rand_value := sub (mul math.Rand $ANGLE) (div $ANGLE 2) }}
-<a class="featured-article-big hover-underline-animation" href="{{.RelPermalink}}">
+<article class="featured-article-big hover-underline-animation">
+    <a class="hover-border-bloom" href="{{.RelPermalink}}">
 {{- /*  <a class="featured-article-big hover-underline-animation" href="{{.RelPermalink}}" style="--rand-rotation:{{$rand_value}}deg;">  */ -}}
-    <article class="hover-border-bloom">
         <div class="image-container">
             {{- /*  <img style="height: 300px; width:100px;" url="{{$article_cover_url}}">  */ -}}
             {{- /*  <img class="ls-is-cached lazyloaded card__img" style="height: 300px; width:100px;" src="{{$article_cover_url}}">  */ -}}
@@ -61,5 +61,5 @@
             </time>  */ -}}
 
         </div>
-    </article>
-</a>
+    </a>
+</article>
