@@ -1,0 +1,90 @@
+
+.card{
+	transition: all 1200ms;
+
+	// & figure img{
+	// 	transition: all 1s;
+	// 	// margin-top: 100px;
+	// 	// transition: all 200ms ease-in-out;
+	// }
+	
+	& figure {
+		box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.75);
+		overflow: hidden;
+		// transition: all 200ms;
+		img{
+			transition: all .5s;
+			// margin-top: 100px;
+			// transition: all 200ms ease-in-out;
+		}
+	}
+
+	// &:hover figure {
+	// 	// transition: all 100ms;
+	// 	transition: all 2s;
+	// 	// transform: scale(1.03);
+	// 	// filter: blur(3px);
+	// 	img {
+	// 		// transition: all 100ms;
+	// 		transition: all 1.5s;
+	// 		transform: scale(1.1);
+	// 		// transform: scale(1.1) rotateZ(10deg);
+	// 		// filter: blur(3px);
+	// 		// filter: brightness(123%) contrast(167%);;
+	// 		filter: brightness(107%) contrast(107%);
+			
+	// 	}
+	// }
+
+	&:hover {
+		// transition: all 200ms;
+		// transition: transform 200ms;
+		// transition: box-shadow 20000ms;
+		// transform: translateY(-10px);
+		// transform: translateY(-5px);
+		// transform: scale(1.05);
+		div, p{
+			transition: color 200ms;
+			color: var(--hover-color);
+		}
+
+		figure{
+			transition: all .2s;
+
+			// box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.95);
+			box-shadow: 0px 5px 11px 0px rgba(0,0,0,0.95);
+			img {
+				// transition: all 100ms;
+				// transition: all .5s;
+				transition: all .23s ease;
+				// transform: scale(1.1);
+				transform: scale(1.23);
+				// transform: scale(1.1) rotateZ(10deg);
+				// filter: blur(3px);
+				// filter: brightness(123%) contrast(167%);;
+				// filter: brightness(107%) contrast(107%);
+				// filter: brightness(107%) contrast(107%) grayscale(100%) ;
+				// filter: brightness(107%) contrast(107%) saturate(150%) ;
+				// filter: brightness(107%) contrast(107%) saturate(120%) ;
+				filter: brightness(107%) contrast(107%) saturate(113%) ;
+				
+			}
+		}
+
+	}
+
+}
+
+.dark .card figure{
+	transition-duration: .7s;
+}
+.dark .card:hover{
+	div h2{
+		transition-duration: .1s;
+		@extend .bloom-text;
+	}
+	figure{
+		transition-duration: .1s;
+		@extend .bloom-box-shadow;
+	}
+}
