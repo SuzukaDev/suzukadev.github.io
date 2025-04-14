@@ -16,6 +16,7 @@ article_cover = "articulo-tres.png"
 featured = true
 featured_description = "Esto es el artículo 3"
 featured_title = "webaa"
+# featured_tags = ["zapato"]
 +++
 
 <!-- TODO poner el texto normal, no centrado -->
