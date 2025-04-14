@@ -1771,37 +1771,6 @@ nav.categories ul li a{
 	}
 }
 
-// DELETE NOT USED
-.featured-article-tag{
-	// position: relative;
-	border-radius: 999999px;
-	// padding-left: 10px;
-	// padding-right: 10px;
-	// margin-top: 5px;
-	// text-wrap: nowrap;
-
-	display: inline-block; /* Ensures proper spacing */
-
-	border: 2px solid var(--border);
-
-	-webkit-box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.75);
-	box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.75);
-
-	transition: all 500ms;
-
-
-	&:hover {
-		color: var(--hover-color);
-		// border: 2px solid var(--hover-color);
-		// cursor: pointer;
-		// -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
-		// -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
-		// box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
-
-		transition-duration: 40ms;
-	}
-}
 
 .dark .article-tag:hover{
 	$color-mix: darken($main_color, 50%);

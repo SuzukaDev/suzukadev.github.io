@@ -368,32 +368,6 @@ $article-card-hover-brightness: 30%;
 	}
 }
 
-// DELETE NOT USED
-
-// .tag-container {
-// 	display: flex;
-// 	flex-wrap: wrap;
-// 	gap: 0.5rem; /* optional: adds spacing between tags */
-//   }
-
-//   .featured-articles-container::after, .featured-articles-container::before {
-// 	content: none !important;
-// 	display: none !important;
-//   }
-//   .featured-article-big::after, .featured-article-big::before {
-// 	content: none !important;
-// 	display: none !important;
-//   }
-  
-// a.featured-article-tag {
-// 	display: inline-block; /* or block, if needed */
-// 	background-color: #f3f3f3; /* for visibility */
-// 	padding: 0.2rem 0.5rem;
-// 	border-radius: 4px;
-// 	font-size: 0.875rem;
-// 	text-decoration: none;
-// 	color: #333;
-// }
 
 .featured-articles-container{
 	display: flex;
