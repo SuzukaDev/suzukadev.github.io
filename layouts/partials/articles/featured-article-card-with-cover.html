@@ -62,4 +62,36 @@
 
         </div>
     </a>
+
+    {{- /*  REFACTOR  */ -}}
+    {{- /*  TAGS  */ -}}
+    {{ $tags := .Params.tags | first 3 }}
+    {{ if .Params.featured_tags }}
+        {{- range $i, $tag := .Params.featured_tags -}}
+            {{ if not (in $.Params.tags $tag ) }}
+                {{- errorf "Tag '%s' in 'featured_tags' at page '%s' not found in page tags. You can only feature tags that are present in .Params.tags" . $.Title -}}
+            {{ end }}
+        {{ end }}
+        {{ $tags = .Params.featured_tags }}
+    {{ end }}
+    {{ if $tags }}
+        <div class="tag-container">
+        {{- /*  <p>{{ delimit $tags ", #" }}</p>  */ -}}
+        {{ $lastIndex := sub (len $tags) 1 }}
+        {{ range $index, $tag := $tags }}
+        {{- /*  <a class="article-tag featured-tag consolas-font" href="{{absLangURL "tags/"}}{{$tag}}">{{- $tag -}}</a>  */ -}}
+
+            {{ $transition_delay := mul $index 0.07 }}
+            {{- /*  <span>  */ -}}
+                <a style="--transition-delay: {{$transition_delay | safeCSS }}s" class="article-tag featured-tag consolas-font" href="{{absLangURL "tags/"}}{{$tag}}">#{{- $tag -}}</a>
+                {{- /*  <a style="transition-delay: {{$transition_delay | safeCSS }}s" class="article-tag featured-tag consolas-font" href="{{absLangURL "tags/"}}{{$tag}}">{{- $tag -}}</a>  */ -}}
+            {{- /*  </span>  */ -}}
+
+            {{- /*  <a class="featured-article-tag" href="{{absLangURL "tags/"}}{{$tag}}">{{- $tag -}}</a>  */ -}}
+            {{- /*  <span class="featured-article-tag"><a class="featured-article-tag" href="{{absLangURL "tags/"}}{{$tag}}">{{- $tag -}}</a></span>  */ -}}
+            {{- /*  <a class="featured-article-tag" href="#"> {{- $tag -}} </a>  */ -}}
+            {{- /*  <p></p>  */ -}}
+        {{ end }}
+        </div>
+    {{ end }}
 </article>
