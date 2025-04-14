@@ -5,6 +5,7 @@ description = ""
 lastmod = '{{ .Date }}'
 # draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
+# tags = [""]
 # # -------- DISPLAY OPTIONS --------
 # show_breadcrumbs = false
 # show_author = false
@@ -21,4 +22,6 @@ show_right_bar = true
 # featured = true # if true, the article will be featured in the index page.
 # featured_title = '{{ replace .File.ContentBaseName "-" " " | title }}' # if set, it will use this as the title in the featured card. If not, it will use the article's title.
 # featured_description = "" # if set, the article will use this description in the featured card. If not, it will use the article's description.
+# featured_tags = [""] # if set, it will only feature the tags in this array (useful to display only some of the tags). Note: Tags must match the tag in .Params.tags
+
 +++
