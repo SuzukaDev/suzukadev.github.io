@@ -119,6 +119,7 @@ $article-card-hover-brightness: 30%;
 	// height: fit-content;
 	& time{
 		color: var(--text-2);
+		z-index: 1;
 		// height: 100%;
 		// display: inline-block;
 		// position: absolute;
