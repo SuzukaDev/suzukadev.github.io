@@ -6,14 +6,22 @@
 
     {{ end }}  */}}
 
-
+      {{- /*  REFACTOR tags and private  */ -}}
       {{range $name, $taxonomy := .Site.Taxonomies.tags}} 
-        {{ $cnt := .Count }}
+        {{- /*  This is wrong (it also included in the count private pages)  */ -}}
+        {{- /*  {{ $cnt := .Count }}  */ -}}
+        
+        {{- /*  Non private articles  */ -}}
+        {{ $articles_with_tag_public := where (where $taxonomy.Pages ".Params.private" "ne" true) ".Section" "eq" "articles"}}
+        {{ $cnt := len $articles_with_tag_public }}
+
         {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
           {{/*  <div class="tagbutton">  */}}
           {{/*  <a class="article-tag" href={{ .RelPermalink }} title="All pages with tag <i>{{$name}}</i>">{{$name}}</a>  */}}
           {{/*  <sup>{{$cnt}}</sup>  */}}
-          <a class="article-tag big-article-tag" href={{ .RelPermalink }} title="All pages with tag <i>{{$name}}</i>"><span class="center-text">{{$name}}<sup class="tag-count">{{$cnt}}</sup></span></a>
+          {{ if gt $cnt 0 }}
+            <a class="article-tag big-article-tag" href={{ .RelPermalink }} title="All pages with tag <i>{{$name}}</i>"><span class="center-text">{{$name}}<sup class="tag-count">{{$cnt}}</sup></span></a>
+          {{ end }}
           {{/*  </div>  */}}
         {{end}}
     {{end}}
