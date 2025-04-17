@@ -6,21 +6,20 @@
 
     {{ end }}  */}}
 
-      {{- /*  REFACTOR tags and private  */ -}}
-      {{range $name, $taxonomy := .Site.Taxonomies.tags}} 
+      {{range $tag_name, $taxonomy_pages := .Site.Taxonomies.tags}} 
         {{- /*  This is wrong (it also included in the count private pages)  */ -}}
         {{- /*  {{ $cnt := .Count }}  */ -}}
         
         {{- /*  Non private articles  */ -}}
-        {{ $articles_with_tag_public := where (where $taxonomy.Pages ".Params.private" "ne" true) ".Section" "eq" "articles"}}
+        {{ $articles_with_tag_public := where (where $taxonomy_pages.Pages ".Params.private" "ne" true) ".Section" "eq" "articles"}}
         {{ $cnt := len $articles_with_tag_public }}
 
-        {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+        {{ with $.Site.GetPage (printf "/tags/%s" $tag_name) }}
           {{/*  <div class="tagbutton">  */}}
-          {{/*  <a class="article-tag" href={{ .RelPermalink }} title="All pages with tag <i>{{$name}}</i>">{{$name}}</a>  */}}
+          {{/*  <a class="article-tag" href={{ .RelPermalink }} title="All pages with tag <i>{{$tag_name}}</i>">{{$tag_name}}</a>  */}}
           {{/*  <sup>{{$cnt}}</sup>  */}}
           {{ if gt $cnt 0 }}
-            <a class="article-tag big-article-tag" href={{ .RelPermalink }} title="All pages with tag <i>{{$name}}</i>"><span class="center-text">{{$name}}<sup class="tag-count">{{$cnt}}</sup></span></a>
+            <a class="article-tag big-article-tag" href={{ .RelPermalink }} title="All pages with tag <i>{{$tag_name}}</i>"><span class="center-text">{{$tag_name}}<sup class="tag-count">{{$cnt}}</sup></span></a>
           {{ end }}
           {{/*  </div>  */}}
         {{end}}
