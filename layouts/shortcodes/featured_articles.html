@@ -1,0 +1,36 @@
+{{- /*  
+Displays article cards.
+
+
+Arguments:
+articles = (string) Articles file names separated with a COMA. Eg: articles="article1, illustration-process"
+
+*/ -}}
+
+
+{{ $articles := or (.Get 0) (.Get "articles") }}
+{{ $articles_array := slice }}
+{{- $articles_paths_array := split $articles "," -}}
+{{ range $index, $article_path := $articles_paths_array }}
+	{{ $article_path = trim $article_path " "}}
+	{{ $_article := $.Site.GetPage $article_path }}
+	{{ if not $_article }}
+		{{ errorf "at SHORTCODE featured_articles: Article '%#v' not found at '%s' (%s)" $article_path $.Page.Title $.Page.Path }}
+	{{ else }}
+		{{ $articles_array = $articles_array | append $_article }}
+	{{ end }}
+{{ end }}
+
+
+
+{{ $articles_array = sort $articles_array ".Date" "desc" }}
+
+
+<hgroup class="featured-articles-container">
+    <h1>Test featured articles</h1>
+    <section>
+		{{ range $index, $page := $articles_array }}
+	        {{ partial "articles/article-card.html" $page }}
+		{{ end }}
+    </section>
+</hgroup>
