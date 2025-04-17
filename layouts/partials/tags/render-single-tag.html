@@ -3,7 +3,7 @@
 <h1>source = {{$source}}</h1>  */}}
 
 <section class="galleries">
-  {{ range where .Pages "Params.private" "ne" true }}
+  {{ range where (where .Pages "Params.private" "ne" true) ".Section" "eq" "articles" }}
     {{/*  {{ partial "album-card.html" . }}  */}}
     {{ partial "articles/article-card.html" . }}
     {{/*  {{ partial "articles/articles/article-card.html" . }}  */}}
@@ -13,14 +13,15 @@
 {{/*  Galeries with the same tag  */}}
 {{ if .Site.Params.show_galeries_with_same_article_tag }}
   {{ $galleries_with_tag := partial "utils/get-galleries-with-tag" (dict "tag" .Title)}}
-  {{ if gt (len $galleries_with_tag) 0 }}
+  {{ $galleries_with_tag_not_private := where $galleries_with_tag ".Params.private" "ne" "true" }}
+  {{ if gt (len $galleries_with_tag_not_private) 0 }}
     <hgroup>
       {{/*  <h1>{{len $galleries_with_tag}} galerias con el tag '{{.Title}}'</h1>  */}}
       <h2>{{ T "albumWithTagCount" (dict "count" (len $galleries_with_tag) "tag" .Title) | safeHTML}}</h2>
       {{/*  <h1>{{ T "relatedArticles" }}</h1>  */}}
     </hgroup>
     <section class="galleries">
-      {{ range $galleries_with_tag}}
+      {{ range $galleries_with_tag_not_private}}
         {{ partial "album-card" . }}
         {{/*  <h1>{{.Title}}</h1>  */}}
       {{ end }}
