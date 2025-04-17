@@ -48,6 +48,7 @@ defaultContentLanguageInSubdir = true
 unsafe= true
 [params]
   articles_author = 'Suzuka Ka'
+  articles_card_type = 2 # options: 1 (simple) or 2 (with more info)
   is_debug = false # Set to false for relase
   # is_debug = true
 

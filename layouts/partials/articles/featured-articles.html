@@ -68,17 +68,22 @@ If the user don't want it to appear in the feature, they always can remove the f
 {{ if gt (len $featured_albums) 0 }}
 	{{/*  <section class="galleries">  */}}
 	{{/*  <section class="featured-articles-container">  */}}
+    {{- /*  TODO  */ -}}
+    {{- /*  REFACTOR
+    rename "featured-articles-container" a... bueno tal vez el nombre está bien
+      */ -}}
 	<hgroup class="featured-articles-container">
     {{/*  <hgroup>  */}}
-      <h2>{{ T "featuredArticles" }}</h2>
+    <h2>{{ T "featuredArticles" }}</h2>
     <section>
 		{{ range $featured_albums }}
 			{{/*  {{ partial "album-card.html" . }}  */}}
       {{/*  <a class="category-tag" href="{{.RelPermalink}}">  */}}
         {{- /*  {{ partial "articles/featured-article-card.html" . }}  */ -}}
-        {{ partial "articles/featured-article-card-with-cover.html" . }}
+        {{- /*  {{ partial "articles/article-card-complex.html" . }}  */ -}}
+        {{ partial "articles/article-card.html" . }}
       {{/*  <p>Article title:  {{.Title}}</p>  */}}
 		{{ end }}
-	</section>
-    </hgroup>
+    </section>
+  </hgroup>
 {{ end }}
