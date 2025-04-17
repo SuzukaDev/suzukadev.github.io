@@ -44,6 +44,8 @@
                 {{- /*  <p class="description">{{ .Params.featured_description }}</p>  */ -}}
                 <p class="description" title="{{ $description }}">{{ $description }}</p>
                 {{- /*  <p class="legible-text-shadow">{{ .Params.featured_description }}</p>  */ -}}
+            {{ else }}
+                <p class="description empty-description"> <span class="empty-description">{{ T "read" | upper }}</span></p>
             {{ end }}
             {{- /*  <time datetime="{{ .Date }}" class="centered-text consolas-font">
                 {{- if ne .Date .Lastmod }}  */ -}}
