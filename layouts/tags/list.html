@@ -4,11 +4,28 @@
   <hgroup>
     {{/*  Show total articles in tag's title/name  */}}
     {{$tag_count := ""}}
+    {{ $tags_with_at_least_one_page_public := 0 }}
     {{ if eq .Kind "taxonomy" }}
-      {{$tag_count = len .Site.Taxonomies.tags }}
+      {{- /*  This takes into account tags that may have all its articles private (so they won't display when clicking the tag)  */ -}}
+      {{- /*  {{$tag_count = len .Site.Taxonomies.tags }}  */ -}}
+
+      {{- /*  This only takes into account for the count the tags that AT LEAST has one public article  */ -}}
+      {{ range $tag, $pages_array := .Site.Taxonomies.tags }}
+        {{$non_private_pages := where $pages_array.Pages ".Params.private" "ne" true }}
+        {{$articles_with_non_private_pages := where $non_private_pages ".Section" "eq" "articles" }}
+        {{ if gt (len $articles_with_non_private_pages) 0}}
+          {{ $tags_with_at_least_one_page_public = add $tags_with_at_least_one_page_public 1 }}
+        {{ end }}
+      {{ end }}
+      {{$tag_count = $tags_with_at_least_one_page_public }}
+
     {{ else if eq .Kind "term" }}
-      {{ $articles_with_tag := where .Site.RegularPages "Params.tags" "intersect" (slice (.Title | lower)) }}
-      {{$tag_count = len $articles_with_tag }}
+      {{- /*  {{ $articles_with_tag := where .Site.RegularPages "Params.tags" "intersect" (slice (.Title | lower)) }}  */ -}}
+      {{- /*  {{$tag_count = len $articles_with_tag }}  */ -}}
+      {{ $tag_name := .Title | lower }}
+      {{ $pages_with_tag := .Pages }}
+      {{ $public_articles_with_tag := where (where $pages_with_tag ".Params.private" "ne" true) ".Section" "eq" "articles" }}
+      {{ $tag_count = len $public_articles_with_tag }}
     {{ end }}
     <h1 class="accent-color">#{{ .Title }} <sup class="text2-color">{{$tag_count}}</sup></h1>
   </hgroup>
