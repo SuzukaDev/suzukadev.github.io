@@ -1,17 +1,17 @@
 {{- /*  
-Displays article cards.
+Displays albums categories.
 
 
 Arguments:
-0 articles = (String) Articles file names separated with a COMA. Eg: articles="article1, illustration-process"
+0 categories = (String) Articles file names separated with a COMA. Eg: articles="art, digital, traditional, 3d"
 1 title = (String). Add a header title above the articles. Default: (empty)
 2 h = (int) Type of header for the tile (1 for h1, 2 for h2, 3 for h3, etc.). Default: 2 (h2)
 3 align = (String) Text align of the header (options: "left", "right", "center"). Default: "center"
 
 Use example:
-{{< featured_articles "my-first-article, another-article" >}}
-{{< featured_articles "my-first-article, another-article" "My favourite articles" 3 "left" >}}
-{{< featured_articles title="my-first-article, another-article" title="My favourite articles" align="right" >}}
+{{< album_categories "3d-art, 2d-art" >}}
+{{< album_categories "3d-art, 2d-art" "My favourite albums" 3 "left" >}}
+{{< album_categories title="3d-art, 2d-art" title="My favourite albums" align="right" >}}
 */ -}}
 
 
