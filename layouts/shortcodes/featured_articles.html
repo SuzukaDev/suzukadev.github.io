@@ -27,6 +27,8 @@ Use example:
 	{{- $_article := $.Site.GetPage $article_path -}}
 	{{- if not $_article -}}
 		{{- errorf "at SHORTCODE featured_articles: Article '%#v' not found at '%s' (%s)" $article_path $.Page.Title $.Page.Path -}}
+	{{- else if ne $_article.Section "articles" }}
+		{{- errorf "at SHORTCODE featured_articles: Page '%#v' (at '%s' (%s)) is not an article, is a '%s'" $article_path $.Page.Title $.Page.Path $_article.Section -}}
 	{{- else }}
 		{{- $articles_array = $articles_array | append $_article -}}
 	{{- end -}}
