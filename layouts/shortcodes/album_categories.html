@@ -14,16 +14,11 @@ Use example:
 {{< album_categories title="3d-art, 2d-art" title="My favourite albums" align="right" >}}
 */ -}}
 
-
 {{- $categories := or (.Get 0) (.Get "categories") -}}
 {{- $title := or (.Get 1) (.Get "title") -}}
 {{- $header_number := or (.Get 2) (.Get "h") | default 2 -}}
 {{- $text_align := or (.Get 3) (.Get "align") | default "center" -}}
 
-{{- $header_tag := printf "h%d" $header_number -}}
-
-
-{{- $categories_names := slice -}}
 
 {{- if not $categories -}}
 	{{- $categories = $.Site.Taxonomies.categories -}}
@@ -32,108 +27,32 @@ Use example:
 	{{- $input_categories := split $categories "," -}}
 	{{- $tags_input := slice -}}
 
+	{{- /*  Makes an array with all the categories names (for later checking if there are categories that do not exist in the input) */ -}}
 	{{- $categories_names := slice -}}
 	{{- range $category_name, $value := $.Site.Taxonomies.categories -}}
 		{{- $categories_names = $categories_names | append $category_name -}}
 	{{- end -}}
 
+	{{- /*  Check for error if there are different categories  */ -}}
 	{{- $different_categories := complement $categories_names $input_categories -}}
 	{{- if $different_categories -}}
 		{{- errorf "SHORTCODE album_categories: at '%s (%s)'; %#v does not exist in taxonomy 'categories'" $.Page.Title $.Page.Path $different_categories -}}
 	{{- end -}}
 
-
-
-	{{- /*  {{- range .Site.Taxonomies.categories -}}  */ -}}
 	{{- range $category_name, $value := $.Site.Taxonomies.categories -}}
 		{{- if in $input_categories $category_name -}}
-			{{- /*  {{- $tags_input = $tags_input | append . -}}  */ -}}
-			{{- /*  {{- $tags_input = $tags_input | append $category_name -}}  */ -}}
-			{{- $term_page := $.Site.GetPage (printf "categories/%s" $category_name) }}
+			{{- $term_page := $.Site.GetPage (printf "categories/%s" $category_name) -}}
 			{{- $tags_input = $tags_input | append $term_page -}}
-		{{- /*  {{- else -}}  */ -}}
-		{{- /*  {{- else if not (in $.Site.Taxonomies.categories $category_name) -}}  */ -}}
-			{{- /*  {{- errorf "SHORTCODE album_categories: at '%s (%s)'; '%#v' does not exist in taxonomy 'categories'" $.Page.Title $.Page.Path $category_name -}}  */ -}}
 		{{- end -}}
 	{{- end -}}
-	{{- /*  {{- end -}}
-	{{- range $category_name, $value := .Site.Taxonomies.categories -}}
-		{{- $categories_names = $categories_names | append $category_name -}}
-	{{- end -}}
-	<p> input {{$input_categories}}</p>
-	{{- $different_categories := complement $categories_names $input_categories -}}
-	<pre>$different_categories = {{- debug.Dump $different_categories -}}</pre>
-	{{- if $different_categories -}}
-		{{- errorf "SHORTCODE album_categories: at '%s (%s)'; %#v does not exist in taxonomy 'categories'" $.Page.Title $.Page.Path $different_categories -}}
-	{{- end -}}
 
-	{{ $categories_terms := slice }}
-	{{ range $input_categories }}
-		<p>cat loop: {{.}}</p>
-		{{ $_category_name := . }}
-		{{ $_category_term := index $.Site.GetPage $_category_name }}
-		{{ $categories_terms = $categories_terms | append $_category_term }}
-	{{ end }}  */ -}}
-
-
-	{{ $categories = $tags_input }}
-
-	{{- /*  {{ $categories = $categories_terms }}  */ -}}
-	{{- /*  {{ $categories = $input_categories }}  */ -}}
-	{{- /*  {{ $categories = intersect $input_categories .Site.Taxonomies.categories }}  */ -}}
-	{{- /*  {{- $categories_array := slice -}}  */ -}}
-	{{- /*  {{- $categories_names_array := split $categories "," -}}  */ -}}
-	{{- /*  {{- $album_path = trim $album_path " " -}}  */ -}}
+	{{- $categories = $tags_input -}}
 {{- end -}}
 
-{{- /*  {{ range $.Site.Taxonomies.categories }}
-<p>value? {{.}}</p>
-{{ end }}
-{{ range $k, $v := $.Site.Taxonomies.categories }}
-<pre>$k = {{ debug.Dump $k }}</pre>
-<pre>$v = {{ debug.Dump $v }}</pre>
-{{ end }}
-
-<h1>mmmmmmmmmmmm cattt</h1>  */ -}}
-{{- /*  {{- $articles_array := slice -}}
-{{- $articles_paths_array := split $articles "," -}}
-{{- range $index, $article_path := $articles_paths_array -}}
-	{{- $article_path = trim $article_path " " -}}
-	{{- $_article := $.Site.GetPage $article_path -}}
-	{{- if not $_article -}}
-		{{- errorf "at SHORTCODE featured_articles: Article '%#v' not found at '%s' (%s)" $article_path $.Page.Title $.Page.Path -}}
-	{{- else if ne $_article.Section "articles" }}
-		{{- errorf "at SHORTCODE featured_articles: Page '%#v' (at '%s' (%s)) is not an article, is a '%s'" $article_path $.Page.Title $.Page.Path $_article.Section -}}
-	{{- else }}
-		{{- $articles_array = $articles_array | append $_article -}}
-	{{- end -}}
-{{- end -}}  */ -}}
-
-{{- $header_tag := printf "h%d" $header_number -}}
-
-{{- /*  THINK featured_articles shortcode  */ -}}
-{{- /*  
- - Order articles by date?
- - Add css width % property?
-  */ -}}
-
-{{- /*  {{ $articles_array = sort $articles_array ".Date" "desc" }}  */ -}}
-
-
-{{- /*  {{ with site.Taxonomies.categories }}  */ -}}
-
-<p>len categories: {{ len $categories }} </p>
-{{- /*  
-{{ range $categories }}
-	<p>otro loop: {{.}}</p>
-{{ end }}
-
-{{ range $.Site.Taxonomies.categories }}
-	<p>otro loop categories: {{.}}</p>
-{{ end }}  */ -}}
 
 {{- with $categories -}}
-	{{- if $title }}
+	{{- if $title -}}
+		{{- $header_tag := printf "h%d" $header_number -}}
 		{{- $header := printf "<%s style='text-align:%s;'>%s</%s>" $header_tag $text_align $title $header_tag -}}
 		{{- $header | safeHTML -}}
 	{{- end -}}
@@ -145,4 +64,3 @@ Use example:
     </ul>
   </nav>
 {{- end -}}
-<p>vamos</p>
