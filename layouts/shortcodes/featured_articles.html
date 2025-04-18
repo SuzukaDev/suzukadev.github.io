@@ -15,24 +15,24 @@ Use example:
 */ -}}
 
 
-{{ $articles := or (.Get 0) (.Get "articles") }}
-{{ $title := or (.Get 1) (.Get "title") }}
-{{ $header_number := or (.Get 2) (.Get "h") | default 2 }}
-{{ $text_align := or (.Get 3) (.Get "align") | default "center" }}
+{{- $articles := or (.Get 0) (.Get "articles") -}}
+{{- $title := or (.Get 1) (.Get "title") -}}
+{{- $header_number := or (.Get 2) (.Get "h") | default 2 -}}
+{{- $text_align := or (.Get 3) (.Get "align") | default "center" -}}
 
-{{ $articles_array := slice }}
+{{- $articles_array := slice -}}
 {{- $articles_paths_array := split $articles "," -}}
-{{ range $index, $article_path := $articles_paths_array }}
-	{{ $article_path = trim $article_path " "}}
-	{{ $_article := $.Site.GetPage $article_path }}
-	{{ if not $_article }}
-		{{ errorf "at SHORTCODE featured_articles: Article '%#v' not found at '%s' (%s)" $article_path $.Page.Title $.Page.Path }}
-	{{ else }}
-		{{ $articles_array = $articles_array | append $_article }}
-	{{ end }}
-{{ end }}
+{{- range $index, $article_path := $articles_paths_array -}}
+	{{- $article_path = trim $article_path " " -}}
+	{{- $_article := $.Site.GetPage $article_path -}}
+	{{- if not $_article -}}
+		{{- errorf "at SHORTCODE featured_articles: Article '%#v' not found at '%s' (%s)" $article_path $.Page.Title $.Page.Path -}}
+	{{- else }}
+		{{- $articles_array = $articles_array | append $_article -}}
+	{{- end -}}
+{{- end -}}
 
-{{ $header_tag := printf "h%d" $header_number }}
+{{- $header_tag := printf "h%d" $header_number -}}
 
 {{- /*  THINK featured_articles shortcode  */ -}}
 {{- /*  
@@ -47,15 +47,15 @@ Use example:
     {{- /*  <h1>Test featured articles</h1>  */ -}}
 {{- /*  <{{- $header_tag }} style="font-size:100px;">Test featured articles</{{- $header_tag -}}>  */ -}}
 {{- /*  <{{- $header_tag -}}>Test featured articles</{{- $header_tag -}}>  */ -}}
-	{{ if $title }}
-		{{ $header := printf "<%s style='text-align:%s;'>%s</%s>" $header_tag $text_align $title $header_tag }}
-		{{ $header | safeHTML }}
-	{{ end }}
+	{{- if $title }}
+		{{- $header := printf "<%s style='text-align:%s;'>%s</%s>" $header_tag $text_align $title $header_tag -}}
+		{{- $header | safeHTML -}}
+	{{- end -}}
 {{- /*  <{{- $header_tag | safeHTMLAttr }} style="font-size:100px;">Test featured articles</{{- $header_tag | safeHTMLAttr -}}>  */ -}}
 {{- /*  <{{- $header_tag | safeCSS }} style="font-size:100px;">Test featured articles</{{- $header_tag | safeCSS -}}>  */ -}}
     <section>
-		{{ range $index, $page := $articles_array }}
-	        {{ partial "articles/article-card.html" $page }}
-		{{ end }}
+		{{- range $index, $page := $articles_array -}}
+	        {{- partial "articles/article-card.html" $page -}}
+		{{- end -}}
     </section>
 </hgroup>
