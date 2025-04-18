@@ -111,6 +111,12 @@ section.galleries {
 
 }
 
+nav.categories{
+	li{
+		list-style: none;
+	}
+}
+
 .dark .card figure{
 	transition-duration: .7s;
 }
