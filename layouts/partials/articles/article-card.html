@@ -1,6 +1,6 @@
-{{ if eq .Site.Params.articles_card_type 1}}
-    {{ partial "articles/article-card-simple.html" . }}
+{{- if eq .Site.Params.articles_card_type 1 -}}
+    {{- partial "articles/article-card-simple.html" . -}}
 {{- /*  {{ else if eq .Site.Params.articles_card_type 2}}  */ -}}
-{{ else }}
-    {{ partial "articles/article-card-complex.html" . }}
-{{ end }}
+{{- else -}}
+    {{- partial "articles/article-card-complex.html" . -}}
+{{- end -}}
