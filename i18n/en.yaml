@@ -27,6 +27,9 @@ articlesCount:
 minutesCount:
   one: 1 min
   other: "{{ . }} mins"
+minutesCountFull:
+  one: 1 minute
+  other: "{{ . }} minutes"
 articleImgAlt: Cover image of the article '{{ . }}'
 goBack: Go to the main page
 allTags: All tags
@@ -36,3 +39,5 @@ allRightsReserved: All rights reserved
 edited: Edited
 featuredArticles: Featured Articles
 read: Read
+readingTime: Reading time {{.}}
+privateArticleDescription: Private article (accessible only by its URL)
