@@ -3,12 +3,23 @@ Displays article cards.
 
 
 Arguments:
-articles = (string) Articles file names separated with a COMA. Eg: articles="article1, illustration-process"
+0 articles = (String) Articles file names separated with a COMA. Eg: articles="article1, illustration-process"
+1 title = (String). Add a header title above the articles. Default: (empty)
+2 h = (int) Type of header for the tile (1 for h1, 2 for h2, 3 for h3, etc.). Default: 2 (h2)
+3 align = (String) Text align of the header (options: "left", "right", "center"). Default: "center"
 
+Use example:
+{{< featured_articles "my-first-article, another-article" >}}
+{{< featured_articles "my-first-article, another-article" "My favourite articles" 3 "left" >}}
+{{< featured_articles title="my-first-article, another-article" title="My favourite articles" align="right" >}}
 */ -}}
 
 
 {{ $articles := or (.Get 0) (.Get "articles") }}
+{{ $title := or (.Get 1) (.Get "title") }}
+{{ $header_number := or (.Get 2) (.Get "h") | default 2 }}
+{{ $text_align := or (.Get 3) (.Get "align") | default "center" }}
+
 {{ $articles_array := slice }}
 {{- $articles_paths_array := split $articles "," -}}
 {{ range $index, $article_path := $articles_paths_array }}
@@ -21,13 +32,27 @@ articles = (string) Articles file names separated with a COMA. Eg: articles="art
 	{{ end }}
 {{ end }}
 
+{{ $header_tag := printf "h%d" $header_number }}
 
+{{- /*  THINK featured_articles shortcode  */ -}}
+{{- /*  
+ - Order articles by date?
+ - Add css width % property?
+  */ -}}
 
-{{ $articles_array = sort $articles_array ".Date" "desc" }}
+{{- /*  {{ $articles_array = sort $articles_array ".Date" "desc" }}  */ -}}
 
 
 <hgroup class="featured-articles-container">
-    <h1>Test featured articles</h1>
+    {{- /*  <h1>Test featured articles</h1>  */ -}}
+{{- /*  <{{- $header_tag }} style="font-size:100px;">Test featured articles</{{- $header_tag -}}>  */ -}}
+{{- /*  <{{- $header_tag -}}>Test featured articles</{{- $header_tag -}}>  */ -}}
+	{{ if $title }}
+		{{ $header := printf "<%s style='text-align:%s;'>%s</%s>" $header_tag $text_align $title $header_tag }}
+		{{ $header | safeHTML }}
+	{{ end }}
+{{- /*  <{{- $header_tag | safeHTMLAttr }} style="font-size:100px;">Test featured articles</{{- $header_tag | safeHTMLAttr -}}>  */ -}}
+{{- /*  <{{- $header_tag | safeCSS }} style="font-size:100px;">Test featured articles</{{- $header_tag | safeCSS -}}>  */ -}}
     <section>
 		{{ range $index, $page := $articles_array }}
 	        {{ partial "articles/article-card.html" $page }}
