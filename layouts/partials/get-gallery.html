@@ -41,9 +41,11 @@
   {{ $thumbnail := $featured }}
   {{/*  {{ if and (ne $featured.MediaType.SubType "gif") (ne $featured.MediaType.SubType "webp") }}  */}}
   {{ if or (eq $featured.MediaType.SubType "gif") (eq $featured.MediaType.SubType "webp") }}
-    {{ $thumbnail := $featured }}
+    {{ $thumbnail = $featured }}
   {{ else }}
-    {{ $thumbnail := $featured.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
+    {{ $thumbnail = $featured.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
+    {{- /*  Test to check that it was working  */ -}}
+    {{- /*  {{ $thumbnail = $featured.Filter (images.GaussianBlur 10) (images.Pixelate 8) }}  */ -}}
   {{ end }}
   
   {{/*  Original code  */}}
