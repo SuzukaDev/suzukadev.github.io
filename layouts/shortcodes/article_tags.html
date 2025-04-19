@@ -1,0 +1,85 @@
+{{- /*  
+Displays articles tags.
+
+
+Arguments:
+0 tags = (String) Articles file names separated with a COMA. Eg: articles="art, digital, traditional, 3d"
+1 title = (String). Add a header title above the articles. Default: (empty)
+2 h = (int) Type of header for the tile (1 for h1, 2 for h2, 3 for h3, etc.). Default: 2 (h2)
+3 align = (String) Text align of the header (options: "left", "right", "center"). Default: "center"
+
+Use example:
+{{< article_tags "3d-art, 2d-art" >}}
+{{< article_tags "3d-art, 2d-art" "My favourite articles" 3 "left" >}}
+{{< article_tags title="3d-art, 2d-art" title="My favourite articles" align="right" >}}
+*/ -}}
+
+{{- $tags := or (.Get 0) (.Get "tags") -}}
+{{- $title := or (.Get 1) (.Get "title") -}}
+{{- $header_number := or (.Get 2) (.Get "h") | default 2 -}}
+{{- $text_align := or (.Get 3) (.Get "align") | default "center" -}}
+
+
+{{- if not $tags -}}
+	{{- $tags = $.Site.Taxonomies.tags -}}
+{{- else -}}
+	{{- $tags = replace $tags " " "" -}}
+	{{- $input_categories := split $tags "," -}}
+	{{- $tags_input := slice -}}
+
+	{{- /*  Makes an array with all the tags names (for later checking if there are tags that do not exist in the input) */ -}}
+	{{- $categories_names := slice -}}
+	{{- range $category_name, $value := $.Site.Taxonomies.tags -}}
+		{{- $categories_names = $categories_names | append $category_name -}}
+	{{- end -}}
+
+	{{- /*  Check for error if there are different tags  */ -}}
+	{{- $different_categories := complement $categories_names $input_categories -}}
+	{{- if $different_categories -}}
+		{{- errorf "SHORTCODE article_tags: at '%s (%s)'; %#v does not exist in taxonomy 'tags'" $.Page.Title $.Page.Path $different_categories -}}
+	{{- end -}}
+
+	{{- range $category_name, $value := $.Site.Taxonomies.tags -}}
+		{{- if in $input_categories $category_name -}}
+			{{- $term_page := $.Site.GetPage (printf "tags/%s" $category_name) -}}
+			{{- $tags_input = $tags_input | append $term_page -}}
+		{{- end -}}
+	{{- end -}}
+
+	{{- $tags = $tags_input -}}
+{{- end -}}
+
+
+{{- with $tags -}}
+	{{- if $title -}}
+		{{- $header_tag := printf "h%d" $header_number -}}
+		{{- $header := printf "<%s style='text-align:%s;'>%s</%s>" $header_tag $text_align $title $header_tag -}}
+		{{- $header | safeHTML -}}
+	{{- end -}}
+  <nav class="tags">
+    <ul>
+      {{- range . -}}
+        <li class="list-style-none inline-block"><a class="category-tag" href="{{- .Page.RelPermalink -}}">{{- .Page.Title -}}</a></li>
+      {{- end -}}
+    </ul>
+  </nav>
+{{- end -}}
+
+
+
+
+
+
+
+{{/*  TAGS  */}}
+{{- /*  {{- if or (not (isset .Params "show_tags")) .Params.show_tags -}}
+	{{- $tags := .Params.tags -}}
+	<p class="centered-text">
+	{{- if $tags -}}
+	{{- $lastIndex := sub (len $tags) 1 -}}
+		{{- range $index, $tag := $tags -}}
+			<a class="article-tag" href="{{- absLangURL "tags/" -}}{{- $tag -}}">{{- $tag -}}</a>
+		{{- end -}}
+	{{- end -}}
+	</p>
+{{- end -}}  */ -}}
