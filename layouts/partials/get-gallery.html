@@ -34,7 +34,19 @@
       {{ $index = $i }}
     {{ end }}
   {{ end }}
-  {{ $featured := ($images.GetMatch (.Params.featured_image | default "*feature*")) | default (index $images $index) }}
+  {{- /*  This only get files with "feature" in the name that ARE IN THE SAME LEVEL (not in subdirectories)  */ -}}
+  {{- /*  {{ $featured := ($images.GetMatch (.Params.featured_image | default "*feature*")) | default (index $images $index) }}  */ -}}
+
+  {{- /*  This gets files with "featured" in its name both in the same level or in subdirectories  */ -}}
+  {{ $featured_match := or 
+    ($_all_images.GetMatch .Params.featured_image) 
+    (or 
+        ($_all_images.GetMatch "*feature*") 
+        ($_all_images.GetMatch "**/*feature*")
+    )
+  }}
+
+  {{ $featured := $featured_match | default (index $images $index) }}
 
   {{/*  Fix for .webps  */}}
   {{/*  Do not process the image if the image is a gif or webp  */}}
