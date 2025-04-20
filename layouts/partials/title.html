@@ -6,5 +6,6 @@
     {{ with .Params.Description }}
       <p>{{ . | markdownify }}</p>
     {{ end }}
+    {{ partial "albums/album-categories.html" . }}
   </hgroup>
 {{ end }}

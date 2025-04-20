@@ -1,0 +1,21 @@
+{{- /*  {{ with site.Taxonomies.categories }}  */ -}}
+{{ with .Params.categories }}
+  <nav class="categories">
+    {{- /*  <p>{{delimit $.Params.categories " | "}}</p>  */ -}}
+    <ul>
+      {{- /*  {{ range .Params.categories }}  */ -}}
+      {{ range $k, $v := site.Taxonomies.categories }}
+        {{- /*  <li>#{{$k}}</li>  */ -}}
+        {{ if in $.Params.categories ($k | lower) }}
+        {{- /*  <p> {{$k}} is in {{$.Params.categories}}</p>  */ -}}
+          <li><a class="category-tag" href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
+        {{- /*  <li><a class="category-tag" href="/categories/{{.}}">{{ . }}</a></li>  */ -}}
+        {{- /*  <li><a class="category-tag" href="/categories/{{$k}}">{{ $k }}</a></li>  */ -}}
+        {{- /*  <li><a class="category-tag" href="/categories/{{$k}}">{{ $k }}</a></li>  */ -}}
+        {{ end }}
+      {{ end }}
+      {{- /*  <li><a class="category-tag" href="{{ .Page.RelPermalink }}">{{ .Params.categories }}</a></li>  */ -}}
+      {{- /*  <p>{{site.Taxonomies.categories}}</p>  */ -}}
+    </ul>
+  </nav>
+{{ end }}
