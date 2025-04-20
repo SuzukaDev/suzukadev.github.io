@@ -1616,12 +1616,7 @@ nav.categories ul li a{
 // 	float: left;
 // }
 
-.category-tag{
-	@extend .article-tag;
-	color: var(--text-2);
-	// font-weight: 600;
-	font-weight: bold;
-}
+
 
 .article-tag{
 	position: relative;
