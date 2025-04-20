@@ -1,4 +1,14 @@
 
+hgroup.galery-title{
+	p a{
+		// font-weight: bold;
+		color: var(--hover-color);
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
+
 
 section.galleries {
 	// display: grid;
