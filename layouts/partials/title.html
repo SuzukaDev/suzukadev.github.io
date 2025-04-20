@@ -1,8 +1,9 @@
 {{ if .Title }}
-  <hgroup>
+  <hgroup class="galery-title">
     {{/*  REFACTOR breadcrumbs  */}}
     {{/*  {{ partial "breadcrumbs.html" . }}  */}}
     <h1>{{ .Title }}</h1>
+    {{ partial "next-and-previous-gallery" . }}
     {{ with .Params.Description }}
       <p>{{ . | markdownify }}</p>
     {{ end }}
