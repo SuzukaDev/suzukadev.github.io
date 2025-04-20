@@ -47,11 +47,22 @@ section.galleries {
 	& figure {
 		box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.75);
 		overflow: hidden;
+		position: relative;
 		// transition: all 200ms;
 		img{
 			transition: all .5s;
 			// margin-top: 100px;
 			// transition: all 200ms ease-in-out;
+		}
+
+		img.hover-cover-image{
+			position: absolute;
+		overflow: hidden;
+		top: 0px;
+		right: 0px;
+		// z-index: -1;
+		opacity: 0;
+
 		}
 	}
 
@@ -104,6 +115,10 @@ section.galleries {
 				// filter: brightness(107%) contrast(107%) saturate(120%) ;
 				filter: brightness(107%) contrast(107%) saturate(113%) ;
 				
+			}
+			
+			.hover-cover-image{
+				opacity: 1;
 			}
 		}
 

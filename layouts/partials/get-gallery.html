@@ -59,9 +59,30 @@
     {{- /*  Test to check that it was working  */ -}}
     {{- /*  {{ $thumbnail = $featured.Filter (images.GaussianBlur 10) (images.Pixelate 8) }}  */ -}}
   {{ end }}
-  
+
   {{/*  Original code  */}}
   {{/*  {{ $thumbnail := $featured.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}  */}}
+  
+  {{- /*  Hover image  */ -}}
+  {{- $thumbnail_hover := "" -}}
+  {{- /*  TODO añadir featured_image_hover al archetypes  */ -}}
+  {{- $HOVER_NAME_KEYWORD := "hover" -}}
+  {{- $hover_match := or 
+    ($_all_images.GetMatch .Params.featured_image_hover) 
+    (or 
+
+      ($_all_images.GetMatch (printf "*%s*" $HOVER_NAME_KEYWORD)) 
+      ($_all_images.GetMatch (printf "**/*%s*" $HOVER_NAME_KEYWORD))
+    )
+  -}}
+  {{- /*  {{- $thumbnail_hover = $hover_match -}}  */ -}}
+  {{ if $hover_match }}
+    {{ if or (eq $featured.MediaType.SubType "gif") (eq $featured.MediaType.SubType "webp") }}
+      {{ $thumbnail_hover = $hover_match }}
+    {{ else }}
+      {{ $thumbnail_hover = $hover_match.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
+    {{ end }}
+  {{ end }}
 
   {{ $color := index $thumbnail.Colors 0 | default "transparent" }}
   {{ $imageCount := 0 }}
@@ -78,6 +99,7 @@
     "page" $
     "images" $images
     "thumbnail" $thumbnail
+    "thumbnail_hover" $thumbnail_hover
     "color" $color
     "albumCount" $albumCount
     "imageCount" $imageCount
