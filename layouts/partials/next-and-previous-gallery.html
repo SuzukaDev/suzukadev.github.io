@@ -9,14 +9,14 @@
 {{- $next_gallery := $public_galleries.Next . -}}
 
 {{- with $previous_gallery -}}
-<a class="previous-article hover-accent-color" href="{{- .RelPermalink -}}" title="{{- .Title -}}">
+<a class="previous-page-arrow hover-accent-color" href="{{- .RelPermalink -}}" title="{{- .Title -}}">
 	<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
 	{{- /*  <span>{{ .Title }}</span>  */ -}}
 </a>
 {{- end -}}
 
 {{- with $next_gallery -}}
-<a class="next-article hover-accent-color" href="{{- .RelPermalink -}}" title="{{- .Title -}}">
+<a class="next-page-arrow hover-accent-color" href="{{- .RelPermalink -}}" title="{{- .Title -}}">
 	{{- /*  <span>{{ .Title }}</span>  */ -}}
 	<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
 </a>
