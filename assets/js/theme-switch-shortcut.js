@@ -9,7 +9,7 @@ document.addEventListener('keydown', function(event) {
 	// if (event.key == 'l' && event.altKey) {
 	// if (event.key == 'z') {
 
-	if (event.key == 'l' && event.altKey) {
+	if (event.key.toLowerCase() == 'l' && event.altKey) {
 
 		// alert("weeee assetssss");
         // CTRL + Z trigger
