@@ -11,16 +11,37 @@ show_related_articles = false
 tags = ["mierda", "test", "markdown"]
 # article_cover = 'probando-md.png' # local path for the image used as the cover. NOTE: Check its extension! (.png set as a template)
 # NOTE Since this is a leaf bundle (page in its own folder), placing an image in the same folder with the name 'cover' (no matter its extension) will be used as the cover AUTOMATICALLY. BUT if 'article_cover' is set, it will use that (this is also useful for having different covers for each language, if that is needed).
-show_author = false
-show_date = false
-show_reading_time = false
-show_tags = false
-show_breadcrumbs = false
-show_next_and_previous_arrows = false
+# show_author = false
+# show_date = false
+# show_reading_time = false
+# show_tags = false
+# show_breadcrumbs = false
+# show_next_and_previous_arrows = false
 +++
 This is an article for testing the markdown
 
 # Video testing
+
+{{< article_tags tags="ameba, dexter" title="holaaa" align="right" >}}
+
+<!-- {{< featured_articles articles="articulo-tres,copia,copia" align="center" h=3 >}} -->
+<!-- {{< featured_articles articles="articulo-tres,copia,copia" title="WOW" align="center" h=3 >}} -->
+
+
+{{< featured_albums albums="galleries/art, galleries/art/3d, 2d" title="WOW" align="center" h=3 >}}
+
+
+{{% box_green %}}
+
+{{< article_tags "ameba, dexter" "holaaa" >}}
+
+
+{{< featured_articles articles=" articulo-tres,copia,copia" title="WOW" align="center" h=3 >}}
+
+{{< featured_albums albums="galleries/art" title="WOW" align="center" h=3 >}}
+
+{{% /box_green %}}
+<!-- {{% featured_articles "articulo-tres,copia,copia" %}} -->
 
 
 {{< video "skrillex.mp4" false >}}
