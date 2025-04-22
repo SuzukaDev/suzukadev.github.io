@@ -1,0 +1,29 @@
+  {{/*  Renders the Markdown content of a Gallery  */}}
+{{- with .Content -}}
+  {{- if $.Params.content_centered -}}
+  {{- /*  {{- if eq 1 1 -}}  */ -}}
+    <hgroup>
+      <section class="prose">
+        {{ . }}
+      </section>
+    </hgroup>
+
+  {{- else -}}
+  {{- /*  REFACTOR album markdown content  */ -}}
+
+    {{- /*  <article class="articles-content">  */ -}}
+    {{- /*  <article class="articles-content" style="text-align: center;">  */ -}}
+    <article class="articles-content" style="*{text-align: center;}">
+      {{- /*  {{ partial "articles-title.html" $context }}  */ -}}
+      {{/*  <section class="articles-content">  */}}
+        {{/*  <section class="prose">  */}}
+        {{ . }}
+        {{/*  </section>  */}}
+        {{/*  </section>  */}}
+      {{- /*  {{ if ne $page.Params.show_next_and_previous_arrows false }}
+        {{ partial "next-and-previous-article.html" $page }}
+      {{ end }}  */ -}}
+    </article>
+
+  {{- end -}}
+{{- end -}}
