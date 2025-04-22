@@ -3,16 +3,9 @@
 
   {{ if not .Params.show_text_on_top }}
     {{ partial "gallery.html" . }}
-  {{ end }}
-
-  {{/*  Markdown content  */}}
-  {{ with .Content }}
-  <hgroup>
-    <section class="prose">
-      {{ . }}
-    </section>
-  </hgroup>
-  {{ end }}
+    {{ end }}
+    
+  {{ partial "albums/album-markdown-content.html" . }}
 
   {{ if .Params.show_text_on_top }}
     {{ partial "gallery.html" . }}

@@ -14,6 +14,7 @@ menus: "main"
 #   featured_image: azzedine-rouichi-ZS_XuDZmxpM-unsplash.jpg
 #   transparent_bg_for_gifs: true # if true, the background of the .gif's will be transparent
 #   transparent_bg_for_pngs: true # if true, the background of the .png's will be transparent
+# content_centered: true # if true, the markdown content (text) of a gallery will be centered (only recommende if you plan to add very few text)
 
 #   show_text_on_top: true # if true, shows the markdown text on top of the gallery. If false or not set, shows the markdown at the bottom
 #   theme: dark
