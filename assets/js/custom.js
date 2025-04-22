@@ -29,13 +29,24 @@ const enableLightMode = () => {
 	localStorage.setItem('darkmode', 'light')
 }
 
+function has_html_a_theme_class() {
+	return document.documentElement.classList.contains('light') || document.documentElement.classList.contains('dark');
+ }
+
 // if(darkmode === 'dark') enableDarkMode()
 
 if (theme == null){
 	theme = getPreferredColorScheme()
 }
 // documentElement is the html tag
-document.documentElement.classList.add(theme)
+// if(document.documentElement.classList == "" ){
+if(has_html_a_theme_class() == false ){
+	// If the HTML element dont have a theme tag, we can add the theme tag.
+	// alert("HTML style tag dont have a theme tag")
+	document.documentElement.classList.add(theme)
+} else {
+	// alert("Page already set a theme tag, we dont add the theme class")
+}
 
 themeSwitch.addEventListener("click", () => {
 	// alert("heeey peña")
