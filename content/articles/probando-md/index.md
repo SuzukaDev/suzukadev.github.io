@@ -22,6 +22,20 @@ This is an article for testing the markdown
 
 # Video testing
 
+{{< text_centered >}}
+
+# hola
+
+Pues... esto en teoria...
+sería un texto...
+
+...centrado
+
+muy centrado en la sociedad y en sus problemas
+
+{{< /text_centered >}}
+
+
 {{< article_tags tags="ameba, dexter" title="holaaa" align="right" >}}
 
 <!-- {{< featured_articles articles="articulo-tres,copia,copia" align="center" h=3 >}} -->
@@ -31,7 +45,20 @@ This is an article for testing the markdown
 {{< featured_albums albums="galleries/art, galleries/art/3d, 2d" title="WOW" align="center" h=3 >}}
 
 
-{{% box_green %}}
+{{< box_green >}}
+
+{{< text_centered >}}
+
+Pues... esto en teoria...
+sería un texto...
+
+...centrado
+
+muy centrado en la sociedad y en sus problemas
+
+{{< /text_centered >}}
+
+
 
 {{< article_tags "ameba, dexter" "holaaa" >}}
 
@@ -40,7 +67,7 @@ This is an article for testing the markdown
 
 {{< featured_albums albums="galleries/art" title="WOW" align="center" h=3 >}}
 
-{{% /box_green %}}
+{{< /box_green >}}
 <!-- {{% featured_articles "articulo-tres,copia,copia" %}} -->
 
 
