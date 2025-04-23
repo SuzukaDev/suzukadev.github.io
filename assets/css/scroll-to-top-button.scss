@@ -8,8 +8,10 @@ html{
 
 	display: none; /* Hidden by default */
 	position: fixed; /* Fixed/sticky position */
-	bottom: 20px; /* Place the button at the bottom of the page */
-	right: 30px; /* Place the button 30px from the right */
+	// bottom: 20px; /* Place the button at the bottom of the page */
+	bottom: 30px; /* Place the button at the bottom of the page */
+	// right: 30px; /* Place the button 30px from the right */
+	right: 10px; /* Place the button 30px from the right */
 	z-index: 99; /* Make sure it does not overlap */
 	border: none; /* Remove borders */
 	outline: none; /* Remove outline */
@@ -21,15 +23,22 @@ html{
 	// border-radius: 10px; /* Rounded corners */
 	border-radius: 99px;
 	font-size: 18px; /* Increase font size */
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	// box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	// box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	// box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	box-shadow: rgb(38, 57, 77) 0px 10px 30px -10px;
 
 	svg{
 		transition-duration: .5s;
+		transform: translateY(1px);
 	}
   }
   
   #scrollToTopButton:hover {
 	transition-duration: .5s;
+	// box-shadow: rgba(38, 57, 77, 0.644) 0px 10px 10px 0px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
 	background-color: var(--hover-color); /* Add a dark-grey background on hover */
 	
 	svg{
