@@ -181,3 +181,49 @@ nav.categories{
 		0px 0px 47px -5px var(--bloom-box-shadow-color, var(--hover-color)),
 		;
 }
+
+
+// FEATURED BIG
+// REFACTOR album featured big
+section.featured{
+	transition-duration: .7s;
+
+
+	// h2{
+	h2{
+		// @extend .bloom-box-shadow-album-card;
+		// @extend .bloom-shadow;
+		transition-duration: .6s;
+
+		text-shadow: $text-shadow-values2;
+		// font-weight: 900;
+		font-weight: var(--text-weight, 900);
+		// font-weight: var(--text-weight, 700);
+		color: white;
+
+	}
+	p{
+		transition-duration: .6s;
+	}
+
+	// &:hover{
+	// TODO :active al resto de :hover (para móbiles)
+	&:hover, &:active{
+		color: var(--hover-color) !important;
+		// h2::before{
+		h2{
+			// transition-duration: 1.2s;
+			transition-duration: .7s;
+			// content: "caca";
+			// padding-left: 1em;
+			padding-left: .5em;
+		}
+		p{
+			transition-duration: .5s;
+			// padding-left: 3em;
+			padding-left: 2em;
+		}
+
+		// @extend #article-title;
+	}
+}
