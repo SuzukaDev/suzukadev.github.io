@@ -6,6 +6,7 @@ draft = true
 show_right_bar = true
 show_table_of_contents = true
 tags = ["art"]
+private = true
 # [params]
 featured = true
 featured_description = "Testing boxes and inline shortcodes"
