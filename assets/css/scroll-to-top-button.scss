@@ -2,7 +2,6 @@ html{
 	scroll-behavior: smooth;
 }
 
-// REFACTOR SCROLL
 
 #scrollToTopButton {
 	transition-duration: .5s;
@@ -23,31 +22,18 @@ html{
 	border-radius: 99px;
 	font-size: 18px; /* Increase font size */
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	
-	// span{
-	// 	position: relative;
-	// 	width: fit-content;
-	// 	height: fit-content;
-	// 	display: block;
-
-	// }
 
 	svg{
 		transition-duration: .5s;
-
-		// position: absolute;
-		// display: block;
-		bottom: 0px;
 	}
   }
   
   #scrollToTopButton:hover {
-	  transition-duration: .5s;
-	background-color: var(--hover-color); /* Add a dark-grey background on hover */
-	svg{
 	transition-duration: .5s;
-
-		// bottom: 10px;
+	background-color: var(--hover-color); /* Add a dark-grey background on hover */
+	
+	svg{
+		transition-duration: .5s;
 		transform: translateY(-5px) scale(1.1);
 	}
   }
