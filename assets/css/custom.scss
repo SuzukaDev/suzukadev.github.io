@@ -9,6 +9,7 @@ $soft_color: change-color($main_color, $saturation: 60%, $lightness: 40%);
 @import "effects.scss";
 @import "albums.scss";
 @import "articles.scss";
+@import "scroll-to-top-button.scss";
 
 // *{
 // 	transition: background-color .5s;
