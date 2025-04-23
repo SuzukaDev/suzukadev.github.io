@@ -1,20 +1,19 @@
 {{/*  
-Renders a text with a blue info box. ℹ
+Renders a centered text (kind of verse format)
 
 Arguments:
-false/string = do not show the icon (or pass a string with a custom emoji)
+(any)
 
 Example of use:
-{{< box_info >}}
+{{< text_centered >}}
 Inside the tags I can write normal markdown code.
-{{< /box_info >}}
+
+and it will be...
+
+...centered
+{{< /text_centered >}}
 */}}
 
-{{ $CLASS := "info-box" }}
-{{ $DEFAULT_ICON := "ℹ️"}}
-{{ $icon_arg := (or (.Get "icon") (.Get 0)) }}
 <section class="text-align-center">
-	{{.Inner | markdownify }}
+	{{- .Inner | markdownify -}}
 </section>
-
-{{- /*  {{ partial "shortcodes_partials/box_text_wrapper_base" (dict "icon_arg" $icon_arg "default_icon" $DEFAULT_ICON "class" $CLASS "Inner" .Inner ) }}  */ -}}
