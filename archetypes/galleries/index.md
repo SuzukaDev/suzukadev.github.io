@@ -5,6 +5,8 @@ date: '{{ .Date }}'
 draft: false
 author: "Suzuka Ka"
 menus: "main"
+		# // REFACTOR REF JAZZ ordenar esto
+
 # categories: ["nature"]
 # weight: 3
 # params:
@@ -15,8 +17,8 @@ menus: "main"
 #   transparent_bg_for_gifs: true # if true, the background of the .gif's will be transparent
 #   transparent_bg_for_pngs: true # if true, the background of the .png's will be transparent
 # content_centered: true # if true, the markdown content (text) of a gallery will be centered (only recommende if you plan to add very few text)
+# show_text_on_top: true # if true, shows the markdown text on top of the gallery. If false or not set, shows the markdown at the bottom
 
-#   show_text_on_top: true # if true, shows the markdown text on top of the gallery. If false or not set, shows the markdown at the bottom
 #   theme: dark
 #   sort_order: desc
 #   sort_by: Name # Exif.Date
@@ -43,5 +45,5 @@ menus: "main"
 # params.featured – if set to true, this album is featured on the homepage (even if private).
 # params.sort_by – property used for sorting images in an album. Default is Name (filename), but can also be Date. Or Params.weight, Params.src
 # params.sort_order – sort order. Default is asc.
-# params.theme – color theme for this page. Defaults to defaultTheme from configuration.
+# params.theme # Forces a theme for the gallery (possible values: dark/light) – color theme for this page. Defaults to defaultTheme from configuration.
 ---
