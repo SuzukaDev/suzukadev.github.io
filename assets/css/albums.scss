@@ -167,58 +167,17 @@ nav.categories{
 	}
 	figure{
 		transition-duration: .1s;
-		// REFACTOR REF JAZZ
-		// @extend .bloom-box-shadow;
 		@extend .bloom-box-shadow-album-card;
 	}
 }
 
 
 .bloom-box-shadow-album-card{
-	// box-shadow: 0px 0px var(--text-fx-bloom-size, 8px) var(--text-fx-bloom-color, var(--hover-color)),
 	box-shadow: 
-		// 0px 0px 1px 0px white,
-// 0px 0px 1px 0px color-mix(in srgb, var(--bloom-box-shadow-color, var(--hover-color)), white 20%),
-0px 7px 7px -4px var(--hover-color, white),
-0px 0px 1px 0px color-mix(in srgb, var(--bloom-box-shadow-color, var(--hover-color)), white 40%),
-// 0px 0px 4px 0px color-mix(in srgb, var(--bright-col, var(--hover-color)), white 40%),
-0px 0px 4px 0px var(--bright-col, var(--hover-color)),
-		// 0px 0px 7px 2px var(--hover-color, white),
-// 0px 0px 7px 2px var(--bloom-box-shadow-color, var(--hover-color)),
-0px 0px 7px 2px var(--main-col, var(--hover-color)),
-// 0px 0px 27px 2px var(--bloom-box-shadow-color, var(--hover-color)),
-0px 0px 47px -5px var(--bloom-box-shadow-color, var(--hover-color)),
-// 0px 0px 15px 0px var(--bloom-box-shadow-color, var(--hover-color)),
-// 0px 0px 30px 0px var(--bloom-box-shadow-color, var(--hover-color)),
-		// 0px 0px 5px 2px var(--hover-color, white),
-	// 0px 0px 1px var(--text-fx-bloom-color, var(--hover-color)),
-	// 0px 0px 10px var(--hover-color, var(--hover-color)),
-	// 0px 0px 5px var(--text-fx-bloom-color, white),
-	// 0px 4px 10px var(--hover-color, white),
-	// 0px 1px 5px 3px white;
+		0px 7px 7px -4px var(--hover-color, white),
+		0px 0px 1px 0px color-mix(in srgb, var(--bloom-box-shadow-color, var(--hover-color)), white 40%),
+		0px 0px 4px 0px var(--bright-col, var(--hover-color)),
+		0px 0px 7px 2px var(--main-col, var(--hover-color)),
+		0px 0px 47px -5px var(--bloom-box-shadow-color, var(--hover-color)),
 		;
-	// 0px 4px 2px var(--hover-color, white);
 }
-
-
-.bloom-box-shadow-PREVIOUS{
-	// box-shadow: 0px 0px var(--text-fx-bloom-size, 8px) var(--text-fx-bloom-color, var(--hover-color)),
-	box-shadow: 
-		// 0px 0px 1px 0px white,
-// 0px 0px 1px 0px color-mix(in srgb, var(--bloom-box-shadow-color, var(--hover-color)), white 20%),
-0px 0px 1px 0px color-mix(in srgb, var(--bloom-box-shadow-color, var(--hover-color)), white 40%),
-		// 0px 0px 7px 2px var(--hover-color, white),
-0px 0px 7px 2px var(--bloom-box-shadow-color, var(--hover-color)),
-// 0px 0px 15px 0px var(--bloom-box-shadow-color, var(--hover-color)),
-// 0px 0px 30px 0px var(--bloom-box-shadow-color, var(--hover-color)),
-		// 0px 0px 5px 2px var(--hover-color, white),
-	// 0px 0px 1px var(--text-fx-bloom-color, var(--hover-color)),
-	// 0px 0px 10px var(--hover-color, var(--hover-color)),
-	// 0px 0px 5px var(--text-fx-bloom-color, white),
-	// 0px 4px 10px var(--hover-color, white),
-	// 0px 1px 5px 3px white;
-		;
-	// 0px 4px 2px var(--hover-color, white);
-}
-
-		// REFACTOR REF JAZZ
