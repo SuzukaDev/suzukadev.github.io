@@ -8,6 +8,12 @@ menu:
 articles_description: Multimedia engineer, with passion for arts
 ---
 
+
+Tengo experiencia (y paciencia) asistiendo a clientes y resolviendo sus dudas y problemas ~~principalmente porque no se han leido el manual~~.
+
+~~Esto es un texto tachado~~ Para colocarse... es perfecto el parque...
+
+
 We are here for learning. I personally think that is a positive philosophy, because it means that no matter what is coming to your life, positive 
 I think it
 each day, when it comes to your mind, your habilities
