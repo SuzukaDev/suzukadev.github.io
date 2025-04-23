@@ -8,6 +8,10 @@ menus: "main"
 categories: ["art"]
 # categories: ["nature"]
 # weight: 3
+hover_color: rgba(255, 54, 141, 0.57)
+# hover_color: rgb(0, 37, 183)
+
+
 params:
 #   private: false
   featured: false
