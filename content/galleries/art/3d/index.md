@@ -12,8 +12,8 @@ categories: ["art", "wow", "cosas 3d" , "tresd", "mierdaaa"]
 hover_color: rgba(96, 186, 206, 0.74)
 params:
 #   private: false
-  featured: false
-  featured_gallery: false # if true, it shows in the home page
+  featured: true
+  featured_gallery: true # if true, it shows in the home page
 #   featured_image: azzedine-rouichi-ZS_XuDZmxpM-unsplash.jpg
 #   theme: dark
 #   sort_order: desc
