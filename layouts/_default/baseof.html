@@ -9,6 +9,7 @@
         {{ partial "debug" . }}
       {{ end }}
       {{ block "main" . }}{{ end }}
+      {{ partial "scroll-to-top-button.html" . }}
     </main>
     {{ block "footer" . }}{{ partialCached "footer.html" . }}{{ end }}
   </body>
