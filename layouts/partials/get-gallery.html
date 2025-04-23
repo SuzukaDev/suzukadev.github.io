@@ -82,8 +82,42 @@
       {{ $thumbnail_hover = $hover_match.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
     {{ end }}
   {{ end }}
+    {{- /*  REFACTOR REF JAZZ  */ -}}
 
   {{ $color := index $thumbnail.Colors 0 | default "transparent" }}
+
+  {{ $color_hover := $color }}
+  {{ $all_colors := $thumbnail.Colors }}
+  {{ if $thumbnail_hover }}
+    {{- /*  NOTE initial  */ -}}
+    {{ $color_hover = index $thumbnail_hover.Colors 0 | default "transparent" }}
+    {{ $all_colors = $thumbnail_hover.Colors }}
+    
+    {{- /*  *** NEW  */ -}}
+    {{- /*  {{ $colors_luminance_sorted := sort $thumbnail_hover.Colors ".Luminance" }}  */ -}}
+    {{- /*  {{ $colors_luminance_sorted := sort $thumbnail_hover.Colors "Luminance" "desc" }}  */ -}}
+    {{- /*  {{ $color_hover = index $colors_luminance_sorted 0 | default "transparent" }}  */ -}}
+    {{- /*  {{ $color_hover = index (last 1 $colors_luminance_sorted) | default "transparent" }}  */ -}}
+    {{- /*  {{ $color_hover = len $colors_luminance_sorted }}  */ -}}
+  {{- /*  {{ else }}  */ -}}
+    {{- /*  {{ $colors_luminance_sorted := sort $thumbnail.Colors "Luminance" "desc" }}  */ -}}
+    {{- /*  {{ $color_hover = index $colors_luminance_sorted 0 | default "transparent" }}  */ -}}
+
+  {{ end }}
+
+
+  {{ $brightest_color := index (sort $all_colors "Luminance" "desc") 0 }}
+  {{ $main_color := index ($all_colors) 0 }}
+  
+  {{- /*  *** NEW  */ -}}
+  {{ if $.Params.hover_color }}
+    {{- /*  {{ $main_color = $.Params.hover_color }}  */ -}}
+    {{- /*  {{ $brightest_color = $.Params.hover_color }}  */ -}}
+    {{ $color_hover = $.Params.hover_color }}
+  {{ end }}
+    {{- /*  REFACTOR REF JAZZ end */ -}}
+
+
   {{ $imageCount := 0 }}
   {{ $albumCount := 0 }}
   {{ if .IsPage }}
@@ -100,6 +134,9 @@
     "thumbnail" $thumbnail
     "thumbnail_hover" $thumbnail_hover
     "color" $color
+    "color_hover" $color_hover
+    "color_brightest" $brightest_color
+    "color_main" $main_color
     "albumCount" $albumCount
     "imageCount" $imageCount
   }}

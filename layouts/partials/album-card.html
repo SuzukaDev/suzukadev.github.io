@@ -1,6 +1,14 @@
 {{- $gallery := partial "get-gallery.html" . -}}
 {{- with $gallery -}}
-  <a class="card" href="{{- .page.RelPermalink -}}" title="{{- .page.Title -}}">
+    {{- /*  REFACTOR REF JAZZ */ -}}
+  {{ $style := "" }}
+  {{ if .color_hover}}
+    {{- /*  {{ $style = printf "--bloom-box-shadow-color: %s;" .color_hover | safeCSS}}  */ -}}
+    {{- /*  {{ $style = printf "--bloom-box-shadow-color: %s; --main-col: %s; --bright-col: %s;" (.color_hover | safeCSS) (.color_main | safeCSS) (.color_brightest | safeCSS)}}  */ -}}
+    {{ $style = (printf "--bloom-box-shadow-color: %s; --main-col: %s; --bright-col: %s;" .color_hover .color_main .color_brightest) | safeCSS }}
+    {{- /*  {{ $style = printf "--bloom-box-shadow-color: %s;" .color_hover }}  */ -}}
+  {{ end }}
+  <a class="card" style="{{$style}}" href="{{- .page.RelPermalink -}}" title="{{- .page.Title -}}">
     <figure style="background-color: {{- .color -}}">
       <img class="lazyload" width="{{- .thumbnail.Width -}}" height="{{- .thumbnail.Height -}}" data-src="{{- .thumbnail.RelPermalink -}}" alt="{{- .page.Title -}}" />
       {{- if .thumbnail_hover -}}
