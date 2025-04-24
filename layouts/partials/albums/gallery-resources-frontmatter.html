@@ -1,0 +1,27 @@
+{{- /*  This prints the front matter text for all the resources in an album for then copying it in an album's .md and edit it  */ -}}
+
+{{ $images := partial "albums/album-get-non-hidden-images" . }}
+
+
+<code>
+resources:
+<br>
+
+{{ $printDebugDate := .Params.print_debug_date | default false }}
+{{ $printDebugWeight := .Params.print_debug_weight | default false }}
+
+{{ range $images }}
+  &nbsp;&nbsp;- src: {{.Name}}
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;title: {{ .Name }}
+  {{ if or $printDebugDate $printDebugWeight }}
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;params: {{ .Params.description | title}}
+  {{ end }}
+  {{ if $printDebugDate }}
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date: {{ now.Format "2006-01-02T15:04:05.0000000-0700" }}
+  {{ end }}
+  {{ if $printDebugWeight }}
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;weight:
+  {{ end }}
+{{ end }}
+
+</code>
