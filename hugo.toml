@@ -47,9 +47,10 @@ defaultContentLanguageInSubdir = true
 [markup.goldmark.renderer]
 unsafe= true
 [params]
+  galleries_author = 'Suzuka Ka'
   articles_author = 'Suzuka Ka'
   articles_card_type = 2 # options: 1 (simple) or 2 (with more info)
-  is_debug = false # Set to false for relase
+  # is_debug = false # Set to false for relase
   # is_debug = true
 
   show_galeries_with_same_article_tag = true # If True, when seeing a certain article tag, it will show at the end the galeries that contains that tag you are browsing

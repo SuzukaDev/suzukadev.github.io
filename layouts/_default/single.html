@@ -1,6 +1,10 @@
 {{ define "main" }}
   {{ partial "title.html" . }}
 
+  {{ if .Site.Params.is_debug }}
+    {{ partial "albums/gallery-resources-frontmatter" . }}
+  {{ end }}
+
   {{ if not .Params.show_text_on_top }}
     {{ partial "gallery.html" . }}
     {{ end }}

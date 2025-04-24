@@ -2,12 +2,13 @@
 title: '{{ replace (replace .File.ContentBaseName "-" " ") "_" " " | title }}'
 description: (Galery description)
 date: '{{ .Date }}'
+author: {{.Site.Params.galleries_author}}
 draft: false
-author: "Suzuka Ka"
-menus: "main"
-		# // REFACTOR REF JAZZ ordenar esto
+# categories: ["gamedev", "art"]
+# menus: "main" # INFO https://gohugo.io/content-management/menus/
+menus: ["main", "footer"]
+# // REFACTOR REF JAZZ ordenar esto
 
-# categories: ["nature"]
 # weight: 3
 # params:
 #   private: true # This gallery does not show in lists, RSS, sitemaps, etc. On list pages, use cascade to hide descendants.
@@ -18,6 +19,12 @@ menus: "main"
 #   transparent_bg_for_pngs: true # if true, the background of the .png's will be transparent
 # content_centered: true # if true, the markdown content (text) of a gallery will be centered (only recommende if you plan to add very few text)
 # show_text_on_top: true # if true, shows the markdown text on top of the gallery. If false or not set, shows the markdown at the bottom
+
+
+# print_debug_resource_date: true # If true, shows a 'date' field in the debug
+# print_debug_resource_weight: true # If true, shows a 'weight' field in the debug
+
+
 
 #   theme: dark
 #   sort_order: desc
