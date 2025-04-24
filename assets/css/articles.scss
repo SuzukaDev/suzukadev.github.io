@@ -273,7 +273,8 @@ $article-card-hover-brightness: 30%;
 			align-items: center;     /* vertical center */
 			span{
 				// background-color:white; 
-				background-color:var(--hover-color); 
+				// background-color:var(--hover-color); 
+				background-color:var(--text-2-dark); 
 				color:black; 
 				padding:5px 10px; 
 				font-weight: 900;
@@ -283,6 +284,9 @@ $article-card-hover-brightness: 30%;
 				box-shadow: rgba(0, 0, 0, 0.95) 0px 5px 5px;
 				border-radius: 4px;
 				// box-shadow: rgba(50, 50, 93, 0.95) 0px 50px 100px -20px, rgba(0, 0, 0, 0.93) 0px 30px 60px -30px, rgba(10, 37, 64, 0.95) 0px -2px 6px 0px inset;
+				&:hover{
+					background-color:var(--hover-color); 
+				}
 			}
 			// margin:auto;
 			// text-align: center;
