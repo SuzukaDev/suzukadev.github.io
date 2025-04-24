@@ -4,13 +4,8 @@
 
 {{/*  Exclude images in hidden folder  */}}
 {{ $_all_images := .Resources.ByType "image" }}
-{{ $images := slice }}
-{{ range $_all_images }}
-  {{ if not (strings.Contains .RelPermalink "hidden/") }}
-    {{/*  {{ warnf "ADDED: RelPermalink= %v" .RelPermalink}}  */}}
-    {{ $images = $images | append . }}
-  {{ end }}
-{{ end }}
+
+{{ $images := partial "albums/album-get-non-hidden-images" . }}
 
 
 {{/*  DEBUG  */}}
