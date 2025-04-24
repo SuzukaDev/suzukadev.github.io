@@ -7,8 +7,8 @@
 resources:
 <br>
 
-{{ $printDebugDate := .Params.print_debug_date | default false }}
-{{ $printDebugWeight := .Params.print_debug_weight | default false }}
+{{ $printDebugDate := .Params.print_debug_resource_date | default false }}
+{{ $printDebugWeight := .Params.print_debug_resource_weight | default false }}
 
 {{ range $images }}
   &nbsp;&nbsp;- src: {{.Name}}
