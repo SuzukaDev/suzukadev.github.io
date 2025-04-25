@@ -1,14 +1,20 @@
 {{ define "main" }}
   {{ if .Site.Params.is_debug }}
     <pre>File = layouts/_default/list.html</pre>
-    <pre>Path = {{.Path}}</pre>
+    <pre>Path = (layouts/_default/list.html) {{.Path}}</pre>
     <pre>Debug .Kind = {{ debug.Dump .Kind }}</pre>
   {{ end }}
   {{ partial "title.html" . }}
+  {{ if .Params.show_text_on_top }}
+    {{ partial "albums/album-markdown-content.html" . }}
+  {{ end }}
   <section class="galleries">
     {{ range where .Pages "Params.private" "ne" true }}
       {{ partial "album-card.html" . }}
     {{ end }}
-    {{ .Content | markdownify }}
+  {{ if ne .Params.show_text_on_top true }}
+    {{- /*  {{ .Content | markdownify }}  */ -}}
+    {{ partial "albums/album-markdown-content.html" . }}
+  {{ end }}
   </section>
 {{ end }}
