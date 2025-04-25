@@ -1,10 +1,23 @@
 
 hgroup.galery-title{
+	margin-bottom: 1em;
+	// padding-bottom: 1em;
 	p a{
 		// font-weight: bold;
 		color: var(--hover-color);
 		&:hover{
 			text-decoration: underline;
+		}
+	}
+
+	nav.categories{
+		padding-bottom: 0rem;
+		margin-bottom: 1rem;
+		@media (min-width: 640px) {
+			padding-bottom: 1rem;
+		}
+		@media (min-width: 1024px) {
+			padding-bottom: 1.5rem;
 		}
 	}
 }
@@ -138,6 +151,9 @@ section.galleries {
 
 nav.categories{
 	gap: 0px;
+	padding-bottom: 1rem;	
+	margin-bottom: 1rem;
+
 	ul{
 		gap: 0px;
 		li{
