@@ -309,6 +309,13 @@ Your computer crashed? Try sending a
 | wow | que fantasia| no me lo creo wowowowow qué bien| se da| wow
 
 Ugly table
-Col 1 | Col2 | Col3
-:-- | :-: | --:
+Shortcut | Col2 | Col3
+:--- | :-: | --:
 Ugh this is so ugly | make it | stop
+{{< shortcut "CTRL+ALT+A">}} | correr | wow
+
+Ugly table 2
+Shortcut | Col2 
+:--- | :-
+{{< shortcut "CTRL+T">}} | Otra funcíón que puedo explicar por aquí lo que hace jeje jajajs dfajlsd fjlasdjf asdlf asjdf
+{{< shortcut "CTRL+ALT+A">}} | correr 
