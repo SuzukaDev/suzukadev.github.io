@@ -21,6 +21,7 @@ draft: false
 # featured_gallery: true # Si es verdadero, la galería será destacada en la página principal (con un tamaño más pequeño) (incluso si es privada).
 # featured_image: images/this is a random name.jpg # Nombre del archivo de imagen usado como miniatura del álbum. Si NO se establece, se usará la primera imagen que contenga "feature" en su nombre de archivo, de lo contrario, la primera imagen del álbum.
 # featured_image_hover: images/this is a random name.jpg # Imagen que se muestra al pasar el cursor sobre el álbum. Si NO se establece, se usará la primera imagen que contenga "hover" en su nombre de archivo.
+# hover_color: rgba(255, 94, 0, 0.57) # color de resplandor (en el tema oscuro) al hacer hover en una galeria. Si no se establece, se tomará el color más predominante de la imagen usada como hover.
 
 # CONFIGURACIONES DE APARIENCIA
 # theme: light # Fuerza un tema para la galería (valores posibles: dark/light). Por defecto usa defaultTheme de la configuración.
