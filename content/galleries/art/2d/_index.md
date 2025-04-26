@@ -8,7 +8,9 @@ menus: "main"
 categories: ["art"]
 # categories: ["nature"]
 # weight: 3
-hover_color: rgba(255, 54, 141, 0.57)
+# hover_color: rgba(255, 54, 141, 0.57)
+hover_color: rgba(255, 94, 0, 0.57) # Hover for the bloom color (in dark theme) when hovering a gallery. If not set
+
 # hover_color: rgb(0, 37, 183)
 
 
@@ -32,8 +34,11 @@ params:
 # params.private – if set to true, this album is not shown in the album overview and is excluded from RSS feeds.
 # params.featured – if set to true, this album is featured on the homepage (even if private).
 # params.sort_by – property used for sorting images in an album. Default is Name (filename), but can also be Date.
+sort_by: weight # – property used for sorting images in an album. Default is Name (filename), but can also be Date.
 # params.sort_order – sort order. Default is asc.
 # params.theme – color theme for this page. Defaults to defaultTheme from configuration.
+# show_text_on_top: true
+# content_centered: true
 ---
 
 > Art is **never finished**, only **abandoned**." <cite>Leonardo da Vinci</cite>
