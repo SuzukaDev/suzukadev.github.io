@@ -16,9 +16,9 @@ draft: false
 
 ## params:
 # GALLERY DISPLAY SETTINGS
-private: true # If true, this gallery does won't show in lists, RSS, sitemaps, etc. On list pages, use cascade to hide descendants.
-featured: true # If true the gallery will be featured in home with a BIG picture (even if private).
-featured_gallery: true # If true, the gallery will be featured in the home page (with an smaller size) (even if private).
+# private: true # If true, this gallery does won't show in lists, RSS, sitemaps, etc. On list pages, use cascade to hide descendants.
+# featured: true # If true the gallery will be featured in home with a BIG picture (even if private).
+# featured_gallery: true # If true, the gallery will be featured in the home page (with an smaller size) (even if private).
 # featured_image: images/this is a random name.jpg # Name of the image file used for the album thumbnail. If NOT set, the first image which contains "feature" in its filename is used, otherwise the first image in the album.
 # featured_image_hover: images/this is a random name.jpg # Image that displays when hovering the album. If NOT set, the first image which contains "hover" in its filename will be used.
 
