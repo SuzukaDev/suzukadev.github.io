@@ -35,3 +35,5 @@ params:
 # params.sort_order – sort order. Default is asc.
 # params.theme – color theme for this page. Defaults to defaultTheme from configuration.
 ---
+
+> Art is **never finished**, only **abandoned**." <cite>Leonardo da Vinci</cite>
