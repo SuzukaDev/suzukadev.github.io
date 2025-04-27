@@ -1,5 +1,10 @@
 ---
-title: '{{ replace (replace .File.ContentBaseName "-" " ") "_" " " | title }}'
+{{- $title := replace (replace .File.ContentBaseName "-" " ") "_" " " | title -}}
+{{- if eq $title "Index" -}}
+	{{- $dir := path.Base (path.Dir .File.Dir) -}}
+	{{- $title = replace (replace $dir "-" " ") "_" " " | title -}}
+{{- end }}
+title: '{{ $title }}'
 # Description shown on the album page. Rendered as markdown to enable adding links and some formatting.
 description: (Galery description)
 date: '{{ .Date }}' # Used for sorting (newest first)
@@ -9,10 +14,10 @@ draft: false
 
 ## INFO Menus https://gohugo.io/content-management/menus/
 # menus:
-# 	main:
-# 		name: Name in the menu
-# 		weight: 10
-# 	footer:
+#     main:
+#         name: Name in the menu
+#         weight: 10
+#     footer:
 
 ## params:
 # GALLERY DISPLAY SETTINGS
