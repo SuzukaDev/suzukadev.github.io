@@ -1,46 +1,49 @@
 ---
 title: 'Pixel Art'
-# TODO poner el link de K-Sprite
-description: Tools; Photoshop, Aseprite and mostly Krita and {{< link_markdown_page text="K-Sprite, my own pixel art editor" page="about" >}} [SZK Pixel Art Suite](https://orb91.gumroad.com/l/szk-krita-pixel-art-suite?layout=profile) haciendo `proyectos`
-date: '2025-02-22T23:13:24+01:00'
+# Descripción que se muestra en la página del álbum. Se renderiza como markdown para permitir agregar enlaces y algo de formato.
+description: (Descripción de la galería)
+date: '2025-04-27T20:18:53+02:00' # Usado para ordenar (más reciente primero)
+author: Suzuka Ka
 draft: false
-author: "Suzuka Ka"
-tags: ["art","skate", "fun", "dexter", "wellington", "quiw", "campeon", "zapato", "ameba"]
-menus: "main"
-# categories: ["nature"]
-# weight: 3
-params:
-  transparent_bg_for_gifs: true # if true, the background of the .gif's will be transparent
-  transparent_bg_for_pngs: true # if true, the background of the .png's will be transparent
-#   private: true
-#   featured: true # If true the gallery will be featured in home with a big picture
-#   featured_gallery: true # If true, the gallery will be featured in the home page (with an smaller size)
-#   featured_image: azzedine-rouichi-ZS_XuDZmxpM-unsplash.jpg
-#   show_text_on_top: true # if true, shows the markdown text on top of the gallery. If false or not set, shows the markdown at the bottom
-#   theme: dark
-#   sort_order: desc
-#   sort_by: Name # Exif.Date
-# resources:
-#   - src: azzedine-rouichi-ZS_XuDZmxpM-unsplash.jpg
-#     params:
-#       cover: true
+# categories: ["gamedev", "art"]
+
+## INFORMACIÓN Menús https://gohugo.io/content-management/menus/
+# menus:
+#     main:
+#         name: Name in the menu
+#         weight: 10
+#     footer:
+
+## parámetros:
+# CONFIGURACIONES DE VISUALIZACIÓN DE GALERÍA
+# private: true # Si es verdadero, esta galería no aparecerá en listas, RSS, sitemaps, etc. En las páginas de lista, usa cascade para ocultar descendientes.
+# featured: true # Si es verdadero, la galería será destacada en la página principal con una imagen GRANDE (incluso si es privada).
+# featured_gallery: true # Si es verdadero, la galería será destacada en la página principal (con un tamaño más pequeño) (incluso si es privada).
+# featured_image: images/this is a random name.jpg # Nombre del archivo de imagen usado como miniatura del álbum. Si NO se establece, se usará la primera imagen que contenga "feature" en su nombre de archivo, de lo contrario, la primera imagen del álbum.
+# featured_image_hover: images/this is a random name.jpg # Imagen que se muestra al pasar el cursor sobre el álbum. Si NO se establece, se usará la primera imagen que contenga "hover" en su nombre de archivo.
+# hover_color: rgba(255, 94, 0, 0.57) # color de resplandor (en el tema oscuro) al hacer hover en una galeria. Si no se establece, se tomará el color más predominante de la imagen usada como hover.
+
+# CONFIGURACIONES DE APARIENCIA
+# theme: light # Fuerza un tema para la galería (valores posibles: dark/light). Por defecto usa defaultTheme de la configuración.
+transparent_bg_for_gifs: true # si es verdadero, el fondo de los .gif será transparente
+transparent_bg_for_pngs: true # si es verdadero, el fondo de los .png será transparente
+# show_text_on_top: true # si es verdadero, muestra el texto markdown encima de la galería. Si es falso o NO se establece, muestra el markdown debajo
+# content_centered: true # si es verdadero, el contenido markdown (texto) de una galería estará centrado (recomendado solo si planeas agregar muy poco texto)
+
+# CONFIGURACIONES DE ORDENACIÓN
+# weight: 1 # puede usarse para ajustar el orden de aparición.
+# sort_by: Params.weight # propiedad utilizada para ordenar las IMÁGENES en el álbum. Por defecto es Name (nombre del archivo), pero también puede ser Date, Params.weight o Params.src
+# sort_order: desc # orden de clasificación. Por defecto es asc. (asc/desc)
+
+# OPCIONES DE DEPURACIÓN
+print_debug_resource_date: true # Si es verdadero, muestra un campo 'date' en la depuración
+print_debug_resource_weight: true # Si es verdadero, muestra un campo 'weight' en la depuración
 
 # resources:
-#   - src: images/cat-1.jpg # NOTE don't forget the relative route! (If the image is inside 'images/' add it!)
-#     title: Brown tabby cat on white stairs
+#   - src: images/cat-1.jpg # NOTA no olvides la ruta relativa! (¡Si la imagen está dentro de 'images/' agrégala!)
+#     title: Gato atigrado marrón en escaleras blancas
 #     params:
 #       cover: true
 #       date: 2024-02-18T13:04:30+0100
 #       weight: 20
-
-# title – title of the album, shown in the album list and on the album page.
-# date – album date, used for sorting (newest first).
-# description – description shown on the album page. Rendered as markdown to enable adding links and some formatting.
-# weight – can be used to adjust sort order.
-# params.featured_image – name of the image file used for the album thumbnail. If not set, the first image which contains feature in its filename is used, otherwise the first image in the album.
-# params.private – if set to true, this album is not shown in the album overview and is excluded from RSS feeds.
-# params.featured – if set to true, this album is featured on the homepage (even if private).
-# params.sort_by – property used for sorting images in an album. Default is Name (filename), but can also be Date. Or Params.weight, Params.src
-# params.sort_order – sort order. Default is asc.
-# params.theme – color theme for this page. Defaults to defaultTheme from configuration.
 ---
