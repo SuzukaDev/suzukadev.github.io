@@ -6,7 +6,7 @@
 {{- end }}
 title: '{{ $title }}'
 # Descripción que se muestra en la página del álbum. Se renderiza como markdown para permitir agregar enlaces y algo de formato.
-description: (Descripción de la galería)
+description: 
 date: '{{ .Date }}' # Usado para ordenar (más reciente primero)
 author: {{.Site.Params.galleries_author}}
 draft: false
