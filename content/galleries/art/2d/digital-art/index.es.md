@@ -1,8 +1,8 @@
 ---
-title: 'Álbumes'
+title: 'Digital Art'
 # Descripción que se muestra en la página del álbum. Se renderiza como markdown para permitir agregar enlaces y algo de formato.
 description: (Descripción de la galería)
-date: '2025-04-27T20:48:17+02:00' # Usado para ordenar (más reciente primero)
+date: '2025-04-27T21:17:16+02:00' # Usado para ordenar (más reciente primero)
 author: Suzuka Ka
 draft: false
 # categories: ["gamedev", "art"]
