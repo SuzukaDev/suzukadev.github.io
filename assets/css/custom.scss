@@ -713,8 +713,38 @@ hr.full-separator{
 	}
 }
 
-section.social-icons svg:hover {
-	color: var(--hover-color);
+section.social-icons {
+	--scale-svg: 1.3;
+	// --scale-svg: 1.0;
+	--scale-adjacent-svg: 1.0;
+	--hover-time: .1s;
+	
+	// transition-duration: 2.3s;
+	a {
+		// transition-duration: .2s;
+		transition-duration: 1.2s, .4s;
+		transition-property: color, transform;
+		
+		&:hover {
+			// transition-duration: var(--hover-time);
+			transition-duration: var(--hover-time);
+			// transition-property: transform;
+			color: var(--hover-color);
+			transform: scale(var(--scale-svg));
+
+			// Next <a>
+			// & + a{
+			// 	transition-duration: var(--hover-time);
+			// 	transform: scale(var(--scale-adjacent-svg));
+			// }
+		}
+	}
+
+	// Previous <a> (adjacent a's that has its NEXT a hovered)
+	// a:has(+ a:hover){
+	// 	transition-duration: var(--hover-time);
+	// 	transform: scale(var(--scale-adjacent-svg));
+	// }
 }
 
 
