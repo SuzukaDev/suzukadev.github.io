@@ -1,0 +1,68 @@
+a.download-button{
+	display: inline-block;
+	background-color: var(--hover-color);
+	padding: 15px 10px;
+	padding-bottom: 12px;
+	padding-top: 2px;
+	// display: inline-block;
+	// height: 100px;
+	// border-radius: 20px;
+	border-radius: 5px;
+
+	display: flex;
+	align-items: center;
+	text-decoration: none; /* Optional: remove underline */
+	gap: 8px; /* Optional: space between svg and text */
+
+	width: fit-content;
+	height: fit-content;
+	// width: auto;
+	// height: auto;
+	color: white;
+
+	position: relative;
+	// font-weight: 900;
+	font-weight: bold;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+	transition-duration: .4s;
+	&:hover{
+		transition-duration: .1s;
+		box-shadow: rgba(0, 0, 0, 0.74) 0px 3px 8px;
+		sup{
+			transition-duration: .5s;
+			color: rgba(255, 255, 255, 0.838);
+		}
+		svg{
+			transition-duration: .2s;
+			transform: scale(1.4);
+		}
+		p{
+			text-decoration: underline;
+		}
+	}
+	
+	svg{
+		transition-duration: .4s;
+		display: inline-block;
+		// width: 24px;
+		// height: 24px;
+		width: 34px;
+		height: 34px;
+	}
+
+	p{
+		color: white !important;
+	}
+
+	sup{
+		transition-duration: .5s;
+		position: absolute;
+		right: 50%;
+		bottom: 0px;
+		font-size: .7em;
+		// transform: translate(-50%, -50%);
+		transform: translateX(50%);
+		color: rgba(255, 255, 255, 0.438);
+	}
+}
