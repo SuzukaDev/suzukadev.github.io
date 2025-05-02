@@ -1,5 +1,5 @@
 ---
-title: '3d'
+title: '3D'
 # Description shown on the album page. Rendered as markdown to enable adding links and some formatting.
 description: 3D Modelling, sculpting, texture painting, shading, rigging and animation.
 date: '2025-04-27T21:16:08+02:00' # Used for sorting (newest first)

@@ -1,5 +1,5 @@
 ---
-title: '3d'
+title: '3D'
 # Descripción que se muestra en la página del álbum. Se renderiza como markdown para permitir agregar enlaces y algo de formato.
 description: Modelado y escultura 3D, _texture painting_, _shading_, _rigging_ y animaciones.
 date: '2025-04-27T21:16:08+02:00' # Usado para ordenar (más reciente primero)
