@@ -22,7 +22,7 @@ Usage:
 {{- else -}}
 	{{- /*  {{- $output := ""}}  */ -}}
 	{{- /*  {{- $output_slice := slice}}  */ -}}
-	{{- $init_output := printf "<span class='inline-block'>%s" $pre_text -}}
+	{{- $init_output := printf "<span class='shortcut inline-block'>%s" $pre_text -}}
 	{{- $output_slice := slice $init_output -}}
 	{{- $keys := split $full_shortcut "+" -}}
 	{{- $keys_count := len $keys -}}
