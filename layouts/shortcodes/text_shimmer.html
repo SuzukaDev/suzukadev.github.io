@@ -23,109 +23,110 @@ random_scale = (float) Level of randomization of the scale. Default: 0.0
 random_scale_min = (float) Scale added to the random (useful if you want to avoid letters going very small). Default: 0.0
 */ -}}
 
- {{- $chars := split (.Get "text") "" -}}
- {{- $animation_time := float ((.Get "time") | default 2.4) -}}
- {{- $time_start_offset := ((.Get "time_offset") | default 0.0) -}}
- {{- $rawDelay := float ((.Get "delay") | default .05) -}}
- {{- $absDelay := math.Abs $rawDelay -}}
+{{- $text_input := or (.Get "text") (.Get 0) -}}
+{{- $chars := split $text_input "" -}} 
+{{- $animation_time := float ((.Get "time") | default 2.4) -}}
+{{- $time_start_offset := ((.Get "time_offset") | default 0.0) -}}
+{{- $rawDelay := float ((.Get "delay") | default .05) -}}
+{{- $absDelay := math.Abs $rawDelay -}}
 
- {{- $color1 := ((.Get "color1") | default "white") -}}
- {{- $color2 := ((.Get "color2") | default "white") -}}
- {{- $color1light := ((.Get "color1-light") | default $color1) -}}
- {{- $color2light := ((.Get "color2-light") | default $color2) -}}
- {{- $color1dark := ((.Get "color1-dark") | default $color1) -}}
- {{- $color2dark := ((.Get "color2-dark") | default $color2) -}}
+{{- $color1 := ((.Get "color1") | default "white") -}}
+{{- $color2 := ((.Get "color2") | default "white") -}}
+{{- $color1light := ((.Get "color1-light") | default $color1) -}}
+{{- $color2light := ((.Get "color2-light") | default $color2) -}}
+{{- $color1dark := ((.Get "color1-dark") | default $color1) -}}
+{{- $color2dark := ((.Get "color2-dark") | default $color2) -}}
 
- {{- $font := .Get "font" | default 0 -}}
- {{- $top_css_class := "shimmer" -}}
- {{- if eq $font 1 -}}
-	 {{- $top_css_class = printf "%s %s" $top_css_class "consolas-font" -}}
- {{- else if eq $font 2 -}}
-	 {{- $top_css_class = printf "%s %s" $top_css_class "pixel-font" -}}
- {{- else if eq $font 3 -}}
-	 {{- $top_css_class = printf "%s %s" $top_css_class "handwritten-font" -}}
- {{- end -}}
+{{- $font := .Get "font" | default 0 -}}
+{{- $top_css_class := "shimmer" -}}
+{{- if eq $font 1 -}}
+	{{- $top_css_class = printf "%s %s" $top_css_class "consolas-font" -}}
+{{- else if eq $font 2 -}}
+	{{- $top_css_class = printf "%s %s" $top_css_class "pixel-font" -}}
+{{- else if eq $font 3 -}}
+	{{- $top_css_class = printf "%s %s" $top_css_class "handwritten-font" -}}
+{{- end -}}
 
- {{- /*   {{- $blur := ((.Get "blur") | default 12) -}}  */ -}}
- {{- $blur := .Get "blur" -}}
- {{- if eq $blur nil -}}
-   {{- $blur = 12 -}}
- {{- end -}}
- {{- $blur_property := printf "--shimmer-blur-pixels: %dpx" $blur -}}
+{{- /*   {{- $blur := ((.Get "blur") | default 12) -}}  */ -}}
+{{- $blur := .Get "blur" -}}
+{{- if eq $blur nil -}}
+{{- $blur = 12 -}}
+{{- end -}}
+{{- $blur_property := printf "--shimmer-blur-pixels: %dpx" $blur -}}
 
- {{- $x := ((.Get "x") | default 0) -}}
- {{- $y := ((.Get "y") | default 0) -}}
- {{- $z := ((.Get "z") | default 0) -}}
- {{- $random_position_power := (.Get "random_position") -}}
- {{- $random_scale := (.Get "random_scale" | default 0.0) -}}
- {{- $rand_scale_min := (.Get "random_scale_min" | default 0.0) -}}
- {{- $scale := (.Get "scale" | default 1.30) -}}
+{{- $x := ((.Get "x") | default 0) -}}
+{{- $y := ((.Get "y") | default 0) -}}
+{{- $z := ((.Get "z") | default 0) -}}
+{{- $random_position_power := (.Get "random_position") -}}
+{{- $random_scale := (.Get "random_scale" | default 0.0) -}}
+{{- $rand_scale_min := (.Get "random_scale_min" | default 0.0) -}}
+{{- $scale := (.Get "scale" | default 1.30) -}}
 
- {{- $shimmer_c1 := printf "--shimmer-color-1-light:%s; --shimmer-color-1-dark:%s" $color1light $color1dark -}}
- {{- $shimmer_c2 := printf "--shimmer-color-2-light:%s; --shimmer-color-2-dark:%s" $color2light $color2dark -}}
-
-
- {{- $_shimmer_scale := printf "--shimmer-scale:%f" $scale -}}
-
- {{- $_init_delay := add -99999.9 $time_start_offset -}}
-
- {{- $speed_sign := 1 -}}
- {{- if lt $rawDelay 0.0 -}}
-	 {{- $speed_sign = -1 -}}
- {{- end -}}
-
- {{- $_shimmer_translate := printf "--shimmer-translate:translate3D(%dpx, %dpx, %dpx)" $x $y $z -}}
-
- {{- $_shimmer_properties_slice := slice $_shimmer_translate $_shimmer_scale $shimmer_c1 $shimmer_c2 $blur_property -}}
- {{- $_shimmer_properties_slice_non_empty := complement (slice nil) (slice "") $_shimmer_properties_slice -}}
- {{- $_shimmer_properties := delimit $_shimmer_properties_slice_non_empty ";" -}}
+{{- $shimmer_c1 := printf "--shimmer-color-1-light:%s; --shimmer-color-1-dark:%s" $color1light $color1dark -}}
+{{- $shimmer_c2 := printf "--shimmer-color-2-light:%s; --shimmer-color-2-dark:%s" $color2light $color2dark -}}
 
 
- {{- $output := printf "<span class='%s' style='%s'>" $top_css_class $_shimmer_properties -}}
+{{- $_shimmer_scale := printf "--shimmer-scale:%f" $scale -}}
 
- {{- range $index, $char := $chars -}}
-	 {{- $delay := mul $index ($absDelay) -}}
-	 {{- $delay = mul $delay $speed_sign  -}}
-	 {{- $delay = add $delay $_init_delay -}}
+{{- $_init_delay := add -99999.9 $time_start_offset -}}
+
+{{- $speed_sign := 1 -}}
+{{- if lt $rawDelay 0.0 -}}
+	{{- $speed_sign = -1 -}}
+{{- end -}}
+
+{{- $_shimmer_translate := printf "--shimmer-translate:translate3D(%dpx, %dpx, %dpx)" $x $y $z -}}
+
+{{- $_shimmer_properties_slice := slice $_shimmer_translate $_shimmer_scale $shimmer_c1 $shimmer_c2 $blur_property -}}
+{{- $_shimmer_properties_slice_non_empty := complement (slice nil) (slice "") $_shimmer_properties_slice -}}
+{{- $_shimmer_properties := delimit $_shimmer_properties_slice_non_empty ";" -}}
 
 
-	 {{- $_shimmer_properties_slice := slice $_shimmer_translate $_shimmer_scale $shimmer_c1 $shimmer_c2 $blur_property -}}
-	 {{- $_shimmer_properties_slice_non_empty := complement (slice nil) (slice "") $_shimmer_properties_slice -}}
+{{- $output := printf "<span class='%s' style='%s'>" $top_css_class $_shimmer_properties -}}
 
-	 {{- $_shimmer_properties := delimit $_shimmer_properties_slice_non_empty ";" -}}
-	 {{- /*  NOTE THIS ADDS WHITESPACES!  */ -}}
-	 {{- /*  INFO  https://discourse.gohugo.io/t/hugo-range-function-adds-extra-whitespace-between-spans/33219 */ -}}
-	 {{- /*  <span class="wavy-text" style="animation-duration: {{-$animation_time-}}s; animation-delay:  {{-$delay | safeCSS-}}s; --y-wave-translate-min: {{-$min_y-}}px; --y-wave-translate-max: {{-$max_y-}}px;"> {{- $char -}}</span>  */ -}}
-	 {{- $child_span_style := "" -}}
-	 {{- $rand := math.Rand -}}
-	 {{- if $random_position_power -}}
-		 {{- /* Return a random -1 or 1. This comment removes trailing newlines. */ -}}
-		 {{- $rand_sign := sub (mul (math.Round math.Rand ) 2) 1 -}}
-		 {{- $rand_x := mul (mul math.Rand $random_position_power) $rand_sign -}}
-		 {{- $rand_x = add $rand_x $x -}}
-		 {{- $rand_sign = sub (mul (math.Round math.Rand ) 2) 1 -}}
-		 {{- $rand_y := mul (mul math.Rand $random_position_power) $rand_sign -}}
-		 {{- $rand_y = add $rand_y $y -}}
-		 {{- $rand_sign = sub (mul (math.Round math.Rand ) 2) 1 -}}
-		 {{- $rand_z := mul (mul math.Rand $random_position_power) $rand_sign -}}
-		 {{- $rand_z = add $rand_z $z -}}
-		
-		 {{- $rand_sign = sub (mul (math.Round math.Rand ) 2) 1 -}}
-		 {{- /*   {{- $child_span_style = printf "--shimmer-translate:translate3D(%dpx, %dpx, %dpx);" $rand_x $rand_y $rand_z -}}  */ -}}
-		 {{- $child_span_style = printf "--shimmer-translate:translate3D(%fpx, %fpx, %fpx);" $rand_x $rand_y $rand_z -}}
-		 {{- $rand_scale := (add $scale (mul (mul $rand_sign $random_scale) math.Rand )) -}}
-		 {{- $rand_scale = (add $rand_scale $rand_scale_min) -}}
-		 {{- /*   {{- $rand_scale :=  2.0 -}}  */ -}}
-		 {{- $child_span_style = printf "%s --shimmer-scale: %f" $child_span_style $rand_scale -}}
-	 {{- end -}}
+{{- range $index, $char := $chars -}}
+	{{- $delay := mul $index ($absDelay) -}}
+	{{- $delay = mul $delay $speed_sign  -}}
+	{{- $delay = add $delay $_init_delay -}}
 
-	 {{- if eq $char " " -}}
-		 {{- $output = printf "%s<span style='display:inline;'> </span>" ($output | safeHTMLAttr) -}}
-	 {{- else -}}
-		 {{- $output = printf "%s<span style='%s; animation-duration:%fs; animation-delay:%fs;'>%s</span>" $output $child_span_style $animation_time ($delay) $char -}}
-	 {{- end -}}
- {{- end -}}
 
- {{- $output = printf "%s</span>" $output -}}
- {{- /*  To avoid whitespaces in HTML  */ -}}
- {{- $output | safeHTML -}}
+	{{- $_shimmer_properties_slice := slice $_shimmer_translate $_shimmer_scale $shimmer_c1 $shimmer_c2 $blur_property -}}
+	{{- $_shimmer_properties_slice_non_empty := complement (slice nil) (slice "") $_shimmer_properties_slice -}}
+
+	{{- $_shimmer_properties := delimit $_shimmer_properties_slice_non_empty ";" -}}
+	{{- /*  NOTE THIS ADDS WHITESPACES!  */ -}}
+	{{- /*  INFO  https://discourse.gohugo.io/t/hugo-range-function-adds-extra-whitespace-between-spans/33219 */ -}}
+	{{- /*  <span class="wavy-text" style="animation-duration: {{-$animation_time-}}s; animation-delay:  {{-$delay | safeCSS-}}s; --y-wave-translate-min: {{-$min_y-}}px; --y-wave-translate-max: {{-$max_y-}}px;"> {{- $char -}}</span>  */ -}}
+	{{- $child_span_style := "" -}}
+	{{- $rand := math.Rand -}}
+	{{- if $random_position_power -}}
+		{{- /* Return a random -1 or 1. This comment removes trailing newlines. */ -}}
+		{{- $rand_sign := sub (mul (math.Round math.Rand ) 2) 1 -}}
+		{{- $rand_x := mul (mul math.Rand $random_position_power) $rand_sign -}}
+		{{- $rand_x = add $rand_x $x -}}
+		{{- $rand_sign = sub (mul (math.Round math.Rand ) 2) 1 -}}
+		{{- $rand_y := mul (mul math.Rand $random_position_power) $rand_sign -}}
+		{{- $rand_y = add $rand_y $y -}}
+		{{- $rand_sign = sub (mul (math.Round math.Rand ) 2) 1 -}}
+		{{- $rand_z := mul (mul math.Rand $random_position_power) $rand_sign -}}
+		{{- $rand_z = add $rand_z $z -}}
+	
+		{{- $rand_sign = sub (mul (math.Round math.Rand ) 2) 1 -}}
+		{{- /*   {{- $child_span_style = printf "--shimmer-translate:translate3D(%dpx, %dpx, %dpx);" $rand_x $rand_y $rand_z -}}  */ -}}
+		{{- $child_span_style = printf "--shimmer-translate:translate3D(%fpx, %fpx, %fpx);" $rand_x $rand_y $rand_z -}}
+		{{- $rand_scale := (add $scale (mul (mul $rand_sign $random_scale) math.Rand )) -}}
+		{{- $rand_scale = (add $rand_scale $rand_scale_min) -}}
+		{{- /*   {{- $rand_scale :=  2.0 -}}  */ -}}
+		{{- $child_span_style = printf "%s --shimmer-scale: %f" $child_span_style $rand_scale -}}
+	{{- end -}}
+
+	{{- if eq $char " " -}}
+		{{- $output = printf "%s<span style='display:inline;'> </span>" ($output | safeHTMLAttr) -}}
+	{{- else -}}
+		{{- $output = printf "%s<span style='%s; animation-duration:%fs; animation-delay:%fs;'>%s</span>" $output $child_span_style $animation_time ($delay) $char -}}
+	{{- end -}}
+{{- end -}}
+
+{{- $output = printf "%s</span>" $output -}}
+{{- /*  To avoid whitespaces in HTML  */ -}}
+{{- $output | safeHTML -}}

@@ -12,7 +12,8 @@ spin = (float) Spin multiplicator. Default: 1.0 (1 perfect turn)
 */ -}}
 
 {{- /*  REFACTOR rotate  */ -}}
-{{- $chars := split (.Get "text") "" -}} 
+{{- $text_input := or (.Get "text") (.Get 0) -}}
+{{- $chars := split $text_input "" -}} 
 {{- $animation_time := float ((.Get "time") | default 1) -}} 
 {{- $time_offset := float ((.Get "time_offset") | default 0.0) -}} 
 {{- $rawFrequency := float ((.Get "delay") | default .1) -}} 

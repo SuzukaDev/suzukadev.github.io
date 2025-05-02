@@ -15,7 +15,7 @@ randomness = (float) Displacement randomness. Default: 0.0
   */ -}}
 
 {{- /*  {{- $text := .Get 0 -}}  */ -}}
-{{- $text := .Get "text" -}}
+{{- $text := or (.Get "text") (.Get 0) -}}
 {{- $animation_time := float ((.Get "time") | default 5) -}}
 {{- $font := .Get "font" | default 0 -}}
 {{- $rotation := .Get "rotation" | default 10 -}}

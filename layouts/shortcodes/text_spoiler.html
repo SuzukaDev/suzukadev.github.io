@@ -11,8 +11,8 @@ in_time = (float) The time for the reveal (fade in) effect. Default: .2 (s)
 out_time = (float) The time for the fade out effect. Default: .4 (s)
 */ -}}
 
-{{- $text := (.Get "text") -}}
-{{- $chars := split $text "" -}}
+{{- $text := or (.Get "text") (.Get 0) -}}
+{{- $chars := split $text "" -}} 
 {{- /*  {{- $blur := ((.Get "blur") | default 5) -}}  */ -}}
 {{- $blur := (.Get "blur") -}}
 {{- /*  {{- if eq $blur nil -}}  */ -}}
