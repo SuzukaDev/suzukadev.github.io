@@ -1,7 +1,7 @@
 ---
-title: 'Traditional Art'
+title: 'Arte tradicional'
 # Descripción que se muestra en la página del álbum. Se renderiza como markdown para permitir agregar enlaces y algo de formato.
-description: (Descripción de la galería)
+description: Dibujos hechos sin {{< shortcut "CTRL+Z" >}}
 date: '2025-04-27T21:18:02+02:00' # Usado para ordenar (más reciente primero)
 author: Suzuka Ka
 draft: false

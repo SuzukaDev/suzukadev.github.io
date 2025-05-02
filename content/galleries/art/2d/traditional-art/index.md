@@ -1,7 +1,9 @@
 ---
 title: 'Traditional Art'
 # Description shown on the album page. Rendered as markdown to enable adding links and some formatting.
-description: (Galery description)
+# description: Drawings made without being a coward and using {{< shortcut "CTRL+Z" >}}
+# description: No cowardice, just raw and fearless drawings made without {{< shortcut "CTRL+Z" >}}
+description: Drawings made without {{< shortcut "CTRL+Z" >}}
 date: '2025-04-27T21:18:02+02:00' # Used for sorting (newest first)
 author: Suzuka Ka
 draft: false
