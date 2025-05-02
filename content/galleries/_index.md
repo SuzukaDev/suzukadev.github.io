@@ -1,11 +1,11 @@
 ---
 title: 'Albums'
 # Description shown on the album page. Rendered as markdown to enable adding links and some formatting.
-description: (Galery description)
+description: Pictures of some of my works
 date: '2025-04-27T20:48:17+02:00' # Used for sorting (newest first)
 author: Suzuka Ka
 draft: false
-# categories: ["gamedev", "art"]
+categories: ["gamedev", "art"]
 
 ## INFO Menus https://gohugo.io/content-management/menus/
 # menus:

@@ -1,7 +1,7 @@
 ---
-title: 'Digital Art'
+title: 'Arte Digital'
 # Descripción que se muestra en la página del álbum. Se renderiza como markdown para permitir agregar enlaces y algo de formato.
-description: (Descripción de la galería)
+description: 
 date: '2025-04-27T21:17:16+02:00' # Usado para ordenar (más reciente primero)
 author: Suzuka Ka
 draft: false

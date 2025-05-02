@@ -1,7 +1,7 @@
 ---
 title: 'Art'
 # Descripción que se muestra en la página del álbum. Se renderiza como markdown para permitir agregar enlaces y algo de formato.
-description: (Descripción de la galería)
+description: 
 date: '2025-04-27T21:01:17+02:00' # Usado para ordenar (más reciente primero)
 author: Suzuka Ka
 draft: false
@@ -48,4 +48,4 @@ print_debug_resource_weight: true # Si es verdadero, muestra un campo 'weight' e
 #       weight: 20
 ---
 
-> Una obra de arte **nunca se termina**, solo se **abandona** <cite>Leonardo da Vinci</cite>
+> Una obra de arte **nunca se termina**, solo se **abandona**. <cite>Leonardo da Vinci</cite>

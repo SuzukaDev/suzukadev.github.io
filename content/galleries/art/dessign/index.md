@@ -1,7 +1,7 @@
 ---
 title: 'Dessign'
 # Description shown on the album page. Rendered as markdown to enable adding links and some formatting.
-description: (Galery description)
+description: Icon dessign, motion graphics, banners, covers, etc.
 date: '2025-04-27T21:16:13+02:00' # Used for sorting (newest first)
 author: Suzuka Ka
 draft: false
@@ -19,9 +19,10 @@ draft: false
 # private: true # If true, this gallery does won't show in lists, RSS, sitemaps, etc. On list pages, use cascade to hide descendants.
 # featured: true # If true the gallery will be featured in home with a BIG picture (even if private).
 # featured_gallery: true # If true, the gallery will be featured in the home page (with an smaller size) (even if private).
-# featured_image: images/this is a random name.jpg # Name of the image file used for the album thumbnail. If NOT set, the first image which contains "feature" in its filename is used, otherwise the first image in the album.
+# featured_image: images/gpgroups-logo-animation-final-2.webp # Name of the image file used for the album thumbnail. If NOT set, the first image which contains "feature" in its filename is used, otherwise the first image in the album.
+featured_image: images/lettering-hitchiker.png # Name of the image file used for the album thumbnail. If NOT set, the first image which contains "feature" in its filename is used, otherwise the first image in the album.
 # featured_image_hover: images/this is a random name.jpg # Image that displays when hovering the album. If NOT set, the first image which contains "hover" in its filename will be used.
-# hover_color: rgba(255, 94, 0, 0.57) # Hover for the bloom color (in dark theme) when hovering a gallery. If not set, gets the most predominant color in the hover image.
+hover_color: rgb(126, 250, 255, .5) # Hover for the bloom color (in dark theme) when hovering a gallery. If not set, gets the most predominant color in the hover image.
 
 # APPEARANCE SETTINGS
 # theme: light # Forces a theme for the gallery (possible values: dark/light). Defaults to defaultTheme from configuration.

@@ -1,7 +1,7 @@
 ---
 title: 'Pixel Art'
 # Description shown on the album page. Rendered as markdown to enable adding links and some formatting.
-description: (Galery description)
+description: "**Tools:** Pyxel Edit, Aseprite, Krita {{< text_wavy text=\"and\" amp=10 >}} [**K-Sprite**, my own Pixel Art Editor.](https://orb91.gumroad.com/l/szk-krita-pixel-art-suite)"
 date: '2025-04-27T20:18:53+02:00' # Used for sorting (newest first)
 author: Suzuka Ka
 draft: false

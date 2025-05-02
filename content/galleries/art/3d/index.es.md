@@ -1,7 +1,7 @@
 ---
 title: '3d'
 # Descripción que se muestra en la página del álbum. Se renderiza como markdown para permitir agregar enlaces y algo de formato.
-description: (Descripción de la galería)
+description: Modelado y escultura 3D, _texture painting_, _shading_, _rigging_ y animaciones.
 date: '2025-04-27T21:16:08+02:00' # Usado para ordenar (más reciente primero)
 author: Suzuka Ka
 draft: false

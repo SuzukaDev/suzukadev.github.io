@@ -1,7 +1,7 @@
 ---
 title: 'Art'
 # Description shown on the album page. Rendered as markdown to enable adding links and some formatting.
-description: (Galery description)
+description: 
 date: '2025-04-27T21:01:17+02:00' # Used for sorting (newest first)
 author: Suzuka Ka
 draft: false
