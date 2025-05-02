@@ -19,6 +19,12 @@ tags = ["mierda", "test", "markdown"]
 # show_next_and_previous_arrows = false
 +++
 
+{{< download_file "paco.zip"  >}}
+
+
+{{< download_file "skrillex.mp4" >}}
+
+
 This is an article for testing the markdown
 
 # Video testing

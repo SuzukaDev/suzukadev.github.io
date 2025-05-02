@@ -20,6 +20,27 @@ tags = ["mierda", "test", "markdown"]
 +++
 This is an article for testing the markdown
 
+# Test file download
+
+{{< download_file "paco.zip" false "MAC" >}}
+
+
+{{< download_file "skrillex.mp4" >}}
+
+
+<a class="elcarpo" href="Test file download.zip"> Descarga el archivo </a>
+
+
+[descarga el zip]("Test file download.zip")
+
+[descarga el zip](Test file download.zip)
+
+[💾 descarga eaaaal zip](Test-file-download.zip)
+
+[descarga el zip](paco.zip)
+
+[wooaaw](www.google.com)
+
 # Video testing
 
 {{< text_centered >}}
@@ -36,7 +57,7 @@ muy centrado en la sociedad y en sus problemas
 {{< /text_centered >}}
 
 
-{{< article_tags tags="ameba, dexter" title="holaaa" align="right" >}}
+<!-- {{< article_tags tags="ameba, dexter" title="holaaa" align="right" >}} -->
 
 <!-- {{< featured_articles articles="articulo-tres,copia,copia" align="center" h=3 >}} -->
 <!-- {{< featured_articles articles="articulo-tres,copia,copia" title="WOW" align="center" h=3 >}} -->
