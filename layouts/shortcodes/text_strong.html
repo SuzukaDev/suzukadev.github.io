@@ -18,7 +18,8 @@ spin = (float) Spin multiplicator. Default: 1.0 (1 perfect turn)
 */ -}}
 
 {{- /*  REFACTOR rotate  */ -}}
-{{- $text := .Get "text" -}}
+{{- /*  REFACTOR probar la propiedad de scale... hace/pinta algo en el efecto?  */ -}}
+{{- $text := or (.Get "text") (.Get 0) -}}
 {{- $font_weight :=  ((.Get "font_weight") | default 5 ) -}}
 {{- $animation_time := float ((.Get "time") | default 1) -}}
 {{- $time_offset := float ((.Get "time_offset") | default 0.0) -}}

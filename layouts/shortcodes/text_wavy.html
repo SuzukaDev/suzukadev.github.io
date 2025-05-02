@@ -1,8 +1,20 @@
-<!-- raw html -->
-{{- /*  {{.Inner}}  */ -}}
+{{- /*  
+Makes a wavy text
 
-{{- /*  {{- $chars := split .Inner "" -}}  */ -}}
-{{- $chars := split (.Get "text") "" -}}
+Arguments:
+text = (string) Shortcut
+freq = (float/int) The frequency of the wave. Default: .1
+amp = (float/int) Amplitude of the wave. Default: 20
+time = (float/int) Time for the effect. Default: 1
+
+Usage:
+{{< text_wavy "helloooo!" >}}
+{{< text_wavy text="helloooo!" amp=10 >}}
+*/ -}}
+{{- /*  REFACTOR text_wavy  */ -}}
+
+{{- $text_input := or (.Get "text") (.Get 0) }}
+{{- $chars := split $text_input "" -}}
 {{- /*  {{- $frequency := (.Get 1) | default .2 | mul -1.0}}  */ -}}
 {{- /*  {{- $rawFrequency := (.Get 1) | default .2 -}}  */ -}}
 {{- $rawFrequency := float ((.Get "freq") | default .1) -}}
