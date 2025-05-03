@@ -20,15 +20,27 @@ tags = ["mierda", "test", "markdown"]
 +++
 This is an article for testing the markdown
 
+{{< download_file "paco.zip" false "pdf" >}}
+
+{{< download_file "paco.zip" false "game" >}}
+
+{{< download_file "paco.zip" false "file" >}}
+
+{{< download_file "paco.zip" false "image" >}}
+
+{{< download_file "paco.zip" false "VIDEO" >}}
+
+{{< download_file "paco.zip" false "krita" >}}
+
+ {{< download_file "skrillex.mp4" >}}
+
+
 # Test file download
 
-{{< download_file "paco.zip" false "MAC" >}}
+{{% download_file "paco.zip" false "linux" %}} {{% download_file "skrillex.mp4" %}}
 
 
-{{< download_file "skrillex.mp4" >}}
-
-
-<a class="elcarpo" href="Test file download.zip"> Descarga el archivo </a>
+<a class="elcarpo" href="Test file download.zip"> Descarga el archivo </a> <a class="elcarpo" href="Test file download.zip"> Descarga el archivo </a>
 
 
 [descarga el zip]("Test file download.zip")
@@ -39,7 +51,7 @@ This is an article for testing the markdown
 
 [descarga el zip](paco.zip)
 
-[wooaaw](www.google.com)
+[wooaaw](www.google.com) [wooaaw](www.google.com)
 
 # Video testing
 
