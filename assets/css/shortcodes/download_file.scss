@@ -38,6 +38,7 @@ a.download-button{
 		svg{
 			transition-duration: .2s;
 			transform: scale(1.4);
+			opacity: 1.0;
 		}
 		p{
 			text-decoration: underline;
@@ -51,6 +52,7 @@ a.download-button{
 		// height: 24px;
 		width: 34px;
 		height: 34px;
+		opacity: .6;
 	}
 
 	p{
