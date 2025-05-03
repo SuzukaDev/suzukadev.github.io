@@ -26,6 +26,8 @@ a.download-button{
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
 	transition-duration: .4s;
+	overflow: hidden;
+
 	&:hover{
 		transition-duration: .1s;
 		box-shadow: rgba(0, 0, 0, 0.74) 0px 3px 8px;
