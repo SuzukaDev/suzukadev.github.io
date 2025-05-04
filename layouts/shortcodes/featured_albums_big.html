@@ -1,0 +1,61 @@
+{{- /*  
+Displays article cards.
+
+
+Arguments:
+0 articles = (String) Articles file names separated with a COMA. Eg: articles="article1, illustration-process"
+1 title = (String). Add a header title above the articles. Default: (empty)
+2 h = (int) Type of header for the tile (1 for h1, 2 for h2, 3 for h3, etc.). Default: 2 (h2)
+3 align = (String) Text align of the header (options: "left", "right", "center"). Default: "center"
+
+Use example:
+{{< featured_articles "my-first-article, another-article" >}}
+{{< featured_articles "my-first-article, another-article" "My favourite articles" 3 "left" >}}
+{{< featured_articles title="my-first-article, another-article" title="My favourite articles" align="right" >}}
+*/ -}}
+
+
+{{- $albums := or (.Get 0) (.Get "albums") -}}
+{{- $title := or (.Get 1) (.Get "title") -}}
+{{- $header_number := or (.Get 2) (.Get "h") | default 2 -}}
+{{- $text_align := or (.Get 3) (.Get "align") | default "center" -}}
+
+{{- /*  Get the albums  */ -}}
+{{- $albums_array := slice -}}
+{{- $albums_paths_array := split $albums "," -}}
+{{- range $index, $album_path := $albums_paths_array -}}
+	{{- $album_path = trim $album_path " " -}}
+	{{- $_album := $.Site.GetPage $album_path -}}
+	{{- if not $_album -}}
+		{{- errorf "at SHORTCODE featured_albums_big: Album '%#v' not found at '%s' (%s)" $album_path $.Page.Title $.Page.Path -}}
+	{{- else if ne $_album.Section "galleries" }}
+		{{- errorf "at SHORTCODE featured_albums_big: Page '%#v' (at '%s' (%s)) is not an album, is a '%s'" $album_path $.Page.Title $.Page.Path $_album.Section -}}
+	{{- else }}
+		{{- $albums_array = $albums_array | append $_album -}}
+	{{- end -}}
+{{- end -}}
+
+{{- $header_tag := printf "h%d" $header_number -}}
+
+{{- /*  THINK featured_articles shortcode  */ -}}
+{{- /*  
+ - Order articles by date?
+ - Add css width % property?
+  */ -}}
+
+{{- if gt (len $albums_array) 0 -}}
+	{{- if $title }}
+		{{- $header := printf "<%s style='text-align:%s;'>%s</%s>" $header_tag $text_align $title $header_tag -}}
+		{{- $header | safeHTML -}}
+	{{- end -}}
+		{{- /*  <section class="featured">  */ -}}
+		{{- /*  <section class="featured ">  */ -}}
+		{{- /*  <section class="featured-gallery-big">  */ -}}
+			{{- range $albums_array -}}
+			{{- /*  <section class="featured">  */ -}}
+				{{- /*  {{- partial "album-card.html" . -}}  */ -}}
+				{{- partial "albums/featured-gallery-big.html" . -}}
+			{{- /*  </section>  */ -}}
+			{{- end -}}
+		{{- /*  </section>  */ -}}
+{{- end -}}

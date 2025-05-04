@@ -243,3 +243,40 @@ section.featured{
 		// @extend #article-title;
 	}
 }
+
+
+.featured-gallery-big{
+	// padding-top: 100px;
+	// margin-top: 100px;
+	// all: unset;
+	margin: auto;
+
+	display: flex;
+	flex-direction: column;
+	// width: 1300px;
+	// width: 90vmin;
+	// width: 100%;
+	width: clamp(200px, 100%, 1300px);
+	gap: 30px;
+	text-align: left;
+	h2, p{
+		color: var(--text-1-dark) !important;
+	}
+	// h2, p{
+		// text-decoration: none !important;
+	// }
+
+	// NEW IDEA HOVER
+	a{
+		transition-duration: 2s;
+		background-position: var(--background-pos, 50% 100%);
+	}
+	&:hover{
+		a{
+			transition-duration: 5s;
+			// transform: scale(3.0);
+			// background-position: 0px 0px;
+			background-position: 50% 100%;
+		}
+	}
+}

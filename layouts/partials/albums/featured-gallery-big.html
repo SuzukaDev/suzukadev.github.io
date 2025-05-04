@@ -1,0 +1,37 @@
+{{- /*  NOTE this is for shortcode featured_albums_big  */ -}}
+
+{{- /*  Features a big gallery  */ -}}
+{{- $gallery := partial "get-gallery.html" . -}}
+{{- if $gallery -}}
+  {{- $images := .Resources.ByType "image" -}}
+  {{- $index := 0 -}}
+  {{- range $i, $image := $images -}}
+    {{- if index $image.Params "cover" -}}
+      {{- $index = $i -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $featured := ($images.GetMatch (.Params.featured_image | default "*feature*")) | default (index $images $index) -}}
+
+  {{/*  WEBP & Gif fix  */}}
+  {{- $thumbnail := $featured -}}
+  {{- if and (ne $featured.MediaType.SubType "gif") (ne $featured.MediaType.SubType "webp") -}}
+    {{- $thumbnail := $featured.Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) -}}
+  {{- end -}}
+
+  {{- $color := index $thumbnail.Colors 0 | default "transparent" -}}
+  {{- /*  <section class="featured">  */ -}}
+  <section class="featured featured-gallery-big">
+    <a class="featured-card" href="{{- .RelPermalink -}}" style="background-color: {{- $color -}}; background-image: url({{- $thumbnail.RelPermalink -}})">
+      <div>
+        <h2>{{- .Title -}}</h2>
+        <p>
+          {{- if gt $gallery.albumCount 0 -}}
+            {{- T "albumCount" (dict "count" ($gallery.albumCount | lang.FormatNumber 0) "photoCount" ($gallery.imageCount | lang.FormatNumber 0 | lang.Translate "photoCount")) -}}
+          {{- else -}}
+            {{- T "photoCount" ($gallery.imageCount | lang.FormatNumber 0) -}}
+          {{- end -}}
+        </p>
+      </div>
+    </a>
+  </section>
+{{- end -}}
