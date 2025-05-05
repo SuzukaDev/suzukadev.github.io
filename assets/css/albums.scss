@@ -285,7 +285,7 @@ section.featured{
 		// transition-duration: 2s;
 		// background-size: 100%;
 		// background-size: 110%;
-		transition-duration: var(--background-out-time, 2s);
+		transition-duration: var(--background-animation-time-unfocus, 2s);
 		// background-position: var(--background-position, 50% 50%);
 		background-position: var(--background-position, center);
 		// background-position: var(--background-position, 0% 0%);
@@ -299,7 +299,7 @@ section.featured{
 			// background-position: 50% 100%;
 			// background-size: 200%;
 			// background-size: 100%;
-			transition-duration: var(--background-position-time, 5s);
+			transition-duration: var(--background-animation-time-hover, 5s);
 			background-position: var(--background-hover-position, center);
 			background-size: var(--background-zoom-2, cover);
 		}
