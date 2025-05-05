@@ -50,10 +50,10 @@ Use example:
 	{{- $shortcode_properties_array = append (printf "--background-hover-position:%s;" $pos2) $shortcode_properties_array -}}
 {{- end -}}
 {{- if $t1 -}}
-	{{- $shortcode_properties_array = append (printf "--background-position-time:%s;" $t1) $shortcode_properties_array -}}
+	{{- $shortcode_properties_array = append (printf "--background-animation-time-hover:%s;" $t1) $shortcode_properties_array -}}
 {{- end -}}
 {{- if $t2 -}}
-	{{- $shortcode_properties_array = append (printf "--background-out-time:%s;" $t2) $shortcode_properties_array -}}
+	{{- $shortcode_properties_array = append (printf "--background-animation-time-unfocus:%s;" $t2) $shortcode_properties_array -}}
 {{- end -}}
 {{- if $zoom1 -}}
 	{{- $shortcode_properties_array = append (printf "--background-zoom:%s;" $zoom1) $shortcode_properties_array -}}
@@ -61,7 +61,6 @@ Use example:
 {{- if $zoom2 -}}
 	{{- $shortcode_properties_array = append (printf "--background-zoom-2:%s;" $zoom2) $shortcode_properties_array -}}
 {{- end -}}
-
 
 {{- $shortcode_properties := delimit $shortcode_properties_array " " | safeCSS -}}
 
@@ -94,22 +93,7 @@ Use example:
 
 	{{- $color := index $thumbnail.Colors 0 | default "transparent" -}}
 
-	{{- /*  Properties for Background position hover  */ -}}
-	{{- $bg_pos_property := "" -}}
-	{{- if .Params.cover_position -}}
-		{{- $bg_pos_property = (printf "--background-position: %s;" .Params.cover_position) | safeCSS -}}
-	{{- end -}}
-	{{- $bg_pos_hover_property := "" -}}
-	{{- if .Params.cover_position_on_hover -}}
-		{{- $bg_pos_hover_property = (printf "--background-hover-position: %s;" .Params.cover_position_on_hover) | safeCSS -}}
-	{{- end -}}
-	{{- $bg_pos_time_property := "" -}}
-	{{- if .Params.cover_position_time -}}
-		{{- $bg_pos_time_property = (printf "--background-position-time: %s;" .Params.cover_position_time) | safeCSS -}}
-	{{- end -}}
-	{{- $bg_hover_animation_properties := (printf "%s %s %s" $bg_pos_property $bg_pos_hover_property $bg_pos_time_property ) | safeCSS }}
-	{{- /*  {{- if .Params.featured_big_cover_image -}}  */ -}}
-	{{- if $image_resource -}}
+	{{- if $image_resource }}
 		{{- $thumbnail = $image_resource -}}
 	{{- end -}}
 
