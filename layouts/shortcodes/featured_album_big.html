@@ -1,0 +1,135 @@
+{{- /*  
+Displays article cards.
+
+
+Arguments:
+0 articles = (String) Articles file names separated with a COMA. Eg: articles="article1, illustration-process"
+1 title = (String). Add a header title above the articles. Default: (empty)
+2 h = (int) Type of header for the tile (1 for h1, 2 for h2, 3 for h3, etc.). Default: 2 (h2)
+3 align = (String) Text align of the header (options: "left", "right", "center"). Default: "center"
+
+Use example:
+{{< featured_articles "my-first-article, another-article" >}}
+{{< featured_articles "my-first-article, another-article" "My favourite articles" 3 "left" >}}
+{{< featured_articles title="my-first-article, another-article" title="My favourite articles" align="right" >}}
+*/ -}}
+
+
+{{- $album := or (.Get 0) (.Get "album") -}}
+{{- $image_path := or (.Get 1) (.Get "cover") -}}
+{{- $pos1 := or (.Get 2) (.Get "pos1") -}}
+{{- $pos2 := or (.Get 3) (.Get "pos2") -}}
+{{- $zoom1 := or (.Get 4) (.Get "zoom1") -}}
+{{- $zoom2 := or (.Get 5) (.Get "zoom2") -}}
+{{- $t1 := or (.Get 6) (.Get "t1") -}}
+{{- $t2 := or (.Get 7) (.Get "t2") -}}
+
+{{- /*  Check for errors  */ -}}
+{{- $album_page := .Site.GetPage $album -}}
+{{- if not $album_page }}
+	{{- errorf "SHORTCODE featured_album_big: album '%s' not found  (in '%s' at '%s' in '%s')" $album .Page.Name .Page.File.Path .Page.Path }}
+{{- end -}}
+
+{{- $image_resource := "" -}}
+{{- if $image_path -}}
+	{{- $image_resource = $album_page.Resources.Get $image_path -}}
+	{{- /*  {{- $image_resource = .album_page.Resources.GetMatch $image_path -}}  */ -}}
+	{{- if not $image_resource -}}
+		{{- errorf "SHORTCODE featured_album_big: image '%s' not found at page '%s' (in '%s' at '%s' in '%s')" $image_path $album_page.Name .Page.Name .Page.File.Path .Page.Path }}
+	{{- end -}}
+{{- end -}}
+
+{{- $shortcode_properties_array := slice -}}
+{{- if $pos1 -}}
+	{{- /*  {{- $value := printf "--background-position:%s;" $pos1 -}}  */ -}}
+	{{- /*  {{- $shortcode_properties_array = append $value $shortcode_properties_array -}}  */ -}}
+	{{- $shortcode_properties_array = append (printf "--background-position:%s;" $pos1) $shortcode_properties_array -}}
+	{{- /*  {{- $shortcode_properties_array = append $shortcode_properties_array (safeCSS (printf "--background-position:%s; " $pos1)) -}}  */ -}}
+{{- end -}}
+{{- if $pos2 -}}
+	{{- $shortcode_properties_array = append (printf "--background-hover-position:%s;" $pos2) $shortcode_properties_array -}}
+{{- end -}}
+{{- if $t1 -}}
+	{{- $shortcode_properties_array = append (printf "--background-position-time:%s;" $t1) $shortcode_properties_array -}}
+{{- end -}}
+{{- if $t2 -}}
+	{{- $shortcode_properties_array = append (printf "--background-out-time:%s;" $t2) $shortcode_properties_array -}}
+{{- end -}}
+{{- if $zoom1 -}}
+	{{- $shortcode_properties_array = append (printf "--background-zoom:%s;" $zoom1) $shortcode_properties_array -}}
+{{- end -}}
+{{- if $zoom2 -}}
+	{{- $shortcode_properties_array = append (printf "--background-zoom-2:%s;" $zoom2) $shortcode_properties_array -}}
+{{- end -}}
+
+
+{{- $shortcode_properties := delimit $shortcode_properties_array " " | safeCSS -}}
+
+
+
+
+{{- with $album_page -}}
+	{{- /*  {{- partial "albums/featured-gallery-big.html" . -}}  */ -}}
+
+
+	{{- /*  NOTE this is for shortcode featured_albums_big  */ -}}
+
+	{{- /*  Features a big gallery  */ -}}
+	{{- $gallery := partial "get-gallery.html" . -}}
+	{{- if $gallery -}}
+	{{- $images := .Resources.ByType "image" -}}
+	{{- $index := 0 -}}
+	{{- range $i, $image := $images -}}
+		{{- if index $image.Params "cover" -}}
+		{{- $index = $i -}}
+		{{- end -}}
+	{{- end -}}
+	{{- $featured := ($images.GetMatch (.Params.featured_image | default "*feature*")) | default (index $images $index) -}}
+
+	{{/*  WEBP & Gif fix  */}}
+	{{- $thumbnail := $featured -}}
+	{{- if and (ne $featured.MediaType.SubType "gif") (ne $featured.MediaType.SubType "webp") -}}
+		{{- $thumbnail := $featured.Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) -}}
+	{{- end -}}
+
+	{{- $color := index $thumbnail.Colors 0 | default "transparent" -}}
+
+	{{- /*  Properties for Background position hover  */ -}}
+	{{- $bg_pos_property := "" -}}
+	{{- if .Params.cover_position -}}
+		{{- $bg_pos_property = (printf "--background-position: %s;" .Params.cover_position) | safeCSS -}}
+	{{- end -}}
+	{{- $bg_pos_hover_property := "" -}}
+	{{- if .Params.cover_position_on_hover -}}
+		{{- $bg_pos_hover_property = (printf "--background-hover-position: %s;" .Params.cover_position_on_hover) | safeCSS -}}
+	{{- end -}}
+	{{- $bg_pos_time_property := "" -}}
+	{{- if .Params.cover_position_time -}}
+		{{- $bg_pos_time_property = (printf "--background-position-time: %s;" .Params.cover_position_time) | safeCSS -}}
+	{{- end -}}
+	{{- $bg_hover_animation_properties := (printf "%s %s %s" $bg_pos_property $bg_pos_hover_property $bg_pos_time_property ) | safeCSS }}
+	{{- /*  {{- if .Params.featured_big_cover_image -}}  */ -}}
+	{{- if $image_resource -}}
+		{{- $thumbnail = $image_resource -}}
+	{{- end -}}
+
+
+	{{- /*  <section class="featured">  */ -}}
+	<section class="featured featured-gallery-big">
+		{{- /*  <a class="featured-card" href="{{- .RelPermalink -}}" style="{{- $bg_hover_animation_properties }} background-color: {{- $color -}}; background-image: url({{- $thumbnail.RelPermalink -}})">  */ -}}
+		<a class="featured-card" href="{{- .RelPermalink -}}" style="{{- $shortcode_properties }} background-color: {{- $color -}}; background-image: url({{- $thumbnail.RelPermalink -}})">
+		<div>
+			<h2>{{- .Title -}}</h2>
+			<p>
+			{{- if gt $gallery.albumCount 0 -}}
+				{{- T "albumCount" (dict "count" ($gallery.albumCount | lang.FormatNumber 0) "photoCount" ($gallery.imageCount | lang.FormatNumber 0 | lang.Translate "photoCount")) -}}
+			{{- else -}}
+				{{- T "photoCount" ($gallery.imageCount | lang.FormatNumber 0) -}}
+			{{- end -}}
+			</p>
+		</div>
+		</a>
+	</section>
+	{{- end -}}
+
+{{- end -}}

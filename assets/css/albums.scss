@@ -280,16 +280,28 @@ section.featured{
 	// }
 
 	// NEW IDEA HOVER
+	// REFACTOR nombres variables - background-animation-time
 	a{
-		transition-duration: 2s;
-		background-position: var(--background-pos, 50% 100%);
+		// transition-duration: 2s;
+		// background-size: 100%;
+		// background-size: 110%;
+		transition-duration: var(--background-out-time, 2s);
+		// background-position: var(--background-position, 50% 50%);
+		background-position: var(--background-position, center);
+		// background-position: var(--background-position, 0% 0%);
+		background-size: var(--background-zoom, cover);
 	}
 	&:hover{
 		a{
-			transition-duration: 5s;
+			// transition-duration: 5s;
 			// transform: scale(3.0);
 			// background-position: 0px 0px;
-			background-position: 50% 100%;
+			// background-position: 50% 100%;
+			// background-size: 200%;
+			// background-size: 100%;
+			transition-duration: var(--background-position-time, 5s);
+			background-position: var(--background-hover-position, center);
+			background-size: var(--background-zoom-2, cover);
 		}
 	}
 }
