@@ -86,15 +86,15 @@ Example:
 {{- end -}}
 
 {{- $border_color := "" -}}
-{{- if $cover_resource -}}
-	{{- $predominant_color := index $cover_resource.Colors 0 -}}
-	{{- $brightest_color := index (sort $cover_resource.Colors "Luminance" "desc") 0 -}}
-
-	{{- $border_color = printf "color-mix(in srgb, %s 50%%, %s 50%%)" $brightest_color $predominant_color -}}
-{{- end -}}
-
 {{- if $color_manual -}}
 	{{- $border_color = $color_manual -}}
+{{- else -}}
+	{{- if $cover_resource -}}
+		{{- $predominant_color := index $cover_resource.Colors 0 -}}
+		{{- $brightest_color := index (sort $cover_resource.Colors "Luminance" "desc") 0 -}}
+
+		{{- $border_color = printf "color-mix(in srgb, %s 50%%, %s 50%%)" $brightest_color $predominant_color -}}
+	{{- end -}}
 {{- end -}}
 
 {{- /*  <pre>a {{$cover_resource.MediaType}}</pre>  */ -}}
@@ -107,12 +107,15 @@ Example:
 {{- /*  {{- $style := printf "--background-image: url('%s'); --border-color: %s; " $cover_resource.RelPermalink $border_color -}}  */ -}}
 
 {{- $style := "" -}}
+{{- if $border_color -}}
+	{{- $style = printf "--border-color: %s; " $border_color -}}
+{{- end -}}
 {{- if $cover_resource -}}
 	{{- $cover_position_property := "" -}}
 	{{- if $cover_position -}}
 		{{- $cover_position_property = printf "--background-position: %s; " $cover_position -}}
 	{{- end -}}
-	{{- $style = printf "--background-image: url('%s'); --border-color: %s; %s" $cover_resource.RelPermalink $border_color $cover_position_property -}}
+	{{- $style = printf "%s --background-image: url('%s'); %s" $style $cover_resource.RelPermalink $cover_position_property -}}
 {{- end -}}
 <figure class="audio-player" style="{{$style | safeCSS}}">
 	<div>
@@ -125,11 +128,10 @@ Example:
 		</section>
 	</div>
 	<audio controls  {{$autoplay | safeHTML}} preload="{{ .Get "preload" | default "metadata" }}">
-	{{- /*  {{ with .Get "src" }}<source src="{{ .  | relURL }}" type="audio/mpeg">{{ end }}  */ -}}
-	{{- /*  <source src="{{ .  | relURL }}" type="audio/mpeg">  */ -}}
 	<source src="{{ $audio_resource.RelPermalink }}" type="audio/mpeg">
 	{{- /*  {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}  */ -}}
-	<figcaption>{{ $caption }}</figcaption>
+	<figcaption>{{ T "captionAudio" (dict "title" $title "author" $artist) }}</figcaption>
+	{{- /*  <figcaption>{{ $caption }}</figcaption>  */ -}}
 
 	</audio>
 </figure>
