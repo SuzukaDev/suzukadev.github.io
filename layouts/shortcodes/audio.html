@@ -7,7 +7,6 @@ Arguments:
 src = Path with the audio.
 title = Title of the audio. Default: audio file tilte
 artist = Artist/Author of the audio. Default: .Site.Params.audios_default_author
-caption = . Default:
 cover = Path with an image used as cover. If not set, it will look for an image with the SAME NAME as the audio file. Eg: cancion.mp3 -> cancion.png. Default: (no image)
 pos = Position of the cover image in the background. To adjust its appeareance. Default: center (50% 50%)
 color = Color of the border in hex. Default: Gets automatically the most predominant and brightest color
@@ -25,12 +24,11 @@ Example:
 {{- /*  TODO poner numeros/orden bien  */ -}}
 {{- $audio_path := (or (.Get 0) (.Get "src")) -}}
 {{- $artist := (or (.Get 2) (.Get "artist")) | default .Site.Params.audios_default_author -}}
-{{- $caption := (or (.Get 3) (.Get "caption")) -}}
-{{- $cover_path := (or (.Get 4) (.Get "cover")) | default "" -}}
-{{- $cover_position := (or (.Get 5) (.Get "pos")) -}}
-{{- $color_manual := (or (.Get 6) (.Get "color")) | default "" -}}
-{{- $optimize_cover_image := (or (.Get 7) (.Get "optimize")) | default true -}}
-{{- $autoplay_flag := (or (.Get 8) (.Get "autoplay")) | default false -}}
+{{- $cover_path := (or (.Get 3) (.Get "cover")) | default "" -}}
+{{- $cover_position := (or (.Get 4) (.Get "pos")) -}}
+{{- $color_manual := (or (.Get 5) (.Get "color")) | default "" -}}
+{{- $optimize_cover_image := (or (.Get 6) (.Get "optimize")) | default true -}}
+{{- $autoplay_flag := (or (.Get 7) (.Get "autoplay")) | default false -}}
 
 {{- $audio_resource := .Page.Resources.Get $audio_path -}}
 {{- $cover_resource := .Page.Resources.Get $cover_path -}}
