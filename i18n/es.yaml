@@ -41,3 +41,4 @@ featuredArticles: Artículos destacados
 read: Leer
 readingTime: Tiempo de lectura {{.}}
 privateArticleDescription: Artículo privado (solo es accesible a través de su URL)
+captionAudio: Reproductor de audio para escuchar el archivo '{{.title}}' del autor '{{.author}}'

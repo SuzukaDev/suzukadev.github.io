@@ -41,3 +41,4 @@ featuredArticles: Featured Articles
 read: Read
 readingTime: Reading time {{.}}
 privateArticleDescription: Private article (accessible only by its URL)
+captionAudio: Audio player to listen to the file '{{.title}}' by the author '{{.author}}'
