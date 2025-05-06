@@ -1,5 +1,3 @@
-{{- /*  TODO document  */ -}}
-{{- /*  TODO muted autoplay tags  */ -}}
 {{/*  
 Embeds an audio file
 
@@ -20,8 +18,6 @@ Example:
 */}}
 
 
-
-{{- /*  TODO poner numeros/orden bien  */ -}}
 {{- $audio_path := (or (.Get 0) (.Get "src")) -}}
 {{- $artist := (or (.Get 2) (.Get "artist")) | default .Site.Params.audios_default_author -}}
 {{- $cover_path := (or (.Get 3) (.Get "cover")) | default "" -}}
@@ -95,15 +91,6 @@ Example:
 	{{- end -}}
 {{- end -}}
 
-{{- /*  <pre>a {{$cover_resource.MediaType}}</pre>  */ -}}
-
-
-{{- /*  <figure {{ with .Get "class" }}class="{{ . }}"{{ end }}>  */ -}}
-{{- /*  <figure class="audio-player" style="background: url({{$cover_resource.RelPermalink}});">  */ -}}
-	{{- /*  {{- $style := printf "--background-image: url('%s'); --border-color: %s; " $cover_resource.RelPermalink ($border_color | safeCSS) -}}  */ -}}
-	{{- /*  {{- $style := printf "--background-image: url('%s'); --border-color: color-mix(in srgb, %s 50%%, %s 50%%); " $cover_resource.RelPermalink ($brightest_color | safeCSS) ($predominant_color | safeCSS) -}}  */ -}}
-{{- /*  {{- $style := printf "--background-image: url('%s'); --border-color: %s; " $cover_resource.RelPermalink $border_color -}}  */ -}}
-
 {{- $style := "" -}}
 {{- if $border_color -}}
 	{{- $style = printf "--border-color: %s; " $border_color -}}
@@ -128,8 +115,6 @@ Example:
 	<audio controls  {{$autoplay | safeHTML}} preload="{{ .Get "preload" | default "metadata" }}">
 	<source src="{{ $audio_resource.RelPermalink }}" type="audio/mpeg">
 	{{- /*  {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}  */ -}}
-	<figcaption>{{ T "captionAudio" (dict "title" $title "author" $artist) }}</figcaption>
-	{{- /*  <figcaption>{{ $caption }}</figcaption>  */ -}}
-
+	<figcaption>{{- T "captionAudio" (dict "title" $title "author" $artist) -}}</figcaption>
 	</audio>
 </figure>
