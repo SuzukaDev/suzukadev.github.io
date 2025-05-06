@@ -27,6 +27,9 @@ Example:
 {{- $autoplay_flag := (or (.Get 7) (.Get "autoplay")) | default false -}}
 
 {{- $audio_resource := .Page.Resources.Get $audio_path -}}
+{{- if not $audio_resource -}}
+	{{- errorf "Audio shortcode: audio file ('%s') not found at '%s' with Title '%s'" $audio_path .Page.Path .Page.Name -}}
+{{- end -}}
 {{- $cover_resource := .Page.Resources.Get $cover_path -}}
 {{- if and (not $cover_resource) $cover_path -}}
 	{{- warnf "Audio shortcode: Cover ('%s') not found at '%s' with Title '%s'" $cover_path .Page.Path .Page.Name -}}
