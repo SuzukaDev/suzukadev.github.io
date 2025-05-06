@@ -1,27 +1,33 @@
 {{- /*  TODO document  */ -}}
 {{- /*  TODO muted autoplay tags  */ -}}
 {{/*  
-Embeds a local video
+Embeds an audio file
 
 Arguments:
-url = (string) local path to the video
-autoplay = (bool) Animation time. Default: 2.4 (s)
-muted = (bool) Offset on which the animation starts (useful for making asynchronous effects). Default: 0.0 (s)
+src = Path with the audio.
+title = Title of the audio. Default: audio file tilte
+artist = Artist/Author of the audio. Default: .Site.Params.audios_default_author
+caption = . Default:
+cover = Path with an image used as cover. If not set, it will look for an image with the SAME NAME as the audio file. Eg: cancion.mp3 -> cancion.png. Default: (no image)
+pos = Position of the cover image in the background. To adjust its appeareance. Default: center (50% 50%)
+color = Color of the border in hex. Default: Gets automatically the most predominant and brightest color
+optimize = Optimizes the image set for the cover, for fast loading. Is useful to turn it to false for animated .webp's and .gif's. Default: true
+autoplay = Autoplays the audio when loading (do not work in some browsers). Default: false
+
 
 Example:
-{{< video url="my_video.mp4" autoplay=true mute=true>}} -> Autoplays muted
-{{< video "my_video.mp4" true true>}} -> Autoplays muted
+{{< audio "my_audio.mp3" "My song" "Dexter" >}} -> Autoplays muted
+{{< audio src="my_audio.mp3" cover="my-custom-image.png" position="50% 100%" color=#3456 autoplay=true >}}
 */}}
 
 {{ $video_url := (or (.Get 0) (.Get "url")) }}
 {{/*  {{ $controls := .Get 1 | default true }}  */}}
-{{ $autoplay_flag := (or (.Get 1) (.Get "autoplay")) | default false }}
 {{ $muted_flag := (or (.Get 2) (.Get "muted")) | default false }}
 
-{{ $autoplay := "" }}
+{{- /*  {{ $autoplay := "" }}
 {{ if $autoplay_flag }}
-	{{ $autoplay = "autoplay" }}
-{{ end}}
+	{{- $autoplay = "autoplay" -}}
+{{ end}}  */ -}}
 
 {{ $muted := "" }}
 {{ if $muted_flag }}
@@ -30,55 +36,80 @@ Example:
 
 {{- /*  TODO poner numeros/orden bien  */ -}}
 {{- $audio_path := (or (.Get 0) (.Get "src")) -}}
-{{- $caption := (or (.Get 1) (.Get "caption")) -}}
 {{- $artist := (or (.Get 2) (.Get "artist")) | default .Site.Params.audios_default_author -}}
-{{- $name := (or (.Get 3) (.Get "name")) -}}
-{{- $cover_path := (or (.Get 4) (.Get "cover")) -}}
+{{- $caption := (or (.Get 3) (.Get "caption")) -}}
+{{- $cover_path := (or (.Get 4) (.Get "cover")) | default "" -}}
 {{- $cover_position := (or (.Get 5) (.Get "pos")) -}}
 {{- $color_manual := (or (.Get 6) (.Get "color")) | default "" -}}
 {{- $optimize_cover_image := (or (.Get 7) (.Get "optimize")) | default true -}}
+{{- $autoplay_flag := (or (.Get 8) (.Get "autoplay")) | default false -}}
+
+{{- $autoplay := "" -}}
+{{- if $autoplay_flag -}}
+	{{- $autoplay = "autoplay" -}}
+{{- end -}}
 
 
 {{- $audio_resource := .Page.Resources.Get $audio_path -}}
 {{- $cover_resource := .Page.Resources.Get $cover_path -}}
+{{- if and (not $cover_resource) $cover_path -}}
+	{{- warnf "Audio shortcode: Cover ('%s') not found at '%s' with Title '%s'" $cover_path .Page.Path .Page.Name -}}
+{{- end -}}
 {{- $audio_name_without_extension := index (split $audio_resource.Name ".") 0 -}}
-
-{{- $title := (or (.Get 2) (.Get "title")) | default ($audio_name_without_extension | title) -}}
+{{- /*  {{- $cover_resource_extension := $cover_resource.MediaType.FirstSuffix.Suffix -}}  */ -}}
+{{- $title := (or (.Get 1) (.Get "title")) | default ($audio_name_without_extension | title) -}}
 
 {{- /*  FINDING THE COVER DYNAMICALLY BY IT HAVING THE SAME NAME AS THE AUDIO FILE  */ -}}
 {{- /*  {{ $audio_name_without_extension := replace $audio_resource.Name (printf ".%s" $audio_resource.MediaType.SubType) "" }}  */ -}}
 {{- /*  {{- $cover_resource := .Page.Resources.GetMatch $audio_resource.Name -}}  */ -}}
 
-{{- /*  {{- $cover_resource := .Page.Resources.GetMatch $audio_name_without_extension -}}  */ -}}
-{{- $cover_resource := index (.Page.Resources.GetMatch $audio_name_without_extension) 0 -}}
-{{- /*  <pre>{{$cover_resource}}</pre>  */ -}}
 
-{{- $matched_cover := "" -}}
-{{- range .Page.Resources.ByType "image" -}}
-	{{- /*  <p>{{.}}</p>  */ -}}
-	{{- /*  <p>{{.Name}}</p>  */ -}}
-	{{- if or (eq .Name (printf "%s.png" $audio_name_without_extension)) 
-		(eq .Name (printf "%s.jpg" $audio_name_without_extension)) 
-		(eq .Name (printf "%s.jpeg" $audio_name_without_extension)) 
-		(eq .Name (printf "%s.gif" $audio_name_without_extension)) 
-		(eq .Name (printf "%s.webp" $audio_name_without_extension)) -}}
-		{{- $matched_cover = . -}}
-	{{- end -}}
+{{- if not $cover_resource -}}
+	{{- $images := .Page.Resources.ByType "image" -}}
+	{{- $name_match_string := printf "*%s*" $audio_name_without_extension -}}
+	{{- $cover_resource = $images.GetMatch $name_match_string -}}
 {{- end -}}
 
-{{- /*  {{- $cover_resource := .Page.Resources.Get $cover_path -}}  */ -}}
+
+{{- /*  {{- $matched_cover := "" -}}
+{{- if not $cover_resource -}}
+	{{- range .Page.Resources.ByType "image" -}}
+		{{- if or (eq .Name (printf "%s.png" $audio_name_without_extension)) 
+			(eq .Name (printf "%s.jpg" $audio_name_without_extension)) 
+			(eq .Name (printf "%s.jpeg" $audio_name_without_extension)) 
+			(eq .Name (printf "%s.gif" $audio_name_without_extension)) 
+			(eq .Name (printf "%s.webp" $audio_name_without_extension)) -}}
+			{{- $matched_cover = . -}}
+		{{- end -}}
+	{{- end -}}
+{{- end -}}
 {{- $cover_resource := .Page.Resources.Get $cover_path -}}
 {{- if $matched_cover -}}
 	{{- $cover_resource = $matched_cover -}}
-{{- end -}}
+{{- end -}}  */ -}}
+
+
 
 {{- /*  {{- $cover_resource = $cover_resource.Filter (images.GaussianBlur 10) -}}  */ -}}
 {{- /*  {{- $cover_resource = $cover_resource.Filter (images.Saturation -100) -}}  */ -}}
 {{- /*  {{- $cover_resource = $cover_resource.Filter (images.Process "fit 1000x1000") -}}  */ -}}
+
 {{- if $optimize_cover_image -}}
-	{{- $cover_resource = $cover_resource.Filter (images.Process "fit 500x500") -}}
+	{{- /*  {{- $cover_resource = $cover_resource.Filter (images.Process "fit 500x500") -}}  */ -}}
+	{{- $cover_resource = $cover_resource.Filter (images.Process "fit 250x250") -}}
+	
+	{{- /*  Warnings for gif/webp loosing its animation when being optimized  */ -}}
+	{{- $cover_resource_extension := $cover_resource.MediaType.FirstSuffix.Suffix -}}
+	{{- if eq $cover_resource_extension "gif" -}}
+		{{- warnf "Audio shortcode: extension is ('%s'). If you want it to be animated you may want to set 'optimize=false'" $cover_resource_extension -}}
+	{{- else if eq $cover_resource_extension "webp" -}}
+		{{- warnf "Audio shortcode: extension is ('%s'). If it is animated, and you want it to keep the animation you may want to set 'optimize=false'" $cover_resource_extension -}}
+	{{- end -}}
 {{- end -}}
 
+
+{{- /*  <p>{{$cover_resource.MediaType.FirstSuffix.Suffix}}</p>  */ -}}
+{{- /*  <p>{{$cover_resource.MediaType.SubType}}</p>  */ -}}
 {{- /*  {{- $cover_resource = $cover_resource.Filter (images.Process "fit 5x5") -}}  */ -}}
 
 {{- /*  <pre>{{$audio_resource.Name}}</pre>  */ -}}
@@ -88,18 +119,24 @@ Example:
 {{- /*  <pre>a {{$audio_name_without_extension}}</pre>  */ -}}
 {{- /*  <pre>a {{$audio_resource.MediaType}}</pre>  */ -}}
 
-{{- $predominant_color := index $cover_resource.Colors 0 -}}
-{{- $brightest_color := index (sort $cover_resource.Colors "Luminance" "desc") 0 -}}
-{{- /*  {{- $bright_colors := sort $cover_resource.Colors "Luminance" "desc" -}}  */ -}}
-{{- /*  {{- $brightest_color := index $bright_colors 0 -}}  */ -}}
+{{- $border_color := "" -}}
+{{- if $cover_resource -}}
+	{{- $predominant_color := index $cover_resource.Colors 0 -}}
+	{{- $brightest_color := index (sort $cover_resource.Colors "Luminance" "desc") 0 -}}
+	{{- /*  {{- $bright_colors := sort $cover_resource.Colors "Luminance" "desc" -}}  */ -}}
+	{{- /*  {{- $brightest_color := index $bright_colors 0 -}}  */ -}}
 
-{{- /*  {{- $border_color := $brightest_color -}}  */ -}}
-{{- /*  {{- $border_color := $predominant_color -}}  */ -}}
-{{- $border_color := printf "color-mix(in srgb, %s 50%%, %s 50%%)" $brightest_color $predominant_color -}}
+	{{- /*  {{- $border_color := $brightest_color -}}  */ -}}
+	{{- /*  {{- $border_color := $predominant_color -}}  */ -}}
+	{{- $border_color = printf "color-mix(in srgb, %s 50%%, %s 50%%)" $brightest_color $predominant_color -}}
+
+{{- end -}}
+
 {{- if $color_manual -}}
 	{{- $border_color = $color_manual -}}
 {{- end -}}
 
+{{- /*  <pre>a {{$cover_resource.MediaType}}</pre>  */ -}}
 
 
 {{- /*  <figure {{ with .Get "class" }}class="{{ . }}"{{ end }}>  */ -}}
@@ -107,20 +144,26 @@ Example:
 	{{- /*  {{- $style := printf "--background-image: url('%s'); --border-color: %s; " $cover_resource.RelPermalink ($border_color | safeCSS) -}}  */ -}}
 	{{- /*  {{- $style := printf "--background-image: url('%s'); --border-color: color-mix(in srgb, %s 50%%, %s 50%%); " $cover_resource.RelPermalink ($brightest_color | safeCSS) ($predominant_color | safeCSS) -}}  */ -}}
 {{- /*  {{- $style := printf "--background-image: url('%s'); --border-color: %s; " $cover_resource.RelPermalink $border_color -}}  */ -}}
-{{- $cover_position_property := "" -}}
-{{- if $cover_position -}}
-	{{- $cover_position_property = printf "--background-position: %s; " $cover_position -}}
+
+{{- $style := "" -}}
+{{- if $cover_resource -}}
+	{{- $cover_position_property := "" -}}
+	{{- if $cover_position -}}
+		{{- $cover_position_property = printf "--background-position: %s; " $cover_position -}}
+	{{- end -}}
+	{{- $style = printf "--background-image: url('%s'); --border-color: %s; %s" $cover_resource.RelPermalink $border_color $cover_position_property -}}
 {{- end -}}
-{{- $style := printf "--background-image: url('%s'); --border-color: %s; %s" $cover_resource.RelPermalink $border_color $cover_position_property -}}
 <figure class="audio-player" style="{{$style | safeCSS}}">
 	<div>
-		<img src="{{$cover_resource.RelPermalink}}">
+		{{- if $cover_resource -}}
+			<img src="{{$cover_resource.RelPermalink}}">
+		{{- end -}}
 		<section class="audio-info">
 			<h1>{{- $title -}}</h1>
 			<h2>{{- $artist -}}</h2>
 		</section>
 	</div>
-	<audio controls preload="{{ .Get "preload" | default "metadata" }}">
+	<audio controls  {{$autoplay | safeHTML}} preload="{{ .Get "preload" | default "metadata" }}">
 	{{- /*  {{ with .Get "src" }}<source src="{{ .  | relURL }}" type="audio/mpeg">{{ end }}  */ -}}
 	{{- /*  <source src="{{ .  | relURL }}" type="audio/mpeg">  */ -}}
 	<source src="{{ $audio_resource.RelPermalink }}" type="audio/mpeg">
