@@ -1,17 +1,21 @@
 {{- /*  
-Displays article cards.
-
+Displays an album with a big cover. 
+Offers different options to customize the animtation when hovering the album.
 
 Arguments:
-0 articles = (String) Articles file names separated with a COMA. Eg: articles="article1, illustration-process"
-1 title = (String). Add a header title above the articles. Default: (empty)
-2 h = (int) Type of header for the tile (1 for h1, 2 for h2, 3 for h3, etc.). Default: 2 (h2)
-3 align = (String) Text align of the header (options: "left", "right", "center"). Default: "center"
+album = The album/gallery to display.
+cover = Select the cover for the album. Default: The default album cover.
+pos1 = The position of the cover. Default: center ("50% 50%") (x, y). INFO: https://developer.mozilla.org/en-US/docs/Web/CSS/background-position
+pos2 = The position of the cover when hovering the album. Default: center ("50% 50%")
+zoom1 = Zoom level of the cover. Default: cover. INFO: https://developer.mozilla.org/en-US/docs/Web/CSS/background-size
+zoom2 = Zoom level of the cover when hovering the album. Default: cover
+t1 = Transition time when un-hovering the album. Default: 2s
+t2 = Transition time when hovering the album. Default: 5s
 
 Use example:
-{{< featured_articles "my-first-article, another-article" >}}
-{{< featured_articles "my-first-article, another-article" "My favourite articles" 3 "left" >}}
-{{< featured_articles title="my-first-article, another-article" title="My favourite articles" align="right" >}}
+{{< featured_album_big album="traditional-art" cover="images/cover-image.png" pos1="50% 50%" pos2="50% 100%" zoom1="100%" zoom2="200%" t1="1s" t2="2.5s" >}}
+{{< featured_album_big album="traditional-art" cover="images/cover-image.png" >}}
+{{< featured_album_big "traditional-art" >}}
 */ -}}
 
 
