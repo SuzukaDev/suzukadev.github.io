@@ -17,7 +17,10 @@ Usage:
 {{- $file_type := (or (.Get "type") (.Get 2)) | lower | default "" -}}
 
 {{- /*  This turns "file.zip" into "articles/my-article/file.zip"  */ -}}
-{{- $complete_path := printf "%s/%s" .Page.Path $file_path}}
+{{- $complete_path := printf "%s/%s" .Page.Path $file_path -}}
+{{- if not (fileExists $complete_path) -}}
+	{{- errorf "download_file: resource ('%s') not found (in %s '%s')" $file_path $.Page.Path $.Page.Title -}}
+{{- end -}}
 {{- $file_resource := os.Stat $complete_path -}}
 
 {{- /*  {{- if eq $file_resource nil}}
@@ -32,7 +35,6 @@ Usage:
 {{- if eq $button_text false -}}
 	{{- $button_text = T "downloadTitle" -}}
 {{- else if not $button_text -}}
-{{- /*  TODO ver si la pagina es en o es y poner que diga "Download" o "Descarga"  */ -}} 
 	{{- /*  {{- $button_text = T "downloadTitle" }}  */ -}}
 	{{- $button_text = printf "%s '%s'" (T "downloadTitle") $file_resource.Name -}}
 {{- end -}}
