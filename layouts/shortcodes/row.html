@@ -1,0 +1,18 @@
+{{- /*  
+Creates a section with all elements in the same row.
+
+Usage:
+{{< row >}}
+{{< download_file "brushes.zip" >}}
+
+{{< download_file "brushes.zip" >}}
+
+{{< download_file "brushes.zip" >}}
+{{< /row >}}
+
+(This way the download buttons will be shown in the same row).
+*/ -}}
+
+<section class="flex-row">
+	{{- .Inner | safeHTML -}}
+</section>
