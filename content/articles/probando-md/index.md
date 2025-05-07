@@ -18,9 +18,33 @@ tags = ["mierda", "test", "markdown"]
 # show_breadcrumbs = false
 # show_next_and_previous_arrows = false
 +++
+
+# Audio test
+
+
+{{< audio src="dex.mp3" pos="50% 20%" optimize=false autoplay=true radius=99999px >}}
+
+{{< audio src="dex.mp3" pos="50% 20%" optimize=false autoplay=true c=#bc802b >}}
+
+{{< row >}}
+{{< download_file "files/paco.zip" false "linux" >}}
+
+{{< download_file "paco.zip" false "game" >}}
+
+{{< download_file "paco.zip" true "krita" >}}
+
+{{< download_file "skrillex.mp4 " true "pdf" >}}
+
+
+{{< /row >}}
+
+
+<!-- <audio src="content/articles/probando-md/dex.mp3" type="audio/mpeg"></audio> -->
+<!-- <audio src="/en/content/articles/probando-md/dex.mp3" type="audio/mpeg"></audio> -->
+
 This is an article for testing the markdown
 
-{{< download_file "paco.zip" false "pdf" >}}
+{{< download_file "skrillex.mp4 " false "pdf" >}}
 
 {{< download_file "paco.zip" false "game" >}}
 
@@ -80,6 +104,11 @@ muy centrado en la sociedad y en sus problemas
 
 {{< box_green >}}
 
+a ver que tal va...
+
+{{< featured_album_big album="pixel-art" cover="images/the-road-gb.png" pos1="50% 100%" pos2="50% 0%" t1=5.1s zoom1=130% zoom2=100% >}}
+
+
 {{< text_centered >}}
 
 Pues... esto en teoria...
@@ -97,6 +126,8 @@ muy centrado en la sociedad y en sus problemas
 
 
 {{< featured_articles articles=" articulo-tres,copia,copia" title="WOW" align="center" h=3 >}}
+
+# ESTO DE PROBLEMAS! -> Solucionado
 
 {{< featured_albums albums="galleries/art" title="WOW" align="center" h=3 >}}
 
