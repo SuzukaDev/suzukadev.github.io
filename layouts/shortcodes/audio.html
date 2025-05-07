@@ -22,7 +22,7 @@ Example:
 {{- $artist := (or (.Get 2) (.Get "artist")) | default .Site.Params.audios_default_author -}}
 {{- $cover_path := (or (.Get 3) (.Get "cover")) | default "" -}}
 {{- $cover_position := (or (.Get 4) (.Get "pos")) -}}
-{{- $color_manual := (or (.Get 5) (.Get "color")) | default "" -}}
+{{- $color_manual := (or (.Get 5) (.Get "color") (.Get "col") (.Get "c")) | default "" -}}
 {{- $optimize_cover_image := (or (.Get 6) (.Get "optimize")) | default true -}}
 {{- $autoplay_flag := (or (.Get 7) (.Get "autoplay")) | default false -}}
 
