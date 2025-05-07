@@ -1,0 +1,47 @@
+{{- /*  
+Displays article cards.
+
+
+Arguments:
+0 articles = (String) Articles file names separated with a COMA. Eg: articles="article1, illustration-process"
+1 title = (String). Add a header title above the articles. Default: (empty)
+2 h = (int) Type of header for the tile (1 for h1, 2 for h2, 3 for h3, etc.). Default: 2 (h2)
+3 align = (String) Text align of the header (options: "left", "right", "center"). Default: "center"
+
+Use example:
+{{< featured_articles "my-first-article, another-article" >}}
+{{< featured_articles "my-first-article, another-article" "My favourite articles" 3 "left" >}}
+{{< featured_articles title="my-first-article, another-article" title="My favourite articles" align="right" >}}
+*/ -}}
+
+
+
+{{- $title := or (.Get 1) (.Get "text") (.Get "t") -}}
+{{- $header_number := or (.Get 2) (.Get "h") | default 2 -}}
+{{- $text_align := or (.Get 3) (.Get "align") | default "center" -}}
+
+
+{{- $header_tag := printf "h%d" $header_number -}}
+
+{{- $flex_align := "center" -}}
+{{- if eq $text_align "right" -}}
+	{{- $flex_align = "flex-end" -}}
+{{- else if eq $text_align "left" -}}
+	{{- $flex_align = "flex-start" -}}
+{{- end -}}
+
+
+{{- /*  <hgroup class="featured-articles-container">  */ -}}
+	{{- /*  {{- if $title }}  */ -}}
+		{{- /*  {{- $style := printf "text-align:%s;" $text_align -}}  */ -}}
+		{{- $style := (printf "text-align:%s; align-self:%s;" $text_align $flex_align) | safeCSS -}}
+		{{- /*  {{- $header := printf "<%s style='text-align:%s;'>%s</%s>" $header_tag $text_align $title $header_tag -}}  */ -}}
+		{{- $header := printf "<%s style='%s'>%s</%s>" $header_tag $style $title $header_tag -}}
+		{{- $header | safeHTML -}}
+	{{- /*  {{- end -}}  */ -}}
+    {{- /*  <section>  */ -}}
+		{{- /*  {{- range $index, $page := $articles_array -}}  */ -}}
+	        {{- /*  {{- partial "articles/article-card.html" $page -}}  */ -}}
+		{{- /*  {{- end -}}  */ -}}
+    {{- /*  </section>  */ -}}
+{{- /*  </hgroup>  */ -}}
