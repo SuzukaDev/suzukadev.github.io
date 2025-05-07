@@ -16,6 +16,7 @@ Usage:
 {{- $button_text := (or (.Get "text") (.Get 1)) | default "" -}}
 {{- $file_type := (or (.Get "type") (.Get 2)) | lower | default "" -}}
 
+{{- $file_path = trim $file_path " " -}}
 {{- /*  This turns "file.zip" into "articles/my-article/file.zip"  */ -}}
 {{- $complete_path := printf "%s/%s" .Page.Path $file_path -}}
 {{- if not (fileExists $complete_path) -}}
@@ -34,9 +35,10 @@ Usage:
 
 {{- if eq $button_text false -}}
 	{{- $button_text = T "downloadTitle" -}}
-{{- else if not $button_text -}}
+{{- else if or (not $button_text) (eq $button_text true) -}}
 	{{- /*  {{- $button_text = T "downloadTitle" }}  */ -}}
-	{{- $button_text = printf "%s '%s'" (T "downloadTitle") $file_resource.Name -}}
+	{{- /*  {{- $button_text = printf "%s '%s'" (T "downloadTitle") $file_resource.Name -}}  */ -}}
+	{{- $button_text = printf "%s <i>'%s'</i>" (T "downloadTitle") $file_resource.Name -}}
 {{- end -}}
 
 
