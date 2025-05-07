@@ -3,6 +3,7 @@ $main_color: #fe9234;
 $soft_color: change-color($main_color, $saturation: 60%, $lightness: 40%);
 
 
+@import "preload.scss";
 @import "fonts.scss";
 @import "utility-classes.scss";
 @import "shortcodes.scss";
@@ -1675,7 +1676,10 @@ nav.categories ul li a{
 	-moz-box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.75);
 	box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.75);
 
-	transition: all 500ms;
+	// transition: all 500ms;
+	// transition: color 500ms;
+	transition-duration: 500ms;
+	transition-property: border, box-shadow, -webkit-box-shadow, -moz-box-shadow, color;
 
 
 	&:hover {
@@ -1691,6 +1695,7 @@ nav.categories ul li a{
 	box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
 
 		transition-duration: 40ms;
+		transition-property: border, box-shadow, -webkit-box-shadow, -moz-box-shadow, color;
 	}
 
 	sup{

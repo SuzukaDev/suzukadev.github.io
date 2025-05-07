@@ -1,0 +1,5 @@
+// CREDITS TO: https://chriscoyier.net/2023/04/05/prevent-transitions-as-a-page-is-loading/
+.preload-no-transitions * { 
+	transition: none !important;
+	animation-duration: 0.001s !important; 
+  }
