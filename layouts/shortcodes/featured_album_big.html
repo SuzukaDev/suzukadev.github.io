@@ -19,7 +19,10 @@ Use example:
 */ -}}
 
 
-{{- $album := or (.Get 0) (.Get "album") -}}
+{{- $album := or (.Get 0) (.Get "album") | default "" -}}
+{{- if not $album }}
+	{{- errorf "SHORTCODE featured_album_big: 'album' ('%s') in '%s' at '%s' in '%s' is not set" $album .Page.Name .Page.File.Path .Page.Path }}
+{{- end -}}
 {{- $image_path := or (.Get 1) (.Get "cover") -}}
 {{- $pos1 := or (.Get 2) (.Get "pos1") -}}
 {{- $pos2 := or (.Get 3) (.Get "pos2") -}}
@@ -45,10 +48,7 @@ Use example:
 
 {{- $shortcode_properties_array := slice -}}
 {{- if $pos1 -}}
-	{{- /*  {{- $value := printf "--background-position:%s;" $pos1 -}}  */ -}}
-	{{- /*  {{- $shortcode_properties_array = append $value $shortcode_properties_array -}}  */ -}}
 	{{- $shortcode_properties_array = append (printf "--background-position:%s;" $pos1) $shortcode_properties_array -}}
-	{{- /*  {{- $shortcode_properties_array = append $shortcode_properties_array (safeCSS (printf "--background-position:%s; " $pos1)) -}}  */ -}}
 {{- end -}}
 {{- if $pos2 -}}
 	{{- $shortcode_properties_array = append (printf "--background-hover-position:%s;" $pos2) $shortcode_properties_array -}}
@@ -69,14 +69,7 @@ Use example:
 {{- $shortcode_properties := delimit $shortcode_properties_array " " | safeCSS -}}
 
 
-
-
 {{- with $album_page -}}
-	{{- /*  {{- partial "albums/featured-gallery-big.html" . -}}  */ -}}
-
-
-	{{- /*  NOTE this is for shortcode featured_albums_big  */ -}}
-
 	{{- /*  Features a big gallery  */ -}}
 	{{- $gallery := partial "get-gallery.html" . -}}
 	{{- if $gallery -}}
@@ -101,10 +94,8 @@ Use example:
 		{{- $thumbnail = $image_resource -}}
 	{{- end -}}
 
-
 	{{- /*  <section class="featured">  */ -}}
 	<section class="featured featured-gallery-big">
-		{{- /*  <a class="featured-card" href="{{- .RelPermalink -}}" style="{{- $bg_hover_animation_properties }} background-color: {{- $color -}}; background-image: url({{- $thumbnail.RelPermalink -}})">  */ -}}
 		<a class="featured-card" href="{{- .RelPermalink -}}" style="{{- $shortcode_properties }} background-color: {{- $color -}}; background-image: url({{- $thumbnail.RelPermalink -}})">
 		<div>
 			<h2>{{- .Title -}}</h2>
@@ -119,5 +110,4 @@ Use example:
 		</a>
 	</section>
 	{{- end -}}
-
 {{- end -}}
