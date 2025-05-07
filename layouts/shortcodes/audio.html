@@ -10,6 +10,7 @@ pos = Position of the cover image in the background. To adjust its appeareance. 
 color = Color of the border in hex. Default: Gets automatically the most predominant and brightest color
 optimize = Optimizes the image set for the cover, for fast loading. Is useful to turn it to false for animated .webp's and .gif's. Default: true
 autoplay = Autoplays the audio when loading (do not work in some browsers). Default: false
+radius = Border radius for the cover. Tip: set a very big value (999999px) for circle corners. Set 0px for no borders. Default: .3rem (A bit rounded)
 
 
 Example:
@@ -25,6 +26,7 @@ Example:
 {{- $color_manual := (or (.Get 5) (.Get "color") (.Get "col") (.Get "c")) | default "" -}}
 {{- $optimize_cover_image := (or (.Get 6) (.Get "optimize")) | default true -}}
 {{- $autoplay_flag := (or (.Get 7) (.Get "autoplay")) | default false -}}
+{{- $border_radius := (or (.Get 8) (.Get "radius") (.Get "r")) | default false -}}
 
 {{- $audio_resource := .Page.Resources.Get $audio_path -}}
 {{- if not $audio_resource -}}
@@ -97,6 +99,9 @@ Example:
 {{- $style := "" -}}
 {{- if $border_color -}}
 	{{- $style = printf "--border-color: %s; " $border_color -}}
+{{- end -}}
+{{- if $border_radius -}}
+	{{- $style = printf "%s--border-radius: %s; " $style $border_radius -}}
 {{- end -}}
 {{- if $cover_resource -}}
 	{{- $cover_position_property := "" -}}
