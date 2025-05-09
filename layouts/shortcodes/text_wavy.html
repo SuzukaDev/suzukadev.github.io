@@ -47,7 +47,8 @@ Usage:
 	{{- /*  <span class="wavy-text" style="animation-duration:{{$animation_time}}s; animation-delay: {{$delay | safeCSS}}s; --y-wave-translate-min:{{$min_y}}px; --y-wave-translate-max:{{$max_y}}px;">{{- $char -}}</span>  */ -}}
 	{{- if eq $char " " -}}
 		{{- /*  {{- $output = printf "%s$nbsp;" ($output | safeHTMLAttr) -}}  */ -}}
-		{{- $output = printf "%s<span> </span>" ($output | safeHTMLAttr) -}}
+		{{- /*  {{- $output = printf "%s<span> </span>" ($output | safeHTMLAttr) -}}  */ -}}
+		{{- $output = printf "%s&nbsp;" $output -}}
 	{{- else -}}
 		{{- $output = printf "%s<span class='wavy-text' style='animation-duration:%fs; animation-delay:%fs; --y-wave-translate-min:%fpx; --y-wave-translate-max:%fpx;'>%s</span>" $output $animation_time ($delay) $min_y $max_y $char -}}
 	{{- end -}}

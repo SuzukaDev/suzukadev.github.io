@@ -95,7 +95,8 @@ time_variation = (float) random value for the time. Default: 0.0
 
 
 	{{if eq $char " "}}
-		{{- $output = printf "%s<span> </span>" ($output | safeHTMLAttr) -}}
+		{{- /*  {{- $output = printf "%s<span> </span>" ($output | safeHTMLAttr) -}}  */ -}}
+		{{- $output = printf "%s&nbsp;" $output -}}
 	{{- else -}}
 		{{- /*  Add the randomness to duration  */ -}}
 		{{- $rand_dur := mul (sub (mul math.Rand 2) -1) $time_variation -}}
