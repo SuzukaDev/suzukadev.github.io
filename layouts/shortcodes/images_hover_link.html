@@ -27,21 +27,30 @@ Example:
 {{- $c0 := (or (.Get 5) (.Get "c0")) -}}
 {{- $c1 := (or (.Get 6) (.Get "c1")) -}}
 {{- $c2 := (or (.Get 7) (.Get "c2")) -}}
+{{- $time_hover := (or (.Get "t1")) -}}
+{{- $time_out := (or (.Get "t2")) -}}
 {{- /*  {{- $color_manual := (or (.Get 5) (.Get "color") (.Get "col") (.Get "c")) | default "" -}}
 {{- $optimize_cover_image := (or (.Get 6) (.Get "optimize")) | default true -}}
 {{- $autoplay_flag := (or (.Get 7) (.Get "autoplay")) | default false -}}
 {{- $border_radius := (or (.Get 8) (.Get "radius") (.Get "r")) | default false -}}  */ -}}
 
 
-{{- $colors_style := "" -}}
+{{- $style_variables := "" -}}
 {{- if $c0 -}}
-	{{- $colors_style = printf "%s --pfp-color:%s;" $colors_style $c0 -}}
+	{{- $style_variables = printf "%s --pfp-color:%s;" $style_variables $c0 -}}
 {{- end -}}
 {{- if $c1 -}}
-	{{- $colors_style = printf "%s --pfp-color1:%s;" $colors_style $c1 -}}
+	{{- $style_variables = printf "%s --pfp-color1:%s;" $style_variables $c1 -}}
 {{- end -}}
 {{- if $c2 -}}
-	{{- $colors_style = printf "%s --pfp-color2:%s;" $colors_style $c2 -}}
+	{{- $style_variables = printf "%s --pfp-color2:%s;" $style_variables $c2 -}}
+{{- end -}}
+{{- /*  Time  */ -}}
+{{- if $time_hover -}}
+	{{- $style_variables = printf "%s --time-img-reveal-hover:%s;" $style_variables $time_hover -}}
+{{- end -}}
+{{- if $time_out -}}
+	{{- $style_variables = printf "%s --time-img-reveal-out:%s;" $style_variables $time_out -}}
 {{- end -}}
 
 {{- $link := $url -}}
@@ -55,13 +64,13 @@ Example:
 
 {{- /*  <a href='{{ ref . "about" }}'>  */ -}}
 {{- /*  <a id="szk_pfp" class="hover-reveal-2-images" href='{{- $link -}}'>  */ -}}
-<a id="" class="hover-reveal-2-images pfp-image" href='{{- $link -}}'>
+<a id="" class="hover-reveal-2-images" href='{{- $link -}}'>
 {{- /*  <a id="" class="hover-reveal-2-images pfp-image" href='{{- $link -}}'>  */ -}}
 	{{- /*  <img id="szk_pfp" src="{{ .Params.profile_picture }}">  */ -}}
 	{{- /*  <img id="szk_pfp" src="{{- $img -}}">
 	<img id="szk_pfp" src="{{- $img_hover -}}">  */ -}}
 	{{- /*  <div class="pfp-border-colors">  */ -}}
-	<div class="half-border-radius pfp-border-colors" style="{{- $colors_style | safeCSS -}}">
+	<div class="half-border-radius pfp-border-colors" style="{{- $style_variables | safeCSS -}}">
 		<img src="{{- $img -}}">
 		{{- if $img_hover -}}
 			<img src="{{- $img_hover -}}">
