@@ -1,0 +1,70 @@
+{{- /*  REFACTOR RABIA  */ -}}
+{{/*  
+Embeds an audio file
+
+Arguments:
+src = Path with the audio.
+title = Title of the audio. Default: audio file tilte
+artist = Artist/Author of the audio. Default: .Site.Params.audios_default_author
+cover = Path with an image used as cover. If not set, it will look for an image with the SAME NAME as the audio file. Eg: cancion.mp3 -> cancion.png. Default: (no image)
+pos = Position of the cover image in the background. To adjust its appeareance. Default: center (50% 50%)
+color = Color of the border in hex. Default: Gets automatically the most predominant and brightest color
+optimize = Optimizes the image set for the cover, for fast loading. Is useful to turn it to false for animated .webp's and .gif's. Default: true
+autoplay = Autoplays the audio when loading (do not work in some browsers). Default: false
+radius = Border radius for the cover. Tip: set a very big value (999999px) for circle corners. Set 0px for no borders. Default: .3rem (A bit rounded)
+
+
+Example:
+{{< audio "my_audio.mp3" "My song" "Dexter" >}} -> Autoplays muted
+{{< audio src="my_audio.mp3" cover="my-custom-image.png" position="50% 100%" color=#3456 autoplay=true >}}
+*/}}
+
+
+{{- $img := (or (.Get 0) (.Get "img")) -}}
+{{- $img_hover := (or (.Get 2) (.Get "img_hover")) -}}
+{{- $url := (or (.Get 3) (.Get "url")) | default "" -}}
+{{- $page_name := (or (.Get 4) (.Get "page")) -}}
+{{- $c0 := (or (.Get 5) (.Get "c0")) -}}
+{{- $c1 := (or (.Get 6) (.Get "c1")) -}}
+{{- $c2 := (or (.Get 7) (.Get "c2")) -}}
+{{- /*  {{- $color_manual := (or (.Get 5) (.Get "color") (.Get "col") (.Get "c")) | default "" -}}
+{{- $optimize_cover_image := (or (.Get 6) (.Get "optimize")) | default true -}}
+{{- $autoplay_flag := (or (.Get 7) (.Get "autoplay")) | default false -}}
+{{- $border_radius := (or (.Get 8) (.Get "radius") (.Get "r")) | default false -}}  */ -}}
+
+
+{{- $colors_style := "" -}}
+{{- if $c0 -}}
+	{{- $colors_style = printf "%s --pfp-color:%s;" $colors_style $c0 -}}
+{{- end -}}
+{{- if $c1 -}}
+	{{- $colors_style = printf "%s --pfp-color1:%s;" $colors_style $c1 -}}
+{{- end -}}
+{{- if $c2 -}}
+	{{- $colors_style = printf "%s --pfp-color2:%s;" $colors_style $c2 -}}
+{{- end -}}
+
+{{- $link := $url -}}
+{{- if $page_name -}}
+	{{- $link = ref . $page_name -}}
+{{- end -}}
+
+{{- if not $img_hover -}}
+	{{- $img_hover = $img -}}
+{{- end -}}
+
+{{- /*  <a href='{{ ref . "about" }}'>  */ -}}
+{{- /*  <a id="szk_pfp" class="hover-reveal-2-images" href='{{- $link -}}'>  */ -}}
+<a id="" class="hover-reveal-2-images pfp-image" href='{{- $link -}}'>
+{{- /*  <a id="" class="hover-reveal-2-images pfp-image" href='{{- $link -}}'>  */ -}}
+	{{- /*  <img id="szk_pfp" src="{{ .Params.profile_picture }}">  */ -}}
+	{{- /*  <img id="szk_pfp" src="{{- $img -}}">
+	<img id="szk_pfp" src="{{- $img_hover -}}">  */ -}}
+	{{- /*  <div class="pfp-border-colors">  */ -}}
+	<div class="half-border-radius pfp-border-colors" style="{{- $colors_style | safeCSS -}}">
+		<img src="{{- $img -}}">
+		{{- if $img_hover -}}
+			<img src="{{- $img_hover -}}">
+		{{- end -}}
+	</div>
+</a>

@@ -1,0 +1,115 @@
+// REFACTOR RABIA
+
+.hover-reveal-2-images{
+	// height: 30vh;
+	// width: 100%;
+	// height: fit-content;
+	// width: fit-content;
+	height: auto;
+	width: auto;
+	// object-fit: cover;
+	// object-fit: contain;
+	display: block;
+
+
+
+
+	// position: relative;
+	
+	& div{
+		height: 30vh;
+		width: 100%;
+		position: relative;
+
+	}
+	& img{
+		height: 30vh;
+		width: 100%;
+		
+		// // height: fit-content;
+		// // width: fit-content;
+		// height: 100%;
+		// width: 100%;
+		// // height: auto;
+		// // width: auto;
+		// position: absolute;
+
+		// object-fit: cover;
+		// // object-fit: contain;
+		transition: opacity 10s;
+		// border-radius: 50%;
+		// // opacity: .2;
+
+		display: block;
+		// width: 100%;
+		// height: 100%;
+		object-fit: cover; /* optional, improves image scaling */
+		// object-fit: contain; /* optional, improves image scaling */
+
+
+	}
+	// // First image
+	& img:nth-of-type(1){
+		position: absolute;
+		top: 0;
+		// top: -20px;
+		// width: 100%;
+		// opacity: 1.0;
+		z-index: 1;
+	}
+	// Second image
+	& img:nth-of-type(2){
+		// position: absolute;
+		position: relative;
+		top: 0;
+
+		// opacity: 0.0;
+		opacity: 0;
+		// z-index: 1;
+		z-index: 2;
+		// transition: opacity 10s;
+
+	}
+
+	&:hover{
+		// First image
+		& img:nth-of-type(1){
+			transition: opacity 2s;
+			// opacity: 0.0;
+			// opacity: 0.8;
+		}
+		
+		// Second image
+		& img:nth-of-type(2){
+			transition: opacity 2s;
+			// position: absolute;
+			opacity: 1;
+		}
+	}
+}
+
+
+// .pfp-image{
+// 	// & > img{
+// 	height: 30vh;
+
+// 	img{
+
+// 		// width: 100%;
+// 		// object-fit: cover;
+// 		// height: 30vh;
+// 		// border-radius: 50%;
+// 		transition: all 300ms;
+// 		transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+
+// 		-webkit-box-shadow: -1px 0px 3px 0px var(--hover-color), 1px 3px 2px 0px var(--pfp-color2), 
+// 				1px 0px 3px 0px var(--pfp-color), 1px -2px 3px 0px var(--pfp-color);
+// 		-moz-box-shadow: -1px 0px 3px 0px var(--hover-color), 1px 3px 2px 0px var(--pfp-color2), 
+// 				1px 0px 3px 0px var(--pfp-color), 1px -2px 3px 0px var(--pfp-color);
+// 		box-shadow: -1px 0px 3px 0px var(--hover-color), 1px 3px 2px 0px var(--pfp-color2), 
+// 				1px 0px 3px 0px var(--pfp-color), 1px -2px 3px 0px var(--pfp-color);
+// 	}
+
+// }
+
