@@ -24,10 +24,10 @@ $soft_color: change-color($main_color, $saturation: 60%, $lightness: 40%);
 	--hover-color: #{$main_color};
 	// --hover-color: #34fe56;
 	
-	--pfp-color-light: #ff3300;
-	--pfp-color2-light: #008cff;
-	--pfp-color-dark: #ff00d4;
-	--pfp-color2-dark: #00ff22;
+	--pfp-color-0-light: #ff3300;
+	--pfp-color-2-light: #008cff;
+	--pfp-color-0-dark: #ff00d4;
+	--pfp-color-2-dark: #00ff22;
 	
 	// --hover-color-soft: #a0612a;
 	--hover-color-soft: #{$soft_color};
@@ -42,8 +42,8 @@ $soft_color: change-color($main_color, $saturation: 60%, $lightness: 40%);
 	--separator-color: var(--separator-color-light);
 	--separator-color-soft: var(--separator-color-soft-light);
 
-	--pfp-color: var(--pfp-color-light);
-	--pfp-color2: var(--pfp-color2-light);
+	--pfp-color-0: var(--pfp-color-0-light);
+	--pfp-color-2: var(--pfp-color-2-light);
 
 
 	// KBD element
@@ -86,8 +86,8 @@ html.dark {
 	--separator-color: var(--separator-color-dark);
 	--separator-color-soft: var(--separator-color-soft-dark);
 
-	--pfp-color: var(--pfp-color-dark);
-	--pfp-color2: var(--pfp-color2-dark);
+	--pfp-color-0: var(--pfp-color-0-dark);
+	--pfp-color-2: var(--pfp-color-2-dark);
 
 	--soft-text: var(--soft-text-dark);
 
@@ -101,8 +101,8 @@ html.light {
 	--separator-color: var(--separator-color-light);
 	--separator-color-soft: var(--separator-color-soft-light);
 	
-	--pfp-color: var(--pfp-color-light);
-	--pfp-color2: var(--pfp-color2-light);
+	--pfp-color-0: var(--pfp-color-0-light);
+	--pfp-color-2: var(--pfp-color-2-light);
 	
 	--soft-text: var(--soft-text-light);
 
@@ -1515,12 +1515,12 @@ div.highlight pre, .articles-content pre {
 	// transition-timing-function: cubic-bezier(0,2.01,.89,-1.04);
 
 
-	-webkit-box-shadow: -1px 0px 3px 0px var(--hover-color), 1px 3px 2px 0px var(--pfp-color2), 
-			1px 0px 3px 0px var(--pfp-color), 1px -2px 3px 0px var(--pfp-color);
-	-moz-box-shadow: -1px 0px 3px 0px var(--hover-color), 1px 3px 2px 0px var(--pfp-color2), 
-			1px 0px 3px 0px var(--pfp-color), 1px -2px 3px 0px var(--pfp-color);
-	box-shadow: -1px 0px 3px 0px var(--hover-color), 1px 3px 2px 0px var(--pfp-color2), 
-			1px 0px 3px 0px var(--pfp-color), 1px -2px 3px 0px var(--pfp-color);
+	-webkit-box-shadow: -1px 0px 3px 0px var(--hover-color), 1px 3px 2px 0px var(--pfp-color-2), 
+			1px 0px 3px 0px var(--pfp-color-0), 1px -2px 3px 0px var(--pfp-color-0);
+	-moz-box-shadow: -1px 0px 3px 0px var(--hover-color), 1px 3px 2px 0px var(--pfp-color-2), 
+			1px 0px 3px 0px var(--pfp-color-0), 1px -2px 3px 0px var(--pfp-color-0);
+	box-shadow: -1px 0px 3px 0px var(--hover-color), 1px 3px 2px 0px var(--pfp-color-2), 
+			1px 0px 3px 0px var(--pfp-color-0), 1px -2px 3px 0px var(--pfp-color-0);
 
 }
 
@@ -1534,9 +1534,9 @@ div.highlight pre, .articles-content pre {
 	// box-shadow: 0px 0px 13px 0px rgba(254, 146, 52, 0.9);
 	
 
-	// box-shadow: -1px 0px 3px 0px var(--hover-color), -1px 3px 2px 0px var(--pfp-color2), 
-	// 1px 0px 3px 0px var(--pfp-color), 1px -2px 3px 0px var(--pfp-color),
-	// // 1px 4px 3px 0px var(--pfp-color2)
+	// box-shadow: -1px 0px 3px 0px var(--hover-color), -1px 3px 2px 0px var(--pfp-color-2), 
+	// 1px 0px 3px 0px var(--pfp-color-0), 1px -2px 3px 0px var(--pfp-color-0),
+	// // 1px 4px 3px 0px var(--pfp-color-2)
 	// ;
 
 	
