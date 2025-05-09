@@ -14,8 +14,6 @@ Use example:
 {{< header title="my-first-article, another-article" title="My favourite articles" align="right" class="bloom-shadow" >}}
 */ -}}
 
-
-
 {{- $title := or (.Get 1) (.Get "text") (.Get "t") -}}
 {{- $header_number := or (.Get 2) (.Get "h") | default 2 -}}
 {{- $text_align := or (.Get 3) (.Get "align") | default "center" -}}
@@ -35,18 +33,6 @@ Use example:
 	{{- $flex_align = "flex-start" -}}
 {{- end -}}
 
-
-{{- /*  <hgroup class="featured-articles-container">  */ -}}
-	{{- /*  {{- if $title }}  */ -}}
-		{{- /*  {{- $style := printf "text-align:%s;" $text_align -}}  */ -}}
-		{{- $style := (printf "text-align:%s; align-self:%s;" $text_align $flex_align) | safeCSS -}}
-		{{- /*  {{- $header := printf "<%s style='text-align:%s;'>%s</%s>" $header_tag $text_align $title $header_tag -}}  */ -}}
-		{{- $header := printf "<%s %s style='%s'>%s</%s>" $header_tag $css_class_attr $style $title $header_tag -}}
-		{{- $header | safeHTML -}}
-	{{- /*  {{- end -}}  */ -}}
-    {{- /*  <section>  */ -}}
-		{{- /*  {{- range $index, $page := $articles_array -}}  */ -}}
-	        {{- /*  {{- partial "articles/article-card.html" $page -}}  */ -}}
-		{{- /*  {{- end -}}  */ -}}
-    {{- /*  </section>  */ -}}
-{{- /*  </hgroup>  */ -}}
+{{- $style := (printf "text-align:%s; align-self:%s;" $text_align $flex_align) | safeCSS -}}
+{{- $header := printf "<%s %s style='%s'>%s</%s>" $header_tag $css_class_attr $style $title $header_tag -}}
+{{- $header | safeHTML -}}
