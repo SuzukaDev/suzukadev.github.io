@@ -16,6 +16,8 @@ menus:
 # sub-galleries on list pages are sorted by date and weight (descending)
 ---
 
+# WORK IN PROGRESS
+
 <!-- {{< youtube "5nf24no8dKU" >}} -->
 
 {{< images_hover_link img="/images/yo.jpg" img_hover="/images/Calavera Glow 4 - Square.png" page="about" c0_dark=#A64951FF c1_dark=#EF454EFF c2_dark=#6e3656 c0_light=green c1_light=green c2_light=green t1=2.2s >}}
