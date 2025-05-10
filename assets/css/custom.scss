@@ -24,10 +24,10 @@ $soft_color: change-color($main_color, $saturation: 60%, $lightness: 40%);
 	--hover-color: #{$main_color};
 	// --hover-color: #34fe56;
 	
-	--pfp-color-0-light: #ff3300;
-	--pfp-color-2-light: #008cff;
-	--pfp-color-0-dark: #ff00d4;
-	--pfp-color-2-dark: #00ff22;
+	// --pfp-color-0-light: #ff3300;
+	// --pfp-color-2-light: #008cff;
+	// --pfp-color-0-dark: #ff00d4;
+	// --pfp-color-2-dark: #00ff22;
 	
 	// --hover-color-soft: #a0612a;
 	--hover-color-soft: #{$soft_color};
