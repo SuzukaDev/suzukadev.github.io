@@ -56,6 +56,18 @@
 			}
 		},
 		{
+			"label": "Server",
+			"type": "shell",
+			"command": "explorer http://localhost:1313/;hugo server",
+			"options": {
+				"statusbar": {
+					"label": "$(browser) Server",
+					"color": "#ff0800",
+					"detail": "Opens the localhost:1313 and runs the server"
+				}
+			}
+		},
+		{
 			"label": "Run and go to localhost",
 			"type": "shell",
 			// "command": "start http://localhost:1313/;hugo server -D",
