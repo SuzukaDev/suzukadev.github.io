@@ -50,19 +50,19 @@ html.light .bloom-shadow{
 	// font-weight: 900;
 	font-weight: var(--text-weight, 900);
 	color: white;
-	span {
-	z-index: 100;
+	// span {
+	// z-index: 100;
 
-		animation: shadow 2.4s ease infinite alternate;
-		// animation: shadow 2.4s ease-in-out infinite;
-		// animation: shadow 2.4s linear infinite;
-		// text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-		// -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-		// -webkit-text-fill-color: var(--text-2); /* Will override color (regardless of order) */
-		// -webkit-text-stroke-width: 1px;
-		// -webkit-text-stroke-color: black;
+	// 	animation: shadow 2.4s ease infinite alternate;
+	// 	// animation: shadow 2.4s ease-in-out infinite;
+	// 	// animation: shadow 2.4s linear infinite;
+	// 	// text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	// 	// -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+	// 	// -webkit-text-fill-color: var(--text-2); /* Will override color (regardless of order) */
+	// 	// -webkit-text-stroke-width: 1px;
+	// 	// -webkit-text-stroke-color: black;
 
-	}
+	// }
 }
 html.dark .bloom-shadow{
 	
@@ -79,14 +79,14 @@ html.dark .bloom-shadow{
 	font-weight: var(--text-weight, 900);
 
 	
-	span {
-		// display: inline-block;
-		// color: pink;
-		// animation: bloom 2.4 infinite;
-		// animation: bloom 2.4s ease infinite alternate;
-		animation: bloom 2.4s ease-in-out infinite alternate;
+	// span {
+	// 	// display: inline-block;
+	// 	// color: pink;
+	// 	// animation: bloom 2.4 infinite;
+	// 	// animation: bloom 2.4s ease infinite alternate;
+	// 	animation: bloom 2.4s ease-in-out infinite alternate;
 
-	}
+	// }
 }
 
 @keyframes bloom {
