@@ -1,4 +1,3 @@
-{{- /*  REFACTOR RABIA  */ -}}
 {{/*  
 Stacks 2 images and reveals the second one (img_hover) when hovering the image. Allows adding a link
 
@@ -42,8 +41,8 @@ Example:
 {{- $c2_light := (or (.Get 7) (.Get "c2_light")) -}}  */ -}}
 
 {{- $style_variables := "" -}}
-{{- /*  {{- $index, $value := range seq 0 2 -}}  */ -}}
-{{- /*  {{- $index := range (seq 0 2) -}}  */ -}}
+{{- /*  Colors  */ -}}
+{{- /*  {{- range $index, $value := (seq 0 2) -}}  */ -}}
 {{- /*  {{- range $index, $value := (seq 0 2) -}}  */ -}}
 {{- range $index, $value := (seq 3) -}}
 	{{- $_color := $.Get (print "c" $index) -}}
@@ -63,25 +62,6 @@ Example:
 			{{- $style_variables = printf "%s --pfp-color-%d-light:%s;" $style_variables $index $_color_light -}}
 		{{- end -}}
 	{{- end -}}
-{{- end -}}
-
-{{- /*  DONT REPEAT YOURSELF  */ -}}
-{{- /*  {{- if $c0 -}}
-	{{- $style_variables = printf "%s --pfp-color-0:%s;" $style_variables $c0 -}}
-{{- else -}}
-	{{- if $c0_dark -}}
-		{{- $style_variables = printf "%s --pfp-color-dark:%s;" $style_variables $c0_dark -}}
-	{{- end -}}
-	{{- if $c0_light -}}
-		{{- $style_variables = printf "%s --pfp-color-light:%s;" $style_variables $c0_light -}}
-	{{- end -}}
-
-{{- end -}}
-{{- if $c1 -}}
-	{{- $style_variables = printf "%s --pfp-color1:%s;" $style_variables $c1 -}}
-{{- end -}}
-{{- if $c2 -}}
-	{{- $style_variables = printf "%s --pfp-color-2:%s;" $style_variables $c2 -}}
 {{- end -}}
 
 {{- /*  Time  */ -}}
