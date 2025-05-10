@@ -1,21 +1,26 @@
 {{- /*  REFACTOR RABIA  */ -}}
 {{/*  
-Embeds an audio file
+Stacks 2 images and reveals the second one (img_hover) when hovering the image. Allows adding a link
 
 Arguments:
-src = Path with the audio.
-title = Title of the audio. Default: audio file tilte
-artist = Artist/Author of the audio. Default: .Site.Params.audios_default_author
-cover = Path with an image used as cover. If not set, it will look for an image with the SAME NAME as the audio file. Eg: cancion.mp3 -> cancion.png. Default: (no image)
-pos = Position of the cover image in the background. To adjust its appeareance. Default: center (50% 50%)
-color = Color of the border in hex. Default: Gets automatically the most predominant and brightest color
-optimize = Optimizes the image set for the cover, for fast loading. Is useful to turn it to false for animated .webp's and .gif's. Default: true
-autoplay = Autoplays the audio when loading (do not work in some browsers). Default: false
-radius = Border radius for the cover. Tip: set a very big value (999999px) for circle corners. Set 0px for no borders. Default: .3rem (A bit rounded)
-
+img = Image.
+img_hover = Image displayed when hovering.
+url = url when clicking the image.
+page = page when clicking the image.
+t1 = Hovering time.
+t2 = Un-Hovering time.
+c0 = Color 0 (left (not very visible)). If set, it will have the same color for dark and light theme.
+c1 = Color 1 (top). If set, it will have the same color for dark and light theme.
+c2 = Color 2 (right). If set, it will have the same color for dark and light theme.
+c0_dark = Dark version for color 0. Default: Main web color.
+c1_dark = Dark version for color 1. Default: Main web color.
+c2_dark = Dark version for color 2. Default: Main web color.
+c0_light = Light version for color 0. Default: Main web color.
+c1_light = Light version for color 1. Default: Main web color.
+c2_light = Light version for color 2. Default: Main web color.
 
 Example:
-{{< audio "my_audio.mp3" "My song" "Dexter" >}} -> Autoplays muted
+{{< images_hover_link img="cover.png" img_hover="cover_hover.png" page="about" t1=1s t2=5s >}}
 {{< audio src="my_audio.mp3" cover="my-custom-image.png" position="50% 100%" color=#3456 autoplay=true >}}
 */}}
 
@@ -23,27 +28,61 @@ Example:
 {{- $img := (or (.Get 0) (.Get "img")) -}}
 {{- $img_hover := (or (.Get 2) (.Get "img_hover")) -}}
 {{- $url := (or (.Get 3) (.Get "url")) | default "" -}}
-{{- $page_name := (or (.Get 4) (.Get "page")) -}}
+{{- /*  TODO hacer lo de page/url  */ -}}
+{{- $page_name := (or (.Get 4) (.Get "page")) | default "" -}}
+{{- $time_hover := (or (.Get "t1")) -}}
+{{- $time_out := (or (.Get "t2")) -}}
 {{- $c0 := (or (.Get 5) (.Get "c0")) -}}
 {{- $c1 := (or (.Get 6) (.Get "c1")) -}}
 {{- $c2 := (or (.Get 7) (.Get "c2")) -}}
-{{- $time_hover := (or (.Get "t1")) -}}
-{{- $time_out := (or (.Get "t2")) -}}
-{{- /*  {{- $color_manual := (or (.Get 5) (.Get "color") (.Get "col") (.Get "c")) | default "" -}}
-{{- $optimize_cover_image := (or (.Get 6) (.Get "optimize")) | default true -}}
-{{- $autoplay_flag := (or (.Get 7) (.Get "autoplay")) | default false -}}
-{{- $border_radius := (or (.Get 8) (.Get "radius") (.Get "r")) | default false -}}  */ -}}
+{{- /*  {{- $c0_dark := (or (.Get 5) (.Get "c0_dark")) -}}
+{{- $c1_dark := (or (.Get 6) (.Get "c1_dark")) -}}
+{{- $c2_dark := (or (.Get 7) (.Get "c2_dark")) -}}
+{{- $c0_light := (or (.Get 5) (.Get "c0_light")) -}}
+{{- $c1_light := (or (.Get 6) (.Get "c1_light")) -}}
+{{- $c2_light := (or (.Get 7) (.Get "c2_light")) -}}  */ -}}
 
 
 {{- $style_variables := "" -}}
-{{- if $c0 -}}
-	{{- $style_variables = printf "%s --pfp-color:%s;" $style_variables $c0 -}}
+{{- /*  {{- $index, $value := range seq 0 2 -}}  */ -}}
+{{- /*  {{- $index := range (seq 0 2) -}}  */ -}}
+{{- /*  {{- range $index, $value := (seq 0 2) -}}  */ -}}
+{{- range $index, $value := (seq 3) -}}
+	{{- $_color := $.Get (print "c" $index) -}}
+	{{- $_color_dark := $.Get (print "c" $index "_dark") -}}
+	{{- $_color_light := $.Get (print "c" $index "_light") -}}
+
+	{{- if $_color -}}
+		{{- /*  {{- $style_variables = printf "%s --pfp-color-%d:%s;" $style_variables $index $_color -}}  */ -}}
+		{{- /*  {{- $style_variables = printf "%s --pfp-color-%d-dark:%s; --pfp-color-%d-light:%s;" $style_variables $index $_color $index $_color -}}  */ -}}
+		{{- $style_variables = printf "%s --pfp-color-%d-dark:%s; --pfp-color-%d-light:%s;" $style_variables $index $_color $index $_color -}}
+	{{- else -}}
+		{{- if $_color_dark -}}
+			{{- $style_variables = printf "%s --pfp-color-%d-dark:%s;" $style_variables $index  $_color_dark -}}
+		{{- end -}}
+		{{- if $_color_light -}}
+			{{- /*  {{- $style_variables = printf "%s --pfp-color-%d-light:%s;" $style_variables $index $_color_light -}}  */ -}}
+			{{- $style_variables = printf "%s --pfp-color-%d-light:%s;" $style_variables $index $_color_light -}}
+		{{- end -}}
+	{{- end -}}
+{{- end -}}
+
+{{- /*  {{- if $c0 -}}
+	{{- $style_variables = printf "%s --pfp-color-0:%s;" $style_variables $c0 -}}
+{{- else -}}
+	{{- if $c0_dark -}}
+		{{- $style_variables = printf "%s --pfp-color-dark:%s;" $style_variables $c0_dark -}}
+	{{- end -}}
+	{{- if $c0_light -}}
+		{{- $style_variables = printf "%s --pfp-color-light:%s;" $style_variables $c0_light -}}
+	{{- end -}}
+
 {{- end -}}
 {{- if $c1 -}}
 	{{- $style_variables = printf "%s --pfp-color1:%s;" $style_variables $c1 -}}
 {{- end -}}
 {{- if $c2 -}}
-	{{- $style_variables = printf "%s --pfp-color2:%s;" $style_variables $c2 -}}
+	{{- $style_variables = printf "%s --pfp-color-2:%s;" $style_variables $c2 -}}
 {{- end -}}
 {{- /*  Time  */ -}}
 {{- if $time_hover -}}
@@ -53,7 +92,10 @@ Example:
 	{{- $style_variables = printf "%s --time-img-reveal-out:%s;" $style_variables $time_out -}}
 {{- end -}}
 
-{{- $link := $url -}}
+{{- $link := "" -}}
+{{- if $url -}}
+	{{- $link = $url -}}
+{{- end -}}
 {{- if $page_name -}}
 	{{- $link = ref . $page_name -}}
 {{- end -}}
@@ -64,7 +106,7 @@ Example:
 
 {{- /*  <a href='{{ ref . "about" }}'>  */ -}}
 {{- /*  <a id="szk_pfp" class="hover-reveal-2-images" href='{{- $link -}}'>  */ -}}
-<a id="" class="hover-reveal-2-images" href='{{- $link -}}'>
+<a id="" class="hover-reveal-2-images" {{- if $link -}} href='{{- $link -}}' {{- end -}}>
 {{- /*  <a id="" class="hover-reveal-2-images pfp-image" href='{{- $link -}}'>  */ -}}
 	{{- /*  <img id="szk_pfp" src="{{ .Params.profile_picture }}">  */ -}}
 	{{- /*  <img id="szk_pfp" src="{{- $img -}}">
