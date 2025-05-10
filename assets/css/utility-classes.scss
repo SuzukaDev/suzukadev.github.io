@@ -102,3 +102,43 @@
 	}
 }
 
+.dark .pfp-border-colors{
+	--c0: var(--pfp-color-0-dark, var(--hover-color));
+	--c1: var(--pfp-color-1-dark, var(--hover-color));
+	--c2: var(--pfp-color-2-dark, var(--hover-color));
+}
+.light .pfp-border-colors{
+	--c0: var(--pfp-color-0-light, var(--hover-color));
+	--c1: var(--pfp-color-1-light, var(--hover-color));
+	--c2: var(--pfp-color-2-light, var(--hover-color));
+}
+.pfp-border-colors{
+	// -webkit-box-shadow: -1px 0px 3px 0px var(--hover-color), 1px 3px 2px 0px var(--pfp-color-0-2), 
+	// 	1px 0px 3px 0px var(--pfp-color-0), 1px -2px 3px 0px var(--pfp-color-0);
+	// -moz-box-shadow: -1px 0px 3px 0px var(--hover-color), 1px 3px 2px 0px var(--pfp-color-0-2), 
+	// 	1px 0px 3px 0px var(--pfp-color-0), 1px -2px 3px 0px var(--pfp-color-0);
+	// box-shadow: -1px 0px 3px 0px var(--hover-color), 1px 3px 2px 0px var(--pfp-color-0-2), 
+	// 	1px 0px 3px 0px var(--pfp-color-0), 1px -2px 3px 0px var(--pfp-color-0);
+	
+
+	// ----c0: var(--pfp-color-0, var(--hover-color));
+	// ----c1: var(--pfp-color-1, var(--hover-color));
+	// ----c2: var(--pfp-color-2, var(--hover-color));
+	// -webkit-box-shadow: -1px 0px 3px 0px var(----c0), 1px 3px 2px 0px var(----c2), 
+	// 	1px 0px 3px 0px var(----c1), 1px -2px 3px 0px var(----c1);
+	// -moz-box-shadow: -1px 0px 3px 0px var(----c0), 1px 3px 2px 0px var(----c2), 
+	// 	1px 0px 3px 0px var(----c1), 1px -2px 3px 0px var(----c1);
+	// box-shadow: -1px 0px 3px 0px var(----c0), 1px 3px 2px 0px var(----c2), 
+	// 	1px 0px 3px 0px var(----c1), 1px -2px 3px 0px var(----c1);
+
+
+	// --c0: var(--pfp-color-0, var(--hover-color));
+	// --c1: var(--pfp-color-1, var(--hover-color));
+	// --c2: var(--pfp-color-2, var(--hover-color));
+	-webkit-box-shadow: -1px 0px 3px 0px var(--c0), 1px 3px 2px 0px var(--c2), 
+		1px 0px 3px 0px var(--c1), 1px -2px 3px 0px var(--c1);
+	-moz-box-shadow: -1px 0px 3px 0px var(--c0), 1px 3px 2px 0px var(--c2), 
+		1px 0px 3px 0px var(--c1), 1px -2px 3px 0px var(--c1);
+	box-shadow: -1px 0px 3px 0px var(--c0), 1px 3px 2px 0px var(--c2), 
+		1px 0px 3px 0px var(--c1), 1px -2px 3px 0px var(--c1);
+}
