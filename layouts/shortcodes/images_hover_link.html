@@ -9,26 +9,25 @@ url = url when clicking the image.
 page = page when clicking the image.
 t1 = Hovering time.
 t2 = Un-Hovering time.
-c0 = Color 0 (left (not very visible)). If set, it will have the same color for dark and light theme.
+c0 = Color 0 (left). If set, it will have the same color for dark and light theme.
 c1 = Color 1 (top). If set, it will have the same color for dark and light theme.
 c2 = Color 2 (right). If set, it will have the same color for dark and light theme.
-c0_dark = Dark version for color 0. Default: Main web color.
-c1_dark = Dark version for color 1. Default: Main web color.
-c2_dark = Dark version for color 2. Default: Main web color.
-c0_light = Light version for color 0. Default: Main web color.
-c1_light = Light version for color 1. Default: Main web color.
-c2_light = Light version for color 2. Default: Main web color.
+c0_dark = Color 0 for DARK theme. Default: Main web color.
+c1_dark = Color 1 for DARK theme. Default: Main web color.
+c2_dark = Color 2 for DARK theme. Default: Main web color.
+c0_light = Color 0 for LIGHT theme. Default: Main web color.
+c1_light = Color 1 for LIGHT theme. Default: Main web color.
+c2_light = Color 2 for LIGHT theme. Default: Main web color.
+
 
 Example:
 {{< images_hover_link img="cover.png" img_hover="cover_hover.png" page="about" t1=1s t2=5s >}}
-{{< audio src="my_audio.mp3" cover="my-custom-image.png" position="50% 100%" color=#3456 autoplay=true >}}
 */}}
 
 
 {{- $img := (or (.Get 0) (.Get "img")) -}}
 {{- $img_hover := (or (.Get 2) (.Get "img_hover")) -}}
 {{- $url := (or (.Get 3) (.Get "url")) | default "" -}}
-{{- /*  TODO hacer lo de page/url  */ -}}
 {{- $page_name := (or (.Get 4) (.Get "page")) | default "" -}}
 {{- $time_hover := (or (.Get "t1")) -}}
 {{- $time_out := (or (.Get "t2")) -}}
@@ -41,7 +40,6 @@ Example:
 {{- $c0_light := (or (.Get 5) (.Get "c0_light")) -}}
 {{- $c1_light := (or (.Get 6) (.Get "c1_light")) -}}
 {{- $c2_light := (or (.Get 7) (.Get "c2_light")) -}}  */ -}}
-
 
 {{- $style_variables := "" -}}
 {{- /*  {{- $index, $value := range seq 0 2 -}}  */ -}}
@@ -67,6 +65,7 @@ Example:
 	{{- end -}}
 {{- end -}}
 
+{{- /*  DONT REPEAT YOURSELF  */ -}}
 {{- /*  {{- if $c0 -}}
 	{{- $style_variables = printf "%s --pfp-color-0:%s;" $style_variables $c0 -}}
 {{- else -}}
@@ -84,6 +83,7 @@ Example:
 {{- if $c2 -}}
 	{{- $style_variables = printf "%s --pfp-color-2:%s;" $style_variables $c2 -}}
 {{- end -}}
+
 {{- /*  Time  */ -}}
 {{- if $time_hover -}}
 	{{- $style_variables = printf "%s --time-img-reveal-hover:%s;" $style_variables $time_hover -}}
@@ -104,14 +104,7 @@ Example:
 	{{- $img_hover = $img -}}
 {{- end -}}
 
-{{- /*  <a href='{{ ref . "about" }}'>  */ -}}
-{{- /*  <a id="szk_pfp" class="hover-reveal-2-images" href='{{- $link -}}'>  */ -}}
 <a id="" class="hover-reveal-2-images" {{- if $link -}} href='{{- $link -}}' {{- end -}}>
-{{- /*  <a id="" class="hover-reveal-2-images pfp-image" href='{{- $link -}}'>  */ -}}
-	{{- /*  <img id="szk_pfp" src="{{ .Params.profile_picture }}">  */ -}}
-	{{- /*  <img id="szk_pfp" src="{{- $img -}}">
-	<img id="szk_pfp" src="{{- $img_hover -}}">  */ -}}
-	{{- /*  <div class="pfp-border-colors">  */ -}}
 	<div class="half-border-radius pfp-border-colors" style="{{- $style_variables | safeCSS -}}">
 		<img src="{{- $img -}}">
 		{{- if $img_hover -}}
