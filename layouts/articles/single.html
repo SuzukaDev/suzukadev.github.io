@@ -14,8 +14,11 @@
     <div class="article-and-navbar">
     {{ if .Params.show_table_of_contents }}
       <aside class="articles-index" >
-        <h3 class="uppercase">{{ T "articleIndexContent" }}</h3>
-        {{ .TableOfContents }}
+        {{- /*  32 is the lenght of the empty html <nav> code when the table of content is empty   */ -}}
+          {{ if ne (len .TableOfContents) 32 }}
+            <h3 class="uppercase">{{ T "articleIndexContent" }}</h3>
+            {{ .TableOfContents }}
+          {{ end }}
       </aside>
     {{ end }}
     {{$context := .}}
