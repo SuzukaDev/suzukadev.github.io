@@ -2,7 +2,7 @@
 title = 'Artículo atrapado en un contenedor con una carpeta propia'
 date = '2025-02-26T21:13:58+01:00'
 description = "El geníal -y alucinante- artículo contenedor"
-draft = true
+draft = false
 tags = ["dexter"]
 # article_cover = "zzzcover.png"
 featured = true

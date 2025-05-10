@@ -2,7 +2,7 @@
 title = 'Article in contenedor in its own -awesome- folder'
 date = '2025-02-26T21:13:58+01:00'
 description = "The freaking awesome -and wholesome- article in contenedor jeje is the best I love it wow mola zoo pancho"
-draft = true
+draft = false
 tags = ["dexter"]
 featured = true
 # article_cover = "zcover.webp"
