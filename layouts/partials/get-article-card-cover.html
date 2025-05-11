@@ -71,9 +71,14 @@ it CAN has its own resources, and will look automatically for an image with the 
 		{{ else }}
 			{{ $first_image_path := partial "get-first-image-in-markdown.html" . }}
 			{{ if $first_image_path }}
-				{{ $cover_image_path = $first_image_path }}
+				{{- /*  ! PREVIOUS  */ -}}
+				{{- /*  {{ $cover_image_path = $first_image_path }}  */ -}}
+				{{- /*  {{ $cover_image_path = (printf "%s/%s" .Path $first_image_path) }}  */ -}}
+				
+				{{- /*  · NEW  */ -}}
+				{{ $resource := $.Resources.Get $first_image_path }}
+				{{ $cover_image_path = $resource.RelPermalink }}
 
-				{{ $cover_image_path = (printf "%s/%s" .Path $first_image_path) }}
 				{{/*  {{$res := .Resources.Get $first_image_path}}  */}}
 				{{/*  {{ $cover_image_path = $res.RelPermalink }}  */}}
 
