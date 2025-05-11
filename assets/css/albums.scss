@@ -175,10 +175,13 @@ nav.categories{
 
 .category-tag{
 	@extend .article-tag;
-	color: var(--text-2);
+	color: var(--text-2) !important;
 	// font-weight: 600;
 	font-weight: bold;
 	list-style: none;
+	&:hover{
+		text-decoration: none !important;
+	}
 }
 
 .dark .card figure{
