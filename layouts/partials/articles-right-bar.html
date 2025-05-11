@@ -16,7 +16,16 @@
 		{{/*  <img href="">  */}}
 		{{/*  <img id="szk_pfp" src="{{ .Params.profile_picture }}">  */}}
 		{{/*  <img id="szk_pfp" src="/images/yo.jpg">  */}}
-		<img id="articles-pfp" src="{{.Site.Params.articles_pfp_image}}">
+		{{- /*  <img id="articles-pfp" src="{{.Site.Params.articles_pfp_image}}">  */ -}}
+		
+		{{- /*  {{- $pfp_resource := .Site.Resources.Get .Site.Params.articles_pfp_image -}}  */ -}}
+		{{- $pfp_resource := resources.Get .Site.Params.articles_pfp_image -}}
+		{{- if not $pfp_resource -}}
+			{{- errorf "%s not found in 'assets' folder" .Site.Params.articles_pfp_image -}}
+		{{- end -}}
+		{{- $pfp_resource = $pfp_resource.Filter (images.Process "fit 250x250") -}}
+		<img id="articles-pfp" src="{{$pfp_resource.RelPermalink}}">
+		
 		{{/*  <h2>Patrick</h2>  */}}
 		{{/*  <p>{{ T "articleAboutMeDescription" }}</p>  */}}
 		{{ with $about_page.Params.articles_description }}
