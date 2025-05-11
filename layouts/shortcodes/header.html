@@ -14,10 +14,10 @@ Use example:
 {{< header title="my-first-article, another-article" title="My favourite articles" align="right" class="bloom-shadow" >}}
 */ -}}
 
-{{- $title := or (.Get 1) (.Get "text") (.Get "t") -}}
-{{- $header_number := or (.Get 2) (.Get "h") | default 2 -}}
-{{- $text_align := or (.Get 3) (.Get "align") | default "center" -}}
-{{- $css_class := or (.Get 4) (.Get "class") | default "" -}}
+{{- $title := or (.Get 0) (.Get "text") (.Get "t") -}}
+{{- $header_number := or (.Get 1) (.Get "h") | default 2 -}}
+{{- $text_align := or (.Get 2) (.Get "align") | default "center" -}}
+{{- $css_class := or (.Get 3) (.Get "class") | default "" -}}
 
 {{- $css_class_attr := "" -}}
 {{- if $css_class -}}
