@@ -1,5 +1,5 @@
-<!-- TODO traducir archetype (ES) -->
 +++
+# TODO traducir archetype (ES)
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 date = '{{ .Date }}'
 description = ""
