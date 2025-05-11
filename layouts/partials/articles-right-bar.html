@@ -16,8 +16,8 @@
 		{{/*  <img href="">  */}}
 		{{/*  <img id="szk_pfp" src="{{ .Params.profile_picture }}">  */}}
 		{{/*  <img id="szk_pfp" src="/images/yo.jpg">  */}}
-		<img id="articles-pfp" src="/images/yo.jpg">
-		{{/*  <h2>Suzuka Ka</h2>  */}}
+		<img id="articles-pfp" src="{{.Site.Params.articles_pfp_image}}">
+		{{/*  <h2>Patrick</h2>  */}}
 		{{/*  <p>{{ T "articleAboutMeDescription" }}</p>  */}}
 		{{ with $about_page.Params.articles_description }}
 			<p>{{ . }}</p>
