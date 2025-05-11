@@ -76,8 +76,19 @@ it CAN has its own resources, and will look automatically for an image with the 
 				{{- /*  {{ $cover_image_path = (printf "%s/%s" .Path $first_image_path) }}  */ -}}
 				
 				{{- /*  · NEW  */ -}}
-				{{ $resource := $.Resources.Get $first_image_path }}
-				{{ $cover_image_path = $resource.RelPermalink }}
+				{{ $resource := .Page.Resources.Get $first_image_path }}
+				{{ if $resource }}
+					{{ $cover_image_path = $resource.RelPermalink }}
+				{{ else }}
+					{{ $cover_image_path = $first_image_path }}
+					{{ $cover_image_path = (printf "%s/%s" .Path $first_image_path) }}
+				{{ end }}
+				
+				{{- /*  ! DEBUG  */ -}}
+				{{- /*  {{ $cover_image_path = "" }}
+				{{ range .Page.Resources }}
+					{{$cover_image_path = print $cover_image_path "-" .Name }}
+				{{ end }}  */ -}}
 
 				{{/*  {{$res := .Resources.Get $first_image_path}}  */}}
 				{{/*  {{ $cover_image_path = $res.RelPermalink }}  */}}
