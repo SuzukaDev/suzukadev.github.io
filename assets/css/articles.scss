@@ -134,6 +134,9 @@ $article-card-hover-brightness: 30%;
 			// height: 30px;
 		// margin-top: auto;
 		// bottom: 0px;
+		font-weight: 700;
+		text-align: center;
+
 	}
 
 	// & img{
@@ -247,6 +250,8 @@ $article-card-hover-brightness: 30%;
 			// margin: 20px 10px;
 			margin: 10px 10px;
 			font-size: $featured-title-size;
+
+			font-weight: 700;
 		}
 
 		.description{
