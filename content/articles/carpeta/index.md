@@ -32,6 +32,10 @@ joder...
 ![alt text](images/asdfasdf.jpg "caption")
 
 
+![alt text](images/asdfasdf.jpg)
+*caption de la imagen*
+
+
 {{< images_hover_link img="/images/asdfasdf.jpg" img_hover="/images/cover.jpg" page="about" c0_dark=#A64951FF c1_dark=#EF454EFF c2_dark=#6e3656 c0_light=green c1_light=green c2_light=green t1=2.2s fit=60 >}}
 
 
@@ -52,3 +56,13 @@ comienza la fantasiaaaa
 comienza la fantasiaaaa
 
 {{< /box_color >}}
+
+
+
+
+
+
+<section>
+    <img src="images/asdfasdf.jpg" alt>
+    <span>image_caption de prueba a ver qué tal se da</span>
+</section>
