@@ -10,26 +10,8 @@ prueba
 
 Pongo el shortcode: 🤡
 
-<!-- {{< myshortcode text="hola tioooo xD" tag="div" class="clasecita" >}} -->
-<!-- {{< myshortcode text="hola tioooo xD" tag="div" class="clasecita" >}} -->
 
-<!-- {{< myshortcode text="hola tioooo xD" tag="span" class="clasecita" >}} -->
 
-<!-- {{< myshortcode text="hola joer" tag="div" class="clasecita" >}} -->
-
-<!-- {{% myshortcode text="hola joer" tag="strong" class="clasecita" %}} -->
-
-<!-- {{% myshortcode text="hola joer" tag="span" class="clasecita" %}} -->
-
-<!-- {{% myshortcode text="soy el shortcode" tag="span" %}} -->
-
-{{% myshortcode text="myshortcode" tag="span" %}}
-
-{{< myshortcode text="myshortcode" tag="span" >}}
-
-{{% joder text="joder soy el shortcode" tag="span" %}}
-
-{{< joder text="joder soy el shortcode" tag="span" >}}
 
 {{< rawhtml >}}
 
@@ -54,19 +36,8 @@ Pongo el shortcode: 🤡
 
 Hola {{% rawhtml %}}<span style="color: orange;"> Jose Carlos</span>{{% /rawhtml %}}
 
-{{< green text="panchoooooo" tag="span" >}}
-{{% green text="panchoooooo villa" tag="div" %}}
 
-{{< greentag text="green TAG" tag="span" >}}
-{{% greentag text="green TAG villa" tag="div" %}}
 
-joder
-
-<!-- {{< myshortcode text="soy el shortcode" tag="span" >}} -->
-
-<!-- {{< myshortcode text="hola" tag="span" class="clasecita" >}} -->
-
-<!-- {{< myshortcode text="hola tioooo xD" tag="div" class="clasecita" >}} -->
 
 <!-- <span class="animated-text">this part is animated</span>. -->
 
