@@ -66,3 +66,5 @@ comienza la fantasiaaaa
     <img src="images/asdfasdf.jpg" alt>
     <span>image_caption de prueba a ver qué tal se da</span>
 </section>
+
+{{< img_caption "images/asdfasdf.jpg" "Dexter es el mejor. Gracias Dexter" >}}
