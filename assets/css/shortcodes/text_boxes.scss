@@ -71,7 +71,7 @@ $green-color-dark: rgba(87, 255, 9, 0.13);
 
 ////////////////////////////
 
-.green-box, .info-box, .warning-box, .error-box{
+.green-box, .info-box, .warning-box, .error-box, .custom-box{
 	@extend .text-box;
 	// padding-left: 30px;
 	// text-indent: 20px;
@@ -109,4 +109,13 @@ $green-color-dark: rgba(87, 255, 9, 0.13);
 }
 .light .error-box{
 	background-color: $error-color-light;
+}
+
+
+// Custom box
+.dark .custom-box{
+	background-color: var(--custom-box-color-dark);
+}
+.light .custom-box{
+	background-color: var(--custom-box-color-light);
 }
