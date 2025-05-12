@@ -37,12 +37,11 @@ Example:
 
 
 {{- $img_link := $img -}}
-{{- $img_resource := resources.Get $img -}}
-{{- /*  {{- if and (not $img_resource) .Page -}}  */ -}}
-{{- if not $img_resource -}}
+{{- /*  {{- $img_resource := resources.Get $img -}}  */ -}}
+{{- $img_resource := or (resources.Get $img) (.Page.Resources.Get $img) -}}
+{{- /*  {{- if not $img_resource -}}
 	{{- $img_resource = .Page.Resources.Get $img -}}
-{{- end -}}
-{{ print $img_resource.Name }}
+{{- end -}}  */ -}}
 {{- if $img_resource -}}
 	{{- if $size_fit -}}
 		{{- $fit := printf "fit %dx%d" $size_fit $size_fit -}}
@@ -53,10 +52,11 @@ Example:
 {{- end -}}
 
 {{- $img_hover_link := $img_hover -}}
-{{- $img_hover_resource := resources.Get $img_hover -}}
-{{- if not $img_hover_resource -}}
+{{- /*  {{- $img_hover_resource := resources.Get $img_hover -}}  */ -}}
+{{- $img_hover_resource := or (resources.Get $img_hover) (.Page.Resources.Get $img_hover) -}}
+{{- /*  {{- if not $img_hover_resource -}}
 	{{- $img_hover_resource = .Page.Resources.Get $img_hover -}}
-{{- end -}}
+{{- end -}}  */ -}}
 {{- if $img_hover_resource -}}
 	{{- if $size_fit -}}
 		{{- $fit := printf "fit %dx%d" $size_fit $size_fit -}}
