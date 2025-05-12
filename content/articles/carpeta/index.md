@@ -45,7 +45,7 @@ comienza la fantasiaaaa
 {{< /box_color >}}
 
 
-{{< box_color color="#F002" >}}
+{{< box_color color="#F002" icon="" >}}
 
 ## Pues holaaa
 
