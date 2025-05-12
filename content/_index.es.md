@@ -7,7 +7,7 @@ resources:
     params:
       cover: true # cover of the home page is used for OpenGraph cards, etc.
 # profile_picture: "/images/yo.jpg"
-profile_picture: "/images/yo.jpg"
+# profile_picture: "/images/yo.jpg" # DEPRECATED This is not used
 
 menus:
   main:

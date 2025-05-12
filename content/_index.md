@@ -7,7 +7,7 @@ resources:
     params:
       cover: true # cover of the home page is used for OpenGraph cards, etc.
 # profile_picture: "/images/yo.jpg"
-profile_picture: "/images/yo.jpg"
+# profile_picture: "/images/yo.jpg" # DEPRECATED This is not used
 
 menus:
   main:
@@ -20,7 +20,7 @@ menus:
 
 <!-- {{< youtube "5nf24no8dKU" >}} -->
 
-{{< images_hover_link img="/images/yo.jpg" img_hover="/images/Calavera Glow 4 - Square.png" page="about" c0_dark=#A64951FF c1_dark=#EF454EFF c2_dark=#6e3656 c0_light=green c1_light=green c2_light=green t1=2.2s >}}
+{{< images_hover_link img="/images/yo.jpg" img_hover="/images/yo_color.png" page="about" c0_dark=#A64951FF c1_dark=#EF454EFF c2_dark=#6e3656 c0_light=green c1_light=green c2_light=green t1=2.2s fit=300 >}}
 
 {{< text_glitch text="Multimedia Engineer 🧠" time=10 rotation=901 font=1 sync=true intensity=0.1 >}} and {{< text_wavy text="multidisciplinary" time="1.0" freq="0.1" amp="5">}} <span class="pixel-font">{{< text_shimmer text="Game Developer" time=2.4 delay=.03 scale=1.3 blur=10 y=0 color1=orange color2=red color1-light=#ffde26 color2-light=red >}}</span> {{< text_rotate text="🎮" time=7.2  scale=1.5 >}} <br> with a {{< text_strong text="strong" font_weight=900 bloom_color=#00f7ff bloom_size=9 >}} passion for {{< text_handwritten text="ART & Creativity" scale=.1 rotation=40 font=3 frame_time=.3 time_variation=.10 spacing=.1  fx=1.3 >}} {{< text_handwritten text="🎨" rotation=360 scale=.1 offset=4 font=3 frame_time=.3 time_variation=.10 fx=1.0 >}} 
 
@@ -43,3 +43,6 @@ Read more **[about me]({{< relref "about.md" >}})** or [**check my work here**](
 (TODO❗: cambiar el link de "check my work here"❗)
 
 [2D]({{< relref "/galleries/art/2d">}})
+
+{{< album_categories title="3d-art, 2d-art" title="My favourite albums" align="right" >}}
+
