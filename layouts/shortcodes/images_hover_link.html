@@ -35,16 +35,15 @@ Example:
 {{- $c2 := (or (.Get 7) (.Get "c2")) -}}
 {{- $size_fit := (.Get "fit") | default false -}}
 
+{{- $fit := "" -}}
+{{- if $size_fit -}}
+	{{- $fit = printf "fit %dx%d" $size_fit $size_fit -}}
+{{- end -}}
 
 {{- $img_link := $img -}}
-{{- /*  {{- $img_resource := resources.Get $img -}}  */ -}}
 {{- $img_resource := or (resources.Get $img) (.Page.Resources.Get $img) -}}
-{{- /*  {{- if not $img_resource -}}
-	{{- $img_resource = .Page.Resources.Get $img -}}
-{{- end -}}  */ -}}
 {{- if $img_resource -}}
 	{{- if $size_fit -}}
-		{{- $fit := printf "fit %dx%d" $size_fit $size_fit -}}
 		{{- /*  {{- $img_resource = $img_resource.Filter (images.Process "fit 250x250") -}}  */ -}}
 		{{- $img_resource = $img_resource.Filter (images.Process $fit ) -}}
 	{{- end -}}
@@ -52,15 +51,9 @@ Example:
 {{- end -}}
 
 {{- $img_hover_link := $img_hover -}}
-{{- /*  {{- $img_hover_resource := resources.Get $img_hover -}}  */ -}}
 {{- $img_hover_resource := or (resources.Get $img_hover) (.Page.Resources.Get $img_hover) -}}
-{{- /*  {{- if not $img_hover_resource -}}
-	{{- $img_hover_resource = .Page.Resources.Get $img_hover -}}
-{{- end -}}  */ -}}
 {{- if $img_hover_resource -}}
 	{{- if $size_fit -}}
-		{{- $fit := printf "fit %dx%d" $size_fit $size_fit -}}
-		{{- /*  {{- $img_resource = $img_resource.Filter (images.Process "fit 250x250") -}}  */ -}}
 		{{- $img_hover_resource = $img_hover_resource.Filter (images.Process $fit ) -}}
 	{{- end -}}
 	{{- $img_hover_link = $img_hover_resource.RelPermalink -}}
