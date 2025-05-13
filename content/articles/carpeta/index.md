@@ -26,6 +26,7 @@ featured = true # if true, the article will be featured in the index page.
 
 +++
 
+{{< featured_album_big album="pixel-art" cover="images/pacific-road-thankyou.gif" pos2="50% 100%" t1="6s" >}}
 
 joder...
 
