@@ -68,4 +68,4 @@ comienza la fantasiaaaa
     <span>image_caption de prueba a ver qué tal se da</span>
 </section>
 
-{{< img_caption "images/asdfasdf.jpg" "Dexter es el mejor. Gracias Dexter" >}}
+{{< img_caption img="images/asdfasdf.jpg" caption="Dexter es el mejor. Gracias Dexter" url="https://codepen.io/Ks145/pen/MWGxbYr" page="about" >}}
