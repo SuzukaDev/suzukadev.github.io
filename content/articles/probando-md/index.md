@@ -19,6 +19,15 @@ tags = ["mierda", "test", "markdown"]
 # show_next_and_previous_arrows = false
 +++
 
+
+# TEST CODIGO 
+
+```
+{{</* featured_album_big album="pixel-art" cover="images/pacific-road-thankyou.gif" pos2="50% 100%" t1="6s" */>}}
+
+```
+
+
 # Feature cover
 {{< featured_album_big album="pixel-art" cover="images/pacific-road-thankyou.gif" pos2="50% 100%" t1="6s" >}}
 
