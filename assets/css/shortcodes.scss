@@ -29,9 +29,9 @@ span{
 // {{/*  REFACTOR rotate  */}}
 
 .img-link{
-	transition-duration: 1s;
+	transition-duration: .6s;
 	& img{
-		transition-duration: 1s;
+		transition-duration: .6s;
 		border: 2px solid transparent;
 	}
 	&:hover {
