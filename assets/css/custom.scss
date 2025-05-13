@@ -1454,6 +1454,10 @@ div.highlight pre, .articles-content pre {
 	// border: 4px double var(--hover-color);
 	// border: 2px ridge var(--hover-color);
 	// border-radius: 8px;
+
+	overflow: auto;
+	max-width: 100%;
+	text-wrap: wrap;
   }
 
 
