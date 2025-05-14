@@ -25,6 +25,18 @@ span{
 	flex-wrap: wrap;
 	justify-content: center;
 	justify-self: center;
+
+	figure, img, p{
+	// figure{
+	// & > *{
+		flex: 1;                /* Let each image grow equally */
+		object-fit: cover;      /* Crop image to fill without distortion */
+		// object-fit: contain;
+		// width: 100%;            /* Required to let flex take control */
+		// height: 100%;           /* Fill container height */
+		align-self: center;
+		// align-items: center;
+	}
 }
 // {{/*  REFACTOR rotate  */}}
 
