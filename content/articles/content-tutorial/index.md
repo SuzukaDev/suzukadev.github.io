@@ -25,6 +25,7 @@ show_right_bar = true
 # featured_tags = [""] # if set, it will only feature the tags in this array (useful to display only some of the tags). Note: Tags must match the tag in .Params.tags
 
 +++
+
 Esto es un tutorial de **cómo añadir contenido**.
 
 Tiene 2 partes:
