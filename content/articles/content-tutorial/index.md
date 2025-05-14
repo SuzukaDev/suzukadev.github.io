@@ -515,8 +515,6 @@ Ejemplos:
 {{< download_file file="sk-gs.mp3" type="game" >}}
 
 
-<!-- TODO featured -->
-
 
 ## featured_album_big
 
@@ -826,23 +824,3 @@ Inserta un video de youtube:
 
 
 
----
----
----
----
----
----
-
-
-{{< qr text="https://gohugo.io" />}}
-
-
-{{< qr text="https://www.youtube.com/watch?v=E9_AH6DiwT4" />}}
-
-{{< details summary="See the details" >}}
-This is a **bold** word.
-
-{{< box_green >}}
-Tiene muchos otros parámetros para personalizar el efecto (documentado en `text_handwritten.html`)
-{{< /box_green >}}
-{{< /details >}}
