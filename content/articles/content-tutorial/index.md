@@ -24,6 +24,8 @@ show_right_bar = true
 # featured_description = "" # if set, the article will use this description in the featured card. If not, it will use the article's description.
 # featured_tags = [""] # if set, it will only feature the tags in this array (useful to display only some of the tags). Note: Tags must match the tag in .Params.tags
 
+accent_color = "#ff168a"
+
 +++
 
 Esto es un tutorial de **cómo añadir contenido**.
@@ -825,3 +827,4 @@ Inserta un video de youtube:
 
 
 
+{{< text_glitch "frank cuesta estafador" >}}

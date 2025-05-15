@@ -29,6 +29,7 @@ draft: false
 # hover_color: rgba(255, 94, 0, 0.57) # Hover for the bloom color (in dark theme) when hovering a gallery. If not set, gets the most predominant color in the hover image.
 
 # APPEARANCE SETTINGS
+# accent_color = "#ff168a" # customize the color for links, etc in the page
 # theme: light # Forces a theme for the gallery (possible values: dark/light). Defaults to defaultTheme from configuration.
 transparent_bg_for_gifs: true # if true, the background of the .gif's will be transparent
 transparent_bg_for_pngs: true # if true, the background of the .png's will be transparent
