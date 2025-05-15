@@ -1772,6 +1772,7 @@ nav.categories ul li a{
 	#articles-author{
 		display: inline-block;
 		font-style: italic;
+color: inherit;
 		
 		&:hover{
 			color: var(--hover-color);
