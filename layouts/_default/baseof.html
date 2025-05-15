@@ -8,7 +8,7 @@
   {{- if $accent_color -}}
     {{- $style = printf "style='--hover-color:%s;'" $accent_color -}}
   {{- end -}}
-  <body {{$style | safeHTMLAttr -}}>
+  <body {{ partial "utils/get-accent-color-style.html" . -}}>
     {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
     <main>
       {{ if .Site.Params.is_debug}}

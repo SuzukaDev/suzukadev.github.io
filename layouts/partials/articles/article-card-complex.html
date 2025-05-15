@@ -1,6 +1,6 @@
 {{$ANGLE := 20}}
 {{$rand_value := sub (mul math.Rand $ANGLE) (div $ANGLE 2) }}
-<article class="featured-article-big hover-underline-animation">
+<article class="featured-article-big hover-underline-animation" {{ partial "utils/get-accent-color-style.html" . }}>
     <a class="hover-border-bloom" href="{{.RelPermalink}}">
 {{- /*  <a class="featured-article-big hover-underline-animation" href="{{.RelPermalink}}" style="--rand-rotation:{{$rand_value}}deg;">  */ -}}
         <div class="image-container">
