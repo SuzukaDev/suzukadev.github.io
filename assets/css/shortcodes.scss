@@ -8,6 +8,7 @@
 @import "shortcodes/download_file.scss";
 @import "shortcodes/audio.scss";
 @import "shortcodes/images_hover_link.scss";
+@import "shortcodes/details.scss";
 // @import "shortcodes/misc_effects.scss";
 
 span{
@@ -26,7 +27,7 @@ span{
 	justify-content: center;
 	justify-self: center;
 
-	figure, img, p{
+	figure, img, p, details{
 	// figure{
 	// & > *{
 		flex: 1;                /* Let each image grow equally */

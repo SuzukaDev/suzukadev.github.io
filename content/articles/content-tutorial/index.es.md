@@ -27,7 +27,6 @@ show_right_bar = true
 
 +++
 
-
 Esto es un tutorial de **cómo añadir contenido**.
 
 Tiene 2 partes:
@@ -825,5 +824,57 @@ Inserta un video de youtube:
 
 	{{</* youtube "tKc3VcOyY2c" */>}}
 
+
+## details
+
+Inserta un texto dentro de una caja que puedes ocultar/mostrar:
+
+
+
+
+{{< details "Este texto está oculto" false >}}
+Hola!
+
+Este texto está dentro de la caja
+
+{{< /details >}}
+
+	{{</* details "Este texto está oculto" false */>}}
+	Hola!
+
+	Este texto está dentro de la caja
+
+	{{</* /details */>}}
+
+
+{{< details "Este texto está descubierto" true >}}
+Hola!
+
+Este texto está dentro de la caja. Pero puedes hacer que por defecto esté abierto
+
+{{< /details >}}
+
+	{{</* details "Este texto está descubierto" true */>}}
+	Hola!
+
+	Este texto está dentro de la caja. Pero puedes hacer que por defecto esté abierto
+
+	{{</* /details */>}}
+
+{{< details "Puedes cambiar el color" true "rgb(26, 130, 235)" >}}
+Puedes hacer que tenga el color que quieras.
+{{< /details >}}
+
+	{{</* details "Puedes cambiar el color" true "rgb(26, 130, 235)" */>}}
+	Puedes hacer que tenga el color que quieras.
+	{{</* /details */>}}
+
+{{< details "Puedes cambiar el color" true false >}}
+Si pones a false el color, usará el color de acento de la página
+{{< /details >}}
+
+	{{</* details "Puedes cambiar el color" true false */>}}
+	Si pones a false el color, usará el color de acento de la página
+	{{</* /details */>}}
 
 
