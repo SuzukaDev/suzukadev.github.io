@@ -7,6 +7,7 @@ lastmod = '{{ .Date }}'
 # draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
 # tags = [""]
+# main_classes = 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 # # -------- DISPLAY OPTIONS --------
 # accent_color = "#ff168a" # customize the color for links, etc in the page
 # show_breadcrumbs = false

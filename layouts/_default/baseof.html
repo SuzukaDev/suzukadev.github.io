@@ -10,7 +10,7 @@
   {{- end -}}
   <body {{ partial "utils/get-accent-color-style.html" . -}}>
     {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
-    <main>
+    <main {{ with .Params.main_classes -}} class="{{- . -}}" {{- end -}}>
       {{ if .Site.Params.is_debug}}
         {{ partial "debug" . }}
       {{ end }}
