@@ -640,6 +640,32 @@ Permite mostrar una imágen con un caption. Y también permite que al hacer clic
 	{{</* img_caption img="/images/dex.jpeg" caption="Al clickar va a la pág. de about" italic=false alt="Picture of a cute dog" page="about" */>}}
 
 
+## link_box
+
+Link (tanto a una página como a una URL) con un diseño plano **muy personalizable**.
+
+<!-- {{< row >}} -->
+{{< link_box "about" "ABOUT" >}}
+
+{{< link_box page="about" text="ABOUT" color=orange font_size=2em class="pixel-font" radius="0px" >}}
+
+{{< link_box page="about" text="ABOUT" color=green size=2 class="pixel-font" radius="0px" >}}
+
+{{< link_box page="about" text="ABOUT" color=blue class="sans-font" radius="5px" >}}
+
+{{< link_box page="about" text="ABOUT" color="rgb(230, 116, 22)" class="handwritten-font" font_size=2em radius="50%" >}}
+<!-- {{< /row >}} -->
+
+	{{</* link_box "about" "ABOUT" */>}}
+
+	{{</* link_box page="about" text="ABOUT" color=orange font_size=2em class="pixel-font" radius="0px" */>}}
+
+	{{</* link_box page="about" text="ABOUT" color=green size=2 class="pixel-font" radius="0px" */>}}
+
+	{{</* link_box page="about" text="ABOUT" color=blue class="sans-font" radius="5px" */>}}
+
+	{{</* link_box page="about" text="ABOUT" color="rgb(230, 116, 22)" class="handwritten-font" font_size=2em radius="50%" */>}}
+
 ## link_hidden
 
 Añade un link que no se remarque de color (por si quieres que pase desapercibido o que no llame la atención).
