@@ -7,6 +7,7 @@ author: Suzuka Ka
 draft: false
 # categories: ["gamedev", "art"]
 # categories: ["animals", "gamedev"]
+main_classes: 'pixel-font'
 
 ## INFO Menus https://gohugo.io/content-management/menus/
 # menus:
@@ -14,7 +15,6 @@ draft: false
 #         name: Name in the menu
 #         weight: 10
 #     footer:
-
 ## params:
 # GALLERY DISPLAY SETTINGS
 # private: true # If true, this gallery does won't show in lists, RSS, sitemaps, etc. On list pages, use cascade to hide descendants.
