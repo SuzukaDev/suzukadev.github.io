@@ -48,6 +48,15 @@ section.galleries {
 	// background-color: red;
   }
 
+.handwritten-font section.galleries{
+	// Original values
+	// gap:1em;
+	// padding-right: 1.5rem;
+	// padding-left: 1.5rem;
+	padding-right: 1.2rem;
+	padding-left: 1.2rem;
+}
+
 article.articles-content section.galleries a.card h2{
 	font-size: 1.125rem !important;
 }
