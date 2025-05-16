@@ -33,7 +33,7 @@
 			{{/*  With count  */}}
 			{{/*  <a class="hover-accent-color" title='{{$count | T "articlesCount"}}' href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" style="font-size:{{$currentFontSize}}{{$fontUnit}}">{{ $name }} <sup style="font-size:.7{{$fontUnit}}">{{$count}}</sup></a>  */}}
 			{{/*  Without count  */}}
-			<a class="hover-accent-color" title='{{$count | T "articlesCount"}}' href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" style="font-size:{{$currentFontSize}}{{$fontUnit}}">{{ $name }}</a>
+			<a class="hover-accent-color hover-underline" title='{{$count | T "articlesCount"}}' href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" style="font-size:{{$currentFontSize}}{{$fontUnit}}">{{ $name }}</a>
 
         {{ end }}
     </div>
