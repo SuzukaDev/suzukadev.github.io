@@ -411,6 +411,11 @@ $article-card-hover-brightness: 30%;
 
 		transition-duration: .4s;
 	}
+
+	.description{
+		color: var(--text-2-dark);
+		font-size: 1.125rem;
+	}
 }
 
 hgroup.featured-articles-container{
