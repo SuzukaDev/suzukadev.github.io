@@ -1,6 +1,6 @@
 // Get the button:
 let mybutton = document.getElementById("scrollToTopButton");
-const PIXELS_TRESHOLD = 500
+const PIXELS_TRESHOLD = 200
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
