@@ -4,6 +4,11 @@
 	box-shadow: #{$x} #{$y} #{$blur} #{$spread} #{$color} !important;
 }
 
+.sticky{
+	position: sticky !important;
+	top: var(--sticky-top-position, 0px) !important;
+}
+
 .accent-color{
 	color: var(--hover-color);
 }
