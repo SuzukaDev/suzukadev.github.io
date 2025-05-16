@@ -46,3 +46,16 @@ Read more **[about me]({{< relref "about.md" >}})** or [**check my work here**](
 
 {{< album_categories title="3d-art, 2d-art" title="My favourite albums" align="right" >}}
 
+
+
+{{< link_box "about" "SOBRE MÍ" "rgba(54, 250, 54, 0.58)" "pixel-font" 30 "2em" >}} {{< link_box "https://x.com/jeancocoart" "WTF" false "pixel-font" 20  >}}
+
+
+
+<span class="link-box-color" ><a class="" href="www.google.com">holaaa</a></span> <span class="link-box-color" ><a class="" href="www.google.com">holaaa</a></span> 
+
+
+
+{{< link_box "articles" "ARTICLES" false "sans-font" >}} 
+{{< link_box "galleries" "ALBUMS" false "sans-font" >}} 
+<!-- {{< link_box "galleries" "INTERVIEWS" false "sans-font" >}}  -->
