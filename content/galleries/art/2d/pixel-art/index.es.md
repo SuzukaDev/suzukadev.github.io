@@ -1,7 +1,7 @@
 ---
 title: 'Pixel Art'
 # Descripción que se muestra en la página del álbum. Se renderiza como markdown para permitir agregar enlaces y algo de formato.
-description: "**Herramientas:** Pyxel Edit, Aseprite, {{< text_wavy text=\"Krita\" amp=6 freq=.3 time=2 >}} {{< text_shimmer text=\"y\" time=5 >}} [**K-Sprite**, mi propio editor de Pixel Art.](https://orb91.gumroad.com/l/szk-krita-pixel-art-suite)"
+description: "**<u>Herramientas</u>:** Pyxel Edit, Aseprite, {{< text_wavy text=\"Krita\" amp=6 freq=.3 time=2 >}} {{< text_shimmer text=\"y\" time=5 >}} [**K-Sprite**, mi propio editor de Pixel Art.](https://orb91.gumroad.com/l/szk-krita-pixel-art-suite)"
 date: '2025-04-27T20:18:53+02:00' # Usado para ordenar (más reciente primero)
 author: Suzuka Ka
 draft: false
