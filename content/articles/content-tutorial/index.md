@@ -30,8 +30,8 @@ accent_color = "#ff168a"
 
 Esto es un tutorial de **cómo añadir contenido**.
 
-Tiene 2 partes:
-- [**Markdown**](#markdown): Enseña Markdown básico
+Consta de 2 partes:
+- [**Markdown**](#markdown): Enseña Markdown básico.
 - [**Shortcodes**](#shortcodes): Contenido específico hecho para la web.
 
 
@@ -376,6 +376,12 @@ Hugo tiene algunos shortcodes por default (por ejemplo para insertar un post de 
 
 A continuación documentaré todos los que he hecho.
 
+{{< box_green >}}
+Puedes ver los shortcodes que puedes usar en la página en la carpeta `layouts/shortcodes`.
+
+Cada uno está **documentado** de la mejor forma posible al inicio de cada archivo. Aquí se muestran algunos ejemplos <u>**pero no se enseñan todas las opciones que tiene cada uno**</u>. Si alguno te llama la atención y quieres aprender más acerca de sus opciones para **personalizar** lo que hace, **visita su correspondiente archivo `.html`**.
+{{< /box_green >}}
+
 ## album_categories
 
 Permite mostrar todas las categorias de los álbumes/galerias:
@@ -517,6 +523,14 @@ Ejemplos:
 
 {{< download_file file="sk-gs.mp3" type="game" >}}
 
+
+	{{</* download_file file="sk-gs.mp3" text="Icono del krita" type="krita" */>}}
+
+	{{</* download_file file="sk-gs.mp3" text=true type="windows" */>}}
+
+	{{</* download_file file="sk-gs.mp3" type="pdf" */>}}
+
+	{{</* download_file file="sk-gs.mp3" type="game" */>}}
 
 
 ## featured_album_big
@@ -871,11 +885,11 @@ Puedes hacer que tenga el color que quieras.
 	{{</* /details */>}}
 
 {{< details "Puedes cambiar el color" true false >}}
-Si pones a false el color, usará el color de acento de la página
+Si pones a `false` el color, usará el color de acento de la página
 {{< /details >}}
 
 	{{</* details "Puedes cambiar el color" true false */>}}
-	Si pones a false el color, usará el color de acento de la página
+	Si pones a `false` el color, usará el color de acento de la página
 	{{</* /details */>}}
 
 
