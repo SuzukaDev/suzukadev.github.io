@@ -11,7 +11,7 @@ date: '{{ .Date }}' # Used for sorting (newest first)
 author: {{.Site.Params.galleries_author}}
 draft: false
 # categories: ["gamedev", "art"]
-# main_classes = 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
+# main_classes: 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 
 ## INFO Menus https://gohugo.io/content-management/menus/
 # menus:
