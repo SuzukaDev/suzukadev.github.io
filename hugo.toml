@@ -56,7 +56,13 @@ unsafe= true
   # is_debug = true
 
   show_galeries_with_same_article_tag = true # If True, when seeing a certain article tag, it will show at the end the galeries that contains that tag you are browsing
-  show_featured_articles = true # If True, featured articles will display in the index page
+
+  # INDEX DISPLAY OPTIONS
+  # show_categories_in_index = true # If True, the galleries' categories will be displayed in the index page
+  # show_featured_in_index = true # If True, the featured galleries will be displayed in the index page
+  # show_featured_galleries_in_index = true # If True, the featured galleries will be displayed in the index page
+  # show_featured_articles_in_index = true # If True, featured articles will display in the index page
+
   keywords = ['gamedev', 'gamedeveloper', 'engineer', 'multimedia engineer', '2D art', '3D art', 'music production', 'alicante', 'spain']
   socials = ['github', 'twitter', 'youtube','gumroad', 'itchio', 'email']
 
