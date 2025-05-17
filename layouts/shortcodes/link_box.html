@@ -26,6 +26,9 @@ If the URL corresponds to an internal page, it is automatically resolved to its 
 {{- $font_size := or (.Get 5) (.Get "font_size") -}}
 {{- $border_radius := or (.Get 6) (.Get "radius") -}}
 
+
+{{- $text = $text | markdownify -}}
+
 {{- $url := $link -}}
 {{- $_page := .Site.GetPage $url -}}
 {{- if $_page -}}

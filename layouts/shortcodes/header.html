@@ -19,6 +19,8 @@ Use example:
 {{- $text_align := or (.Get 2) (.Get "align") | default "center" -}}
 {{- $css_class := or (.Get 3) (.Get "class") | default "" -}}
 
+{{- $title = $title | markdownify}}
+
 {{- $css_class_attr := "" -}}
 {{- if $css_class -}}
 	{{- $css_class_attr = (printf "class='%s'" $css_class) | safeHTMLAttr -}}
