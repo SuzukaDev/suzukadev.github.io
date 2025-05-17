@@ -218,6 +218,24 @@ o
 4. Item cuatro
 ```
 
+### Checkboxes
+
+- [ ] Tarea 1
+- [ ] Tarea 2
+- [x] Tarea 3 (Con una X, completada)
+	- [ ] Sub-Tarea 1
+	- [ ] Sub-Tarea 2
+	- [x] Sub-Tarea 3 (Con una X, completada)
+```
+- [ ] Tarea 1
+- [ ] Tarea 2
+- [x] Tarea 3 (Con una X, completada)
+	- [ ] Sub-Tarea 1
+	- [ ] Sub-Tarea 2
+	- [x] Sub-Tarea 3 (Con una X, completada)
+```
+
+
 
 ## Bloque de código
 
