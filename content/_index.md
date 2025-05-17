@@ -2,10 +2,10 @@
 description: (DESCRIPTION EN EL content/_index.md)An example site for hugo-theme-gallery. Images from Unsplash.
 #lastmod: 2023-07-05
 title: Suzuka Ka's Portfolio
-resources:
-  - src: martin-martz-wRuhOOaG-Z4-unsplash.jpg
-    params:
-      cover: true # cover of the home page is used for OpenGraph cards, etc.
+# resources:
+#   - src: martin-martz-wRuhOOaG-Z4-unsplash.jpg
+#     params:
+#       cover: true # cover of the home page is used for OpenGraph cards, etc.
 # profile_picture: "/images/yo.jpg"
 # profile_picture: "/images/yo.jpg" # DEPRECATED This is not used
 
@@ -16,9 +16,8 @@ menus:
 # sub-galleries on list pages are sorted by date and weight (descending)
 ---
 
-# WORK IN PROGRESS
+{{< header text="Suzuka Ka" h=1 class="bloom-shadow" >}}
 
-<!-- {{< youtube "5nf24no8dKU" >}} -->
 
 {{< images_hover_link img="/images/yo.jpg" img_hover="/images/yo_color.png" page="about" c0_dark=#A64951FF c1_dark=#EF454EFF c2_dark=#6e3656 c0_light=green c1_light=green c2_light=green t1=2.2s fit=300 >}}
 
@@ -26,6 +25,10 @@ menus:
 
 Read more **[about me]({{< relref "about.md" >}})** or [**check my work here**]({{< relref "/articles/articulo-tres" >}})
 
+<!-- TODO cambiar el link de "check my work here -->
+(❌❌❌TODO❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗: cambiar el link de "check my work here"❗)
+
+❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗
 
 
 > **Learn** from yesterday, **live** for today, **hope** for tomorrow. <cite>Albert Einstein</cite>
@@ -34,28 +37,21 @@ Read more **[about me]({{< relref "about.md" >}})** or [**check my work here**](
 
 
 
-<!-- [Articles]({{< relref "articles/" >}}) -->
-[Articles]({{< relref "articles" >}}) &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;[Albums]({{< relref "galleries" >}}) &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;[Interviews]({{< relref "articles" >}})
-
-[Article tres]({{< relref "articles/articulo-tres">}})
-[Article contenedor]({{< relref "articles/contenedor">}})
-
-(TODO❗: cambiar el link de "check my work here"❗)
-
-[2D]({{< relref "/galleries/art/2d">}})
-
-{{< album_categories title="3d-art, 2d-art" title="My favourite albums" align="right" >}}
+<!-- [Articles]({{< relref "articles" >}}) &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;[Albums]({{< relref "galleries" >}}) &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;[Interviews]({{< relref "articles" >}}) -->
 
 
 
-{{< link_box "about" "SOBRE MÍ" "rgba(54, 250, 54, 0.58)" "pixel-font" 30 "2em" >}} {{< link_box "https://x.com/jeancocoart" "WTF" false "pixel-font" 20  >}}
+
+<!-- [2D]({{< relref "/galleries/art/2d">}}) -->
+
+<!-- {{< album_categories title="3d-art, 2d-art" title="My favourite albums" align="right" >}} -->
+
+{{< featured_album_big album="pixel-art" cover="images/the-resilence-of-memory.png" pos1="50% 100%" pos2="50% 0%" zoom1="100%" zoom2="100%" t1="10s" t2="2.5s" >}}
+
+{{< featured_albums albums="traditional-art, 3d" >}}
 
 
 
-<span class="link-box-color" ><a class="" href="www.google.com">holaaa</a></span> <span class="link-box-color" ><a class="" href="www.google.com">holaaa</a></span> 
-
-
-
-{{< link_box "articles" "ARTICLES" false "sans-font" >}} 
 {{< link_box "galleries" "ALBUMS" false "sans-font" >}} 
+{{< link_box "articles" "ARTICLES" false "sans-font" >}} 
 <!-- {{< link_box "galleries" "INTERVIEWS" false "sans-font" >}}  -->
