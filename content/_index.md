@@ -16,7 +16,7 @@ menus:
 # sub-galleries on list pages are sorted by date and weight (descending)
 ---
 
-{{< header text="Suzuka Ka" h=1 class="bloom-shadow" >}}
+{{< header text="*Suzuka Ka*" h=1 class="bloom-shadow" >}}
 
 
 {{< images_hover_link img="/images/yo.jpg" img_hover="/images/yo_color.png" page="about" c0_dark=#A64951FF c1_dark=#EF454EFF c2_dark=#6e3656 c0_light=green c1_light=green c2_light=green t1=2.2s fit=300 >}}
