@@ -24,7 +24,7 @@ menus:
 
 {{< text_glitch text="Ingeniero multimedia 🧠" time=10 rotation=901 font=1 sync=true intensity=0.1 >}} y <span class="pixel-font">{{< text_shimmer text="desarrollador de videojuegos" time=2.4 delay=.03 scale=1.3 blur=10 y=0 color1=orange color2=red color1-light=#ffde26 color2-light=red >}}</span> {{< text_rotate text="🎮" time=7.2  scale=1.5 >}} {{< text_wavy text="multidisciplinario" time="1.0" freq="0.1" amp="5">}} <br> con {{< text_strong text="gran" font_weight=900 bloom_color=#00f7ff bloom_size=9 >}} pasión por {{< text_handwritten text="el arte la creatividad" scale=.1 rotation=40 font=3 frame_time=.3 time_variation=.10 spacing=.1  fx=1.3 >}} {{< text_handwritten text="🎨" rotation=360 scale=.1 offset=4 font=3 frame_time=.3 time_variation=.10 fx=1.0 >}} 
 
-Lee más [**sobre mí**]({{< relref "about.md" >}}) o [**echa un vistazo a mi trabajo**]({{< relref "/articles/articulo-tres" >}}).
+Lee más [**sobre mí**]({{< relref "about.md" >}}) o [**echa un vistazo a mi trabajo**]({{< relref "/articles/" >}}).
 <!-- TODO cambiar el link de "check my work here -->
 (❌❌❌TODO❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗: cambiar el link de "check my work here"❗)
 
