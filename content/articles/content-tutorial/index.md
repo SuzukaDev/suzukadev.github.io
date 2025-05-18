@@ -263,6 +263,19 @@ Este artículo es para aprender `Markdown`
 Este artículo es para aprender `Markdown` 
 ```
 
+### Código con lenguaje
+
+```python
+def foobar():
+  print("This is a python code snippet")
+  pass
+```
+	```python
+	def foobar():
+	print("This is a python code snippet")
+	pass
+	```
+
 ## Reglas horizontales
 
 Las reglas horizontales se agregan fácilmente con tres o más asteriscos o guiones,
