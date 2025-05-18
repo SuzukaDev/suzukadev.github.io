@@ -2,7 +2,7 @@
 title = 'Second Article joder'
 date = '2025-02-26T21:13:58+01:00'
 description = ""
-draft = true
+draft = false
 private = false
 show_right_bar = true
 show_table_of_contents = true
