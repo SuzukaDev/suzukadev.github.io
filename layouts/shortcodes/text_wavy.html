@@ -17,11 +17,11 @@ Usage:
 {{- $chars := split $text_input "" -}}
 {{- /*  {{- $frequency := (.Get 1) | default .2 | mul -1.0}}  */ -}}
 {{- /*  {{- $rawFrequency := (.Get 1) | default .2 -}}  */ -}}
-{{- $rawFrequency := float ((.Get "freq") | default .1) -}}
+{{- $rawFrequency := float ((or (.Get "freq") (.Get 1)) | default .1) -}}
 {{- $frequency := mul (math.Abs $rawFrequency) -1 -}}
 
 {{- /*  {{- $amp := (.Get "amp") | default 20 -}}  */ -}}
-{{- $amp := float ((.Get "amp") | default 20) -}}
+{{- $amp := float ((or (.Get "amp") (.Get 2)) | default 20) -}}
 {{- $half_amp := div $amp 2.0 -}}
 
 
