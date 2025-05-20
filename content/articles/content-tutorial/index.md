@@ -697,6 +697,31 @@ Link (tanto a una página como a una URL) con un diseño plano **muy personaliza
 
 	{{</* link_box page="about" text="ABOUT" color="rgb(230, 116, 22)" class="handwritten-font" font_size=2em radius="50%" */>}}
 
+
+## link_card
+
+Muestra una tarjeta con un link. Sirve para crear enlaces vistosos que quieras que llamen la atención.
+
+{{< link_card 
+  url="https://google.com"
+  cover="images/dex.jpeg"
+  title="Google"
+  subtitle="Buscador obsoleto que ya nadie usa"
+  url_text="google.com"
+  color="#211E29FF"
+  text_color="#ffffff"
+>}}
+
+	{{</* link_card 
+	url="https://google.com"
+	cover="images/dex.jpeg"
+	title="Google"
+	subtitle="Buscador obsoleto que ya nadie usa"
+	url_text="google.com"
+	color="#211E29FF"
+	text_color="#ffffff"
+	*/>}}
+
 ## link_hidden
 
 Añade un link que no se remarque de color (por si quieres que pase desapercibido o que no llame la atención).
