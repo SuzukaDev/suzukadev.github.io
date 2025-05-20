@@ -40,6 +40,10 @@
 	display: inline-block;
 }
 
+.no-box-shadow{
+	box-shadow: none !important;
+}
+
 .bloom-text{
 	color: white;
 	text-shadow: 0px 0px var(--text-fx-bloom-size, 8px) var(--text-fx-bloom-color, var(--hover-color)),
