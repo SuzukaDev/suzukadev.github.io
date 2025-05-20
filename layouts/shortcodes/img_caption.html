@@ -4,10 +4,10 @@ Shows an image with a caption below. Can link a web if 'url' set
 Arguments:
 img = (string) img path.
 caption = (string) Caption text. Default: ""
-italic = (bool) If true, caption will be in italics. Default: true
 alt = (string) Alternative text when not showing the image (Adding it improves SEO).
 url = (string) Add an url to open when clicking the image. Default: ""
 page = (string) Page to open when clicking the image. Default: ""
+italic = (bool) If true, caption will be in italics. Default: true
 
 Usage:
 {{< image_caption img="dexter.png" caption="My best friend" italic=false alt="Picture of a cute dog" >}}
@@ -15,10 +15,10 @@ Usage:
 
 {{- $img_path := or (.Get "img") (.Get 0) -}}
 {{- $caption := or (.Get "caption") (.Get 1) | default "" -}}
-{{- $italic := or (.Get "italic") (.Get 2) | default true -}}
-{{- $alt_text := or (.Get "alt") (.Get 3) | default "" -}}
-{{- $url := or (.Get "url") (.Get 4) | default "" -}}
-{{- $page_name := or (.Get "page") (.Get 5) | default "" -}}
+{{- $alt_text := or (.Get "alt") (.Get 2) | default "" -}}
+{{- $url := or (.Get "url") (.Get 3) | default "" -}}
+{{- $page_name := or (.Get "page") (.Get 3) | default "" -}}
+{{- $italic := (.Get "italic") | default true -}}
 
 {{- $a_link := $url }}
 {{- if $page_name -}}
@@ -46,7 +46,7 @@ Usage:
 	{{- /*  <img src="{{- $img_url -}}" loading="lazy" {{- partial "utils/img-attributes-from-resource.html" (dict "page" .Page "img_path" $img_path) }} alt="{{$alt_text}}">  */ -}}
 	{{- /*  <{{ $tag }} style="opacity: .6;">{{- $caption -}}</{{ $tag }}>  */ -}}
 	{{- if $caption -}}
-		{{- $html := printf "<%s style='opacity:.6;'>%s</%s>" $tag $caption $tag -}}
+		{{- $html := printf "<figcaption><%s style='opacity:.6;'>%s</%s></figcaption>" $tag ($caption | markdownify) $tag -}}
 		{{- $html | safeHTML -}}
 	{{- end -}}
 	{{- if $a_link -}}</a>{{- end -}}
