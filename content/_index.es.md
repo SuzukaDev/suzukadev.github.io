@@ -38,7 +38,7 @@ Lee más [**sobre mí**]({{< relref "about.md" >}}) o [**echa un vistazo a mi tr
 
 {{< featured_album_big album="pixel-art" cover="images/the-resilence-of-memory.png" pos1="50% 100%" pos2="50% 0%" zoom1="100%" zoom2="100%" t1="10s" t2="2.5s" >}}
 
-{{< featured_albums albums="traditional-art, 3d" >}}
+{{< featured_albums albums="traditional-art, galleries/art/3d" >}}
 
 <!-- [Artículos]({{< relref "articles" >}}) &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;[Álbumes]({{< relref "galleries" >}}) &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;[Interviews]({{< relref "articles" >}}) -->
 
