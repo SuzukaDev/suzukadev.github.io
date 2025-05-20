@@ -332,6 +332,13 @@ Markdown también soporta links con estilo de referencia:
 	
 	<foo@bar.com>
 
+### Links a headers
+
+Puedes [linkar a headers dentro del propio documento](#shortcodes), este otro va a [imágenes](#imágenes)
+
+	Puedes [linkar a headers dentro del propio documento](#shortcodes), este otro va a [imágenes](#imágenes)
+
+
 ## Imágenes
 
 Las imagenes se hacen de la misma forma que los links pero con un símbolo de exclamaciónal frente:
