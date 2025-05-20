@@ -10,6 +10,7 @@ private = false # If true, the article wont be listed and will only be visible b
 # # -------- DISPLAY OPTIONS --------
 # accent_color = "#ff168a" # customize the color for links, etc in the page
 # show_breadcrumbs = false
+# show_description = false
 # show_author = false
 # show_date = false
 # show_reading_time = false
