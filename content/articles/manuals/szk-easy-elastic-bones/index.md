@@ -19,7 +19,7 @@ show_table_of_contents = true
 show_right_bar = true
 # show_next_and_previous_arrows = false # If false (or not set), will hide the left/right arrows next to the articles' title for navigating between articles
 # show_related_articles = false # If false, it wont show the related articles at the bottom. If true (or non set), they will show.
-# article_cover = 'szk-easy-elastic-bones.png' # local path for the image used as the cover. NOTE: Check its extension! (.png set as a template)
+article_cover = 'images/v2_well.webp' # local path for the image used as the cover. NOTE: Check its extension! (.png set as a template)
 # NOTE Since this is a leaf bundle (page in its own folder), placing an image in the same folder with the name 'cover' (no matter its extension) will be used as the cover AUTOMATICALLY. BUT if 'article_cover' is set, it will use that (this is also useful for having different covers for each language, if that is needed).
 # # ------- FEATURE OPTIONS --------
 # featured = true # if true, the article will be featured in the index page.
@@ -61,23 +61,40 @@ url="https://orb91.gumroad.com/l/easy_elastic_bones" >}}
 1. Download the _.zip_ file with the addon and place it wherever you like.
 2. In Blender, go to `Edit → Preferences`. Once there, press the `Add-ons` tab and press `Install` button on the top-right corner:
 
-![Untitled](images/Untitled.png)
+![Untitled](images/installation.png)
 
 3. Select the _.zip_ file.
 4. Once installed, search for “`SZK Easy Elastic Bones`” in the search bar, and enable the addon.
 
 # How to use it ⚙
 
-Having an armature selected in **Edit** or **Pose Mode**, **select the bones** you want to make elastic, go to **bone tab** in **properties panel** and then open the **Bendy Bones menu**.
+1. Having an armature selected in **Edit** or **Pose Mode**, **select the bones** you want to make elastic.
 
-Right there, press the button `'Convert to Elastic Bone'`.
+{{< box_info >}}
+The selected bone(s) have to be '*valid*'. This means that they should be in between two **connected** bones.
+
+{{< details "Example" >}}
+<!-- "Starting" and "ending" bones are not valid for making them elastic (the button is deactivated): -->
+You cannot make the starting and ending bones elastic (notice that the button is deactivated):
+![Untitled](images/valid_bones.gif)
+
+<br>
+
+<!-- For a bone to be able to stretch, it needs a head and a tail bone to determine from where and to where it stretches to. -->
+For a bone to be able to stretch, it needs both a head and a tail bone to define the points from which it stretches and to which it stretches.
+{{< /details >}}
+{{< /box_info >}}
+
+2. Go to **bone tab** in **properties panel** and then open the **Bendy Bones menu**.
+
+3. Right there, press the button `'Convert to Elastic Bone'`.
 
 ![panel.png](images/panel.png)
 
-<aside>
-💡 To remove an elastic bone, simple select one a press `‘Delete Elastic Bone’`
+{{< box_green icon="💡" >}}
+To remove an elastic bone, simply select an elastic bone and press `‘Delete Elastic Bone’`
+{{< /box_green >}}
 
-</aside>
 
 # FAQ ❔
 
@@ -96,5 +113,7 @@ Twitter: {{< get_social "twitter" >}}
 Mail: {{< get_social "email" >}}
 
 <!-- ![deco.webp](images/deco.webp) -->
+
+{{< header "Happy Rigging! 🦴" >}}
 
 {{< img_caption img="images/deco.webp" caption="SZK Easy Elastic Bones" italic=false alt="Illustration of a cute dog bumping" url="https://orb91.gumroad.com/l/easy_elastic_bones" >}}
