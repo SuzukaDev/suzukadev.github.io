@@ -1,7 +1,7 @@
 +++
 title = 'SZK Grease Pencil Groups++'
 date = '2025-05-20T19:01:56+02:00'
-description = ""
+description = "Addon for Blender that makes Grease Pencil better!"
 lastmod = '2025-05-20T19:01:56+02:00'
 # draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
@@ -19,7 +19,7 @@ show_table_of_contents = true
 show_right_bar = true
 # show_next_and_previous_arrows = false # If false (or not set), will hide the left/right arrows next to the articles' title for navigating between articles
 # show_related_articles = false # If false, it wont show the related articles at the bottom. If true (or non set), they will show.
-# article_cover = 'szk-grease-pencil-groups++.png' # local path for the image used as the cover. NOTE: Check its extension! (.png set as a template)
+# article_cover = 'images/cover600x600v2.gif' # local path for the image used as the cover. NOTE: Check its extension! (.png set as a template)
 # NOTE Since this is a leaf bundle (page in its own folder), placing an image in the same folder with the name 'cover' (no matter its extension) will be used as the cover AUTOMATICALLY. BUT if 'article_cover' is set, it will use that (this is also useful for having different covers for each language, if that is needed).
 # # ------- FEATURE OPTIONS --------
 # featured = true # if true, the article will be featured in the index page.
@@ -33,12 +33,6 @@ show_right_bar = true
 > This Blender add-on **`adds groups functionality` ({{< text_wavy "and more things❗ 🎉" 0.05 10 >}}**) to **Blender’s Grease Pencil!**
 
 <!-- ![=anim_webp_12-10-2023_21-19-16,85.webp](images/logo_banner.webp) -->
-
-{{< img_caption img="images/logo_banner.webp" 
-class="no-box-shadow" 
-url="https://orb91.gumroad.com/l/grease-pencil-groups"
-alt="SZK Grease Pencil Groups++ logo" >}}
-
 {{< link_card title="SZK Grease Pencil Groups++" 
 subtitle="Makes Grease Pencil better!" 
 url="https://orb91.gumroad.com/l/grease-pencil-groups" 
@@ -47,6 +41,12 @@ c=#fb9433
 hover_color=#fff8d4
 url_text="www.orb91.gumroad.com" 
 position="50% 80%" >}}
+
+{{< img_caption img="images/logo_banner.webp" 
+class="no-box-shadow" 
+url="https://orb91.gumroad.com/l/grease-pencil-groups"
+alt="SZK Grease Pencil Groups++ logo" >}}
+
 
 
 It’s meant to make working with the Grease Pencil a more pleasant (and organized!) experience and to perform redundant tasks more quickly.
@@ -384,7 +384,7 @@ Hover/place the mouse over the icons to see their function.
 
 Hotkeys for the new functionalities.
 
-### Grease Pencil `Paint mode` 🖌
+## Grease Pencil `Paint mode` 🖌
 
 {{< shortcut "A" >}} - Switch between first and secondary color
 
@@ -402,7 +402,7 @@ The colors are being sampled directly from the letters while painting (No need t
 
 {{< shortcut "M" >}} - (In 3D View) Show “Move panel”
 
-### Grease Pencil `Edit mode` 📐
+## Grease Pencil `Edit mode` 📐
 
 {{< shortcut "M" >}} - (In 3D View) Move selected strokes to another layer
 
