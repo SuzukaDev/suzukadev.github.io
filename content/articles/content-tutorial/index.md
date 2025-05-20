@@ -4,7 +4,7 @@ date = '2025-05-13T20:18:50+02:00'
 description = "Explain how to add the different kind of content"
 lastmod = '2025-05-13T20:18:50+02:00'
 # draft = true # if true (or not set), the page will be excluded in build
-private = false # If true, the article wont be listed and will only be visible by knowing its url
+private = true # If true, the article wont be listed and will only be visible by knowing its url
 # tags = [""]
 main_classes = 'sans-font'
 
