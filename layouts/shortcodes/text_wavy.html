@@ -55,4 +55,6 @@ Usage:
 {{- end -}}
 
 {{- /*  To avoid whitespaces in HTML  */ -}}
-{{- $output | safeHTML -}}
+<span>
+	{{- $output | safeHTML -}}
+</span>
