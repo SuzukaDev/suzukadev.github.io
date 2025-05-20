@@ -5,7 +5,7 @@ description = "¡***Addon*** de **Blender** para hacer **huesos elásticos** con
 lastmod = '2025-05-20T12:42:31+02:00'
 # draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
-tags = ["Blender addon", "Rigging", "Gamedev"]
+tags = ["Blender addon", "Rigging", "Gamedev", "Animación"]
 # main_classes = 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 # # -------- DISPLAY OPTIONS --------
 accent_color = "#EA7600" # customize the color for links, etc in the page
