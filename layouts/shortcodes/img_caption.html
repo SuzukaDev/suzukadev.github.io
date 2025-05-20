@@ -8,9 +8,9 @@ alt = (string) Alternative text when not showing the image (Adding it improves S
 url = (string) Add an url to open when clicking the image. Default: ""
 page = (string) Page to open when clicking the image. Default: ""
 italic = (bool) If true, caption will be in italics. Default: true
-
+class = (string) Class (or classes) for the <img> element. Tip: use the class 'no-box-shadow' if you want the img to NOT have the shadow around it.
 Usage:
-{{< image_caption img="dexter.png" caption="My best friend" italic=false alt="Picture of a cute dog" >}}
+{{< img_caption img="dexter.png" caption="My best friend" italic=false alt="Picture of a cute dog" >}}
 */ -}}
 
 {{- $img_path := or (.Get "img") (.Get 0) -}}
@@ -19,6 +19,7 @@ Usage:
 {{- $url := or (.Get "url") (.Get 3) | default "" -}}
 {{- $page_name := or (.Get "page") (.Get 3) | default "" -}}
 {{- $italic := (.Get "italic") | default true -}}
+{{- $img_class := (.Get "class") -}}
 
 {{- $a_link := $url }}
 {{- if $page_name -}}
@@ -42,7 +43,7 @@ Usage:
 {{- end -}}
 <figure>
 	{{- if $a_link -}}<a class="img-link" target="_blank" rel="noopener noreferrer" href="{{$a_link}}">{{- end -}}
-	<img src="{{- $img_url -}}" loading="lazy" width="{{$image_resource.Width}}" height="{{$image_resource.Height}}" alt="{{$alt_text}}">
+	<img {{- with $img_class }} class="{{.}}"{{- end -}} src="{{- $img_url -}}" loading="lazy" width="{{$image_resource.Width}}" height="{{$image_resource.Height}}" alt="{{$alt_text}}">
 	{{- /*  <img src="{{- $img_url -}}" loading="lazy" {{- partial "utils/img-attributes-from-resource.html" (dict "page" .Page "img_path" $img_path) }} alt="{{$alt_text}}">  */ -}}
 	{{- /*  <{{ $tag }} style="opacity: .6;">{{- $caption -}}</{{ $tag }}>  */ -}}
 	{{- if $caption -}}
