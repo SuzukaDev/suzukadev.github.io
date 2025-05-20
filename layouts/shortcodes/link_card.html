@@ -41,7 +41,7 @@ Usage:
 {{- $cover_link := $cover -}}
 {{- $cover_resource := .Page.Resources.Get $cover -}}
 {{- if $cover_resource -}}
-  {{- $cover_link := $cover_resource.RelPermalink -}}
+  {{- $cover_link = $cover_resource.RelPermalink -}}
   {{- if not $background_color -}}
     {{$background_color = index $cover_resource.Colors 0}}
   {{- end -}}
@@ -69,11 +69,11 @@ Usage:
     <div class="image" style="background-image: url('{{$cover_link}}')">
     </div>
     <div class="details">
-      <h2 class="title">{{$title}}</h2>
-      {{- with $subtitle -}}
+      <h2 class="title">{{$title }}</h2>
+      {{- with $subtitle | markdownify  -}}
         <h3 class="description">{{.}}</h3>
       {{- end -}}
-      <p class="url">{{$url_text}}</p>
+      <p class="url">{{$url_text }}</p>
     </div>
   </a>
 </figure>
