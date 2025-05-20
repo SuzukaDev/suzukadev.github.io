@@ -30,11 +30,25 @@ show_right_bar = true
 +++
 
 
-# Grease Pencil Groups++ 📂 | Suzuka Ka
+> This Blender add-on **`adds groups functionality` ({{< text_wavy "and more things❗ 🎉" 0.05 10 >}}**) to **Blender’s Grease Pencil!**
 
-![=anim_webp_12-10-2023_21-19-16,85.webp](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/anim_webp_12-10-2023_21-19-1685.webp)
+<!-- ![=anim_webp_12-10-2023_21-19-16,85.webp](images/logo_banner.webp) -->
 
-This Blender add-on **`adds groups functionality` (and more things❗ 🎉**) to **Blender’s Grease Pencil!**
+{{< img_caption img="images/logo_banner.webp" 
+class="no-box-shadow" 
+url="https://orb91.gumroad.com/l/grease-pencil-groups"
+alt="SZK Grease Pencil Groups++ logo" >}}
+
+{{< link_card title="SZK Grease Pencil Groups++" 
+subtitle="Makes Grease Pencil better!" 
+url="https://orb91.gumroad.com/l/grease-pencil-groups" 
+cover="images/logo_banner.webp" 
+c=#fb9433 
+hover_color=#fff8d4
+url_text="www.orb91.gumroad.com" 
+position="50% 80%" >}}
+
+
 It’s meant to make working with the Grease Pencil a more pleasant (and organized!) experience and to perform redundant tasks more quickly.
 Moreover, it also provides some new little features that make drawing with Grease Pencil more alike to drawing with other graphic softwares.
 
@@ -47,10 +61,10 @@ If you have an idea or something that you think will be cool to be implemented, 
 1. Download the .zip file with the addon and place it wherever you like.
 2. In Blender, go to `Edit → Preferences`. Once there, press the `Add-ons` tab and press `Install` button on the top-right corner:
 
-![Untitled](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/Untitled.png)
+![Untitled](images/installation.png)
 
-1. Select the .zip file.
-2. Once installed, search for “Grease Pencil Groups” in the search bar, and enable the addon.
+3. Select the .zip file.
+4. Once installed, search for “Grease Pencil Groups” in the search bar, and enable the addon.
 
 # Setup 🛠
 
@@ -58,70 +72,78 @@ The add-on pannel will appear in the `Properties panel`, along with the original
 
 To start using it, simply click the Initialize button to add the current layers in the active Grease Pencil:
 
-![setup 4.gif](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/setup_4.gif)
+![setup 4.gif](/images/setup_4.gif)
 
-<aside>
-💡 Note: adding a layer outside the Layers & Group panel will make the group system to be outdated.
+{{< box_info >}}
+💡 Note: adding a layer **outside** the Layers & Group panel will make the group system to be **outdated**.
 If so, don’t worry, a button will appear to refresh changes.
 
 > I personally suggest that if you preffer to use the add-on panel instead of the old layer panel, just drag it on top (or whereever you like), so you don’t miss it:
-> 
+![drag 3.gif](images/drag_3.gif)
 
-![drag 3.gif](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/drag_3.gif)
 
-> 📢 I could have overriden Blender’s default layer panel, but I personally don’t like to get rid of original UI elements, in case some users would like to still use the native layer panel.
-> 
-</aside>
+{{< box_info "📢" >}}
+I could have overriden Blender’s default layer panel, but I personally don’t like to get rid of original UI elements, in case some users would like to still use the native layer panel.
+
+{{< /box_info >}}
+{{< /box_info >}}
 
 # Interface 🖥️
 
-<aside>
-💡 TIP: Every button is documented and lots of operators have different options when they are pressed with `CTRL`/`ALT`/`SHIFT`. Everything is explained in their tooltip. `Check the tooltip (by hoovering the mouse cursor) to discover new shortcuts and functionality`.
+{{< box_green "💡" >}}
+**TIP**: Every button is documented and lots of operators have different options when they are pressed with {{< shortcut "CTRL" >}}/{{< shortcut "ALT" >}}/{{< shortcut "SHIFT" >}}. Everything is explained in their tooltip. **Check the tooltip** (by hoovering the mouse cursor) **to discover new shortcuts and functionality**.
+{{< /box_green >}}
 
-</aside>
 
-![=anim_webp_10-10-2023_19-13-04,39.webp](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/anim_webp_10-10-2023_19-13-0439.webp)
+![=anim_webp_10-10-2023_19-13-04,39.webp](/images/anim_webp_10-10-2023_19-13-0439.webp)
 
 # Manual ⚙
 
 ## Adding Layers/Groups `+`
 
-Use the `New Layer` and `New Groups` buttons to add new elements.
+Use the {{< shortcut "New Layer" >}} and {{< shortcut "New Groups" >}} buttons to add new elements.
 
 1. **Add Layer ✏:** 
-    1. Hold `SHIFT` to add the new layer **above** the selected element
-    2. Hold`CTRL` when a closed group is selected, to add the new layer into it.
-    3. Hold `ALT` to add the new layer **below** the selected group/layer
+    1. Hold {{< shortcut "SHIFT" >}} to add the new layer **above** the selected element
+    2. Hold {{< shortcut "CTRL" >}} when a **closed group** is **selected**, to add the new layer into it.
+    3. Hold {{< shortcut "ALT" >}} to add the new layer **below** the selected group/layer
 2. **Add Group 📂:**
-    1. Hold `SHIFT` to place the selected element into the new group.
-    2. Hold `CONTROL` while having selected a group to place the new group inside the selected.
-    3. Hold `ALT` to add a group **below** the selected item.
-    4. Hold `SHIFT` and `CONTROL` to add a new group and put all the elements that are below it inside.
+    1. Hold {{< shortcut "SHIFT" >}} to place the **selected element** into the **new group**.
+    2. Hold {{< shortcut "CONTROL" >}} while having selected a group to **place the new group inside the selected**.
+    3. Hold {{< shortcut "ALT" >}} to add a group **below** the selected item.
+    4. Hold {{< shortcut "SHIFT+CONTROL" >}} to add a new group and **put all the elements that are below it inside**.
 
 ### Deleting a Layer/Group ❌
 
-Click the trash icon `🗑` next to the `New Group` button to delete an element.
-
+Click the **trash icon** {{< shortcut "🗑️" >}} next to the {{< shortcut "New Group" >}} button to **delete an element**.
+{{< box_info >}}
 If the selected element is a group, it will only delete the group, but leaves all their children.
+{{< /box_info >}}
 
-You can delete the group and all its content by pressing the delete button while holding `CONTROL`.
+{{< box_green "💡" >}}
 
-![delete.gif](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/delete.gif)
+You can **delete** the **group and all its content** by pressing the delete button while holding {{< shortcut "CONTROL" >}}.
 
-<aside>
-💡 Tip: Press `SHIFT + Click` to clean a Group 🧹:
+![delete.gif](images/delete.gif)
+{{< /box_green >}}
 
-![clean group v2.gif](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/clean_group_v2.gif)
 
-This will delete all hidden layers inside a group.
+{{< box_green "💡" >}}
 
-</aside>
+**Tip**: Press {{< shortcut "SHIFT + Click" >}} to clean a Group 🧹:
+
+![clean group v2.gif](images/clean_group_v2.gif)
+
+This will **delete all hidden layers** inside a group.
+
+{{< /box_green >}}
+
 
 ## Editing layers and groups
 
-Changing a property in a layer will affect only to that layer. Modifying a property in a group, will affect to all its layers and groups contained.
+Changing a property in a layer will affect only to that layer. **Modifying a property in a group, will affect to all its layers and groups contained**.
 
-![Hiding the group will hide all its elements. Also, adding a mask to a group will add that mask to all its children. If you edit masks in a group, all their children will be edited.](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/Masks.gif)
+![Hiding the group will hide all its elements. Also, adding a mask to a group will add that mask to all its children. If you edit masks in a group, all their children will be edited.](/images/Masks.gif)
 
 Hiding the group will hide all its elements. Also, adding a mask to a group will add that mask to all its children. If you edit masks in a group, all their children will be edited.
 
@@ -129,46 +151,51 @@ Hiding the group will hide all its elements. Also, adding a mask to a group will
 
 You can easily move the elements using the arrow buttons:
 
-![move arrows 1.gif](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/move_arrows_1.gif)
+![move arrows 1.gif](/images/move_arrows_1.gif)
 
 If you need to move an element “farther” and don’t want to move it step by step, you can use the `Move To` panel:
 
-![move panel.gif](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/move_panel.gif)
+![move panel.gif](/images/move_panel.gif)
 
 There, simply click an element to put the selected element inside/above/below it (by holding `SHIFT`/`CONTROL` (see the panel for more information)).
 
-<aside>
-💡 You can trigger the Move panel in the 3D View by pressing `M` while being in Paint Mode
+{{< box_info "💡" >}}
 
-</aside>
+You can trigger the Move panel in the 3D View by pressing {{< shortcut "M" >}} while being in Paint Mode
 
-<aside>
-💡 Tip: If you want to move the elements faster and directly from the list view and bypass the move menu, you can press the 👁 button next to the `Move To` panel to show/hide the move buttons/operators:
+{{< /box_info >}}
 
-![=anim_webp_12-10-2023_13-17-45,13.webp](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/anim_webp_12-10-2023_13-17-4513.webp)
 
-By clicking the dots on the left, you will move the active layer/group like in the `Move To` panel. Also, the same hotkeys apply here (see the tooltip for more info):
+{{< box_green "💡" >}}
 
-![move panel uilist.gif](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/move_panel_uilist.gif)
+**Tip**: If you want to move the elements faster and directly from the list view and bypass the move menu, you can press the 👁️ button next to the `Move To` panel to show/hide the move buttons/operators:
 
-</aside>
+![=anim_webp_12-10-2023_13-17-45,13.webp](images/anim_webp_12-10-2023_13-17-4513.webp)
+
+By clicking the **dots** on the left, you will move the active layer/group like in the `Move To` panel. 
+
+Also, **the same moving hotkeys apply here** (see the tooltip for more info):
+
+![move panel uilist.gif](images/move_panel_uilist.gif)
+
+{{< /box_green >}}
 
 ## Merging Groups & Layers ⬇
 
 You can merge layers as usual, but also combine the entire content of a group.
 
-![merge normal.gif](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/merge_normal.gif)
+![merge normal.gif](/images/merge_normal.gif)
 
 You can also copy a group into a single layer:
 
-![copy group to layer.gif](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/copy_group_to_layer.gif)
+![copy group to layer.gif](/images/copy_group_to_layer.gif)
 
 You can find the merge operator (and others) in the drop down menu accesed by this button in the top bar:
 
-![Untitled](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/Untitled%201.png)
+![Untitled](/images/Untitled%201.png)
 
 <aside>
-💡 Tip: You can decide what operators to show in the layer/group and top bar with [“favourite operators” in preferences](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774.md)
+💡 Tip: You can decide what operators to show in the layer/group and top bar with [“favourite operators” in preferences](/images.md)
 
 </aside>
 
@@ -177,13 +204,13 @@ The addon comes with an **improved way to merge layers** when their opacity is l
 > *Blender don’t merge correctly the layers when they have transparency.
 > 
 > 
-> ![With Blender’s normal merge behaviour (the transparency changes)](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/mergebad.webp)
+> ![With Blender’s normal merge behaviour (the transparency changes)](/images/mergebad.webp)
 > 
 > With Blender’s normal merge behaviour (the transparency changes)
 > 
 > 💪With the improved way to merge:
 > 
-> ![The result more faithful to the original state (without merging layers).](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/mergegoodV2.webp)
+> ![The result more faithful to the original state (without merging layers).](/images/mergegoodV2.webp)
 > 
 > The result more faithful to the original state (without merging layers).
 > 
@@ -196,7 +223,7 @@ This will manually sets the (being slower to merge, but offering better results)
 
 You can edit the layer/groups colors by clicking their icon next to the name at the top of the list:
 
-![colors.gif](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/colors.gif)
+![colors.gif](/images/colors.gif)
 
 <aside>
 💡 Tip: When changing the color of a group, you can:
@@ -211,7 +238,7 @@ You can edit the layer/groups colors by clicking their icon next to the name at 
 
 Click the folder icon to open/close a group. 
 
-![better close.gif](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/better_close.gif)
+![better close.gif](/images/better_close.gif)
 
 You can hold `ALT` while clicking to open/collapse all children.
 
@@ -221,11 +248,11 @@ You can open/collapse all groups in the list by pressing a folder icon while hol
 💡 Tip❗ You can press `SHIFT + Left Click` in the group icon to add the element at the bottom directly to the group.
 Press `SHIFT + ALT + Left Click` to ungroup the last element in the group.
 
-![Press `SHIFT + Left Click` to add the element below to a group](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/add_to_group.gif)
+![Press `SHIFT + Left Click` to add the element below to a group](/images/add_to_group.gif)
 
 Press `SHIFT + Left Click` to add the element below to a group
 
-![Press `SHIFT + ALT + Left Click` to ungroup the last element in the group](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/ungroup.gif)
+![Press `SHIFT + ALT + Left Click` to ungroup the last element in the group](/images/ungroup.gif)
 
 Press `SHIFT + ALT + Left Click` to ungroup the last element in the group
 
@@ -248,7 +275,7 @@ You can solo the layers/groups visibility 👁 and lock 🔐 state.
 
 </aside>
 
-You can find them in the menu (next to the move arrows). Or you can add a shortcut to it ([see Favourite Operators in Preferences](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774.md)).
+You can find them in the menu (next to the move arrows). Or you can add a shortcut to it ([see Favourite Operators in Preferences](/images.md)).
 
 Both solo modes `offers different **filter levels**`:
 
@@ -256,9 +283,9 @@ Both solo modes `offers different **filter levels**`:
 2. **Siblings** - Only the selected element and its siblings will be visible.
 3. **Top folder** - All elements in the root folder (in case of existing) will be visible.
 
-![solo ez 3mb.gif](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/solo_ez_3mb.gif)
+![solo ez 3mb.gif](/images/solo_ez_3mb.gif)
 
-It offers 2 possibilities for the visibility solo mode: `Hide layers` & `Opacity fade`. [Read about them here](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774.md).
+It offers 2 possibilities for the visibility solo mode: `Hide layers` & `Opacity fade`. [Read about them here](/images.md).
 
 ## Inherited alpha 🖌
 
@@ -266,7 +293,7 @@ Click the alpha button next to the layer/groups properties to activate it.
 
 When Inherited alpha is enabled, the layer/group content will only be visible in their sibling’s opacity.
 
-![inherit alpha 1.gif](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/inherit_alpha_1.gif)
+![inherit alpha 1.gif](/images/inherit_alpha_1.gif)
 
 In this example, the base color and the shadow were drawn without considering whether they went outside the contour of the ball or not. When activating the alpha, its content is clipped by their siblings’ opactity, fitting perfectly into the ball’s silhouette.
 
@@ -281,11 +308,11 @@ This was a feature that prettends to imitate [Krita’s inherited alpha](https:/
 - `Solo visibility mode` - Select the method used when soloing the layers’ visibility. Offers 2 options:
     1. **Hide layers**: only the layers filtered will be visible, while the others will be completely hidden.
         
-        ![solo hide.gif](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/solo_hide.gif)
+        ![solo hide.gif](/images/solo_hide.gif)
         
     2. **Opactiy fade**: the layers filtered will be visible with its original opacity, while the rest will be faded by the selected opacity percentage in prefferences.
         
-        ![solo opacity skull.gif](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/solo_opacity_skull.gif)
+        ![solo opacity skull.gif](/images/solo_opacity_skull.gif)
         
 - `Duplicate Prefixes/Suffixes` - Set the prefixes (left) and suffixes (right) added when duplicating a group and a layer.
 - `Automatic check for new versions` - If True (recommended), the addon will automatically check if there is a newer version uploaded.
@@ -300,26 +327,26 @@ This was a feature that prettends to imitate [Krita’s inherited alpha](https:/
 
 - `Visibility icons on the left side` - If True, the hide/show icon will be placed on the left (like in other graphic softwares like *Krita* or *Photoshop*).
 
-![=anim_webp_11-10-2023_14-03-50,28.webp](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/anim_webp_11-10-2023_14-03-5028.webp)
+![=anim_webp_11-10-2023_14-03-50,28.webp](/images/anim_webp_11-10-2023_14-03-5028.webp)
 
 - `Show properties in list` - Decide if showing of not extra info in the list.
     1. **Use lights** - Indicates if the layer/group is affected by lights
     2. **Blend Mode** - Shows an icon with the blend mode used when is different than ‘Regular’
     3. **Opacity** - Shows the opacity directly in the list when it is different than 100%.
         
-        ![Untitled](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/Untitled%202.png)
+        ![Untitled](/images/Untitled%202.png)
         
     
     1. **Parent** - Show a bone icon when the layer/group is parented to another object.
     
-    ![=anim_webp_12-10-2023_11-26-14,64.webp](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/anim_webp_12-10-2023_11-26-1464.webp)
+    ![=anim_webp_12-10-2023_11-26-14,64.webp](/images/anim_webp_12-10-2023_11-26-1464.webp)
     
 
 ### Favourite Operators ⭐
 
 You can select your favourite actions in order to show them in the top bar and in the selected layer/group. 
 
-![fav operators 3.png](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/fav_operators_3.png)
+![fav operators 3.png](/images/fav_operators_3.png)
 
 <aside>
 💡 Hover/place the mouse over the icons to see their function.
@@ -340,7 +367,7 @@ Hotkeys for the new functionalities.
 
 `ALT + A` - Pick/sample vertex color under mouse. (No need to manually go to the color each time to activate the color picker❗ 🎉🥳)
 
-![The colors are being sampled directly from the letters while painting (No need to go to the property and press `E` to activate the eyedropper 🥳)](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/ezgif-3-3110dce1cc.gif)
+![The colors are being sampled directly from the letters while painting (No need to go to the property and press `E` to activate the eyedropper 🥳)](/images/ezgif-3-3110dce1cc.gif)
 
 The colors are being sampled directly from the letters while painting (No need to go to the property and press `E` to activate the eyedropper 🥳)
 
@@ -354,7 +381,7 @@ The colors are being sampled directly from the letters while painting (No need t
 
 ---
 
-![OPH.webp](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/OPH.webp)
+![OPH.webp](/images/OPH.webp)
 
 # FAQ❔
 
@@ -368,15 +395,15 @@ The colors are being sampled directly from the letters while painting (No need t
     
     - Also, I like to show my dog, Dex
         
-        ![WhatsApp Image 2023-07-02 at 23.36.05.jpeg](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/WhatsApp_Image_2023-07-02_at_23.36.05.jpeg)
+        ![WhatsApp Image 2023-07-02 at 23.36.05.jpeg](/images/WhatsApp_Image_2023-07-02_at_23.36.05.jpeg)
         
-        ![WhatsApp Image 2023-07-02 at 23.36.00.jpeg](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/WhatsApp_Image_2023-07-02_at_23.36.00.jpeg)
+        ![WhatsApp Image 2023-07-02 at 23.36.00.jpeg](/images/WhatsApp_Image_2023-07-02_at_23.36.00.jpeg)
         
-        ![WhatsApp Image 2023-07-02 at 23.36.01.jpeg](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/WhatsApp_Image_2023-07-02_at_23.36.01.jpeg)
+        ![WhatsApp Image 2023-07-02 at 23.36.01.jpeg](/images/WhatsApp_Image_2023-07-02_at_23.36.01.jpeg)
         
-        ![WhatsApp Image 2023-07-02 at 23.36.04.jpeg](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/WhatsApp_Image_2023-07-02_at_23.36.04.jpeg)
+        ![WhatsApp Image 2023-07-02 at 23.36.04.jpeg](/images/WhatsApp_Image_2023-07-02_at_23.36.04.jpeg)
         
-        ![WhatsApp Image 2023-07-02 at 23.36.08 (1).jpeg](Grease%20Pencil%20Groups++%20%F0%9F%93%82%20Suzuka%20Ka%2030d03fc01dd34a0ca03284d6273aa774/WhatsApp_Image_2023-07-02_at_23.36.08_(1).jpeg)
+        ![WhatsApp Image 2023-07-02 at 23.36.08 (1).jpeg](/images/WhatsApp_Image_2023-07-02_at_23.36.08_(1).jpeg)
         
 
 # Contact ✉
