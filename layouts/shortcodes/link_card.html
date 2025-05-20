@@ -21,15 +21,11 @@
 {{- end -}}
 
 
-{{- /*  <figure class="link-card" style="--image-position: 50% 20%; {{- with $background_color}} --background-color:{{.}}; {{- end -}}">  */ -}}
 <figure class="link-card" {{- with $style_content -}} style="{{. | safeCSS}}" {{- end -}}>
-  {{- /*  <a href="https://orb91.gumroad.com/l/szk-godot-suffixes" target="_blank" rel="noopener noreferrer">  */ -}}
   <a href="{{$url_link}}" target="_blank" rel="noopener noreferrer">
-    {{- /*  <div class="image" style="background-image: url('https://public-files.gumroad.com/iiiblnuvwx18q3wn6lx3rtham8pu')">  */ -}}
     <div class="image" style="background-image: url('{{$cover_link}}')">
     </div>
     <div class="details">
-    <!-- <div class="details" style="background-image: url('https://public-files.gumroad.com/iiiblnuvwx18q3wn6lx3rtham8pu')"> -->
       <h2 class="title">{{$title}}</h2>
       {{- with $subtitle -}}
         <h3 class="description">{{.}}</h3>
