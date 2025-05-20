@@ -94,4 +94,4 @@ If you wish to support the addon you can do it [by **getting it via Gumroad**](h
 
 <!-- [![Alt text](<images/header icons/banner.webp>)](https://orb91.gumroad.com/l/szk-godot-suffixes) -->
 
-{{< img_caption img="images/header icons/banner.webp" caption="SZK Godot Suffixes" italic=false alt="Picture of a cute dog" url="https://orb91.gumroad.com/l/szk-godot-suffixes" >}}
+{{< img_caption img="images/header icons/banner.webp" caption="SZK Godot Suffixes" italic=false alt="SZK Godot Suffixes logo" url="https://orb91.gumroad.com/l/szk-godot-suffixes" >}}
