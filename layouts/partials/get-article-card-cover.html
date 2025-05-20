@@ -20,9 +20,11 @@ it CAN has its own resources, and will look automatically for an image with the 
 	{{/*  {{ $cover_image_path = .Params.article_cover }}  */}}
 
 	{{/*  When an article is not a leaf bundle  */}}
-	{{ $default_lang_path := .Site.Sites.Default.Home.RelPermalink }}
-	{{/*  {{ $cover_image_path = (printf "%s%s/%s" $default_lang_path .Section .Params.article_cover) }}   */}}
-	{{ $cover_image_path = (path.Join $default_lang_path .Section .Params.article_cover) }} 
+	{{- /*  {{ $default_lang_path := .Site.Sites.Default.Home.RelPermalink }}
+	{{ $cover_image_path = (path.Join $default_lang_path .Section .Params.article_cover) }}   */ -}}
+
+	{{- $article_cover_resource := .Resources.Get .Params.article_cover -}}
+	{{- $cover_image_path = $article_cover_resource.RelPermalink -}}
 
 	{{/*  {{ $cover_image_path = (absLangURL .Params.article_cover) }}  */}}
 	{{/*  {{ $cover_image_path = printf (relLangURL  .Params.article_cover) }}  */}}
