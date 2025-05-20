@@ -1713,13 +1713,20 @@ nav.categories ul li a{
 
 
 .dark .article-tag:hover{
-	$color-mix: darken($main_color, 50%);
-	text-shadow: 0px 0px 7px $main_color, 0px 1px 2px $color-mix, 0px -1px 2px $color-mix, 1px 0px 2px $color-mix, 1px 0px 2px $color-mix
-			, 1px 1px 2px $color-mix, 1px -1px 2px $color-mix , -1px 1px 2px $color-mix , -1px -1px 2px $color-mix;
+	// $color-mix: darken($main_color, 50%);
+	// text-shadow: 0px 0px 7px $main_color, 0px 1px 2px $color-mix, 0px -1px 2px $color-mix, 1px 0px 2px $color-mix, 1px 0px 2px $color-mix
+	// 		, 1px 1px 2px $color-mix, 1px -1px 2px $color-mix , -1px 1px 2px $color-mix , -1px -1px 2px $color-mix;
 	
-			-webkit-box-shadow:0px 0px 6px 0px $main_color;
-	-moz-box-shadow: 0px 0px 6px 0px $main_color;
-	box-shadow: 0px 0px 6px 0px $main_color;
+	// text-shadow: 0px 0px 7px var(--hover-color), 0px 1px 2px var(--hover-color), 0px -1px 2px var(--hover-color);
+	// text-shadow: 0px 4px 7px var(--hover-color);
+	text-shadow: 0px 10px 9px var(--hover-color);
+	
+	// -webkit-box-shadow:0px 0px 6px 0px $main_color;
+	// -moz-box-shadow: 0px 0px 6px 0px $main_color;
+	// box-shadow: 0px 0px 6px 0px $main_color;
+	-webkit-box-shadow:0px 0px 6px 0px var(--hover-color);
+	-moz-box-shadow: 0px 0px 6px 0px var(--hover-color);
+	box-shadow: 0px 0px 6px 0px var(--hover-color);
 }
 
 
