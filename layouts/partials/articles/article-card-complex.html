@@ -42,7 +42,7 @@
             <h3 class="light1-color title hover-underline-animation legible-text-shadow text-align-left">{{ $title }}</h3>
             {{ if $description }}
                 {{- /*  <p class="description">{{ .Params.featured_description }}</p>  */ -}}
-                <p class="description" title="{{ $description }}">{{ $description }}</p>
+                <p class="description" title="{{ $description }}">{{ $description | markdownify }}</p>
                 {{- /*  <p class="legible-text-shadow">{{ .Params.featured_description }}</p>  */ -}}
             {{ else }}
                 <p class="description empty-description"> <span class="empty-description">{{ T "read" | upper }}</span></p>
