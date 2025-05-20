@@ -61,7 +61,7 @@ You can find the addon:
 
   Press the icons to toggle each suffix. -->
 
-- Or via right-click in a object in the Outliner → Godot Suffixes:
+- Or via {{< shortcut "right-click" >}} in a object in the Outliner → Godot Suffixes:
 
 ![Untitled](images/right-click-menu.png)
 
