@@ -8,8 +8,9 @@ private = false # If true, the article wont be listed and will only be visible b
 tags = ["Blender Addon", "Godot", "Gamedev", "3D"]
 # main_classes = 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 # # -------- DISPLAY OPTIONS --------
-# accent_color = "#ff168a" # customize the color for links, etc in the page
+accent_color = "#57A2D8FF" # customize the color for links, etc in the page
 # show_breadcrumbs = false
+show_description = false
 # show_author = false
 # show_date = false
 # show_reading_time = false
@@ -28,14 +29,15 @@ show_right_bar = true
 
 +++
 
+> This is a Blender addon for **easily managing Godot’s suffixes when importing scenes from _.blend_ files** into Godot.
 
-![Alt text](<images/header icons/banner.webp>)
+{{< link_card title="SZK Godot Suffixes" subtitle="Blender Addon for managing Godot's 3D import suffixes" url="https://orb91.gumroad.com/l/szk-godot-suffixes" cover="images/logo_cover.gif" c=#383445FF url_text="www.orb91.gumroad.com" position="50% 20%" >}}
 
-# SZK Godot Suffixes ![Godot icon](<images/header icons/godot.png>) | Suzuka Ka ![SZK icon](<images/header icons/dexter.png>)
 
-This is a Blender addon for **easily managing Godot’s suffixes when importing scenes from _.blend_ files** into Godot.
+<!-- # SZK Godot Suffixes ![Godot icon](<images/header icons/godot.png>) | Suzuka Ka ![SZK icon](<images/header icons/dexter.png>) -->
 
-> Basically avoids having to remember all the suffixes (or having to check them in the docs) and avoid (posibly) silly errors when typing them manually .
+
+<!-- > Basically avoids having to remember all the suffixes (or having to check them in the docs) and avoid (posibly) silly errors when typing them manually . -->
 
 # Installation 💻
 
@@ -53,9 +55,11 @@ You can find the addon:
 
 - In the `Properties Panel -> Object tab`
 
-  ![Untitled](images/panel.png)
+{{< img_caption img="images/panel.png" caption="Press the icons to toggle each suffix." >}}
 
-  Press the icons to toggle each suffix.
+  <!-- ![Untitled](images/panel.png)
+
+  Press the icons to toggle each suffix. -->
 
 - Or via right-click in a object in the Outliner → Godot Suffixes:
 
@@ -65,21 +69,29 @@ You can find the addon:
 
 ![Untitled](images/animation-menu.png)
 
-### Addon Settings ⚙
+# Addon Settings ⚙
 
-- `Colored Godot icon` - If disabled, the Godot’s icon will be displayed without colors in the UI.
+- `Colored Godot icon` 
+  - If disabled, the Godot’s icon will be displayed without colors in the UI:
+
   ![color icon.gif](images/color_icon.gif)
 
-# Contact ✉ ![SZK icon](<images/header icons/dexter.png>)
+<!-- # Contact ✉ ![SZK icon](<images/header icons/dexter.png>) -->
+# Contact ✉
 
 Twitter: {{< get_social "twitter" >}}
 
 Mail: {{< get_social "email" >}}
 
-Twitter: [@SuzukaKDev](https://twitter.com/SuzukaKDev)
+<!-- Twitter: [@SuzukaKDev](https://twitter.com/SuzukaKDev)
 
-Mail: [suzukakadev@gmail.com](mailto:suzukakadev@gmail.com)
+Mail: [suzukakadev@gmail.com](mailto:suzukakadev@gmail.com) -->
 
 # Support 🍀
 
 If you wish to support the addon you can do it [by **getting it via Gumroad**](https://orb91.gumroad.com/l/szk-godot-suffixes) (thank you 🍀).
+
+
+<!-- [![Alt text](<images/header icons/banner.webp>)](https://orb91.gumroad.com/l/szk-godot-suffixes) -->
+
+{{< img_caption img="images/header icons/banner.webp" caption="SZK Godot Suffixes" italic=false alt="Picture of a cute dog" url="https://orb91.gumroad.com/l/szk-godot-suffixes" >}}
