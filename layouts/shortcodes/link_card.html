@@ -1,0 +1,104 @@
+<!-- reset scratch variables at the start -->
+
+{{- $url := or (.Get "url") (.Get 0) -}}
+{{- $cover := or (.Get "cover") (.Get 1) -}}
+{{- $title := or (.Get "title") (.Get 2) -}}
+{{- $subtitle := or (.Get "subtitle") (.Get 3) | default "" -}}
+{{- $url_text := or (.Get "url_text") (.Get 4) | default $url -}}
+{{- $background_color := or (.Get "color") (.Get "c") (.Get 5) | default "" -}}
+{{- $background_position := or (.Get "cover_position") (.Get "position") (.Get 6) | default "" -}}
+
+{{- $url_link := $url -}}
+{{- $cover_link := $cover -}}
+
+
+
+{{ $.Scratch.Set "bl_title" false }}
+{{ $.Scratch.Set "bl_subtitle" false }}
+{{ $.Scratch.Set "bl_link" false }}
+{{ $.Scratch.Set "bl_thumbnail" false }}
+
+{{ if .IsNamedParams }}
+  {{ $.Scratch.Set "bl_subtitle" (.Get "subtitle") }}
+  {{ $.Scratch.Set "bl_link" (.Get "link") }}
+  {{ $.Scratch.Set "bl_thumbnail" (.Get "thumbnail") }}
+  {{ $.Scratch.Set "bl_title" (.Get "title") }}
+{{ else }}
+  <!-- for the positional version if any -->
+{{ end }}
+
+<!-- Extract host from the link -->
+{{ with $.Scratch.Get "bl_link" }}    <!-- if link is given -->
+    {{ range last 1 (split ($.Scratch.Get "bl_link" ) "://") }}  <!-- split by :// and then only take the items after it to remove protocol:// -->
+        {{ $.Scratch.Set "link_without_protocol" . }}
+    {{ end }}
+    {{ range last 1 (split ($.Scratch.Get "link_without_protocol" ) "www.")  }} <!-- also remove the www. at the start if any. we are using a second split because all URLS may not start with it -->
+      {{ $.Scratch.Set "link_without_protocol" . }}
+    {{ end }}
+    {{ range first 1 (split ($.Scratch.Get "link_without_protocol" ) "/" ) }}
+      {{ $.Scratch.Set "link_without_protocol" . }}
+    {{ end }}
+{{ end }}
+
+
+<!-- Extract the first sentence -->
+{{ with $.Scratch.Get "bl_subtitle" }}
+    <!-- {{ range first 1 (split ($.Scratch.Get "bl_subtitle" ) ". " ) }} -->
+        <!-- {{ $.Scratch.Set "bl_subtitle" . }} -->
+    <!-- {{ end }} -->
+{{ end }}
+<!-- if description is longer than 75 bytes we should trim it -->
+<!-- {{ if (gt (len ($.Scratch.Get "bl_subtitle") ) 100) }} -->
+<!-- {{ $.Scratch.Set "bl_subtitle" (slicestr ($.Scratch.Get "bl_subtitle") 0 100) }}   get the first 75 characters of subtitle -->
+{{ $.Scratch.Set "bl_subtitle" ( printf "%s..." ($.Scratch.Get "bl_subtitle") ) | printf "%s" }}
+<!-- {{ end }} -->
+
+{{- /*  <p></p>
+
+<article class="postShorten postShorten--thumbnailimg-{{ .Scratch.Get "thumbnailImagePosition" }}" itemscope itemType="http://schema.org/BlogPosting">
+
+  <div class="postShorten-wrap">
+    <div class="blog-card">
+      <div class="meta">
+        <div class="photo" style="background-image: url({{ with $.Scratch.Get "bl_thumbnail" }}{{ . }}{{ end }})"></div>
+      </div>
+      <a href="{{ with $.Scratch.Get "bl_link" }}{{ . }}{{ end }}">
+      <div class="description">
+        <h1>{{ with $.Scratch.Get "bl_title" }}{{ . }}{{ end }}</h1>
+        <p>{{ with $.Scratch.Get "bl_subtitle" }}{{ . }}{{ end }}</p>
+        <h2>{{ with $.Scratch.Get "link_without_protocol" }}{{ . }}{{ end }}</h2>
+      </div>
+      </a>
+    </div>
+  </div>
+
+</article>
+
+<br>  */ -}}
+
+{{- $style_content := "" -}}
+{{- if $background_color -}}
+  {{- $style_content = print $style_content "--background-color:" $background_color ";" -}}
+{{- end -}}
+{{- if $background_position -}}
+  {{- $style_content = print $style_content "--image-position:" $background_position ";" -}}
+{{- end -}}
+
+
+{{- /*  <figure class="link-card" style="--image-position: 50% 20%; {{- with $background_color}} --background-color:{{.}}; {{- end -}}">  */ -}}
+<figure class="link-card" {{- with $style_content -}} style="{{. | safeCSS}}" {{- end -}}>
+  {{- /*  <a href="https://orb91.gumroad.com/l/szk-godot-suffixes" target="_blank" rel="noopener noreferrer">  */ -}}
+  <a href="{{$url_link}}" target="_blank" rel="noopener noreferrer">
+    {{- /*  <div class="image" style="background-image: url('https://public-files.gumroad.com/iiiblnuvwx18q3wn6lx3rtham8pu')">  */ -}}
+    <div class="image" style="background-image: url('{{$cover_link}}')">
+    </div>
+    <div class="details">
+    <!-- <div class="details" style="background-image: url('https://public-files.gumroad.com/iiiblnuvwx18q3wn6lx3rtham8pu')"> -->
+      <h2 class="title">{{$title}}</h2>
+      {{- with $subtitle -}}
+        <h3 class="description">{{.}}</h3>
+      {{- end -}}
+      <p class="url">{{$url_text}}</p>
+    </div>
+  </a>
+</figure>
