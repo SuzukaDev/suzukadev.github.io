@@ -168,7 +168,7 @@ You can trigger the Move panel in the 3D View by pressing {{< shortcut "M" >}} w
 
 {{< box_green "💡" >}}
 
-**Tip**: If you want to move the elements faster and directly from the list view and bypass the move menu, you can press the 👁️ button next to the `Move To` panel to show/hide the move buttons/operators:
+**Tip**: If you want to move the elements faster and directly from the list view and bypass the move menu, you can press the 👁️️ button next to the `Move To` panel to show/hide the move buttons/operators:
 
 ![=anim_webp_12-10-2023_13-17-45,13.webp](images/anim_webp_12-10-2023_13-17-4513.webp)
 
@@ -182,11 +182,11 @@ Also, **the same moving hotkeys apply here** (see the tooltip for more info):
 
 ## Merging Groups & Layers ⬇
 
-You can merge layers as usual, but also combine the entire content of a group.
+**You can** merge layers as usual, but also **combine the entire content of a group**.
 
 ![merge normal.gif](/images/merge_normal.gif)
 
-You can also copy a group into a single layer:
+You can also **copy a group into a single layer**:
 
 ![copy group to layer.gif](/images/copy_group_to_layer.gif)
 
@@ -194,45 +194,53 @@ You can find the merge operator (and others) in the drop down menu accesed by th
 
 ![Untitled](/images/Untitled%201.png)
 
-<aside>
-💡 Tip: You can decide what operators to show in the layer/group and top bar with [“favourite operators” in preferences](/images.md)
+{{< box_green "💡" >}}
+**Tip**: You can decide what operators to show in the layer/group and top bar with [***“favourite operators”*** in preferences](#favourite-operators)
+{{< /box_green >}}
 
-</aside>
 
 The addon comes with an **improved way to merge layers** when their opacity is lower than 1.0*
 
-> *Blender don’t merge correctly the layers when they have transparency.
-> 
-> 
-> ![With Blender’s normal merge behaviour (the transparency changes)](/images/mergebad.webp)
-> 
-> With Blender’s normal merge behaviour (the transparency changes)
-> 
-> 💪With the improved way to merge:
-> 
-> ![The result more faithful to the original state (without merging layers).](/images/mergegoodV2.webp)
-> 
-> The result more faithful to the original state (without merging layers).
-> 
+{{< box_info >}}
 
-To activate this mode, press `SHIFT + RightClick` when executing the operator.
+<strong>*</strong>Blender don’t merge correctly the layers when they have transparency.
+
+
+![With Blender’s normal merge behaviour (the transparency changes)](images/mergebad.webp)
+
+With Blender’s normal merge behaviour (the transparency changes)
+
+<br>
+
+💪With the **improved** way to merge:
+
+![The result more faithful to the original state (without merging layers).](images/mergegoodV2.webp)
+
+The result more **faithful** to the original state (without merging layers).
+{{< /box_info >}}
+
+
+
+
+
+To activate this mode, press {{< shortcut "SHIFT + RightClick" >}} when executing the operator.
 
 This will manually sets the (being slower to merge, but offering better results)
 
 ## Customize Colors 🎨
 
-You can edit the layer/groups colors by clicking their icon next to the name at the top of the list:
+You can **edit the layer/groups colors** by clicking their icon next to the name at the top of the list:
 
 ![colors.gif](/images/colors.gif)
 
-<aside>
-💡 Tip: When changing the color of a group, you can:
--  hold `SHIFT` to change the color of all child groups 📂
--  hold `CTRL` to change the color of all layers ✏
+{{< box_green "💡" >}}
 
--  hold `ALT` to change all children's colors ✏&📂
+**Tip**: When changing the color of a group, you can:
+- hold {{< shortcut "SHIFT" >}} to **change** the color of **all child groups** 📂
+- hold {{< shortcut "CTRL" >}} to **change** the color of **all layers** ✏
+- hold {{< shortcut "ALT" >}} to **change all children's colors** ✏&📂
 
-</aside>
+{{< /box_green >}}
 
 ## Open/close groups 📂
 
@@ -240,44 +248,47 @@ Click the folder icon to open/close a group.
 
 ![better close.gif](/images/better_close.gif)
 
-You can hold `ALT` while clicking to open/collapse all children.
+You can hold {{< shortcut "ALT" >}} while clicking to **open/collapse all children**.
 
-You can open/collapse all groups in the list by pressing a folder icon while holding `ALT + CONTROL`.
+You can open/collapse all groups in the list by pressing a folder icon while holding {{< shortcut "ALT + CONTROL" >}}.
 
-<aside>
-💡 Tip❗ You can press `SHIFT + Left Click` in the group icon to add the element at the bottom directly to the group.
-Press `SHIFT + ALT + Left Click` to ungroup the last element in the group.
 
-![Press `SHIFT + Left Click` to add the element below to a group](/images/add_to_group.gif)
+{{< box_green "💡" >}}
 
-Press `SHIFT + Left Click` to add the element below to a group
+**Tip**: You can press {{< shortcut "SHIFT + Left Click" >}} **in the group icon** to **add the element at the bottom** directly **to the group**.
 
-![Press `SHIFT + ALT + Left Click` to ungroup the last element in the group](/images/ungroup.gif)
+Press {{< shortcut "SHIFT + ALT + Left Click" >}} to ungroup the last element in the group.
 
-Press `SHIFT + ALT + Left Click` to ungroup the last element in the group
+![Press `SHIFT + Left Click` to add the element below to a group](images/add_to_group.gif)
 
-</aside>
+Press {{< shortcut "SHIFT + Left Click" >}} to **add the element below to a group**.
+
+![Press `SHIFT + ALT + Left Click` to ungroup the last element in the group](images/ungroup.gif)
+
+Press {{< shortcut "SHIFT + ALT + Left Click" >}} to **ungroup the last element in the group**.
+
+{{< /box_green >}}
+
 
 ## Solo Modes 🔍
 
-Blender’s solo mode has been improved*❗
+Blender’s solo mode {{< text_wavy "has been" 0.1 4 >}} {{< text_wavy "improved*❗" 0.06 10 >}}
 
-> Originally, after exiting the solo mode all layers became visible (no matter if they were originally hidden).
-> 
 
-With this addon, you don’t loose any change on your drawing since it saves it previous state.
+> Originally, **after exiting the solo mode all layers became visible** (no matter if they were originally hidden), **loosing the previous visibility states**.
 
-You can solo the layers/groups visibility 👁 and lock 🔐 state.
+With this addon, **you don’t loose any change on your drawing since it saves its previous state**.
 
-<aside>
-💡 The lock solo mode is specially -super- useful (❗) when sculpting, editing the strokes, weight painting, moving frames in the dopesheet, etc.
-(I use it a lot!)
+You can solo the layers/groups visibility 👁️ and lock 🔐 state.
 
-</aside>
+{{< box_green >}}
+The lock solo mode is specially *-super-* useful (❗) when sculpting, editing the strokes, weight painting, moving frames in the dopesheet, etc. (I use it a lot!)
+{{< /box_green >}}
 
-You can find them in the menu (next to the move arrows). Or you can add a shortcut to it ([see Favourite Operators in Preferences](/images.md)).
 
-Both solo modes `offers different **filter levels**`:
+You can find them in the menu (next to the move arrows). Or you can add a shortcut to it ([see Favourite Operators in Preferences](#favourite-operators)).
+
+Both solo modes <u>offers different **filter levels**</u>:
 
 1. **Selected** - Only the selected element will be visible. If the selected element is a group, all its descendants will be visible.
 2. **Siblings** - Only the selected element and its siblings will be visible.
@@ -285,45 +296,60 @@ Both solo modes `offers different **filter levels**`:
 
 ![solo ez 3mb.gif](/images/solo_ez_3mb.gif)
 
-It offers 2 possibilities for the visibility solo mode: `Hide layers` & `Opacity fade`. [Read about them here](/images.md).
+It offers 2 possibilities for the visibility **solo mode**: 
+- Hide layers
+- Opacity fade
+
+[Read about them here](#settings-).
 
 ## Inherited alpha 🖌
 
-Click the alpha button next to the layer/groups properties to activate it.
+**Click** the **alpha button** next to the layer/groups properties to activate it.
 
+{{< box_info >}}
 When Inherited alpha is enabled, the layer/group content will only be visible in their sibling’s opacity.
 
-![inherit alpha 1.gif](/images/inherit_alpha_1.gif)
+![inherit alpha 1.gif](images/inherit_alpha_1.gif)
 
 In this example, the base color and the shadow were drawn without considering whether they went outside the contour of the ball or not. When activating the alpha, its content is clipped by their siblings’ opactity, fitting perfectly into the ball’s silhouette.
+{{< /box_info >}}
 
-This was a feature that prettends to imitate [Krita’s inherited alpha](https://docs.krita.org/en/tutorials/clipping_masks_and_alpha_inheritance.html).
+
+
+This was a feature that prettends to imitate [**Krita**’s inherited alpha](https://docs.krita.org/en/tutorials/clipping_masks_and_alpha_inheritance.html).
 
 # Preferences 🛠
 
-### Settings ⚙
+## Settings ⚙
 
-- `Use lighs by default` - If True, (unparented*) new layers and groups will use lights when they are created. *If they are created inside a group, they will inherit the group’s current properties.
+- `Use lighs by default` - If True, (unparented*) **new layers** and groups **will use lights when they are created**. 
+{{< box_warning >}}
+*If they are created inside a group, they will **inherit** the group’s current properties.
+{{< /box_warning >}}
+
 - `Keep Vertex colors when changing brushes` - By default, each brush has its own main and secondary colour, so you lost the colour you had selected when changing to a new brush. Useful when you want to use another brush for its texture but you want to continue painting with the colour you had selected.
-- `Solo visibility mode` - Select the method used when soloing the layers’ visibility. Offers 2 options:
-    1. **Hide layers**: only the layers filtered will be visible, while the others will be completely hidden.
-        
-        ![solo hide.gif](/images/solo_hide.gif)
-        
-    2. **Opactiy fade**: the layers filtered will be visible with its original opacity, while the rest will be faded by the selected opacity percentage in prefferences.
-        
-        ![solo opacity skull.gif](/images/solo_opacity_skull.gif)
-        
+
+- `Solo visibility mode` - Select the method used when soloing the layers’ visibility. 
+    - Offers 2 options:
+        1. **Hide layers**: only the layers filtered will be visible, while the others will be completely hidden.
+            
+            ![solo hide.gif](/images/solo_hide.gif)
+        <br>
+        2. **Opactiy fade**: the layers filtered will be visible with its original opacity, while the rest will be faded by the selected opacity percentage in prefferences.
+            
+            ![solo opacity skull.gif](/images/solo_opacity_skull.gif)
+
+        <br>
+
 - `Duplicate Prefixes/Suffixes` - Set the prefixes (left) and suffixes (right) added when duplicating a group and a layer.
 - `Automatic check for new versions` - If True (recommended), the addon will automatically check if there is a newer version uploaded.
     
-    <aside>
-    💡 This check happens only once when loading Blender
-    
-    </aside>
+{{< box_info >}}
+This check happens only once when loading Blender
+{{< /box_info >}}
     
 
-### Appearance 👁
+### Appearance 👁️
 
 - `Visibility icons on the left side` - If True, the hide/show icon will be placed on the left (like in other graphic softwares like *Krita* or *Photoshop*).
 
@@ -342,16 +368,17 @@ This was a feature that prettends to imitate [Krita’s inherited alpha](https:/
     ![=anim_webp_12-10-2023_11-26-14,64.webp](/images/anim_webp_12-10-2023_11-26-1464.webp)
     
 
-### Favourite Operators ⭐
+<!-- ### Favourite Operators ⭐ -->
+### Favourite Operators
 
 You can select your favourite actions in order to show them in the top bar and in the selected layer/group. 
 
 ![fav operators 3.png](/images/fav_operators_3.png)
 
-<aside>
-💡 Hover/place the mouse over the icons to see their function.
+{{< box_info >}}
+Hover/place the mouse over the icons to see their function.
+{{< /box_info >}}
 
-</aside>
 
 # Hotkeys ⌨
 
@@ -359,25 +386,25 @@ Hotkeys for the new functionalities.
 
 ### Grease Pencil `Paint mode` 🖌
 
-`A` - Switch between first and secondary color
+{{< shortcut "A" >}} - Switch between first and secondary color
 
-`E` - Switch between Draw and Eraser
+{{< shortcut "E" >}} - Switch between Draw and Eraser
 
-`ALT + E` - Switch between Paint and Sculpt mode
+{{< shortcut "ALT + E" >}} - Switch between Paint and Sculpt mode
 
-`ALT + A` - Pick/sample vertex color under mouse. (No need to manually go to the color each time to activate the color picker❗ 🎉🥳)
+{{< shortcut "ALT + A" >}} - Pick/sample vertex color under mouse. (No need to manually go to the color each time to activate the color picker❗ 🎉🥳)
 
 ![The colors are being sampled directly from the letters while painting (No need to go to the property and press `E` to activate the eyedropper 🥳)](/images/ezgif-3-3110dce1cc.gif)
 
-The colors are being sampled directly from the letters while painting (No need to go to the property and press `E` to activate the eyedropper 🥳)
+The colors are being sampled directly from the letters while painting (No need to go to the property and press {{< shortcut "E" >}} to activate the eyedropper 🥳)
 
-`SHIFT + A` - Select previous Brush.
+{{< shortcut "SHIFT + A" >}} - Select previous Brush.
 
-`M` - (In 3D View) Show “Move panel”
+{{< shortcut "M" >}} - (In 3D View) Show “Move panel”
 
 ### Grease Pencil `Edit mode` 📐
 
-`M` - (In 3D View) Move selected strokes to another layer
+{{< shortcut "M" >}} - (In 3D View) Move selected strokes to another layer
 
 ---
 
@@ -385,33 +412,46 @@ The colors are being sampled directly from the letters while painting (No need t
 
 # FAQ❔
 
-- Why do you write a FAQ section if no one has asked you a single question related the add-on?
+- ***Why do you write a FAQ section if no one has asked you a single question related the add-on?***
     
     Thats a very good question. I don’t know. I guess that if I ever got asked about something “frequently” (more than 0 times), I’ll clarify it here in case it’s useful for others 🐢.
     
-- Why did you put icons on the header?
+- ***Why did you put icons on the header?***
     
     I personally like when I can distinguish clearly when some functionality comes from an addon I have installed and is not something native from Blender. Also, since I decided not to override the original Layer panel (in case someone would like to continue using it while having this addon installed), I wanted to make the panel to stand out from the other one. 
     
-    - Also, I like to show my dog, Dex
+    - Also, I like to show my dog, Dex:
         
         ![WhatsApp Image 2023-07-02 at 23.36.05.jpeg](/images/WhatsApp_Image_2023-07-02_at_23.36.05.jpeg)
         
-        ![WhatsApp Image 2023-07-02 at 23.36.00.jpeg](/images/WhatsApp_Image_2023-07-02_at_23.36.00.jpeg)
+        <!-- ![WhatsApp Image 2023-07-02 at 23.36.00.jpeg](/images/WhatsApp_Image_2023-07-02_at_23.36.00.jpeg) -->
         
-        ![WhatsApp Image 2023-07-02 at 23.36.01.jpeg](/images/WhatsApp_Image_2023-07-02_at_23.36.01.jpeg)
+        <!-- ![WhatsApp Image 2023-07-02 at 23.36.01.jpeg](/images/WhatsApp_Image_2023-07-02_at_23.36.01.jpeg) -->
         
-        ![WhatsApp Image 2023-07-02 at 23.36.04.jpeg](/images/WhatsApp_Image_2023-07-02_at_23.36.04.jpeg)
+        <!-- ![WhatsApp Image 2023-07-02 at 23.36.04.jpeg](/images/WhatsApp_Image_2023-07-02_at_23.36.04.jpeg) -->
         
-        ![WhatsApp Image 2023-07-02 at 23.36.08 (1).jpeg](/images/WhatsApp_Image_2023-07-02_at_23.36.08_(1).jpeg)
+        <!-- ![WhatsApp Image 2023-07-02 at 23.36.08 (1).jpeg](/images/WhatsApp_Image_2023-07-02_at_23.36.08_(1).jpeg) -->
         
 
 # Contact ✉
 
-Twitter: [@SuzukaKDev](https://twitter.com/SuzukaKDev)
+<!-- Twitter: [@SuzukaKDev](https://twitter.com/SuzukaKDev)
 
-Mail: [suzukakadev@gmail.com](mailto:suzukakadev@gmail.com)
+Mail: [suzukakadev@gmail.com](mailto:suzukakadev@gmail.com) -->
+
+Twitter: {{< get_social "twitter" >}}
+
+Mail: {{< get_social "email" >}}
 
 ---
 
-Gumroad Page: [Grease Pencil Groups ++](https://orb91.gumroad.com/l/grease-pencil-groups)
+<!-- Gumroad Page: [Grease Pencil Groups ++](https://orb91.gumroad.com/l/grease-pencil-groups) -->
+
+{{< link_card title="SZK Grease Pencil Groups++" 
+subtitle="Makes Grease Pencil better!" 
+url="https://orb91.gumroad.com/l/grease-pencil-groups" 
+cover="images/logo_banner.webp" 
+c=#fb9433 
+hover_color=#fff8d4
+url_text="www.orb91.gumroad.com" 
+position="50% 80%" >}}
