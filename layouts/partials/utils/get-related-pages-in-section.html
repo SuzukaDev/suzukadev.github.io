@@ -6,7 +6,19 @@ Arguments: "." = Page from which it will get the .Section
 {{/*  .Section gets the folder name */}}
 {{ $section := .Section }}
 {{ $related := where (site.RegularPages.Related .) "Section" "eq" $section }}
-{{ $related := where $related "Params.private" "ne" true }}
+{{ $related = where $related "Params.private" "ne" true }}
+
+{{- /*  If exists, append related_pages added manually in the frontmatter  */ -}}
+{{- /*  NOTE: since these pages have been added MANUALLY (with a purppose), I ignore if they are private or not, doesn't matter  */ -}}
+{{- if .Params.related_pages -}}
+	{{- $related_pages_array := slice -}}
+	{{- range .Params.related_pages -}}
+		{{- $_page := $.Site.GetPage . -}}
+		{{- /*  {{- $related = slice $_page | append $related . -}}  */ -}}
+		{{- $related = slice $_page | append $related -}}
+		{{ warnf "%#v" $related_pages_array }}
+	{{- end -}}
+{{- end -}}
 
 {{/*  NOTE after calling this, one may want to filter the first X related pages, like:
 {{ $related = first 3 $related }}

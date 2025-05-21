@@ -5,7 +5,9 @@
 
 {{/*  New:  */}}
 {{/*  Get related pages that are public  */}}
-{{ $related_public_pages := where (site.RegularPages.Related .) "Params.private" "ne" true }}
+{{- /*  {{ $related_public_pages := where (site.RegularPages.Related .) "Params.private" "ne" true }}  */ -}}
+{{ $related_public_pages := partial "utils/get-related-pages-in-section.html" . }}
+
 {{/*  Filter those with the same section  */}}
 {{ $related := where $related_public_pages ".Section" "eq" $.Section | first 3 }}
 
