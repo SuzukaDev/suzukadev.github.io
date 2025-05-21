@@ -56,6 +56,13 @@ Moreover, it also provides some new little features that make drawing with Greas
 If you have an idea or something that you think will be cool to be implemented, I’m open to listen!
 > 
 
+{{< box_info >}}
+<!-- Current version: 1.4.8 (Updated 13 July 2024) (Works for Blender 4.2 and below. Currently being updated to 4.3) -->
+Current version: 1.4.8
+
+Works for Blender 4.2 and below. Currently being updated to Grease Pencil 3.0.
+{{< /box_info >}}
+
 # Installation 💻
 
 1. Download the .zip file with the addon and place it wherever you like.
@@ -83,9 +90,11 @@ If so, don’t worry, a button will appear to refresh changes.
 
 
 {{< box_info "📢" >}}
+
 I could have overriden Blender’s default layer panel, but I personally don’t like to get rid of original UI elements, in case some users would like to still use the native layer panel.
 
 {{< /box_info >}}
+
 {{< /box_info >}}
 
 # Interface 🖥️
@@ -443,7 +452,7 @@ Twitter: {{< get_social "twitter" >}}
 
 Mail: {{< get_social "email" >}}
 
----
+<!-- --- -->
 
 <!-- Gumroad Page: [Grease Pencil Groups ++](https://orb91.gumroad.com/l/grease-pencil-groups) -->
 
