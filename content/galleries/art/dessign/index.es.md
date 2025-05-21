@@ -6,6 +6,7 @@ date: '2025-04-27T21:16:13+02:00' # Usado para ordenar (más reciente primero)
 author: Suzuka Ka
 draft: false
 # categories: ["gamedev", "art"]
+main_classes: 'sans-font'
 
 ## INFORMACIÓN Menús https://gohugo.io/content-management/menus/
 # menus:
