@@ -14,4 +14,4 @@ Inside the tags I can write normal markdown code.
 {{ $DEFAULT_ICON := "ℹ️"}}
 {{ $icon_arg := (or (.Get "icon") (.Get 0)) }}
 
-{{ partial "shortcodes_partials/box_text_wrapper_base" (dict "icon_arg" $icon_arg "default_icon" $DEFAULT_ICON "class" $CLASS "Inner" .Inner ) }}
+{{ partial "shortcodes_partials/box_text_wrapper_base" (dict "icon_arg" $icon_arg "default_icon" $DEFAULT_ICON "class" $CLASS "Inner" .Inner "Page" .Page ) }}

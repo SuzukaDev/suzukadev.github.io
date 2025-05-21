@@ -4,8 +4,10 @@
 	{{- $ICON = "" -}}
 {{- end -}}
 {{- $css_style := .style | default "" -}}
-{{- $text := .Inner -}} 
-{{- $inner_lines := len (split (.Inner | markdownify) "\n") -}} 
+{{- /*  {{- $text := .Inner -}}   */ -}}
+{{- $text := .Page.RenderString .Inner -}} 
+{{- /*  {{- $inner_lines := len (split (.Inner | markdownify) "\n") -}}   */ -}}
+{{- $inner_lines := len (split ($text) "\n") -}} 
 <section class='{{- $CLASS -}}' data-text="{{- $ICON -}}" style="{{- $css_style | safeCSS -}}">
 {{- if eq $inner_lines 1 -}} 
 	<p>{{- $text | markdownify -}}</p>
