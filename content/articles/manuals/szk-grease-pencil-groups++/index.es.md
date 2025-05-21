@@ -48,7 +48,14 @@ Está diseñado para hacer que trabajar con el Grease Pencil sea una experiencia
 Además, también ofrece algunas pequeñas funciones nuevas que hacen que dibujar con el Grease Pencil sea más parecido a dibujar con otros programas gráficos.
 > Hice (¡y **estoy haciendo!**) este addon para mi uso diario para simplificar un poco mi vida, y estoy añadiendo continuamente cada mejora e idea que se me ocurre, ¡así que está asegurada la máxima calidad posible!
 Si tienes una idea o algo que creas que sería genial implementar, ¡estoy abierto a escuchar!
-> 
+
+{{< box_info >}}
+<!-- Current version: 1.4.8 (Updated 13 July 2024) (Works for Blender 4.2 and below. Currently being updated to 4.3) -->
+Versión actual: 1.4.8
+
+Funciona con Blender 4.2 y versiones anteriores. Actualmente está siendo actualizado a Grease Pencil 3.0.
+{{< /box_info >}}
+
 # Instalación 💻
 1. Descarga el archivo .zip con el addon y colócalo donde quieras.
 2. En Blender, ve a `Editar → Preferencias`. Una vez allí, presiona la pestaña `Complementos` y pulsa el botón `Instalar` en la esquina superior derecha:
@@ -85,25 +92,46 @@ Usa los botones {{< shortcut "Nueva Capa" >}} y {{< shortcut "Nuevos Grupos" >}}
     2. Mantén {{< shortcut "CONTROL" >}} mientras tienes seleccionado un grupo para **colocar el nuevo grupo dentro del seleccionado**.
     3. Mantén {{< shortcut "ALT" >}} para añadir un grupo **debajo** del elemento seleccionado.
     4. Mantén {{< shortcut "SHIFT+CONTROL" >}} para añadir un nuevo grupo y **meter dentro todos los elementos que están debajo**.
+
+
 ### Eliminar una Capa/Grupo ❌
+
 Haz clic en el **icono de la papelera** {{< shortcut "🗑️" >}} junto al botón {{< shortcut "Nuevo Grupo" >}} para **eliminar un elemento**.
+
 {{< box_info >}}
 Si el elemento seleccionado es un grupo, solo eliminará el grupo, pero dejará todos sus hijos.
 {{< /box_info >}}
+
 {{< box_green "💡" >}}
+
 Puedes **eliminar** el **grupo y todo su contenido** presionando el botón de eliminar mientras mantienes {{< shortcut "CONTROL" >}}.
+
 ![delete.gif](images/delete.gif)
+
 {{< /box_green >}}
+
 {{< box_green "💡" >}}
+
 **Consejo**: Presiona {{< shortcut "SHIFT + Click" >}} para limpiar un Grupo 🧹:
+
 ![clean group v2.gif](images/clean_group_v2.gif)
+
+
+{{< img_caption img="images/clean_group_v2.gif" >}}
+
 Esto **eliminará todas las capas ocultas** dentro de un grupo.
 {{< /box_green >}}
+
+
 ## Editar capas y grupos
+
 Cambiar una propiedad en una capa afectará solo a esa capa. **Modificar una propiedad en un grupo afectará a todas sus capas y grupos contenidos**.
 ![Ocultar el grupo ocultará todos sus elementos. Además, añadir una máscara a un grupo añadirá esa máscara a todos sus hijos. Si editas máscaras en un grupo, todos sus hijos serán editados.](/images/Masks.gif)
 Ocultar el grupo ocultará todos sus elementos. Además, añadir una máscara a un grupo añadirá esa máscara a todos sus hijos. Si editas máscaras en un grupo, todos sus hijos serán editados.
+
+
 ## Mover elementos ⤴
+
 Puedes mover fácilmente los elementos usando los botones de flecha:
 ![move arrows 1.gif](/images/move_arrows_1.gif)
 Si necesitas mover un elemento “más lejos” y no quieres moverlo paso a paso, puedes usar el panel `Mover a`:
@@ -112,90 +140,161 @@ Allí, simplemente haz clic en un elemento para poner el elemento seleccionado d
 {{< box_info "💡" >}}
 Puedes activar el panel Mover en la Vista 3D presionando {{< shortcut "M" >}} mientras estás en Modo Pintura
 {{< /box_info >}}
+
 {{< box_green "💡" >}}
+
 **Consejo**: Si quieres mover los elementos más rápido y directamente desde la vista de lista y evitar el menú de mover, puedes presionar el botón 👁️️ junto al panel `Mover a` para mostrar/ocultar los botones/operadores de mover:
+
 ![=anim_webp_12-10-2023_13-17-45,13.webp](images/anim_webp_12-10-2023_13-17-4513.webp)
+
 Al hacer clic en los **puntos** a la izquierda, moverás la capa/grupo activo como en el panel `Mover a`.
 Además, **los mismos atajos de mover se aplican aquí** (consulta el tooltip para más info):
+
 ![move panel uilist.gif](images/move_panel_uilist.gif)
 {{< /box_green >}}
+
+
 ## Fusionar Grupos y Capas ⬇
+
 **Puedes** fusionar capas como de costumbre, pero también **combinar todo el contenido de un grupo**.
+
 ![merge normal.gif](/images/merge_normal.gif)
+
 También puedes **copiar un grupo en una sola capa**:
+
 ![copy group to layer.gif](/images/copy_group_to_layer.gif)
+
 Puedes encontrar el operador de fusión (y otros) en el menú desplegable accesible con este botón en la barra superior:
+
 ![Sin título](/images/Untitled%201.png)
+
 {{< box_green "💡" >}}
 **Consejo**: Puedes decidir qué operadores mostrar en la capa/grupo y en la barra superior con [***“operadores favoritos”*** en preferencias](#favourite-operators)
 {{< /box_green >}}
+
 El addon viene con una **forma mejorada de fusionar capas** cuando su opacidad es menor que 1.0*
+
 {{< box_info >}}
+
 <strong>*</strong>Blender no fusiona correctamente las capas cuando tienen transparencia.
+
 ![Con el comportamiento normal de fusión de Blender (la transparencia cambia)](images/mergebad.webp)
+
 Con el comportamiento normal de fusión de Blender (la transparencia cambia)
+
 <br>
+
 💪Con la forma **mejorada** de fusionar:
+
 ![El resultado más fiel al estado original (sin fusionar capas).](images/mergegoodV2.webp)
+
 El resultado es más **fiel** al estado original (sin fusionar capas).
 {{< /box_info >}}
+
 Para activar este modo, presiona {{< shortcut "SHIFT + Click derecho" >}} al ejecutar el operador.
 Esto lo configura manualmente (siendo más lento para fusionar, pero ofreciendo mejores resultados)
+
+
 ## Personalizar colores 🎨
+
 Puedes **editar los colores de las capas/grupos** haciendo clic en su icono junto al nombre en la parte superior de la lista:
+
 ![colors.gif](/images/colors.gif)
+
 {{< box_green "💡" >}}
+
 **Consejo**: Al cambiar el color de un grupo, puedes:
 - mantener {{< shortcut "SHIFT" >}} para **cambiar** el color de **todos los grupos hijos** 📂
 - mantener {{< shortcut "CTRL" >}} para **cambiar** el color de **todas las capas** ✏
 - mantener {{< shortcut "ALT" >}} para **cambiar el color de todos los hijos** ✏&📂
 {{< /box_green >}}
+
+
 ## Abrir/cerrar grupos 📂
+
 Haz clic en el icono de carpeta para abrir/cerrar un grupo.
+
 ![better close.gif](/images/better_close.gif)
+
 Puedes mantener {{< shortcut "ALT" >}} mientras haces clic para **abrir/colapsar todos los hijos**.
+
 Puedes abrir/colapsar todos los grupos en la lista presionando un icono de carpeta mientras mantienes {{< shortcut "ALT + CONTROL" >}}.
+
 {{< box_green "💡" >}}
+
 **Consejo**: Puedes presionar {{< shortcut "SHIFT + Click izquierdo" >}} **en el icono del grupo** para **añadir el elemento de abajo** directamente **al grupo**.
+
 Presiona {{< shortcut "SHIFT + ALT + Click izquierdo" >}} para desagrupar el último elemento en el grupo.
+
 ![Presiona `SHIFT + Click izquierdo` para añadir el elemento de abajo a un grupo](images/add_to_group.gif)
+
 Presiona {{< shortcut "SHIFT + Click izquierdo" >}} para **añadir el elemento de abajo a un grupo**.
+
 ![Presiona `SHIFT + ALT + Click izquierdo` para desagrupar el último elemento en el grupo](images/ungroup.gif)
+
 Presiona {{< shortcut "SHIFT + ALT + Click izquierdo" >}} para **desagrupar el último elemento en el grupo**.
+
 {{< /box_green >}}
+
+
+
 ## Modos Solo 🔍
+
 El modo solo de Blender {{< text_wavy "ha sido" 0.1 4 >}} {{< text_wavy "mejorado*❗" 0.06 10 >}}
+
 > Originalmente, **al salir del modo solo todas las capas se volvían visibles** (sin importar si estaban ocultas originalmente), **perdiendo los estados de visibilidad previos**.
+
 Con este addon, **no pierdes ningún cambio en tu dibujo ya que guarda su estado previo**.
 Puedes poner en solo la visibilidad 👁️ y el estado de bloqueo 🔐 de las capas/grupos.
+
 {{< box_green >}}
 El modo solo de bloqueo es especialmente *-súper-* útil (❗) cuando esculpes, editas los trazos, pintas pesos, mueves fotogramas en la dopesheet, etc. (¡yo lo uso mucho!)
 {{< /box_green >}}
+
 Puedes encontrarlos en el menú (junto a las flechas de mover). O puedes añadir un atajo para ello ([ver Operadores Favoritos en Preferencias](#favourite-operators)).
 Ambos modos solo <u>ofrecen diferentes **niveles de filtro**</u>:
 1. **Seleccionado** - Solo el elemento seleccionado será visible. Si el elemento seleccionado es un grupo, todos sus descendientes serán visibles.
 2. **Hermanos** - Solo el elemento seleccionado y sus hermanos serán visibles.
 3. **Carpeta superior** - Todos los elementos en la carpeta raíz (en caso de existir) serán visibles.
+
 ![solo ez 3mb.gif](/images/solo_ez_3mb.gif)
+
 Ofrece 2 posibilidades para el modo solo de visibilidad:
 - Ocultar capas
 - Desvanecimiento de opacidad
+
 [Lee sobre ellos aquí](#settings-).
+
+
+
 ## Alfa heredado 🖌
+
 **Haz clic** en el **botón alfa** junto a las propiedades de la capa/grupo para activarlo.
+
 {{< box_info >}}
+
 Cuando el alfa heredado está activado, el contenido de la capa/grupo solo será visible dentro de la opacidad de sus hermanos.
+
 ![inherit alpha 1.gif](images/inherit_alpha_1.gif)
+
 En este ejemplo, el color base y la sombra fueron dibujados sin considerar si salían o no del contorno de la bola. Al activar el alfa, su contenido se recorta por la opacidad de sus hermanos, encajando perfectamente en la silueta de la bola.
+
 {{< /box_info >}}
+
 Esta fue una función que pretende imitar el [**alfa heredado de Krita**](https://docs.krita.org/en/tutorials/clipping_masks_and_alpha_inheritance.html).
+
+
 # Preferencias 🛠
+
 ## Ajustes ⚙
+
 - `Usar luces por defecto` - Si es True, (sin padre*) **las nuevas capas** y grupos **usarán luces cuando se creen**. 
 {{< box_warning >}}
 *Si se crean dentro de un grupo, **heredarán** las propiedades actuales del grupo.
 {{< /box_warning >}}
+
 - `Mantener colores de vértice al cambiar pinceles` - Por defecto, cada pincel tiene su color principal y secundario, por lo que pierdes el color seleccionado al cambiar a otro pincel. Útil cuando quieres usar otro pincel por su textura pero quieres seguir pintando con el color que tenías seleccionado.
+
 - `Modo de visibilidad solo` - Selecciona el método usado al poner en solo la visibilidad de las capas.
     - Ofrece 2 opciones:
         1. **Ocultar capas**: solo las capas filtradas serán visibles, mientras las otras estarán completamente ocultas.
@@ -207,27 +306,34 @@ Esta fue una función que pretende imitar el [**alfa heredado de Krita**](https:
             ![solo opacity skull.gif](/images/solo_opacity_skull.gif)
         <br>
 - `Prefijos/Sufijos al duplicar` - Establece los prefijos (izquierda) y sufijos (derecha) añadidos al duplicar un grupo y una capa.
+
 - `Chequeo automático de nuevas versiones` - Si es True (recomendado), el addon comprobará automáticamente si hay una versión más reciente subida.
     
 {{< box_info >}}
 Esta comprobación ocurre solo una vez al cargar Blender
 {{< /box_info >}}
-    
+
+
+
 ### Apariencia 👁️
+
 - `Iconos de visibilidad en el lado izquierdo` - Si es True, el icono de ocultar/mostrar se colocará a la izquierda (como en otros programas gráficos como *Krita* o *Photoshop*).
+
 ![=anim_webp_11-10-2023_14-03-50,28.webp](/images/anim_webp_11-10-2023_14-03-5028.webp)
+
 - `Mostrar propiedades en la lista` - Decide si mostrar o no información extra en la lista.
     1. **Usar luces** - Indica si la capa/grupo está afectada por luces
     2. **Modo de fusión** - Muestra un icono con el modo de fusión usado cuando es diferente a ‘Regular’
     3. **Opacidad** - Muestra la opacidad directamente en la lista cuando es diferente a 100%.
         
         ![Sin título](/images/Untitled%202.png)
-        
     
     1. **Padre** - Muestra un icono de hueso cuando la capa/grupo está parentada a otro objeto.
     
     ![=anim_webp_12-10-2023_11-26-14,64.webp](/images/anim_webp_12-10-2023_11-26-1464.webp)
     
+
+
 <!-- ### Operadores Favoritos ⭐ -->
 ### Operadores Favoritos
 Puedes seleccionar tus acciones favoritas para mostrarlas en la barra superior y en la capa/grupo seleccionado.
@@ -235,22 +341,46 @@ Puedes seleccionar tus acciones favoritas para mostrarlas en la barra superior y
 {{< box_info >}}
 Pasa/coloca el ratón sobre los iconos para ver su función.
 {{< /box_info >}}
+
+
+
 # Atajos ⌨
+
 Atajos para las nuevas funcionalidades.
+
+
+
 ## Grease Pencil `Modo Pintura` 🖌
-{{< shortcut "A" >}} - Cambiar entre color principal y secundario
-{{< shortcut "E" >}} - Cambiar entre Dibujar y Borrador
-{{< shortcut "ALT + E" >}} - Cambiar entre Modo Pintura y Esculpir
-{{< shortcut "ALT + A" >}} - Tomar/muestrear color de vértice bajo el ratón. (¡No necesitas ir manualmente al color cada vez para activar el cuentagotas❗ 🎉🥳)
-![Los colores se están muestreando directamente de las letras mientras pintas (No necesitas ir a la propiedad y presionar `E` para activar el cuentagotas 🥳)](/images/ezgif-3-3110dce1cc.gif)
-Los colores se están muestreando directamente de las letras mientras pintas (No necesitas ir a la propiedad y presionar {{< shortcut "E" >}} para activar el cuentagotas 🥳)
-{{< shortcut "SHIFT + A" >}} - Seleccionar pincel anterior.
-{{< shortcut "M" >}} - (En Vista 3D) Mostrar “Panel Mover”
+
+- {{< shortcut "A" >}} - Cambiar entre color principal y secundario
+- {{< shortcut "E" >}} - Cambiar entre Dibujar y Borrador
+- {{< shortcut "ALT + E" >}} - Cambiar entre Modo Pintura y Esculpir
+- {{< shortcut "ALT + A" >}} - Tomar/muestrear color de vértice bajo el ratón. (¡No necesitas ir manualmente al color cada vez para activar el cuentagotas❗ 🎉🥳)
+<!-- ![Los colores se están muestreando directamente de las letras mientras pintas (No necesitas ir a la propiedad y presionar `E` para activar el cuentagotas 🥳)](/images/ezgif-3-3110dce1cc.gif) -->
+<!-- Los colores se están muestreando directamente de las letras mientras pintas (No necesitas ir a la propiedad y presionar {{< shortcut "E" >}} para activar el cuentagotas 🥳) -->
+
+{{< img_caption img="images/ezgif-3-3110dce1cc.gif" caption="Los colores se están muestreando directamente de las letras mientras pintas (No necesitas ir a la propiedad y presionar `E` para activar el cuentagotas 🥳)" italic=true alt="Gif con una demostración del cuentagotas" >}}
+
+
+- {{< shortcut "SHIFT + A" >}} - Seleccionar pincel anterior.
+- {{< shortcut "M" >}} - (En Vista 3D) Mostrar “Panel Mover”
+
+
+
 ## Grease Pencil `Modo Edición` 📐
+
 {{< shortcut "M" >}} - (En Vista 3D) Mover trazos seleccionados a otra capa
+
+
+
 ---
+
 ![OPH.webp](/images/OPH.webp)
+
+
+
 # Preguntas Frecuentes❔
+
 - ***¿Por qué escribes una sección de Preguntas Frecuentes si nadie te ha hecho una sola pregunta relacionada con el complemento?***
     
     Esa es una muy buena pregunta. No lo sé. Supongo que si alguna vez me preguntan algo “frecuentemente” (más de 0 veces), lo aclararé aquí por si es útil para otros 🐢.
@@ -274,9 +404,13 @@ Los colores se están muestreando directamente de las letras mientras pintas (No
 # Contacto ✉
 <!-- Twitter: [@SuzukaKDev](https://twitter.com/SuzukaKDev)
 Mail: [suzukakadev@gmail.com](mailto:suzukakadev@gmail.com) -->
+
 Twitter: {{< get_social "twitter" >}}
+
 Mail: {{< get_social "email" >}}
----
+
+<!-- --- -->
+
 <!-- Página de Gumroad: [Grease Pencil Groups ++](https://orb91.gumroad.com/l/grease-pencil-groups) -->
 {{< link_card title="SZK Grease Pencil Groups++" 
 subtitle="¡Hace que el Grease Pencil sea mejor!" 
