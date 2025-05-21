@@ -30,10 +30,10 @@ show_right_bar = true
 
 +++
 
-> Este complemento de Blender **`agrega funcionalidad de grupos` ({{< text_wavy "¡y más cosas❗ 🎉" 0.05 10 >}}**) a **¡el Lápiz Graso de Blender!**
+> Este addon de Blender **`agrega funcionalidad de grupos` ({{< text_wavy "¡y más cosas❗ 🎉" 0.05 10 >}}**) a **¡el Grease Pencil de Blender!**
 <!-- ![=anim_webp_12-10-2023_21-19-16,85.webp](images/logo_banner.webp) -->
 {{< link_card title="SZK Grease Pencil Groups++" 
-subtitle="¡Hace que el Lápiz Graso sea mejor!" 
+subtitle="¡Hace que el Grease Pencil sea mejor!" 
 url="https://orb91.gumroad.com/l/grease-pencil-groups" 
 cover="images/logo_banner.webp" 
 c=#fb9433 
@@ -44,25 +44,25 @@ position="50% 80%" >}}
 class="no-box-shadow" 
 url="https://orb91.gumroad.com/l/grease-pencil-groups"
 alt="Logo de SZK Grease Pencil Groups++" >}}
-Está diseñado para hacer que trabajar con el Lápiz Graso sea una experiencia más agradable (¡y organizada!) y para realizar tareas redundantes más rápidamente.
-Además, también ofrece algunas pequeñas funciones nuevas que hacen que dibujar con el Lápiz Graso sea más parecido a dibujar con otros programas gráficos.
-> Hice (¡y **estoy haciendo!**) este complemento para mi uso diario para simplificar un poco mi vida, y estoy añadiendo continuamente cada mejora e idea que se me ocurre, ¡así que está asegurada la máxima calidad posible!
+Está diseñado para hacer que trabajar con el Grease Pencil sea una experiencia más agradable (¡y organizada!) y para realizar tareas redundantes más rápidamente.
+Además, también ofrece algunas pequeñas funciones nuevas que hacen que dibujar con el Grease Pencil sea más parecido a dibujar con otros programas gráficos.
+> Hice (¡y **estoy haciendo!**) este addon para mi uso diario para simplificar un poco mi vida, y estoy añadiendo continuamente cada mejora e idea que se me ocurre, ¡así que está asegurada la máxima calidad posible!
 Si tienes una idea o algo que creas que sería genial implementar, ¡estoy abierto a escuchar!
 > 
 # Instalación 💻
-1. Descarga el archivo .zip con el complemento y colócalo donde quieras.
+1. Descarga el archivo .zip con el addon y colócalo donde quieras.
 2. En Blender, ve a `Editar → Preferencias`. Una vez allí, presiona la pestaña `Complementos` y pulsa el botón `Instalar` en la esquina superior derecha:
 ![Sin título](images/installation.png)
 3. Selecciona el archivo .zip.
-4. Una vez instalado, busca “Grease Pencil Groups” en la barra de búsqueda y activa el complemento.
+4. Una vez instalado, busca “Grease Pencil Groups” en la barra de búsqueda y activa el addon.
 # Configuración 🛠
-El panel del complemento aparecerá en el `Panel de propiedades`, junto con el panel original de capas.
-Para empezar a usarlo, simplemente haz clic en el botón Inicializar para añadir las capas actuales en el Lápiz Graso activo:
+El panel del addon aparecerá en el `Panel de propiedades`, junto con el panel original de capas.
+Para empezar a usarlo, simplemente haz clic en el botón Inicializar para añadir las capas actuales en el Grease Pencil activo:
 ![setup 4.gif](/images/setup_4.gif)
 {{< box_info >}}
 💡 Nota: añadir una capa **fuera** del panel de Capas y Grupos hará que el sistema de grupos quede **desactualizado**.
 Si es así, no te preocupes, aparecerá un botón para refrescar los cambios.
-> Personalmente sugiero que si prefieres usar el panel del complemento en lugar del panel antiguo de capas, simplemente arrástralo hacia arriba (o donde quieras), para que no lo pierdas de vista:
+> Personalmente sugiero que si prefieres usar el panel del addon en lugar del panel antiguo de capas, simplemente arrástralo hacia arriba (o donde quieras), para que no lo pierdas de vista:
 ![drag 3.gif](images/drag_3.gif)
 {{< box_info "📢" >}}
 Podría haber sobrescrito el panel de capas predeterminado de Blender, pero personalmente no me gusta eliminar elementos originales de la interfaz, por si algunos usuarios quieren seguir usando el panel nativo de capas.
@@ -129,7 +129,7 @@ Puedes encontrar el operador de fusión (y otros) en el menú desplegable accesi
 {{< box_green "💡" >}}
 **Consejo**: Puedes decidir qué operadores mostrar en la capa/grupo y en la barra superior con [***“operadores favoritos”*** en preferencias](#favourite-operators)
 {{< /box_green >}}
-El complemento viene con una **forma mejorada de fusionar capas** cuando su opacidad es menor que 1.0*
+El addon viene con una **forma mejorada de fusionar capas** cuando su opacidad es menor que 1.0*
 {{< box_info >}}
 <strong>*</strong>Blender no fusiona correctamente las capas cuando tienen transparencia.
 ![Con el comportamiento normal de fusión de Blender (la transparencia cambia)](images/mergebad.webp)
@@ -166,7 +166,7 @@ Presiona {{< shortcut "SHIFT + ALT + Click izquierdo" >}} para **desagrupar el �
 ## Modos Solo 🔍
 El modo solo de Blender {{< text_wavy "ha sido" 0.1 4 >}} {{< text_wavy "mejorado*❗" 0.06 10 >}}
 > Originalmente, **al salir del modo solo todas las capas se volvían visibles** (sin importar si estaban ocultas originalmente), **perdiendo los estados de visibilidad previos**.
-Con este complemento, **no pierdes ningún cambio en tu dibujo ya que guarda su estado previo**.
+Con este addon, **no pierdes ningún cambio en tu dibujo ya que guarda su estado previo**.
 Puedes poner en solo la visibilidad 👁️ y el estado de bloqueo 🔐 de las capas/grupos.
 {{< box_green >}}
 El modo solo de bloqueo es especialmente *-súper-* útil (❗) cuando esculpes, editas los trazos, pintas pesos, mueves fotogramas en la dopesheet, etc. (¡yo lo uso mucho!)
@@ -191,7 +191,7 @@ En este ejemplo, el color base y la sombra fueron dibujados sin considerar si sa
 Esta fue una función que pretende imitar el [**alfa heredado de Krita**](https://docs.krita.org/en/tutorials/clipping_masks_and_alpha_inheritance.html).
 # Preferencias 🛠
 ## Ajustes ⚙
-- `Usar luces por defecto` - Si es True, (sin padre*) **las nuevas capas** y grupos **usarán luces cuando se creen**.
+- `Usar luces por defecto` - Si es True, (sin padre*) **las nuevas capas** y grupos **usarán luces cuando se creen**. 
 {{< box_warning >}}
 *Si se crean dentro de un grupo, **heredarán** las propiedades actuales del grupo.
 {{< /box_warning >}}
@@ -207,7 +207,7 @@ Esta fue una función que pretende imitar el [**alfa heredado de Krita**](https:
             ![solo opacity skull.gif](/images/solo_opacity_skull.gif)
         <br>
 - `Prefijos/Sufijos al duplicar` - Establece los prefijos (izquierda) y sufijos (derecha) añadidos al duplicar un grupo y una capa.
-- `Chequeo automático de nuevas versiones` - Si es True (recomendado), el complemento comprobará automáticamente si hay una versión más reciente subida.
+- `Chequeo automático de nuevas versiones` - Si es True (recomendado), el addon comprobará automáticamente si hay una versión más reciente subida.
     
 {{< box_info >}}
 Esta comprobación ocurre solo una vez al cargar Blender
@@ -237,7 +237,7 @@ Pasa/coloca el ratón sobre los iconos para ver su función.
 {{< /box_info >}}
 # Atajos ⌨
 Atajos para las nuevas funcionalidades.
-## Lápiz Graso `Modo Pintura` 🖌
+## Grease Pencil `Modo Pintura` 🖌
 {{< shortcut "A" >}} - Cambiar entre color principal y secundario
 {{< shortcut "E" >}} - Cambiar entre Dibujar y Borrador
 {{< shortcut "ALT + E" >}} - Cambiar entre Modo Pintura y Esculpir
@@ -246,7 +246,7 @@ Atajos para las nuevas funcionalidades.
 Los colores se están muestreando directamente de las letras mientras pintas (No necesitas ir a la propiedad y presionar {{< shortcut "E" >}} para activar el cuentagotas 🥳)
 {{< shortcut "SHIFT + A" >}} - Seleccionar pincel anterior.
 {{< shortcut "M" >}} - (En Vista 3D) Mostrar “Panel Mover”
-## Lápiz Graso `Modo Edición` 📐
+## Grease Pencil `Modo Edición` 📐
 {{< shortcut "M" >}} - (En Vista 3D) Mover trazos seleccionados a otra capa
 ---
 ![OPH.webp](/images/OPH.webp)
@@ -279,10 +279,10 @@ Mail: {{< get_social "email" >}}
 ---
 <!-- Página de Gumroad: [Grease Pencil Groups ++](https://orb91.gumroad.com/l/grease-pencil-groups) -->
 {{< link_card title="SZK Grease Pencil Groups++" 
-subtitle="¡Hace que el Lápiz Graso sea mejor!" 
+subtitle="¡Hace que el Grease Pencil sea mejor!" 
 url="https://orb91.gumroad.com/l/grease-pencil-groups" 
 cover="images/logo_banner.webp" 
 c=#fb9433 
 hover_color=#fff8d4
 url_text="www.orb91.gumroad.com" 
-position="50% 80%" >}} 
+position="50% 80%" >}}
