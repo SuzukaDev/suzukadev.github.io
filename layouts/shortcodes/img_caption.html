@@ -43,7 +43,7 @@ Usage:
 {{- end -}}
 <figure>
 	{{- if $a_link -}}<a class="img-link" target="_blank" rel="noopener noreferrer" href="{{$a_link}}">{{- end -}}
-	<img {{- with $img_class }} class="{{.}}"{{- end -}} src="{{- $img_url -}}" loading="lazy" width="{{$image_resource.Width}}" height="{{$image_resource.Height}}" alt="{{$alt_text}}">
+	<img {{ with $img_class }} class="{{.}}"{{- end -}} src="{{- $img_url -}}" loading="lazy" width="{{$image_resource.Width}}" height="{{$image_resource.Height}}" alt="{{$alt_text}}">
 	{{- /*  <img src="{{- $img_url -}}" loading="lazy" {{- partial "utils/img-attributes-from-resource.html" (dict "page" .Page "img_path" $img_path) }} alt="{{$alt_text}}">  */ -}}
 	{{- /*  <{{ $tag }} style="opacity: .6;">{{- $caption -}}</{{ $tag }}>  */ -}}
 	{{- if $caption -}}
