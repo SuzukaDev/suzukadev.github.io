@@ -33,6 +33,14 @@ article_cover = 'images/ezgif-4-d56598319b.gif' # local path for the image used 
 
 > This Blender Addon sends the `print()` output to the Blender's built-in Python console.
 
+{{< link_card title="Print Blender Console" 
+subtitle="Blender Addon making addon development a bit easier" 
+url="https://orb91.gumroad.com/l/szk_console_print" 
+cover="images/ezgif-4-d56598319b.gif" 
+c=#316b9a 
+url_text="www.orb91.gumroad.com" 
+position="50% 80%" >}}
+
 The `print()` function will keep sending the output to the system console, but in addition, it will also show it in the Python console **for a faster and easier scripting/development** 🐧.
 
 <!-- <figure><img src="https://public-files.gumroad.com/4j14rfreveqes67fx2l3rqzco5l4"><p class="figcaption"></p></figure> -->
@@ -63,3 +71,11 @@ Mail: [suzukakadev@gmail.com](mailto:suzukakadev@gmail.com) -->
 Twitter: {{< get_social "twitter" >}}
 
 Mail: {{< get_social "email" >}}
+
+{{< link_card title="Print Blender Console" 
+subtitle="Blender Addon making addon development a bit easier" 
+url="https://orb91.gumroad.com/l/szk_console_print" 
+cover="images/ezgif-4-d56598319b.gif" 
+c=#316b9a 
+url_text="www.orb91.gumroad.com" 
+position="50% 80%" >}}
