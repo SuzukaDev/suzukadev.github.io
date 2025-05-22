@@ -18,7 +18,6 @@
   {{ $related = where .Site.RegularPages ".Section" $.Section}}
   {{ $related = where $related "Params.private" "ne" true }}
   {{ $related = first 3 $related}}
-
 {{ end}}
 
 {{ with $related }}
