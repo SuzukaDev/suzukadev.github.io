@@ -11,8 +11,10 @@ menu:
 Óscar R.B.,
 Alicante (España 🇪🇸)
 
-## Contacto 
+## Contacto 👋
 
-Email 📨: {{<get_social "email" >}}
+Puedes contactar conmigo mediante:
+
+Email: {{<get_social "email" >}}
 
 Twitter: {{<get_social "TWITTER" >}}
