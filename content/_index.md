@@ -12,7 +12,7 @@ title: Suzuka Ka's Portfolio
 menus:
   main:
     name: Home
-    weight: -1
+    weight: -100
 # sub-galleries on list pages are sorted by date and weight (descending)
 ---
 

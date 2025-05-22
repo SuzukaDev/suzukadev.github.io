@@ -46,4 +46,9 @@ print_debug_resource_weight: true # Si es verdadero, muestra un campo 'weight' e
 #       cover: true
 #       date: 2024-02-18T13:04:30+0100
 #       weight: 20
+
+menus:
+  main:
+    name: Galerías 🖼️
+    weight: -20
 ---

@@ -26,6 +26,10 @@ show_right_bar = true
 # featured_description = "" # if set, the article will use this description in the featured card. If not, it will use the article's description.
 # featured_tags = [""] # if set, it will only feature the tags in this array (useful to display only some of the tags). Note: Tags must match the tag in .Params.tags
 
+[menu.main]
+	weight = 10
+	name = "Manuales 📚"
+
 +++
 
 
