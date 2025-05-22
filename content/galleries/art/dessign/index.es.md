@@ -5,7 +5,7 @@ description: Diseño de iconos, _motion graphics_, _banners_, _covers_, etc.
 date: '2025-04-27T21:16:13+02:00' # Usado para ordenar (más reciente primero)
 author: Suzuka Ka
 draft: false
-# categories: ["gamedev", "art"]
+categories: ["arte", "diseño"]
 main_classes: 'sans-font'
 
 ## INFORMACIÓN Menús https://gohugo.io/content-management/menus/

@@ -7,7 +7,7 @@ description: Drawings made without {{< shortcut "CTRL+Z" >}}
 date: '2025-04-27T21:18:02+02:00' # Used for sorting (newest first)
 author: Suzuka Ka
 draft: false
-# categories: ["gamedev", "art"]
+categories: ["art", "traditional"]
 main_classes: 'handwritten-font'
 
 ## INFO Menus https://gohugo.io/content-management/menus/

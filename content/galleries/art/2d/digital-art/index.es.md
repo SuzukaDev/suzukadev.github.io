@@ -5,7 +5,7 @@ description:
 date: '2025-04-27T21:17:16+02:00' # Usado para ordenar (más reciente primero)
 author: Suzuka Ka
 draft: false
-# categories: ["gamedev", "art"]
+categories: ["arte", "digital"]
 
 ## INFORMACIÓN Menús https://gohugo.io/content-management/menus/
 # menus:
