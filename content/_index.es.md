@@ -11,8 +11,8 @@ resources:
 
 menus:
   main:
-    name: Home
-    weight: -1
+    name: Inicio
+    weight: -100
 # sub-galleries on list pages are sorted by date and weight (descending)
 # TODO cambiar links del indice (español)
 ---
