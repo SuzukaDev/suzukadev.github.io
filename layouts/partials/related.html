@@ -11,10 +11,10 @@
 {{/*  Filter those with the same section  */}}
 {{ $related := where $related_public_pages ".Section" "eq" $.Section | first 3 }}
 
+{{/* 1 - Get the pages that are the same section as the global context ($.) */}}
+{{/* 2 - Filter the ones that are private */}}
+{{/* 3 - Get only the first 3 */}}
 {{ if eq (len $related) 0 }}
-  {{/* 1 - Get the pages that are the same section as the global context ($.) */}}
-  {{/* 2 - Filter the ones that are private */}}
-  {{/* 3 - Get only the first 3 */}}
   {{ $related = where .Site.RegularPages ".Section" $.Section}}
   {{ $related = where $related "Params.private" "ne" true }}
   {{ $related = first 3 $related}}
