@@ -26,7 +26,9 @@ article_cover = 'images/v2_well.webp' # local path for the image used as the cov
 # featured_title = 'Szk Easy Elastic Bones' # if set, it will use this as the title in the featured card. If not, it will use the article's title.
 # featured_description = "" # if set, the article will use this description in the featured card. If not, it will use the article's description.
 # featured_tags = [""] # if set, it will only feature the tags in this array (useful to display only some of the tags). Note: Tags must match the tag in .Params.tags
-
+# related_pages = ["articles/manuals/szk-print-to-blender-console"]
+# related_pages = ["szk-print-to-blender-console", "traditional-art","szk-godot-suffixes"]
+# related_pages = ["szk-easy-elastic-bones", "traditional-art","traditional-art","szk-godot-suffixes"]
 +++
 
 
