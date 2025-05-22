@@ -1716,6 +1716,7 @@ nav.categories ul li a{
 
 		transition-duration: 40ms;
 		transition-property: border, box-shadow, -webkit-box-shadow, -moz-box-shadow, color;
+		color: var(--hover-color) !important;
 	}
 
 	sup{
@@ -1732,7 +1733,9 @@ nav.categories ul li a{
 	
 	// text-shadow: 0px 0px 7px var(--hover-color), 0px 1px 2px var(--hover-color), 0px -1px 2px var(--hover-color);
 	// text-shadow: 0px 4px 7px var(--hover-color);
-	text-shadow: 0px 10px 9px var(--hover-color);
+	text-shadow: 0px 4px 20px var(--hover-color);
+	color: var(--hover-color) !important;
+	// text-shadow: 0px 10px 9px var(--hover-color);
 	
 	// -webkit-box-shadow:0px 0px 6px 0px $main_color;
 	// -moz-box-shadow: 0px 0px 6px 0px $main_color;

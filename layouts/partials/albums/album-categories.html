@@ -9,7 +9,7 @@
       {{ end }}  */ -}}
 
         {{ range . }}
-          <li><a href='{{ "/categories/" | relLangURL }}{{ . | urlize }}'>{{ . | title}}</a></li>
+          <li><a class="category-tag" href='{{ "/categories/" | relLangURL }}{{ . | urlize }}'>{{ . | title}}</a></li>
         {{ end }}
       
     </ul>
