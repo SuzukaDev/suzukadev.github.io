@@ -1182,9 +1182,22 @@ color: white;
 	}
 }
 
-// #menu{
-// 	position: inherit;
-// }
+#menu{
+	// position: inherit;
+	// background-color: pink;
+	// max-width: 100%;
+	width: 100%;
+	max-width: none;
+	// box-shadow: rgba(0, 0, 0, 0.15) -1px 30px 15px;
+	// box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	hr{
+		margin: 1em;
+		// color: var(--hover-color);
+		// background: linear-gradient(90deg,transparent 0%,
+		// 		var(--hover-color) 20%,var(--hover-color) 50%,
+		// 		var(--hover-color) 80%,transparent 100%);
+	}
+}
 /* linkone */
 .link-1{
 	display: inline-block;
