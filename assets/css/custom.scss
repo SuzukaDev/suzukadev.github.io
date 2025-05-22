@@ -1717,6 +1717,13 @@ nav.categories ul li a{
 		transition-duration: 40ms;
 		transition-property: border, box-shadow, -webkit-box-shadow, -moz-box-shadow, color;
 		color: var(--hover-color) !important;
+	
+		// font-weight: bold;
+		
+		sup{
+			color: var(--hover-color);
+			// font-weight: bold;
+		}
 	}
 
 	sup{
