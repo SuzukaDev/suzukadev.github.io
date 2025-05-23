@@ -1,0 +1,91 @@
+{{- /*  
+Makes a wavy text
+
+Arguments:
+text = (string) Shortcut
+freq = (float/int) The frequency of the wave. Default: .1
+amp = (float/int) Amplitude of the wave. Default: 20
+time = (float/int) Time for the effect. Default: 1
+
+Usage:
+{{< text_wavy2 "helloooo!" >}}
+{{< text_wavy2 text="helloooo!" amp=10 >}}
+*/ -}}
+{{- /*  REFACTOR text_wavy  */ -}}
+
+{{- $text_input := or (.Get "text") (.Get 0) -}}
+{{- $chars := split $text_input "" -}}
+
+{{- $total_chars := len $chars -}}
+{{- /*  FIXME cambiar esto a un parámetro?  */ -}}
+{{- $CENTER := 0.5 -}}
+{{- $middle_char_pos := int (mul $total_chars $CENTER) -}}
+
+{{- /*  {{- $frequency := (.Get 1) | default .2 | mul -1.0}}  */ -}}
+{{- /*  {{- $rawFrequency := (.Get 1) | default .2 -}}  */ -}}
+{{- $rawFrequency := float ((or (.Get "freq") (.Get 1)) | default .1) -}}
+{{- $frequency := mul (math.Abs $rawFrequency) -1 -}}
+
+{{- /*  {{- $amp := (.Get "amp") | default 20 -}}  */ -}}
+{{- $amp := float ((or (.Get "amp") (.Get 2)) | default 20) -}}
+{{- $half_amp := div $amp 2.0 -}}
+
+
+{{- /*  {{$max_y := 10}}
+{{$min_y := mul $max_y -1}}  */ -}}
+{{- $max_y := $half_amp -}}
+{{- $min_y := mul (float $half_amp) -1.0 -}}
+{{- /*  {{$animation_time := (.Get "time") | default 1}}  */ -}}
+{{- $animation_time := float ((.Get "time") | default 1) -}}
+
+{{- /*  {{- range $index, $char := $chars -}}
+<pre>{{$char}}</pre>
+{{end}}  */ -}}
+
+{{- /*  <p>{{$middle_char_pos}}</p>
+<p>{{$middle_char_pos}}</p>
+<p>{{$middle_char_pos}}</p>
+<p>{{$middle_char_pos}}</p>
+<p>{{$middle_char_pos}}</p>  */ -}}
+
+{{- /*  <div class="wave-text">  */ -}}
+{{- $output := "" -}}
+{{- range $index, $char := $chars -}}
+	{{- $delay := mul $index ($frequency) -}}
+	{{- $delay = float $delay -}}
+
+	{{- $mask_force := 1.0 -}}
+	{{- if lt $index $middle_char_pos -}}
+		{{- $total_distance := $middle_char_pos -}}
+		{{- $distance_to_center := sub $middle_char_pos $index -}}
+		{{- /*  {{- $mask_force = div (float $distance_to_center) $total_distance -}}  */ -}}
+		{{- $mask_force = div (float $index) $total_distance -}}
+	{{- else if gt $index $middle_char_pos -}}
+		{{- $total_distance := sub $total_chars $middle_char_pos -}}
+		{{- $distance_to_center := sub $index $middle_char_pos -}}
+		{{- /*  {{- $mask_force = div $distance_to_center $total_distance -}}  */ -}}
+		{{- $mask_force = div (float $distance_to_center) $total_distance -}}
+	{{- end -}}
+	{{- /*  <p>force: {{$mask_force}}  min_y {{$min_y}}</p>  */ -}}
+	{{- /*  {{- $min_y = mul $min_y $mask_force -}}
+	{{- $max_y = mul $max_y $mask_force -}}  */ -}}
+	{{- $_min_y := mul (float $min_y) (float $mask_force) -}}
+	{{- $_max_y := mul (float $max_y) (float $mask_force) -}}
+	{{- /*  <p>	 --- >>>min_y     {{$_min_y}}</p>  */ -}}
+
+	{{- /*  NOTE THIS ADDS WHITESPACES!  */ -}}
+	{{- /*  INFO  https://discourse.gohugo.io/t/hugo-range-function-adds-extra-whitespace-between-spans/33219 */ -}}
+	{{- /*  <span class="wavy-text" style="animation-duration:{{$animation_time}}s; animation-delay: {{$delay | safeCSS}}s; --y-wave-translate-min:{{$min_y}}px; --y-wave-translate-max:{{$max_y}}px;">{{- $char -}}</span>  */ -}}
+	{{- if eq $char " " -}}
+		{{- /*  {{- $output = printf "%s$nbsp;" ($output | safeHTMLAttr) -}}  */ -}}
+		{{- /*  {{- $output = printf "%s<span> </span>" ($output | safeHTMLAttr) -}}  */ -}}
+		{{- $output = printf "%s&nbsp;" $output -}}
+	{{- else -}}
+		{{- $output = printf "%s<span class='wavy-text' style='animation-duration:%fs; animation-delay:%fs; --y-wave-translate-min:%fpx; --y-wave-translate-max:%fpx;'>%s</span>" $output $animation_time ($delay) $_min_y $_max_y $char -}}
+	{{- end -}}
+{{- end -}}
+
+{{- /*  To avoid whitespaces in HTML  */ -}}
+<span>
+	{{- $output | safeHTML -}}
+</span>
