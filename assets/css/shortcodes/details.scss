@@ -107,6 +107,11 @@ details {
 
 	article{
 		padding: 10px;
+		padding-left: 20px;
+
+		nav.TableOfContents{
+			font-weight: bold;
+		}
 	}
 
 	&::before{

@@ -1,0 +1,62 @@
+{{- /*  
+Creates a section with all elements in the same row.
+
+Usage:
+{{< row >}}
+{{< download_file "brushes.zip" >}}
+
+{{< download_file "brushes.zip" >}}
+
+{{< download_file "brushes.zip" >}}
+{{< /row >}}
+
+(This way the download buttons will be shown in the same row).
+*/ -}}
+
+{{- /*  {{- $page := or (.Get 0) (.Get page) default $. -}}  */ -}}
+
+{{ $startLevel := or (.Get "start") (.Get 0) | default 1 }}
+{{ $endLevel := or (.Get "end") (.Get 1) | default 3 }}
+{{ $ordered := or (.Get "ordered") (.Get 2) | default false }}
+
+{{ $details := or (.Get "details") (.Get 3) | default false }}
+
+{{- $default_title := T "articleIndexContent" -}}
+{{ $details_summary := or (.Get "title") (.Get 4) | default $default_title }}
+{{ $closed := or (.Get "closed") (.Get 5) | default false }}
+{{ $details_color := or (.Get "color") (.Get "c") (.Get 6) | default false }}
+
+{{ if .Page.TableOfContents }}
+
+{{ with $details }}
+	<details 
+	{{with not $closed}} open {{end}}
+	{{with $details_color}} style="--summary-title-color:{{.}};"{{end}}
+	>
+	{{ with $details_summary }}
+		<summary>{{ $details_summary | $.Page.RenderString }}</summary>
+	{{ end }}
+{{ end }}
+
+<article>
+
+<nav class="TableOfContents">
+	{{- /*  {{ $startLevel := default 1 .Page.Params.toc_start_level }}
+	{{ $endLevel := default 3 .Page.Params.toc_end_level }}
+	{{ $ordered := default false .Page.Params.toc_ordered }}  */ -}}
+
+	{{ .Page.Fragments.ToHTML $startLevel $endLevel $ordered | safeHTML }}
+</nav>
+
+</article>
+
+{{ with $details }}
+
+</details>
+{{ end }}
+
+{{ end }}
+{{- /*  <rem>{{.Page.Fragments }}</rem>  */ -}}
+
+{{- /*  <pre>{{ debug.Dump .Page.Fragments.Identifiers }}</pre>  */ -}}
+{{- /*  <pre>{{ debug.Dump .Page.Fragments }}</pre>  */ -}}
