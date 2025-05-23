@@ -32,3 +32,29 @@ Email: {{<get_social "email" >}}
 
 Twitter: {{<get_social twitter true >}}
 
+
+
+<!-- 
+Colorido:
+
+ ))
+ ;;
+() )
+ ||
+ ""
+
+ }}
+ ;;
+() )
+ ||
+ ""
+
+ }}
+ ;;
+() )
+ ""
+
+
+ }} ;;() ) ""
+
+ -->
