@@ -31,12 +31,13 @@ This shortcode uses .Page.Fragments for generating the ToC and will only render 
 {{- $endLevel := or (.Get "end") (.Get 1) | default 3 -}}
 {{- $ordered := or (.Get "ordered") (.Get 2) | default false -}}
 
-{{- $details := or (.Get "details") (.Get 3) | default false -}}
+{{- /*  {{- $details := or (.Get "details") (.Get 3) | default false -}}  */ -}}
+{{- $details := (.Get "details")| default true -}}
 
 {{- $default_title := T "articleIndexContent" -}}
-{{- $details_summary := or (.Get "title") (.Get 4) | default $default_title -}}
-{{- $closed := or (.Get "closed") (.Get 5) | default false -}}
-{{- $details_color := or (.Get "color") (.Get "c") (.Get 6) | default false -}}
+{{- $details_summary := or (.Get "title") (.Get 3) | default $default_title -}}
+{{- $closed := or (.Get "closed") (.Get 4) | default false -}}
+{{- $details_color := or (.Get "color") (.Get "c") (.Get 5) | default false -}}
 
 {{- if .Page.TableOfContents -}}
 	{{- with $details -}}
