@@ -1,8 +1,10 @@
 {{- /*  
-Makes a wavy text
+Makes a wavy text with a bigger motion at the center point.
+Is a variation of text_wavy
 
 Arguments:
 text = (string) Shortcut
+center = (float from 0.0 to 1.0). Position in which the effect is maximum. Default: 0.5 (center)
 freq = (float/int) The frequency of the wave. Default: .1
 amp = (float/int) Amplitude of the wave. Default: 20
 time = (float/int) Time for the effect. Default: 1
@@ -17,17 +19,17 @@ Usage:
 {{- $chars := split $text_input "" -}}
 
 {{- $total_chars := len $chars -}}
-{{- /*  FIXME cambiar esto a un parámetro?  */ -}}
-{{- $CENTER := 0.5 -}}
+{{- $CENTER := or (.Get "center") (.Get 1) | default 0.5 -}}
+{{- /*  {{- $CENTER := 0.5 -}}  */ -}}
 {{- $middle_char_pos := int (mul $total_chars $CENTER) -}}
 
 {{- /*  {{- $frequency := (.Get 1) | default .2 | mul -1.0}}  */ -}}
 {{- /*  {{- $rawFrequency := (.Get 1) | default .2 -}}  */ -}}
-{{- $rawFrequency := float ((or (.Get "freq") (.Get 1)) | default .1) -}}
+{{- $rawFrequency := float ((or (.Get "freq") (.Get 2)) | default .1) -}}
 {{- $frequency := mul (math.Abs $rawFrequency) -1 -}}
 
 {{- /*  {{- $amp := (.Get "amp") | default 20 -}}  */ -}}
-{{- $amp := float ((or (.Get "amp") (.Get 2)) | default 20) -}}
+{{- $amp := float ((or (.Get "amp") (.Get 3)) | default 20) -}}
 {{- $half_amp := div $amp 2.0 -}}
 
 
@@ -62,9 +64,11 @@ Usage:
 		{{- $mask_force = div (float $index) $total_distance -}}
 	{{- else if gt $index $middle_char_pos -}}
 		{{- $total_distance := sub $total_chars $middle_char_pos -}}
-		{{- $distance_to_center := sub $index $middle_char_pos -}}
+		{{- /*  {{- $distance_to_center := sub $index $middle_char_pos -}}  */ -}}
+		{{- $distance_to_center := sub (add $index 1) $middle_char_pos -}}
 		{{- /*  {{- $mask_force = div $distance_to_center $total_distance -}}  */ -}}
 		{{- $mask_force = div (float $distance_to_center) $total_distance -}}
+		{{- $mask_force = sub 1.0 $mask_force -}}
 	{{- end -}}
 	{{- /*  <p>force: {{$mask_force}}  min_y {{$min_y}}</p>  */ -}}
 	{{- /*  {{- $min_y = mul $min_y $mask_force -}}

@@ -943,6 +943,22 @@ Texto animado: {{< text_wavy "holaaaaaaaa olaaa" >}}
 
 {{< /box_info >}}
 
+
+## text_wavy2
+
+Una variación de `text_wavy` en el que los caracteres se mueven con más fuerza en función de lo cerca que estén del parámetro `center`. 
+Ejemplo: {{< text_wavy2 text="holaaaaaaaa olaaa" cente=0.5 >}}
+
+	{{</* text_wavy2 text="holaaaaaaaa olaaa" cente=0.5 */>}}
+
+{{< box_info >}}
+
+{{< text_wavy2 text="Tiene muchos otros parámetros para personalizar el efecto." time=1 freq=56.1 amp=14.0 >}}
+
+{{< /box_info >}}
+
+
+
 ## video
 
 Inserta un vídeo (archivo local)
