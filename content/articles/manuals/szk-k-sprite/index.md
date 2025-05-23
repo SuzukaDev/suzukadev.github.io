@@ -28,3 +28,95 @@ show_right_bar = true
 # featured_tags = [""] # if set, it will only feature the tags in this array (useful to display only some of the tags). Note: Tags must match the tag in .Params.tags
 # related_pages = [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 +++
+
+# por encima
+
+# por encima tambien
+
+<!-- # Test table of contents -->
+{{< header "Heeeey" 1 >}}
+
+{{< table_of_content 
+start=1 
+end=1 
+ordered=false 
+closed=false 
+>}}
+
+{{< highlight go "linenos=inline, hl_lines=3 6-8, style=autumn" >}}
+package main
+
+import "fmt"
+
+func main() {
+    for i := 0; i < 3; i++ {
+        fmt.Println("Value of i:", i)
+    }
+}
+{{< /highlight >}}
+
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    for i := 0; i < 3; i++ {
+        fmt.Println("Value of i:", i)
+    }
+}
+```
+
+{{< x user="roboticgeo" id="1917584059217187194" >}}
+
+{{< x user="roboticgeo" id="1917584059217187194" >}}
+
+{{% header "Heeeey 2" 1 %}}
+
+# Test
+asdfkajsglkfjs degioewj ogisjf igewjrg dgf ert
+hdgh dthy erthk jdfgh
+
+
+{{< details >}}
+asjdhfaksjdhfkaj hdfkasdfkjhas d
+
+sf sgdjhfgjksdhfgkj h
+{{< /details >}}
+
+
+## wolla
+asdfkajsglkfjs degioewj ogisjf igewjrg dgf ert
+hdgh dthy erthk jdfgh
+
+
+# Test
+asdfkajsglkfjs degioewj ogisjf igewjrg dgf ert
+hdgh dthy erthk jdfgh
+
+
+# Test
+asdfkajsglkfjs degioewj ogisjf igewjrg dgf ert
+hdgh dthy erthk jdfgh
+
+
+# Test
+asdfkajsglkfjs degioewj ogisjf igewjrg dgf ert
+hdgh dthy erthk jdfgh
+
+
+## wolla
+asdfkajsglkfjs degioewj ogisjf igewjrg dgf ert
+hdgh dthy erthk jdfgh
+
+
+### wolla 3
+asdfkajsglkfjs degioewj ogisjf igewjrg dgf ert
+hdgh dthy erthk jdfgh
+
+
+# Test
+asdfkajsglkfjs degioewj ogisjf igewjrg dgf ert
+hdgh dthy erthk jdfgh
+

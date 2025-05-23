@@ -28,3 +28,24 @@ show_right_bar = true
 # featured_tags = [""] # if set, it will only feature the tags in this array (useful to display only some of the tags). Note: Tags must match the tag in .Params.tags
 # related_pages = [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 +++
+
+
+# por encima tambien
+
+<!-- # Test table of contents -->
+{{< header "Heeeey" 1 >}}
+
+{{< table_of_content 
+start=1 
+end=1 
+ordered=false 
+closed=false 
+>}}
+
+
+
+# Index Painting
+
+Cool example of the aesthetic that is achievable with index painting:
+
+{{< x user="roboticgeo" id="1917584059217187194" >}}
