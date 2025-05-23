@@ -1,62 +1,70 @@
 {{- /*  
-Creates a section with all elements in the same row.
+Creates a collapsible or static Table of Contents (ToC) block from the page’s headings, with various customization options.
 
 Usage:
-{{< row >}}
-{{< download_file "brushes.zip" >}}
+{{< table_of_content 
+    start="1" 
+    end="3" 
+    ordered="false" 
+    details="true" 
+    title="Contents" 
+    closed="false" 
+    color="#333" 
+>}}
 
-{{< download_file "brushes.zip" >}}
+Parameters:
+- start (int | optional): The heading level to start from. Default is 1.
+- end (int | optional): The heading level to end at. Default is 3.
+- ordered (bool | optional): If true, the ToC will use ordered (numbered) lists. Default is false.
+- details (bool | optional): If true, wraps the ToC in a <details> element for collapsible functionality. Default is false.
+- title (string | optional): The summary/title text shown on the <details> toggle. If not provided, a localized default is used.
+- closed (bool | optional): If true, the <details> element will be closed by default. Default is false (open).
+- color (string | optional): A CSS color value for the summary text, applied via a CSS variable `--summary-title-color`.
 
-{{< download_file "brushes.zip" >}}
-{{< /row >}}
+Example:
+{{< table_of_content start="2" end="4" ordered="true" details="true" title="Quick Navigation" closed="true" color="blue" >}}
 
-(This way the download buttons will be shown in the same row).
+This shortcode uses .Page.Fragments for generating the ToC and will only render if a TableOfContents exists for the current page.
 */ -}}
 
-{{- /*  {{- $page := or (.Get 0) (.Get page) default $. -}}  */ -}}
+{{- $startLevel := or (.Get "start") (.Get 0) | default 1 -}}
+{{- $endLevel := or (.Get "end") (.Get 1) | default 3 -}}
+{{- $ordered := or (.Get "ordered") (.Get 2) | default false -}}
 
-{{ $startLevel := or (.Get "start") (.Get 0) | default 1 }}
-{{ $endLevel := or (.Get "end") (.Get 1) | default 3 }}
-{{ $ordered := or (.Get "ordered") (.Get 2) | default false }}
-
-{{ $details := or (.Get "details") (.Get 3) | default false }}
+{{- $details := or (.Get "details") (.Get 3) | default false -}}
 
 {{- $default_title := T "articleIndexContent" -}}
-{{ $details_summary := or (.Get "title") (.Get 4) | default $default_title }}
-{{ $closed := or (.Get "closed") (.Get 5) | default false }}
-{{ $details_color := or (.Get "color") (.Get "c") (.Get 6) | default false }}
+{{- $details_summary := or (.Get "title") (.Get 4) | default $default_title -}}
+{{- $closed := or (.Get "closed") (.Get 5) | default false -}}
+{{- $details_color := or (.Get "color") (.Get "c") (.Get 6) | default false -}}
 
-{{ if .Page.TableOfContents }}
+{{- if .Page.TableOfContents -}}
+	{{- with $details -}}
+		<details 
+		{{- with not $closed}} open {{end}}
+		{{- with $details_color}} style="--summary-title-color:{{.}};"{{- end -}}
+		>
+		{{- with $details_summary -}}
+			<summary>{{- $details_summary | $.Page.RenderString -}}</summary>
+		{{- end -}}
+	{{- end -}}
 
-{{ with $details }}
-	<details 
-	{{with not $closed}} open {{end}}
-	{{with $details_color}} style="--summary-title-color:{{.}};"{{end}}
-	>
-	{{ with $details_summary }}
-		<summary>{{ $details_summary | $.Page.RenderString }}</summary>
-	{{ end }}
-{{ end }}
+	<article>
+		<nav class="TableOfContents">
+			{{- /*  {{ $startLevel := default 1 .Page.Params.toc_start_level }}
+			{{ $endLevel := default 3 .Page.Params.toc_end_level }}
+			{{ $ordered := default false .Page.Params.toc_ordered }}  */ -}}
 
-<article>
+			{{- .Page.Fragments.ToHTML $startLevel $endLevel $ordered | safeHTML -}}
+		</nav>
+	</article>
 
-<nav class="TableOfContents">
-	{{- /*  {{ $startLevel := default 1 .Page.Params.toc_start_level }}
-	{{ $endLevel := default 3 .Page.Params.toc_end_level }}
-	{{ $ordered := default false .Page.Params.toc_ordered }}  */ -}}
+	{{- with $details -}}
+		</details>
+	{{- end -}}
+{{- end -}}
 
-	{{ .Page.Fragments.ToHTML $startLevel $endLevel $ordered | safeHTML }}
-</nav>
-
-</article>
-
-{{ with $details }}
-
-</details>
-{{ end }}
-
-{{ end }}
+{{- /*  DEBUG  */ -}}
 {{- /*  <rem>{{.Page.Fragments }}</rem>  */ -}}
-
 {{- /*  <pre>{{ debug.Dump .Page.Fragments.Identifiers }}</pre>  */ -}}
 {{- /*  <pre>{{ debug.Dump .Page.Fragments }}</pre>  */ -}}
