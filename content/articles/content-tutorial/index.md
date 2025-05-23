@@ -823,6 +823,36 @@ Si pasas el ratón por encima de los botones se "presionan".
 {{< /box_green >}}
 
 
+
+## table_of_content
+
+Muestra una tabla de contenidos de la página, con distintas opciones:
+
+
+{{< table_of_content 
+start=1 
+end=2
+ordered=false 
+title="Ejemplo de tabla de contenido"
+details=true 
+closed=false
+color=red >}}
+
+```
+	{{</* table_of_content 
+	start=1 
+	end=3 
+	ordered=false 
+	title="Ejemplo de tabla de contenido"
+	details=true 
+	closed=false 
+	color=red 
+	*/>}}
+```
+
+
+
+
 ## text_centered
 
 {{< text_centered >}}
