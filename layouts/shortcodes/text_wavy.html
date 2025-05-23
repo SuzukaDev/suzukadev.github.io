@@ -13,7 +13,7 @@ Usage:
 */ -}}
 {{- /*  REFACTOR text_wavy  */ -}}
 
-{{- $text_input := or (.Get "text") (.Get 0) }}
+{{- $text_input := or (.Get "text") (.Get 0) -}}
 {{- $chars := split $text_input "" -}}
 {{- /*  {{- $frequency := (.Get 1) | default .2 | mul -1.0}}  */ -}}
 {{- /*  {{- $rawFrequency := (.Get 1) | default .2 -}}  */ -}}
