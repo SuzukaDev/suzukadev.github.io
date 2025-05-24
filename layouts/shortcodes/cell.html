@@ -1,0 +1,41 @@
+{{- /*  
+Displays a stylized text span (e.g. a label or tag), optionally wrapped in a link.
+
+Arguments:
+text = (string) The text content to display. Aliases: t, 0
+color = (string) Color for the cell. Aliases: c, 1
+url = (string) A URL or page or fragment (#fragment-name) to link to. If set, the text will be clickable. Aliases: page, l, 2. Default: ""
+class = (string) CSS class(es) to apply to the span element. Aliases: 3
+
+Usage:
+{{< cell text="Hello" url="/about" >}}
+{{< cell text="1" url="https://gohugo.io/functions/strings/hasprefix/" >}}
+
+Note:
+- The 'color' parameter is currently included but not used to style the output directly.
+- If 'url' or 'page' is set, the text is wrapped in a link.
+- The span will always include the "cell" class, plus any additional classes passed.
+
+*/ -}}
+
+{{- $text := or (.Get "text") (.Get "t") (.Get 0) -}}
+{{- $color := or (.Get "color") (.Get "c") (.Get 1) -}}
+{{- $url := or (.Get "url") (.Get "page") (.Get "l") (.Get 2) | default "" -}}
+{{- $class := or (.Get "class") (.Get 3) -}}
+
+
+{{- $link := "" -}}
+{{- if $url -}}
+	{{- $link = partial "utils/get-link.html" (dict "context" . "url" $url) -}}
+{{- end -}}
+
+{{- with $link -}}
+	<a href="{{.}}" {{- with $color}} style="--hover-color:{{. | safeCSS}};"{{- end -}}>
+{{- end -}}
+<span class="cell {{- with $class}} {{.}}{{end -}}">
+	{{- $text | markdownify -}}
+</span>
+
+{{- with $link -}}
+	</a>
+{{- end -}}
