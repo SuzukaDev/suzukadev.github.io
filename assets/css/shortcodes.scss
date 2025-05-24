@@ -12,6 +12,36 @@
 @import "shortcodes/link_cards.scss";
 // @import "shortcodes/misc_effects.scss";
 
+.cell{
+	// --cell-color: var(--bg-color,var(--hover-color));
+	--cell-color: var(--hover-color);
+	// background-color: var(--cell-color);
+	// display: inline-block;
+	position: relative;
+	border-radius: 9999999px;
+	border: 2px solid var(--cell-color);
+	padding: 5px 10px;
+	color: var(--hover-color);
+	// padding: 1em;
+	// width: 30px;
+	// height: 30px;
+
+	&::before{
+		content: "";
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		bottom: 0px;
+		background-color: var(--cell-color);
+		z-index: -1;
+		border-radius: 9999999px;
+		// border-radius: 50%;
+		opacity: .2;
+	}
+}
+
+
 figure.figure-caption{
 	figcaption{
 		text-align: center;
