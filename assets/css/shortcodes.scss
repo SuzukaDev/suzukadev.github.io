@@ -12,6 +12,12 @@
 @import "shortcodes/link_cards.scss";
 // @import "shortcodes/misc_effects.scss";
 
+figure.figure-caption{
+	figcaption{
+		text-align: center;
+	}
+}
+
 .link-box-color{
 	display: inline-block;
 	transition-duration: .3s;
