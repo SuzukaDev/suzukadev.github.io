@@ -51,7 +51,7 @@ Usage:
 {{- if $italic -}}
 	{{- $tag = "em" | safeHTMLAttr -}}
 {{- end -}}
-<figure>
+<figure class="figure-caption">
 	{{- if $a_link -}}<a class="img-link" target="_blank" rel="noopener noreferrer" href="{{$a_link}}">{{- end -}}
 	{{- /*  <img {{ with $img_class }} class="{{.}}"{{- end -}} src="{{- $img_url -}}" loading="lazy" width="{{$image_resource.Width}}" height="{{$image_resource.Height}}" alt="{{$alt_text}}">  */ -}}
 	<img {{ with $img_class }} class="{{.}}"{{- end -}} src="{{- $img_url -}}" loading="lazy" {{with $image_resource}}width="{{.Width}}" height="{{.Height}}"{{end}} alt="{{$alt_text}}">
