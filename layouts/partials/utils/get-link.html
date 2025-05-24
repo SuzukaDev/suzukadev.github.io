@@ -1,0 +1,38 @@
+{{/*  
+Returns a link from a string. No matter if it is a:
+- Page name
+- Url (http)
+- Fragment (like "#install")
+
+Arguments: dict("context" . "url" $url)
+
+Returns a link or "" if not found
+
+Use:
+{{- $link := partial "utils/get-link.html" (dict "context" . "url" $url) -}}
+*/}}
+
+{{- $context := .context -}}
+{{- $url := .url -}}
+
+{{- $_link := $url -}}
+
+
+{{- /*  Is a fragment  */ -}}
+{{- if hasPrefix $url "#" -}}
+	{{- $fragment_link := print $context.Page.Permalink $url}}
+    {{- $_link = $fragment_link -}}
+
+	{{- /*  Is a page  */ -}}
+{{- else if not (hasPrefix $url "http") -}}
+  {{- /*  {{- $page := $.Site.GetPage $url -}}  */ -}}
+  {{- $page := $context.Site.GetPage $url -}}
+  {{- if $page -}}
+    {{- $_link = $page.RelPermalink -}}
+  {{- else -}}
+  	{{- $_link = "" -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $_link -}}
+
