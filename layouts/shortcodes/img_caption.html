@@ -41,7 +41,7 @@ Usage:
 {{- $image_resource := "" -}}
 {{- /*  Get the image resource if the img_path is not a link  */ -}}
 {{- if not (hasPrefix $img_path "http") -}}
-  {{- $image_resource = or (.Page.Resources.Get $img_path) (resources.Get $img_path) -}}
+  {{- $image_resource = or (.Page.Resources.Get $img_path) (resources.Get $img_path) (.Page.Resources.GetMatch (printf "**%s**" $img_path )) -}}
   {{- if $image_resource -}}
     {{- $img_url = $image_resource.RelPermalink -}}
   {{- end -}}
