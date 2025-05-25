@@ -1720,6 +1720,19 @@ nav.categories ul li a{
 	
 		// font-weight: bold;
 		
+		&::before{
+			transition-duration: 5s;
+			content: "";
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			background-color: var(--hover-color);
+			opacity: .15;
+			border-radius: 999999px;
+		}
+
 		sup{
 			color: var(--hover-color);
 			// font-weight: bold;
