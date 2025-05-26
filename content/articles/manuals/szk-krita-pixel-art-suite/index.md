@@ -9,8 +9,9 @@ tags = ["krita","pixel art","k-sprite"]
 # main_classes = 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 # # -------- DISPLAY OPTIONS --------
 # accent_color = "#ff168a" # customize the color for links, etc in the page
+accent_color = "#ff950a" # customize the color for links, etc in the page
 # show_breadcrumbs = false
-# show_description = false
+show_description = false
 # show_author = false
 # show_date = false
 # show_reading_time = false
@@ -29,11 +30,28 @@ show_right_bar = true
 # related_pages = [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 +++
 
+<!-- > Plugin for Krita that makes doing pixel  -->
 
-# por encima tambien
+<!-- > Plugin that makes doing **Pixel Art** in *Krita* **much better**! -->
+
+> Plugin for ***{{< text_handwritten text="Krita" font= 3 >}}*** that adds **{{< text_wavy2 "lots of features" 0.5 0.03 >}}** for making **{{< text_shimmer text="Pixel Art" font=2 >}}**!
+
+
+{{< link_card 
+  url="https://orb91.gumroad.com/l/szk-krita-pixel-art-suite"
+  cover="images/cover_logo-animated-512px.webp"
+  title="SZK Pixel Art Suite"
+  subtitle="Improves making Pixel Art in *Krita*!"
+  url_text="orb91.gumroad.com"
+  color="#cd5b06"
+  hover_color="#ff83f1"
+  text_color="#f0f0f0"
+  cover_position="50% 53%"
+>}}
+
+
 
 <!-- # Test table of contents -->
-{{< header "Heeeey" 1 >}}
 
 {{< table_of_content 
 start=1 
@@ -42,10 +60,484 @@ ordered=false
 closed=false 
 >}}
 
+# Installation
+
+<!-- {{< details summary="Click here if you don't know how to install a plugin" color="rgba(23, 112, 201, 1.0)" open=true >}} -->
+
+<!-- # **Installation** -->
+
+1. Download the `.zip`.
+2. In Krita, go to ***Tools ‣ Scripts ‣ Import Python Plugin…***, find the `.zip` file and press OK.
+3. Restart Krita.
+4. Go to ***Settings ➡ Dockers ➡ SZK Pixel Art Suite***
+
+A new **docker** with the plugin will appear:
+
+{{< img_caption img="images/docker-combined.png" caption="Different tabs of the docker" class="no-box-shadow" >}}
+
+<!-- <figure><img src="https://public-files.gumroad.com/5ykubgrigi6frwtkd8vyz9bgv85d"><p class="figcaption">&nbsp;<em>Different tabs of the docker</em></p></figure> -->
+
+<!-- {{< /details >}} -->
+
+## Tabs
+{{< row >}}
+
+{{< img_caption img="tabs-legend.png" caption="Tabs of the plugin" class="no-box-shadow" >}}
+
+<div>
+{{< cell "1" >}} - Color shading <br><br>
+
+{{< cell "2" >}} - Color replace <br><br>
+
+{{< cell "3" >}} - Index Painting<br><br>
+
+{{< cell "4" >}} - Export <br><br>
+
+{{< cell "5" >}} - K-Sprite <br><br>
+
+{{< cell "6" >}} - Settings <br><br>
+</div>
+
+{{< /row >}}
+
+
+# Color Shading
+
+This is inspired by the color shading panel from [*Pyxel Edit*](https://pyxeledit.com/), which provided interesting color shadings very easily. 
+
+It brings its original functionality to *Krita* and expands on it by **adding a few more options**.
+
+{{< img_caption img="color-tab-3.png" class="no-box-shadow" >}}
+
+It works by generating **color variations based on a color**. This base color is always <u>at the center of a palette</u> (except for the "mix" (mixer) palette).
+
+{{< details summary="Original Palettes Explained" color=#FF8526FF >}}
+
+> This section is inspired by the original shading system from Pyxel Edit. 
+
+The **main shading palette** (on top), works by shifting the value, saturation and hue to an specific blue tone for the dark tones (on the left). For the brighter colors (on the right), works the same but shifting the colors to a brighter yellow hue.
+
+<br>
+
+{{< cell "l" >}} - Shifts (only) the **value/light**.
+
+<br>
+
+{{< cell "s" >}} - Shifts (only) the **saturation**.
+
+<br>
+
+{{< cell "h" >}} - Shifts (only) the **hue**.
+
+<br>
+
+
+
+{{< box_green >}}
+**l**, **s** and **h** are very useful for fine-tuning your colors using the {{< shortcut "Middle MB" >}} [(See 'Swatches' section)](#swatches)
+{{< /box_green >}}
+
+{{< /details >}}
+
+
+
+
+
+
+
+
+{{< details summary="Extra Palettes Explained" color="#e400ff" open=false >}}
+
+The shading palettes {{< cell "2" >}} and {{< cell "3" >}} are affected by the hues selected in the **sliders** above. The **left slider** controls the **hue** for the **shadows**, while the **right slider** controls the **hue** for the **bright colors**.
+
+<br>
+
+{{< box_green >}}
+
+This **offers more control** for making cohesive color combinations under specific settings. 
+
+> For example, lets say you are painting a sunset scene with an *orange* light source, and you want the shadows to gather around a pink. You can select both hues in the sliders and generate easily colors that look good in that setting.
+
+
+{{< /box_green >}}
+
+
+> {{< cell "2" >}} uses the **same algorithm** as the one inspired by ***Pyxel Edit***. 
+> <br>
+> <br>
+> {{< cell "3" >}} Uses a **different algorithm** (it usually retrieves more muddy colors for the shadows and more coloured lights).
+
+---
+{{< header "Mixer (Mix)" 3 "left" >}}
+
+Mixes 2 colors.
+
+{{< box_info >}}
+It uses an algorithm that **checks hor similar are both colors**, and reduces/adds more swatches depending how similar they are.
+
+(The more different they are, the more steps/swatches it adds).
+
+> You can still change the resolution/number of steps by changing the {{< cell "slider" >}} next to the {{< cell "2" >}}
+
+{{< /box_info >}}
+
+Press the {{< cell "1" >}} and {{< cell "2" >}} buttons to change the colors that are mixed.
+
+Those buttons have the following shortcuts:
+
+<br>
+
+| Shortcut         | Action     
+| :----------- | ------: | 
+| {{< shortcut "Left MB" >}} | Triggers the **color selector**
+| {{< shortcut "CTRL + Left MB" >}}| Triggers the **color picker** to grab any color
+| {{< shortcut "ALT + Left MB" >}}| Picks the **Foreground color**
+| {{< shortcut "Left MB" >}}| Picks the **background** color
+
+<br>
+
+{{< box_green >}}
+I personally find the {{< shortcut "CTRL + Left MB" >}} very useful and fast, and is the main way I use the mixer.
+{{< /box_green >}}
+
+{{< /details >}}
+
+**To generate a shading palette:**
+- Press the {{< cell "FG" >}} / {{< cell "BG" >}} button to grab your current **foreground/background color** and build the shading palettes around it.
+- Press the {{< shortcut "Middle MB" >}} on a swatch. [See 'Swatches' section below for more info](#swatches)
+
+## Swatches
+
+> A '*swatch*' is a single color sample of a gradient.
+
+Mouse Button (MB) shortcuts/actions:
+| Shortcut         | Action     
+| :----------- | ------: | 
+| {{< shortcut "Left MB" >}} | Pick **foreground** color
+| {{< shortcut "Right MB" >}}| Pick **background** color 
+| {{< shortcut "Middle MB" >}}| Pick **foreground** color <u>and **rebuild the palette**</u>
+
+
+
+<!-- {{< box_info "💡" >}}
+*\* MB = "Mouse Button"*
+{{< /box_info >}} -->
+
+{{< box_info "💡" >}}
+I personally find {{< shortcut "Middle MB" >}} very useful for *fine tuning* your base color by shifting its value, hue, saturation, etc. until you got a shading that you like 👌.
+{{< /box_info >}}
+
+When you click a swatch, the color becomes active:
+
+{{< img_caption "swatch-selected.png" "The white border indicates the color is selected" >}}
+
+Once a color is selected, you can:
+
+- Move easily forwards/backwards in the active shading palette with a shortcuts. ([See shortcuts section](#shortcuts))
+
+- **Add** the whole shading to your **active palette**.
+
+## Managing Palettes
+
+The *Color Shading* tab is "connected" to the native Palette docker by ***Krita***.
+
+{{< details summary="How to show the Palette docker" >}}
+
+Go to `Settings -> Dockers -> Palette` 
+
+{{< img_caption "show-palette-docker.png" >}}
+
+<br>
+
+A docker like this will appear:
+
+<br>
+
+{{< img_caption "native-palette-docker.png" "Native *Palette* docker" >}}
+
+{{< /details >}}
+
+<!-- {{< header "Add colors to palette" 4 "left" >}} -->
+
+### Add colors to palette
+
+When you have a gradient selected (by having selected a swatch), you can add all its colors to the active palette. For that, press this button:
+
+{{< img_caption "add-colors-to-palette.png" "Adds the selected gradient to the active palette" >}}
+
+<!-- --- -->
+
+<!-- {{< header "Sort Palettes" 4 "left" >}} -->
+
+### Sort Palettes
+
+
+
+It includes actions for adding and **sorting** colors in Krita's default Palette docker **by different criteria** (hue, value, saturation, perceived lightness, color similarity, etc.), similar to other softwares. 
+
+> This is something I personally find **very useful when working with limited color palettes**.
+
+To sort your active Palette, press the {{< cell "..." >}} button:
+
+{{< img_caption img="sort-palettes.png" class="no-box-shadow" >}}
+
+Most are self explanatory. Even though, some ones worthy to explain:
+
+- **Perceived lightness**: This sorts the colors according how human eye perceived lightness. Is not always the same as the "value" sort.
+
+- **Cielab similarity**: Sorts the colors of your pallete according by how similar they are to your active (foreground) color.
+
+
+<!-- {{< box_info "💡" >}}
+**TIP**: When choosing a color from a palette row, you can use shortcuts to quickly select darker or lighter variations within the selected row of colors.
+{{< /box_info >}} -->
+
+
+
+# Color Replace
+
+Allows to precisely replace an specific color in the selected layers/groups or in the entire document.
+
+This is useful when you want to change a palette or a certain color of an entire document or layer.
+
+{{< box_info >}}
+The color to be replaced has to match the **exact color** (there is no treshold margin).
+{{< /box_info >}}
+
+{{< img_caption "color-replace.png" >}}
+
+{{< cell "1" >}} - **Color to be replaced** (left) and **new color** (right)
+
+{{< details "Same shortcuts like in the Mixer apply here" >}}
+
+| Shortcut         | Action     
+| :----------- | ------: | 
+| {{< shortcut "Left MB" >}} | Triggers the **color selector**
+| {{< shortcut "CTRL + Left MB" >}}| Triggers the **color picker** to grab any color
+| {{< shortcut "ALT + Left MB" >}}| Picks the **Foreground color**
+| {{< shortcut "Left MB" >}}| Picks the **background** color
+
+<br>
+
+{{< box_info >}}
+{{< text_wavy2 "You don't need to remember them!" 0.2 0.1 8 >}} Just **hover** the mouse under the colors **to see a tooltip** with these **shortcuts**:
+
+{{< img_caption "color-replace-tooltip.png" "Tooltip when hovering the color buttons" >}}
+
+{{< /box_info >}}
+
+{{< /details >}}
+
+{{< cell "2" >}} - **Swap** replaced and new color.
+
+{{< box_warning >}}
+**Note**: At the moment **undo/redo is not supported natively in Krita' scripts**, so if you want to **undo changes** you can **swap the colors** (with the swap button) and **re-execute the color replace**.
+{{< /box_warning >}}
+
+{{< cell "3" >}} - **Alpha** for the new color (in case you need to set a new one).
+
+{{< cell "4" >}} - Replaces the color in the **selected layer(s)**.
+
+{{< box_green >}}
+You can select more than one layer.
+{{< /box_green >}}
+
+{{< cell "5" >}} -  **Replaces the color in every layer** of the active document.
+
+
+
+
+
 
 
 # Index Painting
 
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+
+Sets up an index painting group for a layer (or group) with a single click.
+
+{{< details summary="What is ***Index Painting***?" open=true >}}
+
+***Index Painting*** is a technique that **automatically dithers and reduce colors on a non-pixel art artwork**. 
+
+> This means that <strong>{{% text_wavy "you can use all your non-pixel art brushes in Krita" 0.03 10 %}}</strong> , gradients, etc. for painting and still obtaining a Pixel Art aesthetic. 👌
+
+If you are curious, you can [**learn more about it here.**](http://danfessler.com/blog/hd-index-painting-in-photoshop)
+{{< /details >}}
+
 Cool example of the aesthetic that is achievable with index painting:
 
 {{< x user="roboticgeo" id="1917584059217187194" >}}
+
+It comes with a pattern editor that allows to create, save and load different patterns-pressets for the dithering effect:
+
+This is mostly to play, experiment and discover new and cool pixel gradient effects.
+
+{{< box_info "💡" >}}
+**TIP**: Hover a cell to see more matrix drawing options.
+{{< /box_info >}}
+
+
+
+
+# Export Tab
+
+
+Allows exporting the document (or any selected layer(s)) scaled by a factor very easily and fast.
+
+{{< img_caption img="images/export.png" caption="Left: Original scale. Right: Scaled" class="no-box-shadow" >}}
+
+Useful when you want a higher resolution image of your Pixel Art drawing.
+
+{{< img_caption img="export-tab-new.png" caption="Export tab" >}}
+
+## Image settings
+
+- **Scale**: Size multiplicator. 
+- **Quality**: Image compression quality. The higher, the better quality (and the file size).
+  > Since Pixel Art normally tends to have lots of contiguous pixels with the same value, a low value keeps enough quality.
+- **Directory**: Suports both **local** and **absolute** directories.
+  - **Local** example: Setting a value of, lets say, `Exports/Version 1` will make the exported images to be in a subdirectory relative the current path of the active document.
+    - Eg: if your document is placed in `C:\Users\Dexter\Desktop\my-awesome-pixel-art.kra`, the exported images will be in `C:\Users\Dexter\Desktop\Exports\Version 1`
+  - **Absolute** example: Setting an absolute path (like, lets say: `C:\Users\Mike\Pictures\My Pixel Art`) will place all exported images in that folder, and **ignore the document's path**.
+- **File name**: Add a custom name for the exported image.
+{{< box_green >}}
+Leaving it **<u>empty</u>** will add the **document's name**. 
+{{< /box_green >}}
+
+
+
+- **Format**: Select your preferred image format. (Supports `.png`, `.jpg`, `.webp` and `.bmp`)
+
+## Naming Options
+- **Add scale**: If true (checked), it will add the scale factor to the file name.
+- **Overwrite**: If false (unchecked), will add an unique time stamp for avoid overwriting files. 
+{{< box_info >}}
+This is useful if you want to manually save some "snapshots" of your drawing and don't want to overwrite the images.
+{{< /box_info >}}
+  - If true (checked) the files with the same name will be overwritten.
+
+---
+- **Selection only** - If true/checked, it will only export the region selected. Useful if you want to export only an specific area/region.
+- 📁 - Click to open the folder with the exported images.
+- **Export Scaled** - Exports the whole document.
+- **Export Selected** - Exports only the selected layer/layers/group
+  - **Trim** - If true/checked, the exported layers will be cropped to their bounds. If false, their size will be the document size.
+{{< box_green >}}
+<!-- {{< text_wavy2 "This is useful, for example, for exporting different sprites for a game easily." 0.5 0.03 4 >}} {{< text_wavy2 "🎮" 0.5 0.03 4 >}}  -->
+This is useful, for example, for exporting different sprites for a game easily 🎮.
+{{< /box_green >}}
+
+
+
+
+# SZK K-Sprite
+
+
+
+
+
+
+# Options 
+
+## Index Painting Options
+
+- **Add gradient**: Adds a gradient to preview the dither and to sample colors.
+
+    - **Position**: Changes the position of the gradient.
+    - **Size**: The size of the gradient as a percentage of the document's size.
+    - **Invert**: Inverts the gradient.
+- **Method**
+    - **Index colors**: Uses an index color filter
+    - **Gradient map**: Uses a gradient map filter. You can configure its dither pattern in its properties.
+- **Dither live preview**: When selecting a new pattern preset or editing it (rotate, invert, etc), if a "Dither" layer is selected or is a sibling of the selected layer, it will be updated automatically.
+
+## Shortcuts
+
+{{< details summary="How to configure shortcuts in Krita" >}}
+Go to `Settings -> Configure Krita`. There, click the `Keyboard Shortcuts` tab. Search for `SZK Pixel Art Suite` to see the available shortcuts.
+{{< /details >}}
+
+Shortcuts provided by the plugin:
+
+### Palette
+
+- When selecting a color from a palette in the Shading tab, you can move backward/forward the active palette color with the shortcuts:
+
+    - `Previous Palette Color (SZK Pixel Art Suite)` - Default: `Alt+1`
+    - `Next Palette Color (SZK Pixel Art Suite)` - Default: `Alt+2`
+
+### K-Sprite
+
+- You can execute the editor with the shortcut:
+
+    - `Open SZK K Pixel Art Editor (SZK Pixel Art Suite)` - Default: `Alt+F3`
+
+{{< box_info >}}
+I personally highly recommend to configure this to your choice. I personally like to trigger the editor as if I was changing of brush (for using one of its features, like the pixel perfect brush, or drawing a primitive, etc.)
+{{< /box_info >}}
+
+### Export Pixel Art
+
+- You can bind to a shortcut the action to export your pixel art with your current settings with:
+
+    - `Export Scaled Pixel Art (Full Document) (SZK Pixel Art Suite)`
+    - `Export Scaled Pixel Art (Selected Layers) (SZK Pixel Art Suite)`
+
+# Credits
+
+Fonts used:
+
+- [Minimal4](https://saint11.org/blog/fonts/) by *[Pedro Medeiros](https://saint11.art/)* ([@saint11](https://x.com/saint11)) ({{< text_wavy "Thank you!" 0.04 6 1.2 >}})
+- [Tiny5-Regular](https://fonts.google.com/specimen/Tiny5) by *[Stefan Schmidt](https://fonts.google.com/?query=Stefan%20Schmidt)* ({{< text_wavy "Thank you!" 0.01 6  1.4 >}})
