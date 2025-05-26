@@ -354,6 +354,7 @@ You can select more than one layer.
 
 Sets up an index painting group for a layer (or group) with a single click.
 
+{{< img_caption "index-painting-animation.webp" >}}
 
 
 
@@ -414,6 +415,8 @@ Press it **twice** to fill/clear all the cells.
 - {{< cell "7" >}} **Delete Preset**: Deletes the **selected preset**.
 
 - {{< cell "8" >}} **Dither Matrix**: Here you can paint/modify each cell of the dither matrix. Each cell represents a pixel of the dither pattern.
+
+{{< img_caption "index-painting-tab.webp" >}}
 
 There is some different ways for painting the matrix:
 Shortcut | Action
@@ -542,8 +545,27 @@ This is useful, for example, for exporting different sprites for a game easily �
 
 
 
-# SZK K-Sprite
+# K-Sprite
 
+{{< img_caption img="https://i.pinimg.com/originals/e7/95/d3/e795d3bfaa35b8843bf27b83e65a111d.gif" caption="'Drawing editor inside a drawing editor'?" class="spoiler-blur" >}}
+
+
+## Features
+
+## Interface
+
+{{< details summary="⚠️ Warning about the <u>fill-bucket</u> tool" color="rgba(228, 171, 17, 0.79)" >}}
+{{< box_warning >}}
+The fill-bucket uses a <u>recursive algorithm</u> ([The *flood fill* algorithm](https://en.wikipedia.org/wiki/Flood_fill)). Krita has limited the amount of recursive calls a script can execute, and this -sadly- cannot be changed.
+
+This means that if the area to fill is *big enough* to reach that recursive calls limit, Krita will end that process and the fill won't be completed.
+
+{{< box_info >}}
+Non-recursive algorithms are generally slower than the *Flood Fill algorithm*, so it is best to use Krita's fill-bucket tool for filling large areas. I considered removing the tool, but since it still works well for small and medium areas, I decided to keep it
+{{< /box_info >}}
+{{< /box_warning >}}
+
+{{< /details >}}
 
 TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
 
@@ -643,3 +665,15 @@ Fonts used:
 
 - [Minimal4](https://saint11.org/blog/fonts/) by *[Pedro Medeiros](https://saint11.art/)* ([@saint11](https://x.com/saint11)) ({{< text_wavy "Thank you!" 0.04 6 1.2 >}})
 - [Tiny5-Regular](https://fonts.google.com/specimen/Tiny5) by *[Stefan Schmidt](https://fonts.google.com/?query=Stefan%20Schmidt)* ({{< text_wavy "Thank you!" 0.01 6  1.4 >}})
+
+{{< link_card 
+  url="https://orb91.gumroad.com/l/szk-krita-pixel-art-suite"
+  cover="images/cover_logo-animated-512px.webp"
+  title="SZK Pixel Art Suite"
+  subtitle="Improves making Pixel Art in *Krita*!"
+  url_text="orb91.gumroad.com"
+  color="#cd5b06"
+  hover_color="#ff83f1"
+  text_color="#f0f0f0"
+  cover_position="50% 53%"
+>}}
