@@ -34,7 +34,7 @@ show_right_bar = true
 
 <!-- > Plugin that makes doing **Pixel Art** in *Krita* **much better**! -->
 
-> Plugin for ***{{< text_handwritten text="Krita" font= 3 >}}*** that adds **{{< text_wavy2 "lots of features" 0.5 0.03 >}}** for making **{{< text_shimmer text="Pixel Art" font=2 >}}**!
+> *Awesome* Plugin for ***{{< text_handwritten text="Krita" font= 3 >}}*** that adds **{{< text_wavy2 "lots of features" 0.5 0.03 >}}** for making **{{< text_shimmer text="Pixel Art" font=2 >}}**!
 
 
 {{< link_card 
