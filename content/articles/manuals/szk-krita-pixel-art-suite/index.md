@@ -352,60 +352,10 @@ You can select more than one layer.
 
 # Index Painting
 
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-
 Sets up an index painting group for a layer (or group) with a single click.
+
+
+
 
 {{< details summary="What is ***Index Painting***?" open=true >}}
 
@@ -413,20 +363,130 @@ Sets up an index painting group for a layer (or group) with a single click.
 
 > This means that <strong>{{% text_wavy "you can use all your non-pixel art brushes in Krita" 0.03 10 %}}</strong> , gradients, etc. for painting and still obtaining a Pixel Art aesthetic. 👌
 
-If you are curious, you can [**learn more about it here.**](http://danfessler.com/blog/hd-index-painting-in-photoshop)
-{{< /details >}}
-
 Cool example of the aesthetic that is achievable with index painting:
 
+<div style="margin: auto; width: fit-content;">
 {{< x user="roboticgeo" id="1917584059217187194" >}}
+</div>
+
+
+If you are curious, you can [**learn more about this technique here.**](http://danfessler.com/blog/hd-index-painting-in-photoshop)
+{{< /details >}}
+
 
 It comes with a pattern editor that allows to create, save and load different patterns-pressets for the dithering effect:
 
 This is mostly to play, experiment and discover new and cool pixel gradient effects.
 
-{{< box_info "💡" >}}
-**TIP**: Hover a cell to see more matrix drawing options.
+{{< img_caption "index-painting-example-city-sunset.png" "I made the sky in this piece using Index Painting" >}}
+
+
+
+## Interface
+
+{{< img_caption "index-painting-tab-steps.png" >}}
+
+- {{< cell "1" >}} **Matrix Size**: Increase/decrease the rows/columns of the dither matrix.
+
+<br>
+
+- {{< cell "2" >}} **Rotate**: Rotates the dither matrix.
+{{< img_caption "index-painting-rotate.webp" >}}
+
+<br>
+
+
+- {{< cell "3" >}} **Invert**: Inverts the color in the dither matrix.
+{{< img_caption "index-painting-invert.webp" >}}
+
+<br>
+
+- {{< cell "4" >}} **Clear the matrix**: Resets all cells.
+
+{{< box_info >}}
+Press it **twice** to fill/clear all the cells.
 {{< /box_info >}}
+
+- {{< cell "5" >}} **Dither Presets**: Change the dither preset.
+
+- {{< cell "6" >}} **Save Preset**: Save your own dither preset for using it later.
+
+- {{< cell "7" >}} **Delete Preset**: Deletes the **selected preset**.
+
+- {{< cell "8" >}} **Dither Matrix**: Here you can paint/modify each cell of the dither matrix. Each cell represents a pixel of the dither pattern.
+
+There is some different ways for painting the matrix:
+Shortcut | Action
+:-- | --:
+{{< shortcut "Left MB" >}} / {{< shortcut "Right MB" >}} | Activate/deactivate cell (full painting)
+{{< shortcut "CTRL + Left/Right MB" >}} | Adds/Substracts a cell value in **quantized steps**.
+{{< shortcut "ALT + Left/Right MB" >}} | **Smooth painting**.
+
+{{< box_info >}}
+**TIP**: Hover a cell (or any UI element) to see its tooltip with its information.
+{{< /box_info >}}
+
+- {{< cell "9" >}} **Create Index Painting**: Press to generate an Index Painting folder for the selected layer/group.
+
+- {{< cell "10" >}} **Repaint the dithering layer**: Updates the dither pattern. Useful to call it after drawing on the matrix.
+{{< box_warning >}}
+The active layer must either be the "Dither" layer, or a sibling of the "Dither" layer.
+
+Note: The dither layer must be named "Dither". This is due that after pressing it, it searches if there is an Index Painting group set up with a dither layer.
+{{< /box_warning >}}
+
+
+- {{< cell "11" >}} **Create dither pattern layer**: Sets up an Index Painting group around the selected layer.
+{{< box_green >}}
+This can be used as a **pattern generator** (useful for making **textures for brushes**, **gradients**, etc).
+{{< /box_green >}}
+
+
+## Setting an Index Painting group
+
+Having a **black and white** drawing (or an empty layer if you want to draw from scratch): 
+
+{{< img_caption "index-painting-tutorial-1.png" >}}
+
+{{< box_info >}}
+Note: It is preferable if the drawing already has crisp, hard edges, since Index Painting tends to generate smooth soft edges in the silhouettes (which is not desirable for Pixel Art).
+{{< /box_info >}}
+
+Press the button ***Index Painting***, in the Index Painting Tab:
+
+{{< img_caption "index-painting-press-button.png" >}}
+
+It will result in something like:
+
+
+{{< img_caption "index-painting-tutorial-2.png" >}}
+
+It makes a group with everything needed for Index Painting. 
+
+Consists of:
+
+- A **Gradient Map** / **Index Colors** filter layer, depending on your [*Index Painting Options*](#index-painting-options)
+{{< box_info >}}
+**Note**: {{< shortcut "Right Click" >}} on this layer to edit the colors used for the shading. 
+{{< /box_info >}}
+- **Dither**: This layer holds the dither pattern from the dither matrix.
+{{< box_info >}}
+Note: If you are using a Gradient Map, you can change its pattern in its settings (Right Click on the layer -> Properties). Having both patterns combines them and increases the dithering effect.
+{{< /box_info >}}
+<br>
+  {{< box_green >}}
+  TIP: **Increase/reduce** its **opacity** to **change** the **dithering** effect.
+  {{< /box_green >}}
+
+- **Gradient** (optional, depends on your [*Index Painting Options*](#index-painting-options)): It helps to visualize the effect and to sample colors.
+{{< box_green >}}
+Having the "*Gradient*" layer **selected**, you can **sample its black and white** colors with {{< shortcut "CTRL+ALT+LeftMButton" >}}, and have an idea of the dither amount that value will have.
+{{< /box_green >}}
+
+- [Your selected layer/group] (***B&W sphere*** in this example): {{< text_wavy2 "This is where you have fun and paint (in black and white)!" 0.5 0.014 >}}
+
+
+
 
 
 
@@ -446,8 +506,8 @@ Useful when you want a higher resolution image of your Pixel Art drawing.
 
 - **Scale**: Size multiplicator. 
 - **Quality**: Image compression quality. The higher, the better quality (and the file size).
-  > Since Pixel Art normally tends to have lots of contiguous pixels with the same value, a low value keeps enough quality.
-- **Directory**: Suports both **local** and **absolute** directories.
+  > Since Pixel Art normally tends to have lots of contiguous pixels with the same value, a low value usually keeps enough quality.
+- **Directory**: Suports both <u>**local** and **absolute** directories</u>.
   - **Local** example: Setting a value of, lets say, `Exports/Version 1` will make the exported images to be in a subdirectory relative the current path of the active document.
     - Eg: if your document is placed in `C:\Users\Dexter\Desktop\my-awesome-pixel-art.kra`, the exported images will be in `C:\Users\Dexter\Desktop\Exports\Version 1`
   - **Absolute** example: Setting an absolute path (like, lets say: `C:\Users\Mike\Pictures\My Pixel Art`) will place all exported images in that folder, and **ignore the document's path**.
@@ -533,6 +593,8 @@ TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
 - **Dither live preview**: When selecting a new pattern preset or editing the dither matrix (by rotating, inverting it, etc), if there is a "Dither" layer selected (or a sibling) of the selected layer, **the Dither layer will be updated automatically**.
   {{< box_green >}}
   This is for being able to directly see how changes affect the shading dithering.
+
+  {{< img_caption "index-painting-live-preview.webp" "Scrolling through the presets (with arrow keys) automatically updates the dithering pattern." >}}
   {{< /box_green >}}
 
 ## Shortcuts
