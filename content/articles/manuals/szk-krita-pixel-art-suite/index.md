@@ -495,12 +495,21 @@ This is useful, for example, for exporting different sprites for a game easily ð
 
 - **Add gradient**: Adds a gradient to preview the dither and to sample colors.
 
-    - **Position**: Changes the position of the gradient.
-    - **Size**: The size of the gradient as a percentage of the document's size.
+  {{< img_caption "index-painting-gradient.png" "Adding a gradient is useful to preview the aesthetic of the dithering pattern âœ…" >}}
+  <!-- <br> -->
+  <!-- {{< box_green >}}
+  Adding a gradient is useful to preview the dithering aesthetic if you don't have already a drawn layer.
+  {{< /box_green >}} -->
+
+    - **Position**: Changes the position of the gradient (*top, bottom, left, right*).
+    - **Size**: The size of the gradient as a **percentage** of the document's size.
     - **Invert**: Inverts the gradient.
 - **Method**
     - **Index colors**: Uses an index color filter
     - **Gradient map**: Uses a gradient map filter. You can configure its dither pattern in its properties.
+  {{< box_info >}}
+  I personally preffer the **Gradient Map** option. Since is easier to manage colors.
+  {{< /box_info >}}
 - **Dither live preview**: When selecting a new pattern preset or editing it (rotate, invert, etc), if a "Dither" layer is selected or is a sibling of the selected layer, it will be updated automatically.
 
 ## Shortcuts
