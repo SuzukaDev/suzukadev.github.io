@@ -4,6 +4,15 @@
 	box-shadow: #{$x} #{$y} #{$blur} #{$spread} #{$color} !important;
 }
 
+.spoiler-blur{
+	transition: 2s;
+	filter: blur(20px);
+	&:hover{
+		transition: 0.4s;
+		filter: blur(0px);
+	}
+}
+
 .sticky{
 	position: sticky !important;
 	top: var(--sticky-top-position, 0px) !important;
