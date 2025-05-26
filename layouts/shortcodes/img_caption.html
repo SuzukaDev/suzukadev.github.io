@@ -41,6 +41,7 @@ Usage:
 {{- $image_resource := "" -}}
 {{- /*  Get the image resource if the img_path is not a link  */ -}}
 {{- if not (hasPrefix $img_path "http") -}}
+{{- /*  TODO meter esto en un partial utils/?  */ -}}
   {{- $image_resource = or (.Page.Resources.Get $img_path) (resources.Get $img_path) (.Page.Resources.GetMatch (printf "**%s**" $img_path )) -}}
   {{- if $image_resource -}}
     {{- $img_url = $image_resource.RelPermalink -}}
@@ -58,7 +59,8 @@ Usage:
 	{{- /*  <img src="{{- $img_url -}}" loading="lazy" {{- partial "utils/img-attributes-from-resource.html" (dict "page" .Page "img_path" $img_path) }} alt="{{$alt_text}}">  */ -}}
 	{{- /*  <{{ $tag }} style="opacity: .6;">{{- $caption -}}</{{ $tag }}>  */ -}}
 	{{- if $caption -}}
-		{{- $html := printf "<figcaption><%s style='opacity:.6;'>%s</%s></figcaption>" $tag ($caption | markdownify) $tag -}}
+		{{- /*  {{- $html := printf "<figcaption><%s style='opacity:.6;'>%s</%s></figcaption>" $tag ($caption | markdownify) $tag -}}  */ -}}
+		{{- $html := printf "<figcaption><%s>%s</%s></figcaption>" $tag ($caption | markdownify) $tag -}}
 		{{- $html | safeHTML -}}
 	{{- end -}}
 	{{- if $a_link -}}</a>{{- end -}}

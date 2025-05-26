@@ -43,8 +43,18 @@
 
 
 figure.figure-caption{
+	// padding: 10px 10px;
+	// padding: .5em 1em;
+	&:hover{
+		figcaption{
+			transition-duration: .23s;
+			opacity: 1.0;
+		}
+	}
 	figcaption{
+		transition-duration: .6s;
 		text-align: center;
+		opacity:.6;
 	}
 }
 
@@ -100,7 +110,7 @@ span{
 	justify-content: center;
 	justify-self: center;
 
-	figure, img, p, details{
+	figure, img, p, details, div{
 	// figure{
 	// & > *{
 		flex: 1;                /* Let each image grow equally */
