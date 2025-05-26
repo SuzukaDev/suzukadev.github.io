@@ -283,9 +283,9 @@ To sort your active Palette, press the {{< cell "..." >}} button:
 
 Most are self explanatory. Even though, some ones worthy to explain:
 
-- **Perceived lightness**: This sorts the colors according how human eye perceived lightness. Is not always the same as the "value" sort.
+- **Perceived lightness**: This sorts the colors according how human eye perceives lightness. Is not always the same as the "value" sort.
 
-- **Cielab similarity**: Sorts the colors of your pallete according by how similar they are to your active (foreground) color.
+- **Cielab similarity**: Sorts the colors of your pallete according by **how similar** they are to your **active** (foreground) **color**.
 
 
 <!-- {{< box_info "💡" >}}
@@ -485,6 +485,26 @@ This is useful, for example, for exporting different sprites for a game easily �
 # SZK K-Sprite
 
 
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
 
 
 
@@ -510,12 +530,17 @@ This is useful, for example, for exporting different sprites for a game easily �
   {{< box_info >}}
   I personally preffer the **Gradient Map** option. Since is easier to manage colors.
   {{< /box_info >}}
-- **Dither live preview**: When selecting a new pattern preset or editing it (rotate, invert, etc), if a "Dither" layer is selected or is a sibling of the selected layer, it will be updated automatically.
+- **Dither live preview**: When selecting a new pattern preset or editing the dither matrix (by rotating, inverting it, etc), if there is a "Dither" layer selected (or a sibling) of the selected layer, **the Dither layer will be updated automatically**.
+  {{< box_green >}}
+  This is for being able to directly see how changes affect the shading dithering.
+  {{< /box_green >}}
 
 ## Shortcuts
 
 {{< details summary="How to configure shortcuts in Krita" >}}
-Go to `Settings -> Configure Krita`. There, click the `Keyboard Shortcuts` tab. Search for `SZK Pixel Art Suite` to see the available shortcuts.
+Go to `Settings -> Configure Krita`. There, click the `Keyboard Shortcuts` tab. 
+
+Search for `SZK Pixel Art Suite` to see the available shortcuts.
 {{< /details >}}
 
 Shortcuts provided by the plugin:
@@ -523,15 +548,19 @@ Shortcuts provided by the plugin:
 ### Palette
 
 - When selecting a color from a palette in the Shading tab, you can move backward/forward the active palette color with the shortcuts:
+|Command | Default Shortcut
+|:---|---:
+Previous Palette Color (SZK Pixel Art Suite) | {{< shortcut "Alt+1" >}}
+Next Palette Color (SZK Pixel Art Suite) | {{< shortcut "Alt+2" >}}
 
-    - `Previous Palette Color (SZK Pixel Art Suite)` - Default: `Alt+1`
-    - `Next Palette Color (SZK Pixel Art Suite)` - Default: `Alt+2`
+
 
 ### K-Sprite
 
 - You can execute the editor with the shortcut:
-
-    - `Open SZK K Pixel Art Editor (SZK Pixel Art Suite)` - Default: `Alt+F3`
+|Command | Default Shortcut
+|:---|---:
+Open SZK K Pixel Art Editor (SZK Pixel Art Suite) | {{< shortcut "Alt+F3" >}}
 
 {{< box_info >}}
 I personally highly recommend to configure this to your choice. I personally like to trigger the editor as if I was changing of brush (for using one of its features, like the pixel perfect brush, or drawing a primitive, etc.)
@@ -540,9 +569,11 @@ I personally highly recommend to configure this to your choice. I personally lik
 ### Export Pixel Art
 
 - You can bind to a shortcut the action to export your pixel art with your current settings with:
+|Command | Default Shortcut
+|:---|---:
+Export Scaled Pixel Art (Full Document) (SZK Pixel Art Suite) | (Not set)
+Export Scaled Pixel Art (Selected Layers) (SZK Pixel Art Suite) | (Not set)
 
-    - `Export Scaled Pixel Art (Full Document) (SZK Pixel Art Suite)`
-    - `Export Scaled Pixel Art (Selected Layers) (SZK Pixel Art Suite)`
 
 # Credits
 
