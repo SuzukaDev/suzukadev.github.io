@@ -285,7 +285,7 @@ Most are self explanatory. Even though, some ones worthy to explain:
 
 - **Perceived lightness**: This sorts the colors according how human eye perceives lightness. Is not always the same as the "value" sort.
 
-- **Cielab similarity**: Sorts the colors of your pallete according by **how similar** they are to your **active** (foreground) **color**.
+- **Cielab similarity**: Sorts the colors of your palette according by **how similar** they are to your **active** (foreground) **color**.
 
 
 <!-- {{< box_info "💡" >}}
