@@ -32,7 +32,7 @@ Note:
 {{- with $link -}}
 	<a href="{{.}}" {{- with $color}} style="--hover-color:{{. | safeCSS}};"{{- end -}}>
 {{- end -}}
-<span class="cell {{- with $class}} {{.}}{{end -}}">
+<span class="cell {{- with $class}} {{.}}{{end -}}" {{- with $color}} style="--hover-color:{{. | safeCSS}};"{{- end -}}>
 	{{- $text | markdownify -}}
 </span>
 
