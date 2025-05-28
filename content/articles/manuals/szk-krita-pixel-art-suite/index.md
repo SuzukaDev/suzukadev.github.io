@@ -547,8 +547,181 @@ This is useful, for example, for exporting different sprites for a game easily �
 
 # K-Sprite
 
-{{< img_caption img="https://i.pinimg.com/originals/e7/95/d3/e795d3bfaa35b8843bf27b83e65a111d.gif" caption="'Drawing editor inside a drawing editor'?" class="spoiler-blur" >}}
 
+K-Sprite is a **Pixel Art editor inside Krita** that is meant to add all the Pixel Art **features** that are missing in Krita. Like a pixel perfect brush, or tools for propper ellipses/circles, bezier lines, pixelated text, etc.
+
+{{< img_caption img="https://i.pinimg.com/originals/e7/95/d3/e795d3bfaa35b8843bf27b83e65a111d.gif" caption="A 'Drawing editor' inside a 'drawing editor'?" class="spoiler-blur" >}}
+
+
+> Is not meant to fully replace the process of drawing Pixel Art in Krita (because Krita is still a great tool for making pixel art!). Is meant to add those tools when you need them.
+
+## Tutorial
+
+To execute **K-Sprite**, go to the `Pencil Tab ✏️` in the docker, or press the **shortcut** for `Open SZK K Pixel Art Editor (SZK Pixel Art Suite)` (Default {{< shortcut "Alt+F3" >}}).
+
+<!-- A new window will appear on top of Krita (`1`), and will grab the active layer (`2`): -->
+A new **window will appear** on top of Krita {{< cell "1" >}}, and will **grab the active layer** {{< cell "2" >}}:
+
+<!-- > `1` - The window will render on top always so you can still use other krita dockers/plugins while drawing in *K-Sprite*  
+> &gt; `2` - The active layer will be temporarily hidden in Krita's UI. This is due *K-Sprite* renders the document, and having it visible will make it impossible to see changes in case you erase parts of the active layer inside *K-Sprite* -->
+>{{< cell "1" >}} - **The window will render on top** always so you can **still use other krita dockers**/plugins while drawing in *K-Sprite*.
+>
+>{{< cell "2" >}} - **The active layer will be temporarily hidden in Krita's UI**. This is due *K-Sprite* renders the document, and having it visible will make it impossible to see changes in case you erase parts of the active layer inside *K-Sprite*
+
+### Interface
+
+{{< img_caption "k-sprite.png">}}
+
+<!-- <figure><img src="https://public-files.gumroad.com/fdmqqkrdq2zepkqcb4yvp3kf7z3v"><p class="figcaption"></p></figure> -->
+
+- {{< cell text="**Active tool options**" color="rgb(91, 91, 240)" >}}: Options related the selected tool.
+- {{< cell text="**Actions**" color="rgb(91, 91, 240)" >}}: Diferent actions, like undo/redo, solo mode, etc.
+- {{< cell text="**Tool Bar**" color="rgb(91, 91, 240)" >}}: Contains all the drawing tools.
+- {{< cell text="**Canvas**" color="rgb(91, 91, 240)" >}}: This is where you draw.
+- {{< cell text="**Export Buttons**" color="rgb(91, 91, 240)" >}}: Buttons for submitting your changes to Krita.
+- {{< cell text="**Info Bar**" color="rgb(91, 91, 240)" >}}: Offers different information about the selected tool, the hovering elements, etc.
+### Tools
+
+{{< img_caption img="tools.png" caption="Tools" class="no-box-shadow">}}
+
+
+<!-- <figure><img src="https://public-files.gumroad.com/xg07htz0l45soesshpgpebvyn4cv"><p class="figcaption"></p></figure> -->
+
+{{< cell text="**1 - Brush**" color="#F23C3CFF" >}}: **1px brush** with <u>**pixel perfect**</u> option.
+
+<!-- ![asdf](images/k-sprite/pixel-perfect-[x8].png) -->
+
+{{< img_caption img="pixel-perfect-x8.png" class="no-box-shadow" caption="Great for perfect pixel strokes" >}}
+
+
+Shortcut: {{< shortcut "B" >}}
+
+Drawing Shortcuts | Action
+:--|:--:
+{{< shortcut "Left MB (Mouse Button)" >}} | Paint with Foreground (FG) color.
+{{< shortcut "Right MB" >}} | Paint with Background (BG) color.
+{{< shortcut "Shift" >}} (Hold) | Make a line between from the last point to the cursor.
+{{< shortcut "Shift" >}} (Hold) | Make a line between from the last point to the cursor.
+
+<!-- <figure><img src="https://public-files.gumroad.com/yb1et2sz0i5bzn9apdjqchp3wt3n"><p class="figcaption"></p></figure> -->
+
+{{< cell text="**2 - Antialiasing brush**" color="#F23C3CFF" >}}: Automatically calculates the color of a pixel by their neighbour pixels.
+
+{{< img_caption img="antialiasing-tool-mix.webp" class="no-box-shadow" >}}
+
+
+This calculated color is a "**bridge color**" between the current pixel, and its surrounding neighbours, for achieving that antialiasing effect. [If you don't know about Pixel Art antialiasing, or want to know more, check this awesome article.](https://saint11.art/pixel_art_articles/article5/).
+
+It offers 2 different algorithms for calculating that antialiasing color:
+
+{{< img_caption "k-sprite-aa-algorithms.png" "Antialiasing algorithms" >}}
+
+- {{< cell text="**Mix (M)**" color="rgb(245, 96, 237)" >}} - Selects a color by mixing the current pixel and its neighbours.
+<!-- - {{< cell text="**Palette (P)**" color="rgb(245, 96, 237)" >}} - Selects the closest color in the palette to the painted pixel and its neighbours -->
+<!-- - {{< cell text="**Palette (P)**" color="rgb(245, 96, 237)" >}} - Selects the color in the palette that is the closer to the painted pixel and its neighbours, while being different. -->
+- {{< cell text="**Palette (P)**" color="rgb(245, 96, 237)" >}} - Selects the color in the palette that is most similar to the painted pixel and its neighbours, while being different (not repeating the color in the actual pixel, nor on its neighbours).
+
+> This is the coolest method if you are strictly using a palette, and <u>want to use **only** colors that belong to that palette</u>.
+
+The numbers (*P4, P8, M4, M8*) reffers to the **total neighbours** of a pixel that are **considered** in the algorithm:
+
+{{< img_caption "k-sprite-neighbours-dots.png" "4 Neighbours & 8 Neighbours" >}}
+
+- {{< cell text="4" color="#2B56CCFF" >}} - Takes in consideration 4 neighbours of a pixel.
+- {{< cell text="8" color="#f31654" >}} - Takes in consideration all the neighbours of a pixel.
+
+
+
+
+
+<!-- <figure><img src="https://public-files.gumroad.com/i7xb8g6u2t5wgz6xzrev2zilv6r1"><p class="figcaption"></p></figure> -->
+
+❗ Por aqui te quedaste
+
+❗ Por aqui te quedaste
+
+❗ Por aqui te quedaste
+
+❗ Por aqui te quedaste
+
+❗ Por aqui te quedaste
+
+❗ Por aqui te quedaste
+
+
+
+{{< cell text="**3 - Line**" color="#F23C3CFF" >}}: Makes a **straight line**. Press {{< shortcut "CONTROL" >}} to snap the line into perfect ratio lines.
+{{< details summary="About snaping" color="rgb(33, 168, 202)" >}}
+> I've added <strong>{{< text_wavy2 "waaaaaaaaay" >}}</strong> more snapping angles for making **perfect lines** that what is usual in most Pixel Art editors:
+
+<br>
+
+{{< img_caption "k-sprite-line-snap-angles.png" "Each line mantains a perfect constant ratio" >}}
+
+<br>
+
+This is due I personally like to draw perspective buildings, streets, etc. and I've always missed that some editors do not offer more snapping angles for doing some lines more easier.
+{{< /details >}}
+
+{{< cell text="**4 - Cubic & Cuadratic Bezier Curve**" color="#F23C3CFF" >}}:
+{{< box_info >}}
+For making a cubic bezier, simply click twice in the same position after adding the first control point and finish the curve.
+
+(This is for adding the second control point in the same coordinates as the first one).
+
+{{< /box_info >}}
+{{< cell text="**5 - Square**" color="#F23C3CFF" >}}:
+{{< cell text="**6 - Circle**" color="#F23C3CFF" >}}: Improved circles
+
+{{< img_caption img="better-primitives-x8.png" class="no-box-shadow" >}}
+
+<!-- <figure><img src="https://public-files.gumroad.com/i8yyilbbeg7614gdtvhyzjsjlh2f"><p class="figcaption"></p></figure> -->
+
+    1. **Fill**: 👉 For big areas, reaches a python recursion limit set by krita, so is only suitable for not so big regions.
+    2. **Text**: Tool to render correctly pixelated fonts
+<figure><img src="https://public-files.gumroad.com/v16jf2e48wb1l6xfywhoaetd8q4u"><p class="figcaption"></p></figure>
+
+    1. **Zoom**: For zooming specific areas easily.
+
+> 
+> 💡 You can check each tool shortcut by hovering any tool button and seeing the **Info Bar**.
+- **Canvas**:
+
+    - Controls
+
+        - `Left MB` - **Paint** with Foreground Color
+        - `Right MB` - **Paint** with Background Color
+        - `Middle MB` - **Pan**
+        - `CTRL + Middle MB + Drag` - **Zoom** in/out
+        - `CTRL + Left/Right MB` - **Sample** Foreground/Background color
+        - `X` - **Switch** Colors
+
+> 
+> 💡 **TIP**: You can **mask regions** for painting by making a selection in Krita:
+> <figure><img src="https://public-files.gumroad.com/3zuy7vuxcmx0h89i2jsfni116u6l"><p class="figcaption"></p></figure>
+> This way, you will only be able to draw within the selection.  
+>
+- **Export Buttons**: Export the drawing to a `New Layer` or to the `Active Layer`
+
+    - `New layer` will export the drawing to a new layer above the selected layer
+    - `Active layer` will export the drawing to the layer that **was active** (❗) when executing the editor.
+
+> 
+> 👉 These buttons may show or not depending on the active layer when launching the editor.
+> 
+>         - Launching it with an **empty layer** will make **not** show the `New Layer` button (to avoid cluttering).
+>         - Launching it with a **hidden layer** selected will make **not** show the `Active Layer` button (to avoid committing changes to an invisible layer by mistake).
+>
+- **Info Bar**: Displays information, shortcuts, etc. when hovering a button/tool.
+
+❗❗❗❗❗
+❗❗❗❗❗
+❗❗❗❗❗
+❗❗❗❗❗
+❗❗❗❗❗
+❗❗❗❗❗
+❗❗❗❗❗
+❗❗❗❗❗
 
 ## Features
 
