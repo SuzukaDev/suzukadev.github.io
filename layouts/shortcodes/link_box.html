@@ -29,11 +29,13 @@ If the URL corresponds to an internal page, it is automatically resolved to its 
 
 {{- $text = $text | markdownify -}}
 
-{{- $url := $link -}}
+{{- /*  {{- $url := $link -}}
 {{- $_page := .Site.GetPage $url -}}
 {{- if $_page -}}
 	{{- $url = $_page.RelPermalink -}}
-{{- end -}}
+{{- end -}}  */ -}}
+{{- $url := partial "utils/get-link.html" (dict "context" . "url" $link) -}}
+
 
 {{- /*  {{- $url := (.Site.GetPage $link).RelPermalink -}}  */ -}}
 
@@ -54,7 +56,6 @@ If the URL corresponds to an internal page, it is automatically resolved to its 
 
 
 <span class="link-box-color{{ with $class }} {{ . }} {{- end -}}"
-{{- with $css_style -}} style="{{ . | safeCSS }}" {{- end -}}
->
+{{- with $css_style -}} style="{{ . | safeCSS }}" {{- end -}} >
 	<a class="" href="{{- $url -}}">{{- $text -}}</a>
 </span> 

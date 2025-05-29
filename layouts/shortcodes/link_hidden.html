@@ -14,11 +14,12 @@ Example:
 {{ $url := .Get 0 }}
 {{ $text := .Get 1 }}
 
-{{- $page := .Site.GetPage $url -}}
+{{- /*  {{- $page := .Site.GetPage $url -}}
 
 {{- if $page -}}
   {{- $url = $page.RelPermalink -}}
-{{- end -}}
+{{- end -}}  */ -}}
+{{- $url = partial "utils/get-link.html" (dict "context" . "url" $url) -}}
 
 {{ $css_class := "link-hidden" | safeHTML}}
 

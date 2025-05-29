@@ -36,7 +36,8 @@ Usage:
 {{- $hover_color := or (.Get "hover_color") -}}
 {{- $text_color := or (.Get "text_color") -}}
 
-{{- $url_link := $url -}}
+{{- /*  {{- $url_link := $url -}}  */ -}}
+{{- $url_link := partial "utils/get-link.html" (dict "context" . "url" $url) -}}
 
 {{- $cover_link := $cover -}}
 {{- $cover_resource := .Page.Resources.Get $cover -}}
