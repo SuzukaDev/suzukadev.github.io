@@ -757,6 +757,10 @@ Link que no se ve: {{< link_hidden "about" "link escondido" >}}
 
 ## link_markdown_page
 
+{{< box_error >}}
+No usar esto. Todos los links aceptan nombres de páginas (antes no lo hacían). Este shortcode es **innecesario** y al final lo borraré.
+{{< /box_error >}}
+
 Link con una página (de la página): {{< link_markdown_page text="This go to about.md page" page="about" >}}
 
 	Link con una página (de la página): {{</* link_markdown_page text="This go to about.md page" page="about" */>}}
