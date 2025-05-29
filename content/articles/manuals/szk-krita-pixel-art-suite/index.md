@@ -466,11 +466,11 @@ It will result in something like:
 
 It makes a group with everything needed for Index Painting. 
 
-Consists of:
+The **group** consists of:
 
 - A **Gradient Map** / **Index Colors** filter layer, depending on your [*Index Painting Options*](#index-painting-options)
 {{< box_info >}}
-**Note**: {{< shortcut "Right Click" >}} on this layer to edit the colors used for the shading. 
+**Note**: {{< shortcut "Right Click" >}} on this layer to open the **Properties** and edit the colors used for the shading. 
 {{< /box_info >}}
 - **Dither**: This layer holds the dither pattern from the dither matrix.
 {{< box_info >}}
@@ -616,12 +616,12 @@ It offers 2 different algorithms for calculating that antialiasing color:
 
 {{< img_caption "k-sprite-aa-algorithms.png" "Antialiasing algorithms" >}}
 
-- {{< cell text="**Mix (M)**" color="rgb(245, 96, 237)" >}} - Selects a color by mixing the current pixel and its neighbours.
+- {{< cell text="**Mix** (M)" color="rgb(245, 96, 237)" >}} - Selects a color by **mixing** the current pixel and its neighbours.
 <!-- - {{< cell text="**Palette (P)**" color="rgb(245, 96, 237)" >}} - Selects the closest color in the palette to the painted pixel and its neighbours -->
 <!-- - {{< cell text="**Palette (P)**" color="rgb(245, 96, 237)" >}} - Selects the color in the palette that is the closer to the painted pixel and its neighbours, while being different. -->
-- {{< cell text="**Palette (P)**" color="rgb(245, 96, 237)" >}} - Selects the color in the palette that is most similar to the painted pixel and its neighbours, while being different (not repeating the color in the actual pixel, nor on its neighbours).
+- {{< cell text="**Palette** (P)" color="rgb(245, 96, 237)" >}} - Selects the color in the **palette** that is most similar to the painted pixel and its neighbours, while being different (without repeating the current color or the color of its neighbors).
 
-> This is the coolest method if you are strictly using a palette, and <u>want to use **only** colors that belong to that palette</u>.
+> This is {{< text_wavy2 "the coolest method" 0.5 0.1 7 >}} if you are strictly using a palette, and <u>want to use **only** colors that belong to that palette</u>.
 
 The numbers (*P4, P8, M4, M8*) reffers to the **total neighbours** of a pixel that are **considered** in the algorithm:
 
@@ -636,27 +636,18 @@ The numbers (*P4, P8, M4, M8*) reffers to the **total neighbours** of a pixel th
 
 <!-- <figure><img src="https://public-files.gumroad.com/i7xb8g6u2t5wgz6xzrev2zilv6r1"><p class="figcaption"></p></figure> -->
 
-❗ Por aqui te quedaste
 
-❗ Por aqui te quedaste
+{{< cell text="**3 - Line**" color="#F23C3CFF" >}}: Makes a **straight line**. Press {{< shortcut "CONTROL" >}} to **snap** the line into perfect ratio lines.
 
-❗ Por aqui te quedaste
+<!-- Lo pongo open, porque es una FEATURE... hay que mostrar las cosas buenas SIN MIEDO -->
 
-❗ Por aqui te quedaste
-
-❗ Por aqui te quedaste
-
-❗ Por aqui te quedaste
-
-
-
-{{< cell text="**3 - Line**" color="#F23C3CFF" >}}: Makes a **straight line**. Press {{< shortcut "CONTROL" >}} to snap the line into perfect ratio lines.
-{{< details summary="About snaping" color="rgb(33, 168, 202)" >}}
-> I've added <strong>{{< text_wavy2 "waaaaaaaaay" >}}</strong> more snapping angles for making **perfect lines** that what is usual in most Pixel Art editors:
+{{< details summary="About snaping" color="rgb(33, 168, 202)" open=true >}}
+> I've added **{{< text_wavy2 "mooooooore" >}} snapping angles** for making **perfect lines** than what is usual in most Pixel Art editors:
 
 <br>
 
-{{< img_caption "k-sprite-line-snap-angles.png" "Each line mantains a perfect constant ratio" >}}
+<!-- {{< img_caption "k-sprite-line-snap-angles.png" "Each line mantains a perfect constant ratio" >}} -->
+{{< img_caption "k-sprite-line-snap-angles.png" "Left: **Other Pixel Art editors'** snapping. Right: **K-Sprite**'s **snapping**" >}}
 
 <br>
 
@@ -670,6 +661,17 @@ For making a cubic bezier, simply click twice in the same position after adding 
 (This is for adding the second control point in the same coordinates as the first one).
 
 {{< /box_info >}}
+
+{{< box_green >}}
+**TIP**: If you want the curve to still update even when the cursor is out of the editor, press (inside the editor) and drag wherever you need to make your curve.
+{{< img_caption "k-sprite-bezier-out-ezgif.webp" "The curve continues updating when the cursor is out of the editor bounds" >}}
+
+{{< details summary="Reason" >}}
+This is due the points are added on **mouse release**, and if the window loses focus without an event pending (such as holding a mouse button), the editor can't be updated.
+{{< /details >}}
+
+
+{{< /box_green >}}
 {{< cell text="**5 - Square**" color="#F23C3CFF" >}}:
 {{< cell text="**6 - Circle**" color="#F23C3CFF" >}}: Improved circles
 
