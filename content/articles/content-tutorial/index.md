@@ -747,6 +747,29 @@ Muestra una tarjeta con un link. Sirve para crear enlaces vistosos que quieras q
 	text_color="#ffffff"
 	*/>}}
 
+
+## link_color
+
+Link con opciones para cambiar el color (al hacer hover y el texto): 
+
+
+Link: {{< link_color "https://www.youtube.com/watch?v=bTiu9nfgGys" "Hermanos Gutierrez - Nuevo Mundo" >}}
+
+Link: {{< link_color "https://www.youtube.com/watch?v=bTiu9nfgGys" "Hermanos Gutierrez - Nuevo Mundo" "red" >}}
+
+Link: {{< link_color "https://www.youtube.com/watch?v=bTiu9nfgGys" "Hermanos *Gutierrez* - **Nuevo Mundo**" "rgba(8, 111, 214, 0.84)" >}}
+
+```
+Link: {{</* link_color "https://www.youtube.com/watch?v=bTiu9nfgGys" "Hermanos Gutierrez - Nuevo Mundo" */>}}
+
+Link: {{</* link_color "https://www.youtube.com/watch?v=bTiu9nfgGys" "Hermanos Gutierrez - Nuevo Mundo" "red" */>}}
+
+Link: {{</* link_color "https://www.youtube.com/watch?v=bTiu9nfgGys" "Hermanos *Gutierrez* - **Nuevo Mundo**" "rgba(8, 111, 214, 0.84)" */>}}
+
+```
+
+
+
 ## link_hidden
 
 Añade un link que no se remarque de color (por si quieres que pase desapercibido o que no llame la atención).
@@ -787,6 +810,7 @@ También se puede hacer con:
 Link subrayado sin color: {{< link_underline "https://www.youtube.com/@slobulus" "slobulus" >}}
 
 	{{</* link_underline "https://www.youtube.com/@slobulus" "slobulus" */>}}
+
 
 
 
