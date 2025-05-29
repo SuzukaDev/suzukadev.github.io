@@ -544,14 +544,14 @@ Si se añade un solo color, **recomiendo usar rgba con alfa bajo para que se vea
 
 Pone un texto en una celda llamativa: {{< cell "1" >}}
 
-Puedes hacer que {{< cell t="contenga un link" l="https://gohugo.io/functions/go-template/return/" >}} - Dexter es bonito
+Puedes hacer que {{< cell t="contenga un link" l="https://gohugo.io/functions/go-template/return/" >}} 
 
 Y personalizar el color {{< cell t="**2**" l="#cell" c=green >}}
 
 ```
 Pone un texto en una celda llamativa: {{</* cell "1" */>}}
 
-Puedes hacer que {{</* cell t="contenga un link" l="https://gohugo.io/functions/go-template/return/" */>}} - Dexter es bonito
+Puedes hacer que {{</* cell t="contenga un link" l="https://gohugo.io/functions/go-template/return/" */>}} 
 
 Y personalizar el color {{</* cell t="**2**" l="#cell" c=green */>}}
 ```
