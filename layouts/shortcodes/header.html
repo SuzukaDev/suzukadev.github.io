@@ -3,10 +3,11 @@ Displays a header with align options.
 
 
 Arguments:
-1 text = (String). Text of the header.
-2 h = (int) Type of header for the tile (1 for h1, 2 for h2, 3 for h3, etc.). Default: 2 (h2)
-3 align = (String) Text align of the header (options: "left", "right", "center"). Default: "center"
-4 class = (String) CSS class for the header. Default: ""
+0 text = (String). Text of the header.
+1 h = (int) Type of header for the tile (1 for h1, 2 for h2, 3 for h3, etc.). Default: 2 (h2)
+2 align = (String) Text align of the header (options: "left", "right", "center"). Default: "center"
+3 class = (String) CSS class for the header. Default: ""
+4 id = (String) ID class for the header (useful for fragment link). Default: text (the header text)
 
 Use example:
 {{< header "my-first-article, another-article" >}}
@@ -18,6 +19,9 @@ Use example:
 {{- $header_number := or (.Get 1) (.Get "h") | default 2 -}}
 {{- $text_align := or (.Get 2) (.Get "align") | default "center" -}}
 {{- $css_class := or (.Get 3) (.Get "class") | default "" -}}
+{{- $id := or (.Get 4) (.Get "id") | default $title -}}
+
+{{- $id = $id | anchorize -}}
 
 {{- $title = $title | markdownify}}
 
@@ -36,5 +40,7 @@ Use example:
 {{- end -}}
 
 {{- $style := (printf "text-align:%s; align-self:%s;" $text_align $flex_align) | safeCSS -}}
-{{- $header := printf "<%s %s style='%s'>%s</%s>" $header_tag $css_class_attr $style $title $header_tag -}}
+{{- /*  {{- $header_id := printf "id='%s'" ($title) -}}  */ -}}
+{{- $header_id := printf "id='%s'" ($id) -}}
+{{- $header := printf "<%s %s %s style='%s'>%s</%s>" $header_tag $css_class_attr $header_id $style $title $header_tag -}}
 {{- $header | safeHTML -}}
