@@ -1,0 +1,42 @@
+{{- /*  
+Renders a link with a color
+
+Arguments:
+0 / page / url = (string) The target link. Can be a relative path to a page, an absolute URL or a fragment (#header).
+1 / text = (string) The text to display inside the link.
+2 / color / c = (string) Color of the link
+3 / class = (string) Optional additional CSS classes applied to the outer <a>
+4 / style = (string) Custom CSS style
+
+Usage:
+{{< link_color "/about" "About Us" red >}}
+{{< link_color "/about" "About Us" "#008" >}}
+*/ -}}
+
+{{- $link := or (.Get 0) (.Get "page") (.Get "url") -}}
+{{- $text := or (.Get 1) (.Get "text") (.Get "t") -}}
+{{- $text_color := or (.Get 2) (.Get "color") (.Get "c") | default false -}}
+{{- /*  {{- $hover_color := or (.Get 3) (.Get "hover_color") (.Get "c2") | default false -}}  */ -}}
+{{- $class := or (.Get 3) (.Get "class") -}}
+{{- $custom_style := or (.Get 4) (.Get "style") -}}
+
+{{- $url := partial "utils/get-link.html" (dict "context" . "url" $link) -}}
+
+{{- $css_style := "" -}}
+{{- with $text_color -}} 
+	{{- $css_style = printf "%s color:%s;" $css_style . -}}
+{{- end -}}
+{{- with $custom_style -}} 
+	{{- $css_style = printf "%s %s;" $css_style . -}}
+{{- end -}}
+
+
+{{- /*  <span class="link-box-color{{ with $class }} {{ . }} {{- end -}}"  */ -}}
+{{- /*  {{- with $css_style -}} style="{{ . | safeCSS }}" {{- end -}} >  */ -}}
+<a 
+{{- with $class }} class='{{ . }}' {{- end }} href="{{- $url -}}"
+{{ with $css_style -}} style='{{ . | safeCSS }}' {{- end -}}
+>
+	{{- $text | markdownify -}}
+</a>
+{{- /*  </span>   */ -}}
