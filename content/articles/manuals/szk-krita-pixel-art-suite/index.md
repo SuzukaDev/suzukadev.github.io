@@ -546,15 +546,17 @@ This is useful, for example, for exporting different sprites for a game easily �
 
 
 
-# K-Sprite
 
+
+# K-Sprite
 
 K-Sprite is a **Pixel Art editor inside Krita** that is meant to add all the Pixel Art **features** that are missing in Krita. Like a pixel perfect brush, or tools for propper ellipses/circles, bezier lines, pixelated text, etc.
 
 {{< img_caption img="https://i.pinimg.com/originals/e7/95/d3/e795d3bfaa35b8843bf27b83e65a111d.gif" caption="A 'Drawing editor' inside a 'drawing editor'?" class="spoiler-blur" >}}
 
 
-> Is not meant to fully replace the process of drawing Pixel Art in Krita (because Krita is still a great tool for making pixel art!). Is meant to add those tools when you need them.
+> It’s not meant to fully replace the process of drawing Pixel Art in Krita (because Krita is still a great tool for that!). It’s meant to **add all those tools that I always missed** while doing Pixel Art, and to make **creating Pixel Art in Krita** {{< text_wavy2 "an even more awesome experience! 🥳" 0.5 0.1 6 >}}
+
 
 ## Tutorial
 
@@ -963,3 +965,5 @@ Fonts used:
   text_color="#f0f0f0"
   cover_position="50% 53%"
 >}}
+
+> I hope it helps you to create **awesome Pixel Art!** 🍀
