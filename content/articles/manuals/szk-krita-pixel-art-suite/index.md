@@ -874,11 +874,35 @@ I considered removing the tool, but since it still does the job well for small a
 Tool for drawing pixel perfect fonts!
 **Shortcut**: {{< shortcut "T" >}}
 
+To add a text:
+- {{< shortcut "Click + Drag" >}} to **create a rectangle that contains the text**, or simply {{< shortcut "Left Click" >}} to create a default area.
+- Add and edit your text in the pop-up window:
 
-<!-- TODO aqui estamos -->
-❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+
+{{< img_caption "k-sprite-text-editor-window.png" "Text editor window" >}}
+
+Text editor window
+:-- 
+{{< cell "1" >}} Text input for adding your **text**.
+{{< cell "2" >}} **Font** selector.
+{{< cell "3" >}} Font **size**.
+{{< cell "4" >}} Horizontal and Vertical **alignment**.
+{{< cell "5" >}} **Fits the rectangle to the text** (useful if you need to recalculate the area in case the text is out of bounds).
+{{< cell "6" >}} Crispness treshold. This is useful for adjust non|pixel art fonts and to make them look better.
+{{< cell "7" >}} Color outline.
+{{< cell "8" >}} Outline direction. Click one to toggle it on/of.
+{{< cell "9" >}} Clear/Check all outline directions.
+
+
+Press {{< shortcut "OK" >}} to submit the text, or {{< shortcut "Cancel" >}} to -{{< text_rotate "drumroll 🥁🥁🥁" >}}- {{< text_spoiler "cancel/discard the text 🤯" >}}.
+
+
+
+{{< box_green >}}
+You can move the text while is being edited by {{< shortcut "Clicking its rectangle" >}} and dragging it:
+{{< img_caption "k-sprite-text-move.gif" "Moving the text" >}}
+{{< /box_green >}}
 
 {{< box_green "💡" >}}
 
