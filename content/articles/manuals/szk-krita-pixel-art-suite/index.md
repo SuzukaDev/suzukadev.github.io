@@ -626,11 +626,17 @@ Option | | Shortcut
 
 Button | | Shortcut
 :--|:--|--:
-{{< cell "1" >}} Solo Mode | Makes perfect pixel lines. | {{< shortcut "TAB" >}}
+{{< cell "1" >}} Solo Mode | Display only the layer that is being edited.. | {{< shortcut "TAB" >}}
 {{< cell "2" >}} Adjust document to view |  | {{< shortcut "3" >}}
 {{< cell "3" >}} Delete All | Clear all the content in the edited layer.| (No shortcut)
 {{< cell "4" >}} Undo/Redo | Undo and redo changes. | {{< shortcut "CTRL+Z" >}} / {{< shortcut "CTRL+SHIFT+Z" >}}
 
+
+{{< row >}}
+{{< img_caption "k-sprite-solo-mode.webp" "(1) Solo mode" >}}
+
+{{< img_caption "k-sprite-delete-all.webp" "(3) Delete all layer content" >}}
+{{< /row >}}
 
 
 {{< header t="Tools" color="#F23C3CFF" h=3 align="left" class="underline" >}}
@@ -859,7 +865,9 @@ Tool for zooming specific areas easily.
 {{< header t="Canvas" h=3 align="left" class="underline" >}}
 ### Canvas {.no-display}
 
-Here is where you draw. It will render the current state of the document, and you will be editing the active layer when launching the editor.
+<!-- Here is where you draw. It will render the current state of the document, and you will be editing the active layer that was active when launching the editor. -->
+
+Here is where you draw. This area displays the current state of the document, and you will be editing **the layer that was active when you launched the editor**.
 
 - Controls
 Shortcut | Action
@@ -995,6 +1003,14 @@ Fonts used:
 - [Minimal4](https://saint11.org/blog/fonts/) by *[Pedro Medeiros](https://saint11.art/)* ([@saint11](https://x.com/saint11)) ({{< text_wavy "Thank you!" 0.04 6 1.2 >}})
 - [Tiny5-Regular](https://fonts.google.com/specimen/Tiny5) by *[Stefan Schmidt](https://fonts.google.com/?query=Stefan%20Schmidt)* ({{< text_wavy "Thank you!" 0.01 6  1.4 >}})
 
+Mentioned articles/resources:
+
+- [HD Index Painting in Photoshop](http://danfessler.com/blog/hd-index-painting-in-photoshop) by [Dan Fessler](http://danfessler.com/).
+
+- [Anti-Alias and Banding](https://saint11.art/pixel_art_articles/article5/) by [Pedro Medeiros](https://saint11.art/about/)
+
+---
+
 {{< link_card 
   url="https://orb91.gumroad.com/l/szk-krita-pixel-art-suite"
   cover="images/cover_logo-animated-512px.webp"
@@ -1007,4 +1023,4 @@ Fonts used:
   cover_position="50% 53%"
 >}}
 
-> I hope it helps you to create **awesome Pixel Art!** 🍀
+> I hope it helps {{< text_wavy "you" >}} to {{< text_handwritten text="create" font=3 >}} **{{< text_rotate "awesome" >}} {{< text_shimmer "Pixel Art!" >}}** 🍀
