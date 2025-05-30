@@ -590,12 +590,14 @@ Once you submit the changes, it will appear as usual in Krita, in its correct la
 
 <!-- <figure><img src="https://public-files.gumroad.com/fdmqqkrdq2zepkqcb4yvp3kf7z3v"><p class="figcaption"></p></figure> -->
 
-- {{< cell text="**Active tool options**" color="rgb(91, 91, 240)" >}}: Options related the selected tool.
-- {{< cell text="**Actions**" color="rgb(91, 91, 240)" >}}: Diferent actions, like undo/redo, solo mode, etc.
-- {{< cell text="**Tool Bar**" color="rgb(91, 91, 240)" >}}: Contains all the drawing tools.
-- {{< cell text="**Canvas**" color="rgb(91, 91, 240)" >}}: This is where you draw.
-- {{< cell text="**Export Buttons**" color="rgb(91, 91, 240)" >}}: Buttons for submitting your changes to Krita.
-- {{< cell text="**Info Bar**" color="rgb(91, 91, 240)" >}}: Offers different information about the selected tool, the hovering elements, etc.
+- {{< cell text="**Active tool options**" color="rgb(91, 91, 240)" url="#tool-options" >}}: Options related the selected tool.
+- {{< cell text="**Actions**" color="rgb(91, 91, 240)" url="#actions" >}}: Diferent actions, like undo/redo, solo mode, etc.
+- {{< cell text="**Tool Bar**" color="rgb(91, 91, 240)" url="#tools" >}}: Contains all the drawing **tools**.
+- {{< cell text="**Canvas**" color="rgb(91, 91, 240)" url="#canvas" >}}: This is where you draw.
+- {{< cell text="**Export Buttons**" color="rgb(91, 91, 240)" url="#export-buttons" >}}: Buttons for submitting your changes to Krita.
+- {{< cell text="**Info Bar**" color="rgb(91, 91, 240)" url="#info-bar" >}}: Offers different information about the selected tool, the hovering elements, etc.
+
+
 
 
 {{< header t="Tools" color="#F23C3CFF" h=3 align="left" class="underline" >}}
