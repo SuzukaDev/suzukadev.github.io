@@ -84,18 +84,19 @@ A new **docker** with the plugin will appear:
 
 {{< img_caption img="tabs-legend.png" caption="Tabs of the plugin" class="no-box-shadow" >}}
 
-<div>
-{{< cell "1" >}} - Color shading <br><br>
+<!-- <div> -->
+<div style="flex: 0 auto; text-align:left;">
+{{< cell "1" "#FF8526FF" "#color-shading" >}} {{< link_color "#color-shading" "**Color shading**" "#FF8526FF" >}} <br><br>
 
-{{< cell "2" >}} - Color replace <br><br>
+{{< cell "2" "#FF8526FF" "#color-replace" >}} {{< link_color "#color-replace" "**Color replace**" "#FF8526FF" >}} <br><br>
 
-{{< cell "3" >}} - Index Painting<br><br>
+{{< cell "3" "#FF8526FF" "#index-painting" >}} {{< link_color "#index-painting" "**Index Painting**" "#FF8526FF" >}} <br><br>
 
-{{< cell "4" >}} - Export <br><br>
+{{< cell "4" "#FF8526FF" "#export-tab" >}} {{< link_color "#export-tab" "**Export**" "#FF8526FF" >}} <br><br>
 
-{{< cell "5" >}} - K-Sprite <br><br>
+{{< cell "5" "#FF8526FF" "#k-sprite" >}} {{< link_color "#k-sprite" "**K-Sprite**" "#FF8526FF" >}} <br><br>
 
-{{< cell "6" >}} - Settings <br><br>
+{{< cell "6" "#FF8526FF" "#options" >}} {{< link_color "#options" "**Options**" "#FF8526FF" >}} <br><br>
 </div>
 
 {{< /row >}}
