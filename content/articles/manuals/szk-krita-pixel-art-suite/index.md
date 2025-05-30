@@ -1066,12 +1066,12 @@ Export Scaled Pixel Art (Selected Layers) (SZK Pixel Art Suite) | (Not set)
 
 # Credits
 
-Fonts used:
+**Fonts** used:
 
 - [Minimal4](https://saint11.org/blog/fonts/) by *[Pedro Medeiros](https://saint11.art/)* ([@saint11](https://x.com/saint11)) ({{< text_wavy "Thank you!" 0.04 6 1.2 >}})
 - [Tiny5-Regular](https://fonts.google.com/specimen/Tiny5) by *[Stefan Schmidt](https://fonts.google.com/?query=Stefan%20Schmidt)* ({{< text_wavy "Thank you!" 0.01 6  1.4 >}})
 
-Mentioned articles/resources:
+Mentioned **articles**:
 
 - [HD Index Painting in Photoshop](http://danfessler.com/blog/hd-index-painting-in-photoshop) by [Dan Fessler](http://danfessler.com/).
 
