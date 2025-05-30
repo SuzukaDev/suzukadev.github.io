@@ -1354,6 +1354,12 @@ a.button.four:hover:after, a.button.four:hover:before{
 }
 
 // Inline <code>
+code {
+	word-break: break-word;
+	// overflow-wrap: anywhere;
+	overflow-wrap: normal;
+}
+
 // <code> elements inside .articles-content that do not have a <pre> element as their direct parent
 .articles-content code:not(pre > code){
 	font-family: 'Courier New', Courier, monospace;
