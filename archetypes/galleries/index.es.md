@@ -11,6 +11,7 @@ date: '{{ .Date }}' # Usado para ordenar (más reciente primero)
 author: {{.Site.Params.galleries_author}}
 draft: false
 # categories: ["gamedev", "art"]
+# main_classes: 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 
 ## INFORMACIÓN Menús https://gohugo.io/content-management/menus/
 # menus:
@@ -29,6 +30,7 @@ draft: false
 # hover_color: rgba(255, 94, 0, 0.57) # color de resplandor (en el tema oscuro) al hacer hover en una galeria. Si no se establece, se tomará el color más predominante de la imagen usada como hover.
 
 # CONFIGURACIONES DE APARIENCIA
+# accent_color = "#ff168a" # customize the color for links, etc in the page
 # theme: light # Fuerza un tema para la galería (valores posibles: dark/light). Por defecto usa defaultTheme de la configuración.
 transparent_bg_for_gifs: true # si es verdadero, el fondo de los .gif será transparente
 transparent_bg_for_pngs: true # si es verdadero, el fondo de los .png será transparente
@@ -51,4 +53,6 @@ print_debug_resource_weight: true # Si es verdadero, muestra un campo 'weight' e
 #       cover: true
 #       date: 2024-02-18T13:04:30+0100
 #       weight: 20
+
+# related_pages: [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 ---

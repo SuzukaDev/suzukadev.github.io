@@ -1,0 +1,61 @@
+{{- /*  
+Renders a styled link inside a <span> element with optional background color and custom class.
+
+Arguments:
+0 / page / url = (string) The target link. Can be a relative path to a page or an absolute URL.
+1 / text = (string) The text to display inside the link.
+2 / color / c = (string) Optional background color (applied via CSS variable --link-bg-color).
+3 / class = (string) Optional additional CSS classes applied to the outer <span> element.
+4 / size = (int) Size of the box (padding value).
+5 / font_size = (string) Size of the text in the link. Examples: "15px", "2em", "4rem"
+6 / radius = (string) Border radius for the button/link. Example: "99999px", "0px", "10px", "50%"
+
+Usage:
+{{< linkbox "/about" "About Us" >}}
+{{< linkbox url="/blog" text="Visit Blog" color="#ff0" class="highlighted" size="5" >}}
+
+If the URL corresponds to an internal page, it is automatically resolved to its relative permalink.
+
+*/ -}}
+
+{{- $link := or (.Get 0) (.Get "page") (.Get "url") -}}
+{{- $text := or (.Get 1) (.Get "text") -}}
+{{- $color_bg := or (.Get 2) (.Get "color") (.Get "c") | default false -}}
+{{- $class := or (.Get 3) (.Get "class") -}}
+{{- $box_size := or (.Get 4) (.Get "size") -}}
+{{- $font_size := or (.Get 5) (.Get "font_size") -}}
+{{- $border_radius := or (.Get 6) (.Get "radius") -}}
+
+
+{{- $text = $text | markdownify -}}
+
+{{- /*  {{- $url := $link -}}
+{{- $_page := .Site.GetPage $url -}}
+{{- if $_page -}}
+	{{- $url = $_page.RelPermalink -}}
+{{- end -}}  */ -}}
+{{- $url := partial "utils/get-link.html" (dict "context" . "url" $link) -}}
+
+
+{{- /*  {{- $url := (.Site.GetPage $link).RelPermalink -}}  */ -}}
+
+{{- $css_style := "" -}}
+
+{{- with $box_size -}} 
+	{{- $css_style = printf "%s --button-size:%dpx;" $css_style . -}}
+{{- end -}}
+{{- with $color_bg -}} 
+	{{- $css_style = printf "%s --link-bg-color:%s;" $css_style . -}}
+{{- end -}}
+{{- with $font_size -}} 
+	{{- $css_style = printf "%s --link-font-size:%s;" $css_style . -}}
+{{- end -}}
+{{- with $border_radius -}} 
+	{{- $css_style = printf "%s --button-border-radius:%s;" $css_style . -}}
+{{- end -}}
+
+
+<span class="link-box-color{{ with $class }} {{ . }} {{- end -}}"
+{{- with $css_style -}} style="{{ . | safeCSS }}" {{- end -}} >
+	<a class="" href="{{- $url -}}">{{- $text -}}</a>
+</span> 

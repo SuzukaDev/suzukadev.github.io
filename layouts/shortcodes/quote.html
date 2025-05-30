@@ -1,0 +1,21 @@
+{{- /*  
+Quote with author added with <cite></cite>
+
+Arguments:
+text = (string) Text with the quote
+author/by = (string) The author of the quote
+
+{{< quote "Learn from the past, live for today, hope for the future" "Einstein" >}}
+{{< quote text="Learn from the past, live for today, hope for the future" author="Einstein" >}}
+{{< quote text="Learn from the past, live for today, hope for the future" by="Einstein" >}}
+*/ -}}
+
+{{- $text := or (.Get "text") (.Get "quote")  (.Get 0) -}}
+{{- $author := or (.Get "author") (.Get "by") (.Get 1) | default "" -}}
+
+<blockquote>
+{{$text | markdownify }}
+{{- if $author -}}
+	<cite>{{$author}}</cite>
+{{- end -}}
+</blockquote>

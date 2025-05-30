@@ -23,12 +23,38 @@ menu:
 Alicante (Spain 🇪🇸)
 
 
-## Contact
+## Contact 👋
 <!-- ## {{<text_wavy text="Contact" freq="0.05" time="1.8">}} -->
 
-<!-- You can contact me via: -->
+You can connect with me via:
 
 Email: {{<get_social "email" >}}
 
 Twitter: {{<get_social twitter true >}}
 
+
+
+<!-- 
+Colorido:
+
+ ))
+ ;;
+() )
+ ||
+ ""
+
+ }}
+ ;;
+() )
+ ||
+ ""
+
+ }}
+ ;;
+() )
+ ""
+
+
+ }} ;;() ) ""
+
+ -->

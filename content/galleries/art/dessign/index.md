@@ -5,7 +5,8 @@ description: Icon dessign, motion graphics, banners, covers, etc.
 date: '2025-04-27T21:16:13+02:00' # Used for sorting (newest first)
 author: Suzuka Ka
 draft: false
-# categories: ["gamedev", "art"]
+categories: ["art", "dessign"]
+main_classes: 'sans-font'
 
 ## INFO Menus https://gohugo.io/content-management/menus/
 # menus:

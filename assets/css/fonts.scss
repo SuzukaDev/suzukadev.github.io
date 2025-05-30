@@ -1,3 +1,22 @@
+// @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+// // Is a fake pixel font (high resolution pixels)
+// .pixel-font-fake{
+// 	font-family: "Pixelify Sans", sans-serif;
+// 	font-optical-sizing: auto;
+// 	font-weight: 400;
+// 	font-style: normal;
+//   }
+
+// @import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
+// // I dont like it because is VERY SMALL
+// .pixel-font-micro {
+// 	font-family: "Micro 5", sans-serif;
+// 	font-weight: 400;
+// 	font-style: normal;
+// 	font-size: 1.4rem;
+//   }
+  
+
 @import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
 .pixel-font{
 	// font-family: "Press Start 2P", system-ui;
@@ -9,7 +28,7 @@
 	// font-weight: 600;
 	// font-style: normal;
 	// font-size: .6em;
-	image-rendering: pixelated;
+	// image-rendering: pixelated;
 	// image-rendering: crisp-edges;
 	font-smooth: never;
 	-webkit-font-smoothing : none;
@@ -51,5 +70,22 @@ font-style: normal;
 	font-family: "Schoolbell", cursive;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 1.2em;
+	// font-size: 1.2em;
+}
+
+.handwritten-font .articles-content, 
+.handwritten-font hgroup.galery-title, 
+.handwritten-font aside.articles-right-bar {
+	p, li{
+		font-size: 1.17rem !important;
+	}
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+.sans-font{
+	font-family: "Josefin Sans", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
 }

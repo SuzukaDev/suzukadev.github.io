@@ -140,4 +140,7 @@ randomness = (float) Displacement randomness. Default: 0.0
 {{- end -}}
 
 {{- /*  To avoid whitespaces in HTML  */ -}}
-{{- $output | safeHTML -}}
+<span>
+	{{- $output | safeHTML -}}
+</span>
+

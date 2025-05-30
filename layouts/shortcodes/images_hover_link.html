@@ -17,7 +17,7 @@ c2_dark = Color 2 for DARK theme. Default: Main web color.
 c0_light = Color 0 for LIGHT theme. Default: Main web color.
 c1_light = Color 1 for LIGHT theme. Default: Main web color.
 c2_light = Color 2 for LIGHT theme. Default: Main web color.
-
+fit = Optimize the image to fit X pixels. Default: ""/false (No fit/optimization)
 
 Example:
 {{< images_hover_link img="cover.png" img_hover="cover_hover.png" page="about" t1=1s t2=5s >}}
@@ -33,6 +33,34 @@ Example:
 {{- $c0 := (or (.Get 5) (.Get "c0")) -}}
 {{- $c1 := (or (.Get 6) (.Get "c1")) -}}
 {{- $c2 := (or (.Get 7) (.Get "c2")) -}}
+{{- $size_fit := (.Get "fit") | default false -}}
+
+{{- $fit := "" -}}
+{{- if $size_fit -}}
+	{{- $fit = printf "fit %dx%d" $size_fit $size_fit -}}
+{{- end -}}
+
+{{- $img_link := $img -}}
+{{- $img_resource := or (resources.Get $img) (.Page.Resources.Get $img) -}}
+{{- if $img_resource -}}
+	{{- if $size_fit -}}
+		{{- /*  {{- $img_resource = $img_resource.Filter (images.Process "fit 250x250") -}}  */ -}}
+		{{- $img_resource = $img_resource.Filter (images.Process $fit ) -}}
+	{{- end -}}
+	{{- $img_link = $img_resource.RelPermalink -}}
+{{- end -}}
+
+{{- $img_hover_link := $img_hover -}}
+{{- $img_hover_resource := or (resources.Get $img_hover) (.Page.Resources.Get $img_hover) -}}
+{{- if $img_hover_resource -}}
+	{{- if $size_fit -}}
+		{{- $img_hover_resource = $img_hover_resource.Filter (images.Process $fit ) -}}
+	{{- end -}}
+	{{- $img_hover_link = $img_hover_resource.RelPermalink -}}
+{{- end -}}
+
+
+
 {{- /*  {{- $c0_dark := (or (.Get 5) (.Get "c0_dark")) -}}
 {{- $c1_dark := (or (.Get 6) (.Get "c1_dark")) -}}
 {{- $c2_dark := (or (.Get 7) (.Get "c2_dark")) -}}
@@ -86,9 +114,9 @@ Example:
 
 <a id="" class="hover-reveal-2-images" {{- if $link -}} href='{{- $link -}}' {{- end -}}>
 	<div class="half-border-radius pfp-border-colors" style="{{- $style_variables | safeCSS -}}">
-		<img src="{{- $img -}}">
+		<img src="{{- $img_link -}}">
 		{{- if $img_hover -}}
-			<img src="{{- $img_hover -}}">
+			<img src="{{- $img_hover_link -}}">
 		{{- end -}}
 	</div>
 </a>

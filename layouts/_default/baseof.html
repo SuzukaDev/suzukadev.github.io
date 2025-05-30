@@ -3,9 +3,14 @@
 <html class="{{- if (eq $theme "light") -}}light{{- else if (eq $theme "dark") }}dark{{ end }}" lang="{{- site.LanguageCode | default "en" -}}">
   {{ partial "head.html" . }}
   {{- /*  <body class="preload-no-transitions">  */ -}}
-  <body>
+  {{- $accent_color := .Params.accent_color | default "" -}}
+  {{- $style := "" -}}
+  {{- if $accent_color -}}
+    {{- $style = printf "style='--hover-color:%s;'" $accent_color -}}
+  {{- end -}}
+  <body {{ partial "utils/get-accent-color-style.html" . -}}>
     {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
-    <main>
+    <main {{ with .Params.main_classes -}} class="{{- . -}}" {{- end -}}>
       {{ if .Site.Params.is_debug}}
         {{ partial "debug" . }}
       {{ end }}

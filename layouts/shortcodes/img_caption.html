@@ -1,0 +1,67 @@
+{{- /*  
+Shows an image with a caption below. Can link a web if 'url' set
+
+Arguments:
+img = (string) img path.
+caption = (string) Caption text. Default: ""
+alt = (string) Alternative text when not showing the image (Adding it improves SEO).
+url = (string) Add an url to open when clicking the image. Default: ""
+page = (string) Page to open when clicking the image. Default: ""
+italic = (bool) If true, caption will be in italics. Default: true
+class = (string) Class (or classes) for the <img> element. Tip: use the class 'no-box-shadow' if you want the img to NOT have the shadow around it.
+Usage:
+{{< img_caption img="dexter.png" caption="My best friend" italic=false alt="Picture of a cute dog" >}}
+*/ -}}
+
+{{- $img_path := or (.Get "img") (.Get 0) -}}
+{{- $caption := or (.Get "caption") (.Get 1) | default "" -}}
+{{- $alt_text := or (.Get "alt") (.Get 2) | default "" -}}
+{{- $url := or (.Get "url") (.Get 3) | default "" -}}
+{{- $page_name := or (.Get "page") (.Get 3) | default "" -}}
+{{- $italic := (.Get "italic") | default true -}}
+{{- $img_class := (.Get "class") -}}
+
+{{- $a_link := $url }}
+{{- if $page_name -}}
+	{{- $page := $.Site.GetPage $page_name -}}
+	{{- if not $page -}}
+		{{- errorf "img_caption: Page '%s' not found (in '%s')" $page_name .Page.File.Path -}}
+	{{- end -}}
+	{{- $a_link = $page.RelPermalink }}
+{{- end -}}
+
+{{- if not $alt_text -}}
+{{- $alt_text = "Image" -}}
+{{- end -}}
+
+{{- /*  {{- $image_resource := or (.Page.Resources.Get $img_path) (resources.Get $img_path) -}}  */ -}}
+{{- /*  {{- $img_url := $image_resource.RelPermalink -}}  */ -}}
+
+{{- $img_url := $img_path -}}
+{{- $image_resource := "" -}}
+{{- /*  Get the image resource if the img_path is not a link  */ -}}
+{{- if not (hasPrefix $img_path "http") -}}
+{{- /*  TODO meter esto en un partial utils/?  */ -}}
+  {{- $image_resource = or (.Page.Resources.Get $img_path) (resources.Get $img_path) (.Page.Resources.GetMatch (printf "**%s**" $img_path )) -}}
+  {{- if $image_resource -}}
+    {{- $img_url = $image_resource.RelPermalink -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $tag := "span" | safeHTMLAttr -}}
+{{- if $italic -}}
+	{{- $tag = "em" | safeHTMLAttr -}}
+{{- end -}}
+<figure class="figure-caption">
+	{{- if $a_link -}}<a class="img-link" target="_blank" rel="noopener noreferrer" href="{{$a_link}}">{{- end -}}
+	{{- /*  <img {{ with $img_class }} class="{{.}}"{{- end -}} src="{{- $img_url -}}" loading="lazy" width="{{$image_resource.Width}}" height="{{$image_resource.Height}}" alt="{{$alt_text}}">  */ -}}
+	<img {{ with $img_class }} class="{{.}}"{{- end -}} src="{{- $img_url -}}" loading="lazy" {{with $image_resource}}width="{{.Width}}" height="{{.Height}}"{{end}} alt="{{$alt_text}}">
+	{{- /*  <img src="{{- $img_url -}}" loading="lazy" {{- partial "utils/img-attributes-from-resource.html" (dict "page" .Page "img_path" $img_path) }} alt="{{$alt_text}}">  */ -}}
+	{{- /*  <{{ $tag }} style="opacity: .6;">{{- $caption -}}</{{ $tag }}>  */ -}}
+	{{- if $caption -}}
+		{{- /*  {{- $html := printf "<figcaption><%s style='opacity:.6;'>%s</%s></figcaption>" $tag ($caption | markdownify) $tag -}}  */ -}}
+		{{- $html := printf "<figcaption><%s>%s</%s></figcaption>" $tag ($caption | markdownify) $tag -}}
+		{{- $html | safeHTML -}}
+	{{- end -}}
+	{{- if $a_link -}}</a>{{- end -}}
+</figure>

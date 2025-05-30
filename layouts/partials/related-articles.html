@@ -6,7 +6,8 @@
 {{/*  {{ $related := where (site.RegularPages.Related .) "Params.private" "ne" true | first 3 }}  */}}
 {{ with $related }}
   <hr class="full-separator">
-  <hgroup style="margin-top: 8rem">
+  {{- /*  <hgroup style="margin-top: 8rem">  */ -}}
+  <hgroup style="margin-top: 1rem">
     <h2>{{ T "relatedArticles" }}</h2>
   </hgroup>
   <section class="galleries">

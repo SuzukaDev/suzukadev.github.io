@@ -1,0 +1,80 @@
+{{- /*  
+Renders a stylized link preview card with optional image, title, subtitle, and customizable colors. 
+Useful for visual links to external or internal content.
+
+Arguments:
+url = (string) URL to open when the card is clicked. Required.
+cover = (string) Image path or Page Resource name used as card background.
+title = (string) Title displayed on the card.
+subtitle = (string) Optional subtitle/description. Default: ""
+url_text = (string) Text shown below title instead of raw URL. Default: same as 'url'.
+color / c = (string) Background color. Can be overridden by image resource's dominant color. Default: ""
+cover_position / position = (string) CSS background-position of the image. Default: ""
+hover_color = (string) Background color on hover. Optional.
+text_color = (string) Color of the text. Optional.
+
+Usage:
+{{< link_card 
+  url="https://example.com"
+  cover="cover.jpg"
+  title="Example Title"
+  subtitle="Optional subtitle"
+  url_text="example.com"
+  color="#fafafa"
+  hover_color="#eaeaea"
+  text_color="#333"
+>}}
+
+*/ -}}
+{{- $url := or (.Get "url") (.Get 0) -}}
+{{- $cover := or (.Get "cover") (.Get 1) -}}
+{{- $title := or (.Get "title") (.Get 2) -}}
+{{- $subtitle := or (.Get "subtitle") (.Get 3) | default "" -}}
+{{- $url_text := or (.Get "url_text") (.Get 4) | default $url -}}
+{{- $background_color := or (.Get "color") (.Get "c") (.Get 5) | default "" -}}
+{{- $background_position := or (.Get "cover_position") (.Get "position") (.Get 6) | default "" -}}
+{{- $hover_color := or (.Get "hover_color") -}}
+{{- $text_color := or (.Get "text_color") -}}
+
+{{- /*  {{- $url_link := $url -}}  */ -}}
+{{- $url_link := partial "utils/get-link.html" (dict "context" . "url" $url) -}}
+
+{{- $cover_link := $cover -}}
+{{- $cover_resource := .Page.Resources.Get $cover -}}
+{{- if $cover_resource -}}
+  {{- $cover_link = $cover_resource.RelPermalink -}}
+  {{- if not $background_color -}}
+    {{$background_color = index $cover_resource.Colors 0}}
+  {{- end -}}
+{{- end -}}
+
+
+
+{{- $style_content := "" -}}
+{{- if $background_color -}}
+  {{- $style_content = print $style_content "--background-color:" $background_color ";" -}}
+{{- end -}}
+{{- if $background_position -}}
+  {{- $style_content = print $style_content "--image-position:" $background_position ";" -}}
+{{- end -}}
+{{- if $hover_color -}}
+  {{- $style_content = print $style_content "--hover-color:" $hover_color ";" -}}
+{{- end -}}
+{{- if $text_color -}}
+  {{- $style_content = print $style_content "--details-text-color:" $text_color ";" -}}
+{{- end -}}
+
+
+<figure class="link-card" {{- with $style_content -}} style="{{. | safeCSS}}" {{- end -}}>
+  <a href="{{$url_link}}" target="_blank" rel="noopener noreferrer">
+    <div class="image" style="background-image: url('{{$cover_link}}')">
+    </div>
+    <div class="details">
+      <h2 class="title">{{$title }}</h2>
+      {{- with $subtitle | markdownify  -}}
+        <h3 class="description">{{.}}</h3>
+      {{- end -}}
+      <p class="url">{{$url_text }}</p>
+    </div>
+  </a>
+</figure>

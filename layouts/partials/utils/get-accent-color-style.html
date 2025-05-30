@@ -1,0 +1,13 @@
+{{/*  
+Returns the style attribute with the new defined hover-color/accent color
+
+*/}}
+
+{{- $accent_color := .Params.accent_color | default "" -}}
+{{- $style := "" -}}
+{{- if $accent_color -}}
+  {{- $style = printf "style='--hover-color:%s;'" $accent_color -}}
+{{- end -}}
+
+{{- $style = $style | safeHTMLAttr -}}
+{{- return $style -}}

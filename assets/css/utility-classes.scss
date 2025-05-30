@@ -4,12 +4,34 @@
 	box-shadow: #{$x} #{$y} #{$blur} #{$spread} #{$color} !important;
 }
 
+.no-display{
+	display: none;
+}
+
+.spoiler-blur{
+	transition: 2s;
+	filter: blur(20px);
+	&:hover{
+		transition: 0.4s;
+		filter: blur(0px);
+	}
+}
+
+.sticky{
+	position: sticky !important;
+	top: var(--sticky-top-position, 0px) !important;
+}
+
 .accent-color{
 	color: var(--hover-color);
 }
 
 .hover-accent-color:hover{
 	color: var(--hover-color);
+}
+
+.underline{
+	text-decoration: underline;
 }
 
 .hover-underline:hover{
@@ -33,6 +55,10 @@
 
 .inline-block{
 	display: inline-block;
+}
+
+.no-box-shadow{
+	box-shadow: none !important;
 }
 
 .bloom-text{

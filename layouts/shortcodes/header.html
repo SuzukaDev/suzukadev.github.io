@@ -3,10 +3,12 @@ Displays a header with align options.
 
 
 Arguments:
-1 text = (String). Text of the header.
-2 h = (int) Type of header for the tile (1 for h1, 2 for h2, 3 for h3, etc.). Default: 2 (h2)
-3 align = (String) Text align of the header (options: "left", "right", "center"). Default: "center"
-4 class = (String) CSS class for the header. Default: ""
+0 text = (String). Text of the header.
+1 h = (int) Type of header for the tile (1 for h1, 2 for h2, 3 for h3, etc.). Default: 2 (h2)
+2 align = (String) Text align of the header (options: "left", "right", "center"). Default: "center"
+3 class = (String) CSS class for the header. Default: ""
+4 id = (String) ID class for the header (useful for fragment link). Default: text (the header text)
+5 color/c = (String) Color for the header. Default: Default header color
 
 Use example:
 {{< header "my-first-article, another-article" >}}
@@ -14,10 +16,16 @@ Use example:
 {{< header title="my-first-article, another-article" title="My favourite articles" align="right" class="bloom-shadow" >}}
 */ -}}
 
-{{- $title := or (.Get 1) (.Get "text") (.Get "t") -}}
-{{- $header_number := or (.Get 2) (.Get "h") | default 2 -}}
-{{- $text_align := or (.Get 3) (.Get "align") | default "center" -}}
-{{- $css_class := or (.Get 4) (.Get "class") | default "" -}}
+{{- $title := or (.Get 0) (.Get "text") (.Get "t") -}}
+{{- $header_number := or (.Get 1) (.Get "h") | default 2 -}}
+{{- $text_align := or (.Get 2) (.Get "align") | default "center" -}}
+{{- $css_class := or (.Get 3) (.Get "class") | default "" -}}
+{{- $id := or (.Get 4) (.Get "id") | default $title -}}
+{{- $color := or (.Get 5) (.Get "color") (.Get "c") -}}
+
+{{- $id = $id | anchorize -}}
+
+{{- $title = $title | markdownify}}
 
 {{- $css_class_attr := "" -}}
 {{- if $css_class -}}
@@ -34,5 +42,10 @@ Use example:
 {{- end -}}
 
 {{- $style := (printf "text-align:%s; align-self:%s;" $text_align $flex_align) | safeCSS -}}
-{{- $header := printf "<%s %s style='%s'>%s</%s>" $header_tag $css_class_attr $style $title $header_tag -}}
+{{- with $color -}}
+	{{- $style = (printf "%s color:%s;" $style . ) | safeCSS -}}
+{{- end -}}
+{{- /*  {{- $header_id := printf "id='%s'" ($title) -}}  */ -}}
+{{- $header_id := printf "id='%s'" ($id) -}}
+{{- $header := printf "<%s %s %s style='%s'>%s</%s>" $header_tag $css_class_attr $header_id $style $title $header_tag -}}
 {{- $header | safeHTML -}}

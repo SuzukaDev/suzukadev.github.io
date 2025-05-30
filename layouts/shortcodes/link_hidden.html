@@ -3,15 +3,23 @@ Returns a link with not a visible style.
 Useful when you want to write links that do not call the attention that much.
 
 Use:
-{{< link_hidden [link url] [optional text]>}}
+{{< link_hidden [link url/page] [optional text]>}}
 
 Example:
 {{< link_hidden "www.google.com">}}
 {{< link_hidden "www.google.com" "Google">}}
+{{< link_hidden "about" "Google">}}
   */}}
 
 {{ $url := .Get 0 }}
 {{ $text := .Get 1 }}
+
+{{- /*  {{- $page := .Site.GetPage $url -}}
+
+{{- if $page -}}
+  {{- $url = $page.RelPermalink -}}
+{{- end -}}  */ -}}
+{{- $url = partial "utils/get-link.html" (dict "context" . "url" $url) -}}
 
 {{ $css_class := "link-hidden" | safeHTML}}
 
