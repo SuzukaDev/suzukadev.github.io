@@ -867,19 +867,24 @@ Tool for zooming specific areas easily.
     {{< shortcut "CTRL + Left/Right MB" >}} | **Sample** Foreground/Background color
     {{< shortcut "X" >}} | **Switch** FG/BG Colors
 
-> 
-> 💡 **TIP**: You can **mask regions** for painting by making a selection in Krita:
-> <figure><img src="https://public-files.gumroad.com/3zuy7vuxcmx0h89i2jsfni116u6l"><p class="figcaption"></p></figure>
-> This way, you will only be able to draw within the selection.  
->
-- **Export Buttons**: Export the drawing to a `New Layer` or to the `Active Layer`
 
-    - `New layer` will export the drawing to a new layer above the selected layer
-    - `Active layer` will export the drawing to the layer that **was active** (❗) when executing the editor.
+{{< header t="Export Buttons" h=3 align="left" class="underline" >}}
+### Export Buttons {.no-display}
+
+{{< img_caption img="k-sprite-export-buttons.png" class="no-box-shadow" >}}
+
+Export the drawing/changes in K-Sprite to a `New Layer` or to the `Active Layer` in Krita
+
+- `New layer` will export the drawing to a new layer **above the selected layer**.
+- `Active layer` will export the drawing to the **layer that was active when executing the editor**.
 
 > 
-> 👉 These buttons may show or not depending on the active layer when launching the editor.
+> 👉 These buttons may show or not **depending on the active layer** when launching the editor.
 > 
+>- Launching it with an **empty layer** will make <u>**not**</u> show the `New Layer` button (to avoid cluttering).
+>- Launching it with a **hidden layer** selected will make <u>**not**</u> show the `Active Layer` button (this is to avoid committing changes to an invisible layer by mistake).
+
+
 
 {{< header t="Info Bar" h=3 align="left" class="underline" >}}
 ### Info Bar {.no-display}
