@@ -598,6 +598,39 @@ Once you submit the changes, it will appear as usual in Krita, in its correct la
 - {{< cell text="**Info Bar**" color="rgb(91, 91, 240)" url="#info-bar" >}}: Offers different information about the selected tool, the hovering elements, etc.
 
 
+{{< header t="Tool Options" h=3 align="left" class="underline" >}}
+### Tool Options {.no-display}
+
+Options for the different drawing tools.
+
+{{< box_info >}}
+These options appear/disappear depending on the active tool.
+{{< /box_info >}}
+
+{{< img_caption img="k-sprite-tool-options.png" class="no-box-shadow" >}}
+
+Option | | Shortcut
+:--|:--|--:
+{{< cell "1" >}} Pixel Perfect | Makes perfect pixel lines. | {{< shortcut "Q" >}}
+{{< cell "2" >}} Erase Mode |  | {{< shortcut "E" >}}
+{{< cell "3" >}} Dither Mode | Use the {{< link_color url="#interface" text="**Index Painting matrix**" class="underline" >}} as a pattern when drawing.| {{< shortcut "D" >}}
+{{< cell "4" >}} Fill Mode | Fill a primitive with color. | {{< shortcut "ALT+F" >}}
+{{< cell "5" >}} X/Y Mirror |  | {{< shortcut "M" >}} / {{< shortcut "N" >}}
+
+
+
+{{< header t="Actions" h=3 align="left" class="underline" >}}
+### Actions {.no-display}
+
+{{< img_caption img="k-sprite-action-buttons.png" class="no-box-shadow" >}}
+
+Button | | Shortcut
+:--|:--|--:
+{{< cell "1" >}} Solo Mode | Makes perfect pixel lines. | {{< shortcut "TAB" >}}
+{{< cell "2" >}} Adjust document to view |  | {{< shortcut "3" >}}
+{{< cell "3" >}} Delete All | Clear all the content in the edited layer.| (No shortcut)
+{{< cell "4" >}} Undo/Redo | Undo and redo changes. | {{< shortcut "CTRL+Z" >}} / {{< shortcut "CTRL+SHIFT+Z" >}}
+
 
 
 {{< header t="Tools" color="#F23C3CFF" h=3 align="left" class="underline" >}}
