@@ -4,6 +4,10 @@
 	box-shadow: #{$x} #{$y} #{$blur} #{$spread} #{$color} !important;
 }
 
+.no-display{
+	display: none;
+}
+
 .spoiler-blur{
 	transition: 2s;
 	filter: blur(20px);
@@ -24,6 +28,10 @@
 
 .hover-accent-color:hover{
 	color: var(--hover-color);
+}
+
+.underline{
+	text-decoration: underline;
 }
 
 .hover-underline:hover{
