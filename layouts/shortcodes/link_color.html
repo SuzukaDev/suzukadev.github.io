@@ -5,7 +5,7 @@ Arguments:
 0 / page / url = (string) The target link. Can be a relative path to a page, an absolute URL or a fragment (#header).
 1 / text = (string) The text to display inside the link.
 2 / color / c = (string) Color of the link
-3 / class = (string) Optional additional CSS classes applied to the outer <a>
+3 / class = (string) Optional additional CSS classes applied to the outer <a>. Default: "hover-underline"
 4 / style = (string) Custom CSS style
 
 Usage:
@@ -17,7 +17,7 @@ Usage:
 {{- $text := or (.Get 1) (.Get "text") (.Get "t") -}}
 {{- $text_color := or (.Get 2) (.Get "color") (.Get "c") | default false -}}
 {{- /*  {{- $hover_color := or (.Get 3) (.Get "hover_color") (.Get "c2") | default false -}}  */ -}}
-{{- $class := or (.Get 3) (.Get "class") -}}
+{{- $class := or (.Get 3) (.Get "class") | default "hover-underline" -}}
 {{- $custom_style := or (.Get 4) (.Get "style") -}}
 
 {{- $url := partial "utils/get-link.html" (dict "context" . "url" $link) -}}
