@@ -819,11 +819,6 @@ Tool for drawing Squares and Circles.
 - Rectangles: {{< shortcut "R" >}} 
 - Circles: {{< shortcut "C" >}}
 
-
-<!-- TODO aqui estamos -->
-❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
 <!-- {{< box_green >}}
 Circles have been **improved**
 {{< /box_green >}} -->
@@ -832,7 +827,11 @@ Circles have been **improved**
 
 <!-- <figure><img src="https://public-files.gumroad.com/i8yyilbbeg7614gdtvhyzjsjlh2f"><p class="figcaption"></p></figure> -->
 
-
+Shortcuts | Action
+:--|--:
+{{< shortcut "SHIFT (Hold)" >}} | Make **1:1** Squares/Circles.
+{{< shortcut "CTRL" >}} | Make **origin at center**.
+{{< shortcut "ALT" >}} | **Move** Square/Circle.
 
 
 {{< header t="Fill Bucket" color="#F23C3CFF" h=4 align="left" >}}
