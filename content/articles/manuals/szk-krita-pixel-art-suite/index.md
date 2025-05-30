@@ -569,6 +569,7 @@ A new **window will appear** on top of Krita {{< cell "1" >}}, and will **grab t
 >
 >{{< cell "2" >}} - **The active layer will be temporarily hidden in Krita's UI**. This is due *K-Sprite* renders the document, and having it visible will make it impossible to see changes in case you erase parts of the active layer inside *K-Sprite*
 
+
 ### Interface
 
 {{< img_caption "k-sprite.png">}}
@@ -581,9 +582,45 @@ A new **window will appear** on top of Krita {{< cell "1" >}}, and will **grab t
 - {{< cell text="**Canvas**" color="rgb(91, 91, 240)" >}}: This is where you draw.
 - {{< cell text="**Export Buttons**" color="rgb(91, 91, 240)" >}}: Buttons for submitting your changes to Krita.
 - {{< cell text="**Info Bar**" color="rgb(91, 91, 240)" >}}: Offers different information about the selected tool, the hovering elements, etc.
-### Tools
+
+
+{{< header t="Tools" color="#F23C3CFF" h=3 align="left" class="underline" >}}
+### Tools {.no-display}
+<!-- ### Tools {.no-display .underline} -->
+
+{{< row >}}
 
 {{< img_caption img="tools.png" caption="Tools" class="no-box-shadow">}}
+
+
+<!-- <div style="flex: 1 0 auto;"> -->
+<div style="flex: 0 auto; text-align: left;">
+{{< cell text="1" color="#F23C3CFF" url="#brush" >}} {{< link_color "#brush" "**1px Brush**" "#F23C3CFF" >}} <br><br>
+
+{{< cell text="2" color="#F23C3CFF" url="#antialiasing-brush" >}} {{< link_color "#antialiasing-brush" "**Antialiasing Brush**" "#F23C3CFF" >}} <br><br>
+
+{{< cell text="3" color="#F23C3CFF" url="#lines" >}} {{< link_color "#lines" "**Lines**" "#F23C3CFF" >}} <br><br>
+
+
+{{< cell text="4" color="#F23C3CFF" url="#bezier-curves" >}} {{< link_color "#bezier-curves" "**Bezier Curves**" "#F23C3CFF" >}} <br><br>
+
+<!-- {{< cell text="5" color="#F23C3CFF" >}} - Squares <br><br>
+
+{{< cell text="6" color="#F23C3CFF" >}} - Circles <br><br> -->
+
+{{< cell text="5, 6" color="#F23C3CFF" url="#squares--circles" >}} {{< link_color "#squares--circles" "**Squares & Circles**" "#F23C3CFF" >}} <br><br>
+
+{{< cell text="7" color="#F23C3CFF" url="#fill-bucket" >}} {{< link_color "#fill-bucket" "**Fill bucket**" "#F23C3CFF" >}} <br><br>
+
+{{< cell text="8" color="#F23C3CFF" url="#text" >}} {{< link_color "#text" "**Text**" "#F23C3CFF" >}} <br><br>
+
+{{< cell text="9" color="#F23C3CFF" url="#zoom-tool" >}} {{< link_color "#zoom-tool" "**Zoom Tool**" "#F23C3CFF" >}} <br><br>
+
+
+</div>
+
+{{< /row >}}
+
 
 
 <!-- <figure><img src="https://public-files.gumroad.com/xg07htz0l45soesshpgpebvyn4cv"><p class="figcaption"></p></figure> -->
