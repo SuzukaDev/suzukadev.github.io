@@ -893,6 +893,9 @@ Displays information, shortcuts, tips, etc. when **hovering** a button/tool.
 
 {{< img_caption "k-sprite-info-bar.png" "Info bar, at the **bottom** of the editor" >}}
 
+{{< box_green >}}
+This is useful for not having to remember every single shortcut, tip, etc.
+{{< /box_green >}}
 
 
 
