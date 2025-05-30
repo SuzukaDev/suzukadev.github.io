@@ -3,7 +3,7 @@ Makes a download button for downloading a file.
 
 Arguments:
 file = (string) file to download
-text = (string/false) Text to show in the button. Set to false to just show "Download/Descargar". Default: "" -> Download/Descargar 'filename'
+text = (string/false) Text to show in the button. Set to true to just show "Download/Descargar". Default: "" -> Download/Descargar 'filename'
 type = (string) Icon of the button. Options: "windows", "mac", "linux", "android", "krita", "pdf", "video", "image", "file", "game". Default: "" (Generic download button)
 
 
@@ -33,7 +33,7 @@ Usage:
 {{- $file_size := div $bytes 1048576.0 -}}
 
 
-{{- if eq $button_text false -}}
+{{- if eq $button_text true -}}
 	{{- $button_text = T "downloadTitle" -}}
 {{- else if or (not $button_text) (eq $button_text true) -}}
 	{{- /*  {{- $button_text = T "downloadTitle" }}  */ -}}

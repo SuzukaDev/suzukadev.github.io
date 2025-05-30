@@ -82,5 +82,11 @@
         {{/*  Reading time  */}}
       </p>
     {{- end -}}
+
+    {{- if ne .Params.show_description false -}}
+      {{- with .Params.Description -}}
+        <p style="text-align: center;">{{ . | markdownify }}</p>
+      {{- end -}}
+    {{- end -}}
   </hgroup>
 {{ end }}

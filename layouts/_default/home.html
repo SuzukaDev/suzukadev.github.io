@@ -2,16 +2,23 @@
 {{/*  TODO home.html  */}}
   {{/*  {{ partial "title.html" . }}  */}}
   {{ partial "profile_resume.html" . }}
-  {{ partial "categories.html" }}
-  {{ partial "featured.html" . }}
+  {{- if .Site.Params.show_categories_in_index -}}
+    {{ partial "categories.html" }}
+  {{- end -}}
+  {{- if .Site.Params.show_featured_in_index -}}
+    {{ partial "featured.html" . }}
+  {{- end -}}
+  
   {{/*  PREVIOUS/Original  */}}
   {{/*  <section class="galleries">  */}}
     {{/*  {{ range where .Pages "Params.private" "ne" true }}
     {{ partial "album-card.html" . }}
     {{ end }}  */}}
     {{/*  </section>  */}}
-  {{ partial "featured-galleries.html" . }}
-  {{ if .Site.Params.show_featured_articles }}
+  {{- if .Site.Params.show_featured_galleries_in_index -}}
+    {{ partial "featured-galleries.html" . }}
+  {{- end -}}
+  {{ if .Site.Params.show_featured_articles_in_index }}
     {{ partial "articles/featured-articles.html" . }}
   {{ end }}
 {{ end }}

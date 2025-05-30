@@ -11,6 +11,7 @@ date: '{{ .Date }}' # Used for sorting (newest first)
 author: {{.Site.Params.galleries_author}}
 draft: false
 # categories: ["gamedev", "art"]
+# main_classes: 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 
 ## INFO Menus https://gohugo.io/content-management/menus/
 # menus:
@@ -29,6 +30,7 @@ draft: false
 # hover_color: rgba(255, 94, 0, 0.57) # Hover for the bloom color (in dark theme) when hovering a gallery. If not set, gets the most predominant color in the hover image.
 
 # APPEARANCE SETTINGS
+# accent_color = "#ff168a" # customize the color for links, etc in the page
 # theme: light # Forces a theme for the gallery (possible values: dark/light). Defaults to defaultTheme from configuration.
 transparent_bg_for_gifs: true # if true, the background of the .gif's will be transparent
 transparent_bg_for_pngs: true # if true, the background of the .png's will be transparent
@@ -51,4 +53,6 @@ print_debug_resource_weight: true # If true, shows a 'weight' field in the debug
 #       cover: true
 #       date: 2024-02-18T13:04:30+0100
 #       weight: 20
+
+# related_pages = [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 ---

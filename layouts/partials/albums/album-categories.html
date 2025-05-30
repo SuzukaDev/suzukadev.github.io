@@ -1,11 +1,17 @@
 {{ with .Params.categories }}
   <nav class="categories">
     <ul>
-      {{ range $k, $v := site.Taxonomies.categories }}
-        {{ if in $.Params.categories ($k | lower) }}
+      {{- /*  {{ range $k, $v := site.Taxonomies.categories }}  */ -}}
+        {{- /*  {{ if in $.Params.categories ($k | lower) }}  */ -}}
+        {{- /*  {{ if in $.Params.categories ($k) }}
           <li><a class="category-tag" href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
         {{ end }}
-      {{ end }}
+      {{ end }}  */ -}}
+
+        {{ range . }}
+          <li><a class="category-tag" href='{{ "/categories/" | relLangURL }}{{ . | urlize }}'>{{ . | title}}</a></li>
+        {{ end }}
+      
     </ul>
   </nav>
 {{ end }}

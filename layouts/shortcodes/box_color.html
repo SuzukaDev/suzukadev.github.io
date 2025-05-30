@@ -1,0 +1,35 @@
+{{/*  
+Renders a text with a custom color box. 
+
+Arguments:
+color_dark = color used in dark mode
+color_light = color used in light mode
+color = color used both in dark and light mode
+icon = custom icon. Default: "" (none)
+
+false/string = do not show the icon (or pass a string with a custom emoji)
+
+Example of use:
+{{< box_color color_dark="red" color_light="orange" icon="🍀" >}}
+Inside the tags I can write normal markdown code.
+{{< /box_color >}}
+*/}}
+
+{{ $CLASS := "custom-box" }}
+{{- /*  {{ $DEFAULT_ICON := "✅"}}  */ -}}
+{{ $DEFAULT_ICON := (.Get "icon") }}
+{{- $global_color := (.Get "color") | default "" -}}
+{{- $color_dark := (.Get "color_dark") | default "" -}}
+{{- $color_light := (.Get "color_light") | default "" -}}
+
+{{- $dark_col := $color_dark -}}
+{{- $light_col := $color_light -}}
+{{- if $global_color -}}
+	{{- $dark_col = $global_color -}}
+	{{- $light_col = $global_color -}}
+{{- end -}}
+
+{{- $css_style := printf "--custom-box-color-dark:%s; --custom-box-color-light: %s;" $dark_col $light_col -}}
+
+{{ $icon_arg := (or (.Get "icon") (.Get 0)) }}
+{{ partial "shortcodes_partials/box_text_wrapper_base" (dict "icon_arg" $icon_arg "default_icon" $DEFAULT_ICON "class" $CLASS "Inner" .Inner "style" $css_style "Page" .Page ) }}

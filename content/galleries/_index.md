@@ -46,4 +46,9 @@ print_debug_resource_weight: true # If true, shows a 'weight' field in the debug
 #       cover: true
 #       date: 2024-02-18T13:04:30+0100
 #       weight: 20
+
+menus:
+  main:
+    name: Galleries 🖼️
+    weight: -20
 ---

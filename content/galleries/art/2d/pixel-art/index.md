@@ -1,11 +1,13 @@
 ---
 title: 'Pixel Art'
 # Description shown on the album page. Rendered as markdown to enable adding links and some formatting.
-description: "**Tools:** Pyxel Edit, Aseprite, Krita {{< text_wavy text=\"and\" amp=10 >}} [**K-Sprite**, my own Pixel Art Editor.](https://orb91.gumroad.com/l/szk-krita-pixel-art-suite)"
+description: "**<u>Tools</u>:** Pyxel Edit, Aseprite, Krita {{< text_wavy text=\"and\" amp=10 >}} [**K-Sprite**, my own Pixel Art Editor.](https://orb91.gumroad.com/l/szk-krita-pixel-art-suite)  [K-Sprite]({{< relref \"szk-krita-pixel-art-suite\" >}}#k-sprite) "
 date: '2025-04-27T20:18:53+02:00' # Used for sorting (newest first)
 author: Suzuka Ka
 draft: false
-# categories: ["gamedev", "art"]
+categories: ["art", "digital", "pixel art"]
+# categories: ["animals", "gamedev"]
+main_classes: 'pixel-font'
 
 ## INFO Menus https://gohugo.io/content-management/menus/
 # menus:
@@ -13,7 +15,6 @@ draft: false
 #         name: Name in the menu
 #         weight: 10
 #     footer:
-
 ## params:
 # GALLERY DISPLAY SETTINGS
 # private: true # If true, this gallery does won't show in lists, RSS, sitemaps, etc. On list pages, use cascade to hide descendants.

@@ -1,5 +1,4 @@
 +++
-# TODO traducir archetype (ES)
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 date = '{{ .Date }}'
 description = ""
@@ -7,8 +6,11 @@ lastmod = '{{ .Date }}'
 # draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
 # tags = [""]
+# main_classes = 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 # # -------- DISPLAY OPTIONS --------
+# accent_color = "#ff168a" # customize the color for links, etc in the page
 # show_breadcrumbs = false
+# show_description = false
 # show_author = false
 # show_date = false
 # show_reading_time = false
@@ -24,5 +26,5 @@ show_right_bar = true
 # featured_title = '{{ replace .File.ContentBaseName "-" " " | title }}' # if set, it will use this as the title in the featured card. If not, it will use the article's title.
 # featured_description = "" # if set, the article will use this description in the featured card. If not, it will use the article's description.
 # featured_tags = [""] # if set, it will only feature the tags in this array (useful to display only some of the tags). Note: Tags must match the tag in .Params.tags
-
+# related_pages = [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 +++

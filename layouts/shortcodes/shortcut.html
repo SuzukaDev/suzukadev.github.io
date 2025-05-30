@@ -41,7 +41,7 @@ Usage:
 	{{- /*  {{- $output_slice = $output_slice | append "</span>" -}}  */ -}}
 	{{- $end_output := printf "%s</span>" $post_text -}}
 	{{- $output_slice = $output_slice | append $end_output -}}
-{{- delimit $output_slice "" | safeHTML -}}
+{{- delimit $output_slice "" | safeHTML | markdownify -}}
 {{- /*  {{delimit $output_slice "" | safeHTML | markdownify -}}  */ -}}
 {{- /*  {{delimit $output_slice "" | markdownify -}}  */ -}}
 {{- end -}}
