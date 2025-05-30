@@ -34,7 +34,7 @@ show_right_bar = true
 
 <!-- > Plugin that makes doing **Pixel Art** in *Krita* **much better**! -->
 
-> *Awesome* Plugin for ***{{< text_handwritten text="Krita" font= 3 >}}*** that adds **{{< text_wavy2 "lots of features" 0.5 0.03 >}}** for making **{{< text_shimmer text="Pixel Art" font=2 >}}**!
+> *Awesome* plugin for ***{{< text_handwritten text="Krita" font= 3 >}}*** that adds **{{< text_wavy2 "lots of features" 0.5 0.03 >}}** for making **{{< text_shimmer text="Pixel Art" font=2 >}}**!
 
 
 {{< link_card 
@@ -688,26 +688,33 @@ Button | | Shortcut
 
 <!-- {{< cell text="**1 - Brush**" color="#F23C3CFF" >}}: **1px brush** with <u>**pixel perfect**</u> option. -->
 **1px brush** with <u>**pixel perfect**</u> option for **clean pixel art strokes**.
+**Shortcut**: {{< shortcut "B" >}}
 
 <!-- ![asdf](images/k-sprite/pixel-perfect-[x8].png) -->
 
 {{< img_caption img="pixel-perfect-x8.png" class="no-box-shadow" caption="Great for perfect pixel strokes" >}}
 
 
-**Shortcut**: {{< shortcut "B" >}}
 
 Drawing Shortcuts | Action
-:--|:--:
+:--|--:
 {{< shortcut "Left MB (Mouse Button)" >}} | Paint with Foreground (FG) color.
 {{< shortcut "Right MB" >}} | Paint with Background (BG) color.
-{{< shortcut "Shift" >}} (Hold) | Make a line between from the last point to the cursor.
-{{< shortcut "Shift" >}} (Hold) | Make a line between from the last point to the cursor.
+{{< shortcut "SHIFT" >}} (Hold) | Make a line between from the last point to the cursor.
+{{< shortcut "CTRL+ LeftMB/RightMB" >}} (Hold) | Pick FG/BG color.
 
 <!-- <figure><img src="https://public-files.gumroad.com/yb1et2sz0i5bzn9apdjqchp3wt3n"><p class="figcaption"></p></figure> -->
 
 <!-- {{< cell text="**2 - Antialiasing brush**" color="#F23C3CFF" >}}: Automatically calculates the color of a pixel by their neighbour pixels. -->
 
+
+
+
+
 {{< header t="Antialiasing brush" color="#F23C3CFF" h=4 align="left" >}}
+
+Brush for helping doing antialiasing. 
+**Shortcut**: {{< shortcut "A" >}}
 
 
 {{< img_caption img="antialiasing-tool-mix.webp" class="no-box-shadow" >}}
@@ -742,6 +749,9 @@ The numbers (*P4, P8, M4, M8*) reffers to the **total neighbours** of a pixel th
 
 {{< header t="Lines" color="#F23C3CFF" h=4 align="left" >}}
 
+Tool for creating lines. 
+**Shortcut**: {{< shortcut "V" >}}
+
 <!-- {{< cell text="**3 - Line**" color="#F23C3CFF" >}}: Makes a **straight line**. Press {{< shortcut "CONTROL" >}} to **snap** the line into perfect ratio lines. -->
 
 <!-- Lo pongo open, porque es una FEATURE... hay que mostrar las cosas buenas SIN MIEDO -->
@@ -765,6 +775,8 @@ This is due I personally like to draw perspective buildings, streets, etc. and I
 {{< header t="Bezier Curves" color="#F23C3CFF" h=4 align="left" >}}
 
 Pixel Perfect **cubic and quadratic bezier** curves!
+**Shortcut**: {{< shortcut "ALT+V" >}}
+
 
 {{< img_caption "k-sprite-bezier-demo.gif" >}}
 
@@ -793,10 +805,7 @@ This is due the points are added on **mouse release**, and if the window loses f
 {{< /box_green >}}
 
 
-<!-- TODO aqui estamos -->
-❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
 
 <!-- {{< cell text="**5 - Square**" color="#F23C3CFF" >}}: Create squares {{< text_spoiler "who could have guessed? 🤣" >}} -->
 
@@ -804,13 +813,34 @@ This is due the points are added on **mouse release**, and if the window loses f
 
 {{< header t="Squares & Circles" color="#F23C3CFF" h=4 align="left" >}}
 
+Tool for drawing Squares and Circles.
 
-{{< img_caption img="better-primitives-x8.png" class="no-box-shadow" >}}
+**Shortcuts**: 
+- Rectangles: {{< shortcut "R" >}} 
+- Circles: {{< shortcut "C" >}}
+
+
+<!-- TODO aqui estamos -->
+❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+<!-- {{< box_green >}}
+Circles have been **improved**
+{{< /box_green >}} -->
+
+{{< img_caption img="better-primitives-x8.png" caption="Krita primitives vs K-Sprite primitives" class="no-box-shadow" >}}
 
 <!-- <figure><img src="https://public-files.gumroad.com/i8yyilbbeg7614gdtvhyzjsjlh2f"><p class="figcaption"></p></figure> -->
 
 
+
+
 {{< header t="Fill Bucket" color="#F23C3CFF" h=4 align="left" >}}
+
+Tool for filling closed areas.
+**Shortcut**: {{< shortcut "F" >}}
+
+{{< img_caption "k-sprite-fill-tool-example.png" "Some shapes filled with the fill-bucket and the dither option!" >}}
 
 {{< details summary="⚠️ Warning about the <u>fill-bucket</u> tool" color="rgba(228, 171, 17, 0.79)" >}}
 {{< box_warning >}}
@@ -823,7 +853,7 @@ This means that if the area to fill is ***big enough*** to reach that recursive 
 {{< box_info >}}
 I tried some non-recursive algorithms, but they are generally way slower than the *Flood Fill algorithm*, so it is best to use Krita's fill-bucket tool for filling large areas. 
 
-I considered removing the tool, but since it still does the job well for small and medium areas, I decided to keep it.
+I considered removing the tool, but since it still does the job well for small and medium areas, I decided to keep it, since sometimes is useful 👍.
 {{< /box_info >}}
 {{< /box_warning >}}
 
@@ -843,6 +873,13 @@ I considered removing the tool, but since it still does the job well for small a
 <!-- 2. **Text**: Tool to render correctly pixelated fonts -->
 
 Tool for drawing pixel perfect fonts!
+**Shortcut**: {{< shortcut "T" >}}
+
+
+<!-- TODO aqui estamos -->
+❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
 
 {{< box_green "💡" >}}
 
@@ -854,9 +891,17 @@ Tool for drawing pixel perfect fonts!
 <!-- <figure><img src="https://public-files.gumroad.com/v16jf2e48wb1l6xfywhoaetd8q4u"><p class="figcaption"></p></figure> -->
 
 {{< header t="Zoom Tool" color="#F23C3CFF" h=4 align="left" >}}
-Tool for zooming specific areas easily.
+<!-- Tool for zooming specific areas precissely. -->
+Tool for precisely zooming in on specific areas.
+**Shortcut**: {{< shortcut "Z" >}}
 
+{{< img_caption "k-sprite-zoom-example.gif" "Zoom in on specific areas with `Left Click+Drag`" >}}
 
+Zoom Shortcuts | Action
+:--|--:
+{{< shortcut "Left MB+(Drag)" >}} | Zoom in rectangle.
+{{< shortcut "Left MB" >}} | Zoom In.
+{{< shortcut "Right MB" >}} | Zoom Out.
 
 
 
