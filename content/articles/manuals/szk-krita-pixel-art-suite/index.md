@@ -853,19 +853,40 @@ Tool for zooming specific areas easily.
 
 
 
-> 
-> 💡 You can check each tool shortcut by hovering any tool button and seeing the **Info Bar**.
-- **Canvas**:
 
-    - Controls
-    Shortcut | Action
-    :-- | --:
-    {{< shortcut "Left MB" >}} | **Paint** with **Foreground** Color (FG)
-    {{< shortcut "Right MB" >}} | **Paint** with **Background** Color (BG)
-    {{< shortcut "Middle MB" >}} or {{< shortcut "Space + Left MB (*Drag*)" >}} | **Pan Canvas**
-    {{< shortcut "CTRL + Middle MB (*Drag*)" >}} | **Zoom** in/out
-    {{< shortcut "CTRL + Left/Right MB" >}} | **Sample** Foreground/Background color
-    {{< shortcut "X" >}} | **Switch** FG/BG Colors
+
+
+{{< header t="Canvas" h=3 align="left" class="underline" >}}
+### Canvas {.no-display}
+
+Here is where you draw. It will render the current state of the document, and you will be editing the active layer when launching the editor.
+
+- Controls
+Shortcut | Action
+:-- | --:
+{{< shortcut "Left MB" >}} | **Paint** with **Foreground** Color (FG)
+{{< shortcut "Right MB" >}} | **Paint** with **Background** Color (BG)
+{{< shortcut "Middle MB" >}} or {{< shortcut "Space + Left MB (*Drag*)" >}} | **Pan Canvas**
+{{< shortcut "CTRL + Middle MB (*Drag*)" >}} | **Zoom** in/out
+{{< shortcut "CTRL + Left/Right MB" >}} | **Sample** Foreground/Background color
+{{< shortcut "X" >}} | **Switch** FG/BG Colors
+{{< shortcut "1" >}} | (Zoom) **1:1 pixel scale**
+{{< shortcut "2" >}} | (Zoom) **Fit** minimum width/height
+{{< shortcut "3" >}} | (Zoom) **Fit document** into viewport
+
+
+{{< box_info "💡" >}}
+**TIP**: You can **mask regions** for painting in K-Sprite by **making a selection in Krita**:
+<!-- <figure><img src="https://public-files.gumroad.com/3zuy7vuxcmx0h89i2jsfni116u6l"><p class="figcaption"></p></figure> -->
+{{< img_caption "sync-selection.gif" "Selection Sync" >}}
+
+This way, you will only be able to draw within the selection.
+
+{{< box_warning >}}
+At the moment, there is no visual input inside K-Sprite to know if there is a selection active. You will have to look Krita's canvas for that.
+{{< /box_warning >}}
+{{< /box_info >}}
+
 
 
 {{< header t="Export Buttons" h=3 align="left" class="underline" >}}
