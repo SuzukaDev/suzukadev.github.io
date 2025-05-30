@@ -166,7 +166,7 @@ This **offers more control** for making cohesive color combinations under specif
 > {{< cell "2" >}} uses the **same algorithm** as the one inspired by ***Pyxel Edit***. 
 > <br>
 > <br>
-> {{< cell "3" >}} Uses a **different algorithm** (it usually retrieves more muddy colors for the shadows and more coloured lights).
+> {{< cell "3" >}} Uses a **different algorithm** (it usually gives more muddy colors for the shadows and more coloured lights).
 
 ---
 {{< header "Mixer (Mix)" 3 "left" >}}
@@ -453,7 +453,7 @@ Having a **black and white** drawing (or an empty layer if you want to draw from
 {{< img_caption "index-painting-tutorial-1.png" >}}
 
 {{< box_info >}}
-Note: It is preferable if the drawing already has crisp, hard edges, since Index Painting tends to generate smooth soft edges in the silhouettes (which is not desirable for Pixel Art).
+Note: It is preferable if the drawing already has **crisp/hard edges**, since Index Painting tends to generate smooth soft edges in the silhouettes (which is not desirable for Pixel Art).
 {{< /box_info >}}
 
 Press the button ***Index Painting***, in the Index Painting Tab:
