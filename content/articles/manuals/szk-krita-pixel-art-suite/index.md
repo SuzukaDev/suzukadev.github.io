@@ -571,8 +571,20 @@ A new **window will appear** on top of Krita {{< cell "1" >}}, and will **grab t
 >
 >{{< cell "2" >}} - **The active layer will be temporarily hidden in Krita's UI**. This is due *K-Sprite* renders the document, and having it visible will make it impossible to see changes in case you erase parts of the active layer inside *K-Sprite*
 
+{{< box_info >}}
+You will be able to **draw** in the **layer you had selected when you executed K-Sprite**.
 
-### Interface
+This layer **will appear on top**, while the rest of the document will be in the background:
+
+{{< img_caption "k-sprite-layer-order.png" "The selected layer (pink circle) appears on top when is edited in K-Sprite" >}}
+
+{{< box_green >}}
+Once you submit the changes, it will appear as usual in Krita, in its correct layer position.
+{{< /box_green >}}
+
+{{< /box_info >}}
+
+## Interface
 
 {{< img_caption "k-sprite.png">}}
 
