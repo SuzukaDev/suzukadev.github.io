@@ -8,6 +8,7 @@ Arguments:
 2 align = (String) Text align of the header (options: "left", "right", "center"). Default: "center"
 3 class = (String) CSS class for the header. Default: ""
 4 id = (String) ID class for the header (useful for fragment link). Default: text (the header text)
+5 color/c = (String) Color for the header. Default: Default header color
 
 Use example:
 {{< header "my-first-article, another-article" >}}
@@ -20,6 +21,7 @@ Use example:
 {{- $text_align := or (.Get 2) (.Get "align") | default "center" -}}
 {{- $css_class := or (.Get 3) (.Get "class") | default "" -}}
 {{- $id := or (.Get 4) (.Get "id") | default $title -}}
+{{- $color := or (.Get 5) (.Get "color") (.Get "c") -}}
 
 {{- $id = $id | anchorize -}}
 
@@ -40,6 +42,9 @@ Use example:
 {{- end -}}
 
 {{- $style := (printf "text-align:%s; align-self:%s;" $text_align $flex_align) | safeCSS -}}
+{{- with $color -}}
+	{{- $style = (printf "%s color:%s;" $style . ) | safeCSS -}}
+{{- end -}}
 {{- /*  {{- $header_id := printf "id='%s'" ($title) -}}  */ -}}
 {{- $header_id := printf "id='%s'" ($id) -}}
 {{- $header := printf "<%s %s %s style='%s'>%s</%s>" $header_tag $css_class_attr $header_id $style $title $header_tag -}}
