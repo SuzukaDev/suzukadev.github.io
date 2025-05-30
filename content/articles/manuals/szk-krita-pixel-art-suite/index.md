@@ -625,14 +625,21 @@ A new **window will appear** on top of Krita {{< cell "1" >}}, and will **grab t
 
 <!-- <figure><img src="https://public-files.gumroad.com/xg07htz0l45soesshpgpebvyn4cv"><p class="figcaption"></p></figure> -->
 
-{{< cell text="**1 - Brush**" color="#F23C3CFF" >}}: **1px brush** with <u>**pixel perfect**</u> option.
+<!-- #### Brush -->
+
+{{< header t="Brush" color="#F23C3CFF" h=4 align="left" >}}
+
+<!-- #### Cepiiiii {.toc-only} -->
+
+<!-- {{< cell text="**1 - Brush**" color="#F23C3CFF" >}}: **1px brush** with <u>**pixel perfect**</u> option. -->
+**1px brush** with <u>**pixel perfect**</u> option for **clean pixel art strokes**.
 
 <!-- ![asdf](images/k-sprite/pixel-perfect-[x8].png) -->
 
 {{< img_caption img="pixel-perfect-x8.png" class="no-box-shadow" caption="Great for perfect pixel strokes" >}}
 
 
-Shortcut: {{< shortcut "B" >}}
+**Shortcut**: {{< shortcut "B" >}}
 
 Drawing Shortcuts | Action
 :--|:--:
@@ -643,7 +650,10 @@ Drawing Shortcuts | Action
 
 <!-- <figure><img src="https://public-files.gumroad.com/yb1et2sz0i5bzn9apdjqchp3wt3n"><p class="figcaption"></p></figure> -->
 
-{{< cell text="**2 - Antialiasing brush**" color="#F23C3CFF" >}}: Automatically calculates the color of a pixel by their neighbour pixels.
+<!-- {{< cell text="**2 - Antialiasing brush**" color="#F23C3CFF" >}}: Automatically calculates the color of a pixel by their neighbour pixels. -->
+
+{{< header t="Antialiasing brush" color="#F23C3CFF" h=4 align="left" >}}
+
 
 {{< img_caption img="antialiasing-tool-mix.webp" class="no-box-shadow" >}}
 
@@ -675,7 +685,9 @@ The numbers (*P4, P8, M4, M8*) reffers to the **total neighbours** of a pixel th
 <!-- <figure><img src="https://public-files.gumroad.com/i7xb8g6u2t5wgz6xzrev2zilv6r1"><p class="figcaption"></p></figure> -->
 
 
-{{< cell text="**3 - Line**" color="#F23C3CFF" >}}: Makes a **straight line**. Press {{< shortcut "CONTROL" >}} to **snap** the line into perfect ratio lines.
+{{< header t="Lines" color="#F23C3CFF" h=4 align="left" >}}
+
+<!-- {{< cell text="**3 - Line**" color="#F23C3CFF" >}}: Makes a **straight line**. Press {{< shortcut "CONTROL" >}} to **snap** the line into perfect ratio lines. -->
 
 <!-- Lo pongo open, porque es una FEATURE... hay que mostrar las cosas buenas SIN MIEDO -->
 
@@ -692,9 +704,24 @@ The numbers (*P4, P8, M4, M8*) reffers to the **total neighbours** of a pixel th
 This is due I personally like to draw perspective buildings, streets, etc. and I've always missed that some editors do not offer more snapping angles for doing some lines more easier.
 {{< /details >}}
 
-{{< cell text="**4 - Cubic & Cuadratic Bezier Curve**" color="#F23C3CFF" >}}:
+
+
+<!-- {{< cell text="**4 - Cubic & Cuadratic Bezier Curve**" color="#F23C3CFF" >}}: -->
+{{< header t="Bezier Curves" color="#F23C3CFF" h=4 align="left" >}}
+
+Pixel Perfect **cubic and quadratic bezier** curves!
+
+{{< img_caption "k-sprite-bezier-demo.gif" >}}
+
+To make a Bezier Curve:
+
+1. **Click and drag** to define start and end points on mouse click and mouse release.
+2. **Place the first control** point by clicking a second time.
+3. **Place the second control** point by clicking one last time.
+
+
 {{< box_info >}}
-For making a cubic bezier, simply click twice in the same position after adding the first control point and finish the curve.
+For making a **cubic bezier**, simply click twice in the same position after adding the first control point and finish the curve.
 
 (This is for adding the second control point in the same coordinates as the first one).
 
@@ -708,33 +735,88 @@ For making a cubic bezier, simply click twice in the same position after adding 
 This is due the points are added on **mouse release**, and if the window loses focus without an event pending (such as holding a mouse button), the editor can't be updated.
 {{< /details >}}
 
-
 {{< /box_green >}}
-{{< cell text="**5 - Square**" color="#F23C3CFF" >}}:
-{{< cell text="**6 - Circle**" color="#F23C3CFF" >}}: Improved circles
+
+
+<!-- TODO aqui estamos -->
+❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
+
+<!-- {{< cell text="**5 - Square**" color="#F23C3CFF" >}}: Create squares {{< text_spoiler "who could have guessed? 🤣" >}} -->
+
+<!-- {{< cell text="**6 - Circle**" color="#F23C3CFF" >}}: Improved circles -->
+
+{{< header t="Squares & Circles" color="#F23C3CFF" h=4 align="left" >}}
+
 
 {{< img_caption img="better-primitives-x8.png" class="no-box-shadow" >}}
 
 <!-- <figure><img src="https://public-files.gumroad.com/i8yyilbbeg7614gdtvhyzjsjlh2f"><p class="figcaption"></p></figure> -->
 
-    1. **Fill**: 👉 For big areas, reaches a python recursion limit set by krita, so is only suitable for not so big regions.
-    2. **Text**: Tool to render correctly pixelated fonts
-<figure><img src="https://public-files.gumroad.com/v16jf2e48wb1l6xfywhoaetd8q4u"><p class="figcaption"></p></figure>
 
-    1. **Zoom**: For zooming specific areas easily.
+{{< header t="Fill Bucket" color="#F23C3CFF" h=4 align="left" >}}
+
+{{< details summary="⚠️ Warning about the <u>fill-bucket</u> tool" color="rgba(228, 171, 17, 0.79)" >}}
+{{< box_warning >}}
+The fill-bucket uses a <u>recursive algorithm</u> ([The *flood fill* algorithm](https://en.wikipedia.org/wiki/Flood_fill)), and **Krita has limited the amount of recursive calls a script can execute**, and this -sadly- cannot be changed.
+
+This means that if the area to fill is ***big enough*** to reach that recursive calls limit, Krita will end that process and the fill won't be completed and show this window:
+
+{{< img_caption "k-sprite-fill-bucket-warning.png" >}}
+
+{{< box_info >}}
+I tried some non-recursive algorithms, but they are generally way slower than the *Flood Fill algorithm*, so it is best to use Krita's fill-bucket tool for filling large areas. 
+
+I considered removing the tool, but since it still does the job well for small and medium areas, I decided to keep it.
+{{< /box_info >}}
+{{< /box_warning >}}
+
+{{< /details >}}
+
+
+
+
+
+
+
+
+
+
+{{< header t="Text" color="#F23C3CFF" h=4 align="left" >}}
+
+<!-- 2. **Text**: Tool to render correctly pixelated fonts -->
+
+Tool for drawing pixel perfect fonts!
+
+{{< box_green "💡" >}}
+
+**TIP**: It also {{< text_shimmer "works great" >}} {{< text_wavy2 "with non pixel art fonts! 🎉🥳 " 0.5 0.1 8 >}}
+
+{{< img_caption "k-sprite-text-arial.png" >}}
+
+{{< /box_green >}}
+<!-- <figure><img src="https://public-files.gumroad.com/v16jf2e48wb1l6xfywhoaetd8q4u"><p class="figcaption"></p></figure> -->
+
+{{< header t="Zoom Tool" color="#F23C3CFF" h=4 align="left" >}}
+Tool for zooming specific areas easily.
+
+
+
 
 > 
 > 💡 You can check each tool shortcut by hovering any tool button and seeing the **Info Bar**.
 - **Canvas**:
 
     - Controls
-
-        - `Left MB` - **Paint** with Foreground Color
-        - `Right MB` - **Paint** with Background Color
-        - `Middle MB` - **Pan**
-        - `CTRL + Middle MB + Drag` - **Zoom** in/out
-        - `CTRL + Left/Right MB` - **Sample** Foreground/Background color
-        - `X` - **Switch** Colors
+    Shortcut | Action
+    :-- | --:
+    {{< shortcut "Left MB" >}} | **Paint** with **Foreground** Color (FG)
+    {{< shortcut "Right MB" >}} | **Paint** with **Background** Color (BG)
+    {{< shortcut "Middle MB" >}} or {{< shortcut "Space + Left MB (*Drag*)" >}} | **Pan Canvas**
+    {{< shortcut "CTRL + Middle MB (*Drag*)" >}} | **Zoom** in/out
+    {{< shortcut "CTRL + Left/Right MB" >}} | **Sample** Foreground/Background color
+    {{< shortcut "X" >}} | **Switch** FG/BG Colors
 
 > 
 > 💡 **TIP**: You can **mask regions** for painting by making a selection in Krita:
@@ -754,6 +836,8 @@ This is due the points are added on **mouse release**, and if the window loses f
 >
 - **Info Bar**: Displays information, shortcuts, etc. when hovering a button/tool.
 
+<!-- TODO -->
+
 ❗❗❗❗❗
 ❗❗❗❗❗
 ❗❗❗❗❗
@@ -767,18 +851,7 @@ This is due the points are added on **mouse release**, and if the window loses f
 
 ## Interface
 
-{{< details summary="⚠️ Warning about the <u>fill-bucket</u> tool" color="rgba(228, 171, 17, 0.79)" >}}
-{{< box_warning >}}
-The fill-bucket uses a <u>recursive algorithm</u> ([The *flood fill* algorithm](https://en.wikipedia.org/wiki/Flood_fill)). Krita has limited the amount of recursive calls a script can execute, and this -sadly- cannot be changed.
 
-This means that if the area to fill is *big enough* to reach that recursive calls limit, Krita will end that process and the fill won't be completed.
-
-{{< box_info >}}
-Non-recursive algorithms are generally slower than the *Flood Fill algorithm*, so it is best to use Krita's fill-bucket tool for filling large areas. I considered removing the tool, but since it still works well for small and medium areas, I decided to keep it
-{{< /box_info >}}
-{{< /box_warning >}}
-
-{{< /details >}}
 
 TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
 
