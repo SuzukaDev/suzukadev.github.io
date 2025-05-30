@@ -880,48 +880,13 @@ Tool for zooming specific areas easily.
 > 
 > 👉 These buttons may show or not depending on the active layer when launching the editor.
 > 
->         - Launching it with an **empty layer** will make **not** show the `New Layer` button (to avoid cluttering).
->         - Launching it with a **hidden layer** selected will make **not** show the `Active Layer` button (to avoid committing changes to an invisible layer by mistake).
->
-- **Info Bar**: Displays information, shortcuts, etc. when hovering a button/tool.
 
-<!-- TODO -->
+{{< header t="Info Bar" h=3 align="left" class="underline" >}}
+### Info Bar {.no-display}
 
-❗❗❗❗❗
-❗❗❗❗❗
-❗❗❗❗❗
-❗❗❗❗❗
-❗❗❗❗❗
-❗❗❗❗❗
-❗❗❗❗❗
-❗❗❗❗❗
+Displays information, shortcuts, tips, etc. when **hovering** a button/tool.
 
-## Features
-
-## Interface
-
-
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
-TODO ❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗
-
+{{< img_caption "k-sprite-info-bar.png" "Info bar, at the **bottom** of the editor" >}}
 
 
 
