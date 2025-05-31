@@ -1,11 +1,11 @@
 +++
 title = 'Artículos'
 date = '2025-02-26T21:15:29+01:00'
-description = ""
+description = "Cosas que escribo (manuales de cosas que haya hecho, tutoriales, artículos varíos, pensamientos, etc)."
 draft = false
 +++
 
-# El md de articles (_index.md)
+<!-- # El md de articles (_index.md)
 ESTO es el index del articles
 
-Yo soy el .md español
+Yo soy el .md español -->
