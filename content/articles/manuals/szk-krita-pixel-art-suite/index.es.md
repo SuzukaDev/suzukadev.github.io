@@ -1,7 +1,7 @@
 +++
 title = 'SZK Krita Pixel Art Suite'
 date = '2025-05-22T22:57:12+02:00'
-description = "*Plugin* de Krita que añade distintas **mejoras** para dibujar ***Pixel Art***!"
+description = "*Plugin* de Krita que añade muchas **mejoras** para dibujar ***Pixel Art***!"
 lastmod = '2025-05-22T22:57:12+02:00'
 # draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
@@ -28,3 +28,12 @@ show_right_bar = true
 # featured_tags = [""] # if set, it will only feature the tags in this array (useful to display only some of the tags). Note: Tags must match the tag in .Params.tags
 # related_pages = [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 +++
+
+# Traducción en progreso!
+
+Mientras tanto, disfruta de mi perrete:
+
+{{< img_caption "dex.jpg" "Dexter" >}}
+
+{{< img_caption "dex2.jpeg" "Dexter" >}}
+
