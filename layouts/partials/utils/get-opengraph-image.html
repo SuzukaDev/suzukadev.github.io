@@ -1,0 +1,12 @@
+{{- /*  Gets the image used in OpenGraph cards  */ -}}
+{{- $images := $.Resources.ByType "image" -}}
+{{ $index := 0 }}
+{{ range $i, $image := $images }}
+  {{ if index $image.Params "cover" }}
+    {{ $index = $i }}
+  {{ end }}
+{{ end }}
+{{- /*  {{ $featured := ($images.GetMatch (.Params.featured_image | default "*feature*")) | default (index $images $index) }}  */ -}}
+{{- /*  Search for "feature" in subdirs  */ -}}
+{{ $featured := ($images.GetMatch (.Params.featured_image | default "**feature**")) | default (index $images $index) }}
+{{ return $featured }}
