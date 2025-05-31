@@ -1,7 +1,7 @@
 {{/*  
 -- Returns the PATH (string) of the cover image of an article --
 
-If the .md has set the param 'article_cover', it will use that image. 
+If the .md has set the param 'featured_image', it will use that image. 
 
 If not, it will:
 - If the article is a 'leaf bundle' (this means is an article in its own folder (with an index.md)), 
@@ -15,45 +15,45 @@ it CAN has its own resources, and will look automatically for an image with the 
 {{ $DEFAULT_IMAGE_PATH := "/images/articles/default-article-cover.png" }}
 
 {{/*  REFACTOR delete comments  */}}
-{{ if .Params.article_cover }}
+{{ if .Params.featured_image }}
 	{{/*  PREVIOUS  */}}
-	{{/*  {{ $cover_image_path = .Params.article_cover }}  */}}
+	{{/*  {{ $cover_image_path = .Params.featured_image }}  */}}
 
 	{{/*  When an article is not a leaf bundle  */}}
 	{{- /*  {{ $default_lang_path := .Site.Sites.Default.Home.RelPermalink }}
-	{{ $cover_image_path = (path.Join $default_lang_path .Section .Params.article_cover) }}   */ -}}
+	{{ $cover_image_path = (path.Join $default_lang_path .Section .Params.featured_image) }}   */ -}}
 
-	{{- $article_cover_resource := .Resources.Get .Params.article_cover -}}
+	{{- $article_cover_resource := .Resources.Get .Params.featured_image -}}
 	{{- $cover_image_path = $article_cover_resource.RelPermalink -}}
 
-	{{/*  {{ $cover_image_path = (absLangURL .Params.article_cover) }}  */}}
-	{{/*  {{ $cover_image_path = printf (relLangURL  .Params.article_cover) }}  */}}
-	{{/*  {{ $cover_image_path = printf "%s%s/%s" (relLangURL "") .Section .Params.article_cover}}  */}}
+	{{/*  {{ $cover_image_path = (absLangURL .Params.featured_image) }}  */}}
+	{{/*  {{ $cover_image_path = printf (relLangURL  .Params.featured_image) }}  */}}
+	{{/*  {{ $cover_image_path = printf "%s%s/%s" (relLangURL "") .Section .Params.featured_image}}  */}}
 	{{/*  NOW  */}}
-	{{/*  {{ $cover_image_path = printf "/%s/%s/%s" (.Site.Params.default_language) .Section .Params.article_cover}}  */}}
-	{{/*  {{ $cover_image_path = printf "/%s/%s/%s" (site.LanguagePrefix | absURL) .Section .Params.article_cover}}  */}}
+	{{/*  {{ $cover_image_path = printf "/%s/%s/%s" (.Site.Params.default_language) .Section .Params.featured_image}}  */}}
+	{{/*  {{ $cover_image_path = printf "/%s/%s/%s" (site.LanguagePrefix | absURL) .Section .Params.featured_image}}  */}}
 	{{/*  {{ $cover_image_path = (site.LanguagePrefix | absURL) }}  */}}
 	{{/*  {{ $cover_image_path = (.Site.Sites.Default.Home.RelPermalink) }}  */}}
 
 
 
 	{{/*  {{absLangURL "tags/"}}{{$tag}}  */}}
-	{{/*  {{ $cover_image_path = (printf "%s%s" .RelPermalink .Params.article_cover) }}  */}}
-	{{/*  {{ $cover_image_path = (printf "%s/%s/%s" site.Language.Lang .Section .Params.article_cover) }}  */}}
+	{{/*  {{ $cover_image_path = (printf "%s%s" .RelPermalink .Params.featured_image) }}  */}}
+	{{/*  {{ $cover_image_path = (printf "%s/%s/%s" site.Language.Lang .Section .Params.featured_image) }}  */}}
 	
-	{{/*  {{ $cover_image_path = (printf "/%s/%s/%s" site.Params.defaultContentLanguage .Section .Params.article_cover) }}  */}}
+	{{/*  {{ $cover_image_path = (printf "/%s/%s/%s" site.Params.defaultContentLanguage .Section .Params.featured_image) }}  */}}
 	
 	{{/*  NOTE Funciona, pero claro...  */}}
-	{{/*  {{ $cover_image_path = (printf "/%s/%s/%s" "es" .Section .Params.article_cover) }}   */}}
+	{{/*  {{ $cover_image_path = (printf "/%s/%s/%s" "es" .Section .Params.featured_image) }}   */}}
 	{{/*  NOTE Better  */}}
-	{{/*  {{ $cover_image_path = (printf "/%s/%s/%s" .Site.Params.default_language .Section .Params.article_cover) }}   */}}
+	{{/*  {{ $cover_image_path = (printf "/%s/%s/%s" .Site.Params.default_language .Section .Params.featured_image) }}   */}}
 
 
 
-	{{/*  {{ $cover_image_path = (printf "/%s/%s/%s" (.Site.LanguagePrefix | absURL) .Section .Params.article_cover) }}   */}}
-	{{/*  {{ $cover_image_path = (printf "%s/%s/%s" (.Site.DefaultContentLanguage) .Section .Params.article_cover) }}   */}}
-	{{/*  {{ $cover_image_path = (printf "%s/%s/%s" (.Site.Language.Lang) .Section .Params.article_cover) }}   */}}
-	{{/*  {{ $cover_image_path = (printf "%s/%s/%s" ($.Site.LanguageCode) .Section .Params.article_cover) }}   */}}
+	{{/*  {{ $cover_image_path = (printf "/%s/%s/%s" (.Site.LanguagePrefix | absURL) .Section .Params.featured_image) }}   */}}
+	{{/*  {{ $cover_image_path = (printf "%s/%s/%s" (.Site.DefaultContentLanguage) .Section .Params.featured_image) }}   */}}
+	{{/*  {{ $cover_image_path = (printf "%s/%s/%s" (.Site.Language.Lang) .Section .Params.featured_image) }}   */}}
+	{{/*  {{ $cover_image_path = (printf "%s/%s/%s" ($.Site.LanguageCode) .Section .Params.featured_image) }}   */}}
 	
 
 
@@ -62,8 +62,8 @@ it CAN has its own resources, and will look automatically for an image with the 
 	{{/*  {{ $cover_image_path = (printf "%s" .Site.defaultContentLanguage) }}  */}}
 	{{/*  {{ $cover_image_path = (printf "%s" .Site.Language.Lang) }}  */}}
 
-	{{/*  {{ $cover_image_path = (printf "%s%s" .Permalink .Params.article_cover) }}  */}}
-	{{/*  {{ $cover_image_path = (printf "/%s/%s" "en" .Params.article_cover) }}  */}}
+	{{/*  {{ $cover_image_path = (printf "%s%s" .Permalink .Params.featured_image) }}  */}}
+	{{/*  {{ $cover_image_path = (printf "/%s/%s" "en" .Params.featured_image) }}  */}}
 {{ else }}
 	{{- /*  {{ if eq .BundleType "leaf" }}  */ -}}
 	{{ if or (eq .BundleType "leaf") (eq .BundleType "branch") }}
