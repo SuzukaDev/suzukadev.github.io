@@ -436,7 +436,7 @@ Shortcut | Action
 {{< box_warning >}}
 The active layer must either be the "Dither" layer, or a sibling of the "Dither" layer.
 
-Note: The dither layer must be named "Dither". This is due that after pressing it, it searches if there is an Index Painting group set up with a dither layer.
+Note: The dither layer must be named "Dither". This is due that after pressing the button, it searches if there is an Index Painting group set up with a dither layer.
 {{< /box_warning >}}
 
 
