@@ -3,18 +3,10 @@
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 
-{{- $images := $.Resources.ByType "image" -}}
-{{ $index := 0 }}
-{{ range $i, $image := $images }}
-  {{ if index $image.Params "cover" }}
-    {{ $index = $i }}
-  {{ end }}
-{{ end }}
-{{- /*  {{ $featured := ($images.GetMatch (.Params.featured_image | default "*feature*")) | default (index $images $index) }}  */ -}}
-{{- /*  Search for "feature" in subdirs  */ -}}
-{{ $featured := ($images.GetMatch (.Params.featured_image | default "**feature**")) | default (index $images $index) }}
-{{- with $featured -}}
-  <meta property="og:image" content="{{ $featured.Permalink }}" />
+{{ $featured_image := partial "utils/get-opengraph-image.html" . }}
+
+{{- with $featured_image -}}
+  <meta property="og:image" content="{{ $featured_image.Permalink }}" />
 {{- end -}}
 
 {{- if .IsPage }}
