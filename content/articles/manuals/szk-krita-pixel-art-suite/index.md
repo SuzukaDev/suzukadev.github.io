@@ -722,13 +722,20 @@ Brush for helping doing antialiasing.
 
 This calculated color is a "**bridge color**" between the current pixel, and its surrounding neighbours, for achieving that antialiasing effect. [If you don't know about Pixel Art antialiasing, or want to know more, check this awesome article.](https://saint11.art/pixel_art_articles/article5/).
 
-It offers 2 different algorithms for calculating that antialiasing color:
+
+
+<!-- ❗❗❗❗❗❗❗❗❗❗❗ -->
+<!-- ❗❗❗❗❗❗❗❗❗❗❗ -->
+<!-- ❗❗❗❗❗❗❗❗❗❗❗ -->
+<!-- ❗❗❗❗❗❗❗❗❗❗❗ -->
+<!-- TODO DECOMENTAR ESTO CUANDO SUBA LA ACTUALIZACION DEL ANTIALIASING!! -->
+<!-- TODO DECOMENTAR ESTO CUANDO SUBA LA ACTUALIZACION DEL ANTIALIASING!! -->
+<!-- TODO DECOMENTAR ESTO CUANDO SUBA LA ACTUALIZACION DEL ANTIALIASING!! -->
+<!-- It offers 2 different algorithms for calculating that antialiasing color:
 
 {{< img_caption "k-sprite-aa-algorithms.png" "Antialiasing algorithms" >}}
 
 - {{< cell text="**Mix** (M)" color="rgb(245, 96, 237)" >}} - Selects a color by **mixing** the current pixel and its neighbours.
-<!-- - {{< cell text="**Palette (P)**" color="rgb(245, 96, 237)" >}} - Selects the closest color in the palette to the painted pixel and its neighbours -->
-<!-- - {{< cell text="**Palette (P)**" color="rgb(245, 96, 237)" >}} - Selects the color in the palette that is the closer to the painted pixel and its neighbours, while being different. -->
 - {{< cell text="**Palette** (P)" color="rgb(245, 96, 237)" >}} - Selects the color in the **palette** that is most similar to the painted pixel and its neighbours, while being different (without repeating the current color or the color of its neighbors).
 
 > This is {{< text_wavy2 "the coolest method" 0.5 0.1 7 >}} if you are strictly using a palette, and <u>want to use **only** colors that belong to that palette</u>.
@@ -738,7 +745,7 @@ The numbers (*P4, P8, M4, M8*) reffers to the **total neighbours** of a pixel th
 {{< img_caption "k-sprite-neighbours-dots.png" "4 Neighbours & 8 Neighbours" >}}
 
 - {{< cell text="4" color="#2B56CCFF" >}} - Takes in consideration 4 neighbours of a pixel.
-- {{< cell text="8" color="#f31654" >}} - Takes in consideration all the neighbours of a pixel.
+- {{< cell text="8" color="#f31654" >}} - Takes in consideration all the neighbours of a pixel. -->
 
 
 
