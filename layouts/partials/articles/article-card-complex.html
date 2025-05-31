@@ -3,7 +3,7 @@
 <article class="featured-article-big hover-underline-animation" {{ partial "utils/get-accent-color-style.html" . }}>
     <a class="hover-border-bloom" href="{{.RelPermalink}}">
 {{- /*  <a class="featured-article-big hover-underline-animation" href="{{.RelPermalink}}" style="--rand-rotation:{{$rand_value}}deg;">  */ -}}
-        <div class="image-container">
+        <div class="image-container" {{- with .Params.feature_image_background_color }} style="background-color: {{.}};" {{- end -}}>
             {{- /*  <img style="height: 300px; width:100px;" url="{{$article_cover_url}}">  */ -}}
             {{- /*  <img class="ls-is-cached lazyloaded card__img" style="height: 300px; width:100px;" src="{{$article_cover_url}}">  */ -}}
             {{- /*  <img class="ls-is-cached lazyloaded card__img" style="height: 300px; width:100px;" data-src="{{$article_cover_url}}" src="{{$article_cover_url}}">  */ -}}
