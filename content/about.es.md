@@ -8,6 +8,9 @@ menu:
 articles_description: Ingeniero multimedia, apasionado por el arte
 ---
 
+# Página en progreso!
+
+<!-- 
 ESPAÑOOOOL
 We are here for learning. I personally think that is a positive philosophy, because it means that no matter what is coming to your life, positive 
 I think it
@@ -23,8 +26,11 @@ Index relref: {{< relref "index.html" >}}
 
 (about.md) This is a demonstration site for the Hugo Gallery theme.
 
-<!-- TODO about me -->
-Aquí escribiría sobre mí.
+
+
+
+
+❗❗❗Aquí escribiría sobre mí.
 
 > Hello, my names is Óscar (Suzuka Ka on the internet 🌍)
 
@@ -82,4 +88,4 @@ Si la imagen tiene espacios, meter la url entre <>
 </images/yo.jpg> o /images/yo.jpg
 ![hola](</images/yo.jpg>)
 
-hola soy el indexx
+hola soy el indexx -->

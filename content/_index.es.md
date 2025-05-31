@@ -30,9 +30,10 @@ Lee más [**sobre mí**]({{< relref "about.md" >}}) o [**echa un vistazo a mi tr
 
 
 <!-- TODO cambiar el link de "check my work here -->
-(❌❌❌TODO❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗: cambiar el link de "check my work here"❗)
+<!-- (❌❌❌TODO❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗: cambiar el link de "check my work here"❗) -->
 
-❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗
+<!-- ❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗ -->
+> ⚠️ <u>ESTA **PÁGINA** ESTÁ **EN DESARROLLO**</u> ⚠️
 
 > **Aprende** del ayer, **vive** el hoy y **ten esperanza** en el mañana. <cite>Albert Einstein</cite>
 

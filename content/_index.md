@@ -27,9 +27,11 @@ menus:
 Read more **[about me]({{< relref "about.md" >}})** or [**check my work here**]({{< relref "/articles/" >}})
 
 <!-- TODO cambiar el link de "check my work here -->
-(❌❌❌TODO❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗: cambiar el link de "check my work here"❗)
+<!-- (❌❌❌TODO❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗: cambiar el link de "check my work here"❗) -->
 
-❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗
+<!-- ❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗ -->
+> ⚠️ <u>THIS **SITE** IS **UNDER DEVELOPMENT**</u> ⚠️
+
 
 
 > **Learn** from yesterday, **live** for today, **hope** for tomorrow. <cite>Albert Einstein</cite>

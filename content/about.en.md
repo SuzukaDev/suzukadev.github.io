@@ -8,7 +8,9 @@ menu:
 articles_description: Multimedia engineer, with passion for arts
 ---
 
+# Work in progress
 
+<!-- 
 Tengo experiencia (y paciencia) asistiendo a clientes y resolviendo sus dudas y problemas ~~principalmente porque no se han leido el manual~~.
 
 ~~Esto es un texto tachado~~ Para colocarse... es perfecto el parque...
@@ -28,7 +30,7 @@ Index relref: {{< relref "index.html" >}}
 
 (about.md) This is a demonstration site for the Hugo Gallery theme.
 
-<!-- TODO about me -->
+❗❗❗❗❗
 Aquí escribiría sobre mí.
 
 > Hello, my names is Óscar (Suzuka Ka on the internet 🌍)
@@ -87,4 +89,4 @@ Si la imagen tiene espacios, meter la url entre <>
 </images/yo.jpg> o /images/yo.jpg
 ![hola](</images/yo.jpg>)
 
-hola soy el indexx
+hola soy el indexx -->
