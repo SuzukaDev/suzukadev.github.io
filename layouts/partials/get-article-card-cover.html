@@ -67,7 +67,7 @@ it CAN has its own resources, and will look automatically for an image with the 
 {{ else }}
 	{{- /*  {{ if eq .BundleType "leaf" }}  */ -}}
 	{{ if or (eq .BundleType "leaf") (eq .BundleType "branch") }}
-		{{ $images := or (.Resources.Match "**/*cover*") (.Resources.Match "**cover**") }}
+		{{ $images := or (.Resources.Match "**/*feature*") (.Resources.Match "**feature**") }}
 		{{ if gt (len $images) 0 }}
 			{{ $cover_image := index $images 0 }}
 			{{ $cover_image_path = $cover_image.RelPermalink }}
