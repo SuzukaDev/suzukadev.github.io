@@ -10,7 +10,9 @@
     {{ $index = $i }}
   {{ end }}
 {{ end }}
-{{ $featured := ($images.GetMatch (.Params.featured_image | default "*feature*")) | default (index $images $index) }}
+{{- /*  {{ $featured := ($images.GetMatch (.Params.featured_image | default "*feature*")) | default (index $images $index) }}  */ -}}
+{{- /*  Search for "feature" in subdirs  */ -}}
+{{ $featured := ($images.GetMatch (.Params.featured_image | default "**feature**")) | default (index $images $index) }}
 {{- with $featured -}}
   <meta property="og:image" content="{{ $featured.Permalink }}" />
 {{- end -}}
