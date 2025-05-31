@@ -12,6 +12,6 @@ draft = false
 # [menu.main]
 # 	weight = 100000
 +++
-
+<!-- 
 # El md de articles (_index.md)
-ESTO es el index del articles
+ESTO es el index del articles -->
