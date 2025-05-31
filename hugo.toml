@@ -1,4 +1,5 @@
-baseURL = 'https://example.org/'
+# baseURL = 'https://example.org/'
+baseURL = 'https://suzukadev.github.io/' # NOTE: the github action/workflow takes automatically the baseURL, so in my case is not necessary
 copyright = "Suzuka Ka"
 # languageCode = 'en-us'
 # languageCode = 'es-es'
