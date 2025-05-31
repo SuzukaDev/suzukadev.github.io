@@ -1,7 +1,7 @@
 +++
 title = 'Manuals'
 date = '2025-05-18T13:21:55+02:00'
-description = "Manuals & Documentation for some things I've done."
+description = "Manuals & Documentation for some [**software, plugins, addons, etc. I've done**](https://orb91.gumroad.com/)."
 lastmod = '2025-05-18T13:21:55+02:00'
 # draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
@@ -9,6 +9,9 @@ private = false # If true, the article wont be listed and will only be visible b
 # main_classes = 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 # # -------- DISPLAY OPTIONS --------
 # accent_color = "#ff168a" # customize the color for links, etc in the page
+# accent_color = "#708090" # customize the color for links, etc in the page
+accent_color = "#4682B4" # customize the color for links, etc in the page
+feature_image_background_color = "#4682B4" # If the featured_image has transparency, change this color for customizing the background color (default: transparent)
 # show_breadcrumbs = false
 # show_author = false
 # show_date = false
