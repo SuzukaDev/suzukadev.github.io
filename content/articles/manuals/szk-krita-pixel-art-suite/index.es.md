@@ -518,7 +518,7 @@ Esto es útil si deseas guardar manualmente algunos "instantáneas" de tu dibujo
 - **Export Selected (Exportar Seleccionados)** - Exporta solo la capa/capas/grupos seleccionado(s).
   - **Trim (Recortar)** - Si está activado, las layers exportadas serán recortadas automáticamente. Si está desactivado, su tamaño será el mismo del documento.
 {{< box_green >}}
-Esto es útil, por ejemplo, para exportar diferentes sprites en un mismo documento para un videojuego fácilmente 🎮.
+Esto es útil, por ejemplo, para exportar fácilmente diferentes sprites en un mismo documento para un videojuego 🎮.
 {{< /box_green >}}
 
 
@@ -528,126 +528,123 @@ Esto es útil, por ejemplo, para exportar diferentes sprites en un mismo documen
 
 # K-Sprite
 
-K-Sprite is a **Pixel Art editor inside Krita** that is meant to add all the Pixel Art **features** that are missing in Krita. Like a pixel perfect brush, or tools for propper ellipses/circles, bezier lines, pixelated text, etc.
+K-Sprite es un **editor de Pixel Art dentro de Krita** que está destinado a añadir todas las **características y funcionalidades** de Pixel Art que le faltan a Krita. Como un pincel pixel perfecto, mejores primitivas, líneas bezier, texto pixelado, etc.
 
-{{< img_caption img="https://i.pinimg.com/originals/e7/95/d3/e795d3bfaa35b8843bf27b83e65a111d.gif" caption="A 'Drawing editor' inside a 'drawing editor'?" class="spoiler-blur" >}}
+{{< img_caption img="https://i.pinimg.com/originals/e7/95/d3/e795d3bfaa35b8843bf27b83e65a111d.gif" caption="Un 'editor de dibujo' dentro de otro editor de dibujo?" class="spoiler-blur" >}}
 
 
-> It’s not meant to fully replace the process of drawing Pixel Art in Krita (because Krita is still a great tool for that!). It’s meant to **add all those tools that I always missed** while doing Pixel Art, and to make **creating Pixel Art in Krita** {{< text_wavy2 "an even more awesome experience! 🥳" 0.5 0.1 6 >}}
+> No está pensado para reemplazar por completo el proceso de dibujar Pixel Art en Krita (¡porque Krita sigue siendo una gran herramienta para eso!). Está destinado a **agregar todas las herramientas que le faltan a Krita** y hacer que crear Pixel Art en Krita sea {{< text_wavy2 "¡una mejor experiencia! 🥳" 0.5 0.1 6 >}} 
 
 
 ## Tutorial
 
-To execute **K-Sprite**, go to the `Pencil Tab ✏️` in the docker, or press the **shortcut** for `Open SZK K Pixel Art Editor (SZK Pixel Art Suite)` (Default {{< shortcut "Alt+F3" >}}).
+Para ejecutar **K-Sprite**, ve a la `Pestaña del Lápiz ✏️` del *docker*, o presiona el **atajo de teclado** `Open SZK K Pixel Art Editor (SZK Pixel Art Suite)` (Por defecto {{< shortcut "Alt+F3" >}}).
 
 <!-- A new window will appear on top of Krita (`1`), and will grab the active layer (`2`): -->
 A new **window will appear** on top of Krita {{< cell "1" >}}, and will **grab the active layer** {{< cell "2" >}}:
+Se abrirá una **nueva ventana**, siempre por encima de Krita {{< cell "1" >}}, y **capturará la capa activa** {{< cell "2" >}}:
 
-<!-- > `1` - The window will render on top always so you can still use other krita dockers/plugins while drawing in *K-Sprite*  
-> &gt; `2` - The active layer will be temporarily hidden in Krita's UI. This is due *K-Sprite* renders the document, and having it visible will make it impossible to see changes in case you erase parts of the active layer inside *K-Sprite* -->
->{{< cell "1" >}} - **The window will render on top** always so you can **still use other krita dockers**/plugins while drawing in *K-Sprite*.
+>{{< cell "1" >}} - **La ventana siempre se mostrará siempre en la parte superior** para que puedas **seguir usando otros dockers/plugin de krita** mientras dibujas en *K-Sprite*.
 >
->{{< cell "2" >}} - **The active layer will be temporarily hidden in Krita's UI**. This is due *K-Sprite* renders the document, and having it visible will make it impossible to see changes in case you erase parts of the active layer inside *K-Sprite*
+>{{< cell "2" >}} - La capa activa **estará oculta temporalmente en la interfaz de Krita**. Esto se debe a que K-Sprite renderiza el documento, y tenerla visible hará que sea imposible ver los cambios en caso de que borres partes de la capa activa dentro de *K-Sprite*.
 
 {{< box_info >}}
-You will be able to **draw** in the **layer you had selected when you executed K-Sprite**.
+Podrás **dibujar** en la **capa que tenía seleccionada cuando ejecutaste K-Sprite**.
 
-This layer **will appear on top**, while the rest of the document will be in the background:
+Esta capa **se mostrará en la parte superior (siempre visible)**, mientras que el resto del documento se renderizará al fondo.
 
-{{< img_caption "k-sprite-layer-order.png" "The selected layer (pink circle) appears on top when is edited in K-Sprite" >}}
+{{< img_caption "k-sprite-layer-order.png" "La capa seleccionada (círculo rosa) aparece en la parte superior cuando se edita en K-Sprite." >}}
 
 {{< box_green >}}
-Once you submit the changes, it will appear as usual in Krita, in its correct layer position.
+Una vez que efectues los cambios, aparecerá como de costumbre en Krita, en su posición de capa correcta.
 {{< /box_green >}}
 
 {{< /box_info >}}
 
-## Interface
+## Interfaz
 
 {{< img_caption "k-sprite.png">}}
 
-<!-- <figure><img src="https://public-files.gumroad.com/fdmqqkrdq2zepkqcb4yvp3kf7z3v"><p class="figcaption"></p></figure> -->
 
-- {{< cell text="**Active tool options**" color="rgb(91, 91, 240)" url="#tool-options" >}}: Options related the selected tool.
-- {{< cell text="**Actions**" color="rgb(91, 91, 240)" url="#actions" >}}: Diferent actions, like undo/redo, solo mode, etc.
-- {{< cell text="**Tool Bar**" color="rgb(91, 91, 240)" url="#tools" >}}: Contains all the drawing **tools**.
-- {{< cell text="**Canvas**" color="rgb(91, 91, 240)" url="#canvas" >}}: This is where you draw.
-- {{< cell text="**Export Buttons**" color="rgb(91, 91, 240)" url="#export-buttons" >}}: Buttons for submitting your changes to Krita.
-- {{< cell text="**Info Bar**" color="rgb(91, 91, 240)" url="#info-bar" >}}: Offers different information about the selected tool, the hovering elements, etc.
+- {{< cell text="**Active tool options / Opciones de la herramienta**" color="rgb(91, 91, 240)" url="#opciones-de-la-herramienta" >}}: Opciones de la herramienta seleccionada.
+- {{< cell text="**Actions / Acciones**" color="rgb(91, 91, 240)" url="#acciones" >}}: Diferentes acciones, deshacer/rehacer, modo solo, etc.
+- {{< cell text="**Tool Bar / Barra de Herramientas**" color="rgb(91, 91, 240)" url="#herramientas" >}}: Contiene todas las **herramientas** de dibujo.
+- {{< cell text="**Canvas / Lienzo**" color="rgb(91, 91, 240)" url="#lienzo" >}}: Aquí es donde se dibuja.
+- {{< cell text="**Export Buttons / Botones para exportar**" color="rgb(91, 91, 240)" url="#botones-de-exportacion" >}}: Guarda los cambios realizados.
+- {{< cell text="**Info Bar / Barra de información**" color="rgb(91, 91, 240)" url="#barra-de-informacion" >}}: Ofrece información acerca de la herramienta seleccionada.
 
 
-{{< header t="Tool Options" h=3 align="left" class="underline" >}}
-### Tool Options {.no-display}
+{{< header t="Opciones de la herramienta" h=3 align="left" class="underline" >}}
+### Opciones de la herramienta {.no-display}
 
-Options for the different drawing tools.
+Opciones para las diferentes herramientas de dibujo.
 
 {{< box_info >}}
-These options appear/disappear depending on the active tool.
+Estas opciones varian en función de la herramienta seleccionada.
 {{< /box_info >}}
 
 {{< img_caption img="k-sprite-tool-options.png" class="no-box-shadow" >}}
 
 Option | | Shortcut
 :--|:--|--:
-{{< cell "1" >}} Pixel Perfect | Makes perfect pixel lines. | {{< shortcut "Q" >}}
-{{< cell "2" >}} Erase Mode |  | {{< shortcut "E" >}}
-{{< cell "3" >}} Dither Mode | Use the {{< link_color url="#interface" text="**Index Painting matrix**" class="underline" >}} as a pattern when drawing.| {{< shortcut "D" >}}
-{{< cell "4" >}} Fill Mode | Fill a primitive with color. | {{< shortcut "ALT+F" >}}
-{{< cell "5" >}} X/Y Mirror |  | {{< shortcut "M" >}} / {{< shortcut "N" >}}
+{{< cell "1" >}} Pixel Perfect | Hace trazos pixel art perfectos. | {{< shortcut "Q" >}}
+{{< cell "2" >}} Modo Borrador |  | {{< shortcut "E" >}}
+{{< cell "3" >}} Modo Dither | Usa {{< link_color url="#interfaz" text="**la matriz de la Pintura Indexada**" class="underline" >}} como patrón de dibujo.| {{< shortcut "D" >}}
+{{< cell "4" >}} Modo de relleno| Rellena una primitiva con un color. | {{< shortcut "ALT+F" >}}
+{{< cell "5" >}} Espejo X/Y |  | {{< shortcut "M" >}} / {{< shortcut "N" >}}
 
 
 
-{{< header t="Actions" h=3 align="left" class="underline" >}}
-### Actions {.no-display}
+{{< header t="Acciones" h=3 align="left" class="underline" >}}
+### Acciones {.no-display}
 
 {{< img_caption img="k-sprite-action-buttons.png" class="no-box-shadow" >}}
 
-Button | | Shortcut
+Botón | | Atajo de teclado
 :--|:--|--:
-{{< cell "1" >}} Solo Mode | Display only the layer that is being edited.. | {{< shortcut "TAB" >}}
-{{< cell "2" >}} Adjust document to view |  | {{< shortcut "3" >}}
-{{< cell "3" >}} Delete All | Clear all the content in the edited layer.| (No shortcut)
-{{< cell "4" >}} Undo/Redo | Undo and redo changes. | {{< shortcut "CTRL+Z" >}} / {{< shortcut "CTRL+SHIFT+Z" >}}
+{{< cell "1" >}} Modo Solo | Muestra únicamente la capa que está siendo editada. | {{< shortcut "TAB" >}}
+{{< cell "2" >}} Ajusta la vista del documento. |  | {{< shortcut "3" >}}
+{{< cell "3" >}} Borrar todo | Borra todo el contenido de la capa que está siendo editada. | (No shortcut)
+{{< cell "4" >}} Deshacer/Rehacer |  | {{< shortcut "CTRL+Z" >}} / {{< shortcut "CTRL+SHIFT+Z" >}}
 
 
 {{< row >}}
-{{< img_caption "k-sprite-solo-mode.webp" "(1) Solo mode" >}}
+{{< img_caption "k-sprite-solo-mode.webp" "(1) Modo Solo" >}}
 
-{{< img_caption "k-sprite-delete-all.webp" "(3) Delete all layer content" >}}
+{{< img_caption "k-sprite-delete-all.webp" "(3) Borrar todo" >}}
 {{< /row >}}
 
 
-{{< header t="Tools" color="#F23C3CFF" h=3 align="left" class="underline" >}}
-### Tools {.no-display}
+{{< header t="Herramientas" color="#F23C3CFF" h=3 align="left" class="underline" >}}
+### Herramientas {.no-display}
 <!-- ### Tools {.no-display .underline} -->
 
 {{< row >}}
 
-{{< img_caption img="tools.png" caption="Tools" class="no-box-shadow">}}
+{{< img_caption img="tools.png" caption="Herramientas de dibujo" class="no-box-shadow">}}
 
 
-<!-- <div style="flex: 1 0 auto;"> -->
 <div style="flex: 0 auto; text-align: left;">
-{{< cell text="1" color="#F23C3CFF" url="#brush" >}} {{< link_color "#brush" "**1px Brush**" "#F23C3CFF" >}} <br><br>
+{{< cell text="1" color="#F23C3CFF" url="#pincel" >}} {{< link_color "#pincel" "**Pincel de 1px**" "#F23C3CFF" >}} <br><br>
 
-{{< cell text="2" color="#F23C3CFF" url="#antialiasing-brush" >}} {{< link_color "#antialiasing-brush" "**Antialiasing Brush**" "#F23C3CFF" >}} <br><br>
+{{< cell text="2" color="#F23C3CFF" url="#pincel-antialiasing" >}} {{< link_color "#pincel-antialiasing" "**Pincel de Antialiasing**" "#F23C3CFF" >}} <br><br>
 
-{{< cell text="3" color="#F23C3CFF" url="#lines" >}} {{< link_color "#lines" "**Lines**" "#F23C3CFF" >}} <br><br>
+{{< cell text="3" color="#F23C3CFF" url="#lineas" >}} {{< link_color "#lineas" "**Lines**" "#F23C3CFF" >}} <br><br>
 
 
-{{< cell text="4" color="#F23C3CFF" url="#bezier-curves" >}} {{< link_color "#bezier-curves" "**Bezier Curves**" "#F23C3CFF" >}} <br><br>
+{{< cell text="4" color="#F23C3CFF" url="#curvas-de-bezier" >}} {{< link_color "#curvas-de-bezier" "**Curvas de Bezier**" "#F23C3CFF" >}} <br><br>
 
 <!-- {{< cell text="5" color="#F23C3CFF" >}} - Squares <br><br>
 
 {{< cell text="6" color="#F23C3CFF" >}} - Circles <br><br> -->
 
-{{< cell text="5, 6" color="#F23C3CFF" url="#squares--circles" >}} {{< link_color "#squares--circles" "**Squares & Circles**" "#F23C3CFF" >}} <br><br>
+{{< cell text="5, 6" color="#F23C3CFF" url="#cuadrados-y-circulos" >}} {{< link_color "#cuadrados-y-circulos" "**Cuadrados & Círculos**" "#F23C3CFF" >}} <br><br>
 
-{{< cell text="7" color="#F23C3CFF" url="#fill-bucket" >}} {{< link_color "#fill-bucket" "**Fill bucket**" "#F23C3CFF" >}} <br><br>
+{{< cell text="7" color="#F23C3CFF" url="#cubo-de-relleno" >}} {{< link_color "#cubo-de-relleno" "**Cubo de Relleno**" "#F23C3CFF" >}} <br><br>
 
-{{< cell text="8" color="#F23C3CFF" url="#text" >}} {{< link_color "#text" "**Text**" "#F23C3CFF" >}} <br><br>
+{{< cell text="8" color="#F23C3CFF" url="#texto" >}} {{< link_color "#textoo" "**Texto**" "#F23C3CFF" >}} <br><br>
 
-{{< cell text="9" color="#F23C3CFF" url="#zoom-tool" >}} {{< link_color "#zoom-tool" "**Zoom Tool**" "#F23C3CFF" >}} <br><br>
+{{< cell text="9" color="#F23C3CFF" url="#herramienta-de-zoom" >}} {{< link_color "#herramienta-de-zoom" "**Herramienta de Zoom**" "#F23C3CFF" >}} <br><br>
 
 
 </div>
@@ -656,17 +653,11 @@ Button | | Shortcut
 
 
 
-<!-- <figure><img src="https://public-files.gumroad.com/xg07htz0l45soesshpgpebvyn4cv"><p class="figcaption"></p></figure> -->
 
-<!-- #### Brush -->
+{{< header t="Pincel" color="#F23C3CFF" h=4 align="left" >}}
 
-{{< header t="Brush" color="#F23C3CFF" h=4 align="left" >}}
-
-<!-- #### Cepiiiii {.toc-only} -->
-
-<!-- {{< cell text="**1 - Brush**" color="#F23C3CFF" >}}: **1px brush** with <u>**pixel perfect**</u> option. -->
-**1px brush** with <u>**pixel perfect**</u> option for **clean pixel art strokes**.
-**Shortcut**: {{< shortcut "B" >}}
+**Pincel de 1px** con opcion <u>**pixel perfect**</u> para hacer **trazos perfectos**.
+**Atajo de teclado**: {{< shortcut "B" >}}
 
 <!-- ![asdf](images/k-sprite/pixel-perfect-[x8].png) -->
 
@@ -692,7 +683,7 @@ Drawing Shortcuts | Action
 {{< header t="Antialiasing brush" color="#F23C3CFF" h=4 align="left" >}}
 
 Brush for helping doing antialiasing. 
-**Shortcut**: {{< shortcut "A" >}}
+**Atajo de teclado**: {{< shortcut "A" >}}
 
 
 {{< img_caption img="antialiasing-tool-mix.webp" class="no-box-shadow" >}}
@@ -735,7 +726,7 @@ The numbers (*P4, P8, M4, M8*) reffers to the **total neighbours** of a pixel th
 {{< header t="Lines" color="#F23C3CFF" h=4 align="left" >}}
 
 Tool for creating lines. 
-**Shortcut**: {{< shortcut "V" >}}
+**Atajo de teclado**: {{< shortcut "V" >}}
 
 <!-- {{< cell text="**3 - Line**" color="#F23C3CFF" >}}: Makes a **straight line**. Press {{< shortcut "CONTROL" >}} to **snap** the line into perfect ratio lines. -->
 
@@ -760,7 +751,7 @@ This is due I personally like to draw perspective buildings, streets, etc. and I
 {{< header t="Bezier Curves" color="#F23C3CFF" h=4 align="left" >}}
 
 Pixel Perfect **cubic and quadratic bezier** curves!
-**Shortcut**: {{< shortcut "ALT+V" >}}
+**Atajo de teclado**: {{< shortcut "ALT+V" >}}
 
 
 {{< img_caption "k-sprite-bezier-demo.gif" >}}
@@ -822,7 +813,7 @@ Shortcuts | Action
 {{< header t="Fill Bucket" color="#F23C3CFF" h=4 align="left" >}}
 
 Tool for filling closed areas.
-**Shortcut**: {{< shortcut "F" >}}
+**Atajo de teclado**: {{< shortcut "F" >}}
 
 {{< img_caption "k-sprite-fill-tool-example.png" "Some shapes filled with the fill-bucket and the dither option!" >}}
 
@@ -857,7 +848,7 @@ I considered removing the tool, but since it still does the job well for small a
 <!-- 2. **Text**: Tool to render correctly pixelated fonts -->
 
 Tool for drawing pixel perfect fonts!
-**Shortcut**: {{< shortcut "T" >}}
+**Atajo de teclado**: {{< shortcut "T" >}}
 
 To add a text:
 - {{< shortcut "Click + Drag" >}} to **create a rectangle that contains the text**, or simply {{< shortcut "Left Click" >}} to create a default area.
@@ -901,7 +892,7 @@ You can move the text while is being edited by {{< shortcut "Clicking its rectan
 {{< header t="Zoom Tool" color="#F23C3CFF" h=4 align="left" >}}
 <!-- Tool for zooming specific areas precissely. -->
 Tool for precisely zooming in on specific areas.
-**Shortcut**: {{< shortcut "Z" >}}
+**Atajo de teclado**: {{< shortcut "Z" >}}
 
 {{< img_caption "k-sprite-zoom-example.gif" "Zoom in on specific areas with `Left Click+Drag`" >}}
 
