@@ -201,7 +201,7 @@ Personalmente, el atajo {{< shortcut "CTRL + Click Izq." >}} me parece lo más r
 
 **Para generar una paleta/gradiente**
 - Presiona el botón {{< cell "FG" >}} / {{< cell "BG" >}} para seleccionar el color **primario/secundario** actual, y generar la paleta entorno a dicho color.
-- Presiona el botón {{< shortcut "Middle MB" >}} en una muestra de color. [Lee la sección 'Muestras' para más información.](#muestras)
+- Presiona el botón {{< shortcut "Botón Central del Ratón" >}} en una muestra de color. [Lee la sección 'Muestras' para más información.](#muestras)
 
 ## Muestras
 
@@ -211,8 +211,8 @@ Atajos de ratón:
 | Atajo         | Acción     
 | :----------- | ------: | 
 | {{< shortcut "Click Izq." >}} | Selecciona el **color primario**
-| {{< shortcut "Right MB" >}}| Selecciona el **color secundario** 
-| {{< shortcut "Middle MB" >}}| Selecciona el **color primariod** <u>y **regenera la paleta**</u>
+| {{< shortcut "Click Der." >}}| Selecciona el **color secundario** 
+| {{< shortcut "Botón Central del Ratón" >}}| Selecciona el **color primariod** <u>y **regenera la paleta**</u>
 
 
 {{< box_info "💡" >}}
@@ -402,8 +402,8 @@ Hay varias maneras diferentes de pintar la matriz:
 Atajo | Acción
 :-- | --:
 {{< shortcut "Click Izq." >}} / {{< shortcut "Click Der." >}} | Pintar/borrar celda.
-{{< shortcut "CTRL + Left/Right MB" >}} | Añade/resta el valor de la celda.
-{{< shortcut "ALT + Left/Right MB" >}} | Pinta de forma **gradual/más suave**.
+{{< shortcut "CTRL + Left/Click Der." >}} | Añade/resta el valor de la celda.
+{{< shortcut "ALT + Left/Click Der." >}} | Pinta de forma **gradual/más suave**.
 
 {{< box_info >}}
 **Consejo**: Mantén el ratón sobre una celda (**o cualquier elemento de la interfaz!**) para ver un cuadro de información con dichos shortcuts.
@@ -605,7 +605,7 @@ Botón | | Atajo de teclado
 {{< cell "1" >}} Modo Solo | Muestra únicamente la capa que está siendo editada. | {{< shortcut "TAB" >}}
 {{< cell "2" >}} Ajusta la vista del documento. |  | {{< shortcut "3" >}}
 {{< cell "3" >}} Borrar todo | Borra todo el contenido de la capa que está siendo editada. | (No shortcut)
-{{< cell "4" >}} Deshacer/Rehacer |  | {{< shortcut "CTRL+Z" >}} / {{< shortcut "CTRL+SHIFT+Z" >}}
+{{< cell "4" >}} Deshacer/Rehacer |  | {{< shortcut "CTRL+Z" >}} / {{< shortcut "CTRL+MAYUS+Z" >}}
 
 
 {{< row >}}
@@ -661,35 +661,29 @@ Botón | | Atajo de teclado
 
 <!-- ![asdf](images/k-sprite/pixel-perfect-[x8].png) -->
 
-{{< img_caption img="pixel-perfect-x8.png" class="no-box-shadow" caption="Great for perfect pixel strokes" >}}
+{{< img_caption img="pixel-perfect-x8.png" class="no-box-shadow" caption="Trazados de 1px perfectos" >}}
 
 
 
-Drawing Shortcuts | Action
+Atajos de dibujo | Action
 :--|--:
-{{< shortcut "Left MB (Mouse Button)" >}} | Paint with Foreground (FG) color.
-{{< shortcut "Right MB" >}} | Paint with Background (BG) color.
-{{< shortcut "SHIFT" >}} (Hold) | Make a line between from the last point to the cursor.
-{{< shortcut "CTRL+ LeftMB/RightMB" >}} (Hold) | Pick FG/BG color.
-
-<!-- <figure><img src="https://public-files.gumroad.com/yb1et2sz0i5bzn9apdjqchp3wt3n"><p class="figcaption"></p></figure> -->
-
-<!-- {{< cell text="**2 - Antialiasing brush**" color="#F23C3CFF" >}}: Automatically calculates the color of a pixel by their neighbour pixels. -->
+{{< shortcut "Click Izq. (Mouse Button)" >}} | Dibuja con el color principal.
+{{< shortcut "Click Der." >}} | Dibuja con el color secundario.
+{{< shortcut "MAYUS" >}} (Mantener) | Dibuja una linea.
+{{< shortcut "CTRL+ Click Izq./Click Der." >}} (Mantener) | Selecciona el color primario/secundario.
 
 
 
+{{< header t="Pincel de Antialiasing" color="#F23C3CFF" h=4 align="left" >}}
 
-
-{{< header t="Antialiasing brush" color="#F23C3CFF" h=4 align="left" >}}
-
-Brush for helping doing antialiasing. 
+Ayuda a hacer el antialiasing manualmente.
 **Atajo de teclado**: {{< shortcut "A" >}}
 
 
 {{< img_caption img="antialiasing-tool-mix.webp" class="no-box-shadow" >}}
 
 
-This calculated color is a "**bridge color**" between the current pixel, and its surrounding neighbours, for achieving that antialiasing effect. [If you don't know about Pixel Art antialiasing, or want to know more, check this awesome article.](https://saint11.art/pixel_art_articles/article5/).
+El color calculado actúa como "**puente**" entre el color del pixel actúal, y el de sus vecinos colindantes, para conseguir el efecto de antialiasing. [Si no sabes lo que es el antialiasing, o quieres saber más, lee esté artículo.](https://saint11.art/pixel_art_articles/article5/).
 
 
 
@@ -700,82 +694,77 @@ This calculated color is a "**bridge color**" between the current pixel, and its
 <!-- TODO DECOMENTAR ESTO CUANDO SUBA LA ACTUALIZACION DEL ANTIALIASING!! -->
 <!-- TODO DECOMENTAR ESTO CUANDO SUBA LA ACTUALIZACION DEL ANTIALIASING!! -->
 <!-- TODO DECOMENTAR ESTO CUANDO SUBA LA ACTUALIZACION DEL ANTIALIASING!! -->
-<!-- It offers 2 different algorithms for calculating that antialiasing color:
+<!-- **Ofrece 2 algoritmos distintos** para calcular el color del antialiasing:
 
-{{< img_caption "k-sprite-aa-algorithms.png" "Antialiasing algorithms" >}}
+{{< img_caption "k-sprite-aa-algorithms.png" "Algoritmos del Antialiasing" >}}
 
-- {{< cell text="**Mix** (M)" color="rgb(245, 96, 237)" >}} - Selects a color by **mixing** the current pixel and its neighbours.
-- {{< cell text="**Palette** (P)" color="rgb(245, 96, 237)" >}} - Selects the color in the **palette** that is most similar to the painted pixel and its neighbours, while being different (without repeating the current color or the color of its neighbors).
+- {{< cell text="**Mezcla** (M)" color="rgb(245, 96, 237)" >}} - El color seleccionado es la **mezcla** del color actual y del de sus vecinos.
+- {{< cell text="**Paleta** (P)" color="rgb(245, 96, 237)" >}} - Selecciona el color de la **paleta** que es más similar, tanto al pixel actual, como al color de los vecinos (sin repetir el color ni del pixel, ni el de ninguno de sus vecinos adyacentes).
 
-> This is {{< text_wavy2 "the coolest method" 0.5 0.1 7 >}} if you are strictly using a palette, and <u>want to use **only** colors that belong to that palette</u>.
+> Esta es el {{< text_wavy2 "mejor método" 0.5 0.1 7 >}} si estás usando una paleta de colores de forma estricta, y <u>solo quieres usar colores que pertenezcan a la paleta</u>.
 
-The numbers (*P4, P8, M4, M8*) reffers to the **total neighbours** of a pixel that are **considered** in the algorithm:
+Los números (*P4, P8, M4, M8*) se refieren al número **total de vecinos** que son **considerados** en el algoritmo:
 
-{{< img_caption "k-sprite-neighbours-dots.png" "4 Neighbours & 8 Neighbours" >}}
+{{< img_caption "k-sprite-neighbours-dots.png" "4 Vecinos & 8 Vecinos" >}}
 
-- {{< cell text="4" color="#2B56CCFF" >}} - Takes in consideration 4 neighbours of a pixel.
-- {{< cell text="8" color="#f31654" >}} - Takes in consideration all the neighbours of a pixel. -->
-
-
+- {{< cell text="4" color="#2B56CCFF" >}} - Tiene en consideración 4 vecinos de un pixel.
+- {{< cell text="8" color="#f31654" >}} - Tiene en consideración todos los vecinos de un pixel. -->
 
 
 
-<!-- <figure><img src="https://public-files.gumroad.com/i7xb8g6u2t5wgz6xzrev2zilv6r1"><p class="figcaption"></p></figure> -->
 
 
-{{< header t="Lines" color="#F23C3CFF" h=4 align="left" >}}
 
-Tool for creating lines. 
+
+{{< header t="Lineas" color="#F23C3CFF" h=4 align="left" >}}
+
+Herramienta para crear líneas.
 **Atajo de teclado**: {{< shortcut "V" >}}
 
-<!-- {{< cell text="**3 - Line**" color="#F23C3CFF" >}}: Makes a **straight line**. Press {{< shortcut "CONTROL" >}} to **snap** the line into perfect ratio lines. -->
 
-<!-- Lo pongo open, porque es una FEATURE... hay que mostrar las cosas buenas SIN MIEDO -->
-
-{{< details summary="About snaping" color="rgb(33, 168, 202)" open=true >}}
-> I've added **{{< text_wavy2 "mooooooore" >}} snapping angles** for making **perfect lines** than what is usual in most Pixel Art editors:
+{{< details summary="Sobre el *snaping*" color="rgb(33, 168, 202)" open=true >}}
+> He añadido **{{< text_wavy2 "máaaaaas" >}} ángulos de *snap* para hacer **lineas perfectos** de lo que suele ser habitual en el resto de editores Pixel Art:
 
 <br>
 
-<!-- {{< img_caption "k-sprite-line-snap-angles.png" "Each line mantains a perfect constant ratio" >}} -->
-{{< img_caption "k-sprite-line-snap-angles.png" "Left: **Other Pixel Art editors'** snapping. Right: **K-Sprite**'s **snapping**" >}}
+{{< img_caption "k-sprite-line-snap-angles.png" "Izquierda: **Otros editores de Pixel Art'** snapping. Derecha: **K-Sprite** *snapping*" >}}
 
 <br>
 
-This is due I personally like to draw perspective buildings, streets, etc. and I've always missed that some editors do not offer more snapping angles for doing some lines more easier.
+Esto se debe a que personalmente me gusta dibujar edificios en perspectiva, calles, etc., y siempre he echado de menos que algunos editores no ofrezcan más ángulos de alineación para hacer algunas líneas más fáciles.
 {{< /details >}}
 
 
 
-<!-- {{< cell text="**4 - Cubic & Cuadratic Bezier Curve**" color="#F23C3CFF" >}}: -->
-{{< header t="Bezier Curves" color="#F23C3CFF" h=4 align="left" >}}
+{{< header t="Curvas de Bezier" color="#F23C3CFF" h=4 align="left" >}}
 
-Pixel Perfect **cubic and quadratic bezier** curves!
+Curvas **cúbicas y cuadráticas de Bezier**!
 **Atajo de teclado**: {{< shortcut "ALT+V" >}}
 
 
 {{< img_caption "k-sprite-bezier-demo.gif" >}}
 
-To make a Bezier Curve:
+Para hacer una curva Bezier:
 
-1. **Click and drag** to define start and end points on mouse click and mouse release.
-2. **Place the first control** point by clicking a second time.
-3. **Place the second control** point by clicking one last time.
+1. **Haz clic y arrastra** para definir los puntos de inicio y fin al hacer clic y soltar el ratón. 
+2. **Coloca el primer punto** de control haciendo clic una segunda vez. 
+3. **Coloca el segundo punto** de control haciendo clic una vez más.
 
 
 {{< box_info >}}
-For making a **cubic bezier**, simply click twice in the same position after adding the first control point and finish the curve.
+Para hacer una **curva de bezier cúbica**, simplemente haz clic dos veces en la misma posición después de agregar el primer punto de control y termina la curva.
 
-(This is for adding the second control point in the same coordinates as the first one).
+(Esto es para añadir el segundo punto de control esté en las mismas coordenadas que el primero).
 
 {{< /box_info >}}
 
 {{< box_green >}}
-**Consejo**: If you want the curve to still update even when the cursor is out of the editor, press (inside the editor) and drag wherever you need to make your curve.
-{{< img_caption "k-sprite-bezier-out-ezgif.webp" "The curve continues updating when the cursor is out of the editor bounds" >}}
+**Consejo**: Si deseas que la curva siga actualizándose incluso cuando el cursor esté fuera del editor, presiona (dentro del editor) y arrastra a donde necesites para hacer tu curva.
+{{< img_caption "k-sprite-bezier-out-ezgif.webp" "La curva sigue actualizándose aún cuando el cursor está fuera de los límites del editor." >}}
 
-{{< details summary="Reason" >}}
-This is due the points are added on **mouse release**, and if the window loses focus without an event pending (such as holding a mouse button), the editor can't be updated.
+
+{{< details summary="Razón" >}}
+Esto se debe a que los puntos se añaden al **levantar el click del mouse**, y si la ventana pierde el foco **sin un evento pendiente** (como mantener un botón del mouse presionado), el editor no puede ser actualizado.
 {{< /details >}}
 
 {{< /box_green >}}
@@ -783,52 +772,46 @@ This is due the points are added on **mouse release**, and if the window loses f
 
 
 
-<!-- {{< cell text="**5 - Square**" color="#F23C3CFF" >}}: Create squares {{< text_spoiler "who could have guessed? 🤣" >}} -->
 
-<!-- {{< cell text="**6 - Circle**" color="#F23C3CFF" >}}: Improved circles -->
+{{< header t="Cuadrados y Círculos" color="#F23C3CFF" h=4 align="left" >}}
 
-{{< header t="Squares & Circles" color="#F23C3CFF" h=4 align="left" >}}
+Herramienta para dibujar cuadrados y círculos.
 
-Tool for drawing Squares and Circles.
+**Atajos de teclado**: 
+- Cuadrados/Rectángulos: {{< shortcut "R" >}} 
+- Círculos: {{< shortcut "C" >}}
 
-**Shortcuts**: 
-- Rectangles: {{< shortcut "R" >}} 
-- Circles: {{< shortcut "C" >}}
 
-<!-- {{< box_green >}}
-Circles have been **improved**
-{{< /box_green >}} -->
+{{< img_caption img="better-primitives-x8.png" caption="Primitivas de Krita vs Primitivas de K-Sprite" class="no-box-shadow" >}}
 
-{{< img_caption img="better-primitives-x8.png" caption="Krita primitives vs K-Sprite primitives" class="no-box-shadow" >}}
 
-<!-- <figure><img src="https://public-files.gumroad.com/i8yyilbbeg7614gdtvhyzjsjlh2f"><p class="figcaption"></p></figure> -->
-
-Shortcuts | Action
+Atajo | Acción
 :--|--:
-{{< shortcut "SHIFT (Hold)" >}} | Make **1:1** Squares/Circles.
-{{< shortcut "CTRL" >}} | Make **origin at center**.
-{{< shortcut "ALT" >}} | **Move** Square/Circle.
+{{< shortcut "MAYUS (Mantener)" >}} | Hacer cuadrados/círculos de ratio **1:1**.
+{{< shortcut "CTRL" >}} | Cambía el **origen al centro**.
+{{< shortcut "ALT" >}} | **Mueve** el cuadrado/círculo.
 
 
-{{< header t="Fill Bucket" color="#F23C3CFF" h=4 align="left" >}}
+{{< header t="Cubo de relleno" color="#F23C3CFF" h=4 align="left" >}}
 
-Tool for filling closed areas.
+Herramienta para rellenar áreas cerradas.
 **Atajo de teclado**: {{< shortcut "F" >}}
 
-{{< img_caption "k-sprite-fill-tool-example.png" "Some shapes filled with the fill-bucket and the dither option!" >}}
+{{< img_caption "k-sprite-fill-tool-example.png" "¡Algunas formas llenas con el cubo de relleno y la opción de *dither*!" >}}
 
-{{< details summary="⚠️ Warning about the <u>fill-bucket</u> tool" color="rgba(228, 171, 17, 0.79)" >}}
+
+{{< details summary="⚠️ Advertencia sobre el <u>cubo de relleno</u> tool" color="rgba(228, 171, 17, 0.79)" >}}
 {{< box_warning >}}
-The fill-bucket uses a <u>recursive algorithm</u> ([The *flood fill* algorithm](https://en.wikipedia.org/wiki/Flood_fill)), and **Krita has limited the amount of recursive calls a script can execute**, and this -sadly- cannot be changed.
+El cubo de relleno utiliza un <u>algoritmo recursivo</u> ([El algoritmo *flood fill*](https://en.wikipedia.org/wiki/Flood_fill)), y **Krita tiene limitadas el número total de llamadas recursivas que un script puede ejecutar**, y dicho límite no se puede cambiar.
 
-This means that if the area to fill is ***big enough*** to reach that recursive calls limit, Krita will end that process and the fill won't be completed and show this window:
+Esto significa que si el área a rellenar es ***lo suficientemente grande*** como para alcanzar dicho límite de llamadas recursivas, Krita finalizará ese proceso y el relleno **no se completará**, mostrando esta ventana:
 
 {{< img_caption "k-sprite-fill-bucket-warning.png" >}}
 
 {{< box_info >}}
-I tried some non-recursive algorithms, but they are generally way slower than the *Flood Fill algorithm*, so it is best to use Krita's fill-bucket tool for filling large areas. 
+Probé algunos algoritmos no recursivos, pero en general son mucho más lentos que el *flood fill*, por lo que es mejor usar la herramienta de cubo de relleno de Krita para rellenar áreas grandes.
 
-I considered removing the tool, but since it still does the job well for small and medium areas, I decided to keep it, since sometimes is useful 👍.
+Consideré quitar la herramienta, pero dado que aún hace bien el trabajo en áreas pequeñas y medianas, decidí mantenerla, ya que a veces es útil 👍.
 {{< /box_info >}}
 {{< /box_warning >}}
 
@@ -843,177 +826,176 @@ I considered removing the tool, but since it still does the job well for small a
 
 
 
-{{< header t="Text" color="#F23C3CFF" h=4 align="left" >}}
+{{< header t="Texto" color="#F23C3CFF" h=4 align="left" >}}
 
 <!-- 2. **Text**: Tool to render correctly pixelated fonts -->
 
-Tool for drawing pixel perfect fonts!
+¡Herramienta para dibujar textos con estética Pixel Art bien definida (sin bordes borrosos)!
 **Atajo de teclado**: {{< shortcut "T" >}}
 
-To add a text:
-- {{< shortcut "Click + Drag" >}} to **create a rectangle that contains the text**, or simply {{< shortcut "Left Click" >}} to create a default area.
-- Add and edit your text in the pop-up window:
+Para añadir texto:
+- {{< shortcut "Click y Arrastra" >}} para **crear el rectángulo que contiene el texto**, o simplemente haz {{< shortcut "Left Click" >}} para crear un área por defecto.
+- Agrega y edita tu texto en la ventana emergente:
 
 
 
-{{< img_caption "k-sprite-text-editor-window.png" "Text editor window" >}}
+{{< img_caption "k-sprite-text-editor-window.png" "Ventana del editor de texto" >}}
 
-Text editor window
+Editor de texto
 :-- 
-{{< cell "1" >}} Text input for adding your **text**.
-{{< cell "2" >}} **Font** selector.
-{{< cell "3" >}} Font **size**.
-{{< cell "4" >}} Horizontal and Vertical **alignment**.
-{{< cell "5" >}} **Fits the rectangle to the text** (useful if you need to recalculate the area in case the text is out of bounds).
-{{< cell "6" >}} Crispness treshold. This is useful for adjust non|pixel art fonts and to make them look better.
-{{< cell "7" >}} Color outline.
-{{< cell "8" >}} Outline direction. Click one to toggle it on/of.
-{{< cell "9" >}} Clear/Check all outline directions.
+{{< cell "1" >}} Caja donde escribir tu **texto**.
+{{< cell "2" >}} Selecciona la **fuente**.
+{{< cell "3" >}} **Tamaño** de la fuente.
+{{< cell "4" >}} **Alineación** Horizontal y Vertical.
+{{< cell "5" >}} **Ajustar el rectángulo al texto** (útil si necesitas recalcular el área de texto, en caso de que sobresalga porque se ha quedado pequeña).
+{{< cell "6" >}} Umbral de definición. Esto es útil para ajustar fuentes que no sean originalmente de Pixel Art, para lograr un buen acabado.
+{{< cell "7" >}} Color del trazo exterior.
+{{< cell "8" >}} Dirección del trazo exterior. Haz Click para activar/desactivar.
+{{< cell "9" >}} Activa/desactiva todas las direcciones del trazo exterior.
 
 
-Press {{< shortcut "OK" >}} to submit the text, or {{< shortcut "Cancel" >}} to -{{< text_rotate "drumroll 🥁🥁🥁" >}}- {{< text_spoiler "cancel/discard the text 🤯" >}}.
+Presiona {{< shortcut "OK" >}} para aceptar los cambios, o {{< shortcut "Cancel" >}} para -{{< text_rotate "redoble de tambor 🥁🥁🥁" >}}- {{< text_spoiler "cancel/descartar el text 🤯" >}}.
 
 
 
 {{< box_green >}}
-You can move the text while is being edited by {{< shortcut "Clicking its rectangle" >}} and dragging it:
-{{< img_caption "k-sprite-text-move.gif" "Moving the text" >}}
+Puedes mover el texto mientras se está editando haciendo {{< shortcut "Clic en su rectángulo" >}} y arrastrándolo:
+{{< img_caption "k-sprite-text-move.gif" "Moviendo el texto" >}}
 {{< /box_green >}}
 
 {{< box_green "💡" >}}
 
-**Consejo**: It also {{< text_shimmer "works great" >}} {{< text_wavy2 "with non pixel art fonts! 🎉🥳 " 0.5 0.1 8 >}}
+**Consejo**: También {{< text_shimmer "se ven fabuloso 💅" >}} {{< text_wavy2 "con fuentes que no son pixel art! 🎉🥳 " 0.5 0.1 8 >}}
 
 {{< img_caption "k-sprite-text-arial.png" >}}
 
 {{< /box_green >}}
-<!-- <figure><img src="https://public-files.gumroad.com/v16jf2e48wb1l6xfywhoaetd8q4u"><p class="figcaption"></p></figure> -->
 
-{{< header t="Zoom Tool" color="#F23C3CFF" h=4 align="left" >}}
-<!-- Tool for zooming specific areas precissely. -->
-Tool for precisely zooming in on specific areas.
+
+
+{{< header t="Herramienta de Zoom" color="#F23C3CFF" h=4 align="left" >}}
+
+Herramienta para hacer zoom con precisión en áreas específicas.
 **Atajo de teclado**: {{< shortcut "Z" >}}
 
-{{< img_caption "k-sprite-zoom-example.gif" "Zoom in on specific areas with `Left Click+Drag`" >}}
+{{< img_caption "k-sprite-zoom-example.gif" "Haz zoom en áreas específicas con `Left Click + Arrastrar`" >}}
 
-Zoom Shortcuts | Action
+
+
+Atajos del Zoom | Action
 :--|--:
-{{< shortcut "Left MB+(Drag)" >}} | Zoom in rectangle.
-{{< shortcut "Left MB" >}} | Zoom In.
-{{< shortcut "Right MB" >}} | Zoom Out.
+{{< shortcut "Click Izq.+(Arrastrar)" >}} | Zoom en rectángulo.
+{{< shortcut "Click Izq." >}} | Zoom In.
+{{< shortcut "Click Der." >}} | Zoom Out.
 
 
 
 
 
-{{< header t="Canvas" h=3 align="left" class="underline" >}}
-### Canvas {.no-display}
+{{< header t="Lienzo" h=3 align="left" class="underline" >}}
+### Lienzo {.no-display}
 
-<!-- Here is where you draw. It will render the current state of the document, and you will be editing the active layer that was active when launching the editor. -->
 
-Here is where you draw. This area displays the current state of the document, and you will be editing **the layer that was active when you launched the editor**.
+Aquí es donde dibujas. Esta área muestra el estado actual del documento, y estarás editando **la capa que estaba activa cuando lanzaste el editor**.
 
 - Controls
-Shortcut | Action
+Atajos | Acción
 :-- | --:
-{{< shortcut "Left MB" >}} | **Paint** with **Foreground** Color (FG)
-{{< shortcut "Right MB" >}} | **Paint** with **Background** Color (BG)
-{{< shortcut "Middle MB" >}} or {{< shortcut "Space + Left MB (*Drag*)" >}} | **Pan Canvas**
-{{< shortcut "CTRL + Middle MB (*Drag*)" >}} | **Zoom** in/out
-{{< shortcut "CTRL + Left/Right MB" >}} | **Sample** Foreground/Background color
-{{< shortcut "X" >}} | **Switch** FG/BG Colors
-{{< shortcut "1" >}} | (Zoom) **1:1 pixel scale**
-{{< shortcut "2" >}} | (Zoom) **Fit** minimum width/height
-{{< shortcut "3" >}} | (Zoom) **Fit document** into viewport
+{{< shortcut "Click Izq." >}} |**Dibuja** con el color **Principal**
+{{< shortcut "Click Der." >}} | **Dibuja** con el color **Secundario**
+{{< shortcut "Botón Central del Ratón" >}} or {{< shortcut "Space + Click Izq. (*Drag*)" >}} | **Panear el lienzo**.
+{{< shortcut "CTRL + Botón Central del Ratón (*Drag*)" >}} | **Zoom** in/out
+{{< shortcut "CTRL + Click Izq./Der." >}} | **Samplear** el color principal/secundario.
+{{< shortcut "X" >}} | **Intercambia** los colores principal/secundario.
+{{< shortcut "1" >}} | (Zoom) **1:1**
+{{< shortcut "2" >}} | (Zoom) **Ajustar** el ancho/alto mínimo.
+{{< shortcut "3" >}} | (Zoom) **Ajustar el documento**.
 
 
 {{< box_info "💡" >}}
-**Consejo**: You can **mask regions** for painting in K-Sprite by **making a selection in Krita**:
-<!-- <figure><img src="https://public-files.gumroad.com/3zuy7vuxcmx0h89i2jsfni116u6l"><p class="figcaption"></p></figure> -->
-{{< img_caption "sync-selection.gif" "Selection Sync" >}}
+**Consejo**: Puedes dibujar **dentro de máscaras** en K-Sprite **haciendo una selección en Krita**:
+{{< img_caption "sync-selection.gif" "Máscarás y Selección" >}}
 
-This way, you will only be able to draw within the selection.
+De esta manera, solo podrás dibujar dentro de la selección en K-Sprite.
 
 {{< box_warning >}}
-At the moment, there is no visual input inside K-Sprite to know if there is a selection active. You will have to look Krita's canvas for that.
+De momento no hay ningún *feedback* visual dentro de K-Sprite para saber si hay una selección activa. Tendrás que mirar el lienzo de Krita para verlo.
 {{< /box_warning >}}
 {{< /box_info >}}
 
 
 
-{{< header t="Export Buttons" h=3 align="left" class="underline" >}}
-### Export Buttons {.no-display}
+{{< header t="Botones de Exportacion" h=3 align="left" class="underline" >}}
+### Botones de Exportacion {.no-display}
 
 {{< img_caption img="k-sprite-export-buttons.png" class="no-box-shadow" >}}
 
-Export the drawing/changes in K-Sprite to a `New Layer` or to the `Active Layer` in Krita
+Exporta los cambios que hayas hecho en K-Sprite a `Una nueva capa (New Layer)` o a la `Capa Activa (Active Layer)` en Krita.
 
-- `New layer` will export the drawing to a new layer **above the selected layer**.
-- `Active layer` will export the drawing to the **layer that was active when executing the editor**.
+- `Nueva Capa (New layer)` exportará los cambios a una nueva capa **por encima de la capa seleccionada**.
+- `Capa Activa (Active layer)` exportará los cambios a **capa que se encontraba activa cuando has ejecutado el editor**.
 
+> 👉 Estos botones pueden mostrarse o no **dependiendo de la capa activa** al iniciar el editor.
 > 
-> 👉 These buttons may show or not **depending on the active layer** when launching the editor.
-> 
->- Launching it with an **empty layer** will make <u>**not**</u> show the `New Layer` button (to avoid cluttering).
->- Launching it with a **hidden layer** selected will make <u>**not**</u> show the `Active Layer` button (this is to avoid committing changes to an invisible layer by mistake).
+> - Iniciarlo con una **capa vacía** hará que <u>**no**</u> se muestre el botón `Nueva Capa` (para evitar añadir capas innecesarias).
+> - Iniciarlo con una **capa oculta** seleccionada hará que <u>**no**</u> se muestre el botón `Capa Activa` (esto es para evitar realizar cambios en una capa invisible por error).
 
 
 
-{{< header t="Info Bar" h=3 align="left" class="underline" >}}
-### Info Bar {.no-display}
 
-Displays information, shortcuts, tips, etc. when **hovering** a button/tool.
 
-{{< img_caption "k-sprite-info-bar.png" "Info bar, at the **bottom** of the editor" >}}
+{{< header t="Barra de Información" h=3 align="left" class="underline" >}}
+### Barra de Información {.no-display}
+
+Muestra información, atajos de teclado, consejos, etc. al **pasar el cursor** sobre un botón/herramienta.
+
+{{< img_caption "k-sprite-info-bar.png" "La Barra de Información, en la parte **inferior** del editor" >}}
 
 {{< box_green >}}
-This is useful for not having to remember every single shortcut, tip, etc.
+Esto es útil para no tener que recordar cada atajo, consejo, etc.
 {{< /box_green >}}
 
 
 
-# Options 
+# Opciones
 
-## Index Painting Options
+## Opciones de Pintura Indexada
 
-- **Add gradient**: Adds a gradient to preview the dither and to sample colors.
+- **Add gradient (Agregar degradado)**: Agrega un degradado para previsualizar el efecto de *dithering* y para poder samplear colores.
 
-  {{< img_caption "index-painting-gradient.png" "Adding a gradient is useful to preview the aesthetic of the dithering pattern ✅" >}}
-  <!-- <br> -->
-  <!-- {{< box_green >}}
-  Adding a gradient is useful to preview the dithering aesthetic if you don't have already a drawn layer.
-  {{< /box_green >}} -->
+  {{< img_caption "index-painting-gradient.png" "Agregar un degradado es útil para previsualizar la estética del patrón de dithering con tonos específicos ✅" >}}
 
-    - **Position**: Changes the position of the gradient (*top, bottom, left, right*).
-    - **Size**: The size of the gradient as a **percentage** of the document's size.
-    - **Invert**: Inverts the gradient.
-- **Method**
-    - **Index colors**: Uses an index color filter
-    - **Gradient map**: Uses a gradient map filter. You can configure its dither pattern in its properties.
+    - **Position (Posición)**: Cambia la posición del degradado.
+    - **Size (Tamaño)**: Tamaño del gradiente (porcentage en función el tamaño del documento).
+    - **Invert (Invertir)**: Invierte la dirección del gradiente.
+- **Method (Método)**
+    - **Index colors (Colores indexados)**: Usa el filtro de *Index Colors*.
+    - **Gradient map (Mapa de Gradiente)**: Usa el filtro de *Gradient Map*. Puedes configurar su patrón de *dithering* en sus propiedades.
   {{< box_info >}}
-  I personally preffer the **Gradient Map** option. Since is easier to manage colors.
+  Personalmente, prefiero la opción de **Mapa de Degradado**. Ya que es más fácil gestionar los colores.
   {{< /box_info >}}
-- **Dither live preview**: When selecting a new pattern preset or editing the dither matrix (by rotating, inverting it, etc), if there is a "Dither" layer selected (or a sibling) of the selected layer, **the Dither layer will be updated automatically**.
+- **Dither live preview (Previsualización en vivo de dithering)**: Al seleccionar un nuevo preset de patrón o editar la matriz de *dithering* (rotándola, invirtiéndola, etc.), si hay una capa de "Dither" seleccionada (o una hermana) de la capa seleccionada, **la capa de Dither se actualizará automáticamente**.
   {{< box_green >}}
-  This is for being able to directly see how changes affect the shading dithering.
+	Esto es para poder ver directamente cómo los cambios afectan el patrón de *dithering*.
 
-  {{< img_caption "index-painting-live-preview.webp" "Scrolling through the presets (with arrow keys) automatically updates the dithering pattern." >}}
+  {{< img_caption "index-painting-live-preview.webp" "Hacer scroll por los presets (con los cursores) automaticamente actualiza el patrón de *dithering*." >}}
   {{< /box_green >}}
 
-## Shortcuts
 
-{{< details summary="How to configure shortcuts in Krita" >}}
-Go to `Settings -> Configure Krita`. There, click the `Keyboard Shortcuts` tab. 
+## Atajos de Teclado
 
-Search for `SZK Pixel Art Suite` to see the available shortcuts.
+{{< details summary="Cómo configurar los atajos de teclado en Krita" >}}
+Ve a `Preferencias -> Configurar Krita`. Una vez allí, pulsa la pestaña `Accesos rápidos de teclado`. 
+
+Busca `SZK Pixel Art Suite` para ver los atajos disponibles.
 {{< /details >}}
 
-Shortcuts provided by the plugin:
+Atajos proporcionados por el *plugin*:
 
-### Palette
+### Paleta
 
-- When selecting a color from a palette in the Shading tab, you can move backward/forward the active palette color with the shortcuts:
-|Command | Default Shortcut
+- Al seleccionar un color de una paleta en la pestaña de Sombreado, puedes mover hacia atrás/adelante el color activo de la paleta con los atajos:
+|Comando | Atajo por defecto
 |:---|---:
 Previous Palette Color (SZK Pixel Art Suite) | {{< shortcut "Alt+1" >}}
 Next Palette Color (SZK Pixel Art Suite) | {{< shortcut "Alt+2" >}}
@@ -1022,36 +1004,37 @@ Next Palette Color (SZK Pixel Art Suite) | {{< shortcut "Alt+2" >}}
 
 ### K-Sprite
 
-- You can execute the editor with the shortcut:
-|Command | Default Shortcut
+- Puedes ejecutar el editor K-Sprite con el atajo:
+|Comando | Atajo por defecto
 |:---|---:
 Open SZK K Pixel Art Editor (SZK Pixel Art Suite) | {{< shortcut "Alt+F3" >}}
 
 {{< box_info >}}
-I personally highly recommend to configure this to your choice. I personally like to trigger the editor as if I was changing of brush (for using one of its features, like the pixel perfect brush, or drawing a primitive, etc.)
+Personalmente, recomiendo encarecidamente configurar esto a tu gusto. 
+Personalmente me gusta activar el editor como si estuviera cambiando de pincel (para usar una de sus características, como el pincel pixel perfecto, o dibujar una primitiva, etc.) de forma puntual y rápida, y luego volver a Krita.
 {{< /box_info >}}
 
-### Export Pixel Art
+### Exportar Pixel Art
 
-- You can bind to a shortcut the action to export your pixel art with your current settings with:
-|Command | Default Shortcut
+- Puedes asignar a un atajo la acción para exportar tu Pixel Art: 
+|Comando | Atajo por defecto
 |:---|---:
-Export Scaled Pixel Art (Full Document) (SZK Pixel Art Suite) | (Not set)
-Export Scaled Pixel Art (Selected Layers) (SZK Pixel Art Suite) | (Not set)
+Export Scaled Pixel Art (Full Document) (SZK Pixel Art Suite) | (Sin asignar)
+Export Scaled Pixel Art (Selected Layers) (SZK Pixel Art Suite) | (Sin asignar)
 
 
-# Credits
+# Creditos
 
-**Fonts** used:
+**Fuentes** usadas:
 
-- [Minimal4](https://saint11.org/blog/fonts/) by *[Pedro Medeiros](https://saint11.art/)* ([@saint11](https://x.com/saint11)) ({{< text_wavy "Thank you!" 0.04 6 1.2 >}})
-- [Tiny5-Regular](https://fonts.google.com/specimen/Tiny5) by *[Stefan Schmidt](https://fonts.google.com/?query=Stefan%20Schmidt)* ({{< text_wavy "Thank you!" 0.01 6  1.4 >}})
+- [Minimal4](https://saint11.org/blog/fonts/) por *[Pedro Medeiros](https://saint11.art/)* ([@saint11](https://x.com/saint11)) ({{< text_wavy "Gracias!" 0.04 6 1.2 >}})
+- [Tiny5-Regular](https://fonts.google.com/specimen/Tiny5) por *[Stefan Schmidt](https://fonts.google.com/?query=Stefan%20Schmidt)* ({{< text_wavy "Gracias!" 0.01 6  1.4 >}})
 
-Mentioned **articles**:
+**Artículos** mencionados:
 
-- [HD Index Painting in Photoshop](http://danfessler.com/blog/hd-index-painting-in-photoshop) by [Dan Fessler](http://danfessler.com/).
+- [HD Index Painting in Photoshop](http://danfessler.com/blog/hd-index-painting-in-photoshop) por [Dan Fessler](http://danfessler.com/).
 
-- [Anti-Alias and Banding](https://saint11.art/pixel_art_articles/article5/) by [Pedro Medeiros](https://saint11.art/about/)
+- [Anti-Alias and Banding](https://saint11.art/pixel_art_articles/article5/) por [Pedro Medeiros](https://saint11.art/about/)
 
 ---
 
@@ -1067,4 +1050,4 @@ Mentioned **articles**:
   cover_position="50% 53%"
 >}}
 
-> I hope it helps {{< text_wavy "you" >}} to {{< text_handwritten text="create" font=3 >}} **{{< text_rotate "awesome" >}} {{< text_shimmer "Pixel Art!" >}}** 🍀
+> Espero que el plugin {{< text_wavy "te ayude" >}} a {{< text_handwritten text="crear" font=3 >}} **{{< text_rotate "Pixel Art" >}} {{< text_shimmer "impresionante!" >}}** 🍀
