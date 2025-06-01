@@ -82,13 +82,13 @@ Aparecerá un nuevo ***panel*** con el *plugin*:
 
 <!-- <div> -->
 <div style="flex: 0 auto; text-align:left;">
-{{< cell "1" "#FF8526FF" "gama-de-sombras-y-luces" >}} {{< link_color "gama-de-sombras-y-luces" "**Gama de sombras y luces**" "#FF8526FF" >}} <br><br>
+{{< cell "1" "#FF8526FF" "#gama-de-sombras-y-luces" >}} {{< link_color "#gama-de-sombras-y-luces" "**Gama de sombras y luces**" "#FF8526FF" >}} <br><br>
 
 {{< cell "2" "#FF8526FF" "#remplazo-de-color" >}} {{< link_color "#remplazo-de-color" "**Remplazo de Color**" "#FF8526FF" >}} <br><br>
 
 {{< cell "3" "#FF8526FF" "#pintura-indexada" >}} {{< link_color "#pintura-indexada" "**Pintura indexada**" "#FF8526FF" >}} <br><br>
 
-{{< cell "4" "#FF8526FF" "#exportacion" >}} {{< link_color "#exportacion" "**Exportación**" "#FF8526FF" >}} <br><br>
+{{< cell "4" "#FF8526FF" "#exportación" >}} {{< link_color "#exportación" "**Exportación**" "#FF8526FF" >}} <br><br>
 
 {{< cell "5" "#FF8526FF" "#k-sprite" >}} {{< link_color "#k-sprite" "**K-Sprite**" "#FF8526FF" >}} <br><br>
 
@@ -541,7 +541,6 @@ K-Sprite es un **editor de Pixel Art dentro de Krita** que está destinado a añ
 Para ejecutar **K-Sprite**, ve a la `Pestaña del Lápiz ✏️` del *docker*, o presiona el **atajo de teclado** `Open SZK K Pixel Art Editor (SZK Pixel Art Suite)` (Por defecto {{< shortcut "Alt+F3" >}}).
 
 <!-- A new window will appear on top of Krita (`1`), and will grab the active layer (`2`): -->
-A new **window will appear** on top of Krita {{< cell "1" >}}, and will **grab the active layer** {{< cell "2" >}}:
 Se abrirá una **nueva ventana**, siempre por encima de Krita {{< cell "1" >}}, y **capturará la capa activa** {{< cell "2" >}}:
 
 >{{< cell "1" >}} - **La ventana siempre se mostrará siempre en la parte superior** para que puedas **seguir usando otros dockers/plugin de krita** mientras dibujas en *K-Sprite*.
@@ -571,7 +570,7 @@ Una vez que efectues los cambios, aparecerá como de costumbre en Krita, en su p
 - {{< cell text="**Tool Bar / Barra de Herramientas**" color="rgb(91, 91, 240)" url="#herramientas" >}}: Contiene todas las **herramientas** de dibujo.
 - {{< cell text="**Canvas / Lienzo**" color="rgb(91, 91, 240)" url="#lienzo" >}}: Aquí es donde se dibuja.
 - {{< cell text="**Export Buttons / Botones para exportar**" color="rgb(91, 91, 240)" url="#botones-de-exportacion" >}}: Guarda los cambios realizados.
-- {{< cell text="**Info Bar / Barra de información**" color="rgb(91, 91, 240)" url="#barra-de-informacion" >}}: Ofrece información acerca de la herramienta seleccionada.
+- {{< cell text="**Info Bar / Barra de información**" color="rgb(91, 91, 240)" url="#barra-de-información" >}}: Ofrece información acerca de la herramienta seleccionada.
 
 
 {{< header t="Opciones de la herramienta" h=3 align="left" class="underline" >}}
