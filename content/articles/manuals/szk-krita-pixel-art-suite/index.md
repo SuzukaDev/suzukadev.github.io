@@ -440,7 +440,7 @@ Note: The dither layer must be named "Dither". This is due that after pressing t
 {{< /box_warning >}}
 
 
-- {{< cell "11" >}} **Create dither pattern layer**: Sets up an Index Painting group around the selected layer.
+- {{< cell "11" >}} **Create dither pattern layer**: Adds a dithering layer with the dithering pattern set on the matrix
 {{< box_green >}}
 This can be used as a **pattern generator** (useful for making **textures for brushes**, **gradients**, etc).
 {{< /box_green >}}
@@ -511,8 +511,8 @@ Useful when you want a higher resolution image of your Pixel Art drawing.
 - **Scale**: Size multiplicator. 
 - **Quality**: Image compression quality. The higher, the better quality (and the file size).
   > Since Pixel Art normally tends to have lots of contiguous pixels with the same value, a low value usually keeps enough quality.
-- **Directory**: Suports both <u>**local** and **absolute** directories</u>.
-  - **Local** example: Setting a value of, lets say, `Exports/Version 1` will make the exported images to be in a subdirectory relative the current path of the active document.
+- **Directory**: Suports both <u>**relative** and **absolute** directories</u>.
+  - **relative** example: Setting a value of, lets say, `Exports/Version 1` will make the exported images to be in a subdirectory relative the current path of the active document.
     - Eg: if your document is placed in `C:\Users\Dexter\Desktop\my-awesome-pixel-art.kra`, the exported images will be in `C:\Users\Dexter\Desktop\Exports\Version 1`
   - **Absolute** example: Setting an absolute path (like, lets say: `C:\Users\Mike\Pictures\My Pixel Art`) will place all exported images in that folder, and **ignore the document's path**.
 - **File name**: Add a custom name for the exported image.
