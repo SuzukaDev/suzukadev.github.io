@@ -898,7 +898,7 @@ Text editor window
 {{< cell "5" >}} **Fits the rectangle to the text** (useful if you need to recalculate the area in case the text is out of bounds).
 {{< cell "6" >}} Crispness treshold. This is useful for adjust non|pixel art fonts and to make them look better.
 {{< cell "7" >}} Color outline.
-{{< cell "8" >}} Outline direction. Click one to toggle it on/of.
+{{< cell "8" >}} Outline direction. Click one to toggle it on/off.
 {{< cell "9" >}} Clear/Check all outline directions.
 
 
