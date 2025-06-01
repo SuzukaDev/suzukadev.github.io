@@ -626,7 +626,7 @@ Option | | Shortcut
 
 Button | | Shortcut
 :--|:--|--:
-{{< cell "1" >}} Solo Mode | Display only the layer that is being edited.. | {{< shortcut "TAB" >}}
+{{< cell "1" >}} Solo Mode | Display only the layer that is being edited. | {{< shortcut "TAB" >}}
 {{< cell "2" >}} Adjust document to view |  | {{< shortcut "3" >}}
 {{< cell "3" >}} Delete All | Clear all the content in the edited layer.| (No shortcut)
 {{< cell "4" >}} Undo/Redo | Undo and redo changes. | {{< shortcut "CTRL+Z" >}} / {{< shortcut "CTRL+SHIFT+Z" >}}
