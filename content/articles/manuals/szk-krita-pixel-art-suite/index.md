@@ -193,7 +193,7 @@ Those buttons have the following shortcuts:
 | {{< shortcut "Left MB" >}} | Triggers the **color selector**
 | {{< shortcut "CTRL + Left MB" >}}| Triggers the **color picker** to grab any color
 | {{< shortcut "ALT + Left MB" >}}| Picks the **Foreground color**
-| {{< shortcut "Left MB" >}}| Picks the **background** color
+| {{< shortcut "Right MB" >}}| Picks the **background** color
 
 <br>
 
