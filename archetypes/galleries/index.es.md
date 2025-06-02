@@ -32,6 +32,7 @@ draft: false
 # CONFIGURACIONES DE APARIENCIA
 # accent_color: "#ff168a" # customize the color for links, etc in the page
 # theme: light # Fuerza un tema para la galería (valores posibles: dark/light). Por defecto usa defaultTheme de la configuración.
+# feature_image_background_color: "#ff168a" # If the featured_image has transparency, change this color for customizing the background color (default: transparent)
 transparent_bg_for_gifs: true # si es verdadero, el fondo de los .gif será transparente
 transparent_bg_for_pngs: true # si es verdadero, el fondo de los .png será transparente
 # show_text_on_top: true # si es verdadero, muestra el texto markdown encima de la galería. Si es falso o NO se establece, muestra el markdown debajo
