@@ -31,6 +31,6 @@ show_right_bar = true
 
 [menu.main]
 	weight = 10
-	name = "Manuals 📚"
+	name = "Manuals 📘"
 
 +++

@@ -8,7 +8,7 @@ draft = false
 # [menu.footer]
 [menu.main]
 	weight = 3
-	name = "---- TestArticles 1313"
+	name = "Articles 📚"
 # [menu.main]
 # 	weight = 100000
 +++
