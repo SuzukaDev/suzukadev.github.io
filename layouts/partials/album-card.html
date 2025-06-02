@@ -6,7 +6,7 @@
   {{- end -}}
   <a class="card" {{- $style -}} href="{{- .page.RelPermalink -}}" title="{{- .page.Title -}}">
     <figure style="background-color: {{- .color -}}">
-      <img class="lazyload" width="{{- .thumbnail.Width -}}" height="{{- .thumbnail.Height -}}" data-src="{{- .thumbnail.RelPermalink -}}" alt="{{- .page.Title -}}" />
+      <img class="lazyload" {{- with .page.Params.feature_image_background_color }} style="background-color: {{.}};" {{- end -}} width="{{- .thumbnail.Width -}}" height="{{- .thumbnail.Height -}}" data-src="{{- .thumbnail.RelPermalink -}}" alt="{{- .page.Title -}}" />
       {{- if .thumbnail_hover -}}
         <img class="lazyload hover-cover-image" width="{{- .thumbnail_hover.Width -}}" height="{{- .thumbnail_hover.Height -}}" data-src="{{- .thumbnail_hover.RelPermalink -}}" alt="{{- .page.Title -}}" />
       {{- end -}}
