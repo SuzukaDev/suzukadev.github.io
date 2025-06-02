@@ -30,7 +30,7 @@ draft: false
 # hover_color: rgba(255, 94, 0, 0.57) # color de resplandor (en el tema oscuro) al hacer hover en una galeria. Si no se establece, se tomará el color más predominante de la imagen usada como hover.
 
 # CONFIGURACIONES DE APARIENCIA
-# accent_color = "#ff168a" # customize the color for links, etc in the page
+# accent_color: "#ff168a" # customize the color for links, etc in the page
 # theme: light # Fuerza un tema para la galería (valores posibles: dark/light). Por defecto usa defaultTheme de la configuración.
 transparent_bg_for_gifs: true # si es verdadero, el fondo de los .gif será transparente
 transparent_bg_for_pngs: true # si es verdadero, el fondo de los .png será transparente
