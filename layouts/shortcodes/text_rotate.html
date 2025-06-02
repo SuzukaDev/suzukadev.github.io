@@ -34,7 +34,8 @@ spin = (float) Spin multiplicator. Default: 1.0 (1 perfect turn)
 {{- end -}} 
 
 
-{{- $output := printf "<span class='rotation-letters' style='%s;'>" ($css_properties_string) -}} 
+{{- /*  {{- $output := printf "<span class='rotation-letters' style='%s;'>" ($css_properties_string) -}}   */ -}}
+{{- $output := printf "<span class='rotation-letters' style='%s;'><span class='word'>" ($css_properties_string) -}} 
 {{- range $index, $char := $chars -}}
 	{{- $delay := mul $index ($frequency) -}} 
 	{{- $delay := mul $delay $speed_sign -}} 
@@ -44,13 +45,15 @@ spin = (float) Spin multiplicator. Default: 1.0 (1 perfect turn)
 	{{- /*  INFO  https://discourse.gohugo.io/t/hugo-range-function-adds-extra-whitespace-between-spans/33219 */ -}}
 	{{- /*  <span class="wavy-text" style="animation-duration:{{$animation_time}}s; animation-delay: {{$delay | safeCSS}}s; --y-wave-translate-min:{{$min_y}}px; --y-wave-translate-max:{{$max_y}}px;">{{- $char -}}</span>  */ -}}
 	{{- if eq $char " " -}}
-		{{- $output = printf "%s<span style='display: inline;'> </span>" ($output | safeHTMLAttr) -}} 
+		{{- /*  {{- $output = printf "%s<span style='display: inline;'> </span>" ($output | safeHTMLAttr) -}}   */ -}}
+		{{- $output = printf "%s&nbsp;</span><span class='word'>" $output -}}
 	{{- else -}} 
 		{{- $output = printf "%s<span style='animation-duration:%fs; animation-delay:%fs;'>%s</span>" $output $animation_time ($delay) $char -}} 
 	{{- end -}} 
 {{- end -}}
 
-{{- $output = printf "%s</span>" $output -}}
+{{- /*  {{- $output = printf "%s</span>" $output -}}  */ -}}
+{{- $output = printf "%s</span></span>" $output -}}
 
 {{- /*  To avoid whitespaces in HTML  */ -}}
 {{- $output | safeHTML -}} 

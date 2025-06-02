@@ -12,6 +12,12 @@
 @import "shortcodes/link_cards.scss";
 // @import "shortcodes/misc_effects.scss";
 
+.word{
+	white-space: nowrap; /* Prevent breaking within the word */
+	display: inline-block;
+}
+
+
 .cell{
 	// --cell-color: var(--bg-color,var(--hover-color));
 	--cell-color: var(--hover-color);

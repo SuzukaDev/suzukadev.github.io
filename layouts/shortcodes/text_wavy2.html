@@ -83,7 +83,8 @@ Usage:
 	{{- if eq $char " " -}}
 		{{- /*  {{- $output = printf "%s$nbsp;" ($output | safeHTMLAttr) -}}  */ -}}
 		{{- /*  {{- $output = printf "%s<span> </span>" ($output | safeHTMLAttr) -}}  */ -}}
-		{{- $output = printf "%s&nbsp;" $output -}}
+		{{- /*  {{- $output = printf "%s&nbsp;" $output -}}  */ -}}
+		{{- $output = printf "%s&nbsp;</span><span class='word'>" $output -}}
 	{{- else -}}
 		{{- $output = printf "%s<span class='wavy-text' style='animation-duration:%fs; animation-delay:%fs; --y-wave-translate-min:%fpx; --y-wave-translate-max:%fpx;'>%s</span>" $output $animation_time ($delay) $_min_y $_max_y $char -}}
 	{{- end -}}
@@ -91,5 +92,7 @@ Usage:
 
 {{- /*  To avoid whitespaces in HTML  */ -}}
 <span>
+	<span class="word">
 	{{- $output | safeHTML -}}
+	</span>
 </span>
