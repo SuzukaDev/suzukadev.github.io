@@ -1628,15 +1628,22 @@ nav.categories ul li a{
 // }
 
 // Links at the profile-resume (at index)
-.profile-resume a {
-	// background-color: pink;
-	// font-weight: bold;
-	color: var(--hover-color);
-	&:hover {
-		// background-color: red;;
-		// color: var(--hover-color);
+.profile-resume {
+	.featured-gallery-big, .galleries{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	a {
+		// background-color: pink;
 		// font-weight: bold;
-		text-decoration: underline;
+		color: var(--hover-color);
+		&:hover {
+			// background-color: red;;
+			// color: var(--hover-color);
+			// font-weight: bold;
+			text-decoration: underline;
+		}
 	}
 }
 // .profile-resume a {
