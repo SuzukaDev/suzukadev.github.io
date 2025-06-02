@@ -39,11 +39,12 @@ randomness = (float) Displacement randomness. Default: 0.0
   {{- errorf "shortcode text_glitch.html: 'text' argument not found" -}}
 {{- end -}}
 
-{{- $css_class := "glitch" -}}
+{{- $CSS_CLASS := "glitch" -}}
+{{- $font_class := "" -}}
 {{- if eq $font 1 -}}
-	{{- $css_class = printf "%s %s" $css_class "consolas-font" -}}
+	{{- $font_class = "consolas-font" -}}
 {{- else if eq $font 2 -}}
-	{{- $css_class = printf "%s %s" $css_class "pixel-font" -}}
+	{{- $font_class = "pixel-font" -}}
 {{- end -}}
 
 {{- $noise_delay1 := 0.0 -}}
@@ -109,10 +110,11 @@ randomness = (float) Displacement randomness. Default: 0.0
 	{{- /*  <span class="wavy-text" style="animation-duration:{{$animation_time}}s; animation-delay: {{$delay | safeCSS}}s; --y-wave-translate-min:{{$min_y}}px; --y-wave-translate-max:{{$max_y}}px;">{{- $char -}}</span>  */ -}}
 	{{- if eq $char " " -}}
 		{{- /*  {{- $output = printf "%s$nbsp;" ($output | safeHTMLAttr) -}}  */ -}}
-		{{- $output = printf "%s&nbsp;" $output -}}
+		{{- /*  {{- $output = printf "%s&nbsp;" $output -}}  */ -}}
 		{{- /*  {{- $output = printf "%s<span> </span>" ($output | safeHTMLAttr) -}}  */ -}}
+		{{- $output = printf "%s</span>&nbsp;<span class='word'>" $output -}}
 	{{- else -}}
-		{{- /*  {{- $output = printf "%s<span class='%s' data-text='%s' style='animation-duration:%fs; animation-delay:%fs; --y-wave-translate-min:%fpx; --y-wave-translate-max:%fpx;'>%s</span>" $output $css_class $data_text $animation_time ($delay) $min_y $max_y $char -}}  */ -}}
+		{{- /*  {{- $output = printf "%s<span class='%s' data-text='%s' style='animation-duration:%fs; animation-delay:%fs; --y-wave-translate-min:%fpx; --y-wave-translate-max:%fpx;'>%s</span>" $output $CSS_CLASS $data_text $animation_time ($delay) $min_y $max_y $char -}}  */ -}}
 
 		{{- /*  APROACH with styles slice  */ -}}
 		{{- $delay_property := printf "animation-delay:%fs" $delay -}}
@@ -135,12 +137,14 @@ randomness = (float) Displacement randomness. Default: 0.0
 		{{- $non_empty_style_properties := complement (slice "") (slice nil) $style_properties -}}
 
 		{{- $css_style := delimit $non_empty_style_properties ";"}}
-		{{- $output = printf "%s<span class='%s' data-text='%s' style='%s'>%s</span>" $output $css_class $data_text $css_style $char}}
+		{{- $output = printf "%s<span class='%s' data-text='%s' style='%s'>%s</span>" $output $CSS_CLASS $data_text $css_style $char}}
 	{{- end -}}
 {{- end -}}
 
 {{- /*  To avoid whitespaces in HTML  */ -}}
-<span>
+<span {{- with $font_class}} class='{{.}}'{{- end -}}>
+	<span class="word">
 	{{- $output | safeHTML -}}
+	</span>
 </span>
 
