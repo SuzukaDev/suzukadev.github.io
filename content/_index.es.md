@@ -26,7 +26,7 @@ menus:
 
 
 
-Lee más [**sobre mí**]({{< relref "about.md" >}}) o [**echa un vistazo a mi trabajo**]({{< relref "/articles/" >}}).
+Lee más [**sobre mí**]({{< relref "about.md" >}}) o [**echa un vistazo a mi trabajo**]({{< relref "my-work" >}}).
 
 
 <!-- TODO cambiar el link de "check my work here -->
