@@ -82,7 +82,7 @@ random_scale_min = (float) Scale added to the random (useful if you want to avoi
 {{- $_shimmer_properties := delimit $_shimmer_properties_slice_non_empty ";" -}}
 
 
-{{- $output := printf "<span class='%s' style='%s'>" $top_css_class $_shimmer_properties -}}
+{{- $output := printf "<span class='%s' style='%s'><span class='word'>" $top_css_class $_shimmer_properties -}}
 
 {{- range $index, $char := $chars -}}
 	{{- $delay := mul $index ($absDelay) -}}
@@ -121,12 +121,14 @@ random_scale_min = (float) Scale added to the random (useful if you want to avoi
 	{{- end -}}
 
 	{{- if eq $char " " -}}
-		{{- $output = printf "%s<span style='display:inline;'> </span>" ($output | safeHTMLAttr) -}}
+		{{- /*  {{- $output = printf "%s<span style='display:inline;'> </span>" ($output | safeHTMLAttr) -}}  */ -}}
+		{{- $output = printf "%s&nbsp;</span><span class='word'>" $output -}}
 	{{- else -}}
 		{{- $output = printf "%s<span style='%s; animation-duration:%fs; animation-delay:%fs;'>%s</span>" $output $child_span_style $animation_time ($delay) $char -}}
 	{{- end -}}
 {{- end -}}
 
-{{- $output = printf "%s</span>" $output -}}
+{{- /*  {{- $output = printf "%s</span>" $output -}}  */ -}}
+{{- $output = printf "%s</span></span>" $output -}}
 {{- /*  To avoid whitespaces in HTML  */ -}}
 {{- $output | safeHTML -}}

@@ -20,7 +20,7 @@
 	// --shimmer-c1: var(--shimmer-color-1);
 	// --shimmer-c2: var(--shimmer-color-2);
 		// text-wrap: nowrap;
-		white-space: nowrap;
+		// white-space: nowrap;
 		// text-wrap: stable;
 		// white-space: nowrap;
 		position: relative;
@@ -35,7 +35,8 @@
 	perspective: 80px;
 	transform-style: preserve-3d;
 
-	span{
+	// span{
+	span.word span{
 		--shimer-active-color: currentColor;
 		position: relative;
 		transition: all .3s ease;

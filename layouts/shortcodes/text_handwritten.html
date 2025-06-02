@@ -60,7 +60,7 @@ time_variation = (float) random value for the time. Default: 0.0
 {{- end -}}
 
 <span class="{{- $top_css_class -}}" style="{{- $top_style -}}">
-
+<span class="word">
 {{- $output := "" -}}
 {{- $chars := split $text "" -}}
 {{- range $index, $char := $chars -}}
@@ -96,7 +96,8 @@ time_variation = (float) random value for the time. Default: 0.0
 
 	{{if eq $char " "}}
 		{{- /*  {{- $output = printf "%s<span> </span>" ($output | safeHTMLAttr) -}}  */ -}}
-		{{- $output = printf "%s&nbsp;" $output -}}
+		{{- /*  {{- $output = printf "%s&nbsp;" $output -}}  */ -}}
+		{{- $output = printf "%s&nbsp;</span><span class='word'>" $output -}}
 	{{- else -}}
 		{{- /*  Add the randomness to duration  */ -}}
 		{{- $rand_dur := mul (sub (mul math.Rand 2) -1) $time_variation -}}
@@ -114,4 +115,5 @@ time_variation = (float) random value for the time. Default: 0.0
 
 {{- /*  To avoid whitespaces in HTML  */ -}}
 {{- $output | safeHTML -}}
+</span>
 </span>

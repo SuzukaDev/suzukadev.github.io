@@ -4,7 +4,9 @@ $default_scale: 1.4;
 $default_spin: 1.0;
 
 .rotation-letters{
-	span{
+	// span{
+	// Words are now wrapped in a <span class="word">
+	span.word span{
 		// background-color: pink;
 	display: inline-block;
 	position: relative;
