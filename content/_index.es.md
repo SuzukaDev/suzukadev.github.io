@@ -34,6 +34,14 @@ Lee más [**sobre mí**]({{< relref "about.md" >}}) o [**echa un vistazo a mi tr
 
 <!-- ❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗ -->
 > ⚠️ <u>ESTA **PÁGINA** ESTÁ **EN DESARROLLO**</u> ⚠️
+<!-- >
+> ⚠️ Hacerla <u>**NO ESTÁ**</u> siendo un rollo ⚠️
+>
+> ⚠️ Aunque a veces es <u>**un embrollo**</u> ⚠️
+>
+> 🥐 Cuando la acabe me comeré <u>**un bollo**</u> 🥐
+>
+> ⚠️ ¿Que por qué escribo esto? {{< text_spoiler "no tengo ni idea, la verdad" >}} ⚠️ -->
 
 > **Aprende** del ayer, **vive** el hoy y **ten esperanza** en el mañana. <cite>Albert Einstein</cite>
 
