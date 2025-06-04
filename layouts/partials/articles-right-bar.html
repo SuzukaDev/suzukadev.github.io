@@ -21,7 +21,7 @@
 		{{- /*  {{- $pfp_resource := .Site.Resources.Get .Site.Params.articles_pfp_image -}}  */ -}}
 
 		{{- $pfp_resource := partial "articles/get-article-pfp.html" . -}}
-		<img id="articles-pfp" src="{{$pfp_resource.RelPermalink}}">
+		<img id="articles-pfp" class="filter-shadow {{with .Params.pfp_css_classes}}{{.}}{{end}}" src="{{$pfp_resource.RelPermalink}}">
 		
 		{{/*  <h2>Patrick</h2>  */}}
 		{{/*  <p>{{ T "articleAboutMeDescription" }}</p>  */}}

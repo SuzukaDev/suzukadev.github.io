@@ -1,5 +1,15 @@
-{{- $article_custom_pfp := .Page.Resources.GetMatch "**pfp**" -}}
 {{- $pfp_resource_image := "" -}}
+{{- $article_custom_pfp := "" -}}
+
+{{- with .Page.Params.custom_pfp -}}
+	{{- $article_custom_pfp = $.Page.Resources.Get . -}}
+	{{- if not $article_custom_pfp -}}
+		{{- errorf "custom_pfp: '%s' not found at '%s' (%s)" . $.Title $.File.Path -}}
+	{{- end -}}
+{{- else -}}
+	{{- $article_custom_pfp = .Page.Resources.GetMatch "**pfp**" -}}
+{{- end  -}}
+
 {{- if $article_custom_pfp -}}
 	{{- $pfp_resource_image = $article_custom_pfp -}}
 {{- else -}}
