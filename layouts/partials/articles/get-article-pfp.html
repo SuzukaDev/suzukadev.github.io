@@ -1,0 +1,17 @@
+{{- $article_custom_pfp := .Page.Resources.GetMatch "**pfp**" -}}
+{{- $pfp_resource_image := "" -}}
+{{- if $article_custom_pfp -}}
+	{{- $pfp_resource_image = $article_custom_pfp -}}
+{{- else -}}
+	{{- $pfp_resource_image = resources.Get .Site.Params.articles_pfp_image -}}
+	{{- if not $pfp_resource_image -}}
+		{{- errorf "%s not found in 'assets' folder" .Site.Params.articles_pfp_image -}}
+	{{- end -}}
+{{- end -}}
+
+{{- $pfp_resource := $pfp_resource_image -}}
+{{- if and (ne $pfp_resource_image.MediaType.SubType "gif") (ne $pfp_resource_image.MediaType.SubType "webp") -}}
+	{{- $pfp_resource = $pfp_resource_image.Filter (images.Process "fit 250x250") -}}
+{{- end -}}
+
+{{- return $pfp_resource -}}
