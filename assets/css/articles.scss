@@ -6,6 +6,10 @@ $tag-container-size: 35px;
 $info-box-brightness: 50%;
 $article-card-hover-brightness: 30%;
 
+sup.total-articles{
+	color: var(--text-2);
+	font-size: .5em;
+}
 
 .featured-article{
 	& p{
@@ -434,7 +438,9 @@ $article-card-hover-brightness: 30%;
 		transform: translateY(0px);
 		// opacity: .5;
 		opacity: calc(var(--is-article-hovered, 0.8) * 1.0);
-		border-bottom-left-radius: 20px;
+		// border-bottom-left-radius: 20px;
+		border-bottom-left-radius: 5px;
+		padding: .4em;
 		// border-top-left-radius: 20px;
 		span, svg{
 			display: inline-block;
