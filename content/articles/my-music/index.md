@@ -28,6 +28,15 @@ show_right_bar = true
 # featured_description = "" # if set, the article will use this description in the featured card. If not, it will use the article's description.
 # featured_tags = [""] # if set, it will only feature the tags in this array (useful to display only some of the tags). Note: Tags must match the tag in .Params.tags
 # related_pages = [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
+# custom_pfp = "z2.png"
+# pfp_css_classes = "half-border-radius"
 +++
 
 # Site in development
+Esto es un texto de pruebita 
+
+<audio controls src="suzuka-the-wayback-master-4.mp3" title="Title"></audio>
+
+{{< audio "suzuka-the-wayback-master-4.mp3" >}}
+
+Esto es un texto de pruebita 
