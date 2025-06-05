@@ -71,7 +71,7 @@ Example:
 
 
 {{- /*  {{- $cover_resource = $cover_resource.Filter (images.Saturation -100) -}}  */ -}}
-{{- if $optimize_cover_image -}}
+{{- if and $cover_resource $optimize_cover_image -}}
 	{{- /*  {{- $cover_resource = $cover_resource.Filter (images.Process "fit 500x500") -}}  */ -}}
 	{{- $cover_resource = $cover_resource.Filter (images.Process "fit 250x250") -}}
 	
@@ -110,6 +110,19 @@ Example:
 	{{- end -}}
 	{{- $style = printf "%s --background-image: url('%s'); %s" $style $cover_resource.RelPermalink $cover_position_property -}}
 {{- end -}}
+
+{{- /*  JSON Subtitles file  */ -}}
+{{- $audio_name := index (split $audio_resource.Name ".") 0 -}}
+{{- $json_file_name := printf "%s.json" $audio_name -}}
+{{- $json_resource := .Page.Resources.GetMatch $json_file_name -}}
+{{- $json := "" -}}
+{{- if $json_resource -}}
+	{{- $json = transform.Unmarshal $json_resource -}}
+{{- end -}}
+
+{{- $audio_id := printf "%s-audio" $audio_name -}}
+{{- $display_id := printf "%s-display" $audio_name -}}
+
 <figure class="audio-player" style="{{$style | safeCSS}}">
 	<div>
 		{{- if $cover_resource -}}
@@ -120,9 +133,64 @@ Example:
 			<h2>{{- $artist -}}</h2>
 		</section>
 	</div>
-	<audio controls  {{$autoplay | safeHTML}} preload="{{ .Get "preload" | default "metadata" }}">
+
+	{{- if $json_resource -}}
+	<div class="audio-subtitles">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M80-80v-720q0-33 23.5-56.5T160-880h440q33 0 56.5 23.5T680-800v17q-24 11-44 27t-36 36v-80H160v527l47-47h393v-160q16 20 36 36t44 27v97q0 33-23.5 56.5T600-240H240L80-80Zm160-320h160v-80H240v80Zm520-80q-50 0-85-35t-35-85q0-50 35-85t85-35q11 0 21 2t19 5v-207h160v80h-80v240q0 50-35 85t-85 35Zm-520-40h280v-80H240v80Zm0-120h280v-80H240v80Zm-80 320v-480 480Z"/></svg>
+		<p id={{$display_id}}>{{$json.startMessage}}</p>
+	</div>
+	{{- end -}}
+
+	<audio id={{$audio_id}} controls  {{$autoplay | safeHTML}} preload="{{ .Get "preload" | default "metadata" }}">
 	<source src="{{ $audio_resource.RelPermalink }}" type="audio/mpeg">
 	{{- /*  {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}  */ -}}
 	<figcaption>{{- T "captionAudio" (dict "title" $title "author" $artist) -}}</figcaption>
 	</audio>
 </figure>
+
+
+{{- /*  Subtitles script  */ -}}
+{{- if $json_resource -}}
+<script>
+    const audio = document.getElementById({{$audio_id}});
+    const display = document.getElementById({{$display_id}});
+
+    audio.addEventListener("timeupdate", () => {
+      const currentTime = audio.currentTime;
+
+      {{- /*  if (currentTime >= 0 && currentTime < 5) {
+        display.textContent = "Intro text";
+      } else if (currentTime >= 5 && currentTime < 10) {
+        display.textContent = "Part 1 text";
+      } else if (currentTime >= 10 && currentTime < 20) {
+        display.textContent = "Part 2 text";
+      } else {
+        display.textContent = "No text for this time range.";
+      }  */ -}}
+	  
+	{{- range $k, $v := $json.messages -}}
+		{{- $time_start := (index (split $v.TimeRange "-") 0) -}}
+		{{- $time_end := (index (split $v.TimeRange "-") 1) -}}
+	  	{{- $time_start_seconds := partial "utils/get-seconds.html" $time_start -}}
+	  	{{- $time_end_seconds := partial "utils/get-seconds.html" $time_end -}}
+
+		{{- $message := $v.Message -}}
+		{{- $is_first := eq $k 0 -}}
+		{{- $is_last := eq (add $k 1) (len $json.messages) -}}
+
+		{{- if eq $is_first false }}
+			{{"else " | safeJS}}
+		{{ end -}}
+		if (currentTime >= {{$time_start_seconds}} && currentTime < {{$time_end_seconds}}) {
+			display.textContent = {{$v.Message}};
+		  }
+		
+	{{- end -}}
+	
+	else {
+        display.textContent = {{- $json.defaultMessage -}};
+      }
+
+    });
+</script>
+{{- end -}}
