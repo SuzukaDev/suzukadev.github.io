@@ -1,0 +1,28 @@
+{{/*  
+Parses a time string and returns the total seconds.
+
+Accepts either:
+- A time string in the format "MM:SS"
+- A plain number string representing seconds
+
+Arguments: a time string (e.g., "3:45" or "120")
+
+Returns the total time in seconds as an integer
+
+Use:
+{{- $seconds := partial "utils/time-to-seconds.html" "3:45" -}}
+*/}}
+
+{{- $time_string := . -}}
+
+{{- $totalSeconds := 0 }}
+{{- if in $time_string ":" -}}
+  {{- $mins := float (index (split $time_string ":") 0) -}}
+  {{- $secs := float (index (split $time_string ":") 1) -}}
+  
+  {{ $totalSeconds = add (mul $mins 60) $secs }}
+{{- else -}}
+  {{- $totalSeconds = int $time_string -}}
+{{- end -}}
+
+{{- return $totalSeconds -}}
