@@ -1,0 +1,18 @@
+{
+  "messages": [
+    {
+      "timeRange": "0:0-0:30",
+      "message": "Intro (0 a 3)"
+    },
+    {
+      "timeRange": "0:30-1:22",
+      "message": "Soy mensaje muy largo jajajaj no cabre seguro me cago en todo joder(20 a 30)"
+    },
+    {
+      "timeRange": "10-20",
+      "message": "de 10 a 20"
+    }
+  ],
+  "defaultMessage": "soy el default message",
+  "startMessage": "Hola"
+}
