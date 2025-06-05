@@ -146,6 +146,7 @@ Useful for adding notes, or whatever.
 
 {{- /*  JSON Subtitles file  */ -}}
 {{- $audio_name := index (split $audio_resource.Name ".") 0 -}}
+{{- $safe_js_audioname := replace (replace $audio_name "-" "_") " " "_" }}
 {{- $json_file_name := printf "%s.json" $audio_name -}}
 {{- $json_resource := .Page.Resources.GetMatch $json_file_name -}}
 {{- $json := "" -}}
@@ -153,8 +154,8 @@ Useful for adding notes, or whatever.
 	{{- $json = transform.Unmarshal $json_resource -}}
 {{- end -}}
 
-{{- $audio_id := printf "%s-audio" $audio_name -}}
-{{- $display_id := printf "%s-display" $audio_name -}}
+{{- $audio_id := printf "%s_audio" $safe_js_audioname -}}
+{{- $display_id := printf "%s_display" $safe_js_audioname -}}
 
 <figure class="audio-player" style="{{$style | safeCSS}}">
 	<div>
