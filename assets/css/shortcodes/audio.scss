@@ -49,6 +49,7 @@ figure.audio-player::before{
 }
 
 figure.audio-player{
+	background-color: var(--surface-2-dark);
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -60,7 +61,8 @@ figure.audio-player{
 	border: 3px solid  var(--border-color, var(--hover-color));
 
 	padding: -100px -100px;
-	font-size: 2rem;
+	// font-size: 2rem;
+	font-size: clamp(1rem, 2.5vw, 2rem);
 	& > * {
 		z-index: 1;
 	}
@@ -77,6 +79,10 @@ figure.audio-player{
 		align-self: flex-start;
 		//box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 		box-shadow: rgba(0, 0, 0, 0.93) 0px 5px 28px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+		@media (max-width: 350px) {
+			display: none;
+		}
 	}
 
 	.audio-info{
