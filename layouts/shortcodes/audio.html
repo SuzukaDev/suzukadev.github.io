@@ -16,6 +16,38 @@ radius = Border radius for the cover. Tip: set a very big value (999999px) for c
 Example:
 {{< audio "my_audio.mp3" "My song" "Dexter" >}} -> Autoplays muted
 {{< audio src="my_audio.mp3" cover="my-custom-image.png" position="50% 100%" color=#3456 autoplay=true >}}
+
+
+NOTE: Supports subtitles!
+
+Just add a file with the same name of the song, but in a .json format like:
+
+{
+  "messages": [
+    {
+      "TimeRange": "0:0-0:30",
+      "Message": "Intro (0 a 3)",
+      "CssStyle": ""
+    },
+    {
+      "TimeRange": "0:30-1:22",
+      "Message": "Soy mensaje muy largo jajajaj no cabre seguro me cago en todo joder(20 a 30)",
+      "CssStyle": ""
+    },
+    {
+      "TimeRange": "10-20",
+      "Message": "de 10 a 20",
+      "CssStyle": ""
+    }
+  ],
+  "defaultMessage": "soy el default message",
+  "startMessage": "Hola"
+}
+
+
+The messages will appear in the selected ranges when the music is playing.
+Useful for adding notes, or whatever.
+
 */}}
 
 
