@@ -53,6 +53,7 @@ Useful for adding notes, or whatever.
 
 {{- $audio_path := (or (.Get 0) (.Get "src")) -}}
 {{- $artist := (or (.Get 2) (.Get "artist")) | default .Site.Params.audios_default_author -}}
+{{- $year := (.Get "year") | default "" -}}
 {{- $cover_path := (or (.Get 3) (.Get "cover")) | default "" -}}
 {{- $cover_position := (or (.Get 4) (.Get "pos")) -}}
 {{- $color_manual := (or (.Get 5) (.Get "color") (.Get "col") (.Get "c")) | default "" -}}
@@ -163,6 +164,9 @@ Useful for adding notes, or whatever.
 		<section class="audio-info">
 			<h1>{{- $title -}}</h1>
 			<h2>{{- $artist -}}</h2>
+			{{- with $year -}}
+				<h3 class="year">{{- . -}}</h3>
+			{{- end -}}
 		</section>
 	</div>
 
