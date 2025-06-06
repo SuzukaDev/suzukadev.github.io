@@ -39,6 +39,6 @@ Esto es un texto de pruebita
 
 {{< audio "suzuka-the-wayback-master-4.mp3" >}}
 
-{{< audio "music-production-reel-2-recortando.mp3" >}}
+{{< audio src="music-production-reel-2-recortando.mp3" title="Music Production Showcase (Selection)" cover="reel-cover" >}}
 
 Esto es un texto de pruebita 

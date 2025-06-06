@@ -31,3 +31,9 @@ show_right_bar = true
 +++
 
 # En construcción
+
+Esto es un texto de pruebita 
+
+
+
+{{< audio src="music-production-reel-2-recortando.mp3" title="Music Production Showcase (Selection)" cover="reel-cover" >}}
