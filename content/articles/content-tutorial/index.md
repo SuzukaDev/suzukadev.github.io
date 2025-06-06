@@ -458,13 +458,20 @@ También permite mostrar solo unas tags en concreto.
 
 ## audio
 
-{{< audio src="sk-gs.mp3" artist="Skrillex" title="Good Space" cover="/images/sk.jpg" >}}
+{{< audio src="sk-gs.mp3" artist="Skrillex" title="Good Space" cover="images/sk.jpg" >}}
 
-	{{</* audio src="sk-gs.mp3" artist="Skrillex" title="Good Space" cover="/images/sk.jpg" */>}}
+	{{</* audio src="sk-gs.mp3" artist="Skrillex" title="Good Space" cover="images/sk.jpg" */>}}
 
 {{< box_info >}}
 Tiene más opciones! Como posicionar el fondo de la portada. Chequea el `audio.html` para ver la documentación.
 {{< /box_info >}}
+
+{{< box_green >}}
+He añadido la posibilidad de poner subtitulos/mensajes a medida que suena la canción!
+
+{{< /box_green >}}
+
+{{< audio src="mk-omd.mp3" year=1973 artist="Mike Oldfield" title="Ommadawn (Part 1)" cover="omd.jpg" >}}
 
 ## box_error
 Muestra un bloque en rojo, ideal para avisar de formas **críticas**, errores, etc.

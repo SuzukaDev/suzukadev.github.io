@@ -36,3 +36,7 @@ Visita la [**versión en inglés**]({{< relref path="content-tutorial" lang="en"
 {{< box_info >}}
 He decidido tener el tutorial solo en una página para no tener que ir "manteniendo" (copiando/pegando) las dos páginas.
 {{< /box_info >}}
+
+---
+Test Audio con subtítulos en Español:
+{{< audio src="mk-omd.mp3" year=1973 artist="Mike Oldfield" title="Ommadawn (Part 1)" cover="omd.jpg" >}}

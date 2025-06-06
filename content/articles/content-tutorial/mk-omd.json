@@ -1,0 +1,58 @@
+{
+	"messages": [
+	{
+		"timeRange": "00:00-02:58",
+		"message": "1 - **Intro - Acoustic Guitar, Ethereal Synths**",
+		"messageEs": "1 - **Intro - Guitarra acústica, sintetizadores etéreos**"
+	},
+	{
+		"timeRange": "02:58-04:27",
+		"message": "2 - **First Theme - Electric Guitar Melody**",
+		"messageEs": "2 - **Primer tema - Melodía de guitarra eléctrica**"
+	},
+	{
+		"timeRange": "04:27-06:50",
+		"message": "3 - **Folk Interlude - Pipes, African Drums**",
+		"messageEs": "3 - **Interludio folk - Gaitas, tambores africanos**"
+	},
+	{
+		"timeRange": "06:50-08:45",
+		"message": "4 - **Layered Guitar Builds - Driving Percussion**",
+		"messageEs": "4 - **Crecimiento de guitarras en capas - Percusión poderosa**"
+	},
+	{
+		"timeRange": "08:45-10:20",
+		"message": "5 - **Climactic Theme - Electric Guitar Solo**",
+		"messageEs": "5 - **Tema climático - Solo de guitarra eléctrica épico**"
+	},
+	{
+		"timeRange": "10:20-12:15",
+		"message": "6 - **Calm Breakdown - Flute and Mandolin**",
+		"messageEs": "6 - **Descanso tranquilo - Flauta y mandolina**"
+	},
+	{
+		"timeRange": "12:15-14:38",
+		"message": "7 - **New Motif - Pipe Organ and Celtic Vibes**",
+		"messageEs": "7 - **Nuevo motivo - Órgano de tubos y vibra celta**"
+	},
+	{
+		"timeRange": "14:38-16:10",
+		"message": "8 - **Female Vocal Section - 'taiko-taiko' chant (Clodagh Simonds)**",
+		"messageEs": "8 - **Sección vocal femenina - canto 'taiko-taiko' (Clodagh Simonds)**"
+	},
+	{
+		"timeRange": "16:10-18:25",
+		"message": "9 - **Final Build - Percussive March, Guitar Layers**",
+		"messageEs": "9 - **Crecimiento final - Marcha percusiva, guitarras superpuestas**"
+	},
+	{
+		"timeRange": "18:25-19:17",
+		"message": "10 - **Part One Outro - Refrain and Fade-out**",
+		"messageEs": "10 - **Final de la Parte Uno - Estribillo y desvanecimiento**"
+	}
+	],
+	"defaultMessage": "Thanks for listening",
+	"defaultMessageEs": "Gracias por escuchar",
+	"startMessage": "Subtitles demostration",
+	"startMessageEs": "Demostración de subtítulos"
+}
