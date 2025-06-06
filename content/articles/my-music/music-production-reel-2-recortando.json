@@ -126,13 +126,17 @@
     },
     {
       "timeRange": "10:23-10:35",
-      "message": "**Thank you for listening :)**"
+      "message": "**Thank you for listening :)**",
+      "message": "**Gracias por haberlo escuchado :)**"
     },
     {
       "timeRange": "10:35-10:39",
-      "message": "**Thank you for listening 🍀**"
+      "message": "**Thank you for listening 🍀**",
+      "message": "**Gracias por haberlo escuchado 🍀**"
     }
   ],
   "defaultMessage": "Thanks for listening",
-  "startMessage": " "
+  "startMessage": " ",
+  "defaultMessageEs": "Gracias por haberlo escuchado",
+  "startMessageEs": " "
 }
