@@ -221,6 +221,11 @@ Useful for adding notes, or whatever.
 	  	{{- $time_end_seconds := partial "utils/get-seconds.html" $time_end -}}
 
 		{{- $message := $v.message -}}
+		{{- $_is_spanish := eq $.Page.Language.Lang "es" -}}
+		{{- if and $_is_spanish ($v.messageEs) }}
+			{{- $message = $v.messageEs -}}
+		{{- end -}}
+
 		{{- $is_first := eq $k 0 -}}
 		{{- $is_last := eq (add $k 1) (len $json.messages) -}}
 
@@ -229,7 +234,7 @@ Useful for adding notes, or whatever.
 		{{ end -}}
 		if ({{$currentTimeVar}} >= {{$time_start_seconds}} && {{$currentTimeVar}} < {{$time_end_seconds}}) {
 			{{- /*  display.textContent = {{$v.message | markdownify | safeHTML }};  */ -}}
-			{{$display_var}}.innerHTML = {{$v.message | markdownify | safeHTML }};
+			{{$display_var}}.innerHTML = {{$message | markdownify | safeHTML }};
 		  }
 		
 	{{- end -}}
@@ -239,6 +244,6 @@ Useful for adding notes, or whatever.
 		{{$display_var}}.innerHTML = {{$json.defaultMessage | markdownify | safeHTML }};
       }
 
-    });
+});
 </script>
 {{- end -}}
