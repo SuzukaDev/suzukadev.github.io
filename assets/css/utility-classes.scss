@@ -173,3 +173,87 @@
 	box-shadow: -1px 0px 3px 0px var(--c0), 1px 3px 2px 0px var(--c2), 
 		1px 0px 3px 0px var(--c1), 1px -2px 3px 0px var(--c1);
 }
+
+
+
+
+
+$shadow_iterations:20;
+$alpha_atenuation:.1;
+$x_dir: 0.4;
+$y_dir: 1;
+$blur_level:.5;
+
+
+// $shadow_iterations:10;
+// $alpha_atenuation:.12;
+// $x_dir: 1.0;
+// $y_dir: 2;
+// $blur_level:.5;
+
+$filter-shadow-values: ();
+@for $i from 1 through $shadow_iterations {
+	$alpha: (1 - ($i / $shadow_iterations)) * $alpha_atenuation;
+	$blur: ($i / $shadow_iterations) * $blur_level;
+	// $filter-shadow-values: append($filter-shadow-values, #{$i*$x_dir}px #{$i*$y_dir}px #{$blur}px rgba(8,8,8,$alpha), comma);
+	// $filter-shadow-values: append($filter-shadow-values, drop-shadow(#{$i*$x_dir}px #{$i*$y_dir}px #{$blur}px rgba(8,8,8,$alpha)), comma);
+	$shadow: #{drop-shadow(#{$i * $x_dir}px #{$i * $y_dir}px #{$blur}px rgba(8,8,8,$alpha))};
+	$filter-shadow-values: append($filter-shadow-values, $shadow, space);
+}
+
+// $text-shadow-values: append($text-shadow-values, 0px 3px 4px var(--text-2), comma);
+// $text-shadow-values: append($text-shadow-values, 0px 0px 4px var(--text-2), comma);
+// $filter-shadow-values: append($filter-shadow-values, 0px 3px 4px var(--text-2), comma);
+// $filter-shadow-values: append($filter-shadow-values, 0px 0px 4px var(--text-2), comma);
+
+// $filter-shadow-values: append($filter-shadow-values, drop-shadow( 0px 3px 4px var(--text-2)), space);
+// $filter-shadow-values: append($filter-shadow-values, drop-shadow(0px 0px 4px var(--text-2)), space);
+
+$filter-shadow-values: append($filter-shadow-values, drop-shadow( 0px 3px 4px rgba(8,8,8,.5)), space);
+$filter-shadow-values: append($filter-shadow-values, drop-shadow(0px 0px 4px rgba(8,8,8,.5)), space);
+
+html.light .bloom-shadow{
+	// text-shadow: $text-shadow-values2;
+	// font-weight: var(--text-weight, 900);
+	// color: white;
+
+	// filter: brightness(30%);;
+	// filter:drop-shadow(0 5px 3px rgba(0, 0, 0, 0.907)) drop-shadow(10px 25px 3px rgba(0, 0, 0, 0.907));
+	// filter:drop-shadow(0 5px 3px rgba(0, 0, 0, 0.907)) drop-shadow(10px 25px 3px rgba(0, 0, 0, 0.907));
+
+	// $shadow_color: #00000091;
+	// filter: drop-shadow(0px 1px 1px $shadow_color)
+	// 		drop-shadow(1px 2px 2px $shadow_color)
+	// 		drop-shadow(2px 4px 3px $shadow_color)
+	// 	;
+	filter: $filter-shadow-values;
+
+}
+html.dark .bloom-shadow{
+// .bloom-shadow{
+	text-shadow: 0px 0px var(--text-fx-bloom-size, 8px) var(--text-fx-bloom-color, var(--hover-color)),
+				0px 0px 1px var(--text-fx-bloom-color, var(--hover-color));
+	// font-weight: var(--text-weight, 900);
+
+	// filter: drop-shadow(0 0 0.75rem rgb(255, 217, 0)) ;
+	// filter: drop-shadow(0 0 3px var(--hover-color)) ;
+
+	// --brighter-hover-color: color-mix(in srgb, var(--hover-color), white 30%);
+	
+	// --brighter-hover-color: color-mix(in srgb, var(--hover-color), white 20%);
+	// filter: drop-shadow(0 0 3px var(--brighter-hover-color)) ;
+	// filter: drop-shadow(0 0 3px var(--hover-color)) ;
+	// filter: drop-shadow(0 0 6px var(--hover-color)) ;
+
+
+	filter:  drop-shadow(0 0 7px var(--hover-color)) $filter-shadow-values;
+	// filter:  drop-shadow(0 0 7px var(--hover-color)) ;
+
+
+	// $increment: 1
+
+
+	// filter: drop-shadow(0 0 3px white);
+	// filter: drop-shadow(0 0 0.75rem rgb(255, 217, 0)) drop-shadow(0 10px 2px rgb(0, 252, 96));
+
+}
