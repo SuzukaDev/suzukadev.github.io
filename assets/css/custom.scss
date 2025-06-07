@@ -764,7 +764,7 @@ blockquote {
 		}
 		&:hover strong {
 			transition: all .5s;
-			@extend .bloom-shadow;
+			@extend .bloom-shadow-text;
 			// font-weight: bolder !important; // bolder is the default value for <strong>
 			font-weight: revert !important; // This works! But only for modern browsers.
 		}

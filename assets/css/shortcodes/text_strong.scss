@@ -37,11 +37,11 @@ $text-shadow-values2: append($text-shadow-values2, 0px 0px 4px var(--text-2), co
 
 
 
-.bloom-shadow span{
+.bloom-shadow-text span{
 	display: inline-block;
 }
 
-html.light .bloom-shadow{
+html.light .bloom-shadow-text{
 	// text-shadow: 0px 3px 3px var(--text-2);
 	// text-shadow: 0px 3px 4px var(--text-2);
 	
@@ -64,7 +64,7 @@ html.light .bloom-shadow{
 
 	// }
 }
-html.dark .bloom-shadow{
+html.dark .bloom-shadow-text{
 	
 	// color: var(--text-fx-bloom-color, var(--hover-color));
 	color: white;
