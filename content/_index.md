@@ -18,6 +18,8 @@ menus:
 
 {{< header text="*Suzuka Ka*" h=1 class="bloom-shadow" >}}
 
+{{< img_caption img="suzuka-ka-logo.png" class="bloom-shadow" >}}
+
 
 {{< images_hover_link img="/images/yo.jpg" img_hover="/images/yo_color.png" page="about" c0_dark=#A64951FF c1_dark=#EF454EFF c2_dark=#6e3656 c0_light=#fd7c26 c1_light=#EF454EFF c2_light=#f16c13 t1=2.2s fit=300 >}}
 
