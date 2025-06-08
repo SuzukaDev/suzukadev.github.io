@@ -193,7 +193,7 @@ Useful for adding notes, or whatever.
 	{{- end -}}
 
 	<audio id={{$audio_id}} controls  {{$autoplay | safeHTMLAttr}} preload="{{ .Get "preload" | default "metadata" }}">
-	<source src="{{ $audio_resource.RelPermalink }}" type="audio/mpeg">
+	<source src="{{ $audio_resource.Permalink }}" type="audio/mpeg">
 	{{- /*  {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}  */ -}}
 	<figcaption>{{- T "captionAudio" (dict "title" $title "author" $artist) -}}</figcaption>
 	</audio>
