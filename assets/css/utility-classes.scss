@@ -38,6 +38,19 @@
 	text-decoration: underline;
 }
 
+.link-no-decoration{
+	text-decoration: none !important;
+	border: none !important;
+	&:hover{
+		text-decoration: none !important;
+		border: none !important;
+	}
+	img:hover, a:hover{
+		text-decoration: none !important;
+		border: none !important;
+	}
+}
+
 .super-bold{
 	font-weight: 900;
 }
@@ -178,11 +191,17 @@
 
 
 
-$shadow_iterations:20;
+// $shadow_iterations:20;
+// $alpha_atenuation:.1;
+// $x_dir: 0.4;
+// $y_dir: 1;
+// $blur_level:.5;
+
+$shadow_iterations:10;
 $alpha_atenuation:.1;
-$x_dir: 0.4;
-$y_dir: 1;
-$blur_level:.5;
+$x_dir: 0.9;
+$y_dir: 2;
+$blur_level:1;
 
 
 // $shadow_iterations:10;
@@ -246,8 +265,8 @@ html.dark .bloom-shadow{
 	// filter: drop-shadow(0 0 6px var(--hover-color)) ;
 
 
-	filter:  drop-shadow(0 0 7px var(--hover-color)) $filter-shadow-values;
-	// filter:  drop-shadow(0 0 7px var(--hover-color)) ;
+	// filter:  drop-shadow(0 0 7px var(--hover-color)) $filter-shadow-values;
+	filter:  drop-shadow(0 0 7px var(--hover-color)) ;
 
 
 	// $increment: 1
