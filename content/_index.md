@@ -19,7 +19,8 @@ menus:
 <!-- {{< header text="*Suzuka Ka*" h=1 class="bloom-shadow-text" >}} -->
 
 <!-- {{< img_caption img="suzuka-ka-logo-white.png" class="bloom-shadow" >}} -->
-{{< img_caption img="suzuka-ka-logo-white.png" class="bloom-shadow" style="margin-top:-40px; margin-bottom:-23px;" >}}
+{{< img_caption img="suzuka-ka-logo-white.png" class="bloom-shadow link-no-decoration" style="margin-top:-40px; margin-bottom:-23px;" url="about" >}}
+
 
 <!-- {{< img_caption img="suzuka-ka-logo-white-rotated.png" class="bloom-shadow" >}} -->
 
