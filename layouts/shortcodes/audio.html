@@ -11,7 +11,7 @@ color = Color of the border in hex. Default: Gets automatically the most predomi
 optimize = Optimizes the image set for the cover, for fast loading. Is useful to turn it to false for animated .webp's and .gif's. Default: true
 autoplay = Autoplays the audio when loading (do not work in some browsers). Default: false
 radius = Border radius for the cover. Tip: set a very big value (999999px) for circle corners. Set 0px for no borders. Default: .3rem (A bit rounded)
-
+text_color = Color for the title shadow. If not set, it will use the border color by default.
 
 Example:
 {{< audio "my_audio.mp3" "My song" "Dexter" >}} -> Autoplays muted
@@ -149,6 +149,8 @@ Useful for adding notes, or whatever.
 	{{- $style = printf "%s --background-image: url('%s'); %s" $style $cover_resource.RelPermalink $cover_position_property -}}
 {{- end -}}
 
+{{- $text_color := (or (.Get "text_color") (.Get "tc")) | default $border_color -}}
+
 {{- /*  JSON Subtitles file  */ -}}
 {{- $audio_name := index (split $audio_resource.Name ".") 0 -}}
 {{- $rand_id := mod (now.UnixNano) 1000001 -}}
@@ -173,7 +175,7 @@ Useful for adding notes, or whatever.
 			<img src="{{$cover_resource.RelPermalink}}">
 		{{- end -}}
 		<section class="audio-info">
-			<h1>{{- $title -}}</h1>
+			<h1 {{- with $text_color}} style="--hover-color: {{. | safeCSS}}" {{- end -}}>{{- $title -}}</h1>
 			<h2>{{- $artist -}}</h2>
 			{{- with $year -}}
 				<h3 class="year">{{- . -}}</h3>
