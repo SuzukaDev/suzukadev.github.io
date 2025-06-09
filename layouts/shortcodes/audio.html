@@ -152,11 +152,13 @@ Useful for adding notes, or whatever.
 {{- $text_color := (or (.Get "text_color") (.Get "tc")) | default $border_color -}}
 
 {{- /*  JSON Subtitles file  */ -}}
-{{- $audio_name := index (split $audio_resource.Name ".") 0 -}}
+{{- /*  {{- $audio_name := index (split $audio_resource.Name ".") 0 -}}  */ -}}
+{{- $audio_name := index (split (path.Base $audio_resource.Name) ".") 0 -}}
 {{- $rand_id := mod (now.UnixNano) 1000001 -}}
-{{- $safe_js_audioname := replace (replace $audio_name "-" "_") " " "_" }}
+{{- /*  {{- $safe_js_audioname := replace (replace $audio_name "-" "_") " " "_" }}  */ -}}
+{{- $safe_js_audioname := replaceRE "([ +=*\\/-])" "_" $audio_name -}}
 {{- $safe_js_audioname = printf "%s%d" $safe_js_audioname $rand_id }}
-{{- $json_file_name := printf "%s.json" $audio_name -}}
+{{- $json_file_name := printf "**%s.json" $audio_name -}}
 {{- $json_resource := .Page.Resources.GetMatch $json_file_name -}}
 {{- $json := "" -}}
 {{- if $json_resource -}}
