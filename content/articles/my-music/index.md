@@ -32,16 +32,8 @@ show_right_bar = true
 # pfp_css_classes = "half-border-radius"
 +++
 
-> ⚠️ <u>THIS **SITE** IS **UNDER DEVELOPMENT**</u> ⚠️
-> ⚠️ <u>THIS **SITE** IS **UNDER DEVELOPMENT**</u> ⚠️
-> ⚠️ <u>THIS **SITE** IS **UNDER DEVELOPMENT**</u> ⚠️
 
-otro test
-
-veamos....
-veamos....2222
-
-nuevo remoto
+> ⚠️ <u>THIS **SITE** IS **UNDER DEVELOPMENT**</u> ⚠️⚠️
 
 
 {{< audio src="suzuka-the-wayback-master-4.mp3" title="The Wayback" text_color="#A71866FF" pos="50% 45%" >}}
