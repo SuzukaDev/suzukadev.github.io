@@ -65,14 +65,21 @@ Useful for adding notes, or whatever.
 {{- $image_resources := .Page.Resources.ByType "image" -}}
 
 {{- $audio_resource := $audio_resources.GetMatch (printf "**%s**" $audio_path) -}}
+{{- /*  {{- $audio_name_without_extension := index (split $audio_resource.Name ".") 0 -}}  */ -}}
+{{- $audio_name_without_extension := index (split (path.Base $audio_resource.Name) ".") 0 -}}
+
 {{- if not $audio_resource -}}
 	{{- errorf "Audio shortcode: audio file ('%s') not found at '%s' with Title '%s'" $audio_path .Page.Path .Page.Name -}}
 {{- end -}}
-{{- $cover_resource := $image_resources.GetMatch (printf "**%s**" $cover_path) -}}
+
+{{- $cover_resource := $image_resources.GetMatch (printf "**%s**" $audio_name_without_extension) -}}
+{{- if $cover_path -}}
+	{{- $cover_resource = $image_resources.GetMatch (printf "**%s**" $cover_path) -}}
+{{- end -}}
+
 {{- if and (not $cover_resource) $cover_path -}}
 	{{- warnf "Audio shortcode: Cover ('%s') not found at '%s' with Title '%s'" $cover_path .Page.Path .Page.Name -}}
 {{- end -}}
-{{- $audio_name_without_extension := index (split $audio_resource.Name ".") 0 -}}
 
 {{- $title := (or (.Get 1) (.Get "title")) | default ($audio_name_without_extension | title) -}}
 
@@ -83,9 +90,9 @@ Useful for adding notes, or whatever.
 
 {{- /*  FINDING THE COVER DYNAMICALLY BY IT HAVING THE SAME NAME AS THE AUDIO FILE  */ -}}
 {{- if not $cover_resource -}}
-	{{- $images := .Page.Resources.ByType "image" -}}
-	{{- $name_match_string := printf "*%s*" $audio_name_without_extension -}}
-	{{- $cover_resource = $images.GetMatch $name_match_string -}}
+	{{- /*  {{- $images := .Page.Resources.ByType "image" -}}  */ -}}
+	{{- $name_match_string := printf "**%s**" $audio_name_without_extension -}}
+	{{- $cover_resource = $image_resources.GetMatch $name_match_string -}}
 {{- end -}}
 {{- /*  PREVIOUS approach  */ -}}
 {{- /*  {{- $matched_cover := "" -}}
