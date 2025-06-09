@@ -115,4 +115,8 @@ Mail: {{< get_social "email" >}}
 
 <!-- ![deco.webp](images/deco.webp) -->
 
+![Elastic bones demo](images/Dexter-Elastic.webp)
+
+{{< img_caption img="images/Dexter-Elastic.webp" alt="Illustration of 2 cute dogs bouncing" url="https://orb91.gumroad.com/l/easy_elastic_bones" >}}
+
 {{< img_caption img="images/deco.webp" caption="SZK Easy Elastic Bones" italic=false alt="Illustration of a cute dog bumping" url="https://orb91.gumroad.com/l/easy_elastic_bones" >}}
