@@ -47,6 +47,12 @@ defaultContentLanguageInSubdir = true
 
 [markup.goldmark.renderer]
 unsafe= true
+
+# INFO: https://gohugo.io/content-management/markdown-attributes/
+[markup.goldmark.parser.attribute]
+block = true
+title = true
+
 [params]
   galleries_author = 'Suzuka Ka'
   articles_author = 'Suzuka Ka'
