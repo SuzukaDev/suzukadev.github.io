@@ -6,7 +6,7 @@ src = Path with the audio.
 title = Title of the audio. Default: audio file tilte
 artist = Artist/Author of the audio. Default: .Site.Params.audios_default_author
 cover = Path with an image used as cover. If not set, it will look for an image with the SAME NAME as the audio file. Eg: cancion.mp3 -> cancion.png. Default: (no image)
-pos = Position of the cover image in the background. To adjust its appeareance. Default: center (50% 50%)
+pos/position/p = Position of the cover image in the background. To adjust its appeareance. Default: center (50% 50%)
 color = Color of the border in hex. Default: Gets automatically the most predominant and brightest color
 optimize = Optimizes the image set for the cover, for fast loading. Is useful to turn it to false for animated .webp's and .gif's. Default: true
 autoplay = Autoplays the audio when loading (do not work in some browsers). Default: false
@@ -55,7 +55,7 @@ Useful for adding notes, or whatever.
 {{- $artist := (or (.Get 2) (.Get "artist")) | default .Site.Params.audios_default_author -}}
 {{- $year := (.Get "year") | default "" -}}
 {{- $cover_path := (or (.Get 3) (.Get "cover")) | default "" -}}
-{{- $cover_position := (or (.Get 4) (.Get "pos")) -}}
+{{- $cover_position := (or (.Get 4) (.Get "pos") (.Get "position") (.Get "p")) -}}
 {{- $color_manual := (or (.Get 5) (.Get "color") (.Get "col") (.Get "c")) | default "" -}}
 {{- $optimize_cover_image := (or (.Get 6) (.Get "optimize")) | default true -}}
 {{- $autoplay_flag := (or (.Get 7) (.Get "autoplay")) | default false -}}
