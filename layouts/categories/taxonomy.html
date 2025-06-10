@@ -1,13 +1,5 @@
-{{- /*  REFACTOR categories  */ -}}
 {{ define "main" }}
   {{/*  {{ partial "title.html" . }}  */}}
-  <h1>taxonomy</h1>
-  <hr>
-  {{ range .Pages }}
-  <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-  {{ end }}
-  <hr>
-  <h1>taxonomy</h1>
 
   <hgroup>
     {{/*  Show total galleries in tag's title/name  */}}
@@ -46,25 +38,20 @@
     {{end}}  */ -}}
 
     {{- /*  <h1 class="accent-color">#{{ .Title }} <sup class="text2-color">{{$tag_count}}   - pages len: {{len .Pages}}</sup></h1>  */ -}}
-    <h1 class="accent-color">#{{ .Title }} <sup class="text2-color">{{$tag_count}}   - pages len: {{len .Pages}}  -> {{$total_galleries}}</sup></h1>
+    {{- /*  <h1 class="accent-color">#{{ .Title }} <sup class="text2-color">{{$tag_count}}   - pages len: {{len .Pages}}  -> {{$total_galleries}}</sup></h1>  */ -}}
+    <h1 class="accent-color">#{{ .Title }} 
+      <sup class="text2-color">
+        {{- /*  {{$tag_count}}   - pages len: {{len .Pages}}  -> {{$total_galleries}}  */ -}}
+        {{$total_galleries}}
+      </sup>
+    </h1>
+
     {{with .Description}}
     <p>{{. | markdownify}}</p>
     {{end}}
   
   </hgroup>
 
-  {{/*  section.galleries is displayed as grid  */}}
-    {{/*  <section>  */}}
-    {{ if eq .Kind "term"}}
-      {{/*  galleries in a CERTAIN TAG  */}}
-      {{ partial "categories/render-single-category.html" . }}
-      
-    {{ else if eq .Kind "taxonomy"}}
-      {{ partial "categories/render-categories-list.html" . }}
-
-    {{ end }}
-
-    <h1>NEW WAY, THE BEST WAY!</h1>
 
 <section class="galleries">
     {{ if eq .Kind "term"}}
@@ -88,8 +75,6 @@
         {{- end -}}
       {{ end }}
     {{ end }}
-    
-    
   </section>
   
   <article class="articles-content">
@@ -97,11 +82,6 @@
   </article>
 
 
-      
-
-
     {{/*  Galleries with the same tag  */}}
-
-
     {{/*  {{ partial "tag-cloud.html" . }}  */}}
 {{ end }}
