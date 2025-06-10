@@ -5,7 +5,7 @@ description: "**Selección** de algunos de mis trabajos."
 date: '2025-06-02T19:44:42+02:00' # Usado para ordenar (más reciente primero)
 author: Suzuka Ka
 draft: false
-# categories: ["gamedev", "art"]
+categories: ["gamedev", "art"]
 # main_classes: 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 
 ## INFORMACIÓN Menús https://gohugo.io/content-management/menus/

@@ -1,0 +1,29 @@
+{{/*  {{ $source := .Request.URL.Query.Get "source" }}
+{{- /*  DELETE categories  */ -}}
+
+<h1>source = {{$source}}</h1>  */}}
+<h1>hoder</h1>
+<section class="galleries">
+  {{ range where (where .Pages "Params.private" "ne" true) ".Section" "eq" "galleries" }}
+    {{/*  {{ partial "album-card.html" . }}  */}}
+    {{- /*  {{ partial "articles/article-card.html" . }}  */ -}}
+    {{ partial "album-card.html" . }}
+    {{/*  {{ partial "articles/articles/article-card.html" . }}  */}}
+  {{ end }}
+</section>
+
+{{/*  Galeries with the same tag  */}}
+{{- /*  {{ if .Site.Params.show_galeries_with_same_article_tag }}
+  {{ $galleries_with_tag := partial "utils/get-galleries-with-tag" (dict "tag" .Title)}}
+  {{ $galleries_with_tag_not_private := where $galleries_with_tag ".Params.private" "ne" "true" }}
+  {{ if gt (len $galleries_with_tag_not_private) 0 }}
+    <hgroup>
+      <h2>{{ T "albumWithTagCount" (dict "count" (len $galleries_with_tag) "tag" .Title) | safeHTML}}</h2>
+    </hgroup>
+    <section class="galleries">
+      {{ range $galleries_with_tag_not_private}}
+        {{ partial "album-card" . }}
+      {{ end }}
+    </section>
+  {{ end }}
+{{ end }}  */ -}}

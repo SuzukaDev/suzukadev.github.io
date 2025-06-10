@@ -1,0 +1,31 @@
+
+{{- /*  DELETE categories  */ -}}
+
+<section class="galleries">
+
+  {{/*  categories LIST  */}}
+    {{/*  {{ range where .Pages "Params.private" "ne" true }}
+      <p>{{.Title}}</p>
+
+    {{ end }}  */}}
+
+      {{range $category_name, $taxonomy_pages := .Site.Taxonomies.categories}} 
+        {{- /*  This is wrong (it also included in the count private pages)  */ -}}
+        {{- /*  {{ $cnt := .Count }}  */ -}}
+        
+        {{- /*  Non private galleries  */ -}}
+        {{ $galleries_with_tag_public := where (where $taxonomy_pages.Pages ".Params.private" "ne" true) ".Section" "eq" "galleries"}}
+        {{ $cnt := len $galleries_with_tag_public }}
+
+        {{ with $.Site.GetPage (printf "/categories/%s" $category_name) }}
+          {{/*  <div class="tagbutton">  */}}
+          {{/*  <a class="article-tag" href={{ .RelPermalink }} title="All pages with tag <i>{{$tag_name}}</i>">{{$tag_name}}</a>  */}}
+          {{/*  <sup>{{$cnt}}</sup>  */}}
+          {{ if gt $cnt 0 }}
+            <a class="article-tag big-article-tag" href={{ .RelPermalink }} title="All pages with tag <i>{{$category_name}}</i>"><span class="center-text">{{$category_name}}<sup class="tag-count">{{$cnt}}</sup></span></a>
+          {{ end }}
+          {{/*  </div>  */}}
+        {{end}}
+    {{end}}
+
+    </section>
