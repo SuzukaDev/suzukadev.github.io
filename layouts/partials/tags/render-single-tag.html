@@ -12,7 +12,7 @@
 
 {{/*  Galeries with the same tag  */}}
 {{ if .Site.Params.show_galeries_with_same_article_tag }}
-  {{ $galleries_with_tag := partial "utils/get-galleries-with-tag" (dict "tag" .Title)}}
+  {{ $galleries_with_tag := partial "utils/get-galleries-with-tag.html" .Title}}
   {{ $galleries_with_tag_not_private := where $galleries_with_tag ".Params.private" "ne" "true" }}
   {{ if gt (len $galleries_with_tag_not_private) 0 }}
     <hgroup>

@@ -3,14 +3,14 @@ Returns ALL galleries that contains a tag
 Arguments: dict("tag" $tag_name) = Page from which it will get the .Section
 
 Use:
-{{ partial "utils/get-galleries-with-tag.html" (dict "tag" $tag_name) }}
+{{ partial "utils/get-galleries-with-tag.html" $tag_name }}
 .tag
 
 
 */}}
 
 
-{{ $tag := .tag | lower }}
+{{ $tag := . | lower }}
 
 {{/*  .Section gets the folder name */}}
 {{ $section := "galleries" }}
