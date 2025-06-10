@@ -5,7 +5,7 @@ description: Modelado y escultura 3D, _texture painting_, _shading_, _rigging_ y
 date: '2025-04-27T21:16:08+02:00' # Usado para ordenar (más reciente primero)
 author: Suzuka Ka
 draft: false
-categories: ["arte", "3d"]
+categories: ["arte", "3d", "gamedev"]
 
 ## INFORMACIÓN Menús https://gohugo.io/content-management/menus/
 # menus:

@@ -5,7 +5,7 @@ description: "**<u>Tools</u>:** Pyxel Edit, Aseprite, Krita {{< text_wavy text=\
 date: '2025-04-27T20:18:53+02:00' # Used for sorting (newest first)
 author: Suzuka Ka
 draft: false
-categories: ["art", "digital", "pixel art"]
+categories: ["art", "digital", "pixel art", "gamedev"]
 # categories: ["animals", "gamedev"]
 main_classes: 'pixel-font'
 

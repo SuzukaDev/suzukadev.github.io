@@ -5,7 +5,7 @@ description: 3D Modelling, sculpting, texture painting, shading, rigging and ani
 date: '2025-04-27T21:16:08+02:00' # Used for sorting (newest first)
 author: Suzuka Ka
 draft: false
-categories: ["art", "3d"]
+categories: ["art", "3d", "gamedev"]
 
 ## INFO Menus https://gohugo.io/content-management/menus/
 # menus:
