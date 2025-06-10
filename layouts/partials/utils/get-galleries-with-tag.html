@@ -16,8 +16,8 @@ Use:
 {{ $section := "galleries" }}
 {{/*  {{ $galleries := where (site.RegularPages .) "Section" "eq" $section }}  */}}
 {{ $galleries := where (site.RegularPages) "Params.tags" "intersect" (slice $tag) }}
-{{ $galleries := where $galleries "Params.private" "ne" true }}
-{{ $galleries := where $galleries "Section" "eq" $section }}
+{{ $galleries = where $galleries "Params.private" "ne" true }}
+{{ $galleries = where $galleries "Section" "eq" $section }}
 
 {{/*  NOTE after calling this, one may want to filter the first X related pages, like:
 {{ $galleries = first 3 $related }}
