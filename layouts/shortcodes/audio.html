@@ -12,6 +12,8 @@ optimize = Optimizes the image set for the cover, for fast loading. Is useful to
 autoplay = Autoplays the audio when loading (do not work in some browsers). Default: false
 radius = Border radius for the cover. Tip: set a very big value (999999px) for circle corners. Set 0px for no borders. Default: .3rem (A bit rounded)
 text_color = Color for the title shadow. If not set, it will use the border color by default.
+description = (string) Description inside the player. Note: if there is a json, it will ignore the description.
+
 
 Example:
 {{< audio "my_audio.mp3" "My song" "Dexter" >}} -> Autoplays muted
@@ -192,15 +194,23 @@ Useful for adding notes, or whatever.
 		</section>
 	</div>
 
+	{{- $_subtitles_start_message := .Get "description" | default "" -}}
 	{{- if $json_resource -}}
-	<div class="audio-subtitles">
-		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M80-80v-720q0-33 23.5-56.5T160-880h440q33 0 56.5 23.5T680-800v17q-24 11-44 27t-36 36v-80H160v527l47-47h393v-160q16 20 36 36t44 27v97q0 33-23.5 56.5T600-240H240L80-80Zm160-320h160v-80H240v80Zm520-80q-50 0-85-35t-35-85q0-50 35-85t85-35q11 0 21 2t19 5v-207h160v80h-80v240q0 50-35 85t-85 35Zm-520-40h280v-80H240v80Zm0-120h280v-80H240v80Zm-80 320v-480 480Z"/></svg>
-		{{- $_subtitles_start_message := $json.startMessage -}}
+		{{- $_subtitles_start_message = $json.startMessage -}}
 		{{- if and $_is_spanish $json.startMessageEs -}}
 			{{- $_subtitles_start_message = $json.startMessageEs -}}
 		{{- end -}}
-		<p id={{$display_id}}>{{$_subtitles_start_message}}</p>
-	</div>
+	{{- end -}}
+
+	{{- /*  {{- $_show_subtitles := bool($_subtitles_start_message) -}}  */ -}}
+	{{- $_show_subtitles := ne $_subtitles_start_message "" -}}
+
+	
+	{{- if $_show_subtitles -}}
+		<div class="audio-subtitles">
+			<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M80-80v-720q0-33 23.5-56.5T160-880h440q33 0 56.5 23.5T680-800v17q-24 11-44 27t-36 36v-80H160v527l47-47h393v-160q16 20 36 36t44 27v97q0 33-23.5 56.5T600-240H240L80-80Zm160-320h160v-80H240v80Zm520-80q-50 0-85-35t-35-85q0-50 35-85t85-35q11 0 21 2t19 5v-207h160v80h-80v240q0 50-35 85t-85 35Zm-520-40h280v-80H240v80Zm0-120h280v-80H240v80Zm-80 320v-480 480Z"/></svg>
+			<p id={{$display_id}}>{{$_subtitles_start_message | markdownify }}</p>
+		</div>
 	{{- end -}}
 
 	<audio id={{$audio_id}} controls  {{$autoplay | safeHTMLAttr}} preload="{{ .Get "preload" | default "metadata" }}">
