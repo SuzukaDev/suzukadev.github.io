@@ -1049,4 +1049,4 @@ Export Scaled Pixel Art (Selected Layers) (SZK Pixel Art Suite) | (Sin asignar)
   cover_position="50% 53%"
 >}}
 
-> Espero que el plugin {{< text_wavy "te ayude" >}} a {{< text_handwritten text="crear" font=3 >}} **{{< text_rotate "Pixel Art" >}} {{< text_shimmer "impresionante!" >}}** 🍀
+> Espero que el plugin {{< text_wavy "te ayude" >}} a {{< text_handwritten text="crear" font=3 >}} **{{< text_rotate "Pixel Art" >}}{{< text_shimmer "!" >}}** 🍀
