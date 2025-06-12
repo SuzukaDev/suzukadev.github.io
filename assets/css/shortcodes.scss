@@ -96,6 +96,9 @@ figure.figure-caption{
 	font-weight: 600;
 	letter-spacing: .05em;
 	padding: 3px 5px;
+	$margin: .4em;
+	margin-left: $margin;
+	margin-right: $margin;
 	white-space: nowrap;
 
 	display: inline-flex;
