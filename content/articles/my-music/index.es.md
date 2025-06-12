@@ -30,11 +30,11 @@ show_right_bar = true
 # related_pages = [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 +++
 
-# En construcción
-
-Esto es un texto de pruebita 
 
 
+{{< youtube "Vw8hnal0lHQ" >}}
+
+{{< youtube "ars3MgcM8Nc" >}}
 
 {{< audio src="music-production-reel-2-recortando.mp3" title="Music Production Reel (30 songs)" cover="reel-cover" color="#4E72A2FF" >}}
 

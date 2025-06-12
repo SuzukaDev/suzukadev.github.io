@@ -37,6 +37,10 @@ show_right_bar = true
 
 
 
+{{< youtube "Vw8hnal0lHQ" >}}
+
+{{< youtube "ars3MgcM8Nc" >}}
+
 <!-- {{< audio src="suzuka-the-wayback-master-4.mp3" title="The Wayback" cover="altea.jpg" color="#19CBF6FF" pos="50% 30%" >}} -->
 
 <!-- {{< audio src="music-production-reel-2-recortando.mp3" title="Music Production Showcase (Selection)" cover="reel-cover" color="#FCEDBFFF" >}} -->
