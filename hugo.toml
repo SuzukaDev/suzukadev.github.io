@@ -61,6 +61,7 @@ title = true
   articles_card_type = 2 # options: 1 (simple) or 2 (with more info)
   # is_debug = false # Set to false for relase
   # is_debug = true
+  is_site_under_development = true 
 
   show_galeries_with_same_article_tag = true # If True, when seeing a certain article tag, it will show at the end the galeries that contains that tag you are browsing
 

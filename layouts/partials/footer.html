@@ -11,5 +11,5 @@
       </a>
     {{ end }}
   </section>
-<blockquote>⚠️ <u>THIS <b>SITE</b> IS <b>UNDER DEVELOPMENT</b></u> ⚠️</blockquote>
+{{- if .Site.Params.is_site_under_development -}}<blockquote style="text-align: center;">{{T "underDevelopment" | markdownify }}</blockquote>{{- end -}}
 </footer>
