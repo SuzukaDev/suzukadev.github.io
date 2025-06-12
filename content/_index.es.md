@@ -35,7 +35,7 @@ Lee más [**sobre mí**]({{< relref "about.md" >}}) o [**echa un vistazo a mi tr
 <!-- (❌❌❌TODO❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗: cambiar el link de "check my work here"❗) -->
 
 <!-- ❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗ -->
-> ⚠️ <u>ESTA **PÁGINA** ESTÁ **EN DESARROLLO**</u> ⚠️
+<!-- > ⚠️ <u>ESTA **PÁGINA** ESTÁ **EN DESARROLLO**</u> ⚠️ -->
 <!-- >
 > ⚠️ Hacerla <u>**NO ESTÁ**</u> siendo un rollo ⚠️
 >

@@ -36,7 +36,7 @@ Read more **[about me]({{< relref "about.md" >}})** or [**check my work here**](
 <!-- (❌❌❌TODO❗❗❗❗❗❗❗❗❗❗❗❗❗❗❗: cambiar el link de "check my work here"❗) -->
 
 <!-- ❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗❌❌❌❗ -->
-> ⚠️ <u>THIS **SITE** IS **UNDER DEVELOPMENT**</u> ⚠️
+<!-- > ⚠️ <u>THIS **SITE** IS **UNDER DEVELOPMENT**</u> ⚠️ -->
 
 
 
