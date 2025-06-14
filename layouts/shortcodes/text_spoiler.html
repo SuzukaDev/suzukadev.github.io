@@ -37,7 +37,7 @@ out_time = (float) The time for the fade out effect. Default: .4 (s)
 {{- $css_properties_string := delimit $css_properties ";" -}}
 
 
-{{$output := printf "<span class='%s' style='%s;'>%s" $css_class ($css_properties_string) $text -}}
+{{$output := printf "<span class='%s' style='%s;'>%s" $css_class ($css_properties_string) ($text | markdownify) -}}
 
 
 {{- $output = printf "%s</span>" $output}}
