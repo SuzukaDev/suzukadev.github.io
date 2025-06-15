@@ -45,4 +45,4 @@ show_right_bar = true
 <!-- {{< audio src="music-production-reel-2-recortando.mp3" title="Music Production Showcase (Selection)" cover="reel-cover" color="#FCEDBFFF" >}} -->
 {{< audio src="music-production-reel-2-recortando.mp3" title="Music Production Reel (30 songs)" cover="reel-cover" color="#4E72A2FF" >}}
 
-{{< audio src="suzuka-the-wayback-master-4.mp3" title="The Wayback" text_color="#A71866FF" pos="50% 45%" description="Song made for a ***OSC*** (*One Synth Challenge*). <br>It was about making a song with just **ONE** synth. Every sound, SFX, drums, bass, etc. was made with only *U-He TyrellN6*" >}}
+{{< audio src="suzuka-the-wayback-master-4.mp3" title="The Wayback" text_color="#A71866FF" pos="50% 45%" description="Song made for a ***OSC*** (*One Synth Challenge*). <br>It was about making a song with just **ONE** synth. Every sound, SFX, drums, bass, etc. was made only with the synth *U-He TyrellN6*" >}}
