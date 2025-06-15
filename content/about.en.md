@@ -2,9 +2,9 @@
 layout: page
 rss_ignore: true
 title: About me
-menu:
-  main:
-    weight: 1000
+# menu:
+#   main:
+#     weight: 1000
 articles_description: Multimedia engineer, with passion for arts
 ---
 
