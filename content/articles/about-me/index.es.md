@@ -75,7 +75,7 @@ Disfruto del reto de imaginar las distintas soluciones, las posibles formas de a
 
 <!-- With the time, I've discovered a lot of joy by making tools, software/apps, plugins for different programs, etc. I find very inspirational to help other people to make cool things, even if its just a bit, with some app/software/plugin I did. Is something that fulfills me. -->
 
-Con el tiempo he descubirto que me motiva hacer herramientas, programas, aplicaciones, *pluggins* para distintos programas, etc. Encuentro muy inspirador el hacer "cosas" que ayuden a otras personas a hacer cosas chulas. Es algo que me llena.
+Con el tiempo he descubierto que me motiva hacer herramientas, programas, aplicaciones, *plugins* para distintos programas, etc. Encuentro muy inspirador el hacer "cosas" que ayuden a otras personas a hacer cosas chulas. Es algo que me llena.
 
 <!-- There is also something cool about creating your own tools, to have the power to shape them to your needs and being able to add whatever you want, need or find cool.  -->
 
