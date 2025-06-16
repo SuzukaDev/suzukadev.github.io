@@ -40,8 +40,9 @@ Read more **[about me]({{< relref "about-me.md" >}})** or [**check my work here*
 
 
 
-> **Learn** from yesterday, **live** for today, **hope** for tomorrow. <cite>Albert Einstein</cite>
+<!-- > **Learn** from yesterday, **live** for today, **hope** for tomorrow. <cite>Albert Einstein</cite> -->
 
+{{< quote "**Learn** from yesterday, **live** for today, **hope** for tomorrow." "Albert Einstein" >}}
 
 
 
