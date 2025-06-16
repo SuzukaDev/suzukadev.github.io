@@ -14,7 +14,7 @@ author/by = (string) The author of the quote
 {{- $author := or (.Get "author") (.Get "by") (.Get 1) | default "" -}}
 
 <blockquote>
-{{$text | markdownify }}
+<p>{{$text | markdownify }}</p>
 {{- if $author -}}
 	<cite>{{$author}}</cite>
 {{- end -}}
