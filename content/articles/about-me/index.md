@@ -113,7 +113,7 @@ Leaving aside personal aspects of that philosophy, when it comes to work, I do r
 
 This is just a silly example, but kinda illustrates the symbiotic relationship between work and life. The world bleeds into what we make, and what we make teaches us to see the world more closely, and to keep curiosity alive. -->
 
-There was a thunderstorm while I was working on this game jam. I remember observing it —taking notes, using my phone to measure the timing of the flash, the sound, the frequency— every time lightning struck, so I could later reproduce it in my little game.
+I add this image because there was a thunderstorm while I was working on this game jam. I remember observing it —taking notes, using my phone to measure the timing of the flash, the sound, the frequency— every time lightning struck, so I could later reproduce it in my little game.
 
 It’s a small, maybe even silly example, but it captures the symbiotic relationship between work and life. The world bleeds into what we make, and what we make teaches us to see the world more closely—and to keep our curiosity alive.
 
