@@ -57,6 +57,7 @@
   Commented since I copied main.js to my assets/js folder and Im importing inside the main.js the theme-switch-shortcut.js, 
   so everything is packed inside main.js and I dont need to process here .js files and add more script tags  */}}
 
+  {{ template "_internal/google_analytics.html" . }}
 
   {{- partial "head-custom.html" . -}}
 </head>

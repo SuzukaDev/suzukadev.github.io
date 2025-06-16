@@ -13,6 +13,10 @@ defaultContentLanguage = 'en'
 defaultContentLanguageInSubdir = true
 # defaultContentLanguageInSubdir = false
 
+[services]
+  [services.googleAnalytics]
+    id = 'G-Y6TEE2CGY1'
+
 [languages]
   [languages.es]
     # contentDir = 'content/de'
