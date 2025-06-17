@@ -1,7 +1,7 @@
 +++
 title = 'About Me'
 date = '1991-03-13T23:02:58+02:00'
-description = "A longer introduction to myself"
+description = "A longer introduction to myself."
 lastmod = '1991-03-13T23:02:58+02:00'
 # draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
@@ -80,7 +80,7 @@ There is also something cool about creating your own tools, to have the power to
 
 <!-- Some personal highlights of mine are that animators that worked in shows like Rick & Morty, The Cuphead Show, and Bob's Burger, and games like Hi-fi Rush, among others, got some of my tools. -->
 
-A personal highlight for me is that some of my tools have been picked up by animators who’ve worked on shows like Rick & Morty, The Cuphead Show, Bob’s Burgers, and games like Hi-Fi Rush.
+A personal highlight for me is that some of my tools have been picked up by animators who’ve worked on shows like *Rick & Morty*, *The Cuphead Show*, *Bob’s Burgers*, and games like *Hi-Fi Rush*. [You can check **some of them here**]({{< relref "articles/manuals" >}}).
 
 
 <!-- --- -->

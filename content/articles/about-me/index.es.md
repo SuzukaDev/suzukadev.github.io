@@ -1,7 +1,7 @@
 +++
-title = 'About Me'
+title = 'Sobre mí'
 date = '1991-03-13T23:02:58+02:00'
-description = "A longer introduction to myself"
+description = "La típica sección '*sobre mí*', solo que tal vez un poco larga."
 lastmod = '1991-03-13T23:02:58+02:00'
 # draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
@@ -33,27 +33,27 @@ show_right_bar = true
 
 [menu.main]
 	weight = 1000
-	name = "About me"
+	name = "Sobre mí"
 
 +++
 
 <!-- > I personally feel the focus should always be "the others". We make games for others to enjoy. We make tools for others to find them useful. <br> But I think we can only achieve that by being honest with ourselves. We can not expect others to enjoy something we would not -->
 
 
-# About me
+# Sobre mí
 
 <!-- Hello, my name is **Óscar** (also known as Suzuka/Suzuka Ka on the internet), and I personally find very hard to describe myself (or anyone else) with just a few words, but I'll try ({{< text_spoiler "and if I 'fail' in using not so many words, since this is *my place* I feel free to *ramble on (and sing my song)*" >}}): -->
 
-Hola, mi nombre es Óscar (también conocido como Suzuka/Suzuka Ka en internet), y personalmente encuentro muy difícil describirme (a mí o a cualquier otra persona) con solo unas pocas palabras, pero lo intentaré (y si 'fallo en el intento', como esta es mi página me siento libre de estirarme): **** 
+Hola, mi nombre es **Óscar** (también conocido como Suzuka/Suzuka Ka en internet), y personalmente encuentro muy difícil describirme (a mí o a cualquier otra persona) con solo unas pocas palabras, pero lo intentaré (y si 'fallo en el intento', como esta es mi página me siento libre de estirarme):
 
 <!-- I'm technically a **multimedia engineer/game developer**. I'm very passionate about making games. There is no need to express how/why videogames are kinda the *pinnacle* of art of our times. There is no other art medium that could compare to the unique experiences that videogames can offer. And also, there is no other medium as complex and conformed by many disciplines as game development is. -->
-Técnicamente soy un Ingeniero Multimedia/Desarrollador de Videojuegos. Me apasiona hacer videojuegos. No hace falta explicar el porqué los videojuegos son una de las mayores representaciones artísticas de nuestros tiempos. No hay ningún otro medio artístico que pueda compararse con las experiencias únicas que los videojuegos pueden ofrecer. Y además, no hay ningún otro medio tan complejo y conformado por tantas disciplinas como el desarrollo de videojuegos.
+Técnicamente soy un **Ingeniero Multimedia/Desarrollador de Videojuegos**. Me apasiona hacer videojuegos. No hace falta explicar el porqué los videojuegos son una de las mayores representaciones artísticas de nuestros tiempos. No hay ningún otro medio artístico que pueda compararse con las experiencias únicas que los videojuegos pueden ofrecer. Y además, no hay ningún otro medio tan complejo y conformado por tantas disciplinas como el desarrollo de videojuegos.
 
 <!-- My **skills** are **wide**, I'm multidisciplinary. From programming to art (you can [check **some of my work** here]({{< ref "galleries/my-work" >}}) ). I strongly believe that the more knowledge we have, the more *periferic view* we have over a problem and the more tools we have to solve it in many different ways.  -->
-Mis habilidades son amplias, soy - bastante - multidisciplinario. Puedo cubrir distintos roles, desde programación hasta el arte (puedes [ver **algunos de mis trabajos** aquí]({{< ref "galleries/my-work" >}})). Creo firmemente que cuanto más conocimiento tenemos, mayor es la visión/perspectiva que tenemos sobre un problema y más herramientas tenemos a nuestro alcance para resolver dichos problemas, de distintas maneras. 
+Mis **habilidades** son amplias, soy - bastante - **multidisciplinario**. Puedo cubrir distintos roles, desde programación hasta el arte (una imágen vale más que mil palabras, puedes [ver **algunos de mis trabajos y proyectos** aquí]({{< ref "galleries/my-work" >}})). Creo firmemente que cuanto más conocimiento tenemos, mayor es la visión/perspectiva que tenemos sobre un problema y más herramientas tenemos a nuestro alcance para resolver dichos problemas, de distintas maneras. 
 
 <!-- I like to understand things as an interconnected-whole. I personally often visualize concepts as some kind of root branches or skill tree; there are some root nodes from which derives others and they all have common keypoints. Nothing is fully disconnected and we can extrapolate knowledge from one topic/skill to another. -->
-Me gusta entender las cosas como un *todo* interconectado. Personalmente, a menudo visualizo los conceptos como una especie de ramificación arborescente (a lo árbol de habilidades); hay nodos raíz de los que derivan muchos otros conceptos, y todos tienen puntos clave comunes. Nada está completamente desconectado y podemos extrapolar conocimiento de un tema/concepto/habilidad a otro.
+Me gusta entender las cosas como un *todo* interconectado. Personalmente, a menudo visualizo los conceptos como una especie de ramificación arborescente (a lo árbol de habilidades); hay nodos raíz de los que derivan muchos otros conceptos, y todos tienen puntos clave comunes. Nada está completamente desconectado y podemos **extrapolar conocimiento de un tema/concepto/habilidad a otro**.
 
 <!-- For example, I think that knowing to draw (or better said, why do some images works while others don't) makes you a better UI dessigner. -->
 
@@ -75,7 +75,7 @@ Disfruto del reto de imaginar las distintas soluciones, las posibles formas de a
 
 <!-- With the time, I've discovered a lot of joy by making tools, software/apps, plugins for different programs, etc. I find very inspirational to help other people to make cool things, even if its just a bit, with some app/software/plugin I did. Is something that fulfills me. -->
 
-Con el tiempo he descubierto que me motiva hacer herramientas, programas, aplicaciones, *plugins* para distintos programas, etc. Encuentro muy inspirador el hacer "cosas" que ayuden a otras personas a hacer cosas chulas. Es algo que me llena.
+Con el tiempo he descubierto que me motiva hacer herramientas, programas, aplicaciones, *plugins* para distintos programas, etc. Encuentro muy **motivador** el desarrollar "cosas" que ayuden a otras personas a hacer otras cosas chulas. Es algo que me llena.
 
 <!-- There is also something cool about creating your own tools, to have the power to shape them to your needs and being able to add whatever you want, need or find cool.  -->
 
@@ -96,7 +96,7 @@ Hay también algo mágico en el hecho de crear tus propias herramientas. El pode
 <!-- Some personal highlights of mine are that animators that worked in shows like Rick & Morty, The Cuphead Show, and Bob's Burger, and games like Hi-fi Rush, among others, got some of my tools. -->
 
 <!-- A personal highlight for me is that some of my tools have been picked up by animators who’ve worked on shows like Rick & Morty, The Cuphead Show, Bob’s Burgers, and games like Hi-Fi Rush. -->
-He tenido la suerte de que algunas de mis herramientas han sido usadas por animadores que han trabajado en series como Rick & Morty, The Cuphead Show, Bob's Burger, o juegos como Hi-Fi Rush.
+He tenido la suerte de que algunas de mis herramientas han sido usadas por animadores que han trabajado en series como *Rick & Morty*, *The Cuphead Show*, *Bob's Burger*, o juegos como *Hi-Fi Rush*. [Puedes ver **algunas de ellas aquí**]({{< relref "articles/manuals" >}}).
 
 
 <!-- --- -->
@@ -112,7 +112,7 @@ He tenido la suerte de que algunas de mis herramientas han sido usadas por anima
 <!-- **As a person**, I find meaning in learning. I personally think life is about that. My life philosophy could be summed up with that. -->
 
 <!-- **As a person**, I find meaning in learning. I personally believe life is about learning. My life philosophy could be summed up with that. -->
-Personalmente encuentro que aprender le da cierto sentido a la vida. Para mí la vida va de eso, de aprender.
+Personalmente encuentro que **aprender** le da cierto sentido a la vida. Para mí la vida va de eso, de aprender.
 
 <!-- I think it enables you to extract positive things even from negative experiences,  -->
 
@@ -153,7 +153,7 @@ Este intercambio recíproco es lo que lo hace especial.
 
 <!-- When learning, I am motivated by the new possibilities that learning a new skill/knowledge offers. Every time we learn new things, is like discovering new routes and tools for helping us to approach any problem in different ways. -->
 
-Cuando aprendo algo nuevo, me siento motivado por las nuevas posibilidades que aprender un nuevo conocimiento, habilidad, etc. ofrece. Cada vez que aprendemos algo nuevo es como descubrir nuevas rutas y herramientas con las que abordar cualquier problema. Como descubrir nuevos caminos que te llevan a otros lugares.
+Cuando aprendo algo nuevo, me siento motivado por las **nuevas posibilidades** que aprender un nuevo conocimiento, habilidad, etc. ofrece. Cada vez que aprendemos algo nuevo es como descubrir nuevas rutas y herramientas con las que abordar cualquier problema. Como descubrir nuevos caminos que te llevan a otros lugares.
 
 <!-- I've been told that I learn fast. To be honest, I don't know if that's true, but I know I'm a very curious and stubborn person. -->
 
@@ -185,7 +185,7 @@ The more skillsets you have, the more ways you have to solve problems. -->
 
 <!-- My second pivot point about my life philosophy, is that kindness is important. I have death very present in my life. We all have an expiration date yet to discover, and that date may be sooner than we would expect/wish. -->
 
-El segundo punto importante de mi filosofía es que la amabilidad es importante. Tengo la muerte muy presente en mi vida. Todos tenemos una fecha de caducidad por descubrir, y tal vez esa fecha está más cerca de lo que nos pensamos o nos gustaría.
+El segundo punto importante de mi filosofía es que **la amabilidad es importante**. Tengo la muerte muy presente en mi vida. Todos tenemos una fecha de caducidad por descubrir, y tal vez esa fecha está más cerca de lo que nos pensamos o nos gustaría.
 
 <!-- If that happens, I think only a few aspects of ouselves will "survive":
 
@@ -201,7 +201,7 @@ Cuando nos llegue nuestra fecha de caducidad, creo que muy pocos aspectos de nos
 
 <!-- When working with others, I'm very flexible and I rarely have a bossy/demanding attitude. Even though, I have no problem 'standing up' if I know at 100% that something will lead to a fail or should be changed. But overall, I think a good and kind work ambience is always important. -->
 
-Cuando trabajo en grupo, soy muy flexible. Rara vez soy muy demandante. No suelo tener ganas de llevar la razón. Aunque si sé al 100% que algo está mal, o que va a dar problemas, tampoco tengo problemas en "plantarme" y comentarlo sin problema.
+Cuando trabajo en grupo, soy muy **flexible**. Rara vez soy muy demandante. No suelo tener ganas de llevar la razón. Aunque si sé al 100% que algo está mal, o que va a dar problemas, tampoco tengo problemas en "plantarme" y comentarlo sin problema.
 
 <!-- I also respect deeply others' work. Even though, I can also be very critic if the other person is willing or allows me to be, since at the end a good critizise offers the possibility to grow. -->
 
@@ -211,7 +211,7 @@ Respeto bastante el trabajo de los demás, porque sé lo que cuestan las cosas. 
 <!-- I personally do not feel the urge to change other's views (and to be honest this feels like a super power nowadays). I'm always curious to learn about other views that are different than mine, even if is just to reinforce mines. But overall, my peace is rarely altered by others. 
 Even though, I think there are some common grounds we all should share and defend firmly, specially when it comes to basic human rights and decency. Basic things as do **not** discriminating someone because of their sex, ethnicity, race, sexual orientation, how they identify themselves, etc., is a must, in my humble opinion.
 I think empathy and understanding is key. -->
-Nunca siento la necesidad de cambiar las opiniones de los demás (la verdad es que esto se siente como un superpoder hoy en día). Siempre tengo curiosidad por aprender sobre las opiniones que son diferentes a las mías, incluso si es solo para reforzar las opiniones que ya tenía. Pero en general, mi paz rara vez se ve alterada por lo que otros piensen o puedan decir.
+Nunca siento la necesidad de cambiar las opiniones de los demás (la verdad es que esto se siente como un superpoder a día de hoy). Siempre tengo curiosidad por aprender sobre las opiniones que son diferentes a las mías, incluso si es solo para reforzar las opiniones que ya tenía. Pero en general, mi paz rara vez se ve alterada por lo que otros piensen o puedan decir.
 Aun así, creo que hay algunos puntos en común que todos deberíamos compartir y **defender firmemente**, especialmente en lo que respecta a los derechos humanos básicos y a la dignidad de las personas. Cosas básicas como no discriminar a alguien por su sexo, etnia, raza, orientación sexual, cómo se identifican, etc., me parece muy importante.
 
 <!-- I think empathy and understanding is key. -->
@@ -229,10 +229,10 @@ Creo que la empatía y la comprensión son vitales.
 <!-- I believe our work reflects who we are. The care and attention to detail we put into our craft is noticeable — it speaks volumes about us. In the end, it's a form of self-respect with ourselves and our time: if something is worth doing, it's worth doing right. -->
 
 <!-- About **our work**, I believe it **reflects who we are**. The care and attention to detail we put into our craft is noticeable — it speaks volumes about us. In the end, it's a form of self-respect. For ourselves and for our time. If something is worth doing, it's worth doing right. -->
-En lo que respecta a **nuestro trabajo**, creo que éste refleja quiénes somos. El cuidado y la atención al detalle que ponemos en las cosas que hacemos, se puede percibir, y creo que dice mucho de nosotros. Al final, es una forma de respeto hacia nosotros mismos y hacia nuestro tiempo. Si algo vale la pena hacer, vale la pena hacerlo bien.
+En lo que respecta a **nuestro trabajo**, creo que éste **refleja quiénes somos**. El cuidado y la atención al detalle que ponemos en las cosas que hacemos, se puede percibir, y creo que dice mucho de nosotros. Al final, es una forma de respeto hacia nosotros mismos y hacia nuestro tiempo. Si algo vale la pena hacerlo, vale la pena hacerlo bien.
 
 <!-- One of the things I personally value the most, is personality. Not trying to be a copycat, a clone of a clone. I think is hard to create something unique, since well, feels like everything is already invented. But I think is easy to make something with personality. -->
-Una de las cosas que más valoro, es la personalidad. No intentar ser una copia, un clon de otro clon. Creo que es difícil crear algo único, pues parece que casi todo ya está inventado. Pero creo que es fácil hacer algo con personalidad, simplemente siendo honestos con nosotros mismos.
+Una de las cosas que más valoro, es la **personalidad**. No intentar ser una copia, un clon de otro clon. Creo que es difícil crear algo único, pues parece que casi todo ya está inventado. Pero creo que es fácil hacer algo con personalidad, simplemente siendo honestos con nosotros mismos.
 
 
 
@@ -241,10 +241,10 @@ Una de las cosas que más valoro, es la personalidad. No intentar ser una copia,
 
 
 <!-- As a person... I think I tend to be insecure (always (absolutely always) questioning myself, the things I do, asking myself how to do it better, etc). I think this leads sometimes into that kind of analysis-paralysis. I might revisit this text a few times in case it sounds silly for me. I can also be sometimes a scatterbrain, when I'm thinking about a problem or anything. -->
-En lo personal, creo que tiendo a ser inseguro (siempre (absolutamente siempre) me cuestiono mucho, acerca de las cosas que hago, lo que digo... siempre me estoy preguntándome cómo puedo hacerlo mejor, etc.). Creo que esto a veces conduce a ese tipo de parálisis por análisis. Puede que vuelva a leer este texto unas cuantas veces en caso de que me parezca una chorrada. También puedo ser a veces un poco despistado, cuando estoy muy metido en algún pensamiento.
+En lo **personal**, creo que tiendo a ser inseguro (siempre (absolutamente siempre) me cuestiono mucho, acerca de las cosas que hago, lo que digo... siempre me estoy preguntándome cómo puedo hacerlo mejor, etc.). Soy muy crítico. Creo que esto a veces conduce a ese tipo de parálisis por análisis. Puede que vuelva a leer este texto unas cuantas veces en caso de que me parezca una chorrada. También puedo ser a veces un poco despistado, cuando estoy muy metido en algún pensamiento.
 
 <!-- I think I'm adding this because I personally dislike when in a portfolio someone is trying to fake or prettend to be a much better version of themselves. -->
-Creo que estoy añadiendo esto porque personalmente no me gusta cuando en un *portfolio* alguien intenta mostrar una versión perfecta y sin aristas, or ir de algo/alguien que no es.
+Creo que estoy añadiendo esto porque personalmente no me gusta cuando en un *portfolio* alguien intenta mostrar una versión perfecta y sin aristas, or ir de algo/alguien que no se es.
 
 
 <!-- If you have got until here, thank you, I appreciate it. -->

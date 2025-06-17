@@ -1,6 +1,6 @@
 +++
 # TODO traducir archetype (ES)
-title = 'Szk Grease Pencil Groups++'
+title = 'SZK Grease Pencil Groups++'
 date = '2025-05-20T19:01:56+02:00'
 description = "*Addon* para Blender que añade muchas mejoras al *Grease Pencil*!"
 lastmod = '2025-05-20T19:01:56+02:00'
