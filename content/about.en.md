@@ -46,7 +46,7 @@ I totally believe that. {{< text_spoiler "And I also believe that thinking that 
 	- I don’t have a personal preferred language. Even though I'm always on the boat of "fast to write" languages.
 		<!-- - Deeply focus on refactor and **being sure** that the code I make is good. We spend more time reading code than writing code. -->
 	<!-- - C++ leaves the room sad -->
-	- Apart from games, I'm also interested in doing other kinds of software, plugins, Blender addons, etc.
+	- Apart from games, I'm also interested in doing other kinds of software, plugins, Blender addons, etc. Or things like this web.
 
 <!-- <br> -->
 
