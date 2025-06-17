@@ -25,8 +25,8 @@
 		
 		{{/*  <h2>Patrick</h2>  */}}
 		{{/*  <p>{{ T "articleAboutMeDescription" }}</p>  */}}
-		{{ with $about_page.Params.default_articles_profile_description }}
-			<p>{{ . }}</p>
+		{{ with or (.Page.Params.custom_profile_description) ($about_page.Params.default_articles_profile_description) }}
+			<p>{{ . | markdownify }}</p>
 		{{ end }}
 	</a>
 	{{/*  <img src="/images/yo.jpg">  */}}

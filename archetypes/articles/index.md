@@ -20,6 +20,7 @@ show_table_of_contents = true
 show_right_bar = true
 # custom_pfp = "my-custom-pfp.png" # if set the article will use a custom image (NOT: You can also add the word 'pfp' to an image to automatically use it as the article's profile picture (pfp))
 # pfp_css_classes = "half-border-radius" # Custom css class for the pfp image
+# custom_profile_description = "Custom profile description" # Adds a custom profile description (below the pfp) for the page.
 # show_next_and_previous_arrows = false # If false (or not set), will hide the left/right arrows next to the articles' title for navigating between articles
 # show_related_articles = false # If false, it wont show the related articles at the bottom. If true (or non set), they will show.
 # featured_image = '{{.File.ContentBaseName}}.png' # local path for the image used as the cover. NOTE: Check its extension! (.png set as a template)
