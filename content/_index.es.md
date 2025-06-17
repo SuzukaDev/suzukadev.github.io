@@ -1,11 +1,11 @@
 ---
-title: Suzuka Ka Portfolio
-description: (DESCRIPTION EN EL content/_index.md)An example site for hugo-theme-gallery. Images from Unsplash.
+title: Página inicial
+description: Portfolio de Desarrollo de Videojuegos de Suzuka Ka
 #lastmod: 2023-07-05
-resources:
-  - src: martin-martz-wRuhOOaG-Z4-unsplash.jpg
-    params:
-      cover: true # cover of the home page is used for OpenGraph cards, etc.
+# resources:
+#   - src: martin-martz-wRuhOOaG-Z4-unsplash.jpg
+#     params:
+#       cover: true # cover of the home page is used for OpenGraph cards, etc.
 # profile_picture: "/images/yo.jpg"
 # profile_picture: "/images/yo.jpg" # DEPRECATED This is not used
 

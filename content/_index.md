@@ -1,7 +1,7 @@
 ---
-description: (DESCRIPTION EN EL content/_index.md)An example site for hugo-theme-gallery. Images from Unsplash.
+title: Home page
+description: Suzuka Ka's Game Development Portfolio
 #lastmod: 2023-07-05
-title: Suzuka Ka's Portfolio
 # resources:
 #   - src: martin-martz-wRuhOOaG-Z4-unsplash.jpg
 #     params:
