@@ -83,11 +83,11 @@ There is also something cool about creating your own tools, to have the power to
 A personal highlight for me is that some of my tools have been picked up by animators who’ve worked on shows like Rick & Morty, The Cuphead Show, Bob’s Burgers, and games like Hi-Fi Rush.
 
 
----
+<!-- --- -->
 
 {{< img_caption "k-sprite.png" "K-Sprite. <br>Some people — like me — say it's probably the best pixel art editor ever. And those who haven't said that, they probably think it silently. 👍">}}
 
----
+<!-- --- -->
 
 # My Life & Work Philosophy
 

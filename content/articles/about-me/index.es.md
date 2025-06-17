@@ -99,12 +99,12 @@ Hay también algo mágico en el hecho de crear tus propias herramientas. El pode
 He tenido la suerte de que algunas de mis herramientas han sido usadas por animadores que han trabajado en series como Rick & Morty, The Cuphead Show, Bob's Burger, o juegos como Hi-Fi Rush.
 
 
----
+<!-- --- -->
 
 <!-- {{< img_caption "k-sprite.png" "K-Sprite. <br>Some people — like me — say it's probably the best pixel art editor ever. And those who haven't said that, they probably think it silently. 👍">}} -->
 {{< img_caption "k-sprite.png" "K-Sprite. <br>Mucha gente — como yo — asegura que es el mejor editor de Pixel Art del mundo. Y los que no lo aseguran, muy probablemente lo piensen silenciosamente. 👍">}}
 
----
+<!-- --- -->
 
 <!-- # My Life & Work Philosophy -->
 # Mi filosofía de vida y de trabajo
