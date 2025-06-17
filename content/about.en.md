@@ -5,7 +5,7 @@ title: About me
 # menu:
 #   main:
 #     weight: 1000
-articles_description: Multimedia engineer, with passion for arts
+default_articles_profile_description: Multimedia engineer, with passion for arts
 ---
 
 <!-- Hello, my name is **Óscar**. I'm a **Multimedia Engineer** and a ***multidisciplinary* Game Developer**. I've always been interested in being a solo developer, covering all the aspects that are required during a development. Even though, I also enjoy working in a group. -->

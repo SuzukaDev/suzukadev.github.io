@@ -5,7 +5,7 @@ title: Sobre mí
 # menu:
 #   main:
 #     weight: 1000
-articles_description: Ingeniero multimedia, apasionado por el arte
+default_articles_profile_description: Ingeniero multimedia, apasionado por el arte
 ---
 
 
