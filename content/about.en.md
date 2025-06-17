@@ -2,17 +2,17 @@
 layout: page
 rss_ignore: true
 title: About me
-# menu:
-#   main:
-#     weight: 1000
 default_articles_profile_description: Multimedia engineer, with passion for arts
+menu:
+  main:
+    weight: 1000
 ---
 
 <!-- Hello, my name is **Óscar**. I'm a **Multimedia Engineer** and a ***multidisciplinary* Game Developer**. I've always been interested in being a solo developer, covering all the aspects that are required during a development. Even though, I also enjoy working in a group. -->
 
 ## Hello, my name is Óscar
 
-I’m a Multimedia Engineer and multidisciplinary Game Developer. I’ve always been interested in being a solo developer — someone who can take a project from idea to release, covering every aspect of development.
+I’m a **Multimedia Engineer** and **multidisciplinary Game Developer**. I’ve always been interested in being a solo developer — someone who can take a project from idea to release, covering every aspect of development.
 That said, I also enjoy working in teams and collaborating with others.
 
 ### Skills
@@ -68,6 +68,9 @@ If you want to learn more about why do I care, about me or my philosophy, you ca
 
 {{< featured_articles "about-me" >}}
 
+### Contact
+
+{{< get_social "email" >}}
 
 
 

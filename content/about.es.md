@@ -2,17 +2,17 @@
 layout: page
 rss_ignore: true
 title: Sobre mí
-# menu:
-#   main:
-#     weight: 1000
 default_articles_profile_description: Ingeniero multimedia, apasionado por el arte
+menu:
+  main:
+    weight: 1000
 ---
 
 
 ## Hola, me llamo Óscar
 
 
-Soy un Ingeniero Multimedia y Desarrollador De Juegos multidisciplinario. Siempre he estado interesado en ser un desarrollador en solitario, alguien que puede llevar un proyecto desde la idea hasta el lanzamiento, cubriendo todos los aspectos del desarrollo.
+Soy un **Ingeniero Multimedia** y **Desarrollador De Juegos** multidisciplinario. Siempre he estado interesado en ser un desarrollador en solitario, alguien que puede llevar un proyecto desde la idea hasta el lanzamiento, cubriendo todos los aspectos del desarrollo.
 That said, I also enjoy working in teams and collaborating with others.
 
 ### Habilidades
@@ -51,3 +51,7 @@ Si tuviera que elegir una única *virtud* sobre mí, es que me preocupo mucho po
 Si quieres saber más sobre sobre mí o mi filosofía, puedes leer este texto más largo:
 
 {{< featured_articles "about-me" >}}
+
+### Contacto
+
+{{< get_social "email" >}}

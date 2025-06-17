@@ -33,9 +33,9 @@ show_right_bar = true
 
 custom_profile_description = "Ingeniero multimedia, apasionado por el arte.<br>Y hacedor de textos largos."
 
-[menu.main]
-	weight = 1000
-	name = "Sobre mí"
+# [menu.main]
+# 	weight = 1000
+# 	name = "Sobre mí"
 
 +++
 

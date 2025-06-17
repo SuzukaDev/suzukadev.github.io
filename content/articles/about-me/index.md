@@ -31,9 +31,10 @@ show_right_bar = true
 # featured_tags = [""] # if set, it will only feature the tags in this array (useful to display only some of the tags). Note: Tags must match the tag in .Params.tags
 # related_pages = [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 custom_profile_description = "Multimedia engineer, with passion for arts. And creator of boring long texts like this one."
-[menu.main]
-	weight = 1000
-	name = "About me"
+
+# [menu.main]
+# 	weight = 1000
+# 	name = "About me"
 
 +++
 
