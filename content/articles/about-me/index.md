@@ -192,7 +192,7 @@ As a person... I think I tend to be insecure (always (absolutely always) questio
 I think I'm adding this because I personally dislike when in a portfolio someone is trying to fake or prettend to be a much better version of themselves.
 
 
-If you have got until here, thank you, I appreciate it.
+If you have got until here, thank you, **I appreciate it**.
 
 If you want to reach me, you can do it in the following mail:
 

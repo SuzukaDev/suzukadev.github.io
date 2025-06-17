@@ -248,7 +248,7 @@ Creo que estoy añadiendo esto porque personalmente no me gusta cuando en un *po
 
 
 <!-- If you have got until here, thank you, I appreciate it. -->
-Si has llegado hasta aquí, te lo agradezco.
+Si has llegado hasta aquí, **te lo agradezco**.
 
 <!-- If you want to reach me, you can do it in the following mail: -->
 Si deseas contactarme, puedes hacerlo mediante el siguiente correo:
