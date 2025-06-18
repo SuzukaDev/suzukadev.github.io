@@ -47,6 +47,8 @@
 {{ range .Ancestors }}
 <pre>Ancestor: {{ . }}</pre>
 {{ end }}
+<pre>🧾 len .Pages: {{ len .Pages }}</pre>
+<pre>🧾 len .RegularPagesRecursive: {{ len .RegularPagesRecursive }}</pre>
 <pre>.Path: {{ .Path }}</pre>
 <pre>.Kind: {{ .Kind }}</pre>
 <pre>.IsNode: {{ .IsNode }}</pre>
