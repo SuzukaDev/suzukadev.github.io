@@ -10,7 +10,7 @@ private = false # If true, the article wont be listed and will only be visible b
 # # -------- DISPLAY OPTIONS --------
 # accent_color = "#ff168a" # customize the color for links, etc in the page
 # accent_color = "#4682B4" # customize the color for links, etc in the page
-feature_image_background_color = "#4682B4" # If the featured_image has transparency, change this color for customizing the background color (default: transparent)
+# feature_image_background_color = "#4682B4" # If the featured_image has transparency, change this color for customizing the background color (default: transparent)
 # show_breadcrumbs = false
 # show_author = false
 # show_date = false
