@@ -43,6 +43,10 @@
 {{/*  {{ $currentPage := .Site.CurrentPage }}  */}}
 <pre></pre>
 <pre>.Section: {{ .Section }}</pre>
+<pre>.Parent: {{ .Parent }}</pre>
+{{ range .Ancestors }}
+<pre>Ancestor: {{ . }}</pre>
+{{ end }}
 <pre>.Path: {{ .Path }}</pre>
 <pre>.Kind: {{ .Kind }}</pre>
 <pre>.IsNode: {{ .IsNode }}</pre>
