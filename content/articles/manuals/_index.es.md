@@ -1,7 +1,10 @@
 +++
 title = 'Manuales'
 date = '2025-05-18T13:21:55+02:00'
-description = "Manuales y documentación."
+# description = "Manuales y documentación."
+description = "Manuales & Documentación de algunos [**programas, *plugins*, *addons*, etc. que he hecho**](https://orb91.gumroad.com/)."
+# description = "Manuals & Documentation for some [**software, plugins, addons, etc. I've done**](https://orb91.gumroad.com/)."
+
 lastmod = '2025-05-18T13:21:55+02:00'
 # draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
