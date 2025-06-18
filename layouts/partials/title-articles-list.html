@@ -3,8 +3,12 @@
     {{/*  REFACTOR breadcrumbs  */}}
     {{/*  {{ partial "breadcrumbs.html" . }}  */}}
     {{- /*  <h1>{{ .Title }}<sup> [{{len .Pages}}]</sup></h1>  */ -}}
-    {{$total_articles_non_private := len (where (where .Site.RegularPages "Section" .Section) "Params.Private" "ne" true ) }}
-    <h1>{{ .Title }}<sup class="total-articles"> {{$total_articles_non_private}}</sup></h1>
+
+    {{- /*  {{$total_articles_non_private := len (where (where .Site.RegularPages "Section" .Section) "Params.Private" "ne" true ) }}  */ -}}
+    {{- /*  <h1>{{ .Title }}<sup class="total-articles"> {{$total_articles_non_private}}</sup></h1>  */ -}}
+    
+    <h1>{{ .Title }}<sup class="total-articles"> {{len (where .RegularPagesRecursive "Params.Private" "ne" true)}}</sup></h1>
+
     {{ partial "next-and-previous-gallery" . }}
     {{ with .Params.Description }}
       <p>{{ . | markdownify }}</p>
