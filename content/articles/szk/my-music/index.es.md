@@ -5,7 +5,7 @@ description = ""
 lastmod = '2025-06-03T12:41:33+02:00'
 # draft = true # if true (or not set), the page will be excluded in build
 # private = true # If true, the article wont be listed and will only be visible by knowing its url
-# tags = [""]
+tags = ["szk"]
 # main_classes = 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 # # -------- DISPLAY OPTIONS --------
 # accent_color = "#ff168a" # customize the color for links, etc in the page
