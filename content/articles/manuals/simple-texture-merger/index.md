@@ -36,5 +36,72 @@ show_right_bar = true
 
 
 > This is a tool for easily compressing 4 noise textures into a single one. Very useful for shaders and such.
-# TODO 
-> In process...
+
+I always compress my textures into different channels, but doing it manually in gimp/krita/photoshop was always a bit tedious so I made this tool for quickly generate compressed textures.
+
+It offers the option to <u>compress up to **4 textures** into a **single image**</u>, one for each RGBA channel.
+
+# Installation
+
+It doesn't require installation, just unzip the `.zip` file.
+
+
+{{< box_info >}}
+You can drag and drop images from one channel to another to swap channels.
+{{< /box_info >}}
+
+# User Interface
+
+{{< box_info >}}
+You can hover the 🛈 to show a little guide
+
+{{< img_caption "stm-tutorial-i.webp" "You can hover the eye 👁️ icon on each channel to preview only that channel" >}}
+
+{{< /box_info >}}
+
+<!-- - {{< cell text="Select the image size" color="#1f7aff" >}}
+- {{< cell text="Click to save the image" color="#ea0627" >}}
+- {{< cell text="Drop/load your textures here" color="#1fff84" >}}
+- {{< cell text="⚙️" color="#ff9e1f" >}} Click to show the [options](#options) -->
+- {{< cell text="Image size" color="#1f7aff" >}} - Selects the result image's size.
+- {{< cell text="Save" color="#ea0627" >}} - Click to save the image.
+- {{< cell text="Channels" color="#1fff84" >}} - Drop/load your textures here.
+- {{< cell text="⚙️" color="#ff9e1f" >}} Click to show the [options](#options).
+
+
+
+## Visualizer
+
+On the top, there is a little visualizer that is distorted depending on the introduced textures.
+
+{{< img_caption "ezgif-stm-tutorial-visualizer.webp" "You can hover the eye 👁️ icon on each channel to preview only that channel" >}}
+
+{{< box_green >}}
+This is to get an idea the kind of distortion you will get from each texture, and for getting an idea about how it "evolves" over time (how soft/hard it is, etc).
+{{< /box_green >}}
+
+## Options
+
+{{< img_caption "stm-options-panel-2.png" "Options panel" >}}
+
+- {{< cell "1" >}} - The algorithm used for interpolating the final texture (useful if is being resized).
+- {{< cell "2" >}} - Saving options. You can choose a default folder for saving or choose for being asked every time you save.
+- {{< cell "3" >}} - Theme skins.
+
+{{< img_caption "stm-skins-grid-riot.jpg" "4 different skins" >}}
+
+# Shortcuts
+
+Shortcut | Function
+:-- | :-:
+{{< shortcut "CTRL+S" >}} | **Save** the compressed image
+{{< shortcut "F1" >}} | Show **options panel**
+
+# Contact
+
+
+Twitter: {{< get_social "twitter" >}}
+
+Mail: {{< get_social "email" >}}
+
+
