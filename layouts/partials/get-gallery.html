@@ -99,7 +99,17 @@
   {{ else }}
     {{ range where .RegularPagesRecursive "Params.private" "ne" true }}
       {{ $albumCount = add $albumCount 1 }}
-      {{ $imageCount = add $imageCount (len (.Resources.ByType "image")) }}
+      {{- /*  {{ $imageCount = add $imageCount (len (.Resources.ByType "image")) }}  */ -}}
+      
+      {{- /*  Ignore images that are inside a hidden folder in the imagesCount  */ -}}
+      {{$images_not_in_hidden_folder := slice}}
+      {{range .Resources.ByType "image"}}
+        {{if not (strings.Contains .Permalink "hidden/")}}
+          {{$images_not_in_hidden_folder = $images_not_in_hidden_folder | append . }}
+        {{end}}
+      {{end}}
+      {{ $imageCount = add $imageCount (len $images_not_in_hidden_folder) }}
+
     {{ end }}
   {{ end }}
   {{ $gallery = dict
