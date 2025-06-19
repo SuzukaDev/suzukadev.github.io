@@ -26,7 +26,7 @@ categories: ["gamedev", "art"]
 
 # APPEARANCE SETTINGS
 # accent_color = "#ff168a" # customize the color for links, etc in the page
-feature_image_background_color: "#4682B4" # If the featured_image has transparency, change this color for customizing the background color (default: transparent)
+# feature_image_background_color: "#ff912a" # If the featured_image has transparency, change this color for customizing the background color (default: transparent)
 # theme: light # Forces a theme for the gallery (possible values: dark/light). Defaults to defaultTheme from configuration.
 transparent_bg_for_gifs: true # if true, the background of the .gif's will be transparent
 transparent_bg_for_pngs: true # if true, the background of the .png's will be transparent
