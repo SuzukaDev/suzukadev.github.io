@@ -1,7 +1,7 @@
 ---
 title: 'Diseño'
 # Descripción que se muestra en la página del álbum. Se renderiza como markdown para permitir agregar enlaces y algo de formato.
-description: Diseño de iconos, _motion graphics_, _banners_, _covers_, etc.
+description: Diseño de IU, iconos, _motion graphics_, _banners_, _covers_, etc.
 date: '2025-04-27T21:16:13+02:00' # Usado para ordenar (más reciente primero)
 author: Suzuka Ka
 draft: false
