@@ -46,14 +46,12 @@ It offers the option to <u>compress up to **4 textures** into a **single image**
 It doesn't require installation, just unzip the `.zip` file.
 
 
-{{< box_info >}}
-You can drag and drop images from one channel to another to swap channels.
-{{< /box_info >}}
+
 
 # User Interface
 
 {{< box_info >}}
-You can hover the 🛈 to show a little guide
+You can hover the 🛈 to show a little guide.
 
 {{< img_caption "stm-tutorial-i.webp" "You can hover the eye 👁️ icon on each channel to preview only that channel" >}}
 
@@ -66,6 +64,9 @@ You can hover the 🛈 to show a little guide
 - {{< cell text="Image size" color="#1f7aff" >}} - Selects the result image's size.
 - {{< cell text="Save" color="#ea0627" >}} - Click to save the image.
 - {{< cell text="Channels" color="#1fff84" >}} - Drop/load your textures here.
+{{< box_info >}}
+You can drag and drop images from one channel to another to swap channels.
+{{< /box_info >}}
 - {{< cell text="⚙️" color="#ff9e1f" >}} Click to show the [options](#options).
 
 

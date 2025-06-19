@@ -36,6 +36,78 @@ show_right_bar = true
 
 
 
-# TODO 
+> Herramienta para comprimir fácilmente 4 texturas de ruido en una sola. Muy útil para shaders y vfx.
 
-> En proceso...
+Siempre comprimo mis texturas en diferentes canales, pero hacerlo manualmente en *gimp/krita/photoshop* siempre es un poco tedioso, así que hice esta herramienta para generar texturas comprimidas más rápidamente.
+
+<!-- It offers the option to <u>compress up to **4 textures** into a **single image**</u>, one for each RGBA channel. -->
+Ofrece la opción de <u>comprimir hasta **4 texturas** en una **sola imagen**</u>, (una para cada canal RGBA).
+
+
+
+# Instalación
+
+
+No requiere instalación, solo descomprime el archivo.`.zip`
+
+
+
+# User Interface
+
+{{< box_info >}}
+Puedes pasar el cursor sobre el 🛈 para mostrar una pequeña guía.
+
+{{< img_caption "stm-tutorial-i.webp" "Puedes pasar el cursor sobre el ícono del ojo 👁️ en cada canal para previsualizarlo." >}}
+{{< /box_info >}}
+
+<!-- - {{< cell text="Select the image size" color="#1f7aff" >}}
+- {{< cell text="Click to save the image" color="#ea0627" >}}
+- {{< cell text="Drop/load your textures here" color="#1fff84" >}}
+- {{< cell text="⚙️" color="#ff9e1f" >}} Click to show the [options](#options) -->
+
+- {{< cell text="Image size" color="#1f7aff" >}} - Selecciona el tamaño de la imagen final.
+- {{< cell text="Save" color="#ea0627" >}} - Pulsa para guardar la imagen.
+- {{< cell text="Channels" color="#1fff84" >}} - Arrastra/carga tus texturas aquí.
+{{< box_info >}}
+Puedes arrastrar y soltar imágenes de un canal a otro para intercambiar los canales.
+{{< /box_info >}}
+- {{< cell text="⚙️" color="#ff9e1f" >}} Pulsa para ver las [opciones](#opciones).
+
+
+
+## Visualizador
+
+
+En la parte superior, hay un pequeño visualizador que se distorsiona según las texturas introducidas.
+
+{{< img_caption "ezgif-stm-tutorial-visualizer.webp" "Puedes pasar el cursor sobre el icono del ojo 👁️ en cada canal para previsualizar solo ese canal." >}}
+
+{{< box_green >}}
+Esto es para tener una idea del tipo de distorsión que obtendrás con cada textura, y para tener una idea de cómo "evoluciona" a lo largo del tiempo (útil para ver qué tan suave/dura es, etc).
+{{< /box_green >}}
+
+## Opciones
+
+{{< img_caption "stm-options-panel-2.png" "Panel de opciones" >}}
+
+- {{< cell "1" >}} - El algoritmo utilizado para interpolar la textura final (útil si se va a redimensionar).
+- {{< cell "2" >}} - Opciones de guardado. Puedes elegir una carpeta predeterminada para guardar o elegir que te pregunten cada vez que guardes.
+- {{< cell "3" >}} - *Skins*/temas de la interfaz
+
+{{< img_caption "stm-skins-grid-riot.jpg" "4 temas distintos" >}}
+
+# Atajos de teclado
+
+Atajo | Función
+:-- | :-:
+{{< shortcut "CTRL+S" >}} | **Guarda** la imagen comprimida
+{{< shortcut "F1" >}} | Muestra el **panel de opciones**
+
+# Contacto
+
+
+Twitter: {{< get_social "twitter" >}}
+
+Mail: {{< get_social "email" >}}
+
+
