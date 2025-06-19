@@ -1,5 +1,5 @@
 ---
-title: 'My Work'
+title: 'A mix of my work'
 # Description shown on the album page. Rendered as markdown to enable adding links and some formatting.
 description: "A **selection** of some of my work."
 date: '2025-06-02T19:44:42+02:00' # Used for sorting (newest first)
