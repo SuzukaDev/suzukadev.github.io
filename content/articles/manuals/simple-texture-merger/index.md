@@ -35,9 +35,17 @@ show_right_bar = true
 +++
 
 
-> This is a tool for easily compressing 4 noise textures into a single one. Very useful for shaders and such.
+> This is a tool for easily compressing 4 textures into a single one. Very useful for shaders and such.
 
-I always compress my textures into different channels, but doing it manually in gimp/krita/photoshop was always a bit tedious so I made this tool for quickly generate compressed textures.
+{{< link_card title="Simple Texture Merger" 
+subtitle="Software for compressing 4 textures into one!" 
+url="https://orb91.gumroad.com/l/simple-texture-merger" 
+cover="stm-gumroad-cover.png" 
+c=#DE6766 
+url_text="www.orb91.gumroad.com" 
+position="50% 30%" >}}
+
+I always compress my textures into different channels, but doing it manually in gimp/krita/photoshop was always a bit tedious (not to mention that they can only compress 3 textures (RGB), not 4) so I made this tool for quickly generate compressed textures and to use all 4 RGBA channels.
 
 It offers the option to <u>compress up to **4 textures** into a **single image**</u>, one for each RGBA channel.
 
@@ -106,3 +114,10 @@ Twitter: {{< get_social "twitter" >}}
 Mail: {{< get_social "email" >}}
 
 
+{{< link_card title="Simple Texture Merger" 
+subtitle="Software for compressing 4 textures into one!" 
+url="https://orb91.gumroad.com/l/simple-texture-merger" 
+cover="stm-gumroad-cover.png" 
+c=#DE6766 
+url_text="www.orb91.gumroad.com" 
+position="50% 30%" >}}

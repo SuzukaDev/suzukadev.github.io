@@ -36,9 +36,17 @@ show_right_bar = true
 
 
 
-> Herramienta para comprimir fácilmente 4 texturas de ruido en una sola. Muy útil para shaders y vfx.
+> Herramienta para comprimir fácilmente 4 texturas en una sola. Muy útil para shaders y vfx.
 
-Siempre comprimo mis texturas en diferentes canales, pero hacerlo manualmente en *gimp/krita/photoshop* siempre es un poco tedioso, así que hice esta herramienta para generar texturas comprimidas más rápidamente.
+{{< link_card title="Simple Texture Merger" 
+subtitle="Programa para comprimir 4 texturas en 1!" 
+url="https://orb91.gumroad.com/l/simple-texture-merger" 
+cover="stm-gumroad-cover.png" 
+c=#DE6766 
+url_text="www.orb91.gumroad.com" 
+position="50% 30%" >}}
+
+Siempre comprimo mis texturas en diferentes canales, pero hacerlo manualmente en *gimp/krita/photoshop* siempre es un poco tedioso (por no mencionar que solo puedes comprimir 3 texturas (RGB), y no 4), así que hice esta herramienta para generar texturas comprimidas más rápidamente y que usara los 4 canales RGBA.
 
 <!-- It offers the option to <u>compress up to **4 textures** into a **single image**</u>, one for each RGBA channel. -->
 Ofrece la opción de <u>comprimir hasta **4 texturas** en una **sola imagen**</u>, (una para cada canal RGBA).
@@ -111,3 +119,10 @@ Twitter: {{< get_social "twitter" >}}
 Mail: {{< get_social "email" >}}
 
 
+{{< link_card title="Simple Texture Merger" 
+subtitle="Programa para comprimir 4 texturas en 1!" 
+url="https://orb91.gumroad.com/l/simple-texture-merger" 
+cover="stm-gumroad-cover.png" 
+c=#DE6766 
+url_text="www.orb91.gumroad.com" 
+position="50% 30%" >}}
