@@ -40,7 +40,8 @@ Usage:
 {{- $url_link := partial "utils/get-link.html" (dict "context" . "url" $url) -}}
 
 {{- $cover_link := $cover -}}
-{{- $cover_resource := .Page.Resources.Get $cover -}}
+{{- $cover_resource := or (.Page.Resources.Get $cover) (resources.Get $cover) (.Page.Resources.GetMatch (printf "**%s**" $cover )) -}}
+
 {{- if $cover_resource -}}
   {{- $cover_link = $cover_resource.RelPermalink -}}
   {{- if not $background_color -}}
