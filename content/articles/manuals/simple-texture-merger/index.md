@@ -122,3 +122,7 @@ cover="stm-gumroad-cover.png"
 c=#DE6766 
 url_text="www.orb91.gumroad.com" 
 position="50% 30%" >}}
+
+
+<!-- Supported image formats:
+.bmp, .hdr, .jpeg, .jpg, .png, .tga, .webp -->
