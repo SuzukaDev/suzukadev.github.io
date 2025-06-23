@@ -39,10 +39,10 @@ show_right_bar = true
 > Herramienta para comprimir fácilmente 4 texturas en una sola. Muy útil para shaders y vfx.
 
 {{< link_card title="Simple Texture Merger" 
-subtitle="Programa para comprimir 4 texturas en 1!" 
+subtitle="¡Programa para comprimir 4 texturas en 1!" 
 url="https://orb91.gumroad.com/l/simple-texture-merger" 
-cover="stm-gumroad-cover.png" 
-c=#DE6766 
+cover="simple-texture-merger-icon.png" 
+c=#191820 
 url_text="www.orb91.gumroad.com" 
 position="50% 30%" >}}
 
@@ -121,10 +121,10 @@ Mail: {{< get_social "email" >}}
 
 
 {{< link_card title="Simple Texture Merger" 
-subtitle="Programa para comprimir 4 texturas en 1!" 
+subtitle="¡Programa para comprimir 4 texturas en 1!" 
 url="https://orb91.gumroad.com/l/simple-texture-merger" 
-cover="stm-gumroad-cover.png" 
-c=#DE6766 
+cover="simple-texture-merger-icon.png" 
+c=#191820 
 url_text="www.orb91.gumroad.com" 
 position="50% 30%" >}}
 

@@ -40,8 +40,8 @@ show_right_bar = true
 {{< link_card title="Simple Texture Merger" 
 subtitle="Software for compressing 4 textures into one!" 
 url="https://orb91.gumroad.com/l/simple-texture-merger" 
-cover="stm-gumroad-cover.png" 
-c=#DE6766 
+cover="simple-texture-merger-icon.png" 
+c=#191820 
 url_text="www.orb91.gumroad.com" 
 position="50% 30%" >}}
 
@@ -118,8 +118,8 @@ Mail: {{< get_social "email" >}}
 {{< link_card title="Simple Texture Merger" 
 subtitle="Software for compressing 4 textures into one!" 
 url="https://orb91.gumroad.com/l/simple-texture-merger" 
-cover="stm-gumroad-cover.png" 
-c=#DE6766 
+cover="simple-texture-merger-icon.png" 
+c=#191820 
 url_text="www.orb91.gumroad.com" 
 position="50% 30%" >}}
 
