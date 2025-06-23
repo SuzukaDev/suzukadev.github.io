@@ -102,7 +102,8 @@ Esto es para tener una idea del tipo de distorsión que obtendrás con cada text
 - {{< cell "2" >}} - Opciones de guardado. Puedes elegir una carpeta predeterminada para guardar o elegir que te pregunten cada vez que guardes.
 - {{< cell "3" >}} - *Skins*/temas de la interfaz
 
-{{< img_caption "stm-skins-grid-riot.jpg" "4 temas distintos" >}}
+<!-- {{< img_caption "stm-skins-grid-riot.jpg" "4 temas distintos" >}} -->
+{{< img_caption "stm-skins-blue.webp" "4 temas distintos" >}}
 
 # Atajos de teclado
 

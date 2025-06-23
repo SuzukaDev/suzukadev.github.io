@@ -97,7 +97,8 @@ This is to get an idea the kind of distortion you will get from each texture, an
 - {{< cell "2" >}} - Saving options. You can choose a default folder for saving or choose for being asked every time you save.
 - {{< cell "3" >}} - Theme skins.
 
-{{< img_caption "stm-skins-grid-riot.jpg" "4 different skins" >}}
+<!-- {{< img_caption "stm-skins-grid-riot.jpg" "4 different skins" >}} -->
+{{< img_caption "stm-skins-blue.webp" "4 different skins" >}}
 
 # Shortcuts
 
