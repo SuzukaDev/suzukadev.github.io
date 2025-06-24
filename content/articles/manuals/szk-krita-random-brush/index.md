@@ -48,7 +48,7 @@ At the end is some kind of way to *embrace serendipity* and to help you to "disc
 
 # Installation
 
-1. [Download](#download) the `.zip`.
+1. [Download](#download-) the `.zip`.
 2. In *Krita*, go to ***Tools ‣ Scripts ‣ Import Python Plugin…***, find the `.zip` file and press OK.
 3. Restart *Krita*.
 4. Check if the plugin is activated:
