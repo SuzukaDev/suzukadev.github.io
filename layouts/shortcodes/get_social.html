@@ -1,5 +1,12 @@
 {{- /*  
 Returns a link for a social defined in social_sites.json
+Note: Allows custom URL's and text.
+
+Arguments:
+0/social - (string) the social site
+1/icon - (bool) if false, it doesn't show the icon. Default: true
+2/url - (string) Custom url. Default: Url set in the social_sites.json for the selected social
+3/text - (string) Custom text. Default: Nick set in the social_sites.json for the selected social
 
 Use:
 {{< get_social_url [social_sites KEY] [optional return icon (true/false) DEFAULT TRUE]>}}
@@ -10,7 +17,7 @@ Example:
 {{< get_social_url twitter false >}} -> do NOT returns the icon/logo
   */ -}}
 
-{{- $social_platform := .Get 0 | lower -}}
+{{- $social_platform := (or (.Get 0) (.Get "social")) | lower -}}
 
 {{- $socials := .Site.Data.social_sites -}}
 {{- $data := index $socials $social_platform -}}
@@ -23,7 +30,18 @@ Example:
 
 {{- /*  {{- $show_icon := and (.Get 1) (eq (.Get 1) true)}}  */ -}}
 {{- /*  If (.Get 1) is empty or undefined, "true" will be used as the default.  */ -}}
-{{- $show_icon := .Get 1 | default true}}
+{{- $show_icon := (or (.Get 1) (.Get "icon")) | default true -}}
+{{- /*  {{- if ne $show_icon false -}}
+{{- $show_icon = true -}}
+{{- end -}}
+<pre>$show_icon {{$show_icon}}</pre>  */ -}}
+
+{{- $url := or (.Get 2) (.Get "url") }}
+{{- $url_text := or (.Get 3) (.Get "text") | default $data.nick }}
+
+{{- if not $url -}}
+	{{- $url = $data.url -}}
+{{- end -}}
 
 {{- if $show_icon -}}
 
@@ -37,26 +55,26 @@ Example:
 	{{- end -}}
 
 	{{- /*  <p>CONFIG: {{$svg_config}}</p>  */ -}}
-	{{- /*  <a href="{{$data.url}}">{{$data.nick}}</a>  */ -}}
+	{{- /*  <a href="{{$data.url}}">{{$url_text}}</a>  */ -}}
 	{{- if $data.svg_content -}}
-		{{- /*  <a href="{{$data.url}}"><svg style="display: inline-block; width: 24px; height: 24px;" fill="currentColor" viewBox="{{$data.viewBox}}">{{$data.svg_content}}</svg>{{$data.nick}}</a>  */ -}}
-		{{- /*  <a href="{{$data.url}}"><svg {{$svg_css_style | safeCSS}}>{{$data.svg_content}}</svg>{{$data.nick}}</a>  */ -}}
-		<a href="{{- $data.url -}}" class={{- $a_class -}}>
-			<svg {{$svg_css_style -}} {{- $svg_config -}}>{{$data.svg_content | safeHTML -}}</svg> {{- $data.nick -}}
+		{{- /*  <a href="{{$data.url}}"><svg style="display: inline-block; width: 24px; height: 24px;" fill="currentColor" viewBox="{{$data.viewBox}}">{{$data.svg_content}}</svg>{{$url_text}}</a>  */ -}}
+		{{- /*  <a href="{{$data.url}}"><svg {{$svg_css_style | safeCSS}}>{{$data.svg_content}}</svg>{{$url_text}}</a>  */ -}}
+		<a href="{{- $url -}}" class={{- $a_class -}}>
+			<svg {{$svg_css_style -}} {{- $svg_config -}}>{{$data.svg_content | safeHTML -}}</svg> {{- $url_text -}}
 		</a>
 	{{- else -}}
-		<a href="{{$data.url}}" class="{{$a_class}}">
+		<a href="{{$url}}" class="{{$a_class}}">
 		{{- /*  <svg style="display: inline-block; width: 24px; height: 24px;" fill="currentColor" viewBox="{{$data.viewBox}}">  */ -}}
 		{{- /*  <svg {{- $svg_css_style | safeCSS -}}>  */ -}}
 		<svg {{$svg_css_style}} {{$svg_config}}>
 		{{- range $data.svg_paths -}}
 			<path fill-rule="evenodd" d="{{- . -}}" clip-rule="evenodd"></path>
 		{{- end -}}
-		</svg> {{- $data.nick -}}</a>
+		</svg> {{- $url_text -}}</a>
 	{{- end -}}
 
 {{- else -}}
 	{{- /*  Do not show icon  */ -}}
-	<a href="{{- $data.url -}}" class="{{- $a_class -}}">{{- $data.nick -}}</a>
+	<a href="{{- $url -}}" class="{{- $a_class -}}">{{- $url_text -}}</a>
 {{- end -}}
 
