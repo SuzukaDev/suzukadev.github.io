@@ -12,7 +12,7 @@ tags = ["krita","drawing"]
 # accent_color = "#ff168a" # customize the color for links, etc in the page
 feature_image_background_color = "#222" # If the featured_image has transparency, change this color for customizing the background color (default: transparent)
 # show_breadcrumbs = false
-# show_description = false
+show_description = false
 # show_author = false
 # show_date = false
 # show_reading_time = false
@@ -34,9 +34,10 @@ show_right_bar = true
 # related_pages = [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 +++
 
-> This Krita plugin adds an action for selecting a random brush presset.
+> This Krita plugin that adds an action for selecting a random brush presset.
 
-I personally find this very useful and use it all the time when I'm making thumbnails. I like to \**roll the dice*\* a few times until I got 1 or 2 random brushes that inspires me/generates contrast between them. 
+<!-- I personally find this very useful and use it all the time when I'm **making thumbnail**s. I like to \**{{< text_handwritten "roll" >}} the dice*\* a few times until I got 1 or 2 random brushes that inspires me/generates contrast between them.  -->
+I personally find this very useful and use it all the time when I'm **making thumbnail**s. I like to \**roll the dice*\* a few times until I got 1 or 2 random brushes that inspires me/generates contrast between them. 
 
 <!-- TODO imagen thumbnails -->
 <!-- {{< img_caption "feature-super-selection.png" >}} -->
@@ -44,30 +45,42 @@ I personally find this very useful and use it all the time when I'm making thumb
 
 At the end is some kind of way to *embrace serendipity* and to help you to "discover"/choose brushes you are not used to, or have forget about, and to achieve new results.
 
-# Download
-
-{{< download_file file="a.png" type="krita" >}}
 
 # Installation
 
-1. Download the `.zip`.
-2. In Krita, go to ***Tools ‣ Scripts ‣ Import Python Plugin…***, find the `.zip` file and press OK.
-3. Restart Krita.
-<!-- TODO cambiar nombre  (está bien?)-->
-<!-- TODO  -->
-4. Go to ***Settings ➡ Dockers ➡ SZK Random Brush***
+1. [Download](#download) the `.zip`.
+2. In *Krita*, go to ***Tools ‣ Scripts ‣ Import Python Plugin…***, find the `.zip` file and press OK.
+3. Restart *Krita*.
+4. Check if the plugin is activated:
+	- Go to `Settings -> Configure Krita -> Python Plugin Manager`, look for `SZK Random Brush` and enable it if is not already enabled.
 
-A new **docker** with the plugin will appear:
+
+Now you can assign a shortcut (recommended) or find it in `Tools -> Scripts -> SZK Random Brush`.
 
 <!-- {{< img_caption img="images/docker-combined.png" caption="Different tabs of the docker" class="no-box-shadow" >}} -->
 
+# Download 💾
+
+{{< download_file file="szk_random_brush.zip" type="krita" text="Download Plugin" >}}
 
 
+# Support 🍀
 
+If you wish to support the plugin, you can do it via {{< get_social social=gumroad icon=false text="Gumroad" >}}:
+
+
+{{< link_card title="SZK Random Brush (Krita)" 
+subtitle="Krita plugin for choosing a random brush." 
+url="https://orb91.gumroad.com/l/szk-krita-random-brush" 
+cover="fav-selection.png" 
+c= "#353b58"
+url_text="www.orb91.gumroad.com" 
+position="50% 80%" >}}
 
 # Contact
-
 
 Email: {{<get_social "email" >}}
 
 Twitter: {{<get_social twitter true >}}
+
+<!-- {{<get_social github true "https://github.com/SuzukaDev/szk-krita-random-brush/" "Github Respository" >}} -->
