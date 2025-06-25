@@ -800,7 +800,7 @@ Herramienta para rellenar áreas cerradas.
 {{< img_caption "k-sprite-fill-tool-example.png" "¡Algunas formas llenas con el cubo de relleno y la opción de *dither*!" >}}
 
 
-{{< details summary="⚠️ Advertencia sobre el <u>cubo de relleno</u> tool" color="rgba(228, 171, 17, 0.79)" >}}
+{{< details summary="⚠️ Advertencia sobre la herramienta de <u>cubo de relleno</u>" color="rgba(228, 171, 17, 0.79)" >}}
 {{< box_warning >}}
 El cubo de relleno utiliza un <u>algoritmo recursivo</u> ([El algoritmo *flood fill*](https://en.wikipedia.org/wiki/Flood_fill)), y **Krita tiene limitadas el número total de llamadas recursivas que un script puede ejecutar**, y dicho límite no se puede cambiar.
 
