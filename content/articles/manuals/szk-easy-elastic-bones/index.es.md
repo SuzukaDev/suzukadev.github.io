@@ -23,7 +23,7 @@ featured_image = 'images/v2_well.webp' # local path for the image used as the co
 # NOTE Since this is a leaf bundle (page in its own folder), placing an image in the same folder with the name 'cover' (no matter its extension) will be used as the cover AUTOMATICALLY. BUT if 'featured_image' is set, it will use that (this is also useful for having different covers for each language, if that is needed).
 # # ------- FEATURE OPTIONS --------
 # featured = true # if true, the article will be featured in the index page.
-# featured_title = 'Szk Easy Elastic Bones' # if set, it will use this as the title in the featured card. If not, it will use the article's title.
+# featured_title = 'SZK Easy Elastic Bones' # if set, it will use this as the title in the featured card. If not, it will use the article's title.
 # featured_description = "" # if set, the article will use this description in the featured card. If not, it will use the article's description.
 # featured_tags = [""] # if set, it will only feature the tags in this array (useful to display only some of the tags). Note: Tags must match the tag in .Params.tags
 
