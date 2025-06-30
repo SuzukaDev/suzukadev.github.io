@@ -59,9 +59,9 @@ Now you can assign a shortcut (recommended) or find it in `Tools -> Scripts -> S
 
 <!-- {{< img_caption img="images/docker-combined.png" caption="Different tabs of the docker" class="no-box-shadow" >}} -->
 
-# Download 💾
+<!-- # Download 💾 -->
 
-{{< download_file file="szk_random_brush.zip" type="krita" text="Download Plugin" >}}
+<!-- {{< download_file file="szk_random_brush.zip" type="krita" text="Download Plugin" >}} -->
 
 
 # Support 🍀
