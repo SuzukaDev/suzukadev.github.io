@@ -33,3 +33,15 @@ show_right_bar = true
 # featured_tags = [""] # if set, it will only feature the tags in this array (useful to display only some of the tags). Note: Tags must match the tag in .Params.tags
 # related_pages = [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 +++
+
+
+# Instalación
+
+1. Descarga el `.zip`.
+2. En Krita, ve a ***Herramientas (Tools) ‣ Guiones (Scripts) ‣ Importar complemento de Python desde archivo***, selecciona el archivo `.zip` y presiona `OK`.
+3. Reinicia Krita.
+4. Ve a ***Preferenciasl ➡ Paneles ➡ SZK Thumbnailer***
+
+Aparecerá un nuevo ***panel*** con el *plugin*:
+
+<!-- {{< img_caption img="images/docker-combined.png" caption="Las distintas pestañas del panel del plugin" class="no-box-shadow" >}} -->

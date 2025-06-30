@@ -7,7 +7,7 @@ lastmod = '2025-06-27T22:36:18+02:00'
 private = false # If true, the article wont be listed and will only be visible by knowing its url
 # keywords = [""] # custom keywords for the page
 tags = ["krita","art","concept art"]
-# main_classes = 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
+main_classes = 'sans-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 # # -------- DISPLAY OPTIONS --------
 # accent_color = "#ff168a" # customize the color for links, etc in the page
 # feature_image_background_color = "#ff168a" # If the featured_image has transparency, change this color for customizing the background color (default: transparent)
@@ -34,7 +34,100 @@ show_right_bar = true
 # related_pages = [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 +++
 
-> Thumbnailer: Fast Thumbnail Painting Assistant for Krita
+<!-- > Thumbnailer: Fast Thumbnail Painting Assistant for Krita -->
 
+{{< link_card title="SZK Thumbnailer (Krita)" 
+subtitle="Fast Thumbnail Painting Assistant for Krita" 
+url="https://orb91.gumroad.com/l/szk-krita-thumbnailer" 
+cover="FEATURE-cover-from-header-v2.png" 
+c="rgb(52, 53, 58)"
+url_text="www.orb91.gumroad.com" 
+position="50% 50%" >}}
+
+> Thumbnailer is a Krita plugin designed to streamline and accelerate thumbnail creation for coming up with new ideas.
+
+
+
+It automatically divides the canvas into multiple thumbnail areas and cycles through selections manually or automatically (at user-defined intervals), allowing for rapid, uninterrupted sketching and ideation.
+
+{{< img_caption "header-full.png" >}}
 
 This is heavily inspired by the French Concept Artist & Illustrator Stephane Richard (Wootha).
+
+
+# Installation
+
+1. Download the `.zip`.
+2. In Krita, go to ***Tools ‣ Scripts ‣ Import Python Plugin…***, find the `.zip` file and press OK.
+3. Restart Krita.
+4. Go to ***Settings ➡ Dockers ➡ SZK Thumbnailer***
+
+A new **docker** with the plugin will appear.
+
+
+
+# Usage
+{{< img_caption "tab1" >}}
+
+{{< cell "1" >}} <u>**Select Previous/Next:**</u> Selects the previous/next thumbnail.
+
+{{< cell "2" >}} <u>**Pick a random brush:**</u> Selects a random brush preset. Useful for coming up with new textures, shapes, etc.
+
+{{< img_caption "thumbnails-favs.png" >}}
+
+{{< cell "3" >}} <u>**Play/Pause and Stop buttons:**</u> Starts/pauses the timer defined in [options](#options). Pressing stop finishes the thumbnailing session.
+
+
+# Options
+
+{{< img_caption "tab2" >}}
+
+{{< cell "1" >}} **Options**:
+- <u>**Time**</u>: Seconds for each thumbnail
+- <u>**Subdivisions**</u>: Times the canvas is split (vertically and horizontally) for each thumbnail.
+- <u>**Padding**</u>: Margin/separation for each thumbnail.
+- <u>**Use a new layer for each thumbnail**</u>: If true, it will create a new layer for every thumbnail. Useful if you want to keep each drawing in a separate layer.
+- <u>**Show progress bar**</u>: Shows a bar below that shows the time remaining for the current thumbnail.
+
+{{< cell "2" >}} <u>**Manual and Gumroad links**</u>
+
+{{< cell "3" >}} <u>**Info Label**</u>: Display the total thumbnails and the total time it will take according your settings. Useful for managing drawing sesions.
+
+
+# Shortcuts
+
+Available shortcuts:
+
+Function | Shortcut
+:--|:-:
+Select Previous Thumbnail | (*Not assigned*)
+Select Next Thumbnail | (*Not assigned*)
+Select Random Brush | (*Not assigned*)
+
+
+# Download 💾
+
+{{< download_file file="download/1.0.0/szk_thumbnailer.zip" type="krita" text="Download Plugin" >}}
+
+
+# Support 🍀
+
+If you wish to support the plugin, you can do it via {{< get_social social=gumroad icon=false text="Gumroad" >}}:
+
+
+
+
+# Contact
+
+Email: {{<get_social "email" >}}
+
+Twitter: {{<get_social twitter true >}}
+
+
+{{< link_card title="SZK Thumbnailer (Krita)" 
+subtitle="Fast Thumbnail Painting Assistant for Krita" 
+url="https://orb91.gumroad.com/l/szk-krita-thumbnailer" 
+cover="FEATURE-cover-from-header-v2.png" 
+c="rgb(52, 53, 58)"
+url_text="www.orb91.gumroad.com" 
+position="50% 50%" >}}
