@@ -97,6 +97,14 @@ Aparecerá un nuevo ***panel*** con el *plugin*.
 - <u>**Subdivisiones**</u>: Número total de divisiones en el que se divide el lienzo.
 - <u>***Padding***</u>: Margen de separación para cada *thumbnail*.
 - <u>**Use a new layer for each thumbnail**</u>: Si está seleccionado, se creará una nueva capa para cada miniatura.
+- <u>**Randomize Brush**</u>: Si está activa, al acabar cada *thumbnail* se seleccionará un pincel aleatorio.
+{{< box_info >}}
+Esto viene bien para ayudar a lograr un resultado diferente (textura, formas, etc.) en la próxima miniatura y experimentar.
+{{< /box_info >}}
+	- <u>**Dos veces (Twice)**</u>: Si está seleccionada, el pincel se *randomizará* 2 veces.
+{{< box_info >}}
+Esto es útil para tener **2 presets diferentes para cada miniatura** (y alterarlas con el atajo *'Switch to Previous Preset'*).
+{{< /box_info >}}
 - <u>**Show progress bar**</u>: Muestra una barra con el tiempo que queda para acabar la miniatura actual.
 
 {{< cell "2" >}} <u>**Links al Manual y a la página de Gumroad**</u>

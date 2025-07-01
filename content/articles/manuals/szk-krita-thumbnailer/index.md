@@ -67,7 +67,7 @@ A new **docker** with the plugin will appear.
 
 
 # Usage
-{{< img_caption "tab1" >}}
+{{< img_caption "tab1.png" >}}
 
 {{< cell "1" >}} <u>**Select Previous/Next:**</u> Selects the previous/next thumbnail.
 
@@ -80,13 +80,21 @@ A new **docker** with the plugin will appear.
 
 # Options
 
-{{< img_caption "tab2" >}}
+{{< img_caption "tab2-steps.png" >}}
 
 {{< cell "1" >}} **Options**:
 - <u>**Time**</u>: Seconds for each thumbnail
 - <u>**Subdivisions**</u>: Times the canvas is split (vertically and horizontally) for each thumbnail.
 - <u>**Padding**</u>: Margin/separation for each thumbnail.
 - <u>**Use a new layer for each thumbnail**</u>: If true, it will create a new layer for every thumbnail. Useful if you want to keep each drawing in a separate layer.
+- <u>**Randomize Brush**</u>: If checked, when a thumbnail's time has finished, it will randomize the active brush presset.
+{{< box_info >}}
+This is for helping achieving a different result/"brushwork" (texture, shapes, etc) for the next thumbnail and experiment
+{{< /box_info >}}
+	- <u>**Twice**</u>: If checked, the brush will be randomized twice.
+{{< box_info >}}
+This is useful for having **2 different presets for each thumbnai**l (and alter them with *'Switch to Previous Preset'* shortcut).
+{{< /box_info >}}
 - <u>**Show progress bar**</u>: Shows a bar below that shows the time remaining for the current thumbnail.
 
 {{< cell "2" >}} <u>**Manual and Gumroad links**</u>
