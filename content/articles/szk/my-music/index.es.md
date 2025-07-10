@@ -1,5 +1,5 @@
 +++
-title = 'My Music'
+title = 'Mi Música'
 date = '2025-06-03T12:41:33+02:00'
 description = ""
 lastmod = '2025-06-03T12:41:33+02:00'
