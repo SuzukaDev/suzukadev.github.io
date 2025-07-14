@@ -80,12 +80,18 @@ A new **docker** with the plugin will appear.
 
 # Options
 
-{{< img_caption "tab2-steps.png" >}}
+{{< img_caption "tab2.png" >}}
 
-{{< cell "1" >}} **Options**:
+{{< cell "1" >}} **Presets**: Select, save and delete presets.
+
+{{< cell "2" >}} **Layout**: Choose the layout algorithm (Uniform Grid, Custom Grid, Random Grid).
+
+{{< cell "3" >}} **Layout settings**: Custom settings for the selected layout algorithm.
+
+{{< cell "4" >}} **Options**:
 - <u>**Time**</u>: Seconds for each thumbnail
-- <u>**Subdivisions**</u>: Times the canvas is split (vertically and horizontally) for each thumbnail.
-- <u>**Padding**</u>: Margin/separation for each thumbnail.
+<!-- - <u>**Subdivisions**</u>: Times the canvas is split (vertically and horizontally) for each thumbnail. -->
+- <u>**Padding**</u>: Margin/separation for each thumbnail. The distance/pixels are calculated using a ‰ of the shortest side of the canvas.
 - <u>**Use a new layer for each thumbnail**</u>: If true, it will create a new layer for every thumbnail. Useful if you want to keep each drawing in a separate layer.
 - <u>**Randomize Brush**</u>: If checked, when a thumbnail's time has finished, it will randomize the active brush presset.
 {{< box_info >}}
@@ -97,9 +103,13 @@ This is useful for having **2 different presets for each thumbnai**l (and alter 
 {{< /box_info >}}
 - <u>**Show progress bar**</u>: Shows a bar below that shows the time remaining for the current thumbnail.
 
-{{< cell "2" >}} <u>**Manual and Gumroad links**</u>
+{{< img_caption "tab3.png" >}}
 
-{{< cell "3" >}} <u>**Info Label**</u>: Display the total thumbnails and the total time it will take according your settings. Useful for managing drawing sesions.
+{{< cell "1" >}} <u>**Link for the online manual**</u>
+
+{{< cell "2" >}} <u>**Gumroad page**</u>
+
+- <u>**Info Label**</u>: Displays the total thumbnails and the total time it will take according your settings. Useful for managing drawing sesions.
 
 
 # Shortcuts
@@ -113,9 +123,17 @@ Select Next Thumbnail | (*Not assigned*)
 Select Random Brush | (*Not assigned*)
 
 
-# Download 💾
+<!-- # Download 💾
 
-{{< download_file file="download/1.0.0/szk_thumbnailer.zip" type="krita" text="Download Plugin" >}}
+{{< download_file file="download/1.0.0/szk_thumbnailer.zip" type="krita" text="Download Plugin" >}} -->
+
+# Changelog
+
+Version | Changes
+:-- | :--
+2.0.0 | - Added different layout algorithms (Custom Grid, Random) <br> - Optimizations when changing the thumbnail <br> - Padding/margin relative to the document's size (for achieving similar margins between different canvas' sizes) <br> - Added option for saving/loading presets.
+1.1.0 | - Adde different options for randomizing the brushes. <br> - Added tooltips to the UI.
+1.0.0 | *Release*
 
 
 # Support 🍀

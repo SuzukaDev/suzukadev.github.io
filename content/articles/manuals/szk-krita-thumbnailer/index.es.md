@@ -92,10 +92,17 @@ Aparecerá un nuevo ***panel*** con el *plugin*.
 
 {{< img_caption "tab2" >}}
 
-{{< cell "1" >}} **Opciones**:
+{{< cell "1" >}} **Presets**: Carga, graba y borra presets.
+
+{{< cell "2" >}} ***Layout***: Selecciona el algoritmo usado a la hora de crear los thumbnails (Uniform Grid, Custom Grid, Random Grid).
+
+{{< cell "3" >}} **Opciones del *Layout***: Opciones específicas del *layout* seleccionado.
+
+{{< cell "4" >}} **Opciones**
+
 - <u>**Tiempo**</u>: Tiempo de duración para cada *thumbnail*.
 - <u>**Subdivisiones**</u>: Número total de divisiones en el que se divide el lienzo.
-- <u>***Padding***</u>: Margen de separación para cada *thumbnail*.
+- <u>***Padding***</u>: Margen de separación para cada *thumbnail*. Usa un ‰ del lado más pequeño del documento, para obtener márgenes similares entre distintos tamaños del documento.
 - <u>**Use a new layer for each thumbnail**</u>: Si está seleccionado, se creará una nueva capa para cada miniatura.
 - <u>**Randomize Brush**</u>: Si está activa, al acabar cada *thumbnail* se seleccionará un pincel aleatorio.
 {{< box_info >}}
@@ -107,9 +114,13 @@ Esto es útil para tener **2 presets diferentes para cada miniatura** (y alterar
 {{< /box_info >}}
 - <u>**Show progress bar**</u>: Muestra una barra con el tiempo que queda para acabar la miniatura actual.
 
-{{< cell "2" >}} <u>**Links al Manual y a la página de Gumroad**</u>
+{{< img_caption "tab3.png" >}}
 
-{{< cell "3" >}} <u>**Texto con información**</u>: Muestra el total de miniaturas y el tiempo total.
+{{< cell "1" >}} <u>**Abre el Manual Online**</u>
+
+{{< cell "2" >}} <u>**Abre la página de Gumroad**</u>
+
+- <u>**Texto con información**</u>: Muestra el total de miniaturas y el tiempo total.
 
 
 # Atajos de teclado
@@ -126,6 +137,14 @@ Select Random Brush | (*Sin asignar*)
 <!-- # Descarga 💾
 
 {{< download_file file="download/1.0.0/szk_thumbnailer.zip" type="krita" text="Download Plugin" >}} -->
+
+# Changelog
+
+Versión | Cambios
+:-- | :--
+2.0.0 | - Añadidos nuevos layouts (Custom Grid, Random) <br> - Optimización al cambiar de thumbnail <br> - Padding/margen relativo al tamaño del documento (para obtener márgenes consistentes entre distintos tamaños de lienzo) <br> - Opción para guardar presets
+1.1.0 | - Opción para randomizar los pinceles <br> - Añadidos algunos *tooltips* a la IU.
+1.0.0 | *Release*
 
 
 # Apoyar 🍀
