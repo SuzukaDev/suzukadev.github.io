@@ -12,19 +12,19 @@ menu:
 ## Hola, me llamo Óscar
 
 
-Soy un **Ingeniero Multimedia** y **Desarrollador De Juegos** multidisciplinario. Siempre he estado interesado en ser un desarrollador en solitario, alguien que puede llevar un proyecto desde la idea hasta el lanzamiento, cubriendo todos los aspectos del desarrollo.
+Soy un **Ingeniero Multimedia** y **Desarrollador De Videojuegos** multidisciplinario. Siempre he estado interesado en ser un desarrollador en solitario, alguien que puede llevar un proyecto desde la idea hasta el lanzamiento, cubriendo todos los aspectos del desarrollo.
 That said, I also enjoy working in teams and collaborating with others.
 
 ### Habilidades
 
 
-- **Gestión y desarrollo completo de proyectos**: Estoy acostumbrado a planificar y construir proyectos completos por mi cuenta, gestionando todo desde el concepto hasta los últimos detalles.
+- [**Gestión y desarrollo completo de proyectos**]({{< relref "articles/manuals" >}}): Estoy acostumbrado a planificar y construir proyectos completos por mi cuenta, gestionando todo desde el concepto hasta los últimos detalles.
 
-- **Arte 2D**: El dibujo siempre me interesó desde pequeño. Me interesan muchos estilos diferentes. Tal vez el *Pixel Art* sea uno de mis estilos favoritos en lo que a videojuegos se refiere.
+- [**Arte 2D**]({{< relref "galleries/art/2d" >}}): El dibujo siempre me interesó desde pequeño, llevo dibujando toda la vida. Me interesan muchos estilos diferentes. Tal vez el [*Pixel Art*]({{< relref "galleries/art/2d/pixel-art.md" >}}) sea uno de mis estilos favoritos en lo que a videojuegos se refiere.
 
 <!--  -->
 
-- **3D**: 
+- [**3D**]({{< relref "galleries/art/3d" >}}): 
 	- Modelado
 	- Rigging
 	- *Texture Painting*
@@ -39,10 +39,10 @@ That said, I also enjoy working in teams and collaborating with others.
 	- Además de videojuegos, también me interesa hacer otro tipo de software, plugins, addons para Blender, etc. O webs, como esta.
 <!--  -->
 
-- **Producción musica**: Produzco música desde 2010. También me encantan los sintetizadores y el diseño de sonidos.
+- [**Producción musical**]({{< relref "my-music" >}}): Produzco música desde 2010. También me encantan los sintetizadores y el diseño de sonidos.
 
 
-**Aprender** es una de mis grandes pasiones.
+**<u>**Aprender**</u> es una de mis grandes pasiones.**
 
 <!-- If I should choose a single thing about myself, is that I care a lot. I know how hard are things to do, the time they take, and I always try to do my best, no matter the subject. I also have a very critic mind and I tend to question myself or what I'm doing, thinking about how it could be better, etc. -->
 Si tuviera que elegir una única *virtud* sobre mí, es que me preocupo mucho por todo lo que hago. Sé el trabajo que hay detrás de todo, sé lo difíciles que son algunas cosas, el tiempo que requieren, etc. Sea lo que sea que haga, intento dar lo mejor de mí, porque para mí es importante sentirme orgulloso de las cosas que hago. Tengo una mente muy crítica y tiendo a cuestionarme a mí mismo o lo que estoy haciendo, pensando en cómo podría mejorarse, etc. 

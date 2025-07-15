@@ -18,18 +18,18 @@ That said, I also enjoy working in teams and collaborating with others.
 ### Skills
 
 <!-- - **Full Project Management and development**: I'm used to fully planning my own projects, and cover the whole work pipeline. -->
-- **Full Project Management and development**: I’m used to planning and building full projects on my own, managing everything from concept to final polish.
+- [**Full Project Management and development**]({{< relref "articles/manuals" >}}): I’m used to planning and building full projects on my own, managing everything from concept to final polish.
 
 <!-- - **2D art**: I've always been the 'art-kid' at school/highschool who was always drawing in class. Even though, as I once said in school to a teacher after a friend told her that I was good at drawing:
 
 > Is not that I'm good drawing, is just that they all draw horrible, so in comparison it seems that I know how to draw.
 
 I totally believe that. {{< text_spoiler "And I also believe that thinking that you '*know*' or fully control something, is always wrong; we are always learning." >}} -->
-- **2D art**: I've always been the 'art-kid' at school/highschool who was always drawing in class. I'm interested in many different styles. Maybe being *Pixel Art* one of my '*go to*' styles for games.
+- [**2D art**]({{< relref "galleries/art/2d" >}}): I've always been the 'art-kid' at school/highschool who was always drawing in class. I'm interested in many different styles. Maybe being [*Pixel Art*]({{< relref "galleries/art/2d/pixel-art.md" >}}) one of my '*go to*' styles for games.
 
 <!--  -->
 
-- **3D**: 
+- [**3D**]({{< relref "galleries/art/3d" >}}): 
 	- Modelling
 	- Rigging
 	- Texture Painting
@@ -53,10 +53,10 @@ I totally believe that. {{< text_spoiler "And I also believe that thinking that 
 <!-- - **Music Production**: I've been doing music and being interested in music production since 2010.
 	- I also do like *synths* and sound production a lot, which is useful for sound effects and such. -->
 
-- **Music Production**: I’ve been producing music since 2010. I also love synths, sound design, and creating audio that fits a game’s atmosphere.
+- [**Music Production**]({{< relref "my-music" >}}): I’ve been producing music since 2010. I also love synths, sound design, and creating audio that fits a game’s atmosphere.
 
 
-Learning is a big passion of mine.
+**<u>Learning</u> is a big passion of mine.**
 
 If I should choose a single thing about myself, is that I care a lot. I know how hard are things to do, the time they take, and I always try to do my best, no matter the subject. I also have a very critic mind and I tend to question myself or what I'm doing, thinking about how it could be better, etc.
 
