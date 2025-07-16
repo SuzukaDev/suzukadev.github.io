@@ -111,7 +111,7 @@ This is useful for having **2 different presets for each thumbnai**l (and alter 
 
 - <u>**Info Label**</u>: Displays the total thumbnails and the total time it will take according your settings. Useful for managing drawing sesions.
 
-{{< img_caption "Ari-comic-thumbnails.jpeg" "Awesome comic thumbnails made by Ari (Random Layout)" >}}
+{{< img_caption "Ari-comic-thumbnails-small.jpg" "Awesome comic thumbnails made by Ari (Random Layout)" >}}
 
 # Shortcuts
 

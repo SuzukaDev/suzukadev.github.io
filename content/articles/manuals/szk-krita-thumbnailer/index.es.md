@@ -122,7 +122,7 @@ Esto es útil para tener **2 presets diferentes para cada miniatura** (y alterar
 
 - <u>**Texto con información**</u>: Muestra el total de miniaturas y el tiempo total.
 
-{{< img_caption "Ari-comic-thumbnails.jpeg" "*Thumbnails* de comic hechas por Ari (Random Layout)" >}}
+{{< img_caption "Ari-comic-thumbnails-small.jpg" "*Thumbnails* de comic hechas por Ari (Random Layout)" >}}
 
 
 # Atajos de teclado
