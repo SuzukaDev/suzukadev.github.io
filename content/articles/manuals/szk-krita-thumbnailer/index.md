@@ -9,7 +9,7 @@ keywords = ["SZK Thumbnailer", "Krita Thumbnailer", "krita","art","concept art",
 tags = ["krita","art","concept art"]
 main_classes = 'sans-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 # # -------- DISPLAY OPTIONS --------
-# accent_color = "#ff168a" # customize the color for links, etc in the page
+accent_color = " #CB6BFEFF" # customize the color for links, etc in the page
 # feature_image_background_color = "#ff168a" # If the featured_image has transparency, change this color for customizing the background color (default: transparent)
 # show_breadcrumbs = false
 # show_description = false
