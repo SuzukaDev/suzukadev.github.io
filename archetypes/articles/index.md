@@ -33,3 +33,7 @@ show_right_bar = true
 # featured_tags = [""] # if set, it will only feature the tags in this array (useful to display only some of the tags). Note: Tags must match the tag in .Params.tags
 # related_pages = [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 +++
+
+{{< box_warning >}}
+Page not translated (at the moment). For reading the article, [visit the spanish version]({{% relref path="{{.File.ContentBaseName}}" lang="es" %}}).
+{{< /box_warning >}}
