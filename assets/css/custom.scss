@@ -752,6 +752,13 @@ section.social-icons {
 	// }
 }
 
+s {
+	text-decoration-line: line-through;
+	// text-decoration-style: wavy;         /* solid | double | dotted | dashed | wavy */
+	// text-decoration-style: solid;    /* solid | double | dotted | dashed | wavy */
+	// text-decoration-color: #df0e0e;
+	text-decoration-thickness: 2px;
+}
 
 
 blockquote {
