@@ -6,7 +6,7 @@ lastmod = '2025-07-19T21:45:49+02:00'
 draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
 # keywords = [""] # custom keywords for the page
-# tags = [""]
+tags = ["illustration", "process", "pixel art"]
 # main_classes = 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 # # -------- DISPLAY OPTIONS --------
 # accent_color = "#ff168a" # customize the color for links, etc in the page
@@ -46,31 +46,43 @@ This illustration was important for me for 3 different reasons:
 - I wanted to express a message that was important for me.
 
 # Reasons
-
+# Motivation
 ## About AI
 
 {{< details summary="Feeling demotivated because of AI" >}}
-I kinda lost the ilusion and energy for doing art. And AI played a role on that. Seemed pointless to make it, and art is something that provided meaning to my life. Or at the very least, relief.
-<br>
+<!-- I kinda lost the ilusion and energy for doing art. And AI played a role on that. Seemed pointless to make it, and art is something that provided meaning to my life. Or at the very least, relief. -->
+I kinda lost the ilusion and energy for doing art. And AI played a role on that. Seemed pointless to make it, and art is something that provided meaning to my life.
 
-Miyazaki (from Studio Ghibli) said it was *an insult for life*. It definitely is an insult to the artists who got their work stolen for training the AIs, since they literally put lots of their time into their craft. And time is life.
+Miyazaki (*Studio Ghibli*) said it was *an insult for life*. It definitely is an insult to the artists who got their work stolen for training the AIs, since they literally put lots of their time into their craft. And time is life.
 
-The time we dedicate to things and people, is what makes them important. When something doesn't requires our time or effort, it becomes meaningless and not important. Disposable. Easily replaceable.
-<br>
+The time we dedicate to things and people, is what makes them important. When something doesn't requires our time or effort, it becomes meaningless and insignificant. Disposable and easily replaceable.
 
-I think it lead us to Postmodern-Nihilistic times, where absolutely anything and anyone seems to matter and to have a real meaning. I don't like that.
+I think it lead us to *Postmodern-Nihilistic* times, where absolutely anything and anyone seems to matter and to have a real meaning. I don't like that.
 
-But working on this I reminded myself that at the end art is something we make for ourselves. While AI can create very correct images, I think any prompt would ever match an artist with a clear vision of what they want to represent. And not to talk about how I won't ever find any joy by just writing a prompt.
+But working on this helped me to remind that at the end art is something we make for ourselves. While AI can create very correct images, I think any prompt would ever match an artist with a clear vision of what they want to represent. And not to talk about how I won't ever find any joy by just writing a prompt.
 
-> Is about the process, the feeling of **freedom** for being able to represent anything you can imagine, and the excitement of solving every little problem you face.
+> Is about the process, the feeling of **freedom** for being able to represent anything you can imagine, and the excitement of solving every little problem you face **by yourself**.
 
-{{< details summary="They were all very bad" name="my-details" >}}
 
 AIs are great for generating new images that emmits the feeling that I've already seen them 200 million times before actually seeing them.
 
-> When something is **mass produced, personality evaporates**. No one eats a MacDonald's burger every week and one day thinks "oh, today's burger is specially tasty". There is no variance. AI's art may generate the illusion that we have freedom to obtain different results, but the underlying method is the same over and over, and its what produces that "AI vibe" over and over. AI is always getting better and better, but since -again- is mass produced, that AI vibe without personality may persist.
+I do think that when something is **mass produced, personality evaporates**. No one eats a MacDonald's burger every week and one day thinks "oh, today's burger is specially tasty". There is no variance. 
 
-I think 
+AI's art may generate the illusion that we have freedom to obtain different results, but the underlying method is the same over and over, and its what produces that "AI vibe". AI is always getting better and better, but since -again- is mass produced, that AI vibe without personality may persist. At least, I like to think that a more personal work, will always stand out against any AI's work.
+
+### Experiments with AI
+
+Even though, I experimented a bit since AI. Since I had a very clear idea, I gave some famous AI models a highly detailed prompt.
+
+{{< details summary="These were the results" >}}
+I think they are correct images. But they are generic and boring.
+
+Some artists says that AI is great as a working base. Personally I preffer working over a rough sketch or thumbnail than having to fix an AI image that feels dull.
+
+{{< img_caption "ai-leonardo-bad.png" >}}
+
+{{< img_caption "ai-pixel-art-bad.png" >}}
+
 
 {{< /details >}}
 {{< /details >}}
@@ -99,3 +111,10 @@ cover="thumbnailer0.png"
 c="rgb(52, 53, 58)"
 url_text="www.orb91.gumroad.com" 
 position="50% 50%" >}}
+
+
+thumbnailing me aclaro las ideas.
+
+vertical - served the "rise up" feeling I wanted it to have, while still having the tree to occupy the most part of the image
+
+(It could have been done horizontal, but in my opninion that would have delegated the tree to a more secondary "role", since it would have occupied an smaller percentage of the canvas.)
