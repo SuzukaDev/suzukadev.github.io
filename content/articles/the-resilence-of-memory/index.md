@@ -34,6 +34,7 @@ show_right_bar = true
 # related_pages = [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 +++
 # Vaya tela perrito la que he liado con el archivo...mmm
+vamooos
 <!-- {{< box_warning >}}
 Page not translated (at the moment). For reading the article, [visit the spanish version]({{% relref path="the-resilence-of-memory" lang="es" %}}).
 {{< /box_warning >}} -->
