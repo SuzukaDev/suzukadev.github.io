@@ -50,6 +50,7 @@ This illustration was important for me for 3 different reasons:
 # Motivation
 
 ## About AI
+{{< video video="14 min.mp4" css="height: 90vh" >}}
 {{< video video="TRoM - La Verdad.mp4" css="height: 90vh" >}}
 
 {{< details summary="Feeling demotivated because of AI" >}}
