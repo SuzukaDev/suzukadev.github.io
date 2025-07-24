@@ -46,6 +46,7 @@ This illustration was important for me for 3 different reasons:
 - I wanted to express a message that was important for me.
 
 # Reasons
+
 # Motivation
 ## About AI
 {{< video video="TRoM - La Verdad.mp4" css="height: 90vh" >}}
