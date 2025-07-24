@@ -1,9 +1,9 @@
 +++
-title = 'The Resilence of Memory'
+title = 'The Resilence of Memory Process'
 date = '2025-07-19T21:45:49+02:00'
 description = "Pixel Art illustration process"
 lastmod = '2025-07-19T21:45:49+02:00'
-# draft = true # if true (or not set), the page will be excluded in build
+draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
 # keywords = [""] # custom keywords for the page
 tags = ["illustration", "process", "pixel art"]
@@ -33,14 +33,12 @@ show_right_bar = true
 # featured_tags = [""] # if set, it will only feature the tags in this array (useful to display only some of the tags). Note: Tags must match the tag in .Params.tags
 # related_pages = [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 +++
-# Vaya tela perrito la que he liado con el archivo...mmm
-vamooos
-otra vezzz
-test final...
+
 <!-- {{< box_warning >}}
 Page not translated (at the moment). For reading the article, [visit the spanish version]({{% relref path="the-resilence-of-memory" lang="es" %}}).
 {{< /box_warning >}} -->
 
+# Motivation
 
 This illustration was important for me for 3 different reasons:
 
@@ -48,38 +46,35 @@ This illustration was important for me for 3 different reasons:
 - It was my first "serious" illustration since AI.
 - I wanted to express a message that was important for me.
 
-# Reasons
+<!-- # Reasons -->
 
-# Motivation
 
 ## About AI
-{{< video video="14 min.mp4" css="height: 90vh" >}}
-{{< video video="TRoM - La Verdad.mp4" css="height: 90vh" >}}
 
 {{< details summary="Feeling demotivated because of AI" >}}
 <!-- I kinda lost the ilusion and energy for doing art. And AI played a role on that. Seemed pointless to make it, and art is something that provided meaning to my life. Or at the very least, relief. -->
 I kinda lost the ilusion and energy for doing art. And AI played a role on that. Seemed pointless to make it, and art is something that provided meaning to my life.
 
-Miyazaki (*Studio Ghibli*) said it was *an insult for life*. It definitely is an insult to the artists who got their work stolen for training the AIs, since they literally put lots of their time into their craft. And time is life.
+Miyazaki (from *Studio Ghibli*) said it was *an insult for life*. It definitely is an insult to the artists who got their work stolen for training the AIs, since they literally put lots of their time into their craft. And time is life.
 
 The time we dedicate to things and people, is what makes them important. When something doesn't requires our time or effort, it becomes meaningless and insignificant. Disposable and easily replaceable.
 
 I think it lead us to *Postmodern-Nihilistic* times, where absolutely anything and anyone seems to matter and to have a real meaning. I don't like that.
 
-But working on this helped me to remind that at the end art is something we make for ourselves. While AI can create very correct images, I think any prompt would ever match an artist with a clear vision of what they want to represent. And not to talk about how I won't ever find any joy by just writing a prompt.
+But working on this helped me to remind that at the end art is something we make for ourselves. And while AI can create very correct images, I think any prompt would ever match an artist with a clear vision of what they want to represent. And not to talk about how I won't ever find any joy by just writing a prompt.
 
-> Is about the process, the feeling of **freedom** for being able to represent anything you can imagine, and the excitement of solving every little problem you face **by yourself**.
+> Is about the process, the feeling of **freedom** for being able to represent anything you can imagine, and the excitement of solving every little problem you face **by yourself**. No matter if the result is *perfect* or not.
 
 
 AIs are great for generating new images that emmits the feeling that I've already seen them 200 million times before actually seeing them.
 
 I do think that when something is **mass produced, personality evaporates**. No one eats a MacDonald's burger every week and one day thinks "oh, today's burger is specially tasty". There is no variance. 
 
-AI's art may generate the illusion that we have freedom to obtain different results, but the underlying method is the same over and over, and its what produces that "AI vibe". AI is always getting better and better, but since -again- is mass produced, that AI vibe without personality may persist. At least, I like to think that a more personal work, will always stand out against any AI's work.
+AI's art may generate the illusion that we have freedom to obtain different results, but the underlying method is the same over and over, and its what produces that "AI vibe". AI is always getting better and better, but since -again- is mass produced, that AI vibe without personality may persist, since we will see it over and over. But I like to think that a more personal work, will always stand out against any AI's work.
 
 ### Experiments with AI
 
-Even though, I experimented a bit since AI. Since I had a very clear idea, I gave some famous AI models a highly detailed prompt.
+Even though, I experimented a bit since AI. Since I had a very clear idea, I gave some famous AI models a **highly** detailed prompt.
 
 {{< details summary="These were the results" >}}
 I think they are correct images. But they are generic and boring.
@@ -97,13 +92,23 @@ Some artists says that AI is great as a working base. Personally I preffer worki
 
 ## Message
 
-Seems we live in a shitty world.
-Can't wait to wake up tomorrow and see which is the new war that has started or how many kids have been shooted or bombed while waiting for aid and food.
+I wanted to express that no matter the circumstances, our environment and our mental or physical state, we still have some **inner freedom** to find joy and beauty, even if it is just in some short degree, and even if all around **seems** hopeless. And that we have always some control to decide what we want in our own world, and to focus on the things and the ones that wants to be with us (and to accept and honor what wants to be out).
 
-I wanted to express that no matter the circumstances, our environment and our mental or physical state, we still have some inner freedom to find joy and beauty, even if it is in some short degree, even if all around seems hopeless. And that we have always control to decide what we want in our own world, and to focus on the things and the ones that wants to be with us, and to accept what wants to be out.
+Seems we live in a <s>shitty</s> complicated world and it gets worse each day that goes by.
 
-I like to write messages, concepts, etc. around my place, to remind myself different things. I think that when we capture a message with an image, the idea becomes more powerful.
+Lots of wars. A genocide.
 
+Can't wait to wake up tomorrow and see which is the new war that has started or how many kids have been shooted or bombed while waiting for aid and food. We are continuously being bombed by bad news
+
+At the end I think the best thing we can do for us and for the world is to be in a **good place** with ourselves. I think when someone makes that, they become into some kind of lighthouses for others. Some kind of safe space/place.
+
+Just as the tree
+
+
+
+I like to write messages, concepts, etc. around my place, to remind myself different things. I think that when we capture a message with an image, the idea becomes more powerful and easier to remind.
+
+I do believe images are powerful. I do love writing litle messages for myself, and having them around. And I personally think that when a message is tied to an image, it becomes easier to remind (and also way cooler).
 
 # Process
 
@@ -125,3 +130,12 @@ thumbnailing me aclaro las ideas.
 vertical - served the "rise up" feeling I wanted it to have, while still having the tree to occupy the most part of the image
 
 (It could have been done horizontal, but in my opninion that would have delegated the tree to a more secondary "role", since it would have occupied an smaller percentage of the canvas.)
+
+
+# Silohuete
+I personally think that the silohouete and the image overall looked way better with the full top of the tree. But I decided to give it only the half of the tree with leafs since at the end I think it represented better the message I was going for; the tree is in a continuous fight between life and death, and already has some parts of it affected. But is still seeking the light.
+
+
+# Speedpainting
+
+{{< video video="TRoM - La Verdad.mp4" css="height: 90vh" >}}
