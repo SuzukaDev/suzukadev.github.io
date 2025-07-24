@@ -48,6 +48,7 @@ This illustration was important for me for 3 different reasons:
 # Reasons
 
 # Motivation
+
 ## About AI
 {{< video video="TRoM - La Verdad.mp4" css="height: 90vh" >}}
 
