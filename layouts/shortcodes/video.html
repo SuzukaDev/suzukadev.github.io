@@ -12,10 +12,25 @@ Example:
 {{< video "my_video.mp4" true true>}} -> Autoplays muted
 */}}
 
-{{ $video_url := (or (.Get 0) (.Get "url")) }}
+{{ $_video_url := (or (.Get 0) (.Get "url") (.Get "video") (.Get "path")) }}
 {{/*  {{ $controls := .Get 1 | default true }}  */}}
 {{ $autoplay_flag := (or (.Get 1) (.Get "autoplay")) | default false }}
 {{ $muted_flag := (or (.Get 2) (.Get "muted")) | default false }}
+{{- $resize := (.Get "resize") -}}
+
+
+{{- $video_url := $_video_url -}}
+{{- $video_resource := "" -}}
+{{- /*  Get the image resource if the _video_url is not a link  */ -}}
+{{- if not (hasPrefix $_video_url "http") -}}
+{{- /*  TODO meter esto en un partial utils/?  */ -}}
+  {{- $video_resource = or (.Page.Resources.Get $_video_url) (resources.Get $_video_url) (.Page.Resources.GetMatch (printf "**%s**" $_video_url )) -}}
+  {{- if $video_resource -}}
+    {{- $video_url = $video_resource.RelPermalink -}}
+  {{- end -}}
+{{- end -}}
+
+
 
 {{ $autoplay := "" }}
 {{ if $autoplay_flag }}
@@ -27,6 +42,6 @@ Example:
 	{{ $muted = "muted" }}
 {{ end}}
 
-<video controls {{ $autoplay | safeHTMLAttr  }} {{ $muted | safeHTMLAttr  }}>
+<video controls {{ $autoplay | safeHTMLAttr  }} {{ $muted | safeHTMLAttr  }} {{with $resize}} style='width:{{. | safeCSS}}'{{end}}>
 	<source src="{{ $video_url }}" type="video/mp4">
 </video>
