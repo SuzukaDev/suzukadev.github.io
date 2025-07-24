@@ -1,0 +1,27 @@
+{{/*  
+Returns a resource URL from a path.
+Note: The path can be incomplete/not full.
+
+Basically allows to:
+- Check if the path is a full url
+- If is not, tries to get a resource and returns its RelPermalink
+
+
+Use:
+{{- $irñ := partial "utils/get-resource-url.html" (dict "context" . "url" $url) -}}
+*/}}
+{{- $url := .url -}}
+{{- $context := .context -}}
+
+{{- $resource_url := $url -}}
+{{- $resource := "" -}}
+{{- /*  Get the image resource if the url is not a link  */ -}}
+{{- if not (hasPrefix $url "http") -}}
+  {{- /*  {{- $resource = or (.Page.Resources.Get $url) (resources.Get $url) (.Page.Resources.GetMatch (printf "**%s**" $url )) -}}  */ -}}
+  {{- $resource = or ($context.Page.Resources.Get $url) (resources.Get $url) ($context.Page.Resources.GetMatch (printf "**%s**" $url )) -}}
+  {{- if $resource -}}
+    {{- $resource_url = $resource.RelPermalink -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $resource_url -}}
