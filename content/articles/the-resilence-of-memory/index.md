@@ -3,7 +3,7 @@ title = 'The Resilence of Memory'
 date = '2025-07-19T21:45:49+02:00'
 description = "Pixel Art illustration process"
 lastmod = '2025-07-19T21:45:49+02:00'
-draft = true # if true (or not set), the page will be excluded in build
+# draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
 # keywords = [""] # custom keywords for the page
 tags = ["illustration", "process", "pixel art"]
@@ -48,6 +48,7 @@ This illustration was important for me for 3 different reasons:
 # Reasons
 # Motivation
 ## About AI
+{{< video video="TRoM - La Verdad.mp4" css="height: 90vh" >}}
 
 {{< details summary="Feeling demotivated because of AI" >}}
 <!-- I kinda lost the ilusion and energy for doing art. And AI played a role on that. Seemed pointless to make it, and art is something that provided meaning to my life. Or at the very least, relief. -->
