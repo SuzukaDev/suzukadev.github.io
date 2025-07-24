@@ -16,7 +16,7 @@ Example:
 {{/*  {{ $controls := .Get 1 | default true }}  */}}
 {{ $autoplay_flag := (or (.Get 1) (.Get "autoplay")) | default false }}
 {{ $muted_flag := (or (.Get 2) (.Get "muted")) | default false }}
-{{- $resize := (.Get "resize") -}}
+{{- $css := (.Get "css") -}}
 
 
 {{- $video_url := partial "utils/get-resource-url.html" (dict "context" . "url" $_video_url) -}}
@@ -31,6 +31,6 @@ Example:
 	{{ $muted = "muted" }}
 {{ end}}
 
-<video controls {{ $autoplay | safeHTMLAttr  }} {{ $muted | safeHTMLAttr  }} {{with $resize}} style='width:{{. | safeCSS}}'{{end}}>
+<video controls {{ $autoplay | safeHTMLAttr  }} {{ $muted | safeHTMLAttr  }} {{with $css}} style='{{$css | safeCSS}}'{{end}}>
 	<source src="{{ $video_url }}" type="video/mp4">
 </video>
