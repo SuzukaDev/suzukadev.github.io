@@ -6,3 +6,4 @@ import "./custom.js";
 // import "./no-loading-transitions.js";
 import "./theme-switch-shortcut.js";
 import "./scroll-to-top-button.js";
+import "./highlight-current-toc-header.js";
