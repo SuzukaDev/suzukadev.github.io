@@ -596,6 +596,10 @@ article.articles-content{
 // ARTICLES INDEX
 .article-header-active{
 	color: var(--hover-color);
+	// font-weight: bold;
+	font-weight: 600;
+	// transition-duration: 0ms;
+	// text-decoration: underline;
 }
 
 .articles-index {
