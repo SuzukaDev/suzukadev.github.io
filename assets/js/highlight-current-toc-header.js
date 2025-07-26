@@ -58,9 +58,9 @@ const handler = (entries) => {
 
 
     //   allLinks.forEach((link) => link.classList.remove("active"));
-      allLinks.forEach((link) => link.classList.remove(css_class));
 	  if (currentSection.id)
-	  {
+      {
+      allLinks.forEach((link) => link.classList.remove(css_class));
 
 		  document
 		  // Set current link to active
@@ -78,9 +78,9 @@ const handler = (entries) => {
 
 
 // Create a new observer with the handler
-// const observer = new IntersectionObserver(handler);
+const observer = new IntersectionObserver(handler);
 // const observer = new IntersectionObserver(handler, { threshold: 0.1 });
-const observer = new IntersectionObserver(handler, { threshold: 0 });
+// const observer = new IntersectionObserver(handler, { threshold: 0 });
 
 // Observe all headings on our webpage
 // document.querySelectorAll("h2").forEach((section) => {
