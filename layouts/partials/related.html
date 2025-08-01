@@ -17,6 +17,9 @@
 {{ if eq (len $related) 0 }}
   {{ $related = where .Site.RegularPages ".Section" $.Section}}
   {{ $related = where $related "Params.private" "ne" true }}
+  {{- /*  {{ $related = where $related ".Page" "ne" $.Page | first 3 }}  */ -}}
+  {{- /*  Ensure it doesn't include the current page  */ -}}
+  {{ $related = where $related ".Permalink" "ne" $.Permalink | first 3 }}
   {{ $related = first 3 $related}}
 {{ end}}
 

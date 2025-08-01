@@ -92,6 +92,15 @@ title = true
     toLower = true
     type = 'basic'
     weight = 80
+  [[related.indices]]
+    applyFilter = false
+    cardinalityThreshold = 0
+    name = 'categories'
+    pattern = ''
+    # toLower = false
+    toLower = true
+    type = 'basic'
+    weight = 80
 
 
 [params]
