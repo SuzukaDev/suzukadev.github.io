@@ -107,7 +107,7 @@
             {{ $lastIndex := sub (len $tags) 1 }}
             {{ range $index, $tag := $tags }}
                 {{ $transition_delay := mul $index 0.07 }}
-                <a style="--transition-delay: {{$transition_delay | safeCSS }}s" class="article-tag featured-tag consolas-font" href="{{absLangURL "tags/"}}{{$tag}}">{{- $tag -}}</a>
+                <a style="--transition-delay: {{$transition_delay | safeCSS }}s" class="article-tag featured-tag consolas-font" href="{{absLangURL "tags/"}}{{$tag | urlize}}">{{- $tag -}}</a>
             {{ end }}
             </div>
         {{ end }}
