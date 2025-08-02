@@ -20,7 +20,7 @@ With resize:
 */ -}}
 
 {{- $img_path := or (.Get "img") (.Get 0) -}}
-{{- $caption := or (.Get "caption") (.Get 1) | default "" -}}
+{{- $caption := or (.Get "caption") (.Get "text") (.Get 1) | default "" -}}
 {{- $alt_text := or (.Get "alt") (.Get 2) | default "" -}}
 {{- $url := or (.Get "url") (.Get 3) | default "" -}}
 {{- $page_name := or (.Get "page") (.Get 3) | default "" -}}
