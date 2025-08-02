@@ -22,9 +22,10 @@ const handler = (entries) => {
 //   const allSections = document.querySelectorAll("h2");
 //   const allSections = document.querySelectorAll("h1");
 //   const allSections = document.querySelectorAll("h3");
-//   const allSections = document.querySelectorAll("h1, h2, h3");
-  const allSections = document.querySelectorAll("h1, h2");
-//   alert("Number of links: " + allSections.length);
+  const allSections = document.querySelectorAll("h1, h2, h3");
+  // const allSections = document.querySelectorAll("h1, h2");
+  // alert("Number of allSections: " + allSections.length);
+  // alert("Number of allLinks: " + allLinks.length);
 
 // Ensure each section has an ID
 // allSections.forEach((section, index) => {
@@ -39,6 +40,10 @@ const handler = (entries) => {
       .filter((entry) => entry.isIntersecting == true)
       .map((entry) => entry.target)
   );
+
+  // alert("Number of allEntries: " + allEntries.length);
+  // alert("allEntries size: " + allEntries.size);
+
 
   let currentSection;
   const css_class = "article-header-active"
@@ -67,10 +72,10 @@ const handler = (entries) => {
         .querySelector(`a[href="#${currentSection.id}"]`)
         // .classList.add("active");
         .classList.add(css_class);
+        // Exit loop after setting first active link
+        break;
 	  }
 	
-      // Exit loop after setting first active link
-      break;
     }
   }
 };
@@ -86,7 +91,14 @@ const observer = new IntersectionObserver(handler);
 // document.querySelectorAll("h2").forEach((section) => {
 // document.querySelectorAll("h1").forEach((section) => {
 // document.querySelectorAll("h3").forEach((section) => {
-// document.querySelectorAll("h1, h2, h3").forEach((section) => {
-document.querySelectorAll("h1, h2").forEach((section) => {
-  observer.observe(section);
+document.querySelectorAll("h1, h2, h3").forEach((section) => {
+// document.querySelectorAll("h1, h2").forEach((section) => {
+  // if (section.classList.length === 0) {
+  // Avoid to observe headers that do NOT have an ID
+  if (section.id) {
+  // if (true) {
+	  // alert("currentSection: " + section.textContent );
+
+    observer.observe(section);
+  }
 });
