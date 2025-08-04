@@ -1,5 +1,5 @@
 +++
-title = 'The Resilence of Memory Process'
+title = 'The Resilence of Memory (Process)'
 date = '2025-07-19T21:45:49+02:00'
 description = "Pixel Art illustration process"
 lastmod = '2025-07-19T21:45:49+02:00'
@@ -24,7 +24,7 @@ show_right_bar = true
 # custom_profile_description = "Custom profile description" # Adds a custom profile description (below the pfp) for the page.
 # show_next_and_previous_arrows = false # If false (or not set), will hide the left/right arrows next to the articles' title for navigating between articles
 # show_related_articles = false # If false, it wont show the related articles at the bottom. If true (or non set), they will show.
-# featured_image = 'the-resilence-of-memory.png' # local path for the image used as the cover. NOTE: Check its extension! (.png set as a template)
+featured_image = 'images/TRoM-frame.png' # local path for the image used as the cover. NOTE: Check its extension! (.png set as a template)
 # NOTE Since this is a leaf bundle (page in its own folder), placing an image in the same folder with the name 'cover' (no matter its extension) will be used as the cover AUTOMATICALLY. BUT if 'featured_image' is set, it will use that (this is also useful for having different covers for each language, if that is needed).
 # # ------- FEATURE OPTIONS --------
 # featured = true # if true, the article will be featured in the index page.
@@ -51,16 +51,16 @@ Page not translated (at the moment). For reading the article, [visit the spanish
 
 This illustration was important for me for 3 different reasons:
 
-- I used it to fully test [my -cool- **Pixel Art plugin for Krita**, and its -awesome- embeded Pixel Art editor, ***K-Sprite***](https://orb91.gumroad.com/l/szk-krita-pixel-art-suite).
+- I used it to fully **test** [my -cool- **Pixel Art plugin for Krita**, and its -awesome- embeded Pixel Art editor, ***K-Sprite***](https://orb91.gumroad.com/l/szk-krita-pixel-art-suite).
 - It was my first "serious" illustration since AI.
-- I wanted to express a message that was important for me.
+- I wanted to **express a message** that was important for me.
 
 <!-- # Reasons -->
 
 
 ## SZK Pixel Art Suite for Krita
 
-This is a plugin that adds every tool and feature for Pixel Art that I've always missed in Krita. Making Krita definitely my absolute favourite tool for making Pixel Art.
+This is a plugin that **adds every tool and feature for Pixel Art that I've always missed** in Krita. <u>Making Krita definitely my absolute favourite tool for making Pixel Art!</u>
 
 {{< link_card 
   url="https://orb91.gumroad.com/l/szk-krita-pixel-art-suite"
@@ -74,9 +74,43 @@ This is a plugin that adds every tool and feature for Pixel Art that I've always
   cover_position="90% 0%"
 >}}
 
-It even comes with an integrated Pixel Art editor that solves some Krita problems related to Pixel Art (a Pixel Perfefect brush, better primitives, better Pixel Art Text, etc.)
+It even comes with an **integrated Pixel Art editor** that solves some Krita problems related to Pixel Art (a Pixel Perfefect brush, better primitives, better Pixel Art Text, etc.)
 
-You can [read the Manual here]({{< relref "szk-krita-pixel-art-suite.md" >}})
+You can [read the **Manual** here]({{< relref "szk-krita-pixel-art-suite.md" >}}).
+
+### Practical uses
+I used it everywhere. I'm quite happy with it, since Krita was always my prefered painting drawing software, but for Pixel Art wasn't the best. Not anymore!
+
+[K-Sprite's pixel perfect brush]({{< relref "szk-krita-pixel-art-suite.md#k-sprite" >}}), and the [Bezier tool]({{< relref "szk-krita-pixel-art-suite.md#bezier-curves" >}}) were great for making pixel perfect lines and curves more comfortable without having to edit them later:
+
+
+<!-- [K-Sprite's pixel perfect brush]({{< relref "szk-krita-pixel-art-suite.md#k-sprite" >}}) -->
+
+
+{{< img_caption "k-sprite-bezier-demo.gif" >}}
+
+
+<!-- [I used K-Sprite's Bezier tool to paint the branches]({{< relref "szk-krita-pixel-art-suite.md#bezier-curves" >}}) -->
+
+
+<!-- [Index Painting]({{< relref "szk-krita-pixel-art-suite.md#index-painting" >}}) was great achieving a pixel art dithering effect for the background: -->
+
+<!-- For achieving a pixel art dithering effect for the background and some details, I used [index Painting]({{< relref "szk-krita-pixel-art-suite.md#index-painting" >}}). It was great for experimenting and achieve a pixel art dithering effect for the background: -->
+
+To achieve a pixel art dithering effect for the background and some details, I used [the Index Painting tool]({{< relref "szk-krita-pixel-art-suite.md#index-painting" >}}). It was great for experimenting with different patterns:
+
+
+{{< img_caption img="background-index-painting.png" resize=x500 >}}
+
+
+The palette I used was built with the help of the [color shading tool]({{< relref "szk-krita-pixel-art-suite.md#color-shading" >}}):
+<!-- {{< img_caption img="palette-use.png" resize=x500 >}} -->
+{{< img_caption img="palette-use.png" >}}
+
+
+
+<!-- Also, the [export tool]({{< relref "szk-krita-pixel-art-suite.md#export-tab" >}}) was great for easily saving different snapshots along the process and of course the [final result](#final-result). -->
+Also, the [export tool]({{< relref "szk-krita-pixel-art-suite.md#export-tab" >}}) was great for easily saving different snapshots throughout the process, and of course, the [final result](#final-result).
 
 
 ## About AI
@@ -106,7 +140,7 @@ AI's art may generate the illusion that we have freedom to obtain different resu
 
 Even though, I experimented a bit since AI. Since I had a very clear idea, I gave some famous AI models a **highly** detailed prompt.
 
-{{< details summary="These were the results" >}}
+{{< details summary="These were the 💩💩💩 results" >}}
 I think they are correct images. But in my opinion they are very generic and boring.
 
 Some artists says that AI is great as a working base. Personally I preffer working over a rough sketch or thumbnail than having to fix an AI image that feels super dull.
@@ -124,7 +158,7 @@ Some artists says that AI is great as a working base. Personally I preffer worki
 
 {{< details summary="Inner freedom" >}}
 
-I wanted to express that no matter the circumstances, our environment and our mental or physical state, we still have some **inner freedom** to find and create joy and beauty, even if it is just in some short degree, and even if all around **seems** hopeless. And that we have always some control to decide what we want in our own world, and to focus on the things and the ones that wants to be with us, around (and to accept what wants to be out of our lives).
+I wanted to express that no matter the circumstances, our environment and our mental or physical state, we still have some **inner freedom** to find and create joy and beauty, even if it is just in some short degree, and even if all around **seems hopeless**. And that we have always some control to decide what we want in our own world, and to focus on the things and the ones that wants to be with us, around (and to accept what wants to be out of our lives).
 
 Seems we live in a <s>shitty</s> complicated world and it gets worse each day that goes by.
 
@@ -136,11 +170,23 @@ At the end I think the best thing we can do for us and for the world is to be in
 
 <!-- Just as the tree -->
 
-I wanted to represent that idea with the tree, fighting for being alive in a desolated world, and seeking last sun rays while everything is in darkness.
+<!-- I wanted to represent that idea with the tree, fighting for being alive in a desolated world, and seeking last sun rays while everything is in darkness. -->
+
+That idea took shape through the tree—resilient in a barren world, still reaching for light despite the surrounding gloom.
+
+<!-- It's called "The Resilence of Memory" because I find the mere fact a powerful source of strength. 
+I find uplifting the mere fact of remembering who we are, who we were, and the things that made us feel alive and happy in the past. Specially when we feel lost. Also, I lost my dog and bestest friend, Dexter. He will always live vividly in my memory, and he will always be with me, even if I can't see him around anymore. I can recall him anytime I want, and he is still living in all the experiences we both had together and the places we visited. -->
+
+It's called ***The Resilience of Memory*** because I believe memory itself is a powerful source of strength.
+There's something deeply uplifting about simply remembering—who we are, who we were, and the moments that once made us feel truly alive. Especially in times when we feel lost, memory can ground us.
+
+<!-- I also named it this way because I recently lost my dog and best friend, Dexter. Though I can no longer see him, he lives on vividly in my memory. He’s still with me—in every place we visited, every shared experience, and every moment of joy we had together. I can summon those memories anytime, and through them, he continues to live on, and I find some relief. -->
+Recently, I lost my dog and best friend, **Dexter**. Though I can no longer see him, he lives on vividly in my memory. He’s still with me—in every place we visited, every shared experience, and every moment of joy we had together. I can summon those memories anytime, and through them, he continues to live on, and I find some relief and strength.
 
 
+<!-- I like writing messages, concepts, etc. around my place, to remind myself different things. I think that when we capture a message with an image, the idea becomes more powerful and easier to remind (and also way cooler). -->
 
-I like writing messages, concepts, etc. around my place, to remind myself different things. I think that when we capture a message with an image, the idea becomes more powerful and easier to remind (and also way cooler).
+I just wanted to capture all those ideas in an image. Just because it helps to remind the message.
 
 <!-- I do believe images are powerful. I do love writing litle messages for myself, and having them around. And I personally think that when a message is tied to an image, it becomes easier to remind (and also way cooler). -->
 
@@ -151,12 +197,15 @@ I like writing messages, concepts, etc. around my place, to remind myself differ
 
 ## The importance of thumbnails
 
-I did a lot of thumbnails before starting drawing:
+<!-- I did a lot of thumbnails before starting drawing: -->
+I made a lot of thumbnails before I started drawing:
 
 {{< img_caption "thumbnails-favs.png" >}}
 
 <!-- And I fell in love with "thumbnailing" (is that a word), since is a powerful tool to help you discover not only what works, or what you want, but also what doesn't work, and helps you to discard or to find new ideas: -->
-Making thumbnails is a powerful tool to help you discover not only what works, or what you want, but also what doesn't work, and helps you to discard or to find new ideas.
+
+<!-- Making thumbnails is a powerful tool to help you discover not only what works, or what you want, but also what doesn't work, and helps you to discard and to find new ideas. -->
+Making thumbnails is a powerful tool for discovering not only what works or what you want, but also what doesn’t work, helping you discard ideas and find new ones.
 
 {{< box_info >}}
 
@@ -203,13 +252,16 @@ Then I made some very loose sketches, until I had something that was ok for me a
 
 
 
+
+
+
 <!-- thumbnailing me aclaro las ideas. -->
 
 
 <!-- ### h3 de prueba :/ -->
 
 
-# Silhouettes
+## Silhouettes
 When drawing from imagination, I always find it very useful to start with silhouettes. Is great for not paying attention to the details, but to the whole image.
 
 Silhouettes are always important for readability, but I'd say that they are even more important in Pixel Art, since the space is more constrained.
@@ -228,20 +280,102 @@ But I decided to give it only the half of the tree with leafs since at the end I
 
 {{< /details >}}
 
-{{< img_caption "texture" >}}
+
+### Tip for filling the silhouettes
+
+Sometimes is hard to fill a shape with texture when you just have a silhouette. Feels a bit like a starting a puzzle.
+
+For those moments, I first focus on **elements that generates contrast** within the shape. Those contrast elements can be:
+- A change in angle along the contour.
+- Any "protuberance".
+- Value change (when working with color).
+
+{{< img_caption img="filling-silhouettes-clues.png" text="Interesting places to start adding details" resize=x500 >}}
+
+Those spots gives clues to start, and once you add details in those crucial parts, it becomes easier to fill the rest mantaining some logic and coherence:
+
+{{< img_caption "filling-texture-bright.webp" >}}
+
+Feels like doing a sudoku after guessing some new numbers; the more numbers, the more clues you have to continue easily.
+
+I use this all the time.
 
 
-# Rule of 2
+## Color thumbnails
+I did some color thumbnails for testing different color combinations:
+{{< img_caption img="color-thumbnails.png" resize=x500 >}}
 
-Sometimes I like to draw having in mind that what I'm drawing probably completely sucks, and that I will probably draw it twice. I call that reminder "the rule of 2". It has these simple steps:
+C2 and D4 were my favourites, even though I modified them a bit. 
+
+<!-- Doing these litle color thumbnails also helped me to discover that I didn't want any warm color out of the tree. -->
+
+<!-- Doing these little color thumbnails also helped me realize that I wanted to keep all the warm colors confined to the tree. Simply to reinforce the idea that the tree is the only part that is alive and emerging from the badlands. -->
+Doing these little color thumbnails also helped me realize I wanted to keep all the warm colors confined to the tree—to reinforce the idea that it's the only living thing emerging from the badlands.
+
+<!-- Even though, I edited them later, since one of my main ideas was to keep the warm colors only on the top of the tree, while the rest of the piece (or mostly) would have cold colors. -->
+
+
+## Editing
+
+<!-- After finishing the piece, I experimented with some filters (more precisely, a curve level filter and some color overlays) with the idea of pushing the warm and cool colors, to generate more contrast:
+
+{{< img_caption img="editing-colors.png" text="Before (left), after (right)" resize=800x >}}
+
+Adding filter layers may be some controversial topic thay may trigger some guilty feelings among artists (myself included). A part of me thinks that this is "cheating", that I should have been able to decide those "final colors" by *myself*.
+
+Another part or me thinks is just fun to experiment and see different posibilities from a "comfortable place" (once you have the whole drawing and you are editing the whole thing).
+
+The thing is I already decided those final colors by myself. And when tweaking the image, we are still using our criteria to decide if it works or not. A curve level filter (or any other filter) won't fix a piece that has bad colours.
+
+I think an artist should have a playful and curious mind, and be open for experimenting, and do not fall into those silly thoughts that makes you feel bad. As long as you have an **intention**, is ok. Tools are just tools. Filters don’t make decisions—you do. The filter doesn’t know what “better” looks like. You do. -->
+
+
+After finishing this piece, I experimented with some filters—specifically a curve level adjustment and a couple of color overlays. My goal was to push the warm and cool tones a bit further and add contrast:
+
+{{< img_caption img="editing-colors.png" text="Before (left), after (right)" resize=800x >}}
+
+Adding filters can feel a little taboo sometimes, at least to me. A part of me thinks, *“Is this cheating?”* Shouldn’t I have been able to choose the “final colors” myself, without digital tweaks?
+
+But another part of me enjoys it—it’s fun to play with possibilities once the heavy lifting is done. You’re no longer building the image from scratch; you’re fine-tuning it with a fresh perspective.
+
+And the truth is, I already *did* choose the final colors. The filter didn’t invent anything. I’m still using my judgment to decide what works and what doesn’t. A curve adjustment won’t magically fix bad color decisions—it just lets you explore new moods and balances within what’s already there.
+
+I think artists should give themselves permission to be curious. To experiment. To play. That’s where growth and discovery live. You’re not breaking rules as long as there’s intention behind your choices.
+
+So if something feels right—even if it's a late-stage tweak—maybe it *is* right.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Tips
+
+## "Rule of 2"
+
+Sometimes I like to draw having in mind that what I'm drawing probably completely sucks, and that I will probably draw it twice. I call that reminder "the rule of 2". 
+
+The *rule of 2* has, obviously, 3 steps:
 
 - Draw a first iteration and fail completely.
 - Ask yourself why the first try -completely- sucks.
 - Make a new version with what you learnt from the first one.
 
-This may seem stupid, but I feel it more as a way to enjoy drawing, without pressure and the feeling that everything must be perfect from the start. Is a reminder that **I can fix things later**. It also puts me in the mood for learning; the first iteration may suck, but it helps me to learn what I did wrong, for then doing it better.
+This may seem stupid, but I feel it more as a way to enjoy drawing, without pressure and the feeling that everything must be perfect from the start. Is a reminder that **I can fix things later**. It also puts me in the mood for learning; the first iteration may suck, but it helps me to learn what I did wrong, for then doing it better. It's also some ki
 
-## Examples
+### Examples
 
 I wanted to add a spider web to the scene. Left was the first version, right is the second (and final) version:
 
@@ -267,8 +401,47 @@ While the first attempt gave me the "rocky" feeling I was going for, I felt the 
 
 > So, the main idea behind this is: **{{< text_wavy text="relax" freq=0.2 time=2 amp=8 >}}**, **enjoy painting**. If you paint something that doesn't look great, just ask yourself what you would change.
 
-## Editing
+
+## Narrative
+
+<!-- I always like to remind myself that a piece of art at the end is an exchange of energy between the piece (an illustration, a song, a game, a movie, etc) and the person "*consuming*" it.
+
+If there is no exchange between those two, the piece is indifferent/bad.
+
+The more you add narrative elements, the better the *thing* you are doing will be. It doesn't need to be explicit or very complex, but enough to rise questions to the viewer and to invite them to find the answers by their own. {{< text_spoiler "Also, bonus tips if it actually contains answers, even if they are hidden, or you are the only one who truly understand the context. Because adding mystery for the sake of adding mystery is not cool, in my opinion." >}} -->
+
+I always like to remind myself that, in the end, a piece of art—be it an illustration, a song, a game, a movie—is an exchange of energy between the work and the person *experiencing* it.  
+If there's no exchange, no reaction, then the piece feels indifferent... or even bad.
+
+The more you add narrative elements, the better your creation will be. It doesn't have to be explicit or overly complex—just enough to raise questions and invite the viewer to seek their own answers.
+
+Bonus points if it *does* contain answers—hidden or personal—even if you're the only one who truly understands the full context. {{< text_spoiler "Because adding mystery just for the sake of it? That’s not cool, in my opinion." >}}
+
+
+
+{{< quote "Those who tell the stories rule society" "Plato" >}}
+
+
+
+
+
+
+
 
 # Speedpainting
 
+Here is the complete process:
+
+{{< box_warning >}}
+<!-- There were a **few seconds** at the start that were recorded at half size so they are a bit blurry. -->
+There were a **few seconds** at the start that were recorded at half size, so they appear a bit blurry.
+{{< /box_warning >}}
+
 {{< video video="TRoM - La Verdad.mp4" css="height: 90vh" >}}
+
+
+
+# Final Result
+
+{{< img_caption img="trom-x1.png" class="no-box-shadow" text="Original resolution: 180x320 px (Without the frame)" >}}
+{{< img_caption img="TRoM-frame.png" class="no-box-shadow" >}}
