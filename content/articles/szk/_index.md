@@ -33,4 +33,11 @@ show_right_bar = true
 # 	weight = 10
 # 	name = "Manuals 📘"
 
+# # ------- SORT OPTIONS --------
+# weight = 1 
+# NOTE: This is for "branch bundles" (or 'Directories' (folders with an _index.md containing other articles))
+sort_by = "Params.weight" # Options: "Params.weight", "Date" (Default), "Title", "lastmod"
+# sort_by = "Lastmod"
+# sort_order = "asc" # Options: "desc", "asc" (descendant, ascendant (Default: "desc"))
+
 +++

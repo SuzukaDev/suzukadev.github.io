@@ -36,6 +36,8 @@ custom_profile_description = "Multimedia engineer, with passion for arts. And cr
 # 	weight = 1000
 # 	name = "About me"
 
+weight = 10
+
 +++
 
 <!-- > I personally feel the focus should always be "the others". We make games for others to enjoy. We make tools for others to find them useful. <br> But I think we can only achieve that by being honest with ourselves. We can not expect others to enjoy something we would not -->
