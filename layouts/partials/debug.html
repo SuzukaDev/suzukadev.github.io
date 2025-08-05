@@ -61,6 +61,12 @@
 	<pre>.PrevInSection.Title: {{ .PrevInSection.Title }}</pre>
 {{ end }}
 
+<pre></pre>
+<pre>🔀Sort Options:</pre>
+<pre>.Params.sort_by: {{ .Params.sort_by | default "(Not set)" }}</pre>
+<pre>.Params.sort_order: {{ .Params.sort_order | default "(Not set)" }}</pre>
+
+
 <hr class="full-separator">
 {{ range .Site.Languages }}
 <li>
