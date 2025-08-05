@@ -23,8 +23,8 @@
 
 {{- $pfp_resource := $pfp_resource_image -}}
 {{- if and (ne $pfp_resource_image.MediaType.SubType "gif") (ne $pfp_resource_image.MediaType.SubType "webp") -}}
-	{{- /*  {{- $pfp_resource = $pfp_resource_image.Filter (images.Process "fit 250x250") -}}  */ -}}
-	{{- $pfp_resource = $pfp_resource_image.Filter (images.Process "resize 250x250") -}}
+	{{- $pfp_resource = $pfp_resource_image.Filter (images.Process "fit 250x250") -}}
+	{{- /*  {{- $pfp_resource = $pfp_resource_image.Filter (images.Process "resize 250x250") -}}  */ -}}
 {{- end -}}
 
 {{- return $pfp_resource -}}
