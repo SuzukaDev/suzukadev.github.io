@@ -106,7 +106,7 @@ title = true
 [params]
   galleries_author = 'Suzuka Ka'
   articles_author = 'Suzuka Ka'
-  articles_pfp_image = '/images/yo.jpg'
+  articles_pfp_image = '/images/profile-pictures/yo.jpg'
   audios_default_author = 'Suzuka Ka'
   articles_card_type = 2 # options: 1 (simple) or 2 (with more info)
   # is_debug = false # Set to false for relase

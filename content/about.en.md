@@ -143,7 +143,7 @@ Mi filosofía de trabajo, mis valores, hobbies, mis motivaciones
 Pasarlo bien 
 Las cosas que hacemos se impregnan de nuestra actitud.
 
-![texto](/images/yo.jpg)
+![texto](/images/profile-pictures/yo.jpg)
 
 Las imágenes de la calavera están en:
 ``C:\Users\Oscar\Desktop\BLENDER PROJECTS\GP Particles Animations\IMAGES RENDERED``
@@ -186,7 +186,7 @@ mmmm home.md
 Si la imagen tiene espacios, meter la url entre <>
 </images/yo - copia.jpg>:
 ![hola](</images/yo - copia.jpg>)
-</images/yo.jpg> o /images/yo.jpg
-![hola](</images/yo.jpg>)
+</images/profile-pictures/yo.jpg> o /images/profile-pictures/yo.jpg
+![hola](</images/profile-pictures/yo.jpg>)
 
 hola soy el indexx -->
