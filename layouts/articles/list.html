@@ -2,7 +2,9 @@
   {{- /*  {{ partial "title.html" . }}  */ -}}
   {{ partial "title-articles-list.html" . }}
   <section class="galleries">
-    {{ range where .Pages "Params.private" "ne" true }}
+    {{- $articles := where .Pages "Params.private" "ne" true -}}
+    {{- $articles = sort $articles (.Params.sort_by | default "Date") (.Params.sort_order | default "desc") -}}
+    {{ range $articles }}
       {{/*  {{ partial "album-card.html" . }}  */}}
       
       {{/*  TODO esto debería cambiarlo por un articles/article-card.html o algo así   ---->> HECHO, borrar comentario */}}
@@ -13,6 +15,7 @@
 
     {{ end }}
   </section>
+  <hr>
   <hgroup>
     {{ .Content | markdownify }}
     {{/*  {{ .Content }}  */}}
