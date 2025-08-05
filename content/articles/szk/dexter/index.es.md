@@ -1,7 +1,8 @@
 +++
 title = 'Dexter'
-date = '2025-08-05T02:40:58+02:00'
-description = "Homenaje a lo mejor que me ha pasado en la vida"
+# date = '2025-08-05T02:40:58+02:00'
+date = '2009-12-22T02:40:58+02:00'
+description = "Pequeño homenaje a mi mejor amigo"
 lastmod = '2025-08-05T02:40:58+02:00'
 draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
