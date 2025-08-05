@@ -6,7 +6,7 @@ description = "Pequeño homenaje a mi mejor amigo"
 lastmod = '2025-08-05T02:40:58+02:00'
 draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
-# keywords = [""] # custom keywords for the page
+keywords = ["szk", "dexter"] # custom keywords for the page
 tags = ["szk", "dexter"]
 # main_classes = 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 # # -------- DISPLAY OPTIONS --------
