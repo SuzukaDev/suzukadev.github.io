@@ -9,7 +9,10 @@
       
       {{/*  TODO esto debería cambiarlo por un articles/article-card.html o algo así   ---->> HECHO, borrar comentario */}}
       {{/*  <a href="{{ .RelPermalink }}">{{ .Title }}</a>  */}}
-      {{ partial "articles/article-card.html" . }}
+      {{- /*  Do NOT show empty sections (with any page (or in draft))  */ -}}
+      {{- if not (and (.IsSection) (eq (len .Pages) 0)) -}}
+        {{ partial "articles/article-card.html" . }}
+      {{- end -}}
       {{/*  <p>{{.Summary}}</p>  */}}
 
 
