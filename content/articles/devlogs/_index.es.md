@@ -1,5 +1,5 @@
 +++
-title = 'Devlogs'
+title = 'Devlogs 📐'
 date = '2025-08-07T02:39:35+02:00'
 description = "Tutoriales, procesos, etc."
 lastmod = '2025-08-07T02:39:35+02:00'
@@ -10,7 +10,8 @@ private = false # If true, the article wont be listed and will only be visible b
 # main_classes = 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 
 # # -------- DISPLAY OPTIONS --------
-# accent_color = "#ff168a" # customize the color for links, etc in the page
+# accent_color = "rgba(22, 255, 243, 0.41)" # customize the color for links, etc in the page
+accent_color = "rgb(255, 201, 22)" # customize the color for links, etc in the page
 # feature_image_background_color = "#ff168a" # If the featured_image has transparency, change this color for customizing the background color (default: transparent)
 # show_breadcrumbs = false
 # show_description = false
@@ -43,7 +44,7 @@ show_right_bar = true
 +++
 
 
-{{< box_warning >}}
-Página no traducida (de momento). Para leer el artículo, [visita la página en inglés]({{% relref path="devlog" lang="en" %}}).
+<!-- {{< box_warning >}}
+Página no traducida (de momento). Para leer el artículo, [visita la página en inglés]({{% relref path="devlogs" lang="en" %}}).
 {{< /box_warning >}}
-
+ -->

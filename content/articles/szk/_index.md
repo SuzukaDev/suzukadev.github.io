@@ -1,5 +1,6 @@
 +++
-title = 'Suzuka Ka'
+# title = 'Suzuka Ka 🍀🐲🐻👽🐌🐺🐶'
+title = 'Suzuka Ka 🍀'
 date = '2025-05-18T13:21:55+02:00'
 description = "About me, my music, etc."
 lastmod = '2025-05-18T13:21:55+02:00'

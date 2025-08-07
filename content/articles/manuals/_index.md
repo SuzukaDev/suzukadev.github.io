@@ -1,5 +1,5 @@
 +++
-title = 'Manuals'
+title = 'Manuals 📘'
 date = '2025-05-18T13:21:55+02:00'
 description = "Manuals & Documentation for some [**software, plugins, addons, etc. I've done**](https://orb91.gumroad.com/)."
 lastmod = '2025-05-18T13:21:55+02:00'

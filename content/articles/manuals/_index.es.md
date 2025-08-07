@@ -1,5 +1,5 @@
 +++
-title = 'Manuales'
+title = 'Manuales 📘'
 date = '2025-05-18T13:21:55+02:00'
 # description = "Manuales y documentación."
 description = "Manuales & Documentación de algunos [**programas, *plugins*, *addons*, etc. que he hecho**](https://orb91.gumroad.com/)."

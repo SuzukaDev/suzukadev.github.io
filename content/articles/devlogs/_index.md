@@ -1,5 +1,5 @@
 +++
-title = 'Devlogs'
+title = 'Devlogs 📐'
 date = '2025-08-07T02:39:35+02:00'
 # description = "Processes, art tutorials, blog, etc."
 description = "Blog posts on art, code, and making things."
@@ -12,6 +12,8 @@ private = false # If true, the article wont be listed and will only be visible b
 
 # # -------- DISPLAY OPTIONS --------
 # accent_color = "#ff168a" # customize the color for links, etc in the page
+# accent_color = "rgba(22, 255, 243, 0.41)" # customize the color for links, etc in the page
+accent_color = "rgb(255, 201, 22)" # customize the color for links, etc in the page
 # feature_image_background_color = "#ff168a" # If the featured_image has transparency, change this color for customizing the background color (default: transparent)
 # show_breadcrumbs = false
 # show_description = false
@@ -43,6 +45,6 @@ show_right_bar = true
 # sort_order = "asc" # Options: "desc", "asc" (descendant, ascendant (Default: "desc"))
 +++
 
-{{< box_warning >}}
-Page not translated (at the moment). For reading the article, [visit the spanish version]({{% relref path="devlog" lang="es" %}}).
-{{< /box_warning >}}
+<!-- {{< box_warning >}}
+Page not translated (at the moment). For reading the article, [visit the spanish version]({{% relref path="devlogs" lang="es" %}}).
+{{< /box_warning >}} -->
