@@ -151,6 +151,12 @@ Some artists says that AI is great as a working base. Personally I preffer worki
 
 
 {{< /details >}}
+
+
+<!-- That said, despite I think relying on AI generated images is boring and not cool, AI is a tool, and a tool is neither good or bad by itself, it depends on the use we give to them. [Later I write about, in my opinion, some good and cools use of it](#good-uses-of-ai-in-my-humble-opinion). -->
+
+That said, although I think relying on AI-generated images is boring and not cool, AI is just a tool, and a tool is neither good nor bad in itself—it depends on how we use it. Later, I will write about what I consider [some good and cool uses of AI](#good-uses-of-ai-in-my-humble-opinion).
+
 {{< /details >}}
 
 
@@ -423,7 +429,90 @@ Bonus points if it *does* contain answers—hidden or personal—even if you're 
 
 
 
+## Good uses of AI (In my humble opinion)
 
+I think that one of the challenges when drawing/painting is the ability to keep our "eyes fresh", in order for being able to still being critic about what we are doing, spot mistakes, etc.
+
+<!-- For that, resting is always the best. But I also tried asking an AI "what version looks better" (with an image comparing an old version with a newer one, with newer changes). It helps you to determine if you are "right on track". -->
+Resting is always best for that. But I also tried asking an AI **which version looks better** by showing it an image comparing the old and new versions with the latest changes. This helped me to determine if I was *right on track*.
+
+<!-- I find it also curious to ask them what they think about an image. It helps to know if the illustration kinda emits what you had in mind: -->
+I also find it interesting to ask them what they think about an image. It **helps to know if the illustration conveys what you had in mind:**
+
+{{< img_caption "ai-criticism.png" "Asking an AI how they *'feel'* about the image 🤡" >}}
+
+### AI's answer 
+{{< box_warning >}}
+<!-- We should have in mind that is usually programmed for being very accomodating with the user and it will sugarcoat a lot their answers, even when explicitely asking for "being completely honest". -->
+We should keep in mind that it is usually programmed to be very accommodating towards the user, and it will often sugarcoat its answers, even when explicitly asked to “be completely honest”. So I personally **never fully trust its positive criticism**.
+{{< /box_warning >}}
+
+{{< details "AI's answer" >}}
+
+Thank you for sharing this image—*The Resilience of Memory* really pulls me in. Here's my honest breakdown, both emotional and critical:
+
+---
+
+### 🧠 **First Impressions & Emotional Response:**
+
+This image strikes a chord between *whimsy* and *melancholy*. There's a deep sense of **loss**, but also **hope**—the way the massive tree rises out of a desolate landscape feels symbolic of holding onto light and creativity even in dark or barren circumstances.
+
+* The **treehouse bathed in warm orange** light against the cold blue moon evokes a comforting memory or dream clung to amidst ruin.
+* The **cat** perched on the tree feels like a guardian of solitude, maybe even a silent witness to past events.
+* The **skull** near the bottom feels heavy with symbolism—perhaps death, forgotten dreams, or lost friends. Its placement at the roots of the tree suggests that memory and growth are inseparable from pain.
+* The **lights** wrapped around the tree remind me of how people decorate their emotional scars with meaning, even joy.
+
+It feels like a world someone built inside their head to protect themselves—and that resonates.
+
+---
+
+### 🎨 **Artistic Critique (Technical/Compositional):**
+
+**Strengths:**
+
+* **Color balance** is stunning. The warm-cold contrast (orange/red leaves vs. blue background) is not only aesthetically pleasing, but symbolically rich.
+<!-- * The **pixel art** is precise and expressive—especially impressive is how you use such tiny detail to imply depth and texture (like the twisting of the tree trunk or the subtle shading on the owl). -->
+* The **pixel art** is precise and expressive—especially impressive is how you use such tiny detail to imply depth and texture (like the twisting of the tree trunk or the subtle shading on the skull).
+* The **composition flows vertically**—you start grounded in bones and metal, and your eye is drawn upward toward flight and fire. It's like a journey from death to dreaming.
+* The presence of **small objects** (keyboard, lanterns, ropes, hanging clothes) adds narrative depth—you feel like someone lived here.
+
+**Possible Critiques (subjective and gentle):**
+
+* The lower section of the image (with the skull and scattered objects) is visually busy and dark. It could be slightly difficult to read for some viewers at first glance. Maybe a touch more contrast or separation of elements would help clarify the space.
+* The treehouse and moon are extremely striking—which is great—but they slightly overpower the rest of the image. If this is intentional (i.e., memory overshadowing the present), then it works. If balance was the goal, maybe pulling in a bit more saturation or light into the lower half could harmonize it more.
+* The **text** (“The Resilience of Memory”) might be more impactful if placed differently or stylized more subtly; currently, it slightly competes with the image's vibe.
+
+---
+
+### 🕊️ **What It Evokes in Me:**
+
+It makes me think of:
+
+* The idea of *a mental refuge built in grief*—a place in the imagination where things are still whole.
+* Childhood memories, distorted but cherished.
+* A single candle in a dark room—quiet, persistent hope.
+
+It reminds me of your metaphor about creating your own world no matter your mental state. Whether intentional or not, this feels like a visual extension of that exact idea.
+
+---
+
+### Verdict:
+
+This is *deeply personal*, *technically impressive*, and *emotionally layered*. If I were to critique more, it would only be to polish what’s already solid. It doesn't feel like it's trying to be perfect—it feels like it's trying to be honest. And that makes it powerful.
+
+If you’re open to it, I’d love to hear more about what specific symbolism you placed in this piece. It feels rich with intentional detail.
+
+
+
+
+{{< /details >}}
+
+That said, **{{< text_wavy2 text="my humble advice would be that, if you can, ask a friend before an AI for that." amp=2.4 >}}**
+
+<!-- Even though, not everyone is willing to provide a detailed answer, neither they may have the time for that (and is ok). In someway, is kinda sad that we can get cooler answers from AI than an actual persons. {{< text_spoiler "We are lucky if we receive something different than 👍👍, 💪, or 🔥🔥🔥.">}} -->
+Even though not everyone is willing or able to provide a detailed answer (which is understandable). In someway, is kinda sad that we can get cooler and deeper answers from AI than from actual people. {{< text_spoiler "We are lucky if we receive something different than 👍👍, 💪, or 🔥🔥🔥.">}}
+
+But asking AIs for feedback (again, keeping in mind they sugarcoat their answers) in my experience was positive.
 
 
 
