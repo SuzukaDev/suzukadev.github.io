@@ -554,10 +554,11 @@ There were a **few seconds** at the start that were recorded at half size, so th
     style="border:none;">
 </iframe> -->
 
+## Animation
 
 <iframe 
     src="/illustrations/trom/index.html" 
     width="360" 
     height="640" 
-    style="border:none;">
+    style="border:none;" loading="lazy">
 </iframe>
