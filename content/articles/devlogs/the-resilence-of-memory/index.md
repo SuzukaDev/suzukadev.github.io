@@ -3,7 +3,7 @@ title = 'The Resilence of Memory (Process)'
 date = '2025-07-19T21:45:49+02:00'
 description = "Pixel Art illustration process"
 lastmod = '2025-07-19T21:45:49+02:00'
-draft = true # if true (or not set), the page will be excluded in build
+# draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
 # keywords = [""] # custom keywords for the page
 tags = ["illustration", "process", "pixel art"]
@@ -534,3 +534,30 @@ There were a **few seconds** at the start that were recorded at half size, so th
 
 {{< img_caption img="trom-x1.png" class="no-box-shadow" text="Original resolution: 180x320 px (Without the frame)" >}}
 {{< img_caption img="TRoM-frame.png" class="no-box-shadow" >}}
+
+
+
+
+<!-- <iframe 
+    src="http://localhost:1313/apps/deck-motif/Deck Motif.html" 
+    width="960" 
+    height="540" 
+    style="border:none;">
+</iframe> -->
+
+
+<!-- 
+<iframe 
+    src="/apps/deck-motif/Deck Motif.html" 
+    width="auto" 
+    height="100%" 
+    style="border:none;">
+</iframe> -->
+
+
+<iframe 
+    src="/illustrations/trom/index.html" 
+    width="360" 
+    height="640" 
+    style="border:none;">
+</iframe>
