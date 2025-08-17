@@ -4,6 +4,11 @@
 	box-shadow: #{$x} #{$y} #{$blur} #{$spread} #{$color} !important;
 }
 
+.pixel-art{
+	image-rendering: pixelated;
+  	image-rendering: crisp-edges; /* fallback for some browsers */
+}
+
 .no-display{
 	display: none;
 }
