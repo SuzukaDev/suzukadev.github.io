@@ -9,7 +9,8 @@ url = (string) Add an url to open when clicking the image. Default: ""
 page = (string) Page to open when clicking the image. Default: ""
 italic = (bool) If true, caption will be in italics. Default: true
 class = (string) Class (or classes) for the <img> element. Tip: use the class 'no-box-shadow' if you want the img to NOT have the shadow around it.
-style = (string) CSS style for the <figure> element. Default: ""
+css/style = (string) CSS style for the <figure> element. Default: ""
+css-image/style-image = (string) CSS style for the <img> element. Default: ""
 resize = (string) Resizes the image. See https://gohugo.io/content-management/image-processing/#resize 
 
 Usage:
@@ -25,7 +26,8 @@ With resize:
 {{- $url := or (.Get "url") (.Get 3) | default "" -}}
 {{- $page_name := or (.Get "page") (.Get 3) | default "" -}}
 {{- $italic := (.Get "italic") | default true -}}
-{{- $element_style := (.Get "style") | default "" -}}
+{{- $element_style := or (.Get "css") (.Get "style") | default "" -}}
+{{- $img_css := or (.Get "css-image") (.Get "style-image") | default "" -}}
 {{- $img_class := (.Get "class") -}}
 {{- $resize := (.Get "resize") -}}
 
@@ -70,7 +72,7 @@ With resize:
 <figure class="figure-caption" {{- with $element_style}} style="{{. | safeCSS}}"{{end}}>
     {{- if $a_link -}}<a class="img-link" target="_blank" rel="noopener noreferrer" href="{{$a_link}}">{{- end -}}
     {{- /*  <img {{ with $img_class }} class="{{.}}"{{- end -}} src="{{- $img_url -}}" loading="lazy" width="{{$image_resource.Width}}" height="{{$image_resource.Height}}" alt="{{$alt_text}}">  */ -}}
-    <img {{ with $img_class }} class="{{.}}"{{- end -}} src="{{- $img_url -}}" loading="lazy" {{with $image_resource}}width="{{.Width}}" height="{{.Height}}"{{end}} alt="{{$alt_text}}">
+    <img {{ with $img_class }} class="{{.}}"{{- end -}} src="{{- $img_url -}}" loading="lazy" {{with $image_resource}}width="{{.Width}}" height="{{.Height}}"{{end}} alt="{{$alt_text}}" {{with $img_css}}style='{{.|safeCSS}}'{{end}}>
     {{- /*  <img src="{{- $img_url -}}" loading="lazy" {{- partial "utils/img-attributes-from-resource.html" (dict "page" .Page "img_path" $img_path) }} alt="{{$alt_text}}">  */ -}}
     {{- /*  <{{ $tag }} style="opacity: .6;">{{- $caption -}}</{{ $tag }}>  */ -}}
     {{- if $caption -}}
