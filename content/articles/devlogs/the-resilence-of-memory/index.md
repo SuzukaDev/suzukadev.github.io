@@ -444,7 +444,7 @@ I also find it interesting to ask them what they think about an image. It **help
 ### AI's answer 
 {{< box_warning >}}
 <!-- We should have in mind that is usually programmed for being very accomodating with the user and it will sugarcoat a lot their answers, even when explicitely asking for "being completely honest". -->
-We should keep in mind that it is usually programmed to be very accommodating towards the user, and it will often sugarcoat its answers, even when explicitly asked to “be completely honest”. So I personally **never fully trust its positive criticism**.
+We should keep in mind that it is usually programmed to be very accommodating towards the user, and it will often sugarcoat its answers, even when explicitly asked to “be completely honest”. So I personally **<u>never fully trust its positive criticism</u>**.
 {{< /box_warning >}}
 
 {{< details "AI's answer" >}}
@@ -492,7 +492,7 @@ It makes me think of:
 * Childhood memories, distorted but cherished.
 * A single candle in a dark room—quiet, persistent hope.
 
-It reminds me of your metaphor about creating your own world no matter your mental state. Whether intentional or not, this feels like a visual extension of that exact idea.
+<!-- It reminds me of your metaphor about creating your own world no matter your mental state. Whether intentional or not, this feels like a visual extension of that exact idea. -->
 
 ---
 
@@ -521,10 +521,10 @@ But asking AIs for feedback (again, keeping in mind they sugarcoat their answers
 
 Here is the complete process:
 
-{{< box_warning >}}
+{{< box_info >}}
 <!-- There were a **few seconds** at the start that were recorded at half size so they are a bit blurry. -->
-There were a **few seconds** at the start that were recorded at half size, so they appear a bit blurry.
-{{< /box_warning >}}
+There are a **few seconds** at the start that were recorded at half size, so they appear a bit blurry.
+{{< /box_info >}}
 
 {{< video video="TRoM - La Verdad.mp4" css="height: 90vh" >}}
 
@@ -533,7 +533,8 @@ There were a **few seconds** at the start that were recorded at half size, so th
 # Final Result
 
 {{< img_caption img="trom-x1.png" class="no-box-shadow" text="Original resolution: 180x320 px (Without the frame)" >}}
-{{< img_caption img="TRoM-frame.png" class="no-box-shadow" >}}
+
+{{< img_caption img="TRoM-frame.png" class="no-box-shadow" css-image="height:100vh; width: auto;" >}}
 
 
 
@@ -556,9 +557,99 @@ There were a **few seconds** at the start that were recorded at half size, so th
 
 ## Animation
 
-<iframe 
+{{< video v="TRoM-720x1280-x4-60fps-v3-lights.mp4" class="pixel-art" c=false css="height: 95vh" autoplay=true loop=true >}}
+
+<!-- {{< video v="TRoM-720x1280-x4-60fps-v3-lights-s.mp4" class="pixel-art" c=false css="height: 95vh" autoplay=true loop=true >}} -->
+
+<!-- {{< video v="TRoM-720x1280-x4-60fps.mp4" class="pixel-art" c=false css="height: 95vh" autoplay=true loop=true >}} -->
+
+<!-- {{< video v="TRoM-Final-Lossless-x3.mp4" class="pixel-art" c=false css="height: 95vh" autoplay=true loop=true >}} -->
+
+<!-- ### Video -->
+
+<!-- Loop: -->
+
+<!-- autoplay -->
+
+<!-- {{< video v="test loop.mp4" class="pixel-art" c=true css="height: 100vh" autoplay=true >}} -->
+<!-- {{< video "test loop.mp4" true true >}} -->
+<!-- {{< video v="TRoM-Final-x3.mp4" class="pixel-art" c=false css="height: 100vh" autoplay=true loop=true >}} -->
+
+<!-- {{< video v="TRoM-FINAL x1.mp4" class="pixel-art" c=false css="height: 100vh" autoplay=true >}} -->
+
+<!-- {{< video v="TRoM-filter x1.mp4" class="pixel-art" c=false css="height: 100vh" autoplay=true >}} -->
+<!-- {{< video v="TRoM - La Verdad.mp4" class="pixel-art" c=true css="width: 100vw" autoplay=true muted=true >}} -->
+<!-- {{< video "TRoM - La Verdad.mp4" true true >}} -->
+
+<!-- {{< video "test loop.mp4" true true >}} -->
+
+
+<!-- {{< video "TROM- x3.mp4" true true >}} -->
+
+<!-- x1 -->
+
+<!-- {{< video "x1.mp4" true true >}} -->
+
+
+<!-- ## ixio -->
+<!-- <iframe frameborder="0" src="https://itch.io/embed-upload/14660342?color=333333" allowfullscreen="" width="540" height="980"><a href="https://suzuka.itch.io/the-resilence-of-memory-animated-illustration">Play The Resilence of Memory (Animated Illustration) on itch.io</a></iframe> -->
+
+<!-- ### G4 a que cojones es esto -->
+
+<!-- <iframe 
     src="/illustrations/trom/index.html" 
     width="360" 
     height="640" 
     style="border:none;" loading="lazy">
-</iframe>
+</iframe> -->
+
+<!-- #### Custom template small -->
+
+<!-- ##### Web -->
+<!-- <iframe 
+    src="/illustrations/trom-custom-template-2/index.html" 
+    width="360" 
+    height="640" 
+    style="border:none;" loading="lazy">
+</iframe> -->
+
+<!-- ##### Itchio -->
+<!-- <iframe frameborder="0" src="https://itch.io/embed-upload/14663353?color=333333" allowfullscreen="" width="540" height="980"><a href="https://suzuka.itch.io/the-resilence-of-memory-animated-illustration">Play The Resilence of Memory (Animated Illustration) on itch.io</a></iframe> -->
+
+<!-- ### LITE -->
+<!-- <iframe 
+    src="/illustrations/trom-lite/index.html" 
+    width="360" 
+    height="640" 
+    style="border:none;" loading="lazy">
+</iframe> -->
+
+
+<!-- ### G3 -->
+
+<!-- <iframe 
+    src="/illustrations/trom-godot3/index.html" 
+    width="360" 
+    height="640" 
+    style="border:none;" loading="lazy">
+</iframe> -->
+
+<!-- <iframe 
+    src="/apps/deck-motif/Deck Motif.html" 
+    width="360" 
+    height="640" 
+    style="border:none;" loading="lazy">
+</iframe> -->
+
+
+<!-- # tutube -->
+
+<!-- <iframe frameborder="0" src="https://itch.io/embed/1225029" width="552" height="167"><a href="https://suzuka.itch.io/youtube-anonymous-playlist">Youtube Anonymous Playlist by Suzuka</a></iframe> -->
+
+
+<!-- <iframe frameborder="0" src="https://itch.io/embed-upload/4572441?color=1d232d" allowfullscreen="" width="700" height="470"><a href="https://suzuka.itch.io/youtube-anonymous-playlist">Play Youtube Anonymous Playlist on itch.io</a></iframe> -->
+
+<!-- <iframe src="https://itch.io/embed-upload/4572441?color=1d232d" allowfullscreen="" width="700" height="470"><a href="https://suzuka.itch.io/youtube-anonymous-playlist">Play Youtube Anonymous Playlist on itch.io</a></iframe=> -->
+
+
+<!-- <iframe frameborder="0" src="https://itch.io/embed-upload/4572441?color=1d232d" allowfullscreen="" width="700" height="470"></iframe> -->
