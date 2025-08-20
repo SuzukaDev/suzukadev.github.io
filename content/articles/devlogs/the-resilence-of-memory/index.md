@@ -58,7 +58,7 @@ This illustration was important for me for 3 different reasons:
 <!-- # Reasons -->
 
 
-## SZK Pixel Art Suite for Krita
+## Testing SZK Pixel Art Suite for Krita
 
 This is a plugin that **adds every tool and feature for Pixel Art that I've always missed** in Krita. <u>Making Krita definitely my absolute favourite tool for making Pixel Art!</u>
 
@@ -112,6 +112,7 @@ The palette I used was built with the help of the [color shading tool]({{< relre
 <!-- Also, the [export tool]({{< relref "szk-krita-pixel-art-suite.md#export-tab" >}}) was great for easily saving different snapshots along the process and of course the [final result](#final-result). -->
 Also, the [export tool]({{< relref "szk-krita-pixel-art-suite.md#export-tab" >}}) was great for easily saving different snapshots throughout the process, and of course, the [final result](#final-result).
 
+I also included some useful options having game development in mind for easily export layers/groups, trim them, etc. in order to make it easy to export assets into game engines. [This features were useful when making the animation](#animation).
 
 ## About AI
 
@@ -187,7 +188,11 @@ It's called ***The Resilience of Memory*** because I believe memory itself is a 
 There's something deeply uplifting about simply remembering—who we are, who we were, and the moments that once made us feel truly alive. Especially in times when we feel lost, memory can ground us.
 
 <!-- I also named it this way because I recently lost my dog and best friend, Dexter. Though I can no longer see him, he lives on vividly in my memory. He’s still with me—in every place we visited, every shared experience, and every moment of joy we had together. I can summon those memories anytime, and through them, he continues to live on, and I find some relief. -->
-Recently, I lost my dog and best friend, **Dexter**. Though I can no longer see him, he lives on vividly in my memory. He’s still with me—in every place we visited, every shared experience, and every moment of joy we had together. I can summon those memories anytime, and through them, he continues to live on, and I find some relief and strength.
+Recently, I lost my dog and best friend, **Dexter**. Though I can no longer see him, he lives on vividly in my memory. He’s still with me—in every place we visited, every shared experience, and every moment of joy we had together. I can summon those memories anytime, and through them, he continues to live on, and I find some relief and strength, despite they still hurt.
+
+Is also kinda a metaphor of how "powerful" my little buddy was for me. About how he was able to transform any bad situation or circumstance and to provide happiness and my world more colourful and vivid.
+
+{{< img_caption "dex-playa.jpeg" "I love you, Dexter" >}}
 
 
 <!-- I like writing messages, concepts, etc. around my place, to remind myself different things. I think that when we capture a message with an image, the idea becomes more powerful and easier to remind (and also way cooler). -->
@@ -395,7 +400,7 @@ I think the first one is awful, but if I hadn’t made it, I wouldn’t have rea
 
 The same with the ground/rocks near the tree:
 <!-- {{< img_caption "rule-of-2-rocks-scaled.png" >}} -->
-{{< img_caption "rule-of-2-rocks-scaled-transparent.png" "First try (Left), Second Try (Middle), Second Try + Shaded (Right)" >}}
+{{< img_caption class="no-box-shadow" img="rule-of-2-rocks-scaled-transparent.png" caption="First try (Left), Second Try (Middle), Second Try + Shaded (Right)" >}}
 
 <!-- While the first try gave me the "rocky" feeling I was going for, I felt the rocks were not conveying very well the 3D space they were sit into. -->
 <!-- 
@@ -425,7 +430,8 @@ Bonus points if it *does* contain answers—hidden or personal—even if you're 
 
 
 
-{{< quote "Those who tell the stories rule society" "Plato" >}}
+<!-- {{< quote "Those who tell the stories rule society" "Plato" >}} -->
+{{< quote "Those who tell stories rule society" "Plato" >}}
 
 
 
@@ -555,9 +561,42 @@ There are a **few seconds** at the start that were recorded at half size, so the
     style="border:none;">
 </iframe> -->
 
-## Animation
+## Animation Process
+
+I finally exported the illustration into different layers and animated it with [Godot](https://godotengine.org). 
+
+The [export tools in the SZK Pixel Art Suite ]({{< relref "szk-krita-pixel-art-suite.md#export-tab" >}}) were extremely handy. I set the export folder to my Godot's project and it was super easy to tweak everything and export with a click.
+
+<!-- The animation wasn't nothing fancy, just a kind of "iddle" animation. I added some particles to simulate the falling leafs, and some insects/dust/sparks flying around the flame. -->
+
+The animation wasn’t anything fancy, just a kind of idle animation. I added some particles to simulate falling leaves, along with insects/dust/sparks flying around the flame.
+
+This had a custom shader to made the particles only appear depending how close they are to the flame, to fake some lightness.
+
+Then I added some more particles behind the candle and made a shader to imitate that light bending because of the heat.
+
+My favourite part is the light around the candle. I **didn't use** any light or normal map. Is made with a custom shader. I imitated some kind of light swing, just by changing a position with some perlin noise. The surroundings are masked and depending their position and their distance with the candle (wich do not stop swinging), they are more or less brighter.
+
+I took this brighter/distance factor to determine the final color with a color ramp/texture, so the closer the flame, the brighter:
+
+{{< img_caption "gradient-map-light.png" >}}
+
+For higher values, the color becomes warmer and brighter. This creates some little color variations that feels nice:
+
+{{< img_caption "candle-light-variations.png" >}}
+
+
+### Animation
 
 {{< video v="TRoM-720x1280-x4-60fps-v3-lights.mp4" class="pixel-art" c=false css="height: 95vh" autoplay=true loop=true >}}
+
+
+<!-- NOTE -->
+<!-- NOTE -->
+<!-- Las partículas GPU funcionan fatal en HTML (tarda en compilar los shaders 1 minuto!). -->
+<!-- Si Godot arregla eso, puedo poner directamente la ilustración aquí, en vez de el vídeo. Pero de momento, uso solo el vídeo. -->
+<!-- NOTE -->
+<!-- NOTE -->
 
 <!-- {{< video v="TRoM-720x1280-x4-60fps-v3-lights-s.mp4" class="pixel-art" c=false css="height: 95vh" autoplay=true loop=true >}} -->
 
