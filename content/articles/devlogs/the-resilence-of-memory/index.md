@@ -35,6 +35,8 @@ featured_image = 'images/TRoM-frame.png' # local path for the image used as the 
 # related_pages = [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 +++
 
+test
+
 <!-- {{< box_warning >}}
 Page not translated (at the moment). For reading the article, [visit the spanish version]({{% relref path="the-resilence-of-memory" lang="es" %}}).
 {{< /box_warning >}} -->
