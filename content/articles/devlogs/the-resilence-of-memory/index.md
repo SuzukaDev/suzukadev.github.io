@@ -34,7 +34,7 @@ featured_image = 'images/TRoM-frame.png' # local path for the image used as the 
 # featured_tags = [""] # if set, it will only feature the tags in this array (useful to display only some of the tags). Note: Tags must match the tag in .Params.tags
 # related_pages = [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 +++
-a
+
 <!-- {{< box_warning >}}
 Page not translated (at the moment). For reading the article, [visit the spanish version]({{% relref path="the-resilence-of-memory" lang="es" %}}).
 {{< /box_warning >}} -->
