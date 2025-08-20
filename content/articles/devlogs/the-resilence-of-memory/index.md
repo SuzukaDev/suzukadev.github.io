@@ -193,7 +193,7 @@ Recently, I lost my dog and best friend, **Dexter**. Though I can no longer see 
 
 Is also kinda a metaphor of how "powerful" my little buddy was for me. About how he was able to transform any bad situation or circumstance and to provide happiness and my world more colourful and vivid.
 
-{{< img_caption "dex-playa.jpeg" "I love you, Dexter" >}}
+{{< img_caption "dex-playa.jpeg" "Dexter 🖤" >}}
 
 
 <!-- I like writing messages, concepts, etc. around my place, to remind myself different things. I think that when we capture a message with an image, the idea becomes more powerful and easier to remind (and also way cooler). -->
@@ -541,7 +541,7 @@ There are a **few seconds** at the start that were recorded at half size, so the
 
 {{< img_caption img="trom-x1.png" class="no-box-shadow" text="Original resolution: 180x320 px (Without the frame)" >}}
 
-{{< img_caption img="TRoM-frame.png" class="no-box-shadow" css-image="height:100vh; width: auto;" >}}
+{{< img_caption img="TRoM-frame.png" class="no-box-shadow" css-image="height:108vh; width: auto; object-fit:contain;" >}}
 
 
 
@@ -589,7 +589,35 @@ For higher values, the color becomes warmer and brighter. This creates some litt
 
 ### Animation
 
-{{< video v="TRoM-720x1280-x4-60fps-v3-lights.mp4" class="pixel-art" c=false css="height: 95vh" autoplay=true loop=true >}}
+{{< video v="TRoM-720x1280-x4-60fps-v3-lights.mp4" class="pixel-art no-box-shadow" c=false css="height: 95vh" autoplay=true loop=true >}}
+
+
+{{< text_centered >}}
+
+---
+&nbsp;{{< text_wavy2 t="Thank you for reading" amp=5 >}}
+&nbsp;{{< text_wavy2 t="Have a nice day" amp=3 >}}
+
+{{< /text_centered >}}
+
+<!-- --- -->
+{{< link_card 
+  url="https://orb91.gumroad.com/l/szk-krita-pixel-art-suite"
+  cover="k-sprite.png"
+  title="SZK Pixel Art Suite"
+  subtitle="Turns Krita into my absolute favourite Pixel Art editor!"
+  url_text="orb91.gumroad.com"
+  color="#cd5b06"
+  hover_color="#ff83f1"
+  text_color="#f0f0f0"
+  cover_position="90% 0%"
+>}}
+
+
+<!-- {{< row >}} -->
+{{< get_social "twitter" >}}
+<!-- {{< get_social "twitter" >}} {{< get_social "twitter" >}} -->
+<!-- {{< /row >}} -->
 
 
 <!-- NOTE -->

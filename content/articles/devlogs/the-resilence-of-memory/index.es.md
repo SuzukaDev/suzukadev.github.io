@@ -37,6 +37,12 @@ featured_image = 'images/TRoM-frame.png' # local path for the image used as the 
 
 
 {{< box_warning >}}
-Página no traducida (de momento). Para leer el artículo, [visita la página en inglés]({{% relref path="the-resilence-of-memory" lang="en" %}}).
+Página no traducida (de momento). Para leer el artículo, [visita la página en inglés 🇬🇧]({{% relref path="the-resilence-of-memory" lang="en" %}}).
 {{< /box_warning >}}
 
+Si acaso estás leyendo esto, no sabes inglés, y por alguna razón quieres leer el artículo házmelo saber en...:
+
+{{< get_social "twitter" >}}
+{{< get_social "email" >}}
+
+...y puede saque la motivación que no he tenido hasta ahora para traducirla 🐌. 
