@@ -44,6 +44,6 @@ show_right_bar = true
 
 
 {{< box_warning >}}
-Página no traducida (de momento). Para leer el artículo, [visita la página en inglés]({{% relref path="{{.File.ContentBaseName}}" lang="en" %}}).
+Página no traducida (de momento). Para leer el artículo, [visita la página en inglés 🇬🇧]({{% relref path="{{.File.ContentBaseName}}" lang="en" %}}).
 {{< /box_warning >}}
 

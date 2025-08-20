@@ -43,5 +43,5 @@ show_right_bar = true
 +++
 
 {{< box_warning >}}
-Page not translated (at the moment). For reading the article, [visit the spanish version]({{% relref path="{{.File.ContentBaseName}}" lang="es" %}}).
+Page not translated (at the moment). For reading the article, [visit the spanish version 🇪🇸]({{% relref path="{{.File.ContentBaseName}}" lang="es" %}}).
 {{< /box_warning >}}
