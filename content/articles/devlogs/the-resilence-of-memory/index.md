@@ -6,6 +6,7 @@ lastmod = '2025-07-19T21:45:49+02:00'
 # draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
 # keywords = [""] # custom keywords for the page
+keywords = ["illustration", "process", "pixel art", "godot", "gamedev", "krita", "szk pixel art suite"]
 tags = ["illustration", "process", "pixel art"]
 # main_classes = 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 # # -------- DISPLAY OPTIONS --------
