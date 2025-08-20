@@ -15,7 +15,7 @@ Usage:
 */ -}}
 {{- /*  REFACTOR text_wavy  */ -}}
 
-{{- $text_input := or (.Get "text") (.Get 0) -}}
+{{- $text_input := or (.Get "text") (.Get "t") (.Get 0) -}}
 {{- $chars := split $text_input "" -}}
 
 {{- $total_chars := len $chars -}}
