@@ -36,7 +36,7 @@ show_right_bar = true
 
 {{< youtube "ars3MgcM8Nc" >}}
 
-{{< audio src="music-production-reel-2-recortando.mp3" title="Music Production Reel (30 songs)" cover="reel-cover" color="#4E72A2FF" >}}
+{{< audio src="music-production-reel-2-recortando.mp3" title="Music Production Reel (30 canciones)" cover="reel-cover" color="#4E72A2FF" >}}
 
 <!-- {{< audio src="suzuka-the-wayback-master-4.mp3" title="The Wayback" text_color="#A71866FF" pos="50% 45%" >}} -->
 
