@@ -3,7 +3,7 @@ title = 'The Resilence of Memory (Process)'
 date = '2025-07-19T21:45:49+02:00'
 description = "Pixel Art illustration process"
 lastmod = '2025-07-19T21:45:49+02:00'
-draft = true # if true (or not set), the page will be excluded in build
+# draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
 # keywords = [""] # custom keywords for the page
 keywords = ["illustration", "process", "pixel art", "godot", "gamedev", "krita", "szk pixel art suite"]
@@ -589,7 +589,9 @@ For higher values, the color becomes warmer and brighter. This creates some litt
 
 ### Animation
 
-{{< video v="TRoM-720x1280-x4-60fps-v3-lights.mp4" class="pixel-art no-box-shadow" c=false css="height: 95vh" autoplay=true loop=true >}}
+<!-- {{< video v="TRoM-720x1280-x4-60fps-v3-lights.mp4" class="pixel-art no-box-shadow" c=false css="height: 95vh" autoplay=true loop=true >}} -->
+
+{{< video v="TRoM-720x1280-x4-60fps-v4-wind.mp4" class="pixel-art no-box-shadow" c=false css="height: 95vh" autoplay=true loop=true >}}
 
 
 {{< text_centered >}}
