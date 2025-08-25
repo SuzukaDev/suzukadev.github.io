@@ -1100,6 +1100,7 @@ For enabling it:
 
 {{< img_caption "LUT-Management-problem.png" >}}
 
+
 <br>
 
 {{< box_info >}}
