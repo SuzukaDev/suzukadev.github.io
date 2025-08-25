@@ -1092,7 +1092,7 @@ For solving it, [get a newer version of Krita](https://krita.org/en/download/).
 
 > When I select a color in Krita, and paint in K-Sprite, the color changes.
 
-K-Sprite needs LUT Management to be enabled.
+K-Sprite needs **LUT Management to be enabled**.
 
 For enabling it:
 

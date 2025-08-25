@@ -1043,7 +1043,7 @@ El plugin usa algunas funcionalidades nuevas de Python. Para solucionarlo, [desc
 
 > Cuando selecciono un color en Krita y pinto en K-Sprite, el color no es el mismo.
 
-K-Sprite necesita que el **LUT Management** esté activado.
+K-Sprite necesita que el **LUT Management esté activado**.
 
 Para activarlo:
 
