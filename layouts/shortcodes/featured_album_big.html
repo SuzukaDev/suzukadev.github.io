@@ -39,7 +39,8 @@ Use example:
 
 {{- $image_resource := "" -}}
 {{- if $image_path -}}
-	{{- $image_resource = $album_page.Resources.Get $image_path -}}
+	{{- /*  {{- $image_resource = $album_page.Resources.Get $image_path -}}  */ -}}
+	{{- $image_resource = $album_page.Resources.GetMatch (printf "**%s**" $image_path ) -}}
 	{{- /*  {{- $image_resource = .album_page.Resources.GetMatch $image_path -}}  */ -}}
 	{{- if not $image_resource -}}
 		{{- errorf "SHORTCODE featured_album_big: image '%s' not found at page '%s' (in '%s' at '%s' in '%s')" $image_path $album_page.Name .Page.Name .Page.File.Path .Page.Path }}
