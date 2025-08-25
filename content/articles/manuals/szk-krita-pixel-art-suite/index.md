@@ -1072,6 +1072,13 @@ Export Scaled Pixel Art (Full Document) (SZK Pixel Art Suite) | (Not set)
 Export Scaled Pixel Art (Selected Layers) (SZK Pixel Art Suite) | (Not set)
 
 
+# Troubleshooting
+
+{{< details "Colors do not match" >}}
+
+{{< /details >}}
+
+
 # Credits
 
 **Fonts** used:

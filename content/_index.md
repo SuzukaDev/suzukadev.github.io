@@ -56,7 +56,7 @@ Read more **[about me]({{< relref "about-me.md" >}})** or [**check my work here*
 
 <!-- {{< album_categories title="3d-art, 2d-art" title="My favourite albums" align="right" >}} -->
 
-{{< featured_album_big album="galleries/art/2d/pixel-art" cover="images/the-resilence-of-memory.png" pos1="50% 100%" pos2="50% 0%" zoom1="100%" zoom2="100%" t1="10s" t2="2.5s" >}}
+{{< featured_album_big album="galleries/art/2d/pixel-art" cover="the-resilence-of-memory.png" pos1="50% 100%" pos2="50% 0%" zoom1="100%" zoom2="100%" t1="10s" t2="2.5s" >}}
 
 {{< featured_albums albums="traditional-art, galleries/art/3d" >}}
 

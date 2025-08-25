@@ -53,7 +53,7 @@ Lee más [**sobre mí**]({{< relref "about-me.md" >}}) o [**echa un vistazo a mi
 <!-- Ingeniero multimedia 🧠 y desarrollador de videojuegos {{< text_wavy text="multidisciplinario" time="1.0" freq="0.1" amp="5">}} 🎮 al que le molan bastante las artes 🎨. -->
 
 
-{{< featured_album_big album="galleries/art/2d/pixel-art" cover="images/the-resilence-of-memory.png" pos1="50% 100%" pos2="50% 0%" zoom1="100%" zoom2="100%" t1="10s" t2="2.5s" >}}
+{{< featured_album_big album="galleries/art/2d/pixel-art" cover="the-resilence-of-memory.png" pos1="50% 100%" pos2="50% 0%" zoom1="100%" zoom2="100%" t1="10s" t2="2.5s" >}}
 
 {{< featured_albums albums="traditional-art, galleries/art/3d" >}}
 
