@@ -1072,12 +1072,42 @@ Export Scaled Pixel Art (Full Document) (SZK Pixel Art Suite) | (Not set)
 Export Scaled Pixel Art (Selected Layers) (SZK Pixel Art Suite) | (Not set)
 
 
-# Troubleshooting
+# Troubleshooting 🔧
 
-{{< details "Colors do not match" >}}
+{{< details "I can't activate the Plugin 💡" >}}
+
+> I can't activate the plugin, the text is grey, and when I hover I get the error `Could not import szk_pixel_art_suite`
+>{{< img_caption "python-error2.png" >}}
+
+This is because you are using a **very old version of Krita** that doesn't support some new Python's features that the plugin use.
+
+For solving it, [get a newer version of Krita](https://krita.org/en/download/).
+
 
 {{< /details >}}
 
+
+
+{{< details "Colors do not match in K-Sprite 🎨" >}}
+
+> When I select a color in Krita, and paint in K-Sprite, the color changes.
+
+K-Sprite needs LUT Management to be enabled.
+
+For enabling it:
+
+    Settings -> Dockers -> LUT Management, and press "Use OpenColorIO"
+
+{{< img_caption "LUT-Management-problem.png" >}}
+<br>
+
+{{< box_info >}}
+<!-- This is something I'm **currently working on it for solving it**. -->
+
+I’m **currently working** on solving this.
+{{< /box_info >}}
+
+{{< /details >}}
 
 # Credits
 

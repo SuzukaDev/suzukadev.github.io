@@ -1023,6 +1023,48 @@ Export Scaled Pixel Art (Full Document) (SZK Pixel Art Suite) | (Sin asignar)
 Export Scaled Pixel Art (Selected Layers) (SZK Pixel Art Suite) | (Sin asignar)
 
 
+# Solución de problemas 🔧
+
+{{< details "No puedo activar el Plugin 💡" >}}
+
+> No puedo activar el plugin en la pantalla de opciones. Éste se muestra desactivado, y cuando mantengo el ratón sobre él sale el mensaje `Could not import szk_pixel_art_suite` (No se ha podido importar szk_pixel_art_suite)
+>{{< img_caption "python-error2.png" >}}
+
+Esto sucede porque estás usando una **versión muy vieja de Krita** que incluye una versión de Python desfasada. 
+
+El plugin usa algunas funcionalidades nuevas de Python. Para solucionarlo, [descarga una versión más reciente de Krita](https://krita.org/es/download/).
+
+
+
+{{< /details >}}
+
+
+{{< details "Los colores cambian cuando pinto en K-Sprite 🎨" >}}
+
+> Cuando selecciono un color en Krita y pinto en K-Sprite, el color no es el mismo.
+
+K-Sprite necesita que el **LUT Management** esté activado.
+
+Para activarlo:
+
+    Settings -> Dockers -> LUT Management, y pulsa "Use OpenColorIO"
+
+{{< img_caption "LUT-Management-problem.png" >}}
+<br>
+
+{{< box_info >}}
+
+Actualmente estoy trabajando en solucionar esto.
+{{< /box_info >}}
+
+{{< /details >}}
+
+
+
+
+
+
+
 # Creditos
 
 **Fuentes** usadas:
