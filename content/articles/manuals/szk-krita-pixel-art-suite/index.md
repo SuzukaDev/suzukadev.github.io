@@ -1099,6 +1099,7 @@ For enabling it:
     Settings -> Dockers -> LUT Management, and press "Use OpenColorIO"
 
 {{< img_caption "LUT-Management-problem.png" >}}
+
 <br>
 
 {{< box_info >}}
