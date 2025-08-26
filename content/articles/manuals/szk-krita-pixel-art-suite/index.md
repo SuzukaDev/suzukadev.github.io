@@ -1092,7 +1092,20 @@ For solving it, [get a newer version of Krita](https://krita.org/en/download/).
 
 > When I select a color in Krita, and paint in K-Sprite, the color changes.
 
-K-Sprite needs **LUT Management to be enabled**.
+Make sure you have **disabled** the option "*Color Selector Uses Different Color Space than Image*" in the color wheel settings:
+
+{{< img_caption "m1-color-problem.webp" >}}
+
+<br>
+
+{{< box_warning >}}
+
+If it is enabled, the color you select in the color wheel will be converted to another color space, giving a wrong tone as a result:
+
+{{< video "m1-color-problem.mp4" >}}
+{{< /box_warning >}}
+
+<!-- K-Sprite needs **LUT Management to be enabled**.
 
 For enabling it:
 
@@ -1104,10 +1117,9 @@ For enabling it:
 <br>
 
 {{< box_info >}}
-<!-- This is something I'm **currently working on it for solving it**. -->
 
 I’m **currently working** on solving this.
-{{< /box_info >}}
+{{< /box_info >}} -->
 
 {{< /details >}}
 

@@ -1042,8 +1042,22 @@ El plugin usa algunas funcionalidades nuevas de Python. Para solucionarlo, [desc
 {{< details "Los colores cambian cuando pinto en K-Sprite 🎨" >}}
 
 > Cuando selecciono un color en Krita y pinto en K-Sprite, el color no es el mismo.
+<!-- > {{< video "m1-color-problem.mp4" >}} -->
 
-K-Sprite necesita que el **LUT Management esté activado**.
+Asegúrate de que tienes **desactivada** la opción de que "*El selector de color usa un espacio de color distinto a la imagen*":
+
+{{< img_caption "m1-color-problem.webp" >}}
+
+<br>
+
+{{< box_warning >}}
+
+Si está activado, el color que selecciones en la rueda de color se transformará a otro espacio de color, dando un tono erróneo:
+
+{{< video "m1-color-problem.mp4" >}}
+{{< /box_warning >}}
+
+<!-- K-Sprite necesita que el **LUT Management esté activado**.
 
 Para activarlo:
 
@@ -1055,7 +1069,9 @@ Para activarlo:
 {{< box_info >}}
 
 Actualmente estoy trabajando en solucionar esto.
-{{< /box_info >}}
+{{< /box_info >}} -->
+
+
 
 {{< /details >}}
 
@@ -1065,7 +1081,7 @@ Actualmente estoy trabajando en solucionar esto.
 
 
 
-# Creditos
+# Créditos
 
 **Fuentes** usadas:
 
