@@ -21,42 +21,42 @@ Example:
 {{< video v="my_video.mp4" auto=true css="width:100vw" >}} -> Makes the video to occupy 100% of the viewport's width
 */}}
 
-{{ $_video_url := (or (.Get 0) (.Get "url") (.Get "video") (.Get "v") (.Get "path")) }}
-{{/*  {{ $controls := .Get 1 | default true }}  */}}
-{{ $autoplay_flag := (or (.Get 1) (.Get "autoplay") (.Get "auto")) | default false }}
-{{- /*  {{ $controls_flag := (or (.Get 2) (.Get "controls") (.Get "c")) | default true }}  */ -}}
-{{- /*  {{ $controls_flag := (or (.Get 2) (.Get "controls") (.Get "c")) | default "yes"}}  */ -}}
-{{ $controlsParam := or (.Get 2) (.Get "controls") (.Get "c") }}
-{{ $controls_flag := cond (eq $controlsParam false) false true }}
+{{- $_video_url := (or (.Get 0) (.Get "url") (.Get "video") (.Get "v") (.Get "path")) -}}
+{{/*  {{- $controls := .Get 1 | default true -}}  */}}
+{{- $autoplay_flag := (or (.Get 1) (.Get "autoplay") (.Get "auto")) | default false -}}
+{{- /*  {{- $controls_flag := (or (.Get 2) (.Get "controls") (.Get "c")) | default true -}}  */ -}}
+{{- /*  {{- $controls_flag := (or (.Get 2) (.Get "controls") (.Get "c")) | default "yes"}}  */ -}}
+{{- $controlsParam := or (.Get 2) (.Get "controls") (.Get "c") -}}
+{{- $controls_flag := cond (eq $controlsParam false) false true -}}
 
-{{ $loop_flag := (or (.Get 3) (.Get "loop") (.Get "l")) | default false }}
-{{ $muted_flag := (or (.Get 4) (.Get "muted") (.Get "m")) | default false }}
-{{ $css_class := (or (.Get "class") (.Get "cls")) | default false }}
+{{- $loop_flag := (or (.Get 3) (.Get "loop") (.Get "l")) | default false -}}
+{{- $muted_flag := (or (.Get 4) (.Get "muted") (.Get "m")) | default false -}}
+{{- $css_class := (or (.Get "class") (.Get "cls")) | default false -}}
 {{- $css := (.Get "css") -}}
 
 
 {{- $video_url := partial "utils/get-resource-url.html" (dict "context" . "url" $_video_url) -}}
 
-{{ $autoplay := "" }}
-{{ if $autoplay_flag }}
-	{{ $autoplay = "autoplay" }}
-{{ end}}
+{{- $autoplay := "" -}}
+{{- if $autoplay_flag -}}
+	{{- $autoplay = "autoplay" -}}
+{{- end}}
 
-{{ $muted := "" }}
-{{ if $muted_flag }}
-	{{ $muted = "muted" }}
-{{ end}}
+{{- $muted := "" -}}
+{{- if $muted_flag -}}
+	{{- $muted = "muted" -}}
+{{- end}}
 
-{{- /*  <video {{with $css_class}} class='{{.}}'{{end}} {{with $controls_flag}} controls {{end}} {{ $autoplay | safeHTMLAttr  }} {{ $muted | safeHTMLAttr  }} {{with $loop_flag}} loop {{end}} {{with $css}} style='{{$css | safeCSS}}'{{end}}>  */ -}}
-{{- /*  <video {{with $css_class}} class='{{.}}'{{end}} {{with $controls_flag}} controls {{end}} {{with $autoplay_flag}} autoplay|safeHTML {{end}} {{ $muted | safeHTMLAttr  }} {{with $loop_flag}} loop {{end}} {{with $css}} style='{{$css | safeCSS}}'{{end}}>  */ -}}
+{{- /*  <video {{with $css_class}} class='{{.}}'{{end}} {{with $controls_flag}} controls {{end}} {{ $autoplay | safeHTMLAttr  -}} {{ $muted | safeHTMLAttr  -}} {{with $loop_flag}} loop {{end}} {{with $css}} style='{{$css | safeCSS}}'{{end}}>  */ -}}
+{{- /*  <video {{with $css_class}} class='{{.}}'{{end}} {{with $controls_flag}} controls {{end}} {{with $autoplay_flag}} autoplay|safeHTML {{end}} {{ $muted | safeHTMLAttr  -}} {{with $loop_flag}} loop {{end}} {{with $css}} style='{{$css | safeCSS}}'{{end}}>  */ -}}
 	
-
-<video {{with $css_class}} 
-class='{{.}}'{{end}} 
-{{with $controls_flag}} controls {{end}} 
-{{with $autoplay_flag}} autoplay='' muted='' {{end}} 
-{{ $muted | safeHTMLAttr  }} 
-{{with $loop_flag}} loop {{end}} 
-{{with $css}} style='{{$css | safeCSS}}'{{end}}>
-	<source src="{{ $video_url }}" type="video/mp4">
+{{- /*  <br>  */ -}}
+{{- /*  <video {{with $css_class}} class='{{.}}'{{end}} {{with $controls_flag}} controls {{end}} {{with $autoplay_flag}} autoplay='' muted='' {{end}} {{ $muted | safeHTMLAttr -}} {{with $loop_flag}} loop {{end}} {{with $css}} style='{{$css | safeCSS}}'{{end}}><source src="{{ $video_url -}}" type="video/mp4"></video>  */ -}}
+<video{{- with $css_class }} class="{{ . }}"{{- end -}}
+{{- with $controls_flag }} controls{{- end -}}
+{{- with $autoplay_flag }} autoplay muted{{- end -}}
+{{- $muted | safeHTMLAttr -}}
+{{- with $loop_flag }} loop{{- end -}}
+{{- with $css }} style="{{ $css | safeCSS }}"{{- end -}}>
+  <source src="{{ $video_url }}" type="video/mp4">
 </video>
