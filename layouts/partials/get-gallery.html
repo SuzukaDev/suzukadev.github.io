@@ -62,7 +62,7 @@
   {{- $thumbnail_hover := "" -}}
   {{- $HOVER_NAME_KEYWORD := "hover" -}}
   {{- $hover_match := or 
-    ($_all_images.GetMatch .Params.featured_image_hover) 
+    ($_all_images.GetMatch (printf "%s" (.Params.featured_image_hover))) 
     (or 
 
       ($_all_images.GetMatch (printf "*%s*" $HOVER_NAME_KEYWORD)) 

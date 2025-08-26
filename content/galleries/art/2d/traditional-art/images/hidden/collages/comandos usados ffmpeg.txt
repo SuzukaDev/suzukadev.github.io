@@ -1,0 +1,145 @@
+Básico
+for %a in (*.mov *.avi *.mp4 *.gif) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 "output_%a.webp"
+
+Opciones interesantes
+-fs 4485760 -filter:v "scale=500:-1,setpts=PTS/2"
+Ejemplo:
+for %a in (*.avi *.mp4 *.gif) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -fs 4485760 -filter:v "scale=500:-1,setpts=PTS/2" "output_%a.webp"
+
+
+
+
+for %a in (*.mp4) do ffmpeg -i "%a" -vcodec libwebp -filter:v fps=fps=33 -lossless 1 -loop 0 -preset default -an -vsync 0 -quality 100 -compression_level 6 "output_%a.webp"
+
+for %a in (*.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 "output_%a.webp"
+
+====================================================================================================
+FUNCIONA (Single video)
+ffmpeg -i "continue working.mp4" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 "output_venga.webp"
+
+con RAIN.AVI
+ffmpeg -i "rain.avi" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 "output_rain.webp"
+ffmpeg -i "rain.avi" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 0 "output_rain_compresion0.webp"
+Con crop - https://video.stackexchange.com/questions/4563/how-can-i-crop-a-video-with-ffmpeg
+"crop=in_w:in_h-40"
+ffmpeg -i "rain.avi" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 "crop=in_w:in_h-156" "output_rain_compresion6-crop.webp"
+cropdetect 
+ffmpeg -i "rain.avi" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 cropdetect "output_rain_cropdetect.webp"
+ffmpeg -i "rain.avi" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -vf cropdetect "output_rain_cropdetect.webp"
+ffmpeg -i "rain.avi" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -vf "crop=in_w:in_h-156" "output_rain_cropdetect.webp"
+
+
+
+====================================================================================================
+MULTIPLE VIDEOS
+for %a in (*.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 "output_%a.webp"
+
+
+
+
+
+
+recortar tiempo
+-ss 00:05:10 -to 00:15:30
+for %a in (*.mp4) do ffmpeg -i "%a" -ss 00:05:20 -t 00:06:00 -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 "output_%a.webp"
+for %a in (*.mp4) do ffmpeg -i "%a" -ss 00:05:10 -to 00:06:30 -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 "output_%a.webp"
+
+
+
+chinchilla
+for %a in (*.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -fs 4485760 -filter:v scale=720:-1 "output_%a.webp"
+for %a in (*.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -fs 4485760 -filter:v fps=fps=29 scale=300:-1 "output_%a.webp"
+for %a in (*.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 70 -compression_level 6 -fs 4485760 -filter:v "fps=fps=29,scale=500:-1" "output_%a.webp"
+for %a in (*.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 70 -compression_level 6 -fs 4485760 -filter:v scale=500:-1 "output_%a.webp"
+
+for %a in (*.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 70 -compression_level 6 -fs 4485760 -filter:v "fps=fps=29,scale=500:-1,setpts=PTS/60" "output_%a.webp"
+
+
+for %a in (*.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 70 -compression_level 6 -fs 4485760 -filter:v "scale=500:-1" "output_%a.webp"
+
+for %a in (*.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 70 -compression_level 6 -fs 4.8M -filter:v "scale=500:-1" "output_%a.webp"
+
+for %a in (*.mp4) do ffmpeg -ss 00:00:02 -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 70 -compression_level 6 -fs 4.8M -filter:v "scale=500:-1" "output_%a.webp"
+
+ffmpeg -ss 00:00:00 -i "a.mp4" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -fs 4.8M -filter:v "scale=500:-1" "a.webp"
+
+
+for %a in (*.mp4) do ffmpeg -ss 00:00:00 -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -fs 4.8M -filter:v "scale=500:-1,setpts=PTS/2" "output_%a.webp"
+
+for %a in (*.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -fs 4.8M -c copy "output_%a.webp"
+
+for %a in (*.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 70 -compression_level 6 -fs 4485760 -filter:v "scale=500:-1,setpts=PTS/3" "output_%a.webp"
+
+
+mitten
+for %a in (*.mov) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -fs 4485760 -filter:v "scale=500:-1" "output_%a.webp"
+
+aguja
+for %a in (*.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -filter:v "scale=500:-1" "output_%a.webp"
+for %a in (*.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -fs 4485760 -filter:v "scale=500:-1,setpts=PTS/2" "output_%a.webp"
+
+408 seijin
+for %a in (*.avi) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -fs 4485760 -filter:v "scale=500:-1,setpts=PTS/2" "output_%a.webp"
+for %a in (*.avi) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 "output_%a.webp"
+for %a in (*.avi) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -fs 4485760 -filter:v "scale=500:-1" "output_%a.webp"
+
+
+treehouse 3d
+for %a in (*.avi) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -fs 4485760 -filter:v "scale=500:-1" "output_%a.webp"
+for %a in (*.avi) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -fs 4485760 "output_%a.webp"
+
+for %a in (*.avi) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 90 -compression_level 6 -fs 4485760 -filter:v "scale=500:-1" "output_%a.webp"
+
+
+voxel magica tree house
+for %a in (*.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 "output_%a.webp"
+for %a in (*.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 90 -compression_level 6 -fs 4485760 -filter:v "scale=500:-1" "output_%a.webp"
+
+ignatius
+for %a in (*.avi) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 "output_%a.webp"
+for %a in (*.avi) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -filter:v "scale=500:-1" "output_%a.webp"
+
+Berto
+for %a in (*.avi *.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 "output_%a.webp"
+for %a in (*.avi *.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 95 -compression_level 6 -filter:v "scale=500:-1" "output_%a.webp"
+
+toby dixon
+for %a in (*.avi *.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 "output_%a.webp"
+
+jon klassen
+for %a in (*.avi *.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 "output_%a.webp"
+for %a in (*.avi *.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 90 -compression_level 6 "output_%a.webp"
+for %a in (*.avi *.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -filter:v "scale=500:-1" "output_%a.webp"
+for %a in (*.avi *.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 90 -compression_level 6 -filter:v "scale=500:-1" "output_%a.webp"
+for %a in (*.avi *.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 95 -compression_level 6 -filter:v "scale=500:-1" "output_%a.webp"
+for %a in (*.avi *.mp4) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 85 -compression_level 6 -filter:v "scale=500:-1" "output_%a.webp"
+
+downwell
+for %a in (*.avi *.mp4 *.gif) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 "output_%a.webp"
+for %a in (*.avi *.mp4 *.gif) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 65 -compression_level 6 -filter:v "scale=300:-1" "output_%a.webp"
+
+karlawaii cochecito
+for %a in (*.avi *.mp4 *.gif) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 "output_%a.webp"
+for %a in (*.avi *.mp4 *.gif) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -fs 4485760 -filter:v "scale=500:-1,setpts=PTS/2" "output_%a.webp"
+karlawaii nosotros
+for %a in (*.avi *.mp4 *.gif) do ffmpeg -ss 00:00:17 -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -fs 4485760 -filter:v "scale=500:-1" "output_%a.webp"
+
+
+Aguja
+Básico
+for %a in (*.mov *.avi *.mp4 *.gif) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 "output_%a.webp"
+Opciones interesantes
+-fs 4485760 -filter:v "scale=500:-1,setpts=PTS/2"
+Ejemplo:
+for %a in (*.mov *.avi *.mp4 *.gif) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -fs 4485760 -vf "scale=500:-1" "output_%a.webp"
+
+for %a in (*.mov *.avi *.mp4 *.gif) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -fs 5M -vf "scale=800:-1" "output_%a.webp"
+
+THE PATH
+for %a in (*.mov *.avi *.mp4 *.gif) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -fs 6M "output_%a.webp"
+for %a in (*.mov *.avi *.mp4 *.gif) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -fs 6M -vf "scale=800:-1" "output_%a.webp"
+for %a in (*.mov *.avi *.mp4 *.gif) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 100 -compression_level 6 -fs 6M -vf "scale=500:-1" "output_%a.webp"
+for %a in (*.mov *.avi *.mp4 *.gif) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 80 -compression_level 6 -fs 6M -vf "scale=500:-1" "output_%a.webp"
+for %a in (*.mov *.avi *.mp4 *.gif) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 90 -compression_level 6 -fs 6M -vf "scale=500:-1" "output_%a.webp"
+-fs 4485760 -filter:v "scale=500:-1,setpts=PTS/2"
+for %a in (*.mov *.avi *.mp4 *.gif) do ffmpeg -i "%a" -vcodec libwebp -lossless 1 -loop 0 -preset default -quality 90 -compression_level 6 -fs 6M -vf "scale=500:-1,setpts=PTS/2" "output_%a.webp"
