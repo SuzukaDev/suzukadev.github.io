@@ -66,3 +66,8 @@ Read more **[about me]({{< relref "about-me.md" >}})** or [**check my work here*
 {{< link_box "articles" "ARTICLES" false "sans-font" >}} 
 {{< link_box "my-music" "MY MUSIC" false "sans-font" >}} 
 <!-- {{< link_box "galleries" "INTERVIEWS" false "sans-font" >}}  -->
+
+<br>
+<!-- {{< img_caption "insi.png" >}} -->
+<!-- {{< img_caption img="insi.png" resize=x60 style="opacity: .4;" >}} -->
+{{< img_caption img="insi-shadow.png" resize=x38 >}}
