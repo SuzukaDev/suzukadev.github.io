@@ -70,4 +70,4 @@ Read more **[about me]({{< relref "about-me.md" >}})** or [**check my work here*
 <br>
 <!-- {{< img_caption "insi.png" >}} -->
 <!-- {{< img_caption img="insi.png" resize=x60 style="opacity: .4;" >}} -->
-{{< img_caption img="insi-shadow.png" resize=x38 >}}
+{{< img_caption img="insi-shadow.png" resize=x38 class="unselectable" >}}

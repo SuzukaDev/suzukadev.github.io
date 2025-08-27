@@ -66,4 +66,4 @@ Lee más [**sobre mí**]({{< relref "about-me.md" >}}) o [**echa un vistazo a mi
 
 
 <br>
-{{< img_caption img="insi-shadow.png" resize=x38 >}}
+{{< img_caption img="insi-shadow.png" resize=x38 class="unselectable" >}}
