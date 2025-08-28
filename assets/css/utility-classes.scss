@@ -4,7 +4,7 @@
 	box-shadow: #{$x} #{$y} #{$blur} #{$spread} #{$color} !important;
 }
 
-.pixel-art{
+.pixel-art, .pixelart{
 	image-rendering: pixelated;
   	image-rendering: crisp-edges; /* fallback for some browsers */
 }
