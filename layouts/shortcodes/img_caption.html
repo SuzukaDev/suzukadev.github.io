@@ -10,7 +10,7 @@ page = (string) Page to open when clicking the image. Default: ""
 italic = (bool) If true, caption will be in italics. Default: true
 class = (string) Class (or classes) for the <img> element. Tip: use the class 'no-box-shadow' if you want the img to NOT have the shadow around it.
 css/style = (string) CSS style for the <figure> element. Default: ""
-css-image/style-image = (string) CSS style for the <img> element. Default: ""
+css_image/style_image = (string) CSS style for the <img> element. Default: ""
 resize = (string) Resizes the image. See https://gohugo.io/content-management/image-processing/#resize 
 
 Usage:
@@ -27,7 +27,7 @@ With resize:
 {{- $page_name := or (.Get "page") (.Get 3) | default "" -}}
 {{- $italic := (.Get "italic") | default true -}}
 {{- $element_style := or (.Get "css") (.Get "style") | default "" -}}
-{{- $img_css := or (.Get "css-image") (.Get "style-image") | default "" -}}
+{{- $img_css := or (.Get "css_image") (.Get "style_image") | default "" -}}
 {{- $img_class := (.Get "class") -}}
 {{- $resize := (.Get "resize") -}}
 
