@@ -40,9 +40,9 @@ show_related_articles = false # If false, it wont show the related articles at t
 # related_pages = [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 +++
 
-> Escribo esto para mí, a modo de "terapia". Y porque esta es mi página personal, y gran parte de lo que soy a día de hoy es gracias a mi mejor amigo, Dexter, y quiero que tenga su propio espacio por aquí, para siempre.
+> Escribo esto para mí, a modo de "terapia". Y porque esta es mi página personal, y gran parte de lo que soy a día de hoy es gracias a mi mejor amigo, Dexter, y quiero que tenga su propio espacio por aquí, para siempre (o por lo menos hasta que se caiga este servidor).
 >
->Probablemente nadie lea esto, pero me hace ilusión dejar constancia de lo muchísimo que lo quise y le quiero.
+>Probablemente nadie lea esto, pero me hace ilusión dejar constancia de lo muchísimo que lo quise y le quiero. De nuevo, lo hago por y para mí.
 <!-- Probablemente nadie lea esto, pero me hace ilusión dejar constancia de lo muchísimo que quise y quiero a mi lobo. -->
 
 <!-- {{< img_caption img="WhatsApp Image 2024-06-23 at 18.04.57.jpeg" resize=x400 >}} -->
@@ -64,7 +64,7 @@ Página no traducida (de momento). Para leer el artículo, [visita la página en
 
 Recuerdo la primera vez que te ví. Volvía de la universidad de Murcia, y en casa no me dijeron nada. Cuando entré al comedor, vi la acumulación de pelos más bonita del mundo. Te vi enano, de pie como un corderito/oso pequeño, complétamente negro. De primeras, sabía que me mirabas solo por como dos pequeños brillos intuían tus ojos. Moviste rápidamente tu articulación de la alegría, y dabas pequeños pasitos sin moverte, como nervioso. Yo dejé todo en el suelo y me arrodillé, y ahí ya viniste hacia mí corriendo. Y ale, amigos para siempre, así de sencillo.
 
-Fuiste la calma antes de la tempestad. No se me ocurre peor -y a la vez, mejor- momento en el que pudiste haber venido a mi vida. Me ayudaste mucho.
+Fuiste la calma antes de la tempestad. No se me ocurre peor -y a la vez, mejor- momento en el que pudiste haber llegado a mi vida. Me ayudaste mucho.
 
 <!-- # Fuerza -->
 <!-- # Fuerza -->
