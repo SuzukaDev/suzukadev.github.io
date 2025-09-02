@@ -541,7 +541,7 @@ There are a **few seconds** at the start that were recorded at half size, so the
 
 {{< img_caption img="trom-x1.png" class="no-box-shadow" text="Original resolution: 180x320 px (Without the frame)" >}}
 
-{{< img_caption img="TRoM-frame.png" class="no-box-shadow" css-image="height:108vh; width: auto; object-fit:contain;" >}}
+{{< img_caption img="TRoM-frame.png" class="no-box-shadow" css_image="height:108vh; width: auto; object-fit:contain;" >}}
 
 
 
