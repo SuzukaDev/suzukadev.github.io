@@ -118,7 +118,7 @@ Puede parecer poca cosa, pero para mí significaba un montón. Porque te veía m
 
 <!-- {{< quote "Qué cruel es la memoria:<br>resucita sin pedir permiso, <br>te inventa otra vez en mil reflejos <br>que no puedo tocar sin cortarme." "SZK" "text-align-center" >}} -->
 
-Por cotidiano que sea, cada lugar en donde tengo un recuerdo contigo se ha conviertido en una especie de templo sagrado para mí. Como si de alguna forma los dos siguiéramos estando en esos lugares. Paseando, corriendo, jugando, simplemente sentados, viendo el amanecer o el atardecer. Como si *solo* hiciera falta viajar en el tiempo para volver a estar juntos en todos esos lugares.
+Por cotidiano que sea, cada lugar en donde tengo un recuerdo contigo se ha conviertido en una especie de templo sagrado para mí. Como si de alguna forma los dos siguiéramos estando juntos en esos lugares. Paseando, corriendo, jugando, simplemente sentados, viendo el amanecer o el atardecer. Como si *solo* hiciera falta viajar en el tiempo para volver a estar juntos en todos esos lugares.
 
 {{< img_caption img="dexter-collage2.png" class="no-box-shadow" >}}
 
@@ -214,7 +214,7 @@ Tu paso por esta vida fue positivo. Hiciste la vida mejor de todos aquellos que 
 
 <!-- --- -->
 
-# Gracias
+# Gracias Dexter
 
 {{< img_caption "dex (8).jpeg" >}}
 
