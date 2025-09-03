@@ -506,7 +506,7 @@ Si lo dejas **<u>vacío</u>** usará **el nombre del documento**.
 
 ## Opciones de nombrado
 - **Add scale (Añadir escala)**: Si está activado, adjuntara el factor de escala al nombre de la imagen.
-- **Overwrite (Sobrescribir**: Si está desactivado, añadira un sufijo único con la fecha actual, para evitar sobrescribir las imágenes que guardes.
+- **Overwrite (Sobrescribir)**: Si está desactivado, añadira un sufijo único con la fecha actual, para evitar sobrescribir las imágenes que guardes.
 {{< box_info >}}
 Esto es útil si deseas guardar manualmente algunos "instantáneas" de tu dibujo y no quieres sobrescribir las imágenes.
 {{< /box_info >}}
