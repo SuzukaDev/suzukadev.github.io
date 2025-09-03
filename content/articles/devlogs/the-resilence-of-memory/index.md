@@ -535,7 +535,7 @@ There are a **few seconds** at the start that were recorded at half size, so the
 
 {{< video video="TRoM - La Verdad.mp4" css="height: 90vh" >}}
 
-
+<!-- {{< img_caption img="timelapse x - dur 50.gif" class="pixel-art" css_image="height: 95vh; width:auto;" >}} -->
 
 # Final Result
 
