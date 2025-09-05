@@ -5,7 +5,7 @@ description = "Fast Thumbnail Painting Assistant for Krita"
 lastmod = '2025-06-27T22:36:18+02:00'
 # draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
-keywords = ["SZK Thumbnailer", "Krita Thumbnailer", "krita","art","concept art", "thumbnails"]
+keywords = ["SZK", "SZK Thumbnailer", "Krita Thumbnailer", "krita","art","concept art", "thumbnails"]
 tags = ["krita","art","concept art"]
 main_classes = 'sans-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 # # -------- DISPLAY OPTIONS --------
