@@ -5,8 +5,13 @@ Arguments: "." = Page from which it will get the .Section
 
 {{/*  .Section gets the folder name */}}
 {{ $section := .Section }}
+{{- /*  {{ $section := .CurrentSection.Title }}  */ -}}
+
 {{ $related := where (site.RegularPages.Related .) "Section" "eq" $section }}
+{{- /*  {{ $related := where (site.RegularPages.Related .) ".CurrentSection.Title" "eq" $section }}  */ -}}
 {{ $related = where $related "Params.private" "ne" true }}
+{{- /*  IDEA param to avoid recommending an article?  */ -}}
+{{- /*  {{ $related = where $related "Params.recommend_article" "ne" false }}  */ -}}
 
 {{- /*  If exists, append related_pages added manually in the frontmatter  */ -}}
 {{- /*  NOTE: since these pages have been added MANUALLY (with a purppose), I ignore if they are private or not, doesn't matter  */ -}}
