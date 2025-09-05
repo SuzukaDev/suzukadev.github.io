@@ -52,3 +52,5 @@ print_debug_resource_weight: true # If true, shows a 'weight' field in the debug
 
 # related_pages = [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 ---
+
+## Gracias Dexter 🖤
