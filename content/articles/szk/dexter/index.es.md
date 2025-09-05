@@ -40,7 +40,7 @@ show_related_articles = false # If false, it wont show the related articles at t
 # related_pages = [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 +++
 
-> Escribo esto para mí, a modo de "terapia". Y porque esta es mi página personal, y gran parte de lo que soy a día de hoy es gracias a mi mejor amigo, Dexter, y quiero que tenga su propio espacio por aquí, para siempre (o por lo menos hasta que se caiga este servidor).
+> Escribo esto para mí, a modo de "terapia". Y porque esta es mi página personal, y gran parte de lo que soy a día de hoy es gracias a mi mejor amigo, Dexter, y quiero que tenga su propio espacio por aquí, para siempre (o por lo menos hasta que se caiga el servidor donde se hospeda esto).
 >
 >Probablemente nadie lea esto, pero me hace ilusión dejar constancia de lo muchísimo que lo quise y le quiero. De nuevo, lo hago por y para mí.
 <!-- Probablemente nadie lea esto, pero me hace ilusión dejar constancia de lo muchísimo que quise y quiero a mi lobo. -->
@@ -103,28 +103,28 @@ Nunca he pensado que fueras un perro común. Sinceramente, carecías de esa conf
 <!-- # Paseos -->
 <!-- # Paseos -->
 
-Pasear sin ti es dificil. He salido a pasear con tu correa, para sentirla en mis manos y sentir que vienes conmigo. Pero te veo en todos los lados. Y si no te veo, tengo la sensación de que al voltear la cabeza estarás detrás de mí. 
+Pasear sin ti es dificil. A veces salgo a pasear con tu correa, para sentirla en mis manos y sentir que vienes conmigo. Pero te veo en todos los lados. Y si no te veo, tengo la sensación de que al voltear la cabeza estarás detrás de mí. 
 
 Recuerdo cada peculiaridad tuya, tus hábitos, tus manias, las cosas que te gustaban hacer, todo lo que repetías, las interacciones/juegos que teníamos a modo casi de ritual, al pasar por ciertos lugares.
 
-Pasé muchos meses, cuando aún podías correr en algunos momentos, diciendo y diciéndome a mí mismo que literalmente el "*highlight*" de mi día era siempre verte correr al cruzar la calle a la noche.
+Pasé muchos meses, cuando aún podías correr en algunos momentos, diciendo y diciéndome a mí mismo que literalmente el mejor momento de mi día era siempre verte correr al cruzar la calle a la noche.
 
 {{< row >}}
 {{< img_caption "VID_20240513_000955-500px-25fps.webp" >}}
 {{< img_caption "20240516_020018-500px-25fps.webp" >}}
 {{< /row >}}
 
-Puede parecer poca cosa, pero para mí significaba un montón. Porque te veía muy feliz y me lo contagiabas. Veía la anticipación al momento, cómo me mirabas, como diciéndome "ahora voy a echar a correr hehe". Cómo cuando venía un coche, hacía que te pararas con una señal, te ponías alerta y esperabas a que te diera la señal para correr. Y cuando salías corriendo, contrastaba mucho a lo lentecito que solías ir en tu última etapa.
+Puede parecer poca cosa, pero para mí significaba un montón. Porque te veía muy feliz y me lo contagiabas. Veía la anticipación al momento, cómo me mirabas, como diciéndome "ahora voy a echar a correr jeje". Cómo cuando venía un coche, hacía que te pararas con una señal, te ponías alerta y esperabas a que te diera la señal para correr. Y cuando salías corriendo, contrastaba mucho a lo lentecito que solías ir en tu última etapa.
 
 <!-- {{< quote "Qué cruel es la memoria:<br>resucita sin pedir permiso, <br>te inventa otra vez en mil reflejos <br>que no puedo tocar sin cortarme." "SZK" "text-align-center" >}} -->
 
-Por cotidiano que sea, cada lugar en donde tengo un recuerdo contigo se ha conviertido en una especie de templo sagrado para mí. Como si de alguna forma los dos siguiéramos estando juntos en esos lugares. Paseando, corriendo, jugando, simplemente sentados, viendo el amanecer o el atardecer. Como si *solo* hiciera falta viajar en el tiempo para volver a estar juntos en todos esos lugares.
+Por cotidiano que sea, cada lugar en donde tengo un recuerdo contigo se ha conviertido en una especie de templo sagrado para mí. Como si de alguna forma los dos siguiéramos estando juntos en esos lugares. Paseando, corriendo, jugando, simplemente sentados, viendo el amanecer, el atardecer, el cielo o las montañas. Como si *solo* hiciera falta viajar en el tiempo para volver a estar juntos en todos esos lugares.
 
 {{< img_caption img="dexter-collage2.png" class="no-box-shadow" >}}
 
 {{< quote "Qué cruel es la memoria:<br>resucita sin pedir permiso, <br>te inventa otra vez en mil reflejos <br>que no puedo tocar sin cortarme." "SZK" "text-align-center" >}}
 
-Pero sé que si duele es porque fueron importante. Doy las gracias por todo.
+Pero sé que si duele es porque todos esos momentos fueron importantes. Doy las gracias por todo.
 
 
 
