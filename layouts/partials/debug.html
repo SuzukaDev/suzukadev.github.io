@@ -1,6 +1,7 @@
 {{/*  Partial for debugging  */}}
 <div class="debug">
-<details name="debug" title="Debug information" title="Debug detils">
+{{- /*  <details name="debug" title="Debug information" title="Debug detils">  */ -}}
+<details name="debug" title="Debug information" title="Debug detils" open>
 <summary>Debug data/info</summary>
 
 <h1 class="accent-color super-bold">---------------------- [Debug Code] ----------------------</h1>
@@ -43,6 +44,8 @@
 {{/*  {{ $currentPage := .Site.CurrentPage }}  */}}
 <pre></pre>
 <pre>.Section: {{ .Section }}</pre>
+<pre>.CurrentSection: {{ .CurrentSection }}</pre>
+<pre>.CurrentSection.Title: {{ .CurrentSection.Title }}</pre>
 <pre>.Parent: {{ .Parent }}</pre>
 {{ range .Ancestors }}
 <pre>Ancestor: {{ . }}</pre>
@@ -75,6 +78,9 @@
 	<span>{{ .LanguageName }}</span>
 </li>
 {{ end }}
+
+<hr>
+<pre>len Related: {{ len (site.RegularPages.Related . ) }}</pre>
 
 </details>
 <hr class="full-separator">
