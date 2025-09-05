@@ -259,7 +259,11 @@ Gracias por formar parte de mi vida y de mí.
 {{< quote "Death is a wall but it can't be the end<br>**You are my protector and my best friend**" "Lord Huron - In the Wind" "text-align-center" >}}
 
 
-{{< img_caption "feature.jpeg" "Gracias Dexter" >}}
+<!-- {{< img_caption "feature.jpeg" "Gracias Dexter" >}} -->
+
+
+<!-- {{< featured_album_big album="dexter-gallery" cover="dex.png" zoom1=100% zoom2=200% pos2="0% 100%" >}} -->
+{{< featured_album_big album="dexter-gallery" pos2="60% 30%" t1="3s" >}}
 
 <!-- Puedo seguir haciéndolos, pero sin ti a mi lado, no tienen el más mínimo sentido. Literalmente te recordaría en absolutamente cada lugar por el que caminara y se me haría muy duro mirar a mi alrededor y ver que ya no estás, que estoy solo. -->
 

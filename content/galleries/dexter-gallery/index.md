@@ -1,5 +1,5 @@
 ---
-title: 'Dexter'
+title: 'Gracias Dexter'
 # Description shown on the album page. Rendered as markdown to enable adding links and some formatting.
 description: 
 date: '2025-09-05T13:58:02+02:00' # Used for sorting (newest first)
