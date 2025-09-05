@@ -101,6 +101,11 @@ title = true
     toLower = true
     type = 'basic'
     weight = 80
+  [[related.indices]]
+    applyFilter = true
+    name = 'fragmentrefs'
+    type = 'fragments'
+    weight = 80
 
 
 [params]
