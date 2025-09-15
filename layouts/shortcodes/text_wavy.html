@@ -21,7 +21,7 @@ Usage:
 {{- $frequency := mul (math.Abs $rawFrequency) -1 -}}
 
 {{- /*  {{- $amp := (.Get "amp") | default 20 -}}  */ -}}
-{{- $amp := float ((or (.Get "amp") (.Get 2)) | default 20) -}}
+{{- $amp := float ((or (.Get "amp") (.Get 2)) | default 10) -}}
 {{- $half_amp := div $amp 2.0 -}}
 
 
