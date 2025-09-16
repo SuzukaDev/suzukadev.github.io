@@ -1821,9 +1821,15 @@ nav.categories ul li a{
 	margin-left: 20px;
 }
 
+.articles-index-phone{
+	display: none;
+}
 @media (max-width: 650px) {
 	.articles-index{
 		display: none;
+	}
+	.articles-index-phone{
+		display: block;
 	}
 }
 @media (min-width: 850px) {
