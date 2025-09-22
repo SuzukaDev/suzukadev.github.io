@@ -431,6 +431,22 @@ Only selects the frame block, without deleting it.
 Strokes with fill materials are not supported at the moment in the current version, only normal non-filled strokes.
 {{< /box_warning >}}
 
+{{< box_warning >}}
+Options related Vertex Groups only work in the Grease Pencil Legacy version (previous to Grease Pencil 3.0).
+
+<!-- #### Why? -->
+{{< details "Why?" true >}}
+Old methods for accessing the vertex group weight of a Grease Pencil point previous to Grease Pencil 3.0 have been removed, and the new way for accessing the weight is **currently bugged** 🐛.
+
+<!-- At the moment Grease Pencil 3.0 don't have a method for accessing the vertex group weight of a Grease Pencil point (it was removed from the previous version), and the new way for accessing is bugged. -->
+{{< /details >}}
+
+<br>
+{{< box_info >}}
+It will be supported when Blender fixes it 👍.
+{{< /box_info >}}
+{{< /box_warning >}}
+
 # Credits ©
 
 The required attribution to some icons used:

@@ -479,6 +479,21 @@ Los trazos con materiales de relleno no están soportados en la versión actual,
 <!-- Strokes with fill materials are not supported at the moment in the current version, only normal non-filled strokes. -->
 {{< /box_warning >}}
 
+{{< box_warning >}}
+Las diferentes opciones relacionadas con los *Vertex Groups* solo funcionan en la versión *Legacy* del addon (previa al Grease Pencil 3.0)
+<!-- Options related Vertex Groups only work in the Grease Pencil Legacy version. -->
+
+{{< details "¿Por qué?" true >}}
+Los métodos para acceder a los pesos de los *Vertex Group* en los puntos de un dibujo de Grease Pencil han sido **eliminados** en Grease Pencil 3.0, y la nueva forma de acceder a dichos pesos, de momento **está rota/*buggeada*** 🐛 y no funciona.
+
+{{< /details >}}
+
+<br>
+{{< box_info >}}
+Cuando Blender arregle el bug, lo arreglaré 👍.
+{{< /box_info >}}
+{{< /box_warning >}}
+
 # Créditos ©
 
 <!-- The required attribution to some icons used: -->
