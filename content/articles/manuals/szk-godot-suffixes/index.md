@@ -31,7 +31,7 @@ show_right_bar = true
 
 > This is a Blender addon for **easily managing Godot’s suffixes when importing scenes from _.blend_ files** into Godot.
 
-{{< link_card title="SZK Godot Suffixes" subtitle="Blender Addon for managing Godot's 3D import suffixes" url="https://orb91.gumroad.com/l/szk-godot-suffixes" cover="images/logo_cover.gif" c=#383445FF url_text="www.orb91.gumroad.com" position="50% 20%" >}}
+{{< link_card title="SZK Godot Suffixes" subtitle="Blender Addon for managing Godot's 3D import suffixes" url="https://orb91.gumroad.com/l/szk-godot-suffixes" cover="images/logo_feature.gif" c=#383445FF url_text="www.orb91.gumroad.com" position="50% 20%" >}}
 
 
 <!-- # SZK Godot Suffixes ![Godot icon](<images/header icons/godot.png>) | Suzuka Ka ![SZK icon](<images/header icons/dexter.png>) -->
