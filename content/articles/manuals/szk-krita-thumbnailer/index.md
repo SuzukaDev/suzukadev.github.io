@@ -132,6 +132,7 @@ Select Random Brush | (*Not assigned*)
 
 Version | Changes
 :-- | :--
+2.0.2 | - Added button to select all current thumbnails.
 2.0.1 | - Resets timer when manually selecting the previous/next thumbnail.
 2.0.0 | - Added different layout algorithms (Custom Grid, Random) <br> - Optimizations when changing the thumbnail <br> - Padding/margin relative to the document's size (for achieving similar margins between different canvas' sizes) <br> - Added option for saving/loading presets.
 1.1.0 | - Adde different options for randomizing the brushes. <br> - Added tooltips to the UI.
