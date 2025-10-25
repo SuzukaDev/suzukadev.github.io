@@ -562,6 +562,23 @@ There are a **few seconds** at the start that were recorded at half size, so the
     style="border:none;">
 </iframe> -->
 
+## Wallpapers
+
+
+{{< details summary="Wallpapers" open=true >}}
+{{< img_caption img="images/wallpapers/The Resilence of Memory [x10].png" class="no-box-shadow" css_image="height:100vh; width: auto; object-fit:contain;" >}}
+<br>
+{{< img_caption img="images/wallpapers/The Resilence of Memory 16-9[x10] 3.png" class="no-box-shadow" css_image="height:50vh; width: auto; object-fit:contain;" >}}
+<br>
+{{< img_caption img="images/wallpapers/The Resilence of Memory 16-9[x10] 4.png" class="no-box-shadow" css_image="height:50vh; width: auto; object-fit:contain;" >}}
+<br>
+{{< img_caption img="images/wallpapers/The Resilence of Memory 16-9[x10] 2.png" class="no-box-shadow" css_image="height:50vh; width: auto; object-fit:contain;" >}}
+<br>
+{{< img_caption img="images/wallpapers/The Resilence of Memory 16-9[x10] 1.png" class="no-box-shadow" css_image="height:50vh; width: auto; object-fit:contain;" >}}
+<br>
+{{< /details >}}
+
+
 ## Animation Process
 
 I finally exported the illustration into different layers and animated it with [Godot](https://godotengine.org). 
