@@ -31,13 +31,75 @@ show_right_bar = true
 +++
 
 
-
+<!-- 
 {{< youtube "Vw8hnal0lHQ" >}}
 
 {{< youtube "ars3MgcM8Nc" >}}
 
+{{< audio src="music-production-reel-2-recortando.mp3" title="Music Production Reel (30 canciones)" cover="reel-cover" color="#4E72A2FF" >}} -->
+
+
+
+
+
+
+
+
+
+
+> 🚧 Página **{{< text_wavy2 "en construcción" 0.5 0.05 10 >}}** {{< text_wavy "🚧" 0.2 2 >}}
+
+<!-- Some of my most admired artists (Mike Oldfield, Yann Tiersen, Sufjan Stevens, John Frusciante, etc.) have in common that they are all very eclectic. They are not tied to a genre, they like to experiment, to try different things. I think is a trait that is derived of simply being curious.
+
+In my humble opinion, an artist should be curious, willing to experiment, to try new things, to "join separated dots", and to express themselves no matter the style, genre, etc.
+
+I experience music
+
+I personally think that when we try to fit into a "box", is simply because we  -->
+
+# Canciones Originales
+{{< header "Music Production Reel" 3 "left" >}}
+
+*Reel* con distintas canciones que he hecho:
+<!-- {{< audio src="music-production-reel-2-recortando.mp3" title="Music Production Showcase (Selection)" cover="reel-cover" color="#FCEDBFFF" >}} -->
+{{< box_info >}}
+Los titulos se muestran conforme suenan las canciones.
+{{< /box_info >}}
 {{< audio src="music-production-reel-2-recortando.mp3" title="Music Production Reel (30 canciones)" cover="reel-cover" color="#4E72A2FF" >}}
 
-<!-- {{< audio src="suzuka-the-wayback-master-4.mp3" title="The Wayback" text_color="#A71866FF" pos="50% 45%" >}} -->
+{{< youtube "Vw8hnal0lHQ" >}}
 
 {{< audio src="suzuka-the-wayback-master-4.mp3" title="The Wayback" text_color="#A71866FF" pos="50% 45%" description="Canción hecha para un ***OSC*** (*One Synth Challenge*). <br>Básicamente se trataba de hacer una canción con **UN SOLO** sintetizador. Todos los sonidos, efectos, percusión, etc. está hecho únicamente con el *U-He TyrellN6*" >}}
+
+
+# Algunos Covers
+{{< header "Mike Oldfield Medley" 3 "left" >}}
+
+*Medley* de distintos temas/fragmentos de Mike Oldfield en una sola canción, hecha para un disco de fans celebrando el 50 aniversario de Tubular Bells:
+{{< youtube "ars3MgcM8Nc" >}}
+
+<!-- {{< audio src="suzuka-the-wayback-master-4.mp3" title="The Wayback" cover="altea.jpg" color="#19CBF6FF" pos="50% 30%" >}} -->
+
+
+
+
+
+{{< header "Pink Floyd's - Wish You Were Here (Ambient cover)" 2 "left" >}}
+
+Versión ambiental que hice de Wish You Were Here, para poner de fondo en el vídeo.
+Fue hecha usando dos pads y una flauta:
+{{< youtube "lAy0-sY6tDk" >}}
+
+
+
+
+
+
+<!-- Hello folks. I did a cover of Pink Floyd for the background music.
+I love ambient music, but it was my first try doing something. I've listened to it so many times (both while doing the cover and the video) that I'm unable to say if it is a complete 💩💩💩  or if it's ok.
+It was "live played", ignoring tempo. To be honest, it was a challenge. Most of my favourite ambient artists, despite I'm not sure, give me the impresion that they playing the music (I mean, is programmed following a grid). But I tried so many times, since even when I did no mistakes, sometimes I felt I was rushing. I wanted it to feel that it was breathing naturally.
+
+But I tried so many takes until I was happy with it.
+Also, I tried to add more textures, instruments, like some ambient electric guitars. But I realized that the more I added, the worse it was. So it only finally has 2 PADS + a flute.
+
+Criticism is welcome, I'd love to improve and make more ambient music. -->
