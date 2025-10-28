@@ -59,6 +59,9 @@ Lee más [**sobre mí**]({{< relref "about-me.md" >}}) o [**echa un vistazo a mi
 
 <!-- [Artículos]({{< relref "articles" >}}) &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;[Álbumes]({{< relref "galleries" >}}) &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;[Interviews]({{< relref "articles" >}}) -->
 
+{{< header "Artículos destacados" 2 "center" >}}
+
+{{< featured_articles "the-resilence-of-memory, szk-krita-pixel-art-suite" >}}
 
 {{< link_box "galleries" "*ALBUMS*" false "sans-font" >}} 
 {{< link_box "articles" "*ARTÍCULOS*" false "sans-font" >}} 
@@ -67,14 +70,11 @@ Lee más [**sobre mí**]({{< relref "about-me.md" >}}) o [**echa un vistazo a mi
 ---
 <!-- <br> -->
 
-{{< header "Artículos destacados" 2 "center" >}}
-
-{{< featured_articles "the-resilence-of-memory, szk-krita-pixel-art-suite" >}}
 
 
 
-
-{{< articles_featured_simple "the-resilence-of-memory, szk-krita-pixel-art-suite" "Artículos Destacados" 2 "left" >}}
+{{< header "Últimos posts 📘" 2 "center" >}}
+{{< last_articles_preview type="articles" n=5 >}}
 
 <br>
 {{< img_caption img="insi-shadow.png" resize=x38 class="unselectable" >}}

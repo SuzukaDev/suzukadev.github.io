@@ -1,0 +1,59 @@
+{{- /*  
+Display the N last articles (or "pages" (also works with type="galleries"!)). 
+Can retrieve if desired only the articles of a certain section.
+
+Like:
+23 mar. 2025 My article title
+			This is my article blablabla
+20 mar. 2025 My other article title
+			This is my article blablabla
+
+Arguments:
+0 section/s = (String) The section/folder. Eg: section="manuals" -> Only retrieves manuals. If empty, returns all pages
+1 title = (String). Add a header title above the articles. Default: (empty)
+2 h = (int) Type of header for the tile (1 for h1, 2 for h2, 3 for h3, etc.). Default: 2 (h2)
+3 align = (String) Text align of the header (options: "left", "right", "center"). Default: "center"
+4 total/n/amount = (int) The total pages that retrieves (leave empty or less than 0 to retrieve all pages without limit)
+5 type/t = (String) The type of page. Default: "articles". But could be also "galleries" (to retrieve the albums).
+
+Use example:
+{{< lsat_articles_preview "my-first-article, another-article" >}}
+{{< lsat_articles_preview "my-first-article, another-article" "My favourite articles" 3 "left" >}}
+{{< lsat_articles_preview title="my-first-article, another-article" title="My favourite articles" align="right" >}}
+*/ -}}
+
+
+{{- $section := or (.Get 0) (.Get "section") (.Get "s") | default false -}}
+{{- $title := or (.Get 1) (.Get "title") (.Get "text") -}}
+{{- $header_number := or (.Get 2) (.Get "h") | default 2 -}}
+{{- $text_align := or (.Get 3) (.Get "align") | default "center" -}}
+{{- $total_pages := or (.Get 4) (.Get "n") (.Get "total") (.Get "amount") | default -1 -}}
+{{- $pages_type := or (.Get 5) (.Get "type") (.Get "t") | default "articles" -}}
+
+{{- $articles_array := $.Site.RegularPages -}}
+
+{{- if $section -}}
+	{{- $section_page := .Site.GetPage $section -}}
+	<pre>{{$section_page.Title}}</pre>
+	{{- $articles_array = $section_page.RegularPages -}}
+	<pre>{{len $articles_array}}</pre>
+{{- end -}}
+
+{{- $articles_array = where $articles_array "Type" $pages_type -}}
+
+{{- $articles_array = sort $articles_array "Date" "desc" -}}
+
+{{- if gt $total_pages 0 -}}
+	{{- $articles_array = first $total_pages $articles_array -}}
+{{- end -}}
+
+{{- $header_tag := printf "h%d" $header_number -}}
+	{{- if $title }}
+		{{- $header := printf "<%s style='text-align:%s;'>%s</%s>" $header_tag $text_align $title $header_tag -}}
+		{{- $header | safeHTML -}}
+	{{- end -}}
+    <section>
+		{{- range $index, $page := $articles_array -}}
+			{{- partial "articles/article-simple-link" $page -}}
+		{{- end -}}
+    </section>

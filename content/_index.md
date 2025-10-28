@@ -60,7 +60,8 @@ Read more **[about me]({{< relref "about-me.md" >}})** or [**check my work here*
 
 {{< featured_albums albums="traditional-art, galleries/art/3d" >}}
 
-
+{{< header "Featured articles" 2 "center" >}}
+{{< featured_articles "the-resilence-of-memory, szk-krita-pixel-art-suite" >}}
 
 {{< link_box "galleries" "ALBUMS" false "sans-font" >}} 
 {{< link_box "articles" "ARTICLES" false "sans-font" >}} 
@@ -70,9 +71,8 @@ Read more **[about me]({{< relref "about-me.md" >}})** or [**check my work here*
 ---
 <!-- <br> -->
 
-{{< header "Featured articles" 2 "center" >}}
 
-{{< featured_articles "the-resilence-of-memory, szk-krita-pixel-art-suite" >}}
+
 <!-- {{< link_card "the-resilence-of-memory" >}}
 {{< link_card 
   url="the-resilence-of-memory"
@@ -87,10 +87,21 @@ Read more **[about me]({{< relref "about-me.md" >}})** or [**check my work here*
 
 
 
-<br>
 <!-- {{< img_caption "insi.png" >}} -->
 <!-- {{< img_caption img="insi.png" resize=x60 style="opacity: .4;" >}} -->
+
+
+
+<!-- {{< articles_featured_simple "the-resilence-of-memory, szk-krita-pixel-art-suite" "holaa" >}} -->
+
+
+<!-- ## Last Articles 📘 -->
+<!-- {{< header "Last articles 📘" 2 "left" >}} -->
+{{< header "Last articles 📘" 2 "center" >}}
+<!-- {{< header "Last articles 📘" 2 "right" >}} -->
+
+{{< last_articles_preview type="articles" n=5 >}}
+
+
+<br>
 {{< img_caption img="insi-shadow.png" resize=x38 class="unselectable" >}}
-
-
-{{< articles_featured_simple "the-resilence-of-memory, szk-krita-pixel-art-suite" "holaa" >}}
