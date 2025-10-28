@@ -703,6 +703,16 @@ Permite mostrar una imágen con un caption. Y también permite que al hacer clic
 	{{</* img_caption img="/images/dex.jpeg" caption="Al clickar va a la pág. de about" italic=false alt="Picture of a cute dog" page="about" */>}}
 
 
+## last_articles_preview
+
+Crea una preview sencilla de las últimas entradas/páginas.
+Permíte especificar el tipo (articles/galleries), la sección, etc.
+
+{{< last_articles_preview type="articles" n=5 >}}
+
+	{{</* last_articles_preview type="articles" n=5 */>}}
+
+
 ## link_box
 
 Link (tanto a una página como a una URL) con un diseño plano **muy personalizable**.
