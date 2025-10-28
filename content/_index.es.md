@@ -71,5 +71,10 @@ Lee más [**sobre mí**]({{< relref "about-me.md" >}}) o [**echa un vistazo a mi
 
 {{< featured_articles "the-resilence-of-memory, szk-krita-pixel-art-suite" >}}
 
+
+
+
+{{< article_card_preview "the-resilence-of-memory, szk-krita-pixel-art-suite" "Artículos Destacados" 2 "left" >}}
+
 <br>
 {{< img_caption img="insi-shadow.png" resize=x38 class="unselectable" >}}

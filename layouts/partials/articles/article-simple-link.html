@@ -1,0 +1,10 @@
+<a class="article-showcase-box" href="{{.RelPermalink}}">
+    <article>
+        <time datetime='{{time.Format "2006-1-2" .Date }}'>{{time.Format "2 Jan 2006" .Date }}</time>
+        <header>
+            <h1>{{.Title}}</h1>
+            {{- /*  {{- with .Description -}}<h2>{{. | markdownify}}</h2>{{- end -}}  */ -}}
+            {{- with .Description -}}<p>{{. | markdownify}}</p>{{- end -}}
+        </header>
+    </article>
+</a>

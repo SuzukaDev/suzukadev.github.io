@@ -1,7 +1,7 @@
 +++
 title = 'SZK Krita Pixel Art Suite'
 date = '2025-05-22T22:57:12+02:00'
-description = "Krita plugin that adds lots of features for making Pixel Art!"
+description = "Krita *plugin* that adds **lots of features** for making **Pixel Art**!"
 lastmod = '2025-05-22T22:57:12+02:00'
 # draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
