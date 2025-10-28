@@ -1,6 +1,9 @@
 {{- /*  
-Displays article cards.
+Displays article links, with just the date, the title and description.
 
+Like:
+23 mar. 2025 My article title
+			This is my article blablabla
 
 Arguments:
 0 articles = (String) Articles file names separated with a COMA. Eg: articles="article1, illustration-process"
@@ -9,9 +12,9 @@ Arguments:
 3 align = (String) Text align of the header (options: "left", "right", "center"). Default: "center"
 
 Use example:
-{{< featured_articles "my-first-article, another-article" >}}
-{{< featured_articles "my-first-article, another-article" "My favourite articles" 3 "left" >}}
-{{< featured_articles title="my-first-article, another-article" title="My favourite articles" align="right" >}}
+{{< articles_featured_simple "my-first-article, another-article" >}}
+{{< articles_featured_simple "my-first-article, another-article" "My favourite articles" 3 "left" >}}
+{{< articles_featured_simple title="my-first-article, another-article" title="My favourite articles" align="right" >}}
 */ -}}
 
 
@@ -36,34 +39,12 @@ Use example:
 
 {{- $header_tag := printf "h%d" $header_number -}}
 
-{{- /*  THINK featured_articles shortcode  */ -}}
-{{- /*  
- - Order articles by date?
- - Add css width % property?
-  */ -}}
-
-{{- /*  {{ $articles_array = sort $articles_array ".Date" "desc" }}  */ -}}
-
-
-{{- /*  <hgroup class="featured-articles-container">  */ -}}
-{{- /*  <hgroup>  */ -}}
-    {{- /*  <h1>Test featured articles</h1>  */ -}}
-{{- /*  <{{- $header_tag }} style="font-size:100px;">Test featured articles</{{- $header_tag -}}>  */ -}}
-{{- /*  <{{- $header_tag -}}>Test featured articles</{{- $header_tag -}}>  */ -}}
 	{{- if $title }}
 		{{- $header := printf "<%s style='text-align:%s;'>%s</%s>" $header_tag $text_align $title $header_tag -}}
-		{{- /*  {{- $header := printf "<%s style='text-align:right;justify-content: flex-end;'>%s</%s>" $header_tag $title $header_tag -}}  */ -}}
-		{{- /*  {{- $header := printf "<%s style='align-items: right;'>%s</%s>" $header_tag $title $header_tag -}}  */ -}}
-		{{- /*  {{- $header := printf "<%s style='margin-right: auto;'>%s</%s>" $header_tag $title $header_tag -}}  */ -}}
 		{{- $header | safeHTML -}}
 	{{- end -}}
-{{- /*  <{{- $header_tag | safeHTMLAttr }} style="font-size:100px;">Test featured articles</{{- $header_tag | safeHTMLAttr -}}>  */ -}}
-{{- /*  <{{- $header_tag | safeCSS }} style="font-size:100px;">Test featured articles</{{- $header_tag | safeCSS -}}>  */ -}}
     <section>
 		{{- range $index, $page := $articles_array -}}
-	        {{- /*  {{- partial "articles/article-card.html" $page -}}  */ -}}
 			{{- partial "articles/article-simple-link" $page -}}
-
 		{{- end -}}
     </section>
-{{- /*  </hgroup>  */ -}}

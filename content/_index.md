@@ -93,4 +93,4 @@ Read more **[about me]({{< relref "about-me.md" >}})** or [**check my work here*
 {{< img_caption img="insi-shadow.png" resize=x38 class="unselectable" >}}
 
 
-{{< article_card_preview "the-resilence-of-memory, szk-krita-pixel-art-suite" "holaa" >}}
+{{< articles_featured_simple "the-resilence-of-memory, szk-krita-pixel-art-suite" "holaa" >}}
