@@ -528,12 +528,13 @@ But asking AIs for feedback (again, keeping in mind they sugarcoat their answers
 
 Here is the complete process:
 
-{{< box_info >}}
-<!-- There were a **few seconds** at the start that were recorded at half size so they are a bit blurry. -->
+<!-- {{< box_info >}}
 There are a **few seconds** at the start that were recorded at half size, so they appear a bit blurry.
 {{< /box_info >}}
 
-{{< video video="TRoM - La Verdad.mp4" css="height: 90vh" >}}
+{{< video video="TRoM - La Verdad.mp4" css="height: 90vh" >}} -->
+
+{{< youtube "lAy0-sY6tDk" >}}
 
 <!-- {{< img_caption img="timelapse x - dur 50.gif" class="pixel-art" css_image="height: 95vh; width:auto;" >}} -->
 
