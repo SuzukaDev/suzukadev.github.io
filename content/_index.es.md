@@ -64,6 +64,12 @@ Lee más [**sobre mí**]({{< relref "about-me.md" >}}) o [**echa un vistazo a mi
 {{< link_box "articles" "*ARTÍCULOS*" false "sans-font" >}} 
 {{< link_box "my-music" "MI MÚSICA" false "sans-font" >}} 
 
+---
+<!-- <br> -->
+
+{{< header "Artículos destacados" 2 "center" >}}
+
+{{< featured_articles "the-resilence-of-memory, szk-krita-pixel-art-suite" >}}
 
 <br>
 {{< img_caption img="insi-shadow.png" resize=x38 class="unselectable" >}}

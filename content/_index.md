@@ -67,6 +67,26 @@ Read more **[about me]({{< relref "about-me.md" >}})** or [**check my work here*
 {{< link_box "my-music" "MY MUSIC" false "sans-font" >}} 
 <!-- {{< link_box "galleries" "INTERVIEWS" false "sans-font" >}}  -->
 
+---
+<!-- <br> -->
+
+{{< header "Featured articles" 2 "center" >}}
+
+{{< featured_articles "the-resilence-of-memory, szk-krita-pixel-art-suite" >}}
+<!-- {{< link_card "the-resilence-of-memory" >}}
+{{< link_card 
+  url="the-resilence-of-memory"
+  cover="cover.jpg"
+  title="The Resilence of Memory"
+  subtitle="Pixel Art process"
+  url_text=""
+  color="rgb(214, 98, 44)"
+  hover_color="#eaeaea"
+  text_color="#333"
+>}} -->
+
+
+
 <br>
 <!-- {{< img_caption "insi.png" >}} -->
 <!-- {{< img_caption img="insi.png" resize=x60 style="opacity: .4;" >}} -->
