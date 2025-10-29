@@ -27,6 +27,7 @@ show_right_bar = true
 # show_related_articles = false # If false, it wont show the related articles at the bottom. If true (or non set), they will show.
 # featured_image = '{{.File.ContentBaseName}}.png' # local path for the image used as the cover. NOTE: Check its extension! (.png set as a template)
 # NOTE Since this is a leaf bundle (page in its own folder), placing an image in the same folder with the name 'cover' (no matter its extension) will be used as the cover AUTOMATICALLY. BUT if 'featured_image' is set, it will use that (this is also useful for having different covers for each language, if that is needed).
+# emoji = "🍀"
 
 # # ------- FEATURE OPTIONS --------
 # featured = true # if true, the article will be featured in the index page.

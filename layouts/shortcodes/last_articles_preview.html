@@ -15,6 +15,7 @@ Arguments:
 3 align = (String) Text align of the header (options: "left", "right", "center"). Default: "center"
 4 total/n/amount = (int) The total pages that retrieves (leave empty or less than 0 to retrieve all pages without limit)
 5 type/t = (String) The type of page. Default: "articles". But could be also "galleries" (to retrieve the albums).
+6 emojis/emoji/e/icon/icons = (bool) Show the icon next to the title (for helping to distinguish the articles). Default: false.
 
 Use example:
 {{< lsat_articles_preview "my-first-article, another-article" >}}
@@ -29,6 +30,7 @@ Use example:
 {{- $text_align := or (.Get 3) (.Get "align") | default "center" -}}
 {{- $total_pages := or (.Get 4) (.Get "n") (.Get "total") (.Get "amount") | default -1 -}}
 {{- $pages_type := or (.Get 5) (.Get "type") (.Get "t") | default "articles" -}}
+{{- $show_emojis := or (.Get 6) (.Get "emojis") (.Get "emoji") (.Get "e") (.Get "icon") (.Get "icons") | default false -}}
 
 {{- $articles_array := $.Site.RegularPages -}}
 
@@ -54,6 +56,6 @@ Use example:
 	{{- end -}}
     <section>
 		{{- range $index, $page := $articles_array -}}
-			{{- partial "articles/article-simple-link" $page -}}
+			{{- partial "articles/article-simple-link" (dict "page" $page "show_emojis" $show_emojis) -}}
 		{{- end -}}
     </section>

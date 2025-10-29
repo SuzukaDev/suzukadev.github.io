@@ -10,6 +10,7 @@ Arguments:
 1 title = (String). Add a header title above the articles. Default: (empty)
 2 h = (int) Type of header for the tile (1 for h1, 2 for h2, 3 for h3, etc.). Default: 2 (h2)
 3 align = (String) Text align of the header (options: "left", "right", "center"). Default: "center"
+4 emojis/emoji/e/icon/icons = (bool) Show the icon next to the title (for helping to distinguish the articles). Default: false.
 
 Use example:
 {{< articles_featured_simple "my-first-article, another-article" >}}
@@ -22,6 +23,7 @@ Use example:
 {{- $title := or (.Get 1) (.Get "title") -}}
 {{- $header_number := or (.Get 2) (.Get "h") | default 2 -}}
 {{- $text_align := or (.Get 3) (.Get "align") | default "center" -}}
+{{- $show_emojis := or (.Get 4) (.Get "emojis") (.Get "emoji") (.Get "e") (.Get "icon") (.Get "icons") | default false -}}
 
 {{- $articles_array := slice -}}
 {{- $articles_paths_array := split $articles "," -}}
@@ -45,6 +47,6 @@ Use example:
 	{{- end -}}
     <section>
 		{{- range $index, $page := $articles_array -}}
-			{{- partial "articles/article-simple-link" $page -}}
+			{{- partial "articles/article-simple-link" (dict "page" $page "show_emojis" $show_emojis) -}}
 		{{- end -}}
     </section>
