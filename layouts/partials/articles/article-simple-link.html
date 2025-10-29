@@ -4,7 +4,7 @@ page - the page
 show_emojis - bool
 */ -}}
 
-<a class="article-showcase-box" href="{{.RelPermalink}}">
+<a class="article-showcase-box" href="{{.page.RelPermalink}}">
     <article>
         {{- /*  <time datetime='{{time.Format "2006-1-2" .Date }}'>{{time.Format "2 Jan 2006" .Date }}</time>  */ -}}
         <time datetime='{{time.Format "2006-1-2" .page.Date }}'>{{time.Format "2 Jan 2006" .page.Date }}</time>
