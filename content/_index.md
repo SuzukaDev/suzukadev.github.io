@@ -100,7 +100,7 @@ Read more **[about me]({{< relref "about-me.md" >}})** or [**check my work here*
 {{< header "Last articles 📘" 2 "center" >}}
 <!-- {{< header "Last articles 📘" 2 "right" >}} -->
 
-{{< last_articles_preview type="articles" n=5 >}}
+{{< last_articles_preview type="articles" n=5 emojis=true >}}
 
 
 <br>

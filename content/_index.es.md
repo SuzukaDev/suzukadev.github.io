@@ -74,7 +74,7 @@ Lee más [**sobre mí**]({{< relref "about-me.md" >}}) o [**echa un vistazo a mi
 
 
 {{< header "Últimos posts 📘" 2 "center" >}}
-{{< last_articles_preview type="articles" n=5 >}}
+{{< last_articles_preview type="articles" n=5 emojis=true >}}
 
 <br>
 {{< img_caption img="insi-shadow.png" resize=x38 class="unselectable" >}}
