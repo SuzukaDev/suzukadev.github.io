@@ -190,3 +190,10 @@ Si la imagen tiene espacios, meter la url entre <>
 ![hola](</images/profile-pictures/yo.jpg>)
 
 hola soy el indexx -->
+
+
+
+
+
+<!-- It will be cool if... es mi frase más odiada -->
+<!-- Estás haciendo algo, y te surjen mil ideas. -->
