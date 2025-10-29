@@ -147,6 +147,12 @@ E.g:
 	class="pixel-art" 
 >}}
 
+{{< img_caption img="Pixel Art Portrait WIP (x1.0 25.00fps 1308 frames - 54.78s).webp"
+	caption="1308 frames, 55 seconds (**602kb**)"
+	css_image="height:70vh; width:auto;" 
+	class="pixel-art" 
+>}}
+
 # Contact 
 
 You can reach me via:
