@@ -119,6 +119,32 @@ E.g:
 
 {{< cell "12" >}} Create Timelapse: Press to \*\**drum roll* 🥁🥁🥁\*\* create the timelapse.
 
+# Some timelapses
+{{< row >}}
+
+<!-- {{< img_caption img="TRoM Timelapse x1.0 (128 frames - 13.56s).webp" css_image="height:85vh; width:auto;" class="pixel-art" caption="128 frames, 13.56 seconds, **859kB**, <u>made in **0.56 seconds**</u>" >}} -->
+
+<!-- {{< img_caption img="TRoM - Youtube Thumbnail [x0.3 (5.88fps 108 frames - 20.69s)].webp" css_image="height:85vh; width:auto;" class="pixel-art" caption="128 frames, 13.56 seconds, **859kB**, <u>made in **0.56 seconds**</u>" >}} -->
+<!-- {{< img_caption img="joer.webp" css_image="height:85vh; width:auto;" class="pixel-art" caption="128 frames, 13.56 seconds, **859kB**, <u>made in **0.56 seconds**</u>" >}} -->
+
+
+<!-- {{< img_caption img="TRoM - Youtube Thumbnail x0.3 (5.88fps 108 frames - 20.69s).webp" css_image="height:85vh; width:auto;" class="pixel-art" caption="128 frames, 13.56 seconds, **859kB**, <u>made in **0.56 seconds**</u>" >}} -->
+<!-- {{< img_caption img="TRoM - Youtube Thumbnail x0.3 (5.88fps 108 frames - 20.69s).webp" css_image="height:85vh; width:auto;" >}} -->
+<!-- {{< img_caption img="TRoM - Youtube Thumbnail x0.3 (5.88fps 108 frames - 20.69s).webp" css_image="height:40vh; width:auto;" >}} -->
+{{< img_caption img="TRoM - Youtube Thumbnail x0.3 (5.88fps 108 frames - 20.69s).webp" >}}
+{{< img_caption img="Thumbnailer x1.0 (8.33fps 29 frames - 5.86s).webp" >}}
+
+{{< /row >}}
+{{< row >}}
+{{< img_caption img="Suzuka Ka - Pixel Art Logo x1.0 (10.00fps 141 frames - 16.5s).webp" css_image="height:50vh; width:auto;" class="pixel-art" >}}
+{{< img_caption img="TRoM - Paleta x1.0 (10.00fps 168 frames - 19.2s).webp" css_image="height:50vh; width:auto;" class="pixel-art" >}}
+{{< /row >}}
+
+{{< img_caption img="TRoM - Timelapse x1.0 (10.00fps 1017 frames - 103.6s).webp"
+	caption="1017 frames, **104 seconds** (3.5mb)"
+	css_image="height:92vh; width:auto;" 
+	class="pixel-art" 
+>}}
 
 # Contact 
 

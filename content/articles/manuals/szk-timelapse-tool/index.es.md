@@ -119,6 +119,21 @@ Ejemplo:
 
 {{< cell "12" >}} Crea el timelapse.
 
+# Ejemplos
+{{< row >}}
+{{< img_caption img="TRoM - Youtube Thumbnail x0.3 (5.88fps 108 frames - 20.69s).webp" >}}
+{{< img_caption img="Thumbnailer x1.0 (8.33fps 29 frames - 5.86s).webp" >}}
+{{< /row >}}
+
+{{< row >}}
+{{< img_caption img="Suzuka Ka - Pixel Art Logo x1.0 (10.00fps 141 frames - 16.5s).webp" css_image="height:50vh; width:auto;" class="pixel-art" >}}
+{{< img_caption img="TRoM - Paleta x1.0 (10.00fps 168 frames - 19.2s).webp" css_image="height:50vh; width:auto;" class="pixel-art" >}}
+{{< /row >}}
+{{< img_caption img="TRoM - Timelapse x1.0 (10.00fps 1017 frames - 103.6s).webp"
+	caption="1017 frames, **104 segundos** (3.5mb)"
+	css_image="height:92vh; width:auto;" 
+	class="pixel-art" 
+>}}
 
 # Contacto
 
