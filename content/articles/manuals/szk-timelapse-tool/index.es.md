@@ -119,7 +119,7 @@ Ejemplo:
 
 {{< cell "12" >}} Crea el timelapse.
 
-# Ejemplos
+# Ejemplos de Timelapses
 {{< row >}}
 {{< img_caption img="TRoM - Youtube Thumbnail x0.3 (5.88fps 108 frames - 20.69s).webp" >}}
 {{< img_caption img="Thumbnailer x1.0 (8.33fps 29 frames - 5.86s).webp" >}}

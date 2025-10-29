@@ -119,7 +119,7 @@ E.g:
 
 {{< cell "12" >}} Create Timelapse: Press to \*\**drum roll* 🥁🥁🥁\*\* create the timelapse.
 
-# Some timelapses
+# Timelapse examples
 {{< row >}}
 
 <!-- {{< img_caption img="TRoM Timelapse x1.0 (128 frames - 13.56s).webp" css_image="height:85vh; width:auto;" class="pixel-art" caption="128 frames, 13.56 seconds, **859kB**, <u>made in **0.56 seconds**</u>" >}} -->
