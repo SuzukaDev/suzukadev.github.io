@@ -65,7 +65,7 @@ There are other tools that converts a series of images into .gif, but the ones I
 # Download
 You can download it here:
 
-{{< download_file file="app/SZK Timelapse Tool (1.1.0).zip" type="windows" >}}
+{{< download_file file="app/SZK Timelapse Tool (1.1.1).zip" type="windows" >}}
 
 # How to use it
 
@@ -149,6 +149,11 @@ E.g:
 
 {{< img_caption img="Pixel Art Portrait WIP (x1.0 25.00fps 1308 frames - 54.78s).webp"
 	caption="1308 frames, 55 seconds (**602kb**)"
+	css_image="height:70vh; width:auto;" 
+	class="pixel-art" 
+>}}
+
+{{< img_caption img="TRoM - wind and grass (x1.0 100.00fps 301 frames - 3.01s).webp"
 	css_image="height:70vh; width:auto;" 
 	class="pixel-art" 
 >}}
