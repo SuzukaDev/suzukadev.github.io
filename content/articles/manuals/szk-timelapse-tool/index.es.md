@@ -64,7 +64,7 @@ Hay muchos programas con los que convertir una serie de imágenes a *gif*, pero 
 # Descarga
 Puedes descargarlo aquí:
 
-{{< download_file file="app/SZK Timelapse Tool (1.0.6).zip" type="windows" >}}
+{{< download_file file="app/SZK Timelapse Tool (1.1.0).zip" type="windows" >}}
 
 # Cómo usarlo
 

@@ -65,7 +65,7 @@ There are other tools that converts a series of images into .gif, but the ones I
 # Download
 You can download it here:
 
-{{< download_file file="app/SZK Timelapse Tool (1.0.6).zip" type="windows" >}}
+{{< download_file file="app/SZK Timelapse Tool (1.1.0).zip" type="windows" >}}
 
 # How to use it
 
