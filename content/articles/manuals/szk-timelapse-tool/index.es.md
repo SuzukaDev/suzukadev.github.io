@@ -142,6 +142,11 @@ Ejemplo:
 	class="pixel-art" 
 >}}
 
+{{< img_caption img="TRoM-static-wind-v4 (x1.0 66.67fps 241 frames - 3.615s).webp"
+	css_image="height:70vh; width:auto;" 
+	class="pixel-art" 
+>}}
+
 # Contacto
 
 Puedes contactar conmigo via:

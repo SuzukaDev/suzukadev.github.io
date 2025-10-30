@@ -153,7 +153,7 @@ E.g:
 	class="pixel-art" 
 >}}
 
-{{< img_caption img="TRoM - wind and grass (x1.0 100.00fps 301 frames - 3.01s).webp"
+{{< img_caption img="TRoM-static-wind-v4 (x1.0 66.67fps 241 frames - 3.615s).webp"
 	css_image="height:70vh; width:auto;" 
 	class="pixel-art" 
 >}}
