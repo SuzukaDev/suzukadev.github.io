@@ -75,7 +75,7 @@ url="https://orb91.gumroad.com/l/easy_elastic_bones" >}}
 {{< box_info >}}
 The selected bone(s) have to be '*valid*'. This means that they should be in between two **connected** bones.
 
-{{< details "Example" >}}
+{{< details "Example" true >}}
 <!-- "Starting" and "ending" bones are not valid for making them elastic (the button is deactivated): -->
 You cannot make the starting and ending bones elastic (notice that the button is deactivated):
 ![Untitled](images/valid_bones.gif)

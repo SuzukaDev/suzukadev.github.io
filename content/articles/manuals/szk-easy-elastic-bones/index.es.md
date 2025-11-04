@@ -75,7 +75,7 @@ url="https://orb91.gumroad.com/l/easy_elastic_bones" >}}
 {{< box_info >}}
 Los huesos seleccionados han de ser '*válidos*'. Esto significa que han de estar entre 2 huesos **conexos**.
 
-{{< details "Ejemplo" >}}
+{{< details "Ejemplo" true >}}
 Los huesos "finales" no es posible hacerlos elásticos (el botón está desactivado):
 ![Untitled](images/valid_bones.gif)
 
