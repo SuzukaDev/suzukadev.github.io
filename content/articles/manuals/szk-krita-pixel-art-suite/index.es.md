@@ -512,7 +512,12 @@ Esto es útil si deseas guardar manualmente algunos "instantáneas" de tu dibujo
 {{< /box_info >}}
   - Si está activado, las imágenes con el mismo nombre serán sobrescritas.
 
----
+## Opciones de selección
+
+- **Crop** - Si está marcada, recortará la imagen exportada a los límites de la selección actual.
+- **Mask** - Si está marcada, solo incluirá en la imagen exportada los píxeles que se encuentren dentro del area seleccionada.
+
+## Botones para exportar
 - **Selection only (Solo la selección)** - Si está activado, solo exportara la region seleccionada. Util para cuando quieres exportar solo un área específica del documento.
 - 📁 - Haz click para abrir la carpeta donde se exportan las imágenes.
 - **Export Scaled (Exportar Escalado)** - Exporta todo el documento.
@@ -521,6 +526,10 @@ Esto es útil si deseas guardar manualmente algunos "instantáneas" de tu dibujo
 {{< box_green >}}
 Esto es útil, por ejemplo, para exportar fácilmente diferentes sprites en un mismo documento para un videojuego 🎮.
 {{< /box_green >}}
+
+{{< box_info >}}
+Los botones {{< shortcut "x1" >}} exportan la imagen/capa/grupo con el temaño original, **sin escalar**.
+{{< /box_info >}}
 
 
 

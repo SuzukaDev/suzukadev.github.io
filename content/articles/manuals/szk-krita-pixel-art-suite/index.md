@@ -533,7 +533,12 @@ This is useful if you want to manually save some "snapshots" of your drawing and
 {{< /box_info >}}
   - If true (checked) the files with the same name will be overwritten.
 
----
+## Selection options
+
+- **Crop** - If true/checked, it will crop the exported image to the bounds of the active selection.
+- **Mask** - If true/checked, it will only include in the exported images the pixels inside the active selection.
+
+## Export buttons
 - **Selection only** - If true/checked, it will only export the region selected. Useful if you want to export only an specific area/region.
 - 📁 - Click to open the folder with the exported images.
 - **Export Scaled** - Exports the whole document.
@@ -543,6 +548,11 @@ This is useful if you want to manually save some "snapshots" of your drawing and
 <!-- {{< text_wavy2 "This is useful, for example, for exporting different sprites for a game easily." 0.5 0.03 4 >}} {{< text_wavy2 "🎮" 0.5 0.03 4 >}}  -->
 This is useful, for example, for exporting different sprites for a game easily 🎮.
 {{< /box_green >}}
+
+
+{{< box_info >}}
+The {{< shortcut "x1" >}} buttons export the image/layer/group with their original size, **without scaling**.
+{{< /box_info >}}
 
 
 
