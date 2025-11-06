@@ -101,7 +101,7 @@ Aparecerá un nuevo ***panel*** con el *plugin*:
 
 # Gama de sombras y luces
 
-Está inspirado el panel de gama de sombras y luces que ofrecía [*Pyxel Edit*](https://pyxeledit.com/), el cual generaba tonos para las sombras y las luces muy interesantes de forma muy sencilla. 
+Está inspirado en el panel de gama de sombras y luces que ofrecía [*Pyxel Edit*](https://pyxeledit.com/), el cual generaba tonos para las sombras y las luces muy interesantes de forma muy sencilla. 
 
 Añade la funcionalidad original a *Krita* y lo expande **añadiendo nuevas opciones**.
 
@@ -997,8 +997,18 @@ Atajos proporcionados por el *plugin*:
 - Al seleccionar un color de una paleta en la pestaña de Sombreado, puedes mover hacia atrás/adelante el color activo de la paleta con los atajos:
 |Comando | Atajo por defecto
 |:---|---:
-Previous Palette Color (SZK Pixel Art Suite) | {{< shortcut "Alt+1" >}}
-Next Palette Color (SZK Pixel Art Suite) | {{< shortcut "Alt+2" >}}
+Previous Palette Color (SZK Pixel Art Suite) | -
+Next Palette Color (SZK Pixel Art Suite) | -
+Previous Shading Color (SZK Pixel Art Suite) | {{< shortcut "Alt+1" >}}
+Next Shading Color (SZK Pixel Art Suite) | {{< shortcut "Alt+2" >}}
+
+- `Previous/Next Palette Palette Color` selecciona color anterior/siguiente en la paleta que esté activa, respecto al color que tengas seleccionado.
+{{< box_info >}}
+Si el color seleccionado **no se encuentra en la paleta que está activa**, no hará nada.
+{{< /box_info >}}
+
+- `Previous/Next Palette Shading Color` selecciona el color anterior/siguiente en la barra de sombreado que tengas **seleccionada** (en la [pestaña de sombreado](#gama-de-sombras-y-luces)).
+
 
 
 
@@ -1009,10 +1019,11 @@ Next Palette Color (SZK Pixel Art Suite) | {{< shortcut "Alt+2" >}}
 |:---|---:
 Open SZK K Pixel Art Editor (SZK Pixel Art Suite) | {{< shortcut "Alt+F3" >}}
 
-{{< box_info >}}
-Personalmente, recomiendo encarecidamente configurar esto a tu gusto. 
-Personalmente me gusta activar el editor como si estuviera cambiando de pincel (para usar una de sus características, como el pincel pixel perfecto, o dibujar una primitiva, etc.) de forma puntual y rápida, y luego volver a Krita.
-{{< /box_info >}}
+{{< box_green >}}
+Recomiendo encarecidamente configurar esto a tu gusto. 
+
+Personalmente, me gusta activar el editor como si estuviera cambiando de pincel (para usar una de sus características, como el pincel pixel perfecto, o dibujar una primitiva, etc.) de forma puntual y rápida, y luego volver a Krita.
+{{< /box_green >}}
 
 ### Exportar Pixel Art
 

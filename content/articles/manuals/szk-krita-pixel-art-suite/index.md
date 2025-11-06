@@ -1047,8 +1047,18 @@ Shortcuts provided by the plugin:
 - When selecting a color from a palette in the Shading tab, you can move backward/forward the active palette color with the shortcuts:
 |Command | Default Shortcut
 |:---|---:
-Previous Palette Color (SZK Pixel Art Suite) | {{< shortcut "Alt+1" >}}
-Next Palette Color (SZK Pixel Art Suite) | {{< shortcut "Alt+2" >}}
+Previous Palette Color (SZK Pixel Art Suite) | -
+Next Palette Color (SZK Pixel Art Suite) | -
+Previous Shading Color (SZK Pixel Art Suite) | {{< shortcut "Alt+1" >}}
+Next Shading Color (SZK Pixel Art Suite) | {{< shortcut "Alt+2" >}}
+
+- `Previous/Next Palette Palette Color` selects the next/previous color on the palette to the active color.
+{{< box_info >}}
+If the current active foreground color **is not** in the palette, it won't do anything.
+{{< /box_info >}}
+
+- `Previous/Next Palette Shading Color` selects the next/previous color in the selected shading bar of the [color shading tab](#color-shading), when a shading bar is selected.
+
 
 
 
@@ -1059,9 +1069,9 @@ Next Palette Color (SZK Pixel Art Suite) | {{< shortcut "Alt+2" >}}
 |:---|---:
 Open SZK K Pixel Art Editor (SZK Pixel Art Suite) | {{< shortcut "Alt+F3" >}}
 
-{{< box_info >}}
+{{< box_green >}}
 I personally highly recommend to configure this to your choice. I personally like to trigger the editor as if I was changing of brush (for using one of its features, like the pixel perfect brush, or drawing a primitive, etc.)
-{{< /box_info >}}
+{{< /box_green >}}
 
 ### Export Pixel Art
 
