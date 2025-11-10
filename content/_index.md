@@ -104,4 +104,4 @@ Read more **[about me]({{< relref "about-me.md" >}})** or [**check my work here*
 
 
 <br>
-{{< img_caption img="insi-shadow.png" resize=x38 class="unselectable" >}}
+{{< img_caption img="insi-shadow.png" resize=x38 class="unselectable" alt="Mysterious logo that only Suzuka Ka knows what it means because is a message for himself" >}}

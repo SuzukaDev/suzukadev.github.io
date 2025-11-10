@@ -77,4 +77,4 @@ Lee más [**sobre mí**]({{< relref "about-me.md" >}}) o [**echa un vistazo a mi
 {{< last_articles_preview type="articles" n=5 emojis=true >}}
 
 <br>
-{{< img_caption img="insi-shadow.png" resize=x38 class="unselectable" >}}
+{{< img_caption img="insi-shadow.png" resize=x38 class="unselectable" alt="Logo misterioso con un significado que solo Suzuka Ka conoce porque es un recordatorio para él mismo" >}}
