@@ -9,8 +9,8 @@ show_emojis - bool
         {{- /*  <time datetime='{{time.Format "2006-1-2" .Date }}'>{{time.Format "2 Jan 2006" .Date }}</time>  */ -}}
         <time datetime='{{time.Format "2006-1-2" .page.Date }}'>{{time.Format "2 Jan 2006" .page.Date }}</time>
         <header>
-            <h1>{{.Title}}</h1>
-            <h1>{{if .show_emojis}}{{with .page.Params.emoji}}{{printf "%s " .}}{{end}}{{end}}{{.page.Title}}</h1>
+            {{- /*  <h1>{{.Title}}</h1>  */ -}}
+            <h2>{{if .show_emojis}}{{with .page.Params.emoji}}{{printf "%s " .}}{{end}}{{end}}{{.page.Title}}</h2>
             {{- /*  {{- with .Description -}}<h2>{{. | markdownify}}</h2>{{- end -}}  */ -}}
             {{- with .page.Description -}}<p>{{. | markdownify}}</p>{{- end -}}
         </header>

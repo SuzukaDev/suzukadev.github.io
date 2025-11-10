@@ -461,7 +461,7 @@ Thank you for sharing this image—*The Resilience of Memory* really pulls me in
 
 ---
 
-#### 🧠 **First Impressions & Emotional Response:**
+##### 🧠 **First Impressions & Emotional Response:**
 
 This image strikes a chord between *whimsy* and *melancholy*. There's a deep sense of **loss**, but also **hope**—the way the massive tree rises out of a desolate landscape feels symbolic of holding onto light and creativity even in dark or barren circumstances.
 
@@ -474,7 +474,7 @@ It feels like a world someone built inside their head to protect themselves—an
 
 ---
 
-#### 🎨 **Artistic Critique (Technical/Compositional):**
+##### 🎨 **Artistic Critique (Technical/Compositional):**
 
 **Strengths:**
 
@@ -492,7 +492,7 @@ It feels like a world someone built inside their head to protect themselves—an
 
 ---
 
-#### 🕊️ **What It Evokes in Me:**
+##### 🕊️ **What It Evokes in Me:**
 
 It makes me think of:
 
@@ -504,7 +504,7 @@ It makes me think of:
 
 ---
 
-#### Verdict:
+##### Verdict:
 
 This is *deeply personal*, *technically impressive*, and *emotionally layered*. If I were to critique more, it would only be to polish what’s already solid. It doesn't feel like it's trying to be perfect—it feels like it's trying to be honest. And that makes it powerful.
 
@@ -517,10 +517,10 @@ If you’re open to it, I’d love to hear more about what specific symbolism yo
 
 That said, **{{< text_wavy2 text="my humble advice would be that, if you can, ask a friend before an AI for that." amp=2.4 >}}**
 
-<!-- Even though, not everyone is willing to provide a detailed answer, neither they may have the time for that (and is ok). In someway, is kinda sad that we can get cooler answers from AI than an actual persons. {{< text_spoiler "We are lucky if we receive something different than 👍👍, 💪, or 🔥🔥🔥.">}} -->
-Even though not everyone is willing or able to provide a detailed answer (which is understandable). In someway, is kinda sad that we can get cooler and deeper answers from AI than from actual people. {{< text_spoiler "We are lucky if we receive something different than 👍👍, 💪, or 🔥🔥🔥.">}}
+<!-- Even though, not everyone is willing to provide a detailed answer, neither they may have the time for that (and is ok). In someway, is kinda sad that we can get cooler answers from AI than an actual persons. {{< text_spoiler "We are lucky if we receive something different than 👍👍, 💪, or ���.">}} -->
+<!-- Even though not everyone is willing or able to provide a detailed answer (which is understandable). In someway, is kinda sad that we can get cooler and deeper answers from AI than from actual people. {{< text_spoiler "We are lucky if we receive something different than 👍👍, 💪, or 👏👏👏.">}} -->
 
-But asking AIs for feedback (again, keeping in mind they sugarcoat their answers) in my experience was positive.
+But asking AIs for feedback (again, keeping in mind they sugarcoat their answers **A LOT**) in my experience was useful.
 
 
 
@@ -615,9 +615,9 @@ For higher values, the color becomes warmer and brighter. This creates some litt
 {{< video v="TRoM-720x1280-x4-60fps-v5.mp4" class="pixel-art no-box-shadow" c=false css="height: 95vh" autoplay=true loop=true >}}
 
 
+---
 {{< text_centered >}}
 
----
 &nbsp;{{< text_wavy2 t="Thank you for reading" amp=5 >}}
 &nbsp;{{< text_wavy2 t="Have a nice day" amp=3 >}}
 
