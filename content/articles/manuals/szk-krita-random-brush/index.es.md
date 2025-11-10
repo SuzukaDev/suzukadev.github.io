@@ -62,7 +62,7 @@ Personalmente lo uso bastante a la hora de **hacer miniaturas/*thumbnails***. Vi
 
 Now you can assign a shortcut (recommended) or find it in `Tools -> Scripts -> SZK Random Brush`. -->
 
-# Instalación
+## Instalación
 
 1. [Descarga](#descarga-) el `.zip`.
 2. En Krita, ve a ***Herramientas (Tools) ‣ Guiones (Scripts) ‣ Importar complemento de Python desde archivo***, selecciona el archivo `.zip` y presiona `OK`.
@@ -71,12 +71,12 @@ Now you can assign a shortcut (recommended) or find it in `Tools -> Scripts -> S
 	- Ve a `Opciones -> Configurar Krita -> Gestor de complementos Python`, busca `SZK Random Brush`, y si no está activo, actívalo.
 
 
-# Descarga 💾
+## Descarga 💾
 
 {{< download_file file="szk_random_brush.zip" type="krita" text="Download Plugin" >}}
 
 
-# Support 🍀
+## Support 🍀
 
 Si deseas apoyar el plugin, puedes hacerlo a través de {{< get_social social=gumroad icon=false text="Gumroad" >}}:
 
@@ -89,7 +89,7 @@ c= "#353b58"
 url_text="www.orb91.gumroad.com" 
 position="50% 80%" >}}
 
-# Contacto
+## Contacto
 
 Email: {{<get_social "email" >}}
 

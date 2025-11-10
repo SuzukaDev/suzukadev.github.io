@@ -57,7 +57,7 @@ I experience music
 
 I personally think that when we try to fit into a "box", is simply because we  -->
 
-# Canciones Originales
+## Canciones Originales
 {{< header "Music Production Reel" 3 "left" >}}
 
 *Reel* con distintas canciones que he hecho:
@@ -72,7 +72,7 @@ Los titulos se muestran conforme suenan las canciones.
 {{< audio src="suzuka-the-wayback-master-4.mp3" title="The Wayback" text_color="#A71866FF" pos="50% 45%" description="Canción hecha para un ***OSC*** (*One Synth Challenge*). <br>Básicamente se trataba de hacer una canción con **UN SOLO** sintetizador. Todos los sonidos, efectos, percusión, etc. está hecho únicamente con el *U-He TyrellN6*" >}}
 
 
-# Algunos Covers
+## Algunos Covers
 {{< header "Mike Oldfield Medley" 3 "left" >}}
 
 *Medley* de distintos temas/fragmentos de Mike Oldfield en una sola canción, hecha para un disco de fans celebrando el 50 aniversario de Tubular Bells:

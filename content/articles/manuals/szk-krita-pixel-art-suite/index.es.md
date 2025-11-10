@@ -63,7 +63,7 @@ closed=false
 La traducción se ha realizado con la traducción **Español de España** en **Krita**.
 {{< /box_info >}}
 
-# Instalación
+## Instalación
 
 1. Descarga el `.zip`.
 2. En Krita, ve a ***Herramientas (Tools) ‣ Guiones (Scripts) ‣ Importar complemento de Python desde archivo***, selecciona el archivo `.zip` y presiona `OK`.
@@ -76,7 +76,7 @@ Aparecerá un nuevo ***panel*** con el *plugin*:
 
 
 
-## Pestañas 
+### Pestañas 
 {{< row >}}
 
 {{< img_caption img="tabs-legend.png" caption="Pestañas del plugin" class="no-box-shadow" >}}
@@ -99,7 +99,7 @@ Aparecerá un nuevo ***panel*** con el *plugin*:
 {{< /row >}}
 
 
-# Gama de sombras y luces
+## Gama de sombras y luces
 
 Está inspirado en el panel de gama de sombras y luces que ofrecía [*Pyxel Edit*](https://pyxeledit.com/), el cual generaba tonos para las sombras y las luces muy interesantes de forma muy sencilla. 
 
@@ -204,7 +204,7 @@ Personalmente, el atajo {{< shortcut "CTRL + Click Izq." >}} me parece lo más r
 - Presiona el botón {{< cell "FG" >}} / {{< cell "BG" >}} para seleccionar el color **primario/secundario** actual, y generar la paleta entorno a dicho color.
 - Presiona el botón {{< shortcut "Botón Central del Ratón" >}} en una muestra de color. [Lee la sección 'Muestras' para más información.](#muestras)
 
-## Muestras
+### Muestras
 
 > Una '*muestra*' es cada uno de los colores que conforman el gradiente.
 
@@ -230,7 +230,7 @@ Una vez seleccionado un color, puedes:
 
 - **Añadir** el gradiente a la **paleta que tengas activa**.
 
-## Gestionando las paletas
+### Gestionando las paletas
 
 La pestaña de *Gama de sombras y luces* está "conectada" al panel de **"Paleta"** de ***Krita***.
 
@@ -251,14 +251,14 @@ Aparecerá un panel como este:
 {{< /details >}}
 
 
-### Añadir colores a la paleta
+#### Añadir colores a la paleta
 
 Cuando tiene un gradiente seleccionado (tras haber seleccionado una muestra), puede añadir todos sus colores a la paleta activa. Para ello, pulsa este botón:
 
 {{< img_caption "add-colors-to-palette.png" "Añade los colores del gradiente seleccionado a la paleta que tengas activa" >}}
 
 
-### Ordenar los colores de la paleta
+#### Ordenar los colores de la paleta
 
 Se ha incluido opciones para **ordenar** los colores en el panel 'Paleta' según distintos criterios (hue, valor, saturación, luz percibida, similitud de colores, etc.), al igual que existen en otros programas de dibujo.
 
@@ -280,7 +280,7 @@ La mayoría de las opciones se explican por sí msimas. Aunque algunas merecen s
 
 
 
-# Remplazo de color
+## Remplazo de color
 
 Permite reemplazar con precisión un color específico en las capas/grupos seleccionados o en todo el documento.
 
@@ -336,7 +336,7 @@ Puedes seleccionar más de una capa.
 
 
 
-# Pintura indexada
+## Pintura indexada
 
 Establece un grupo de pintura indexada para una capa (o grupo) con un solo clic.
 
@@ -364,7 +364,7 @@ Esto es principalmente para experimentar y descubrir nuevos efectos/resultados.
 
 
 
-## Interfaz
+### Interfaz
 
 {{< img_caption "index-painting-tab-steps.png" >}}
 
@@ -428,7 +428,7 @@ Esto puede servir para **generar patrones de *dithering*** (y luego usarlos en p
 
 
 
-## Configurando un grupo de Pintura Indexada
+### Configurando un grupo de Pintura Indexada
 
 Teniendo un dibujo en **blanco y negro** (o una capa vacia, si quieres dibujar desde cero):
 
@@ -476,7 +476,7 @@ Teniendo la capa *"Gradient"* seleccionada, puedes **samplear su color en blanco
 
 
 
-# Exportación
+## Exportación
 
 Permite exportar el documento (o la(s) capa(s) seleccionada(s)) multiplicada por un factor, con un solo click de forma muy fácil y rápida.
 
@@ -487,7 +487,7 @@ Esto es útil para cuando quieres exportar tu imágen pixel art con un tamaño a
 
 {{< img_caption img="export-tab-new.png" caption="Pestaña de Exportación" >}}
 
-## Opciones de la imagen
+### Opciones de la imagen
 
 - **Escala**: Factor por el que se multiplica el tamaño de la imagen. 
 - **Calidad**: La calidad de compresión de la imagen. Cuanto más alta, mayor calidad.
@@ -504,7 +504,7 @@ Si lo dejas **<u>vacío</u>** usará **el nombre del documento**.
 
 - **Formato**: Selecciona el formato de la imagen. (Soporta los formatos `.png`, `.jpg`, `.webp` y `.bmp`)
 
-## Opciones de nombrado
+### Opciones de nombrado
 - **Add scale (Añadir escala)**: Si está activado, adjuntara el factor de escala al nombre de la imagen.
 - **Overwrite (Sobrescribir)**: Si está desactivado, añadira un sufijo único con la fecha actual, para evitar sobrescribir las imágenes que guardes.
 {{< box_info >}}
@@ -512,12 +512,12 @@ Esto es útil si deseas guardar manualmente algunos "instantáneas" de tu dibujo
 {{< /box_info >}}
   - Si está activado, las imágenes con el mismo nombre serán sobrescritas.
 
-## Opciones de selección
+### Opciones de selección
 
 - **Crop** - Si está marcada, recortará la imagen exportada a los límites de la selección actual.
 - **Mask** - Si está marcada, solo incluirá en la imagen exportada los píxeles que se encuentren dentro del area seleccionada.
 
-## Botones para exportar
+### Botones para exportar
 - **Selection only (Solo la selección)** - Si está activado, solo exportara la region seleccionada. Util para cuando quieres exportar solo un área específica del documento.
 - 📁 - Haz click para abrir la carpeta donde se exportan las imágenes.
 - **Export Scaled (Exportar Escalado)** - Exporta todo el documento.
@@ -536,7 +536,7 @@ Los botones {{< shortcut "x1" >}} exportan la imagen/capa/grupo con el temaño o
 
 
 
-# K-Sprite
+## K-Sprite
 
 K-Sprite es un **editor de Pixel Art dentro de Krita** que está destinado a añadir todas las **características y funcionalidades** de Pixel Art que le faltan a Krita. Como un pincel pixel perfecto, mejores primitivas, líneas bezier, texto pixelado, etc.
 
@@ -546,7 +546,7 @@ K-Sprite es un **editor de Pixel Art dentro de Krita** que está destinado a añ
 > No está pensado para reemplazar por completo el proceso de dibujar Pixel Art en Krita (¡porque Krita sigue siendo una gran herramienta para eso!). Está destinado a **agregar todas las herramientas que le faltan a Krita** y hacer que crear Pixel Art en Krita sea {{< text_wavy2 "¡una mejor experiencia! 🥳" 0.5 0.1 6 >}} 
 
 
-## Tutorial
+### Tutorial
 
 Para ejecutar **K-Sprite**, ve a la `Pestaña del Lápiz ✏️` del *docker*, o presiona el **atajo de teclado** `Open SZK K Pixel Art Editor (SZK Pixel Art Suite)` (Por defecto {{< shortcut "Alt+F3" >}}).
 
@@ -570,7 +570,7 @@ Una vez que efectues los cambios, aparecerá como de costumbre en Krita, en su p
 
 {{< /box_info >}}
 
-## Interfaz
+### Interfaz
 
 {{< img_caption "k-sprite.png">}}
 
@@ -584,7 +584,7 @@ Una vez que efectues los cambios, aparecerá como de costumbre en Krita, en su p
 
 
 {{< header t="Opciones de la herramienta" h=3 align="left" class="underline" >}}
-### Opciones de la herramienta {.no-display}
+#### Opciones de la herramienta {.no-display}
 
 Opciones para las diferentes herramientas de dibujo.
 
@@ -605,7 +605,7 @@ Option | | Shortcut
 
 
 {{< header t="Acciones" h=3 align="left" class="underline" >}}
-### Acciones {.no-display}
+#### Acciones {.no-display}
 
 {{< img_caption img="k-sprite-action-buttons.png" class="no-box-shadow" >}}
 
@@ -625,7 +625,7 @@ Botón | | Atajo de teclado
 
 
 {{< header t="Herramientas" color="#F23C3CFF" h=3 align="left" class="underline" >}}
-### Herramientas {.no-display}
+#### Herramientas {.no-display}
 <!-- ### Tools {.no-display .underline} -->
 
 {{< row >}}
@@ -902,7 +902,7 @@ Atajos del Zoom | Action
 
 
 {{< header t="Lienzo" h=3 align="left" class="underline" >}}
-### Lienzo {.no-display}
+#### Lienzo {.no-display}
 
 
 Aquí es donde dibujas. Esta área muestra el estado actual del documento, y estarás editando **la capa que estaba activa cuando lanzaste el editor**.
@@ -935,7 +935,7 @@ De momento no hay ningún *feedback* visual dentro de K-Sprite para saber si hay
 
 
 {{< header t="Botones de Exportacion" h=3 align="left" class="underline" >}}
-### Botones de Exportacion {.no-display}
+#### Botones de Exportacion {.no-display}
 
 {{< img_caption img="k-sprite-export-buttons.png" class="no-box-shadow" >}}
 
@@ -954,7 +954,7 @@ Exporta los cambios que hayas hecho en K-Sprite a `Una nueva capa (New Layer)` o
 
 
 {{< header t="Barra de Información" h=3 align="left" class="underline" >}}
-### Barra de Información {.no-display}
+#### Barra de Información {.no-display}
 
 Muestra información, atajos de teclado, consejos, etc. al **pasar el cursor** sobre un botón/herramienta.
 
@@ -966,9 +966,9 @@ Esto es útil para no tener que recordar cada atajo, consejo, etc.
 
 
 
-# Opciones
+## Opciones
 
-## Opciones de Pintura Indexada
+### Opciones de Pintura Indexada
 
 - **Add gradient (Agregar degradado)**: Agrega un degradado para previsualizar el efecto de *dithering* y para poder samplear colores.
 
@@ -991,7 +991,7 @@ Esto es útil para no tener que recordar cada atajo, consejo, etc.
   {{< /box_green >}}
 
 
-## Atajos de Teclado
+### Atajos de Teclado
 
 {{< details summary="Cómo configurar los atajos de teclado en Krita" >}}
 Ve a `Preferencias -> Configurar Krita`. Una vez allí, pulsa la pestaña `Accesos rápidos de teclado`. 
@@ -1001,7 +1001,7 @@ Busca `SZK Pixel Art Suite` para ver los atajos disponibles.
 
 Atajos proporcionados por el *plugin*:
 
-### Paleta
+#### Paleta
 
 - Al seleccionar un color de una paleta en la pestaña de Sombreado, puedes mover hacia atrás/adelante el color activo de la paleta con los atajos:
 |Comando | Atajo por defecto
@@ -1021,7 +1021,7 @@ Si el color seleccionado **no se encuentra en la paleta que está activa**, no h
 
 
 
-### K-Sprite
+#### K-Sprite
 
 - Puedes ejecutar el editor K-Sprite con el atajo:
 |Comando | Atajo por defecto
@@ -1034,7 +1034,7 @@ Recomiendo encarecidamente configurar esto a tu gusto.
 Personalmente, me gusta activar el editor como si estuviera cambiando de pincel (para usar una de sus características, como el pincel pixel perfecto, o dibujar una primitiva, etc.) de forma puntual y rápida, y luego volver a Krita.
 {{< /box_green >}}
 
-### Exportar Pixel Art
+#### Exportar Pixel Art
 
 - Puedes asignar a un atajo la acción para exportar tu Pixel Art: 
 |Comando | Atajo por defecto
@@ -1043,7 +1043,7 @@ Export Scaled Pixel Art (Full Document) (SZK Pixel Art Suite) | (Sin asignar)
 Export Scaled Pixel Art (Selected Layers) (SZK Pixel Art Suite) | (Sin asignar)
 
 
-# Solución de problemas 🔧
+## Solución de problemas 🔧
 
 {{< details "No puedo activar el Plugin 💡" >}}
 
@@ -1101,7 +1101,7 @@ Actualmente estoy trabajando en solucionar esto.
 
 
 
-# Créditos
+## Créditos
 
 **Fuentes** usadas:
 

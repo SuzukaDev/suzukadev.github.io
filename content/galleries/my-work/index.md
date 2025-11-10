@@ -8,14 +8,14 @@ draft: false
 categories: ["gamedev", "art"]
 # main_classes: 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 
-## INFO Menus https://gohugo.io/content-management/menus/
+### INFO Menus https://gohugo.io/content-management/menus/
 # menus:
 #     main:
 #         name: Name in the menu
 #         weight: 10
 #     footer:
 
-## params:
+### params:
 # GALLERY DISPLAY SETTINGS
 # private: true # If true, this gallery does won't show in lists, RSS, sitemaps, etc. On list pages, use cascade to hide descendants.
 # featured: true # If true the gallery will be featured in home with a BIG picture (even if private).

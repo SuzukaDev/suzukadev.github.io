@@ -71,7 +71,7 @@ Página no traducida (de momento). Para leer el artículo, [visita la página en
 
 
 
-# Grease Pencil Particles ✏✨ | Suzuka Ka
+## Grease Pencil Particles ✏✨ | Suzuka Ka
 
 <!-- > This addon creates a **hand drawn particle animation from a Grease Pencil drawing**, allowing to create {{< text_wavy2 "lots of cool effects!" >}} -->
 <!-- It automatically animates every stroke of a drawing and offers lots of possibilities to make lots of cool and weird things! -->
@@ -88,7 +88,7 @@ Funciona con **Grease Pencil 3.0** {{< text_shimmer "y también con versiones pr
 
 <!-- # Index 📋 -->
 
-# Instalación 💻
+## Instalación 💻
 
 
 {{< details "Cómo instalar el addon" >}}
@@ -103,7 +103,7 @@ Funciona con **Grease Pencil 3.0** {{< text_shimmer "y también con versiones pr
 {{< /details >}}
 
 
-# Ejecutar el operador
+## Ejecutar el operador
 
 Para ejecutar el operador que transforma el dibujo en partículas: 
 
@@ -128,9 +128,9 @@ El operador funciona en el modo `Edit Mode` y `Weight Paint`. No está visible e
 {{< /box_info >}}
 
 
-# Propiedades del operador
+## Propiedades del operador
 
-## Opciones básicas
+### Opciones básicas
 
 ![Untitled](images/Untitled%202.png)
 
@@ -176,7 +176,7 @@ Usa el botón ♻ para resetear el offset a (0, 0, 0)
 	
 11. `Max Scatter` (Dispersión máxima) - Establece la variación máxima en el vector inicial del movimiento de la partícula/trazo.
 
-### Gravedad & Tamaño
+#### Gravedad & Tamaño
 
 ![Untitled](images/Untitled%203.png)
 
@@ -190,9 +190,9 @@ Usa el botón ♻ para resetear el offset a (0, 0, 0)
 		1. `Randomness` - El nivel de aleatoriedad para la velocidad en que cada partícula samplea la curva con el tamaño.
 
 
-## Efectos
+### Efectos
 
-### Noise (Ruido)
+#### Noise (Ruido)
 
 Añade movimiento aleatorio a las partículas/trazos.
 
@@ -218,7 +218,7 @@ Usa el botón `↔` para invertir el efecto (las partículas más pesadas serán
 
 1. `Fijar eje` - Al fijar un eje, el ruido en el eje seleccionado no tendrá efecto.
 
-### Distort Strokes (Distorsionar trazos)
+#### Distort Strokes (Distorsionar trazos)
 
 Aplica un efecto de distorsión cuando los trazos comienzan a animarse.
 
@@ -236,7 +236,7 @@ Aplica un efecto de distorsión cuando los trazos comienzan a animarse.
 	
 5. `Blend mode` (Modo de fusión) - Selecciona el modo de fusión usado para mezclar los colores de la rampa con el color original de cada trazo.
 
-### Fade Strokes (Desvanecer trazos)
+#### Fade Strokes (Desvanecer trazos)
 
 Desvanece los trazos con el tiempo.
 
@@ -252,7 +252,7 @@ Desvanece los trazos con el tiempo.
 	<!-- a. **Proportional** will fade each stroke proportionally to their life time.
 	b. **Constant** the strokes will fade at a constant rate. -->
 
-#### Desvanecimiento Proporcional
+##### Desvanecimiento Proporcional
 
 Los trazos/partículas se desvanecerán proporcionalmente a su tiempo de vida (el tiempo que estén animándose, desde que comienzna a moverse hasta el final).
 
@@ -262,7 +262,7 @@ Garantiza que todas las partículas han sido desvanecidas al final del efecto.
 	1. `End` (Final) - Porcentaje respecto a la vida de cada trazo en el que el trazo **termina** de desvanecerse.
 2. `Randomness` - Aleatoriza los porcentajes de inicio/final de cada trazo.
 
-#### Desvanecimiento Constante
+##### Desvanecimiento Constante
 
 El efecto de desvanecimiento usará un número constante de frames y todos los trazos se desvanecerán a un ritmo cosntante.
 
@@ -278,7 +278,7 @@ El efecto de desvanecimiento usará un número constante de frames y todos los t
 > ![50scale.webp](images/50scale.webp)
 > 
 
-### Color 🎨
+#### Color 🎨
 
 ¡Añade color a los trazos/partículas!
 
@@ -294,7 +294,7 @@ El efecto de desvanecimiento usará un número constante de frames y todos los t
 3. `Delay frames` (Frames de retraso) - El tiempo en el que cada partícula se retrasa hasta cambiar su color.
 4. `Fade frames` (Frames de desvanecimiento) - El número total de frames en el que ambos colores se mezclan, para crear variaciones más suaves.
 
-#### Algoritmo de Color variable
+##### Algoritmo de Color variable
 
 ![Untitled](images/Untitled%209.png)
 
@@ -305,7 +305,7 @@ El efecto de desvanecimiento usará un número constante de frames y todos los t
 
 
 
-### Depth Color (Color de profundidad)
+#### Depth Color (Color de profundidad)
 
 Tiñe las partículas de un color en función de su distancia a la cámara activa. Util para crear una especie de profundidad atmosférica que ayuda a distinguir las partículas más cercanas de las más lejanas.
 
@@ -322,7 +322,7 @@ Puedes encontrar la rampa con la profundiad de color en el panel de propiedades,
 2. `Blend frames` - The total time it takes to blend the strokes/particles to the depth color, to avoid abrupt changes.
 
 
-## Extra Debris (Fragmentos Extra)
+### Extra Debris (Fragmentos Extra)
 
 <!-- Adds extra particles/strokes to the drawing randomly. Because the more debris, the better. -->
 Añade más partículas/trazos al dibujo. 
@@ -335,7 +335,7 @@ Añade más partículas/trazos al dibujo.
 3. `Proportional distribution` (Distribución proporcional) - Si está activado, cuanto mayor sea el trazo, más probabilidad habrá de que se instancien nuevas partículas/fragmentos en su posición.
 4. `Random width` (Ancho aleatorio) - El nivel de aleatoriedad entre los fragmentos añadidos. Si se pone a 0, los nuevos fragmentos tendrán el mismo tamaño que los trazos en donde se instancian.
 
-## Opciones Varias
+### Opciones Varias
 
 ![Untitled](images/Untitled%2012.png)
 
@@ -376,7 +376,7 @@ Esto es útil para cuando tengas que hacer muchos cambios en las propiedades. De
 	<!-- Since the operator can be hard to process depending the drawing complexity, there would be some times when you would like to edit different values without triggering the operator’s execution. In those cases, is better to press bypass, make your changes, and then disable bypass, to avoid waiting between each change. -->
 
 
-# Panel de Propiedades
+## Panel de Propiedades
 
 Hay algunos parametros más avanzados (como curvas, rampas de color, etc.) que no pueden ser mostrados en el panel del operador debido a algunas limitaciones de Blender.
 
@@ -423,13 +423,13 @@ Para volver a ejecutar el operador con las mismas propiedades (y con las propied
 {{< /box_warning >}}
 
 
-# Otros Operadores ⚙
+## Otros Operadores ⚙
 
 El *addon* añade algunos operadores que hace que sea más fácil trabajar con las animaciones en el *dopesheet*.
 
 <!-- The addon adds as an extra some new handy operators for better working with animations. -->
 
-## Remove frames block (Borrar bloque de frames)
+### Remove frames block (Borrar bloque de frames)
 
 Borra todos los frames de un mismo tipo que se encuentran en el mismo bloque:
 
@@ -440,7 +440,7 @@ Borra todos los frames de un mismo tipo que se encuentran en el mismo bloque:
 <!-- > I made it because I personally hated having to precisely choose with the mouse interpolated frames and such, so this makes it easier! -->
 > Decidí añadirlo porque personalmente se me hacía tedioso tener que seleccionar precisamente con el ratón todos los frames. Esto lo hace más fácil.
 
-## Select frames block (Seleccionar bloque de frames)
+### Select frames block (Seleccionar bloque de frames)
 
 Selecciona un bloque de frames del mismo tipo, sin borrarlo.
 
@@ -449,7 +449,7 @@ Puedes encontrar ambos en el menu del *dopesheet*, dentro de la pestaña ***Suzu
 {{< /box_info >}}
 
 
-# Preguntas frecuentes ❔
+## Preguntas frecuentes ❔
 
 <!-- - ***Why do you write a FAQ section if no one -absolutely no one- has asked you a single question related the add-on?***
 	
@@ -474,7 +474,7 @@ Puedes encontrar ambos en el menu del *dopesheet*, dentro de la pestaña ***Suzu
 ![Untitled](images/Untitled%2015.png)
 
 
-## Limitaciones
+### Limitaciones
 {{< box_warning >}}
 Los trazos con materiales de relleno no están soportados en la versión actual, solo los trazos normales.
 <!-- Strokes with fill materials are not supported at the moment in the current version, only normal non-filled strokes. -->
@@ -495,7 +495,7 @@ Cuando Blender arregle el bug, lo arreglaré 👍.
 {{< /box_info >}}
 {{< /box_warning >}}
 
-# Créditos ©
+## Créditos ©
 
 <!-- The required attribution to some icons used: -->
 Atribución necesaria para algunos iconos usados:
@@ -541,7 +541,7 @@ Atribución necesaria para algunos iconos usados:
 	<a href="[https://www.flaticon.com/free-icons/color](https://www.flaticon.com/free-icons/color)" title="color icons">Color icons created by Nikita Golubev - Flaticon</a>
 	 -->
 
-# Contacto 🐺✉
+## Contacto 🐺✉
 
 <!-- 🐦 Twitter: [@SuzukaKDev](https://twitter.com/SuzukaKDev)
 

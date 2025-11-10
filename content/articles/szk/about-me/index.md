@@ -43,7 +43,7 @@ weight = 10
 <!-- > I personally feel the focus should always be "the others". We make games for others to enjoy. We make tools for others to find them useful. <br> But I think we can only achieve that by being honest with ourselves. We can not expect others to enjoy something we would not -->
 
 
-# About me
+## About me
 
 Hello, my name is **Óscar** (also known as Suzuka/Suzuka Ka on the internet), and I personally find very hard to describe myself (or anyone else) with just a few words, but I'll try ({{< text_spoiler "and if I 'fail' in using not so many words, since this is *my place* I feel free to *ramble on (and sing my song)*" >}}):
 
@@ -92,7 +92,7 @@ A personal highlight for me is that some of my tools have been picked up by anim
 
 <!-- --- -->
 
-# My Life & Work Philosophy
+## My Life & Work Philosophy
 
 <!-- **As a person**, I find meaning in learning. I personally think life is about that. My life philosophy could be summed up with that. -->
 

@@ -66,7 +66,7 @@ Divide automáticamente el lienzo en múltiples regiones/miniaturas y selecciona
 Está inspirado por el artista conceptual y ilustrador francés Stephane Richard (Wootha).
 
 
-# Instalación
+## Instalación
 
 1. Descarga el `.zip`.
 2. En Krita, ve a ***Herramientas (Tools) ‣ Guiones (Scripts) ‣ Importar complemento de Python desde archivo***, selecciona el archivo `.zip` y presiona `OK`.
@@ -77,7 +77,7 @@ Aparecerá un nuevo ***panel*** con el *plugin*.
 
 
 
-# Uso
+## Uso
 {{< img_caption "tab1" >}}
 
 {{< cell "1" >}} <u>**Seleccionar la siguiente/anterior miniatura**</u> Selecciona la anterior/siguiente miniatura.
@@ -89,7 +89,7 @@ Aparecerá un nuevo ***panel*** con el *plugin*.
 {{< cell "3" >}} <u>**Play/Pausa y Stop:**</u> Inicia/pausa el temporizador definido en las [opciones](#opciones). Presionar detener finaliza la sesión actual.
 
 
-# Opciones
+## Opciones
 
 {{< img_caption "tab2" >}}
 
@@ -126,7 +126,7 @@ Esto es útil para tener **2 presets diferentes para cada miniatura** (y alterar
 {{< img_caption img="Ari-comic-thumbnails.jpg" caption="*Thumbnails* de comic hechas por Ari (Random Layout)" resize="433x" >}}
 
 
-# Atajos de teclado
+## Atajos de teclado
 
 El *plugin* incluye los siguientes atajos:
 
@@ -141,7 +141,7 @@ Select Random Brush | (*Sin asignar*)
 
 {{< download_file file="download/1.0.0/szk_thumbnailer.zip" type="krita" text="Download Plugin" >}} -->
 
-# Changelog
+## Changelog
 
 Versión | Cambios
 :-- | :--
@@ -152,14 +152,14 @@ Versión | Cambios
 1.0.0 | *Release*
 
 
-# Apoyar 🍀
+## Apoyar 🍀
 
 Si deseas apoyar el plugin, puedes hacerlo a través de {{< get_social social=gumroad icon=false text="Gumroad" >}}:
 
 
 
 
-# Contacto
+## Contacto
 
 Email: {{<get_social "email" >}}
 

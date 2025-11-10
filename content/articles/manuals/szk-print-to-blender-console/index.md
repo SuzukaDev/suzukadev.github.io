@@ -50,7 +50,7 @@ The `print()` function will keep sending the output to the system console, but i
 {{< img_caption img="/images/print-to-python-console-(Gif5).gif" url="https://orb91.gumroad.com/l/szk_console_print" >}}
 
 
-# Installation 💻
+## Installation 💻
 
 1. Download the *.zip* file with the addon and place it wherever you like.
 2. In Blender, go to `Edit → Preferences`. Once there, press the `Add-ons` tab and press `Install` button on the top-right corner:
@@ -62,7 +62,7 @@ The `print()` function will keep sending the output to the system console, but i
 4. Once installed, search for “`SZK Console Print`” in the search bar, and enable the addon.
 5. Now every `print()` call will be shown in the Blender's Python REPL Console. 🐍
 
-# Contact 🐺✉
+## Contact 🐺✉
 <!-- 
 Twitter: [@SuzukaKDev](https://twitter.com/SuzukaKDev)
 

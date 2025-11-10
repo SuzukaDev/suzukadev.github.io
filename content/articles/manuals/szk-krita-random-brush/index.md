@@ -46,7 +46,7 @@ I personally find this very useful and use it all the time when I'm **making thu
 At the end is some kind of way to *embrace serendipity* and to help you to "discover"/choose brushes you are not used to, or have forget about, and to achieve new results.
 
 
-# Installation
+## Installation
 
 1. [Download](#download-) the `.zip`.
 2. In *Krita*, go to ***Tools ‣ Scripts ‣ Import Python Plugin…***, find the `.zip` file and press OK.
@@ -59,12 +59,12 @@ Now you can assign a shortcut (recommended) or find it in `Tools -> Scripts -> S
 
 <!-- {{< img_caption img="images/docker-combined.png" caption="Different tabs of the docker" class="no-box-shadow" >}} -->
 
-# Download 💾
+## Download 💾
 
 {{< download_file file="szk_random_brush.zip" type="krita" text="Download Plugin" >}}
 
 
-# Support 🍀
+## Support 🍀
 
 If you wish to support the plugin, you can do it via {{< get_social social=gumroad icon=false text="Gumroad" >}}:
 
@@ -77,7 +77,7 @@ c= "#353b58"
 url_text="www.orb91.gumroad.com" 
 position="50% 80%" >}}
 
-# Contact
+## Contact
 
 Email: {{<get_social "email" >}}
 

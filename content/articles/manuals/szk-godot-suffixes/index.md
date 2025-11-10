@@ -39,7 +39,7 @@ show_right_bar = true
 
 <!-- > Basically avoids having to remember all the suffixes (or having to check them in the docs) and avoid (posibly) silly errors when typing them manually . -->
 
-# Installation 💻
+## Installation 💻
 
 1. Download the _.zip_ file with the addon and place it wherever you like.
 2. In Blender, go to `Edit → Preferences`. Once there, press the `Add-ons` tab and press `Install` button on the top-right corner:
@@ -49,7 +49,7 @@ show_right_bar = true
 1. Select the _.zip_ file.
 2. Once installed, search for “`SZK Godot Suffixes`” in the search bar, and enable the addon.
 
-# How to use it? 🔨
+## How to use it? 🔨
 
 You can find the addon:
 
@@ -69,7 +69,7 @@ You can find the addon:
 
 ![Untitled](images/animation-menu.png)
 
-# Addon Settings ⚙
+## Addon Settings ⚙
 
 - `Colored Godot icon` 
   - If disabled, the Godot’s icon will be displayed without colors in the UI:
@@ -77,7 +77,7 @@ You can find the addon:
   ![color icon.gif](images/color_icon.gif)
 
 <!-- # Contact ✉ ![SZK icon](<images/header icons/dexter.png>) -->
-# Contact ✉
+## Contact ✉
 
 Twitter: {{< get_social "twitter" >}}
 
@@ -87,7 +87,7 @@ Mail: {{< get_social "email" >}}
 
 Mail: [suzukakadev@gmail.com](mailto:suzukakadev@gmail.com) -->
 
-# Support 🍀
+## Support 🍀
 
 If you wish to support the addon you can do it [by **getting it via Gumroad**](https://orb91.gumroad.com/l/szk-godot-suffixes) (thank you 🍀).
 

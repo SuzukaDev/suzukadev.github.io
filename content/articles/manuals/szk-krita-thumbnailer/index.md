@@ -56,7 +56,7 @@ It automatically divides the canvas into multiple thumbnail areas and cycles thr
 This is heavily inspired by the French Concept Artist & Illustrator Stephane Richard (Wootha).
 
 
-# Installation
+## Installation
 
 1. Download the `.zip`.
 2. In Krita, go to ***Tools ‣ Scripts ‣ Import Python Plugin…***, find the `.zip` file and press OK.
@@ -67,7 +67,7 @@ A new **docker** with the plugin will appear.
 
 
 
-# Usage
+## Usage
 {{< img_caption "tab1.png" >}}
 
 {{< cell "1" >}} <u>**Select Previous/Next:**</u> Selects the previous/next thumbnail.
@@ -79,7 +79,7 @@ A new **docker** with the plugin will appear.
 {{< cell "3" >}} <u>**Play/Pause and Stop buttons:**</u> Starts/pauses the timer defined in [options](#options). Pressing stop finishes the thumbnailing session.
 
 
-# Options
+## Options
 
 {{< img_caption "tab2.png" >}}
 
@@ -114,7 +114,7 @@ This is useful for having **2 different presets for each thumbnai**l (and alter 
 
 {{< img_caption img="Ari-comic-thumbnails.jpg" caption="Awesome comic thumbnails made by Ari (Random Layout)" resize="433x" >}}
 
-# Shortcuts
+## Shortcuts
 
 Available shortcuts:
 
@@ -129,7 +129,7 @@ Select Random Brush | (*Not assigned*)
 
 {{< download_file file="download/1.0.0/szk_thumbnailer.zip" type="krita" text="Download Plugin" >}} -->
 
-# Changelog
+## Changelog
 
 Version | Changes
 :-- | :--
@@ -140,14 +140,14 @@ Version | Changes
 1.0.0 | *Release*
 
 
-# Support 🍀
+## Support 🍀
 
 If you wish to support the plugin, you can do it via {{< get_social social=gumroad icon=false text="Gumroad" >}}:
 
 
 
 
-# Contact
+## Contact
 
 Email: {{<get_social "email" >}}
 

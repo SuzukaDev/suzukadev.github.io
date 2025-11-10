@@ -44,10 +44,10 @@ defaultContentLanguageInSubdir = true
 [markup]
   # INFO https://gohugo.io/methods/page/tableofcontents/
   [markup.tableOfContents]
-    endLevel = 3
+    endLevel = 4
     # ordered = false
     ordered = true
-    startLevel = 1
+    startLevel = 2
 
 [markup.goldmark.renderer]
 unsafe= true

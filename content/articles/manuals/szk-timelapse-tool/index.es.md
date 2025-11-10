@@ -50,7 +50,7 @@ Página no traducida (de momento). Para leer el artículo, [visita la página en
 
 {{< img_caption img="TRoM Timelapse x1.0 (128 frames - 13.56s).webp" css_image="height:85vh; width:auto;" class="pixel-art" caption="128 frames, 13.56 segundos, **859kB**, <u>realizado en **0.56 segundos**</u>" >}}
 
-# Motivación e Intención
+## Motivación e Intención
 
 Quería hacer un .gif con el timelapse de una ilustración que había hecho con Krita. Tenía 50.776 capturas (😶) de todo el proceso, y obviamente no podía incluirlas todas en el gif.
 
@@ -61,12 +61,12 @@ Hay muchos programas con los que convertir una serie de imágenes a *gif*, pero 
 > Quería hacer algo **rápido y fácil de usar**, y que incluyera todas las opciones que quería. Por eso hice este programa.
 
 
-# Descarga
+## Descarga
 Puedes descargarlo aquí:
 
 {{< download_file file="app/SZK Timelapse Tool (1.1.1).zip" type="windows" >}}
 
-# Cómo usarlo
+## Cómo usarlo
 
 {{< img_caption "ui2-steps.png" >}}
 
@@ -120,7 +120,7 @@ Ejemplo:
 
 {{< cell "12" >}} Crea el timelapse.
 
-# Ejemplos de Timelapses
+## Ejemplos de Timelapses
 {{< row >}}
 {{< img_caption img="TRoM - Youtube Thumbnail x0.3 (5.88fps 108 frames - 20.69s).webp" >}}
 {{< img_caption img="Thumbnailer x1.0 (8.33fps 29 frames - 5.86s).webp" >}}
@@ -147,7 +147,7 @@ Ejemplo:
 	class="pixel-art" 
 >}}
 
-# Contacto
+## Contacto
 
 Puedes contactar conmigo via:
 

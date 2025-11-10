@@ -42,7 +42,7 @@ I experience music
 
 I personally think that when we try to fit into a "box", is simply because we  -->
 
-# Original Songs
+## Original Songs
 {{< header "Music Production Reel" 3 "left" >}}
 
 Reel showcasing some seconds of different songs I made:	
@@ -57,7 +57,7 @@ The titles for each one are displayed while they sound.
 {{< audio src="suzuka-the-wayback-master-4.mp3" title="The Wayback" text_color="#A71866FF" pos="50% 45%" description="Song made for a ***OSC*** (*One Synth Challenge*). <br>It was about making a song with just **ONE** synth. Every sound, SFX, drums, bass, etc. was made only with the synth *U-He TyrellN6*" >}}
 
 
-# Some Covers
+## Some Covers
 {{< header "Mike Oldfield Medley" 3 "left" >}}
 
 Mixes different Mike Oldfield's pieces into a single one. It was made originally for a fan album celebrating the 50th anniversary of Tubular Bells:

@@ -9,13 +9,13 @@ menu:
 ---
 
 
-## Hola, me llamo Óscar
+### Hola, me llamo Óscar
 
 
 Soy un **Ingeniero Multimedia** y **Desarrollador De Videojuegos** multidisciplinario. Siempre he estado interesado en ser un desarrollador en solitario, alguien que puede llevar un proyecto desde la idea hasta el lanzamiento, cubriendo todos los aspectos del desarrollo.
 That said, I also enjoy working in teams and collaborating with others.
 
-### Habilidades
+#### Habilidades
 
 
 - [**Gestión y desarrollo completo de proyectos**]({{< relref "articles/manuals" >}}): Estoy acostumbrado a planificar y construir proyectos completos por mi cuenta, gestionando todo desde el concepto hasta los últimos detalles.
@@ -52,6 +52,6 @@ Si quieres saber más sobre sobre mí o mi filosofía, puedes leer este texto m�
 
 {{< featured_articles "about-me" >}}
 
-### Contacto
+#### Contacto
 
 {{< get_social "email" >}}

@@ -29,9 +29,9 @@ show_right_bar = true
 # related_pages = [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 +++
 
-# por encima
+## por encima
 
-# por encima tambien
+## por encima tambien
 
 <!-- # Test table of contents -->
 {{< header "Heeeey" 1 >}}
@@ -74,7 +74,7 @@ func main() {
 
 {{% header "Heeeey 2" 1 %}}
 
-# Test
+## Test
 asdfkajsglkfjs degioewj ogisjf igewjrg dgf ert
 hdgh dthy erthk jdfgh
 
@@ -86,37 +86,37 @@ sf sgdjhfgjksdhfgkj h
 {{< /details >}}
 
 
-## wolla
+### wolla
 asdfkajsglkfjs degioewj ogisjf igewjrg dgf ert
 hdgh dthy erthk jdfgh
 
 
-# Test
+## Test
 asdfkajsglkfjs degioewj ogisjf igewjrg dgf ert
 hdgh dthy erthk jdfgh
 
 
-# Test
+## Test
 asdfkajsglkfjs degioewj ogisjf igewjrg dgf ert
 hdgh dthy erthk jdfgh
 
 
-# Test
+## Test
 asdfkajsglkfjs degioewj ogisjf igewjrg dgf ert
 hdgh dthy erthk jdfgh
 
 
-## wolla
+### wolla
 asdfkajsglkfjs degioewj ogisjf igewjrg dgf ert
 hdgh dthy erthk jdfgh
 
 
-### wolla 3
+#### wolla 3
 asdfkajsglkfjs degioewj ogisjf igewjrg dgf ert
 hdgh dthy erthk jdfgh
 
 
-# Test
+## Test
 asdfkajsglkfjs degioewj ogisjf igewjrg dgf ert
 hdgh dthy erthk jdfgh
 

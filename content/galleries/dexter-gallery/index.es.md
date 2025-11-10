@@ -8,14 +8,14 @@ draft: false
 # categories: ["gamedev", "art"]
 # main_classes: 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 
-## INFORMACIÓN Menús https://gohugo.io/content-management/menus/
+### INFORMACIÓN Menús https://gohugo.io/content-management/menus/
 # menus:
 #     main:
 #         name: Name in the menu
 #         weight: 10
 #     footer:
 
-## parámetros:
+### parámetros:
 # CONFIGURACIONES DE VISUALIZACIÓN DE GALERÍA
 private: true # Si es verdadero, esta galería no aparecerá en listas, RSS, sitemaps, etc. En las páginas de lista, usa cascade para ocultar descendientes.
 # featured: true # Si es verdadero, la galería será destacada en la página principal con una imagen GRANDE (incluso si es privada).
@@ -53,4 +53,4 @@ print_debug_resource_weight: true # Si es verdadero, muestra un campo 'weight' e
 # related_pages: [""] # If set, these pages (up to 3) will be displayed in the related section for this page. Useful when you want to be sure that a page appears as related
 ---
 
-## Gracias Dexter 🖤
+### Gracias Dexter 🖤

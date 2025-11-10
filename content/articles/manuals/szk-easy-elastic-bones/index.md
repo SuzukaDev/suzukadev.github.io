@@ -58,7 +58,7 @@ italic=false
 alt="Illustration of a skull bouncing rigged with SZK Easy Elastic Bones" 
 url="https://orb91.gumroad.com/l/easy_elastic_bones" >}}
 
-# Installation 💻
+## Installation 💻
 
 1. Download the _.zip_ file with the addon and place it wherever you like.
 2. In Blender, go to `Edit → Preferences`. Once there, press the `Add-ons` tab and press `Install` button on the top-right corner:
@@ -68,7 +68,7 @@ url="https://orb91.gumroad.com/l/easy_elastic_bones" >}}
 3. Select the _.zip_ file.
 4. Once installed, search for “`SZK Easy Elastic Bones`” in the search bar, and enable the addon.
 
-# How to use it ⚙
+## How to use it ⚙
 
 1. Having an armature selected in **Edit** or **Pose Mode**, **select the bones** you want to make elastic.
 
@@ -98,13 +98,13 @@ To remove an elastic bone, simply select an elastic bone and press `‘Delete El
 {{< /box_green >}}
 
 
-# FAQ ❔
+## FAQ ❔
 
 - ***Why do you write a FAQ section if no one has asked you a single question related the add-on?***
   
     Thats a very good question. I don’t know. I guess that if I ever got asked about something “frequently” (more than 2 times), I’ll clarify it here in case it’s useful for others 🐢.
 
-# Contact 🐺
+## Contact 🐺
 
 <!-- Twitter: [@SuzukaKDev](https://twitter.com/SuzukaKDev)
 

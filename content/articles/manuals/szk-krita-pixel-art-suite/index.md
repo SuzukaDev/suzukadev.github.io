@@ -61,7 +61,7 @@ ordered=false
 closed=false 
 >}}
 
-# Installation
+## Installation
 
 <!-- {{< details summary="Click here if you don't know how to install a plugin" color="rgba(23, 112, 201, 1.0)" open=true >}} -->
 
@@ -80,7 +80,7 @@ A new **docker** with the plugin will appear:
 
 <!-- {{< /details >}} -->
 
-## Tabs
+### Tabs
 {{< row >}}
 
 {{< img_caption img="tabs-legend.png" caption="Tabs of the plugin" class="no-box-shadow" >}}
@@ -103,7 +103,7 @@ A new **docker** with the plugin will appear:
 {{< /row >}}
 
 
-# Color Shading
+## Color Shading
 
 This is inspired by the color shading panel from [*Pyxel Edit*](https://pyxeledit.com/), which provided interesting color shadings very easily. 
 
@@ -208,7 +208,7 @@ I personally find the {{< shortcut "CTRL + Left MB" >}} very useful and fast, an
 - Press the {{< cell "FG" >}} / {{< cell "BG" >}} button to grab your current **foreground/background color** and build the shading palettes around it.
 - Press the {{< shortcut "Middle MB" >}} on a swatch. [See 'Swatches' section below for more info](#swatches)
 
-## Swatches
+### Swatches
 
 > A '*swatch*' is a single color sample of a gradient.
 
@@ -239,7 +239,7 @@ Once a color is selected, you can:
 
 - **Add** the whole shading to your **active palette**.
 
-## Managing Palettes
+### Managing Palettes
 
 The *Color Shading* tab is "connected" to the native Palette docker by ***Krita***.
 
@@ -261,7 +261,7 @@ A docker like this will appear:
 
 <!-- {{< header "Add colors to palette" 4 "left" >}} -->
 
-### Add colors to palette
+#### Add colors to palette
 
 When you have a gradient selected (by having selected a swatch), you can add all its colors to the active palette. For that, press this button:
 
@@ -271,7 +271,7 @@ When you have a gradient selected (by having selected a swatch), you can add all
 
 <!-- {{< header "Sort Palettes" 4 "left" >}} -->
 
-### Sort Palettes
+#### Sort Palettes
 
 
 
@@ -296,7 +296,7 @@ Most are self explanatory. Even though, some ones worthy to explain:
 
 
 
-# Color Replace
+## Color Replace
 
 Allows to precisely replace an specific color in the selected layers/groups or in the entire document.
 
@@ -352,7 +352,7 @@ You can select more than one layer.
 
 
 
-# Index Painting
+## Index Painting
 
 Sets up an index painting group for a layer (or group) with a single click.
 
@@ -385,7 +385,7 @@ This is mostly to play, experiment and discover new and cool pixel gradient effe
 
 
 
-## Interface
+### Interface
 
 {{< img_caption "index-painting-tab-steps.png" >}}
 
@@ -447,7 +447,7 @@ This can be used as a **pattern generator** (useful for making **textures for br
 {{< /box_green >}}
 
 
-## Setting an Index Painting group
+### Setting an Index Painting group
 
 Having a **black and white** drawing (or an empty layer if you want to draw from scratch): 
 
@@ -496,7 +496,7 @@ Having the "*Gradient*" layer **selected**, you can **sample its black and white
 
 
 
-# Export Tab
+## Export Tab
 
 
 Allows exporting the document (or any selected layer(s)) scaled by a factor very easily and fast.
@@ -507,7 +507,7 @@ Useful when you want a higher resolution image of your Pixel Art drawing.
 
 {{< img_caption img="export-tab-new.png" caption="Export tab" >}}
 
-## Image settings
+### Image settings
 
 - **Scale**: Size multiplicator. 
 - **Quality**: Image compression quality. The higher, the better quality (and the file size).
@@ -525,7 +525,7 @@ Leaving it **<u>empty</u>** will add the **document's name**.
 
 - **Format**: Select your preferred image format. (Supports `.png`, `.jpg`, `.webp` and `.bmp`)
 
-## Naming Options
+### Naming Options
 - **Add scale**: If true (checked), it will add the scale factor to the file name.
 - **Overwrite**: If false (unchecked), will add an unique time stamp for avoid overwriting files. 
 {{< box_info >}}
@@ -533,12 +533,12 @@ This is useful if you want to manually save some "snapshots" of your drawing and
 {{< /box_info >}}
   - If true (checked) the files with the same name will be overwritten.
 
-## Selection options
+### Selection options
 
 - **Crop** - If true/checked, it will crop the exported image to the bounds of the active selection.
 - **Mask** - If true/checked, it will only include in the exported images the pixels inside the active selection.
 
-## Export buttons
+### Export buttons
 - **Selection only** - If true/checked, it will only export the region selected. Useful if you want to export only an specific area/region.
 - 📁 - Click to open the folder with the exported images.
 - **Export Scaled** - Exports the whole document.
@@ -559,7 +559,7 @@ The {{< shortcut "x1" >}} buttons export the image/layer/group with their origin
 
 
 
-# K-Sprite
+## K-Sprite
 
 K-Sprite is a **Pixel Art editor inside Krita** that is meant to add all the Pixel Art **features** that are missing in Krita. Like a pixel perfect brush, or tools for propper ellipses/circles, bezier lines, pixelated text, etc.
 
@@ -569,7 +569,7 @@ K-Sprite is a **Pixel Art editor inside Krita** that is meant to add all the Pix
 > It’s not meant to fully replace the process of drawing Pixel Art in Krita (because Krita is still a great tool for that!). It’s meant to **add all those tools that I always missed** while doing Pixel Art, and to make **creating Pixel Art in Krita** {{< text_wavy2 "an even more awesome experience! 🥳" 0.5 0.1 6 >}}
 
 
-## Tutorial
+### Tutorial
 
 To execute **K-Sprite**, go to the `Pencil Tab ✏️` in the docker, or press the **shortcut** for `Open SZK K Pixel Art Editor (SZK Pixel Art Suite)` (Default {{< shortcut "Alt+F3" >}}).
 
@@ -595,7 +595,7 @@ Once you submit the changes, it will appear as usual in Krita, in its correct la
 
 {{< /box_info >}}
 
-## Interface
+### Interface
 
 {{< img_caption "k-sprite.png">}}
 
@@ -610,7 +610,7 @@ Once you submit the changes, it will appear as usual in Krita, in its correct la
 
 
 {{< header t="Tool Options" h=3 align="left" class="underline" >}}
-### Tool Options {.no-display}
+#### Tool Options {.no-display}
 
 Options for the different drawing tools.
 
@@ -631,7 +631,7 @@ Option | | Shortcut
 
 
 {{< header t="Actions" h=3 align="left" class="underline" >}}
-### Actions {.no-display}
+#### Actions {.no-display}
 
 {{< img_caption img="k-sprite-action-buttons.png" class="no-box-shadow" >}}
 
@@ -651,7 +651,7 @@ Button | | Shortcut
 
 
 {{< header t="Tools" color="#F23C3CFF" h=3 align="left" class="underline" >}}
-### Tools {.no-display}
+#### Tools {.no-display}
 <!-- ### Tools {.no-display .underline} -->
 
 {{< row >}}
@@ -949,7 +949,7 @@ Zoom Shortcuts | Action
 
 
 {{< header t="Canvas" h=3 align="left" class="underline" >}}
-### Canvas {.no-display}
+#### Canvas {.no-display}
 
 <!-- Here is where you draw. It will render the current state of the document, and you will be editing the active layer that was active when launching the editor. -->
 
@@ -984,7 +984,7 @@ At the moment, there is no visual input inside K-Sprite to know if there is a se
 
 
 {{< header t="Export Buttons" h=3 align="left" class="underline" >}}
-### Export Buttons {.no-display}
+#### Export Buttons {.no-display}
 
 {{< img_caption img="k-sprite-export-buttons.png" class="no-box-shadow" >}}
 
@@ -1002,7 +1002,7 @@ Export the drawing/changes in K-Sprite to a `New Layer` or to the `Active Lay
 
 
 {{< header t="Info Bar" h=3 align="left" class="underline" >}}
-### Info Bar {.no-display}
+#### Info Bar {.no-display}
 
 Displays information, shortcuts, tips, etc. when **hovering** a button/tool.
 
@@ -1014,9 +1014,9 @@ This is useful for not having to remember every single shortcut, tip, etc.
 
 
 
-# Options 
+## Options 
 
-## Index Painting Options
+### Index Painting Options
 
 - **Add gradient**: Adds a gradient to preview the dither and to sample colors.
 
@@ -1042,7 +1042,7 @@ This is useful for not having to remember every single shortcut, tip, etc.
   {{< img_caption "index-painting-live-preview.webp" "Scrolling through the presets (with arrow keys) automatically updates the dithering pattern." >}}
   {{< /box_green >}}
 
-## Shortcuts
+### Shortcuts
 
 {{< details summary="How to configure shortcuts in Krita" >}}
 Go to `Settings -> Configure Krita`. There, click the `Keyboard Shortcuts` tab. 
@@ -1052,7 +1052,7 @@ Search for `SZK Pixel Art Suite` to see the available shortcuts.
 
 Shortcuts provided by the plugin:
 
-### Palette
+#### Palette
 
 - When selecting a color from a palette in the Shading tab, you can move backward/forward the active palette color with the shortcuts:
 |Command | Default Shortcut
@@ -1072,7 +1072,7 @@ If the current active foreground color **is not** in the palette, it won't do an
 
 
 
-### K-Sprite
+#### K-Sprite
 
 - You can execute the editor with the shortcut:
 |Command | Default Shortcut
@@ -1083,7 +1083,7 @@ Open SZK K Pixel Art Editor (SZK Pixel Art Suite) | {{< shortcut "Alt+F3" >}}
 I personally highly recommend to configure this to your choice. I personally like to trigger the editor as if I was changing of brush (for using one of its features, like the pixel perfect brush, or drawing a primitive, etc.)
 {{< /box_green >}}
 
-### Export Pixel Art
+#### Export Pixel Art
 
 - You can bind to a shortcut the action to export your pixel art with your current settings with:
 |Command | Default Shortcut
@@ -1092,7 +1092,7 @@ Export Scaled Pixel Art (Full Document) (SZK Pixel Art Suite) | (Not set)
 Export Scaled Pixel Art (Selected Layers) (SZK Pixel Art Suite) | (Not set)
 
 
-# Troubleshooting 🔧
+## Troubleshooting 🔧
 
 {{< details "I can't activate the Plugin 💡" >}}
 
@@ -1143,7 +1143,7 @@ I’m **currently working** on solving this.
 
 {{< /details >}}
 
-# Credits
+## Credits
 
 **Fonts** used:
 

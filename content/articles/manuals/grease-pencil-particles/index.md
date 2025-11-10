@@ -65,7 +65,7 @@ emoji="✨"
 
 
 
-# Grease Pencil Particles ✏✨ | Suzuka Ka
+## Grease Pencil Particles ✏✨ | Suzuka Ka
 
 > This addon creates a **hand drawn particle animation from a Grease Pencil drawing**, allowing to create {{< text_wavy2 "lots of cool effects!" >}}
 It automatically animates every stroke of a drawing and offers lots of possibilities to make lots of cool and weird things!
@@ -78,7 +78,7 @@ Supports **Grease Pencil 3.0** {{< text_shimmer "and also previous versions" >}}
 
 <!-- # Index 📋 -->
 
-# Installation 💻
+## Installation 💻
 
 {{< details "How to install the addon" >}}
 
@@ -92,7 +92,7 @@ Supports **Grease Pencil 3.0** {{< text_shimmer "and also previous versions" >}}
 {{< /details >}}
 
 
-# Executing the operator
+## Executing the operator
 
 To execute the operator: 
 
@@ -114,9 +114,9 @@ To execute the operator:
 {{< /box_info >}}
 
 
-# Operator’s Properties
+## Operator’s Properties
 
-## Basic options
+### Basic options
 
 ![Untitled](images/Untitled%202.png)
 
@@ -160,7 +160,7 @@ Use ♻ to reset the offset to (0, 0, 0)
 	
 11. `Max Scatter` - The maximum random direction deviation in the vector 
 
-### Gravity & Size over life
+#### Gravity & Size over life
 
 ![Untitled](images/Untitled%203.png)
 
@@ -174,9 +174,9 @@ Use ♻ to reset the offset to (0, 0, 0)
 		1. `Randomness` - The level of randomization in the speed for each stroke/particle.
 
 
-## Effects
+### Effects
 
-### Noise
+#### Noise
 
 Adds a **random movement** to the strokes/particles.
 
@@ -202,7 +202,7 @@ Use the `↔` icon to reverse the effect (heavier particles will be affected the
 
 1. `Lock Axis` - Locking an axis to **ignore the noise movement in that axis**.
 
-### Distort Strokes
+#### Distort Strokes
 
 Applies a distortion effect right directly when the strokes starts to be affected.
 
@@ -220,7 +220,7 @@ Applies a distortion effect right directly when the strokes starts to be affecte
 	
 5. `Blend mode` - The blending mode used to mix the distortion color with the original stroke’s color.
 
-### Fade Strokes
+#### Fade Strokes
 
 Fades the strokes.
 
@@ -236,7 +236,7 @@ Fades the strokes.
 	<!-- a. **Proportional** will fade each stroke proportionally to their life time.
 	b. **Constant** the strokes will fade at a constant rate. -->
 
-#### Proportional Fade
+##### Proportional Fade
 
 The strokes/particles will be faded according their lifetime, ensuring that all particles will be faded at the end of the effect.
 
@@ -244,7 +244,7 @@ The strokes/particles will be faded according their lifetime, ensuring that all 
 	1. End - Percentage of the stroke’s lifetime on which the stroke’s fading has been comleted
 2. `Randomness` - Randomizes the start and end percentages for each stroke.
 
-#### Constant Fade
+##### Constant Fade
 
 The fade effect will take a constant number of frames to achieve a similar fade pace for every particle.
 
@@ -260,7 +260,7 @@ The fade effect will take a constant number of frames to achieve a similar fade 
 > ![50scale.webp](images/50scale.webp)
 > 
 
-### Color 🎨
+#### Color 🎨
 
 Adds colours to the strokes/particles.
 
@@ -275,7 +275,7 @@ Adds colours to the strokes/particles.
 3. `Delay frames` - The frames it takes before the strokes/particles changes the color after their start time.
 4. `Fade frames` - The total frames it takes to fade the original stroke’s/particle’s color to the new color.
 
-#### Color variable algorithm
+##### Color variable algorithm
 
 ![Untitled](images/Untitled%209.png)
 
@@ -287,7 +287,7 @@ Adds colours to the strokes/particles.
 
 <!-- TODO poner el otro algorithm??? -->
 
-### Depth Color
+#### Depth Color
 
 Tints the particle according their distance to the active camera, creating some kind of depth and helping to distinguish near particles from far particles.
 
@@ -306,7 +306,7 @@ You can locate the depth color ramp in the N Panel, under the Grease Pencil tab.
 2. `Blend frames` - El total de frames que se tarda para mezclar ambos colores. Util para evitar cambios bruscos.
 
 
-## Extra Debris (Fragmentos extra)
+### Extra Debris (Fragmentos extra)
 
 Añade partículas/trazos extras. Porque cuantas más, mejor!
 
@@ -317,7 +317,7 @@ Añade partículas/trazos extras. Porque cuantas más, mejor!
 3. `Proportional distribution` - If True, the bigger strokes, the higher the chance to have more particles instanced in their position.
 4. `Random width` - The level of the randomization for the debris width. If is set to 0, the new debris will have the same size of the stroke’s they are instanced into.
 
-## Various Options
+### Various Options
 
 ![Untitled](images/Untitled%2012.png)
 
@@ -352,7 +352,7 @@ You can see a counter of the total points next to it.
 	Since the operator can be hard to process depending the drawing complexity, there would be some times when you would like to edit different values without triggering the operator’s execution. In those cases, is better to press bypass, make your changes, and then disable bypass, to avoid waiting between each change.
 	> 
 
-# Properties Panel
+## Properties Panel
 
 The addon uses some more complex properties that Blender doesn’t allow to be displayed in the Operator’s panel, like curves and color ramps.
 
@@ -385,11 +385,11 @@ If you want to execute the operator again with the previous properties and with 
 {{< /box_warning >}}
 
 
-# Other operators ⚙
+## Other operators ⚙
 
 The addon adds as an extra some new handy operators for better working with animations.
 
-## Remove frames block
+### Remove frames block
 
 It removes/selects a frame block with frames of the same keyframe type.
 
@@ -398,7 +398,7 @@ It removes/selects a frame block with frames of the same keyframe type.
 > I made it because I personally hated having to precisely choose with the mouse interpolated frames and such, so this makes it easier!
 > 
 
-## Select frames block
+### Select frames block
 
 Only selects the frame block, without deleting it.
 
@@ -409,7 +409,7 @@ Only selects the frame block, without deleting it.
 
 
 
-# FAQ ❔
+## FAQ ❔
 
 <!-- - ***Why do you write a FAQ section if no one -absolutely no one- has asked you a single question related the add-on?***
 	
@@ -427,7 +427,7 @@ Only selects the frame block, without deleting it.
 ![Untitled](images/Untitled%2015.png)
 
 
-## Limitations
+### Limitations
 {{< box_warning >}}
 Strokes with fill materials are not supported at the moment in the current version, only normal non-filled strokes.
 {{< /box_warning >}}
@@ -448,7 +448,7 @@ It will be supported when Blender fixes it 👍.
 {{< /box_info >}}
 {{< /box_warning >}}
 
-# Credits ©
+## Credits ©
 
 The required attribution to some icons used:
 
@@ -492,7 +492,7 @@ The required attribution to some icons used:
 	<a href="[https://www.flaticon.com/free-icons/color](https://www.flaticon.com/free-icons/color)" title="color icons">Color icons created by Nikita Golubev - Flaticon</a>
 	 -->
 
-# Contact 🐺✉
+## Contact 🐺✉
 
 <!-- 🐦 Twitter: [@SuzukaKDev](https://twitter.com/SuzukaKDev)
 

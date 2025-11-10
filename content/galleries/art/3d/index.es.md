@@ -7,14 +7,14 @@ author: Suzuka Ka
 draft: false
 categories: ["arte", "3d", "gamedev"]
 
-## INFORMACIÓN Menús https://gohugo.io/content-management/menus/
+### INFORMACIÓN Menús https://gohugo.io/content-management/menus/
 # menus:
 #     main:
 #         name: Name in the menu
 #         weight: 10
 #     footer:
 
-## parámetros:
+### parámetros:
 # CONFIGURACIONES DE VISUALIZACIÓN DE GALERÍA
 # private: true # Si es verdadero, esta galería no aparecerá en listas, RSS, sitemaps, etc. En las páginas de lista, usa cascade para ocultar descendientes.
 # featured: true # Si es verdadero, la galería será destacada en la página principal con una imagen GRANDE (incluso si es privada).

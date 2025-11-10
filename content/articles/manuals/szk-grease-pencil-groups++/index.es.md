@@ -56,13 +56,13 @@ Versión actual: 1.4.8
 Funciona con Blender 4.2 y versiones anteriores. Actualmente está siendo actualizado a Grease Pencil 3.0.
 {{< /box_info >}}
 
-# Instalación 💻
+## Instalación 💻
 1. Descarga el archivo .zip con el addon y colócalo donde quieras.
 2. En Blender, ve a `Editar → Preferencias`. Una vez allí, presiona la pestaña `Complementos` y pulsa el botón `Instalar` en la esquina superior derecha:
 ![Sin título](images/installation.png)
 3. Selecciona el archivo .zip.
 4. Una vez instalado, busca “Grease Pencil Groups” en la barra de búsqueda y activa el addon.
-# Configuración 🛠
+## Configuración 🛠
 El panel del addon aparecerá en el `Panel de propiedades`, junto con el panel original de capas.
 Para empezar a usarlo, simplemente haz clic en el botón Inicializar para añadir las capas actuales en el Grease Pencil activo:
 ![setup 4.gif](/images/setup_4.gif)
@@ -75,13 +75,13 @@ Si es así, no te preocupes, aparecerá un botón para refrescar los cambios.
 Podría haber sobrescrito el panel de capas predeterminado de Blender, pero personalmente no me gusta eliminar elementos originales de la interfaz, por si algunos usuarios quieren seguir usando el panel nativo de capas.
 {{< /box_info >}}
 {{< /box_info >}}
-# Interfaz 🖥️
+## Interfaz 🖥️
 {{< box_green "💡" >}}
 **CONSEJO**: Cada botón está documentado y muchos operadores tienen diferentes opciones cuando se presionan con {{< shortcut "CTRL" >}}/{{< shortcut "ALT" >}}/{{< shortcut "SHIFT" >}}. Todo está explicado en su tooltip. **Consulta el tooltip** (pasando el cursor del ratón) **para descubrir nuevos atajos y funcionalidades**.
 {{< /box_green >}}
 ![=anim_webp_10-10-2023_19-13-04,39.webp](/images/anim_webp_10-10-2023_19-13-0439.webp)
-# Manual ⚙
-## Añadir Capas/Grupos `+`
+## Manual ⚙
+### Añadir Capas/Grupos `+`
 Usa los botones {{< shortcut "Nueva Capa" >}} y {{< shortcut "Nuevos Grupos" >}} para añadir nuevos elementos.
 1. **Añadir Capa ✏:** 
     1. Mantén {{< shortcut "SHIFT" >}} para añadir la nueva capa **encima** del elemento seleccionado
@@ -94,7 +94,7 @@ Usa los botones {{< shortcut "Nueva Capa" >}} y {{< shortcut "Nuevos Grupos" >}}
     4. Mantén {{< shortcut "SHIFT+CONTROL" >}} para añadir un nuevo grupo y **meter dentro todos los elementos que están debajo**.
 
 
-### Eliminar una Capa/Grupo ❌
+#### Eliminar una Capa/Grupo ❌
 
 Haz clic en el **icono de la papelera** {{< shortcut "🗑️" >}} junto al botón {{< shortcut "Nuevo Grupo" >}} para **eliminar un elemento**.
 
@@ -123,14 +123,14 @@ Esto **eliminará todas las capas ocultas** dentro de un grupo.
 {{< /box_green >}}
 
 
-## Editar capas y grupos
+### Editar capas y grupos
 
 Cambiar una propiedad en una capa afectará solo a esa capa. **Modificar una propiedad en un grupo afectará a todas sus capas y grupos contenidos**.
 ![Ocultar el grupo ocultará todos sus elementos. Además, añadir una máscara a un grupo añadirá esa máscara a todos sus hijos. Si editas máscaras en un grupo, todos sus hijos serán editados.](/images/Masks.gif)
 Ocultar el grupo ocultará todos sus elementos. Además, añadir una máscara a un grupo añadirá esa máscara a todos sus hijos. Si editas máscaras en un grupo, todos sus hijos serán editados.
 
 
-## Mover elementos ⤴
+### Mover elementos ⤴
 
 Puedes mover fácilmente los elementos usando los botones de flecha:
 ![move arrows 1.gif](/images/move_arrows_1.gif)
@@ -154,7 +154,7 @@ Además, **los mismos atajos de mover se aplican aquí** (consulta el tooltip pa
 {{< /box_green >}}
 
 
-## Fusionar Grupos y Capas ⬇
+### Fusionar Grupos y Capas ⬇
 
 **Puedes** fusionar capas como de costumbre, pero también **combinar todo el contenido de un grupo**.
 
@@ -195,7 +195,7 @@ Para activar este modo, presiona {{< shortcut "SHIFT + Click derecho" >}} al eje
 Esto lo configura manualmente (siendo más lento para fusionar, pero ofreciendo mejores resultados)
 
 
-## Personalizar colores 🎨
+### Personalizar colores 🎨
 
 Puedes **editar los colores de las capas/grupos** haciendo clic en su icono junto al nombre en la parte superior de la lista:
 
@@ -210,7 +210,7 @@ Puedes **editar los colores de las capas/grupos** haciendo clic en su icono junt
 {{< /box_green >}}
 
 
-## Abrir/cerrar grupos 📂
+### Abrir/cerrar grupos 📂
 
 Haz clic en el icono de carpeta para abrir/cerrar un grupo.
 
@@ -238,7 +238,7 @@ Presiona {{< shortcut "SHIFT + ALT + Click izquierdo" >}} para **desagrupar el �
 
 
 
-## Modos Solo 🔍
+### Modos Solo 🔍
 
 El modo solo de Blender {{< text_wavy "ha sido" 0.1 4 >}} {{< text_wavy "mejorado*❗" 0.06 10 >}}
 
@@ -267,7 +267,7 @@ Ofrece 2 posibilidades para el modo solo de visibilidad:
 
 
 
-## Alfa heredado 🖌
+### Alfa heredado 🖌
 
 **Haz clic** en el **botón alfa** junto a las propiedades de la capa/grupo para activarlo.
 
@@ -284,9 +284,9 @@ En este ejemplo, el color base y la sombra fueron dibujados sin considerar si sa
 Esta fue una función que pretende imitar el [**alfa heredado de Krita**](https://docs.krita.org/en/tutorials/clipping_masks_and_alpha_inheritance.html).
 
 
-# Preferencias 🛠
+## Preferencias 🛠
 
-## Ajustes ⚙
+### Ajustes ⚙
 
 - `Usar luces por defecto` - Si es True, (sin padre*) **las nuevas capas** y grupos **usarán luces cuando se creen**. 
 {{< box_warning >}}
@@ -315,7 +315,7 @@ Esta comprobación ocurre solo una vez al cargar Blender
 
 
 
-### Apariencia 👁️
+#### Apariencia 👁️
 
 - `Iconos de visibilidad en el lado izquierdo` - Si es True, el icono de ocultar/mostrar se colocará a la izquierda (como en otros programas gráficos como *Krita* o *Photoshop*).
 
@@ -335,7 +335,7 @@ Esta comprobación ocurre solo una vez al cargar Blender
 
 
 <!-- ### Operadores Favoritos ⭐ -->
-### Operadores Favoritos
+#### Operadores Favoritos
 Puedes seleccionar tus acciones favoritas para mostrarlas en la barra superior y en la capa/grupo seleccionado.
 ![fav operators 3.png](/images/fav_operators_3.png)
 {{< box_info >}}
@@ -344,13 +344,13 @@ Pasa/coloca el ratón sobre los iconos para ver su función.
 
 
 
-# Atajos ⌨
+## Atajos ⌨
 
 Atajos para las nuevas funcionalidades.
 
 
 
-## Grease Pencil `Modo Pintura` 🖌
+### Grease Pencil `Modo Pintura` 🖌
 
 - {{< shortcut "A" >}} - Cambiar entre color principal y secundario
 - {{< shortcut "E" >}} - Cambiar entre Dibujar y Borrador
@@ -367,7 +367,7 @@ Atajos para las nuevas funcionalidades.
 
 
 
-## Grease Pencil `Modo Edición` 📐
+### Grease Pencil `Modo Edición` 📐
 
 {{< shortcut "M" >}} - (En Vista 3D) Mover trazos seleccionados a otra capa
 
@@ -379,7 +379,7 @@ Atajos para las nuevas funcionalidades.
 
 
 
-# Preguntas Frecuentes❔
+## Preguntas Frecuentes❔
 
 - ***¿Por qué escribes una sección de Preguntas Frecuentes si nadie te ha hecho una sola pregunta relacionada con el complemento?***
     
@@ -401,7 +401,7 @@ Atajos para las nuevas funcionalidades.
         
         <!-- ![Imagen de WhatsApp 2023-07-02 a las 23.36.08 (1).jpeg](/images/WhatsApp_Image_2023-07-02_at_23.36.08_(1).jpeg) -->
         
-# Contacto ✉
+## Contacto ✉
 <!-- Twitter: [@SuzukaKDev](https://twitter.com/SuzukaKDev)
 Mail: [suzukakadev@gmail.com](mailto:suzukakadev@gmail.com) -->
 

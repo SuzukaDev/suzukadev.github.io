@@ -13,5 +13,5 @@ draft = false
 # 	weight = 100000
 +++
 <!-- 
-# El md de articles (_index.md)
+## El md de articles (_index.md)
 ESTO es el index del articles -->

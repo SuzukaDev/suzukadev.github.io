@@ -7,14 +7,14 @@ author: Suzuka Ka
 draft: false
 categories: ["art", "digital"]
 
-## INFO Menus https://gohugo.io/content-management/menus/
+### INFO Menus https://gohugo.io/content-management/menus/
 # menus:
 #     main:
 #         name: Name in the menu
 #         weight: 10
 #     footer:
 
-## params:
+### params:
 # GALLERY DISPLAY SETTINGS
 # private: true # If true, this gallery does won't show in lists, RSS, sitemaps, etc. On list pages, use cascade to hide descendants.
 # featured: true # If true the gallery will be featured in home with a BIG picture (even if private).

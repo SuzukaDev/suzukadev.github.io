@@ -10,12 +10,12 @@ menu:
 
 <!-- Hello, my name is **Óscar**. I'm a **Multimedia Engineer** and a ***multidisciplinary* Game Developer**. I've always been interested in being a solo developer, covering all the aspects that are required during a development. Even though, I also enjoy working in a group. -->
 
-## Hello, my name is Óscar
+### Hello, my name is Óscar
 
 I’m a **Multimedia Engineer** and **multidisciplinary Game Developer**. I’ve always been interested in being a solo developer — someone who can take a project from idea to release, covering every aspect of development.
 That said, I also enjoy working in teams and collaborating with others.
 
-### Skills
+#### Skills
 
 <!-- - **Full Project Management and development**: I'm used to fully planning my own projects, and cover the whole work pipeline. -->
 - [**Full Project Management and development**]({{< relref "articles/manuals" >}}): I’m used to planning and building full projects on my own, managing everything from concept to final polish.
@@ -68,7 +68,7 @@ If you want to learn more about why do I care, about me or my philosophy, you ca
 
 {{< featured_articles "about-me" >}}
 
-### Contact
+#### Contact
 
 {{< get_social "email" >}}
 

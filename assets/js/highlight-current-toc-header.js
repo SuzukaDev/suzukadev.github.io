@@ -1,3 +1,5 @@
+const headingSelector = "h1, h2, h3, h4";
+// const headingSelector = "h1";
 function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
 
@@ -22,7 +24,8 @@ const handler = (entries) => {
 //   const allSections = document.querySelectorAll("h2");
 //   const allSections = document.querySelectorAll("h1");
 //   const allSections = document.querySelectorAll("h3");
-  const allSections = document.querySelectorAll("h1, h2, h3");
+  // const allSections = document.querySelectorAll("h1, h2, h3, h4");
+  const allSections = document.querySelectorAll(headingSelector);
   // const allSections = document.querySelectorAll("h1, h2");
   // alert("Number of allSections: " + allSections.length);
   // alert("Number of allLinks: " + allLinks.length);
@@ -91,7 +94,8 @@ const observer = new IntersectionObserver(handler);
 // document.querySelectorAll("h2").forEach((section) => {
 // document.querySelectorAll("h1").forEach((section) => {
 // document.querySelectorAll("h3").forEach((section) => {
-document.querySelectorAll("h1, h2, h3").forEach((section) => {
+// document.querySelectorAll("h1, h2, h3, h4").forEach((section) => {
+document.querySelectorAll(headingSelector).forEach((section) => {
 // document.querySelectorAll("h1, h2").forEach((section) => {
   // if (section.classList.length === 0) {
   // Avoid to observe headers that do NOT have an ID

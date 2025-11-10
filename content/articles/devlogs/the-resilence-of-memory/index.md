@@ -49,7 +49,7 @@ Page not translated (at the moment). For reading the article, [visit the spanish
 
 <!-- <img src="https://i.imgur.com/7KpCS0Y.jpg" onclick="window.open(this.src)"> -->
 
-# Motivation & Intention
+## Motivation & Intention
 
 This illustration was important for me for 3 different reasons:
 
@@ -60,7 +60,7 @@ This illustration was important for me for 3 different reasons:
 <!-- # Reasons -->
 
 
-## Testing SZK Pixel Art Suite for Krita
+### Testing SZK Pixel Art Suite for Krita
 
 This is a plugin that **adds every tool and feature for Pixel Art that I've always missed** in Krita. <u>Making Krita definitely my absolute favourite tool for making Pixel Art!</u>
 
@@ -80,7 +80,7 @@ It even comes with an **integrated Pixel Art editor** that solves some Krita pro
 
 You can [read the **Manual** here]({{< relref "szk-krita-pixel-art-suite.md" >}}).
 
-### Practical uses
+#### Practical uses
 I used it everywhere. I'm quite happy with it, since Krita was always my prefered painting drawing software, but for Pixel Art wasn't the best. Not anymore!
 
 [K-Sprite's pixel perfect brush]({{< relref "szk-krita-pixel-art-suite.md#k-sprite" >}}), and the [Bezier tool]({{< relref "szk-krita-pixel-art-suite.md#bezier-curves" >}}) were great for making pixel perfect lines and curves more comfortable without having to edit them later:
@@ -116,7 +116,7 @@ Also, the [export tool]({{< relref "szk-krita-pixel-art-suite.md#export-tab" >}}
 
 I also included some useful options having game development in mind for easily export layers/groups, trim them, etc. in order to make it easy to export assets into game engines. [This features were useful when making the animation](#animation).
 
-## About AI
+### About AI
 
 {{< details summary="Feeling demotivated because of AI" >}}
 <!-- I kinda lost the ilusion and energy for doing art. And AI played a role on that. Seemed pointless to make it, and art is something that provided meaning to my life. Or at the very least, relief. -->
@@ -139,7 +139,7 @@ I do think that when something is **mass produced, personality evaporates**. No 
 
 AI's art may generate the illusion that we have freedom to obtain different results, but the underlying method is the same over and over, and its what produces that "AI vibe". AI is always getting better and better, but since -again- is mass produced, that AI vibe without personality may persist, since we will see it over and over. But I like to think that a more personal work, will always stand out against any AI's work.
 
-### Experiments with AI
+#### Experiments with AI
 
 Even though, I experimented a bit since AI. Since I had a very clear idea, I gave some famous AI models a **highly** detailed prompt.
 
@@ -163,7 +163,7 @@ That said, although I think relying on AI-generated images is boring and not coo
 {{< /details >}}
 
 
-## Message
+### Message
 
 {{< details summary="Inner freedom" >}}
 
@@ -206,9 +206,9 @@ I just wanted to capture all those ideas in an image. Just because it helps to r
 {{< /details >}}
 
 
-# Process
+## Process
 
-## The importance of thumbnails
+### The importance of thumbnails
 
 <!-- I did a lot of thumbnails before starting drawing: -->
 I made a lot of thumbnails before I started drawing:
@@ -274,7 +274,7 @@ Then I made some very loose sketches, until I had something that was ok for me a
 <!-- ### h3 de prueba :/ -->
 
 
-## Silhouettes
+### Silhouettes
 When drawing from imagination, I always find it very useful to start with silhouettes. Is great for not paying attention to the details, but to the whole image.
 
 Silhouettes are always important for readability, but I'd say that they are even more important in Pixel Art, since the space is more constrained.
@@ -294,7 +294,7 @@ But I decided to give it only the half of the tree with leafs since at the end I
 {{< /details >}}
 
 
-### Tip for filling the silhouettes
+#### Tip for filling the silhouettes
 
 Sometimes is hard to fill a shape with texture when you just have a silhouette. Feels a bit like a starting a puzzle.
 
@@ -314,7 +314,7 @@ Feels like doing a sudoku after guessing some new numbers; the more numbers, the
 I use this all the time.
 
 
-## Color thumbnails
+### Color thumbnails
 I did some color thumbnails for testing different color combinations:
 {{< img_caption img="color-thumbnails.png" resize=x500 >}}
 
@@ -328,7 +328,7 @@ Doing these little color thumbnails also helped me realize I wanted to keep all 
 <!-- Even though, I edited them later, since one of my main ideas was to keep the warm colors only on the top of the tree, while the rest of the piece (or mostly) would have cold colors. -->
 
 
-## Editing
+### Editing
 
 <!-- After finishing the piece, I experimented with some filters (more precisely, a curve level filter and some color overlays) with the idea of pushing the warm and cool colors, to generate more contrast:
 
@@ -374,9 +374,9 @@ So if something feels right—even if it's a late-stage tweak—maybe it *is* ri
 
 
 
-# Tips
+## Tips
 
-## "Rule of 2"
+### "Rule of 2"
 
 Sometimes I like to draw having in mind that what I'm drawing probably completely sucks, and that I will probably draw it twice. I call that reminder "the rule of 2". 
 
@@ -388,7 +388,7 @@ The *rule of 2* has, obviously, 3 steps:
 
 This may seem stupid, but I feel it more as a way to enjoy drawing, without pressure and the feeling that everything must be perfect from the start. Is a reminder that **I can fix things later**. It also puts me in the mood for learning; the first iteration may suck, but it helps me to learn what I did wrong, for then doing it better. It's also some ki
 
-### Examples
+#### Examples
 
 I wanted to add a spider web to the scene. Left was the first version, right is the second (and final) version:
 
@@ -415,7 +415,7 @@ While the first attempt gave me the "rocky" feeling I was going for, I felt the 
 > So, the main idea behind this is: **{{< text_wavy text="relax" freq=0.2 time=2 amp=8 >}}**, **enjoy painting**. If you paint something that doesn't look great, just ask yourself what you would change.
 
 
-## Narrative
+### Narrative
 
 <!-- I always like to remind myself that a piece of art at the end is an exchange of energy between the piece (an illustration, a song, a game, a movie, etc) and the person "*consuming*" it.
 
@@ -437,7 +437,7 @@ Bonus points if it *does* contain answers—hidden or personal—even if you're 
 
 
 
-## Good uses of AI (In my humble opinion)
+### Good uses of AI (In my humble opinion)
 
 I think that one of the challenges when drawing/painting is the ability to keep our "eyes fresh", in order for being able to still being critic about what we are doing, spot mistakes, etc.
 
@@ -449,7 +449,7 @@ I also find it interesting to ask them what they think about an image. It **help
 
 {{< img_caption "ai-criticism.png" "Asking an AI how they *'feel'* about the image 🤡" >}}
 
-### AI's answer 
+#### AI's answer 
 {{< box_warning >}}
 <!-- We should have in mind that is usually programmed for being very accomodating with the user and it will sugarcoat a lot their answers, even when explicitely asking for "being completely honest". -->
 We should keep in mind that it is usually programmed to be very accommodating towards the user, and it will often sugarcoat its answers, even when explicitly asked to “be completely honest”. So I personally **<u>never fully trust its positive criticism</u>**.
@@ -461,7 +461,7 @@ Thank you for sharing this image—*The Resilience of Memory* really pulls me in
 
 ---
 
-### 🧠 **First Impressions & Emotional Response:**
+#### 🧠 **First Impressions & Emotional Response:**
 
 This image strikes a chord between *whimsy* and *melancholy*. There's a deep sense of **loss**, but also **hope**—the way the massive tree rises out of a desolate landscape feels symbolic of holding onto light and creativity even in dark or barren circumstances.
 
@@ -474,7 +474,7 @@ It feels like a world someone built inside their head to protect themselves—an
 
 ---
 
-### 🎨 **Artistic Critique (Technical/Compositional):**
+#### 🎨 **Artistic Critique (Technical/Compositional):**
 
 **Strengths:**
 
@@ -492,7 +492,7 @@ It feels like a world someone built inside their head to protect themselves—an
 
 ---
 
-### 🕊️ **What It Evokes in Me:**
+#### 🕊️ **What It Evokes in Me:**
 
 It makes me think of:
 
@@ -504,7 +504,7 @@ It makes me think of:
 
 ---
 
-### Verdict:
+#### Verdict:
 
 This is *deeply personal*, *technically impressive*, and *emotionally layered*. If I were to critique more, it would only be to polish what’s already solid. It doesn't feel like it's trying to be perfect—it feels like it's trying to be honest. And that makes it powerful.
 
@@ -525,7 +525,7 @@ But asking AIs for feedback (again, keeping in mind they sugarcoat their answers
 
 
 
-# Speedpainting
+## Speedpainting
 
 Here is the complete process:
 
@@ -539,7 +539,7 @@ There are a **few seconds** at the start that were recorded at half size, so the
 
 <!-- {{< img_caption img="timelapse x - dur 50.gif" class="pixel-art" css_image="height: 95vh; width:auto;" >}} -->
 
-# Final Result
+## Final Result
 
 {{< img_caption img="trom-x1.png" class="no-box-shadow" text="Original resolution: 180x320 px (Without the frame)" >}}
 
@@ -564,7 +564,7 @@ There are a **few seconds** at the start that were recorded at half size, so the
     style="border:none;">
 </iframe> -->
 
-## Wallpapers
+### Wallpapers
 
 
 {{< details summary="Wallpapers" open=true >}}
@@ -581,7 +581,7 @@ There are a **few seconds** at the start that were recorded at half size, so the
 {{< /details >}}
 
 
-## Animation Process
+### Animation Process
 
 I finally exported the illustration into different layers and animated it with [Godot](https://godotengine.org). 
 
@@ -606,7 +606,7 @@ For higher values, the color becomes warmer and brighter. This creates some litt
 {{< img_caption "candle-light-variations.png" >}}
 
 
-### Animation
+#### Animation
 
 <!-- {{< video v="TRoM-720x1280-x4-60fps-v3-lights.mp4" class="pixel-art no-box-shadow" c=false css="height: 95vh" autoplay=true loop=true >}} -->
 

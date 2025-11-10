@@ -63,7 +63,7 @@ Current version: 1.4.8
 Works for Blender 4.2 and below. Currently being updated to Grease Pencil 3.0.
 {{< /box_info >}}
 
-# Installation 💻
+## Installation 💻
 
 1. Download the .zip file with the addon and place it wherever you like.
 2. In Blender, go to `Edit → Preferences`. Once there, press the `Add-ons` tab and press `Install` button on the top-right corner:
@@ -73,7 +73,7 @@ Works for Blender 4.2 and below. Currently being updated to Grease Pencil 3.0.
 3. Select the .zip file.
 4. Once installed, search for “Grease Pencil Groups” in the search bar, and enable the addon.
 
-# Setup 🛠
+## Setup 🛠
 
 The add-on pannel will appear in the `Properties panel`, along with the original layer panel.
 
@@ -97,7 +97,7 @@ I could have overriden Blender’s default layer panel, but I personally don’t
 
 {{< /box_info >}}
 
-# Interface 🖥️
+## Interface 🖥️
 
 {{< box_green "💡" >}}
 **TIP**: Every button is documented and lots of operators have different options when they are pressed with {{< shortcut "CTRL" >}}/{{< shortcut "ALT" >}}/{{< shortcut "SHIFT" >}}. Everything is explained in their tooltip. **Check the tooltip** (by hoovering the mouse cursor) **to discover new shortcuts and functionality**.
@@ -106,9 +106,9 @@ I could have overriden Blender’s default layer panel, but I personally don’t
 
 ![=anim_webp_10-10-2023_19-13-04,39.webp](/images/anim_webp_10-10-2023_19-13-0439.webp)
 
-# Manual ⚙
+## Manual ⚙
 
-## Adding Layers/Groups `+`
+### Adding Layers/Groups `+`
 
 Use the {{< shortcut "New Layer" >}} and {{< shortcut "New Groups" >}} buttons to add new elements.
 
@@ -122,7 +122,7 @@ Use the {{< shortcut "New Layer" >}} and {{< shortcut "New Groups" >}} buttons t
     3. Hold {{< shortcut "ALT" >}} to add a group **below** the selected item.
     4. Hold {{< shortcut "SHIFT+CONTROL" >}} to add a new group and **put all the elements that are below it inside**.
 
-### Deleting a Layer/Group ❌
+#### Deleting a Layer/Group ❌
 
 Click the **trash icon** {{< shortcut "🗑️" >}} next to the {{< shortcut "New Group" >}} button to **delete an element**.
 {{< box_info >}}
@@ -148,7 +148,7 @@ This will **delete all hidden layers** inside a group.
 {{< /box_green >}}
 
 
-## Editing layers and groups
+### Editing layers and groups
 
 Changing a property in a layer will affect only to that layer. **Modifying a property in a group, will affect to all its layers and groups contained**.
 
@@ -156,7 +156,7 @@ Changing a property in a layer will affect only to that layer. **Modifying a pro
 
 Hiding the group will hide all its elements. Also, adding a mask to a group will add that mask to all its children. If you edit masks in a group, all their children will be edited.
 
-## Moving elements ⤴
+### Moving elements ⤴
 
 You can easily move the elements using the arrow buttons:
 
@@ -189,7 +189,7 @@ Also, **the same moving hotkeys apply here** (see the tooltip for more info):
 
 {{< /box_green >}}
 
-## Merging Groups & Layers ⬇
+### Merging Groups & Layers ⬇
 
 **You can** merge layers as usual, but also **combine the entire content of a group**.
 
@@ -236,7 +236,7 @@ To activate this mode, press {{< shortcut "SHIFT + RightClick" >}} when executin
 
 This will manually sets the (being slower to merge, but offering better results)
 
-## Customize Colors 🎨
+### Customize Colors 🎨
 
 You can **edit the layer/groups colors** by clicking their icon next to the name at the top of the list:
 
@@ -251,7 +251,7 @@ You can **edit the layer/groups colors** by clicking their icon next to the name
 
 {{< /box_green >}}
 
-## Open/close groups 📂
+### Open/close groups 📂
 
 Click the folder icon to open/close a group. 
 
@@ -279,7 +279,7 @@ Press {{< shortcut "SHIFT + ALT + Left Click" >}} to **ungroup the last element 
 {{< /box_green >}}
 
 
-## Solo Modes 🔍
+### Solo Modes 🔍
 
 Blender’s solo mode {{< text_wavy "has been" 0.1 4 >}} {{< text_wavy "improved*❗" 0.06 10 >}}
 
@@ -311,7 +311,7 @@ It offers 2 possibilities for the visibility **solo mode**:
 
 [Read about them here](#settings-).
 
-## Inherited alpha 🖌
+### Inherited alpha 🖌
 
 **Click** the **alpha button** next to the layer/groups properties to activate it.
 
@@ -327,9 +327,9 @@ In this example, the base color and the shadow were drawn without considering wh
 
 This was a feature that prettends to imitate [**Krita**’s inherited alpha](https://docs.krita.org/en/tutorials/clipping_masks_and_alpha_inheritance.html).
 
-# Preferences 🛠
+## Preferences 🛠
 
-## Settings ⚙
+### Settings ⚙
 
 - `Use lighs by default` - If True, (unparented*) **new layers** and groups **will use lights when they are created**. 
 {{< box_warning >}}
@@ -358,7 +358,7 @@ This check happens only once when loading Blender
 {{< /box_info >}}
     
 
-### Appearance 👁️
+#### Appearance 👁️
 
 - `Visibility icons on the left side` - If True, the hide/show icon will be placed on the left (like in other graphic softwares like *Krita* or *Photoshop*).
 
@@ -378,7 +378,7 @@ This check happens only once when loading Blender
     
 
 <!-- ### Favourite Operators ⭐ -->
-### Favourite Operators
+#### Favourite Operators
 
 You can select your favourite actions in order to show them in the top bar and in the selected layer/group. 
 
@@ -389,11 +389,11 @@ Hover/place the mouse over the icons to see their function.
 {{< /box_info >}}
 
 
-# Hotkeys ⌨
+## Hotkeys ⌨
 
 Hotkeys for the new functionalities.
 
-## Grease Pencil `Paint mode` 🖌
+### Grease Pencil `Paint mode` 🖌
 
 {{< shortcut "A" >}} - Switch between first and secondary color
 
@@ -411,7 +411,7 @@ The colors are being sampled directly from the letters while painting (No need t
 
 {{< shortcut "M" >}} - (In 3D View) Show “Move panel”
 
-## Grease Pencil `Edit mode` 📐
+### Grease Pencil `Edit mode` 📐
 
 {{< shortcut "M" >}} - (In 3D View) Move selected strokes to another layer
 
@@ -419,7 +419,7 @@ The colors are being sampled directly from the letters while painting (No need t
 
 ![OPH.webp](/images/OPH.webp)
 
-# FAQ❔
+## FAQ❔
 
 - ***Why do you write a FAQ section if no one has asked you a single question related the add-on?***
     
@@ -442,7 +442,7 @@ The colors are being sampled directly from the letters while painting (No need t
         <!-- ![WhatsApp Image 2023-07-02 at 23.36.08 (1).jpeg](/images/WhatsApp_Image_2023-07-02_at_23.36.08_(1).jpeg) -->
         
 
-# Contact ✉
+## Contact ✉
 
 <!-- Twitter: [@SuzukaKDev](https://twitter.com/SuzukaKDev)
 

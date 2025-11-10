@@ -54,14 +54,14 @@ Ofrece la opción de <u>comprimir hasta **4 texturas** en una **sola imagen**</u
 
 
 
-# Instalación
+## Instalación
 
 
 No requiere instalación, solo descomprime el archivo.`.zip`
 
 
 
-# User Interface
+## User Interface
 
 {{< box_info >}}
 Puedes pasar el cursor sobre el 🛈 para mostrar una pequeña guía.
@@ -84,7 +84,7 @@ Puedes arrastrar y soltar imágenes de un canal a otro para intercambiar los can
 
 
 
-## Visualizador
+### Visualizador
 
 
 En la parte superior, hay un pequeño visualizador que se distorsiona según las texturas introducidas.
@@ -95,7 +95,7 @@ En la parte superior, hay un pequeño visualizador que se distorsiona según las
 Esto es para tener una idea del tipo de distorsión que obtendrás con cada textura, y para tener una idea de cómo "evoluciona" a lo largo del tiempo (útil para ver qué tan suave/dura es, etc).
 {{< /box_green >}}
 
-## Opciones
+### Opciones
 
 {{< img_caption "stm-options-panel-2.png" "Panel de opciones" >}}
 
@@ -106,14 +106,14 @@ Esto es para tener una idea del tipo de distorsión que obtendrás con cada text
 <!-- {{< img_caption "stm-skins-grid-riot.jpg" "4 temas distintos" >}} -->
 {{< img_caption "stm-skins-blue.webp" "4 temas distintos" >}}
 
-# Atajos de teclado
+## Atajos de teclado
 
 Atajo | Función
 :-- | :-:
 {{< shortcut "CTRL+S" >}} | **Guarda** la imagen comprimida
 {{< shortcut "F1" >}} | Muestra el **panel de opciones**
 
-# Contacto
+## Contacto
 
 
 Twitter: {{< get_social "twitter" >}}

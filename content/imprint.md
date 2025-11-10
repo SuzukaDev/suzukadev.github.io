@@ -23,7 +23,7 @@ menu:
 Alicante (Spain 🇪🇸)
 
 
-## Contact 👋
+### Contact 👋
 <!-- ## {{<text_wavy text="Contact" freq="0.05" time="1.8">}} -->
 
 You can connect with me via:

@@ -50,7 +50,7 @@ La función `print()` seguirá enviando la salida a la consola del sistema, pero
 
 
 
-# Instalación 💻
+## Instalación 💻
 1. Descarga el archivo *.zip* con el addon y colócalo donde quieras.
 2. En Blender, ve a `Editar → Preferencias`. Una vez allí, pulsa la pestaña `Add-ons` y pulsa el botón `Install` en la esquina superior derecha:
 
@@ -64,7 +64,7 @@ La función `print()` seguirá enviando la salida a la consola del sistema, pero
 
 
 
-# Contacto 🐺✉
+## Contacto 🐺✉
 <!--
 Twitter: [@SuzukaKDev](https://twitter.com/SuzukaKDev)
 Mail: [suzukakadev@gmail.com](mailto:suzukakadev@gmail.com) -->

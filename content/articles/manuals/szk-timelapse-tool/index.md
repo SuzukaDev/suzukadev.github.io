@@ -52,7 +52,7 @@ Page not translated (at the moment). For reading the article, [visit the spanish
 <!-- {{< img_caption img="TRoM Timelapse" css="height:100vh;" >}} -->
 {{< img_caption img="TRoM Timelapse x1.0 (128 frames - 13.56s).webp" css_image="height:85vh; width:auto;" class="pixel-art" caption="128 frames, 13.56 seconds, **859kB**, <u>made in **0.56 seconds**</u>" >}}
 
-# Motivation & Intention
+## Motivation & Intention
 
 After finishing a Krita illustration, I had 50.776 frames (holy moly) capturing the whole process. I wanted to make a little gif with a timelapse, but I obviously couldn't add all the images.
 
@@ -62,12 +62,12 @@ There are other tools that converts a series of images into .gif, but the ones I
 
 > I wanted something **fast and easy to use**, with all the requirements I was looking for, so that's why I made this.
 
-# Download
+## Download
 You can download it here:
 
 {{< download_file file="app/SZK Timelapse Tool (1.1.1).zip" type="windows" >}}
 
-# How to use it
+## How to use it
 
 {{< img_caption "ui2-steps.png" >}}
 
@@ -120,7 +120,7 @@ E.g:
 
 {{< cell "12" >}} Create Timelapse: Press to \*\**drum roll* 🥁🥁🥁\*\* create the timelapse.
 
-# Timelapse examples
+## Timelapse examples
 {{< row >}}
 
 <!-- {{< img_caption img="TRoM Timelapse x1.0 (128 frames - 13.56s).webp" css_image="height:85vh; width:auto;" class="pixel-art" caption="128 frames, 13.56 seconds, **859kB**, <u>made in **0.56 seconds**</u>" >}} -->
@@ -158,7 +158,7 @@ E.g:
 	class="pixel-art" 
 >}}
 
-# Contact 
+## Contact 
 
 You can reach me via:
 

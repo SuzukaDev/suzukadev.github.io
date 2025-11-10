@@ -50,14 +50,14 @@ I always compress my textures into different channels, but doing it manually in 
 
 It offers the option to <u>compress up to **4 textures** into a **single image**</u>, one for each RGBA channel.
 
-# Installation
+## Installation
 
 It doesn't require installation, just unzip the `.zip` file.
 
 
 
 
-# User Interface
+## User Interface
 
 {{< box_info >}}
 You can hover the 🛈 to show a little guide.
@@ -80,7 +80,7 @@ You can drag and drop images from one channel to another to swap channels.
 
 
 
-## Visualizer
+### Visualizer
 
 On the top, there is a little visualizer that is distorted depending on the introduced textures.
 
@@ -90,7 +90,7 @@ On the top, there is a little visualizer that is distorted depending on the intr
 This is to get an idea the kind of distortion you will get from each texture, and for getting an idea about how it "evolves" over time (how soft/hard it is, etc).
 {{< /box_green >}}
 
-## Options
+### Options
 
 {{< img_caption "stm-options-panel-2.png" "Options panel" >}}
 
@@ -101,14 +101,14 @@ This is to get an idea the kind of distortion you will get from each texture, an
 <!-- {{< img_caption "stm-skins-grid-riot.jpg" "4 different skins" >}} -->
 {{< img_caption "stm-skins-blue.webp" "4 different skins" >}}
 
-# Shortcuts
+## Shortcuts
 
 Shortcut | Function
 :-- | :-:
 {{< shortcut "CTRL+S" >}} | **Save** the compressed image
 {{< shortcut "F1" >}} | Show **options panel**
 
-# Contact
+## Contact
 
 
 Twitter: {{< get_social "twitter" >}}

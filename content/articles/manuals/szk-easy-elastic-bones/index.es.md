@@ -57,7 +57,7 @@ italic=false
 alt="Illustration of a skull bouncing rigged with SZK Easy Elastic Bones" 
 url="https://orb91.gumroad.com/l/easy_elastic_bones" >}}
 
-# Instalación 💻
+## Instalación 💻
 
 1. Descarga el archivo _.zip_ con el *addon* y guárdalo donde prefieras.
 2. En ***Blender***, ve a `Editar → Preferencias`. Una vez allí, haz clic en la pestaña `Addons` y presiona el botón `Instalar` en la esquina superior derecha:
@@ -68,7 +68,7 @@ url="https://orb91.gumroad.com/l/easy_elastic_bones" >}}
 2. Una vez instalado, busca “`SZK Easy Elastic Bones`” en la barra de búsqueda y activa el *addon*.
 
 
-# Cómo usarlo ⚙
+## Cómo usarlo ⚙
 
 1. Teniendo una <u>armadura seleccionada</u>, en el modo **Editar** o **Modo Pose**, **selecciona los huesos\* que quieras hacer elásticos**.
 
@@ -103,7 +103,7 @@ Para eliminar un hueso elástico, seleccionalo y presiona `‘Delete Elastic Bon
   
     Thats a very good question. I don’t know. I guess that if I ever got asked about something “frequently” (more than 2 times), I’ll clarify it here in case it’s useful for others 🐢. -->
 
-# Contacto 🐺
+## Contacto 🐺
 
 <!-- Twitter: [@SuzukaKDev](https://twitter.com/SuzukaKDev)
 

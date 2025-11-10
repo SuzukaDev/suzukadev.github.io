@@ -214,7 +214,7 @@ Tu paso por esta vida fue positivo. Hiciste la vida mejor de todos aquellos que 
 
 <!-- --- -->
 
-# Gracias Dexter
+## Gracias Dexter
 
 {{< img_caption "dex (8).jpeg" >}}
 

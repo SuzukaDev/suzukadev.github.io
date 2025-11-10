@@ -42,7 +42,7 @@ custom_profile_description = "Ingeniero multimedia, apasionado por el arte.<br>Y
 <!-- > I personally feel the focus should always be "the others". We make games for others to enjoy. We make tools for others to find them useful. <br> But I think we can only achieve that by being honest with ourselves. We can not expect others to enjoy something we would not -->
 
 
-# Sobre mí
+## Sobre mí
 
 <!-- Hello, my name is **Óscar** (also known as Suzuka/Suzuka Ka on the internet), and I personally find very hard to describe myself (or anyone else) with just a few words, but I'll try ({{< text_spoiler "and if I 'fail' in using not so many words, since this is *my place* I feel free to *ramble on (and sing my song)*" >}}): -->
 
@@ -109,7 +109,7 @@ He tenido la suerte de que algunas de mis herramientas han sido usadas por anima
 <!-- --- -->
 
 <!-- # My Life & Work Philosophy -->
-# Mi filosofía de vida y de trabajo
+## Mi filosofía de vida y de trabajo
 
 <!-- **As a person**, I find meaning in learning. I personally think life is about that. My life philosophy could be summed up with that. -->
 
