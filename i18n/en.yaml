@@ -43,4 +43,5 @@ readingTime: Reading time {{.}}
 privateArticleDescription: Private article (accessible only by its URL)
 captionAudio: Audio player to listen to the file '{{.title}}' by the author '{{.author}}'
 articleCoverImageAlt: Cover image for the article '{{.}}'
+galleryCoverImageAlt: Cover image for the gallery '{{.}}'
 underDevelopment: ⚠️ <u>THIS **SITE** IS **UNDER DEVELOPMENT**</u> ⚠️
