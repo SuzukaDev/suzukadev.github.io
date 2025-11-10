@@ -609,8 +609,9 @@ Once you submit the changes, it will appear as usual in Krita, in its correct la
 - {{< cell text="**Info Bar**" color="rgb(91, 91, 240)" url="#info-bar" >}}: Offers different information about the selected tool, the hovering elements, etc.
 
 
-{{< header t="Tool Options" h=3 align="left" class="underline" >}}
-#### Tool Options {.no-display}
+<!-- {{< header t="Tool Options" h=3 align="left" class="underline" >}}
+#### Tool Options {.no-display} -->
+#### Tool Options {.underline}
 
 Options for the different drawing tools.
 
@@ -630,8 +631,9 @@ Option | | Shortcut
 
 
 
-{{< header t="Actions" h=3 align="left" class="underline" >}}
-#### Actions {.no-display}
+<!-- {{< header t="Actions" h=3 align="left" class="underline" >}}
+#### Actions {.no-display} -->
+#### Actions {.underline}
 
 {{< img_caption img="k-sprite-action-buttons.png" class="no-box-shadow" >}}
 
@@ -650,8 +652,9 @@ Button | | Shortcut
 {{< /row >}}
 
 
-{{< header t="Tools" color="#F23C3CFF" h=3 align="left" class="underline" >}}
-#### Tools {.no-display}
+<!-- {{< header t="Tools" color="#F23C3CFF" h=3 align="left" class="underline" >}}
+#### Tools {.no-display} -->
+#### Tools {.underline}
 <!-- ### Tools {.no-display .underline} -->
 
 {{< row >}}
@@ -693,7 +696,8 @@ Button | | Shortcut
 
 <!-- #### Brush -->
 
-{{< header t="Brush" color="#F23C3CFF" h=4 align="left" >}}
+<!-- {{< header t="Brush" color="#F23C3CFF" h=5 align="left" >}} -->
+##### Brush
 
 <!-- #### Cepiiiii {.toc-only} -->
 
@@ -722,7 +726,8 @@ Drawing Shortcuts | Action
 
 
 
-{{< header t="Antialiasing brush" color="#F23C3CFF" h=4 align="left" >}}
+<!-- {{< header t="Antialiasing brush" color="#F23C3CFF" h=5 align="left" >}} -->
+##### Antialiasing Brush
 
 Brush for helping doing antialiasing. 
 **Shortcut**: {{< shortcut "A" >}}
@@ -765,7 +770,8 @@ The numbers (*P4, P8, M4, M8*) reffers to the **total neighbours** of a pixel th
 <!-- <figure><img src="https://public-files.gumroad.com/i7xb8g6u2t5wgz6xzrev2zilv6r1"><p class="figcaption"></p></figure> -->
 
 
-{{< header t="Lines" color="#F23C3CFF" h=4 align="left" >}}
+<!-- {{< header t="Lines" color="#F23C3CFF" h=5 align="left" >}} -->
+##### Lines
 
 Tool for creating lines. 
 **Shortcut**: {{< shortcut "V" >}}
@@ -790,7 +796,8 @@ This is due I personally like to draw perspective buildings, streets, etc. and I
 
 
 <!-- {{< cell text="**4 - Cubic & Cuadratic Bezier Curve**" color="#F23C3CFF" >}}: -->
-{{< header t="Bezier Curves" color="#F23C3CFF" h=4 align="left" >}}
+<!-- {{< header t="Bezier Curves" color="#F23C3CFF" h=5 align="left" >}} -->
+##### Bezier Curves
 
 Pixel Perfect **cubic and quadratic bezier** curves!
 **Shortcut**: {{< shortcut "ALT+V" >}}
@@ -829,7 +836,8 @@ This is due the points are added on **mouse release**, and if the window loses f
 
 <!-- {{< cell text="**6 - Circle**" color="#F23C3CFF" >}}: Improved circles -->
 
-{{< header t="Squares & Circles" color="#F23C3CFF" h=4 align="left" >}}
+<!-- {{< header t="Squares & Circles" color="#F23C3CFF" h=5 align="left" >}} -->
+##### Squares & Circles
 
 Tool for drawing Squares and Circles.
 
@@ -852,7 +860,8 @@ Shortcuts | Action
 {{< shortcut "ALT" >}} | **Move** Square/Circle.
 
 
-{{< header t="Fill Bucket" color="#F23C3CFF" h=4 align="left" >}}
+<!-- {{< header t="Fill Bucket" color="#F23C3CFF" h=5 align="left" >}} -->
+##### Fill Bucket
 
 Tool for filling closed areas.
 **Shortcut**: {{< shortcut "F" >}}
@@ -885,7 +894,8 @@ I considered removing the tool, but since it still does the job well for small a
 
 
 
-{{< header t="Text" color="#F23C3CFF" h=4 align="left" >}}
+<!-- {{< header t="Text" color="#F23C3CFF" h=5 align="left" >}} -->
+##### Text
 
 <!-- 2. **Text**: Tool to render correctly pixelated fonts -->
 
@@ -931,7 +941,8 @@ You can move the text while is being edited by {{< shortcut "Clicking its rectan
 {{< /box_green >}}
 <!-- <figure><img src="https://public-files.gumroad.com/v16jf2e48wb1l6xfywhoaetd8q4u"><p class="figcaption"></p></figure> -->
 
-{{< header t="Zoom Tool" color="#F23C3CFF" h=4 align="left" >}}
+<!-- {{< header t="Zoom Tool" color="#F23C3CFF" h=5 align="left" >}} -->
+##### Zoom Tool
 <!-- Tool for zooming specific areas precissely. -->
 Tool for precisely zooming in on specific areas.
 **Shortcut**: {{< shortcut "Z" >}}
@@ -948,8 +959,9 @@ Zoom Shortcuts | Action
 
 
 
-{{< header t="Canvas" h=3 align="left" class="underline" >}}
-#### Canvas {.no-display}
+<!-- {{< header t="Canvas" h=3 align="left" class="underline" >}}
+#### Canvas {.no-display} -->
+#### Canvas {.underline}
 
 <!-- Here is where you draw. It will render the current state of the document, and you will be editing the active layer that was active when launching the editor. -->
 
@@ -983,8 +995,9 @@ At the moment, there is no visual input inside K-Sprite to know if there is a se
 
 
 
-{{< header t="Export Buttons" h=3 align="left" class="underline" >}}
-#### Export Buttons {.no-display}
+<!-- {{< header t="Export Buttons" h=3 align="left" class="underline" >}}
+#### Export Buttons {.no-display} -->
+#### Export Buttons {.underline}
 
 {{< img_caption img="k-sprite-export-buttons.png" class="no-box-shadow" >}}
 
@@ -1001,8 +1014,9 @@ Export the drawing/changes in K-Sprite to a `New Layer` or to the `Active Lay
 
 
 
-{{< header t="Info Bar" h=3 align="left" class="underline" >}}
-#### Info Bar {.no-display}
+<!-- {{< header t="Info Bar" h=3 align="left" class="underline" >}}
+#### Info Bar {.no-display} -->
+#### Info Bar {.underline}
 
 Displays information, shortcuts, tips, etc. when **hovering** a button/tool.
 

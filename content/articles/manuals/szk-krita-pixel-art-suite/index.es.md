@@ -583,8 +583,9 @@ Una vez que efectues los cambios, aparecerá como de costumbre en Krita, en su p
 - {{< cell text="**Info Bar / Barra de información**" color="rgb(91, 91, 240)" url="#barra-de-información" >}}: Ofrece información acerca de la herramienta seleccionada.
 
 
-{{< header t="Opciones de la herramienta" h=3 align="left" class="underline" >}}
-#### Opciones de la herramienta {.no-display}
+<!-- {{< header t="Opciones de la herramienta" h=3 align="left" class="underline" >}}
+#### Opciones de la herramienta {.no-display} -->
+#### Opciones de la herramienta {.underline}
 
 Opciones para las diferentes herramientas de dibujo.
 
@@ -604,8 +605,9 @@ Option | | Shortcut
 
 
 
-{{< header t="Acciones" h=3 align="left" class="underline" >}}
-#### Acciones {.no-display}
+<!-- {{< header t="Acciones" h=3 align="left" class="underline" >}}
+#### Acciones {.no-display} -->
+#### Acciones {.underline}
 
 {{< img_caption img="k-sprite-action-buttons.png" class="no-box-shadow" >}}
 
@@ -624,8 +626,9 @@ Botón | | Atajo de teclado
 {{< /row >}}
 
 
-{{< header t="Herramientas" color="#F23C3CFF" h=3 align="left" class="underline" >}}
-#### Herramientas {.no-display}
+<!-- {{< header t="Herramientas" color="#F23C3CFF" h=3 align="left" class="underline" >}}
+#### Herramientas {.no-display} -->
+#### Herramientas {.underline}
 <!-- ### Tools {.no-display .underline} -->
 
 {{< row >}}
@@ -663,7 +666,8 @@ Botón | | Atajo de teclado
 
 
 
-{{< header t="Pincel" color="#F23C3CFF" h=4 align="left" >}}
+<!-- {{< header t="Pincel" color="#F23C3CFF" h=5 align="left" >}} -->
+##### Pincel
 
 **Pincel de 1px** con opcion <u>**pixel perfect**</u> para hacer **trazos perfectos**.
 **Atajo de teclado**: {{< shortcut "B" >}}
@@ -683,7 +687,8 @@ Atajos de dibujo | Action
 
 
 
-{{< header t="Pincel de Antialiasing" color="#F23C3CFF" h=4 align="left" >}}
+<!-- {{< header t="Pincel de Antialiasing" color="#F23C3CFF" h=5 align="left" >}} -->
+##### Pincel de Antialiasing
 
 Ayuda a hacer el antialiasing manualmente.
 **Atajo de teclado**: {{< shortcut "A" >}}
@@ -725,7 +730,8 @@ Los números (*P4, P8, M4, M8*) se refieren al número **total de vecinos** que 
 
 
 
-{{< header t="Lineas" color="#F23C3CFF" h=4 align="left" >}}
+<!-- {{< header t="Lineas" color="#F23C3CFF" h=5 align="left" >}} -->
+##### Líneas
 
 Herramienta para crear líneas.
 **Atajo de teclado**: {{< shortcut "V" >}}
@@ -745,7 +751,8 @@ Esto se debe a que personalmente me gusta dibujar edificios en perspectiva, call
 
 
 
-{{< header t="Curvas de Bezier" color="#F23C3CFF" h=4 align="left" >}}
+<!-- {{< header t="Curvas de Bezier" color="#F23C3CFF" h=5 align="left" >}} -->
+##### Curvas de Bezier
 
 Curvas **cúbicas y cuadráticas de Bezier**!
 **Atajo de teclado**: {{< shortcut "ALT+V" >}}
@@ -782,7 +789,8 @@ Esto se debe a que los puntos se añaden al **levantar el click del mouse**, y s
 
 
 
-{{< header t="Cuadrados y Círculos" color="#F23C3CFF" h=4 align="left" >}}
+<!-- {{< header t="Cuadrados y Círculos" color="#F23C3CFF" h=5 align="left" >}} -->
+##### Cuadrados y Círculos
 
 Herramienta para dibujar cuadrados y círculos.
 
@@ -801,7 +809,8 @@ Atajo | Acción
 {{< shortcut "ALT" >}} | **Mueve** el cuadrado/círculo.
 
 
-{{< header t="Cubo de relleno" color="#F23C3CFF" h=4 align="left" >}}
+<!-- {{< header t="Cubo de relleno" color="#F23C3CFF" h=5 align="left" >}} -->
+##### Cubo de Relleno
 
 Herramienta para rellenar áreas cerradas.
 **Atajo de teclado**: {{< shortcut "F" >}}
@@ -835,7 +844,8 @@ Consideré quitar la herramienta, pero dado que aún hace bien el trabajo en ár
 
 
 
-{{< header t="Texto" color="#F23C3CFF" h=4 align="left" >}}
+<!-- {{< header t="Texto" color="#F23C3CFF" h=5 align="left" >}} -->
+##### Texto
 
 <!-- 2. **Text**: Tool to render correctly pixelated fonts -->
 
@@ -882,7 +892,8 @@ Puedes mover el texto mientras se está editando haciendo {{< shortcut "Clic en 
 
 
 
-{{< header t="Herramienta de Zoom" color="#F23C3CFF" h=4 align="left" >}}
+<!-- {{< header t="Herramienta de Zoom" color="#F23C3CFF" h=5 align="left" >}} -->
+##### Herramienta de Zoom
 
 Herramienta para hacer zoom con precisión en áreas específicas.
 **Atajo de teclado**: {{< shortcut "Z" >}}
@@ -901,8 +912,9 @@ Atajos del Zoom | Action
 
 
 
-{{< header t="Lienzo" h=3 align="left" class="underline" >}}
-#### Lienzo {.no-display}
+<!-- {{< header t="Lienzo" h=3 align="left" class="underline" >}}
+#### Lienzo {.no-display} -->
+#### Lienzo {.underline}
 
 
 Aquí es donde dibujas. Esta área muestra el estado actual del documento, y estarás editando **la capa que estaba activa cuando lanzaste el editor**.
@@ -933,9 +945,10 @@ De momento no hay ningún *feedback* visual dentro de K-Sprite para saber si hay
 {{< /box_info >}}
 
 
-
+<!-- 
 {{< header t="Botones de Exportacion" h=3 align="left" class="underline" >}}
-#### Botones de Exportacion {.no-display}
+#### Botones de Exportacion {.no-display} -->
+#### Botones de Exportacion {.underline}
 
 {{< img_caption img="k-sprite-export-buttons.png" class="no-box-shadow" >}}
 
@@ -953,8 +966,9 @@ Exporta los cambios que hayas hecho en K-Sprite a `Una nueva capa (New Layer)` o
 
 
 
-{{< header t="Barra de Información" h=3 align="left" class="underline" >}}
-#### Barra de Información {.no-display}
+<!-- {{< header t="Barra de Información" h=3 align="left" class="underline" >}}
+#### Barra de Información {.no-display} -->
+#### Barra de Información {.underline}
 
 Muestra información, atajos de teclado, consejos, etc. al **pasar el cursor** sobre un botón/herramienta.
 
