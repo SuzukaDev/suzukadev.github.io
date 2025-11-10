@@ -22,8 +22,8 @@ main_classes: 'handwritten-font'
 # private: true # If true, this gallery does won't show in lists, RSS, sitemaps, etc. On list pages, use cascade to hide descendants.
 # featured: true # If true the gallery will be featured in home with a BIG picture (even if private).
 # featured_gallery: true # If true, the gallery will be featured in the home page (with an smaller size) (even if private).
-featured_image: images/dexter.png # Name of the image file used for the album thumbnail. If NOT set, the first image which contains "feature" in its filename is used, otherwise the first image in the album.
-featured_image_hover: images/hidden/dexter_hearts.png # Image that displays when hovering the album. If NOT set, the first image which contains "hover" in its filename will be used.
+featured_image: images/dexter/hidden/dexter-small.png # Name of the image file used for the album thumbnail. If NOT set, the first image which contains "feature" in its filename is used, otherwise the first image in the album.
+featured_image_hover: images/dexter/hidden/dexter_hearts-small.png # Image that displays when hovering the album. If NOT set, the first image which contains "hover" in its filename will be used.
 # hover_color: rgba(255, 94, 0, 0.57) # Hover for the bloom color (in dark theme) when hovering a gallery. If not set, gets the most predominant color in the hover image.
 
 # APPEARANCE SETTINGS
