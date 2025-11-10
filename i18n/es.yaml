@@ -44,4 +44,6 @@ privateArticleDescription: Artículo privado (solo es accesible a través de su 
 captionAudio: Reproductor de audio para escuchar el archivo '{{.title}}' del autor '{{.author}}'
 articleCoverImageAlt: Imagen de portada para el artículo '{{.}}'
 galleryCoverImageAlt: Imagen de portada para la galería de fotos '{{.}}'
+switchLang: Cambia el idioma de la página
+goToIndex: Ir a la página principal
 underDevelopment: ⚠️ <u>ESTA **PÁGINA** ESTÁ **EN DESARROLLO**</u> ⚠️

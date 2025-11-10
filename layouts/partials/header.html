@@ -12,7 +12,7 @@
       {{ partial "breadcrumbs.html" . }}
     {{ end }}
   {{ else }}
-    <a class="btn" href="{{ .Site.Home.RelPermalink }}">
+    <a class="btn" href="{{ .Site.Home.RelPermalink }}" aria-label='{{T "goToIndex"}}'>
       {{/*  DEXTER SVG ICON  */}}
       {{/*  DELETE comments and not used dexter SVG's */}}
 
