@@ -34,6 +34,7 @@ Example:
 {{- $c1 := (or (.Get 6) (.Get "c1")) -}}
 {{- $c2 := (or (.Get 7) (.Get "c2")) -}}
 {{- $size_fit := (.Get "fit") | default false -}}
+{{- $alt_text := (.Get "alt") | default "Image" -}}
 
 {{- $fit := "" -}}
 {{- if $size_fit -}}
@@ -114,9 +115,9 @@ Example:
 
 <a id="" class="hover-reveal-2-images" {{- if $link -}} href='{{- $link -}}' {{- end -}}>
 	<div class="half-border-radius pfp-border-colors" style="{{- $style_variables | safeCSS -}}">
-		<img src="{{- $img_link -}}">
+		<img src="{{- $img_link -}}" alt="{{$alt_text}}">
 		{{- if $img_hover -}}
-			<img src="{{- $img_hover_link -}}">
+			<img src="{{- $img_hover_link -}}" alt="{{$alt_text}} (Hover)">
 		{{- end -}}
 	</div>
 </a>

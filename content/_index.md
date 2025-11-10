@@ -19,13 +19,13 @@ menus:
 <!-- {{< header text="*Suzuka Ka*" h=1 class="bloom-shadow-text" >}} -->
 
 <!-- {{< img_caption img="suzuka-ka-logo-white.png" class="bloom-shadow" >}} -->
-{{< img_caption img="suzuka-ka-logo-white.png" class="bloom-shadow link-no-decoration" style="margin-top:-40px; margin-bottom:-23px;" url="about" >}}
+{{< img_caption img="suzuka-ka-logo-white.png" class="bloom-shadow link-no-decoration" style="margin-top:-40px; margin-bottom:-23px;" url="about" alt="Suzuka Ka Logo" >}}
 
 
 <!-- {{< img_caption img="suzuka-ka-logo-white-rotated.png" class="bloom-shadow" >}} -->
 
 
-{{< images_hover_link img="/images/profile-pictures/yo.jpg" img_hover="/images/profile-pictures/yo_color.png" page="about" c0_dark=#A64951FF c1_dark=#EF454EFF c2_dark=#6e3656 c0_light=#fd7c26 c1_light=#EF454EFF c2_light=#f16c13 t1=2.2s fit=300 >}}
+{{< images_hover_link img="/images/profile-pictures/yo.jpg" img_hover="/images/profile-pictures/yo_color.png" page="about" c0_dark=#A64951FF c1_dark=#EF454EFF c2_dark=#6e3656 c0_light=#fd7c26 c1_light=#EF454EFF c2_light=#f16c13 t1=2.2s fit=300 alt="Cartoon portrait of Suzuka Ka" >}}
 
 
 {{< text_glitch text="Multimedia Engineer 🧠" time=10 rotation=901 font=1 sync=true intensity=0.1 >}} and {{< text_wavy text="multidisciplinary" time="1.0" freq="0.1" amp="5">}} <span class="pixel-font">{{< text_shimmer text="Game Developer" time=2.4 delay=.03 scale=1.3 blur=10 y=0 color1=orange color2=red color1-light=#ffde26 color2-light=red >}}</span> {{< text_rotate text="🎮" time=7.2  scale=1.5 >}} <br> with a {{< text_strong text="strong" font_weight=900 bloom_color=#00f7ff bloom_size=9 >}} passion for {{< text_handwritten text="ART & Creativity" scale=.1 rotation=40 font=3 frame_time=.3 time_variation=.10 spacing=.1  fx=1.3 >}} {{< text_handwritten text="🎨" rotation=360 scale=.1 offset=4 font=3 frame_time=.3 time_variation=.10 fx=1.0 >}} 
