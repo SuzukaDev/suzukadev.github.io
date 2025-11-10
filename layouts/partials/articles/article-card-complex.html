@@ -8,7 +8,7 @@
             {{- /*  <img class="ls-is-cached lazyloaded card__img" style="height: 300px; width:100px;" src="{{$article_cover_url}}">  */ -}}
             {{- /*  <img class="ls-is-cached lazyloaded card__img" style="height: 300px; width:100px;" data-src="{{$article_cover_url}}" src="{{$article_cover_url}}">  */ -}}
             {{ $article_cover_url := partial "get-article-card-cover.html" . }}
-            <img class="ls-is-cached lazyloaded card__img" data-src="{{$article_cover_url}}" src="{{$article_cover_url}}">
+            <img class="ls-is-cached lazyloaded card__img" data-src="{{$article_cover_url}}" src="{{$article_cover_url}}" alt='{{T "articleCoverImageAlt" .Title}}'>
         </div>
         {{- /*  <img class="card__img" data-src="{{$article_cover_url}}" url="{{$article_cover_url}}">  */ -}}
         {{- /*  <img class="card__img" data-src="{{$article_cover_url}}" url="/en/galleries/art/3d/images/408seijin-3dfanart-comparison.png">  */ -}}
