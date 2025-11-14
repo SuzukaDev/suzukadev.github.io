@@ -1157,6 +1157,14 @@ I’m **currently working** on solving this.
 
 {{< /details >}}
 
+
+<!-- ## Changelog
+
+{{< details "List of changes" >}}
+
+{{< /details >}} -->
+
+
 ## Credits
 
 **Fonts** used:
