@@ -103,7 +103,7 @@ Nunca he pensado que fueras un perro común. Sinceramente, carecías de esa conf
 <!-- # Paseos -->
 <!-- # Paseos -->
 
-Pasear sin ti es dificil. A veces salgo a pasear con tu correa, para sentirla en mis manos y sentir que vienes conmigo. Pero te veo en todos los lados. Y si no te veo, tengo la sensación de que al voltear la cabeza estarás detrás de mí. 
+Caminar sin ti es dificil. A veces salgo a andar con tu correa, para sentirla en mis manos y sentir que vienes conmigo. Pero te veo en todos los lados. Y si no te veo, tengo la sensación de que al voltear la cabeza estarás detrás de mí.
 
 Recuerdo cada peculiaridad tuya, tus hábitos, tus manias, las cosas que te gustaban hacer, todo lo que repetías, las interacciones/juegos que teníamos a modo casi de ritual, al pasar por ciertos lugares.
 
