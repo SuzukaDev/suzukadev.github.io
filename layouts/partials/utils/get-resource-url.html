@@ -18,7 +18,8 @@ Use:
 {{- /*  Get the image resource if the url is not a link  */ -}}
 {{- if not (hasPrefix $url "http") -}}
   {{- /*  {{- $resource = or (.Page.Resources.Get $url) (resources.Get $url) (.Page.Resources.GetMatch (printf "**%s**" $url )) -}}  */ -}}
-  {{- $resource = or ($context.Page.Resources.Get $url) (resources.Get $url) ($context.Page.Resources.GetMatch (printf "**%s**" $url )) -}}
+  {{- /*  {{- $resource = or ($context.Page.Resources.Get $url) (resources.Get $url) ($context.Page.Resources.GetMatch (printf "**%s**" $url )) -}}  */ -}}
+  {{- $resource = or ($context.Page.Resources.Get $url) (resources.Get $url) (resources.GetMatch (printf "**%s**" $url )) ($context.Page.Resources.GetMatch (printf "**%s**" $url )) -}}
   {{- if $resource -}}
     {{- $resource_url = $resource.RelPermalink -}}
   {{- end -}}
