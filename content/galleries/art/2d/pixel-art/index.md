@@ -1,14 +1,14 @@
 ---
-title: 'Pixel Art'
+title: "Pixel Art"
 # Description shown on the album page. Rendered as markdown to enable adding links and some formatting.
 # description: "**<u>Tools</u>:** Pyxel Edit, Aseprite, Krita {{< text_wavy text=\"and\" amp=10 >}} [**K-Sprite**, my own Pixel Art Editor.](https://orb91.gumroad.com/l/szk-krita-pixel-art-suite)  [K-Sprite]({{< relref \"szk-krita-pixel-art-suite\" >}}#k-sprite) "
-description: "**<u>Tools</u>:** Pyxel Edit, Aseprite, Krita {{< text_wavy text=\"and\" amp=10 >}} [**K-Sprite**, my own Pixel Art Editor.](https://orb91.gumroad.com/l/szk-krita-pixel-art-suite)"
-date: '2025-04-27T20:18:53+02:00' # Used for sorting (newest first)
+description: '**<u>Tools</u>:** Pyxel Edit, Aseprite, Krita {{< text_wavy text="and" amp=10 >}} [**K-Sprite**, my own Pixel Art Editor.](https://orb91.gumroad.com/l/szk-krita-pixel-art-suite)'
+date: "2025-04-27T20:18:53+02:00" # Used for sorting (newest first)
 author: Suzuka Ka
 draft: false
 categories: ["art", "digital", "pixel art", "gamedev"]
 # categories: ["animals", "gamedev"]
-main_classes: 'pixel-font'
+main_classes: "pixel-font"
 
 ### INFO Menus https://gohugo.io/content-management/menus/
 # menus:
@@ -49,3 +49,7 @@ print_debug_resource_weight: true # If true, shows a 'weight' field in the debug
 #       date: 2024-02-18T13:04:30+0100
 #       weight: 20
 ---
+
+
+{{< img_caption img="dex-v2-20ms.webp" class="pixel-art no-box-shadow" css_image="height: 55vh; width:auto;" >}}
+

@@ -49,3 +49,8 @@ print_debug_resource_weight: true # Si es verdadero, muestra un campo 'weight' e
 #       date: 2024-02-18T13:04:30+0100
 #       weight: 20
 ---
+
+
+
+{{< img_caption img="dex-v2-20ms.webp" class="pixel-art no-box-shadow" css_image="height: 55vh; width:auto;" >}}
+
