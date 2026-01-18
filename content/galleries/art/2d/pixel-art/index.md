@@ -51,5 +51,6 @@ print_debug_resource_weight: true # If true, shows a 'weight' field in the debug
 ---
 
 
-{{< img_caption img="dex-v2-20ms.webp" class="pixel-art no-box-shadow" css_image="height: 55vh; width:auto;" >}}
+<!-- {{< img_caption img="dex-v2-20ms.webp" class="pixel-art no-box-shadow" css_image="height: 55vh; width:auto;" >}} -->
+{{< img_caption img="dex-v2-20ms.webp" class="pixel-art no-box-shadow" css_image="width:55vh;height:auto;" >}}
 
