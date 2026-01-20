@@ -52,5 +52,10 @@ print_debug_resource_weight: true # If true, shows a 'weight' field in the debug
 
 
 <!-- {{< img_caption img="dex-v2-20ms.webp" class="pixel-art no-box-shadow" css_image="height: 55vh; width:auto;" >}} -->
-{{< img_caption img="dex-v2-20ms.webp" class="pixel-art no-box-shadow" css_image="width:55vh;height:auto;" >}}
 
+<!-- IMAGE -->
+<!-- {{< img_caption img="dex-v2-20ms.webp" class="pixel-art no-box-shadow" css_image="width:55vh;height:auto;" >}} -->
+
+
+<!-- {{< video v="dex-x5-v2-day-cycle.mp4" class="pixel-art no-box-shadow" c=false css="height: 75vh" autoplay=true loop=true >}} -->
+{{< video v="dex-x5-v2-day-cycle.mp4" class="pixel-art no-box-shadow" c=false css="width:55vh;height:auto;" autoplay=true loop=true >}}
