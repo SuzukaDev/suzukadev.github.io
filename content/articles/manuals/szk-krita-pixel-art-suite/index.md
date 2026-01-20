@@ -40,7 +40,7 @@ show_right_bar = true
 
 {{< link_card 
   url="https://orb91.gumroad.com/l/szk-krita-pixel-art-suite"
-  cover="images/feature_logo-animated-512px.webp"
+  cover="logo-animated-512px.webp"
   title="SZK Pixel Art Suite"
   subtitle="Improves making Pixel Art in *Krita*!"
   url_text="orb91.gumroad.com"
@@ -1182,7 +1182,7 @@ Mentioned **articles**:
 
 {{< link_card 
   url="https://orb91.gumroad.com/l/szk-krita-pixel-art-suite"
-  cover="images/feature_logo-animated-512px.webp"
+  cover="logo-animated-512px.webp"
   title="SZK Pixel Art Suite"
   subtitle="Improves making Pixel Art in *Krita*!"
   url_text="orb91.gumroad.com"

@@ -38,7 +38,7 @@ show_right_bar = true
 
 {{< link_card 
   url="https://orb91.gumroad.com/l/szk-krita-pixel-art-suite"
-  cover="images/feature_logo-animated-512px.webp"
+  cover="logo-animated-512px.webp"
   title="SZK Pixel Art Suite"
   subtitle="Añade muchas mejoras para hacer Pixel Art in *Krita*!"
   url_text="orb91.gumroad.com"
@@ -1132,7 +1132,7 @@ Actualmente estoy trabajando en solucionar esto.
 
 {{< link_card 
   url="https://orb91.gumroad.com/l/szk-krita-pixel-art-suite"
-  cover="images/feature_logo-animated-512px.webp"
+  cover="logo-animated-512px.webp"
   title="SZK Pixel Art Suite"
   subtitle="Añade muchas mejoras para hacer Pixel Art in *Krita*!"
   url_text="orb91.gumroad.com"
