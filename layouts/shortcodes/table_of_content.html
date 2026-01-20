@@ -27,7 +27,7 @@ Example:
 This shortcode uses .Page.Fragments for generating the ToC and will only render if a TableOfContents exists for the current page.
 */ -}}
 
-{{- $startLevel := or (.Get "start") (.Get 0) | default 1 -}}
+{{- $startLevel := or (.Get "start") (.Get 0) | default 2 -}}
 {{- $endLevel := or (.Get "end") (.Get 1) | default 3 -}}
 {{- $ordered := or (.Get "ordered") (.Get 2) | default false -}}
 
