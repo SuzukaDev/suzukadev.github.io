@@ -3,7 +3,7 @@ title = 'Gracias Dexter'
 date = '2026-01-20T13:01:18+01:00'
 description = "Another pixel art illustration process"
 lastmod = '2026-01-20T13:01:18+01:00'
-draft = true # if true (or not set), the page will be excluded in build
+# draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
 keywords = ["illustration", "process", "pixel art", "godot", "gamedev", "krita", "szk pixel art suite"]
 tags = ["illustration", "process", "pixel art"]
@@ -104,10 +104,14 @@ Here is a little tutorial I did showcasing it:
 Basically:
 1. Select all the layers you want to include in your spritesheet.
 2. Export the spritesheet with the `Export .json` checked.
-3. In Godot, load the script (TODO!❗❗❗❗❗❗‼‼‼‼ Upload it to github and paste the link here❗❗❗❗ (O sube el archivo también aquí)) and set the .json/.png.
+3. In Godot, use the [SZK SpritePacker Importer addon](https://github.com/SuzukaDev/SZK-SpritePacker-Importer) and set the .json/.png.
+
+{{< download_file "files/szk_spritepacker_importer.zip" >}}
+
 {{< box_info >}}
 Dragging the `.json` or the `.png` automatically fills the rest if it finds a .json/.png with the same name in the same directory.
 {{< /box_info >}}
+
 4. Click {{< shortcut "Generate" >}} to generate the whole scene!
 
 

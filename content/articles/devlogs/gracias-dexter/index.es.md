@@ -1,9 +1,9 @@
 +++
 title = 'Gracias Dexter'
 date = '2026-01-20T13:01:18+01:00'
-description = ""
+description = "Proceso"
 lastmod = '2026-01-20T13:01:18+01:00'
-draft = true # if true (or not set), the page will be excluded in build
+# draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
 # keywords = ["SZK", "Suzuka", "Suzuka Ka", "SuzukaKDev"] # custom keywords for the page
 # tags = [""]
