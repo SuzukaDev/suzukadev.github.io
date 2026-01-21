@@ -27,7 +27,7 @@ custom_pfp = "dex-y-yo-mar-full.jpg" # if set the article will use a custom imag
 # show_related_articles = false # If false, it wont show the related articles at the bottom. If true (or non set), they will show.
 # featured_image = 'gracias-dexter.png' # local path for the image used as the cover. NOTE: Check its extension! (.png set as a template)
 # NOTE Since this is a leaf bundle (page in its own folder), placing an image in the same folder with the name 'cover' (no matter its extension) will be used as the cover AUTOMATICALLY. BUT if 'featured_image' is set, it will use that (this is also useful for having different covers for each language, if that is needed).
-# emoji = "🍀"
+emoji = "🖤"
 
 # # ------- FEATURE OPTIONS --------
 # featured = true # if true, the article will be featured in the index page.
@@ -53,7 +53,7 @@ Page not translated (at the moment). For reading the article, [visit the spanish
 
 I wanted to capture the feeling I had every time I sat with my best friend, Dexter. The feeling of just existing by his side. We used to go on long walks, and we always had time to sit and contemplate the scenery, the colors of the mountains, the sky, etc. It's a feeling I miss, and I wanted to portray it in a drawing. Also as a way to thank him for being literally the best companion I could have asked for half of my life.
 
-The place was inspired *Cala del Xarco*, in Villajoyosa, Spain. It was the last place I went with him before he passing, so the place holds an special value for me:
+The place was inspired *Cala del Xarco*, in Villajoyosa, Spain. It was the last place I went with him before he passing, so the place holds a special value for me:
 {{< img_caption "https://upload.wikimedia.org/wikipedia/commons/a/ab/Cala_el_Charco.jpg" >}}
 
 Another motivation was to continue using and improving/developing my {{< text_rotate "*awesome*" >}} [SZK Pixel Art Suite for Krita](https://orb91.gumroad.com/l/szk-krita-pixel-art-suite). I added some {{< text_wavy "cool features" >}} (that I will talk about later on) that were very useful while making this!
