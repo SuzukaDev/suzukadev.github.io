@@ -58,6 +58,7 @@ SZK SpritePacker Importer is a Godot addon that converts a spritesheet and JSON 
 The generated scene reproduces the original Krita (.kra) document’s hierarchy and positioning, allowing artists and developers to move from Krita to Godot without manually rebuilding scenes. Each sprite is placed and structured to match the source document, preserving layout and organization.
 
 
+
 ## How to install
 - Download the [latest version](https://github.com/SuzukaDev/SZK-SpritePacker-Importer/releases)
 - Unzip the `szk_spritepacker_importer.zip` and copy it inside the folder `addons`, inside your Godot project.
