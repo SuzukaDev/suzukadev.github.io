@@ -64,6 +64,7 @@ The generated scene reproduces the original Krita (.kra) document’s hierarchy 
 - In Godot, go to `Project -> Project Settings` and select the `plugins` tab.
 - Enable `SZKSpritePackerImporter`
 
+
 ## How to use it
 1. Create a node of the type `SZKSpritePackerImporter`
 {{< img_caption "tuto1.png" >}}
