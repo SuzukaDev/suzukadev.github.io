@@ -1,7 +1,7 @@
 +++
 title = 'Gracias Dexter'
 date = '2026-01-20T13:01:18+01:00'
-description = ""
+description = "Another pixel art illustration process"
 lastmod = '2026-01-20T13:01:18+01:00'
 draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
