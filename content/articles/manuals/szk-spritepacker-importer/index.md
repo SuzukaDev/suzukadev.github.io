@@ -1,5 +1,5 @@
 +++
-title = 'SZK Spritepacker Importer'
+title = 'SZK SpritePacker Importer'
 date = '2026-01-21T17:52:25+01:00'
 description = "Godot addon for building scenes very fast"
 lastmod = '2026-01-21T17:52:25+01:00'
