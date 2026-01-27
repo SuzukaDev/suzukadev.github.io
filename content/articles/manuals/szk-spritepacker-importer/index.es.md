@@ -1,7 +1,7 @@
 +++
 title = 'SZK SpritePacker Importer'
 date = '2026-01-21T17:52:25+01:00'
-description = "Addon para Godot para construir escenas súper rápido!"
+description = "Addon de Godot para construir escenas súper rápido!"
 lastmod = '2026-01-21T17:52:25+01:00'
 # draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
