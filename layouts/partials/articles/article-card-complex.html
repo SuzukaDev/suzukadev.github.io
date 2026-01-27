@@ -1,13 +1,13 @@
 {{$ANGLE := 20}}
-{{$rand_value := sub (mul math.Rand $ANGLE) (div $ANGLE 2) }}
-<article class="featured-article-big hover-underline-animation" {{ partial "utils/get-accent-color-style.html" . }}>
+{{$rand_value := sub (mul math.Rand $ANGLE) (div $ANGLE 2) -}}
+<article class="featured-article-big hover-underline-animation" {{- partial "utils/get-accent-color-style.html" . -}}>
     <a class="hover-border-bloom" href="{{.RelPermalink}}">
 {{- /*  <a class="featured-article-big hover-underline-animation" href="{{.RelPermalink}}" style="--rand-rotation:{{$rand_value}}deg;">  */ -}}
-        <div class="image-container" {{- with .Params.feature_image_background_color }} style="background-color: {{.}};" {{- end -}}>
+        <div class="image-container" {{- with .Params.feature_image_background_color -}} style="background-color: {{.}};" {{- end -}}>
             {{- /*  <img style="height: 300px; width:100px;" url="{{$article_cover_url}}">  */ -}}
             {{- /*  <img class="ls-is-cached lazyloaded card__img" style="height: 300px; width:100px;" src="{{$article_cover_url}}">  */ -}}
             {{- /*  <img class="ls-is-cached lazyloaded card__img" style="height: 300px; width:100px;" data-src="{{$article_cover_url}}" src="{{$article_cover_url}}">  */ -}}
-            {{ $article_cover_url := partial "get-article-card-cover.html" . }}
+            {{- $article_cover_url := partial "get-article-card-cover.html" . -}}
             <img class="ls-is-cached lazyloaded card__img" data-src="{{$article_cover_url}}" src="{{$article_cover_url}}" alt='{{T "articleCoverImageAlt" .Title}}'>
         </div>
         {{- /*  <img class="card__img" data-src="{{$article_cover_url}}" url="{{$article_cover_url}}">  */ -}}
@@ -24,20 +24,20 @@
                     <title>{{$_title}}</title>
                     <path d="M260-320q47 0 91.5 10.5T440-278v-394q-41-24-87-36t-93-12q-36 0-71.5 7T120-692v396q35-12 69.5-18t70.5-6Zm260 42q44-21 88.5-31.5T700-320q36 0 70.5 6t69.5 18v-396q-33-14-68.5-21t-71.5-7q-47 0-93 12t-87 36v394Zm-40 118q-48-38-104-59t-116-21q-42 0-82.5 11T100-198q-21 11-40.5-1T40-234v-482q0-11 5.5-21T62-752q46-24 96-36t102-12q58 0 113.5 15T480-740q51-30 106.5-45T700-800q52 0 102 12t96 36q11 5 16.5 15t5.5 21v482q0 23-19.5 35t-40.5 1q-37-20-77.5-31T700-240q-60 0-116 21t-104 59ZM280-494Z"/>
                 </svg>
-                <span title= {{$_title}}>{{(len .Pages) }}</span>
+                <span title= {{$_title}}>{{(len .Pages) -}}</span>
             </span>
         {{- else -}}
-            {{ partial "articles/article-time-box" . }}
+            {{- partial "articles/article-time-box" . -}}
         {{- end -}}
-        {{- /*  {{ partial "articles/article-time-simple" . }}  */ -}}
+        {{- /*  {{- partial "articles/article-time-simple" . -}}  */ -}}
 
         {{- if .IsSection -}}
         {{- /*  <span class="articles-count">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
-                <title>{{T "articlesCount" (len .Pages) }}</title>
+                <title>{{T "articlesCount" (len .Pages) -}}</title>
                 <path d="M260-320q47 0 91.5 10.5T440-278v-394q-41-24-87-36t-93-12q-36 0-71.5 7T120-692v396q35-12 69.5-18t70.5-6Zm260 42q44-21 88.5-31.5T700-320q36 0 70.5 6t69.5 18v-396q-33-14-68.5-21t-71.5-7q-47 0-93 12t-87 36v394Zm-40 118q-48-38-104-59t-116-21q-42 0-82.5 11T100-198q-21 11-40.5-1T40-234v-482q0-11 5.5-21T62-752q46-24 96-36t102-12q58 0 113.5 15T480-740q51-30 106.5-45T700-800q52 0 102 12t96 36q11 5 16.5 15t5.5 21v482q0 23-19.5 35t-40.5 1q-37-20-77.5-31T700-240q-60 0-116 21t-104 59ZM280-494Z"/>
             </svg>
-            <span title= {{T "articlesCount" (len .Pages) }}>&nbsp; x{{(len .Pages) }}</span>
+            <span title= {{T "articlesCount" (len .Pages) -}}>&nbsp; x{{(len .Pages) -}}</span>
         </span>  */ -}}
         {{- else -}}
         <span class="reading-time">
@@ -46,46 +46,46 @@
             {{- /*  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M440-278v-394q-41-24-87-36t-93-12q-36 0-71.5 7T120-692v396q35-12 69.5-18t70.5-6q47 0 91.5 10.5T440-278Zm40 118q-48-38-104-59t-116-21q-42 0-82.5 11T100-198q-21 11-40.5-1T40-234v-482q0-11 5.5-21T62-752q46-24 96-36t102-12q74 0 126 17t112 52q11 6 16.5 14t5.5 21v418q44-21 88.5-31.5T700-320q36 0 70.5 6t69.5 18v-481q15 5 29.5 11t28.5 14q11 5 16.5 15t5.5 21v482q0 23-19.5 35t-40.5 1q-37-20-77.5-31T700-240q-60 0-116 21t-104 59Zm140-240v-440l120-40v440l-120 40Zm-340-99Z"/></svg>  */ -}}
             {{- /*  <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#e3e3e3"><path d="M480-516q65 0 110.5-45.5T636-672v-120H324v120q0 65 45.5 110.5T480-516ZM192-96v-72h60v-120q0-59 28-109.5t78-82.5q-49-32-77.5-82.5T252-672v-120h-60v-72h576v72h-60v120q0 59-28.5 109.5T602-480q50 32 78 82.5T708-288v120h60v72H192Z"/></svg>  */ -}}
             <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M480-516q65 0 110.5-45.5T636-672v-120H324v120q0 65 45.5 110.5T480-516ZM192-96v-72h60v-120q0-59 28-109.5t78-82.5q-49-32-77.5-82.5T252-672v-120h-60v-72h576v72h-60v120q0 59-28.5 109.5T602-480q50 32 78 82.5T708-288v120h60v72H192Z"/></svg>
-            {{- /*  <p class="reading-time">{{.ReadingTime | T "minutesCount" }}</p>  */ -}}
-            {{- /*  <p>{{.ReadingTime | T "minutesCount" }}</p>  */ -}}
-            <span>{{.ReadingTime | T "minutesCount" }}</span>
+            {{- /*  <p class="reading-time">{{.ReadingTime | T "minutesCount" -}}</p>  */ -}}
+            {{- /*  <p>{{.ReadingTime | T "minutesCount" -}}</p>  */ -}}
+            <span>{{- .ReadingTime | T "minutesCount" -}}</span>
         </span>
         {{- end -}}
         <div class="article-info">
-            {{ $title := .Title }}
-            {{ if .Params.featured_title }}
-                {{ $title = .Params.featured_title }}
-            {{ end }}
+            {{- $title := .Title -}}
+            {{- if .Params.featured_title -}}
+                {{- $title = .Params.featured_title -}}
+            {{- end -}}
 
-            {{- /*  {{ $description := .Params.Description }}  */ -}}
-            {{ $description := .Params.Description }}
-            {{ $description = replaceRE "\\[\\*\\*(.*?)\\*\\*\\]\\([^)]*\\)" "**$1**" $description }}
-            {{- /*  {{ $description | markdownify }}  */ -}}
-            {{ if .Params.featured_description }}
-                {{ $description = .Params.featured_description }}
-            {{ end }}
-            {{- /*  <h3 class="hover-underline-animation legible-text-shadow text-align-left">{{ $title }}</h3>  */ -}}
-            <h3 class="light1-color title hover-underline-animation legible-text-shadow text-align-left">{{ $title }}</h3>
-            {{ if $description }}
-                {{- /*  <p class="description">{{ .Params.featured_description }}</p>  */ -}}
-                <p class="description" title="{{ $description }}">{{ $description | markdownify }}</p>
-                {{- /*  <p class="legible-text-shadow">{{ .Params.featured_description }}</p>  */ -}}
-            {{ else }}
-                <p class="description empty-description"> <span class="empty-description">{{ T "read" | upper }}</span></p>
-            {{ end }}
-            {{- /*  <time datetime="{{ .Date }}" class="centered-text consolas-font">
-                {{- if ne .Date .Lastmod }}  */ -}}
+            {{- /*  {{- $description := .Params.Description -}}  */ -}}
+            {{- $description := .Params.Description -}}
+            {{- $description = replaceRE "\\[\\*\\*(.*?)\\*\\*\\]\\([^)]*\\)" "**$1**" $description -}}
+            {{- /*  {{- $description | markdownify -}}  */ -}}
+            {{- if .Params.featured_description -}}
+                {{- $description = .Params.featured_description -}}
+            {{- end -}}
+            {{- /*  <h3 class="hover-underline-animation legible-text-shadow text-align-left">{{- $title -}}</h3>  */ -}}
+                <h3 class="light1-color title hover-underline-animation legible-text-shadow text-align-left">{{- $title -}}</h3>
+            {{- if $description -}}
+                {{- /*  <p class="description">{{- .Params.featured_description -}}</p>  */ -}}
+                <p class="description" title="{{- $description -}}">{{- $description | markdownify -}}</p>
+                {{- /*  <p class="legible-text-shadow">{{- .Params.featured_description -}}</p>  */ -}}
+            {{- else -}}
+                <p class="description empty-description"> <span class="empty-description">{{- T "read" | upper -}}</span></p>
+            {{- end -}}
+            {{- /*  <time datetime="{{- .Date -}}" class="centered-text consolas-font">
+                {{- if ne .Date .Lastmod -}}  */ -}}
 
                     {{/*  Shows edit icon (pencil) if it was edited */}}
-                    {{- /*  <time class="centered-text" datetime="{{ .Lastmod }}"><svg style="margin-left:5px; margin-right:2px; position:relative; display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -860 960 960" width="24px" fill="currentColor"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/>
-                        <title id="title">{{T "edited"}} ({{ .Lastmod | time.Format ":date_medium" }})</title>
+                    {{- /*  <time class="centered-text" datetime="{{- .Lastmod -}}"><svg style="margin-left:5px; margin-right:2px; position:relative; display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -860 960 960" width="24px" fill="currentColor"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/>
+                        <title id="title">{{T "edited"}} ({{- .Lastmod | time.Format ":date_medium" -}})</title>
                     </svg></time>
                 {{- else -}}  */ -}}
                 
                     {{/*  Shows calendar icon if there is not edit date  */}}
                     {{- /*  <svg style="margin-left:5px; margin-right:2px; position:relative; display:inline-block;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -860 960 960" width="22px" fill="currentColor"><path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"/></svg>
                     {{- end -}}
-                    {{ .Date | time.Format ":date_medium" }}
+                    {{- .Date | time.Format ":date_medium" -}}
             </time>  */ -}}
 
         </div>
@@ -93,23 +93,23 @@
 
     {{- /*  TAGS  */ -}}
     {{- if and (.Params.tags) (ne (index .Params.tags 0) "") -}}
-        {{ $tags := .Params.tags | first 3 }}
-        {{ if .Params.featured_tags }}
+        {{- $tags := .Params.tags | first 3 -}}
+        {{- if .Params.featured_tags -}}
             {{- range $i, $tag := .Params.featured_tags -}}
-                {{ if not (in $.Params.tags $tag ) }}
+                {{- if not (in $.Params.tags $tag ) -}}
                     {{- errorf "Tag '%s' in 'featured_tags' at page '%s' not found in page tags. You can only feature tags that are present in .Params.tags" . $.Title -}}
-                {{ end }}
-            {{ end }}
-            {{ $tags = .Params.featured_tags }}
-        {{ end }}
-        {{ if $tags }}
+                {{- end -}}
+            {{- end -}}
+            {{- $tags = .Params.featured_tags -}}
+        {{- end -}}
+        {{- if $tags -}}
             <div class="tag-container">
-            {{ $lastIndex := sub (len $tags) 1 }}
-            {{ range $index, $tag := $tags }}
-                {{ $transition_delay := mul $index 0.07 }}
-                <a style="--transition-delay: {{$transition_delay | safeCSS }}s" class="article-tag featured-tag consolas-font" href="{{absLangURL "tags/"}}{{$tag | urlize}}">{{- $tag -}}</a>
-            {{ end }}
+            {{- $lastIndex := sub (len $tags) 1 -}}
+            {{- range $index, $tag := $tags -}}
+                {{- $transition_delay := mul $index 0.07 -}}
+                <a style="--transition-delay: {{$transition_delay | safeCSS -}}s" class="article-tag featured-tag consolas-font" href="{{absLangURL "tags/"}}{{$tag | urlize}}">{{- $tag -}}</a>
+            {{- end -}}
             </div>
-        {{ end }}
-    {{ end }}
+        {{- end -}}
+    {{- end -}}
 </article>
