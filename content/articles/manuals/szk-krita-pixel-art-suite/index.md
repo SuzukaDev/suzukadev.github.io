@@ -555,8 +555,74 @@ The {{< shortcut "x1" >}} buttons export the image/layer/group with their origin
 {{< /box_info >}}
 
 
+### Selection buttons
+
+{{< img_caption "select-color-buttons.png" >}}
+
+Press one of the buttons to select all the **Paint Layers** that have the clicked color label.
+
+> These are useful for using them with ***Export Selected (layers)*** and when exporting a [spritesheet](#szk-spritepacker), for easily exporting a set of layers/images.
+
+{{< box_info >}}
+Use {{< shortcut "SHIFT + LClick" >}} for **adding** the Paint Layers to the current selection.
+{{< /box_info >}}
 
 
+### SZK SpritePacker
+
+Tool for exporting a set of layers/sprites into a single image (this is useful for game development and such).
+
+#### How to use it
+
+1. Select all the layers you want to be included in your spritesheet
+2. In the *Export Tab*, press the button {{< shortcut "Create Spritesheet" >}}
+3. A new window will appear:
+
+{{< img_caption "szk-spritepacker.png" >}}
+
+##### Options
+
+- **Directory**: The folder where the spritesheet is saved. Supports absolute and relative paths. 
+> By default, it will be saved in the same folder of the `.kra` file.
+- **File Name**: Name of the spritesheet image. By default, "spritesheet".
+- **Method**: There are 2 different algorithms for packing the sprites; `Variable Sizes` and `Fixed Size`:
+  - **Variable Sizes**: Each sprite/layer will occupy the minimum size possible.
+    {{< img_caption "variable-size-spritesheet.png" >}}
+  - **Fixed Size**: Each sprite/layer will be contained in cells of the same size, positioned in columns and rows.
+    {{< img_caption "fixed-size-spritesheet.png" >}}
+    {{< box_green >}}
+  This is ideal for exporting **animations**.
+    {{< /box_green >}}
+<br>
+    {{< box_info >}}
+  When `Fixed Size` is selected, a new option for selecting the pivot appears:
+  {{< img_caption "szk-spritepacker-pivot-point.png" >}}
+    
+  This is useful for not needing to later adjust each frames manually in game engines.
+
+  > I used it in the dog (Dexter 🖤) spritesheet to center its animation:
+  > {{< video v="dex-x5-v2-day-cycle.mp4" class="pixel-art no-box-shadow" c=false css="width:55vh;height:auto;" autoplay=true loop=true >}}
+    {{< /box_info >}}
+- **Margin**: Adds an empty space between the sprites. 
+    {{< box_info >}}
+This is useful for avoiding **pixel bleeding** in game engines and such.
+    {{< /box_info >}}
+- **Include invisible layers**: If unchecked, the layers that are not visibible won't be included in the spritesheet.
+- **Export .JSON**: Exports a `.json` file that contains the info of each sprite (the name, the rect occupied in the spritesheet, its position in the `.kra` file, etc). This allow to manipulate the spritesheet via code with the info contained in the `.json`.
+
+{{< box_green >}}
+I made an **open source** [**addon for *Godot***]( {{< ref "szk-spritepacker-importer" >}}) to easily import the spritesheets into Godot, for building scenes replicating the `.kra` document. You can know more about how I applied it in [this illustration]( {{< ref "gracias-dexter" >}}).
+{{< featured_articles "szk-spritepacker-importer, gracias-dexter" >}}
+
+{{< /box_green >}}
+
+- **Info panel**: Shows the total layers included, the size of the spritesheet, and a preview of the spritesheet.
+
+##### Buttons
+- **Reload**: Refresh the spritepacker. Useful if you changed the selected layers in Krita.
+- **Save**: Saves the spritesheet (and .json if selected).
+- **Save and Open folder**: Opens the spritesheet's directory after saving.
+- **Cancel**: Discard the spritesheet.
 
 
 ## K-Sprite
@@ -1026,6 +1092,46 @@ Displays information, shortcuts, tips, etc. when **hovering** a button/tool.
 This is useful for not having to remember every single shortcut, tip, etc.
 {{< /box_green >}}
 
+
+
+## Gamedev tools
+{{< img_caption "gamedev-tools.png" >}}
+
+This was made for solving [a problem I had while making an illustration]( {{< ref "gracias-dexter#gamedev-tools" >}}). It basically **allows to modify RGB channels very easily on the selected Paint Layers**, by doing mathematical operations and replacing each channel value.
+
+> This may be a niche but useful feature if you need to modify all assets/sprites in your document by encoding some information in the RGB channels, for later do some shader things in your game engine (mostly for **VFX** and such).
+
+{{< box_warning >}}
+**Warning**: It doesn't support {{< shortcut "CTRL+Z" >}} for undo changes, so keep it in mind before using it!
+{{< /box_warning >}}
+
+### How to use it
+Select the layers you want to edit and press the buttons depending on the desired operation you want to apply.
+
+#### Mathematical opperations
+
+Allow to `sum`, `substract`, `multiply` and `divide` the selected layers by the selected color/channel.
+The slide-percentage determines the strength of each color/channel when executing each operation.
+
+> Eg: Having the red channel selected, at 100%, will use it at full (255). Having the value set at 50%, will use a value of 255/2=127.
+
+{{< box_info >}}
+Press {{< shortcut "CTRL+Click" >}} on the color buttons to select the clicked channel as the Foreground Color.
+> When working with textures for shaders is common to use each channel color (at full, without the rest), so this is just a simple shortcut for each color.
+{{< /box_info >}}
+
+#### Channel Replace
+
+Select the value you want to write the channel with with the slider or the spinbox (from 0 to 255) and press the buttons {{< shortcut "R" >}}, {{< shortcut "G" >}}, {{< shortcut "B" >}} or {{< shortcut "A" >}} to replace the Red (R), Blue (B), Green (G) or Alpha (A) channel.
+
+After pressing it, the channels of the selected Paint Layers will be replaced.
+
+### Options
+- **Mask Selection**: If enabled, if you have an active selection, the changes only affect the content **inside the active selection** of the selected layers
+
+<!-- {{< details "The problem" >}}
+I always had all my sprites
+{{< /details >}} -->
 
 
 ## Options 

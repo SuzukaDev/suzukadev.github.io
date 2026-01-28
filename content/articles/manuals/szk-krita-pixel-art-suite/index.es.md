@@ -533,6 +533,79 @@ Los botones {{< shortcut "x1" >}} exportan la imagen/capa/grupo con el temaño o
 
 
 
+### Botones de Selección
+
+{{< img_caption "select-color-buttons.png" >}}
+
+<!-- Press one of the buttons to select all the **Paint Layers** that have the clicked color label. -->
+Presiona uno de los botones para seleccionar todas las Capas de dibujo que tengan dicho color.
+
+<!-- > These are useful for using them with ***Export Selected (layers)*** and when exporting a [spritesheet](#szk-spritepacker), for easily exporting a set of layers/images. -->
+> Viene bien para cuando tienes que exportar un conjunto de capas con el botón ***Export Selected (layers)***, y también para cuando tengas que exportar un [spritesheet](#szk-spritepacker).
+
+{{< box_info >}}
+<!-- Use {{< shortcut "SHIFT + LClick" >}} for **adding** the Paint Layers to the current selection. -->
+Usa {{< shortcut "Mayus + Click Izquierdo" >}} para **añadir** las capas a la selección actual.
+{{< /box_info >}}
+
+
+### SZK SpritePacker
+
+<!-- Tool for exporting a set of layers/sprites into a single image (this is useful for game development and such). -->
+Herramienta para exportar un conjunto de capas/sprites en una única imagen. Esto es útil para el desarrollo de videojuegos y demás.
+
+#### Cómo se usa
+
+1. Selecciona todas las capas que quieras incluir en el spritesheet. 
+2. En la *Pestaña de Exportación*, presiona el botón {{< shortcut "Create Spritesheet" >}} 
+3. Aparecerá una nueva ventana:
+
+{{< img_caption "szk-spritepacker.png" >}}
+
+##### Opciones
+
+- **Directory**: La carpeta donde se guardará la hoja de sprites. Admite rutas absolutas y relativas.
+> Por defecto, se guardará en la misma carpeta del archivo `.kra`.
+- **File Name**: Nombre de la imagen del spritesheet. Por defecto, "spritesheet".
+- **Method**: Existen 2 algoritmos diferentes para empaquetar los sprites; `Variable Sizes (tamaño variable)` y `Fixed Size (tamaño fijo)`:
+  - **Variable Sizes**: Cada sprite/capa ocupará el tamaño mínimo posible.
+    {{< img_caption "variable-size-spritesheet.png" >}}
+  - **Fixed Size**: Cada sprite/capa se contendrá en celdas del mismo tamaño, posicionadas en columnas y filas.
+    {{< img_caption "fixed-size-spritesheet.png" >}}
+    {{< box_green >}}
+  Esto es ideal para exportar **animaciones**.
+    {{< /box_green >}}
+<br>
+    {{< box_info >}}
+  Cuando se selecciona `Fixed Size (Tamaño Fijo)`, aparecerá una nueva opción para seleccionar el punto de pivote:
+  {{< img_caption "szk-spritepacker-pivot-point.png" >}}
+    
+Esto es útil para no tener que ajustar cada fotograma manualmente más adelante en los motores de videojuegos.
+
+  > Lo usé en la hoja de sprites del perrete (Dexter 🖤) para centrar su animación:  > {{< video v="dex-x5-v2-day-cycle.mp4" class="pixel-art no-box-shadow" c=false css="width:55vh;height:auto;" autoplay=true loop=true >}}
+    {{< /box_info >}}
+- **Margin**: Agrega un espacio vacío entre los sprites.
+    {{< box_info >}}
+Esto es útil para evitar el **sangrado de píxeles (pixel bleed)** en motores de juegos y similares.    
+    {{< /box_info >}}
+- **Include invisible layers**: Si no se marca, las capas que no son visibles no se incluirán en la hoja de sprites.
+- **Export .JSON**: Exporta un archivo `.json` que contiene la información de cada sprite (el nombre, el rectángulo que ocupa en el spritesheet, su posición en el archivo `.kra`, etc.). Esto permite manipular el spritesheet mediante código con la información contenida en el `.json`.
+
+{{< box_green >}}
+<!-- I made an **open source** [**addon for *Godot***]( {{< ref "szk-spritepacker-importer" >}}) to easily import the spritesheets into Godot, for building scenes replicating the `.kra` document. You can know more about how I applied it in [this illustration]( {{< ref "gracias-dexter" >}}). -->
+Hice un [**addon para *Godot* *open source***]( {{< ref "szk-spritepacker-importer" >}}) para importar fácilmente los spritesheets en Godot, para construir escenas replicando el documento `.kra`. Puedes saber más sobre cómo lo apliqué en [esta ilustración]( {{< ref "gracias-dexter" >}}).
+{{< featured_articles "szk-spritepacker-importer, gracias-dexter" >}}
+
+{{< /box_green >}}
+
+- **Panel de información**: Muestra el total de capas incluidas, el tamaño del spritesheet y una vista previa de la imagen.
+
+##### Botones
+- **Refrescar**: Actualiza el spritesheet. Útil si cambiaste las capas seleccionadas en Krita.
+- **Save**: Guarda el spritesheet (y el .json si está seleccionado).
+- **Save and Open folder**: Abre el directorio del spritesheet después de guardarlo.
+- **Cancel**: Descartar la hoja de sprites.
+
 
 
 
@@ -977,6 +1050,44 @@ Muestra información, atajos de teclado, consejos, etc. al **pasar el cursor** s
 {{< box_green >}}
 Esto es útil para no tener que recordar cada atajo, consejo, etc.
 {{< /box_green >}}
+
+
+
+
+## Gamedev tools
+{{< img_caption "gamedev-tools.png" >}}
+
+Esto fue hecho para resolver [un problema que tenía mientras hacía una ilustración]( {{< ref "gracias-dexter#gamedev-tools" >}}). Básicamente, **permite modificar los canales RGB muy fácilmente en las capas seleccionadas**, hacer operaciones matemáticas sobre ellas, y reemplazar el valor de cada canal.
+
+> Esto puede ser una función niche/específica pero útil si necesitas modificar todos los assets/sprites en tu documento codificando alguna información en los canales RGB, para luego hacer algún efecto visual con shaders en tu motor de videojuegos (es principalmente para VFX y similares). **** 
+
+{{< box_warning >}}
+**Advertencia**: No admite {{< shortcut "CTRL+Z" >}} para deshacer cambios, ¡así que tenlo en cuenta antes de usarlo!
+{{< /box_warning >}}
+
+### Cómo se usa
+Selecciona las capas que deseas editar y presiona los botones según la operación que quieras aplicar.
+
+#### Operaciones matemáticas
+
+Permite `sumar`, `restar`, `multiplicar` y `dividir` las capas seleccionadas por el color/canal seleccionado. El porcentaje del control deslizante determina la intensidad de cada color/canal al ejecutar cada operación.
+
+> Por ejemplo: Tener seleccionado el canal rojo, al 100%, lo usará al máximo (255). Tener el valor establecido al 50%, usará un valor de 255/2=127.
+
+{{< box_info >}}
+Presiona {{< shortcut "CTRL+Click Izquierdo" >}} en los botones de color para seleccionar el canal clicado como el Color de Primer Plano.
+> Al trabajar con texturas para shaders, es común usar cada canal de color (al máximo, sin los demás), así que esto es solo un atajo sencillo para cada color, para ahorrar tiempo.
+{{< /box_info >}}
+
+#### Reemplazar canal
+
+Seleccione el valor con el que desea sobre-escribir el canal usando el control deslizante o el cuadro de número (de 0 a 255) y presione los botones {{< shortcut "R" >}}, {{< shortcut "G" >}}, {{< shortcut "B" >}} o {{< shortcut "A" >}} para reemplazer el canal Red/Rojo (R), Blue/Azul (B), Green/Verde (G) o Alpha/Alfa (A).
+
+Después de presionarlo, se reemplazarán los canales de las Capas de Pintura seleccionadas.
+
+### Opciones
+- **Mask Selection (Enmascarar selección)**: Si está habilitado, si tienes una selección activa, los cambios solo afectan el contenido **dentro de la selección activa** de las capas seleccionadas
+
 
 
 
