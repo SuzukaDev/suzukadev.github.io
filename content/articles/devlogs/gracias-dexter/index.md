@@ -74,6 +74,9 @@ I was being very judgamental at the start, but as soon as I drew some pixels and
 
 {{< img_caption "seeing-dexter.png" >}}
 
+{{< img_caption img="dexter-evolution-cropped.png" caption="Dexter's process" css_image="width:95vh;height:auto;" class="pixel-art" >}}
+
+
 I went from "why am I drawing...?" to "I can see him. This is important, I need to finish this".
 
 
