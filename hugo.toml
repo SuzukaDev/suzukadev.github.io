@@ -6,6 +6,8 @@ copyright = "Suzuka Ka"
 title = 'SZK | Suzuka Ka'
 theme = 'gallery'
 
+enableRobotsTXT = true
+
 # Multilingual
 # INFO https://gohugo.io/content-management/multilingual/
 defaultContentLanguage = 'en'
