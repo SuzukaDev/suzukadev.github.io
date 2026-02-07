@@ -10,7 +10,7 @@ private = false # If true, the article wont be listed and will only be visible b
 # main_classes = 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 
 # # -------- DISPLAY OPTIONS --------
-# accent_color = "#ff168a" # customize the color for links, etc in the page
+# accent_color = "rgb(26, 152, 255)" # customize the color for links, etc in the page
 # feature_image_background_color = "#ff168a" # If the featured_image has transparency, change this color for customizing the background color (default: transparent)
 # show_breadcrumbs = false
 # show_description = false
