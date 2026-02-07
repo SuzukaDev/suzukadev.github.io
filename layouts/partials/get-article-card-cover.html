@@ -23,7 +23,9 @@ it CAN has its own resources, and will look automatically for an image with the 
 	{{- /*  {{ $default_lang_path := .Site.Sites.Default.Home.RelPermalink }}
 	{{ $cover_image_path = (path.Join $default_lang_path .Section .Params.featured_image) }}   */ -}}
 
-	{{- $article_cover_resource := .Resources.Get .Params.featured_image -}}
+	{{- /*  {{- $article_cover_resource := .Resources.Get .Params.featured_image -}}  */ -}}
+	{{- /*  Using GetMatch to do not having to care about moving the featured image  */ -}}
+	{{- $article_cover_resource := .Resources.GetMatch (printf "**%s" .Params.featured_image) -}}
 	{{- $cover_image_path = $article_cover_resource.RelPermalink -}}
 
 	{{/*  {{ $cover_image_path = (absLangURL .Params.featured_image) }}  */}}
