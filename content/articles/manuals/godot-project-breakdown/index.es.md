@@ -60,123 +60,122 @@ emoji = "🤖"
 <!-- ### Overview -->
 <!-- Extensión para [VSCode](https://code.visualstudio.com/) que analiza todos los archivos **.gd** de tu proyecto de Godot (**works only with .gd**), los analiza y crea un un único archivo de resumen. analyze them and gives a overview of all of them in a single file. -->
 
-Extensión de [VSCode](https://code.visualstudio.com/) que obtiene todos los archivos **.gd** de tu proyecto de Godot (**solo funciona con .gd**), los analiza y proporciona una vista general de todos ellos en un único archivo.
+Extensión de [**VSCode**](https://code.visualstudio.com/) que obtiene todos los archivos **.gd** de tu proyecto de [**Godot**](https://godotengine.org/es/), los analiza y proporciona una vista general de todos ellos en un único archivo.
 
-For each `.gd` file, it shows its private or public* variables and methods, defined signals, node references and enums.
+Para cada archivo `.gd`, muestra sus variables y métodos privados o públicos*, señales definidas, referencias a nodos y enums.
+
+
+> **\*** Los campos privados y públicos **no existen** (al menos por ahora) en GDScript, pero si utilizas el prefijo "\_" para diferenciar campos privados (con "\_") de públicos (sin "\_"), lo tendrá en cuenta.*
 
 
 {{< box_info >}}
-Note: \* Private and public fields do not exist (at least at the moment) in gd script, but if you use the prefix "\_" to differentiate private fields (using "\_") from public (without "\_"), it will take it into account.*
+Hice esta extensión hace muchos años, cuando Godot todavía **no contaba con soporte para `C#`**, por lo cual, al menos de momento, **solo funciona con archivos gdscript** (`.gd`)
 {{< /box_info >}}
 
 
-### Reasons & Motivation
 
-I made this extension for myself, to easily track and update every change in my project, so I could easily manage/update my project documentation (in my case, an UML diagram for my game).
-Instead of keeping track of every change manually, I just generate a new file, compare it to the previous version (using version control), and effectively update my documentation.
+### Razones y Motivación
 
-I released the extension just in case is helpful for somebody else.
+Hice esta extensión para mí mismo, para poder rastrear y actualizar fácilmente cada cambio en mi proyecto, de modo que pudiera gestionar/actualizar fácilmente la documentación de mi proyecto (en mi caso, un diagrama UML para mi juego).  
+En lugar de llevar el seguimiento de cada cambio manualmente, simplemente genero un nuevo archivo, lo comparo con la versión anterior (usando control de versiones) y actualizo efectivamente mi documentación.
 
-## Usage 🔧
+Publiqué la extensión por si resulta útil para alguien más.
+
+## Uso 🔧
 
 {{< box_warning >}}
-**Prerequisites**: this extension requires [Godot tools](https://marketplace.visualstudio.com/items?itemName=geequlim.godot-tools)
+**Requisitos previos**: esta extensión requiere [Godot tools](https://marketplace.visualstudio.com/items?itemName=geequlim.godot-tools)
 {{< /box_warning >}}
 
-1. [Download latest version](https://github.com/SuzukaDev/vscode-godot-project-breakdown/releases) and install it
-
+1. [Descarga la última versión](https://github.com/SuzukaDev/vscode-godot-project-breakdown/releases) e instálala
 
 {{< box_info >}}
-If you are using a Godot Tools version below 1.X.X, [download version 1.0.1](https://github.com/SuzukaDev/vscode-godot-project-breakdown/releases/tag/v1.0.1)<br>
+Si estás usando una versión de Godot Tools inferior a 1.X.X, [descarga la versión 1.0.1](https://github.com/SuzukaDev/vscode-godot-project-breakdown/releases/tag/v1.0.1)<br>
 
-If you are using Godot 3.2 or above and a Godot tools version equal or above 1.X.X [download latest version](https://github.com/SuzukaDev/vscode-godot-project-breakdown/releases)
+Si estás usando Godot 3.2 o superior y una versión de Godot Tools igual o superior a 1.X.X [descarga la última versión](https://github.com/SuzukaDev/vscode-godot-project-breakdown/releases)
 {{< /box_info >}}
 
-2. To install the **.vsix** files, go to `extensions -> ... -> "Install from vsix"`
+2. Para instalar los archivos **.vsix**, ve a `extensions -> ... -> "Install from vsix"`
 
 	{{< img_caption "how_to_install_vsix.gif" >}}<br>
 
-3. Open command palette (<kbd>F1</kbd>)
-4. Type `Generate breakdown file`
-5. Execute command
-
+3. Abre la paleta de comandos (<kbd>F1</kbd>)  
+4. Escribe `Generate breakdown file`  
+5. Ejecuta el comando
 
 {{< img_caption img="demo.gif" >}}
 
-6. Done! 🥳
+6. ¡Listo! 🥳
 
-## Extension options ⚙
-The result file is **highly customizable** to suit your needs.
-You can specify wich data to show, in wich order, and how.
+## Opciones de la extensión ⚙
+El archivo de resultado es **altamente personalizable** para adaptarse a tus necesidades.  
+Puedes especificar qué datos mostrar, en qué orden y cómo.
 
-Most options are self explanatory with its setting's description. But **some** of them:
+La mayoría de las opciones se explican por sí mismas en la descripción de sus ajustes. Pero **algunas** de ellas:
 
-- `godotProjectBreakdown.file.order`
-This is one of the most important settings. Is a `string` that specifies the data to show and the order. Its default value is `f# p ne svm`
-
+- `godotProjectBreakdown.file.order`  
+Esta es una de las configuraciones más importantes. Es un `string` que especifica los datos a mostrar y el orden. Su valor por defecto es `f# p ne svm`
 
 {{< box_info >}}
 
-Each character stands for a data in file:
-`n` - Node references<br>
-`s` - Signals<br>
-`v` - Variables<br>
-`m` - Methods<br>
-`p` - Path of the file<br>
-`f` - File Name<br>
-`e` - Enums<br>
-`#` - Class Comments. On any gdscript, you can put the text you want to show in the file if you include it between `###\` and `/###`. For example:
-`###\ (Yor comment here) /###`
+Cada carácter representa un dato en el archivo:  
+`n` - Referencias a nodos<br>  
+`s` - Señales<br>  
+`v` - Variables<br>  
+`m` - Métodos<br>  
+`p` - Ruta del archivo<br>  
+`f` - Nombre del archivo<br>  
+`e` - Enums<br>  
+`#` - Comentarios de clase. En cualquier GDScript, puedes poner el texto que quieras mostrar en el archivo si lo incluyes entre `###\` y `/###`. Por ejemplo:  
+`###\ (Tu comentario aquí) /###`
 
-`(Empty space)` - Line separation (equals to \\n)
+`(Espacio vacío)` - Separación de línea (equivale a \\n)
 
 {{< /box_info >}}
 
-- `godotProjectBreakdown.file.sortScriptsBy`
-Allows you to sort the scripts by their path, name or extended node/script.
-- `godotProjectBreakdown.separator.{...}`
-A `string` that allows you to add a custom header for each property.
-- `godotProjectBreakdown.prefix.{...}`
-Allows you to add a custom prefix for each property.
-- `godotProjectBreakdown.file.ignoreFolders`
-A [Glob Pattern](https://code.visualstudio.com/api/references/vscode-api#GlobPattern) for ignoring folders/files that you don't want to show in the breakdown file.
+- `godotProjectBreakdown.file.sortScriptsBy`  
+Permite ordenar los scripts por su ruta, nombre o nodo/script extendido.
 
-Its default value is `"**/addons/**"`, wich means that will ignore files on anny "addons" folder.
+- `godotProjectBreakdown.separator.{...}`  
+Un `string` que te permite añadir un encabezado personalizado para cada propiedad.
 
+- `godotProjectBreakdown.prefix.{...}`  
+Permite añadir un prefijo personalizado para cada propiedad.
+
+- `godotProjectBreakdown.file.ignoreFolders`  
+Un [Glob Pattern](https://code.visualstudio.com/api/references/vscode-api#GlobPattern) para ignorar carpetas/archivos que no quieras mostrar en el archivo de resumen.
+
+Su valor por defecto es `"**/addons/**"`, lo que significa que ignorará archivos dentro de cualquier carpeta llamada "addons".
 
 {{< box_info >}}
-If [Glob Patterns](https://code.visualstudio.com/api/references/vscode-api#GlobPattern) are new to you, [this tool](https://globster.xyz) is very useful to ensure your glob pattern is 
+Si los [Glob Patterns](https://code.visualstudio.com/api/references/vscode-api#GlobPattern) son nuevos para ti, [esta herramienta](https://globster.xyz) es muy útil para asegurarte de que tu patrón glob es correcto.
 {{< /box_info >}}
 
-- `godotProjectBreakdown.file.showEnumValues`
-A `bool` for showing (true) or not (false) the enum values for each enum.
+- `godotProjectBreakdown.file.showEnumValues`  
+Un `bool` para mostrar (`true`) o no (`false`) los valores de cada enum.
 
+## Posibles mejoras futuras
+- Analizar todos los archivos `.tscn` del proyecto para obtener más información, como por ejemplo señales conectadas mediante el editor.
 
-## Possible future improvements
-- Analyze all the .tscn files in the project for getting more information, like... signals connected via editor.
-
-- Maybe I'll upload the extension into the vscode marketplace in the future.
+- Quizá suba la extensión al marketplace de VSCode en el futuro.
 
 ## FAQ
-{{< header "Why the name of the extension is that bad?" 4 "left" >}}
+{{< header "¿Por qué el nombre de la extensión es tan malo?" 4 "left" >}}
 
-Because I couldn't think of a better name :D
+Porque no pude pensar en un nombre mejor :D
 
-## Logo license ©
-The extension logo uses and modifies the original Godot logo by Andrea Calabró.
+## Licencia del logo ©
+El logo de la extensión utiliza y modifica el logo original de Godot de Andrea Calabró.
 
-Its License:
-Godot Logo (C) Andrea Calabró
-Distributed under the terms of the Creative Commons Attribution License
-version 3.0 (CC-BY 3.0) <https://creativecommons.org/licenses/by/3.0/legalcode>.
+Su licencia:  
+Godot Logo (C) Andrea Calabró  
+Distribuido bajo los términos de la licencia Creative Commons Attribution  
+versión 3.0 (CC-BY 3.0) <https://creativecommons.org/licenses/by/3.0/legalcode>.
 
-## Contact 
+## Contacto
 {{< get_social "email" >}}
 
 {{< get_social "twitter" >}}
-
-
-
 
 
 

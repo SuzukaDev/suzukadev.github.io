@@ -59,16 +59,19 @@ Page not translated (at the moment). For reading the article, [visit the spanish
 
 
 <!-- ### Overview -->
-This is an [VSCode](https://code.visualstudio.com/) extension that gets all **.gd** files in your Godot project (**works only with .gd**), analyze them and gives a overview of all of them in a single file.
+This is an [VSCode](https://code.visualstudio.com/) extension that gets all **.gd** files in your [**Godot**](https://godotengine.org/es/) project , analyze them and gives a overview of all of them in a single file.
 
 For each `.gd` file, it shows its private or public* variables and methods, defined signals, node references and enums.
 
 <!-- >\* *Private and public fields do not exist (at least at the moment) in gd script, but if you use the prefix "\_" to differentiate private fields (using "\_") from public (without "\_"), it will take it into account.* -->
 
-{{< box_info >}}
-Note: \* Private and public fields do not exist (at least at the moment) in gd script, but if you use the prefix "\_" to differentiate private fields (using "\_") from public (without "\_"), it will take it into account.*
-{{< /box_info >}}
+> **\*** Private and public fields do not exist (at least at the moment) in gd script, but if you use the prefix "\_" to differentiate private fields (using "\_") from public (without "\_"), it will take it into account.*
 
+
+{{< box_info >}}
+I made this extension long time ago, **when Godot didn't even support `C#`**. So, at least for the moment, **it only works with gdscript (`.gd`) files.**
+
+{{< /box_info >}}
 
 ### Reasons & Motivation
 
