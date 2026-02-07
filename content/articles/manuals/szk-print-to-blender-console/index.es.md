@@ -5,8 +5,9 @@ description = "*Addon* de Blender para mostrar `print()` en la consola de Blende
 lastmod = '2025-05-21T15:49:53+02:00'
 # draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
-# tags = [""]
-# main_classes = 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
+tags = ["Blender addon", "Programación", "Python"]
+keywords = ["SZK", "Suzuka", "Suzuka Ka", "SuzukaKDev", "SZK Print to Blender Console", "Blender", "Addon"] # custom keywords for the page
+main_classes = 'consolas-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 # # -------- DISPLAY OPTIONS --------
 accent_color = "#fdcc41" # customize the color for links, etc in the page
 # show_breadcrumbs = false
