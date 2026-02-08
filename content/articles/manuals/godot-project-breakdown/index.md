@@ -59,7 +59,7 @@ Page not translated (at the moment). For reading the article, [visit the spanish
 
 
 <!-- ### Overview -->
-This is an [**VSCode**](https://code.visualstudio.com/) **extension** that gets all **.gd** files in your [**Godot**](https://godotengine.org/es/) project , analyze them and gives a overview of all of them in a single file.
+This is an [**VSCode**](https://code.visualstudio.com/) **extension** that gets all **.gd** files in your [**Godot 3.X**](https://godotengine.org/es/) project , analyze them and gives a overview of all of them in a single file.
 
 For each `.gd` file, it shows its private or public* variables and methods, defined signals, node references and enums.
 
@@ -69,7 +69,7 @@ For each `.gd` file, it shows its private or public* variables and methods, defi
 
 
 {{< box_info >}}
-I made this extension long time ago, **when Godot didn't even support `C#`**. So, at least for the moment, **it only works with gdscript (`.gd`) files.**
+I made this extension long time ago, **when Godot didn't even support `C#`**. So, at least for the moment, **it only works with gdscript (`.gd`) files and with Godot 3.X.**
 
 {{< /box_info >}}
 
@@ -168,11 +168,18 @@ A `bool` for showing (true) or not (false) the enum values for each enum.
 
 - Maybe I'll upload the extension into the vscode marketplace in the future.
 
+
+
 ## FAQ
 <!-- ### Why the name of the extension is that bad? -->
-{{< header "Why the name of the extension is that bad?" 4 "left" >}}
+<!-- {{< header "Why the name of the extension is that bad?" 4 "left" >}}
 
-Because I couldn't think of a better name :D
+Because I couldn't think of a better name :D -->
+
+### Which is the current state of the extension?
+**The extension was made originally for <u>Godot 3.X</u>**.
+
+At the moment I'm not continuing with the future development of this extension. It was my first (and only) VSCode extension and at the time I'm writing this (5 years after I made the extension), tools changed (TypeScript changed, VSCode Extensions' API changed, Godot changed, etc.) and I don't have the time, energy and motivation for continuing with this.
 
 ## Logo license ©
 The extension logo uses and modifies the original Godot logo by Andrea Calabró.

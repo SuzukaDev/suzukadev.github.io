@@ -160,9 +160,16 @@ Un `bool` para mostrar (`true`) o no (`false`) los valores de cada enum.
 - Quizá suba la extensión al marketplace de VSCode en el futuro.
 
 ## FAQ
-{{< header "¿Por qué el nombre de la extensión es tan malo?" 4 "left" >}}
+<!-- {{< header "¿Por qué el nombre de la extensión es tan malo?" 4 "left" >}} -->
+<!-- Porque no pude pensar en un nombre mejor :D -->
 
-Porque no pude pensar en un nombre mejor :D
+### ¿Cúal es el estado actual de la extensión?
+
+**Esta extensión fue hecha originalmente para <u>Godot 3.X</u>**.
+
+**Por el momento no voy a continuar con el mantenimiento de esta extensión.** Fue mi primera (y única) extensión de VSCode, y en el momento en que escribo esto (5 años después de haberla hecho), las herramientas han cambiado (TypeScript ha cambiado, la API de extensiones de VSCode ha cambiado, Godot ha cambiado, etc.) y no tengo el tiempo, la energía ni la motivación para seguir con ella.
+
+<!-- At the moment I'm not continuing with the future development of this extension. At the time I'm writing this (5 years after I made the extension), tools changed (TypeScript changed, VSCode Extensions' API changed, Godot changed, etc.) and I don't have the time, energy and motivation for continuing with this. -->
 
 ## Licencia del logo ©
 El logo de la extensión utiliza y modifica el logo original de Godot de Andrea Calabró.
