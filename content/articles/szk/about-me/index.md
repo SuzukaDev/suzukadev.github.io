@@ -83,12 +83,29 @@ There is also something cool about creating your own tools, to have the power to
 
 <!-- Some personal highlights of mine are that animators that worked in shows like Rick & Morty, The Cuphead Show, and Bob's Burger, and games like Hi-fi Rush, among others, got some of my tools. -->
 
-A personal highlight for me is that some of my tools have been picked up by animators who’ve worked on shows like *Rick & Morty*, *The Cuphead Show*, *Bob’s Burgers*, and games like *Hi-Fi Rush*. [You can check **some of them here**]({{< relref "articles/manuals" >}}).
+<!-- A personal highlight for me is that some of my **tools** have been picked up by artists and game developers who’ve worked on from shows like *Rick & Morty*, *The Cuphead Show*, *Bob’s Burgers*, games like *Hi-Fi Rush", etc. to studios like Ubisoft, Dreamworks, among others.  -->
 
+A **personal highlight** for me is that some of my **tools** have been picked up by artists and game developers who’ve worked on shows like *Rick & Morty*, *The Cuphead Show*, and *Bob’s Burgers*, as well as games like Hi-Fi Rush, and studios such as Ubisoft or DreamWorks, among others.
+
+<!-- <figure> -->
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/1000293272?h=6e4a561de1" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen style="width:80%; aspect-ratio: 16 / 9;" ></iframe>
+
+{{< text_centered >}}
+[**Popo**](https://vimeo.com/1000293272) by [Electric Studios](https://electrictheatre.tv/work/popo-electric-studios)
+{{< /text_centered >}}
+
+<!-- <figcaption><i>Popo</i> by <i><a href="https://electrictheatre.tv/work/popo-electric-studios"> Electric Studios</a></i></figcaption>
+</figure> -->
+
+
+
+{{< img_caption "clients-2026-02-09.png" "Users (Updated 2026-02-09)" >}}
 
 <!-- --- -->
+You can [check some of **these tools here**]({{< relref "articles/manuals" >}}).
 
-{{< img_caption "k-sprite.png" "K-Sprite. <br>Some people — like me — say it's probably the best pixel art editor ever. And those who haven't said that, they probably think it silently. 👍">}}
+<!-- {{< img_caption "k-sprite.png" "K-Sprite. <br>Some people — like me — say it's probably the best pixel art editor ever. And those who haven't said that, they probably think it silently. 👍">}} -->
+{{< img_caption "k-sprite.png" "K-Sprite" >}}
 
 <!-- --- -->
 
@@ -120,13 +137,13 @@ I add this image because there was a thunderstorm while I was working on this ga
 
 It’s a small, maybe even silly example, but it captures the symbiotic relationship between work and life. The world bleeds into what we make, and what we make teaches us to see the world more closely—and to keep our curiosity alive.
 
-That back-and-forth is what keeps making things feel meaningful.
+That back-and-forth is what keeps making things feel meaningful for me.
 
 
 
 <!-- I just have patience -->
 
-When learning, I am motivated by the new possibilities that learning a new skill/knowledge offers. Every time we learn new things, is like discovering new routes and tools for helping us to approach any problem in different ways.
+When learning, I am motivated by the **new possibilities** that learning a new skill/knowledge offers. Every time we learn new things, is like discovering new routes and tools for helping us to approach any problem in different ways.
 
 I've been told that I learn fast. To be honest, I don't know if that's true, but I know I'm a very curious and stubborn person.
 

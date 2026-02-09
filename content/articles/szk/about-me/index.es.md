@@ -98,13 +98,25 @@ Hay también algo mágico en el hecho de crear tus propias herramientas. El pode
 <!-- Some personal highlights of mine are that animators that worked in shows like Rick & Morty, The Cuphead Show, and Bob's Burger, and games like Hi-fi Rush, among others, got some of my tools. -->
 
 <!-- A personal highlight for me is that some of my tools have been picked up by animators who’ve worked on shows like Rick & Morty, The Cuphead Show, Bob’s Burgers, and games like Hi-Fi Rush. -->
-He tenido la suerte de que algunas de mis herramientas han sido usadas por animadores que han trabajado en series como *Rick & Morty*, *The Cuphead Show*, *Bob's Burger*, o juegos como *Hi-Fi Rush*. [Puedes ver **algunas de ellas aquí**]({{< relref "articles/manuals" >}}).
 
+<!-- He tenido la suerte de que algunas de mis herramientas han sido usadas por animadores que han trabajado en series como *Rick & Morty*, *The Cuphead Show*, *Bob's Burger*, o juegos como *Hi-Fi Rush*. . [Puedes ver **algunas de ellas aquí**]({{< relref "articles/manuals" >}}). -->
+<!-- Un logro personal para mí es que algunas de mis herramientas han sido adoptadas por artistas y desarrolladores de videojuegos que han trabajado en series como Rick & Morty, The Cuphead Show y Bob’s Burgers, así como en juegos como Hi-Fi Rush, y en estudios como Ubisoft o DreamWorks, entre otros. -->
+He tenido la suerte de que algunas de mis herramientas han sido adoptadas por artistas y desarrolladores de videojuegos que han trabajado en series como Rick & Morty, The Cuphead Show y Bob’s Burgers, así como en juegos como Hi-Fi Rush, y en estudios como Ubisoft o DreamWorks, entre otros.
 
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/1000293272?h=6e4a561de1" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen style="width:80%; aspect-ratio: 16 / 9;" ></iframe>
+
+{{< text_centered >}}
+[**Popo**](https://vimeo.com/1000293272), por [Electric Studios](https://electrictheatre.tv/work/popo-electric-studios)
+{{< /text_centered >}}
+
+{{< img_caption "clients-2026-02-09.png" "Usuarios (Actualizado el 2026-02-09)" >}}
+
+Puedes ver [algunas de **mis herramientas** aquí]({{< relref "articles/manuals" >}}).
 <!-- --- -->
 
 <!-- {{< img_caption "k-sprite.png" "K-Sprite. <br>Some people — like me — say it's probably the best pixel art editor ever. And those who haven't said that, they probably think it silently. 👍">}} -->
-{{< img_caption "k-sprite.png" "K-Sprite. <br>Mucha gente — como yo — asegura que es el mejor editor de Pixel Art del mundo. Y los que no lo aseguran, muy probablemente lo piensen silenciosamente. 👍">}}
+<!-- {{< img_caption "k-sprite.png" "K-Sprite. <br>Mucha gente — como yo — asegura que es el mejor editor de Pixel Art del mundo. Y los que no lo aseguran, muy probablemente lo piensen silenciosamente. 👍">}} -->
+{{< img_caption "k-sprite.png" "K-Sprite">}}
 
 <!-- --- -->
 
