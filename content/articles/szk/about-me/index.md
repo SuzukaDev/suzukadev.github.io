@@ -177,11 +177,12 @@ If that happens, I think only a few aspects of ouselves will "survive":
 
 - How we have treated others, any positive impact we produced in someone else.
 
-- Our work.
+<!-- - Our work. -->
+- <s>Our work</s> What we crafted.
 
 When working with others, I'm very flexible and I rarely have a bossy/demanding attitude. Even though, I have no problem 'standing up' if I know at 100% that something will lead to a fail or should be changed. But overall, I think a good and kind work ambience is always important.
 
-I also respect deeply others' work. Even though, I can also be very critic if the other person is willing or allows me to be, since at the end a good critizise offers the possibility to grow.
+I also respect **deeply** others' work. Even though, I can also be very critic if the other person is willing or allows me to be, since at the end a good critizise offers the possibility to grow.
 
 
 I personally do not feel the urge to change other's views (and to be honest this feels like a super power nowadays). I'm always curious to learn about other views that are different than mine, even if is just to reinforce mines. But overall, my peace is rarely altered by others. 
@@ -197,7 +198,12 @@ I think empathy and understanding is key.
 
 <!-- I believe our work reflects who we are. The care and attention to detail we put into our craft is noticeable — it speaks volumes about us. In the end, it's a form of self-respect with ourselves and our time: if something is worth doing, it's worth doing right. -->
 
-About **our work**, I believe it **reflects who we are**. The care and attention to detail we put into our craft is noticeable — it speaks volumes about us. In the end, it's a form of self-respect. For ourselves and for our time. If something is worth doing, it's worth doing right.
+About **our <s>work</s> craft**, I believe it **reflects who we are**. The care and attention to detail we put into our craft is noticeable — it speaks volumes about us. In the end, it's a form of self-respect. For ourselves and for our time. If something is worth doing, it's worth doing right.
+
+{{< box_info >}}
+<!-- I distinguish work and craft since work for me is just an activity to achieve and outcome, while our craft requires more effort, not only work. Requires thinking, caring, intention and skills. Is a way of telling who we are by building something that we believe it's meaningful. -->
+I distinguish work from craft because work is simply an activity to achieve an outcome. Craft demands far more. It requires thinking, caring, intention, and skill. It's how we reveal who we are by creating something meaningful that we truly believe in.
+{{< /box_info >}}
 
 One of the things I personally value the most, is personality. Not trying to be a copycat, a clone of a clone. I think is hard to create something unique, since well, feels like everything is already invented. But I think is easy to make something with personality.
 

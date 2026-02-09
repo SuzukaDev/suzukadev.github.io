@@ -211,7 +211,7 @@ Cuando nos llegue nuestra fecha de caducidad, creo que muy pocos aspectos de nos
 
 - Cómo hemos tratado/hecho sentir a los demás, cualquier impacto positivo que hayamos tenido en otra persona.
 
-- Nuestro trabajo.
+- <s>Nuestro trabajo</s> Lo que hemos creado.
 
 <!-- When working with others, I'm very flexible and I rarely have a bossy/demanding attitude. Even though, I have no problem 'standing up' if I know at 100% that something will lead to a fail or should be changed. But overall, I think a good and kind work ambience is always important. -->
 
@@ -219,7 +219,7 @@ Cuando trabajo en grupo, soy muy **flexible**. Rara vez soy muy demandante. No s
 
 <!-- I also respect deeply others' work. Even though, I can also be very critic if the other person is willing or allows me to be, since at the end a good critizise offers the possibility to grow. -->
 
-Respeto bastante el trabajo de los demás, porque sé lo que cuestan las cosas. Aunque también puedo ser muy crítico y aportar juicios constructivos, si es que la otra persona está dispuesta a eso. Al final, las críticas nos hacen crecer. Pero con el tiempo he aprendido que no todo el mundo está dispuest@ a ellas.
+Respeto **bastante** el trabajo de los demás, porque sé lo que cuestan las cosas. Aunque también puedo ser muy crítico y aportar juicios constructivos, si es que la otra persona está dispuesta a eso. Al final, las críticas nos hacen crecer. Pero con el tiempo he aprendido que no todo el mundo está dispuest@ a ellas.
 
 
 <!-- I personally do not feel the urge to change other's views (and to be honest this feels like a super power nowadays). I'm always curious to learn about other views that are different than mine, even if is just to reinforce mines. But overall, my peace is rarely altered by others. 
@@ -244,6 +244,14 @@ Creo que la empatía y la comprensión son vitales.
 
 <!-- About **our work**, I believe it **reflects who we are**. The care and attention to detail we put into our craft is noticeable — it speaks volumes about us. In the end, it's a form of self-respect. For ourselves and for our time. If something is worth doing, it's worth doing right. -->
 En lo que respecta a **nuestro trabajo**, creo que éste **refleja quiénes somos**. El cuidado y la atención al detalle que ponemos en las cosas que hacemos, se puede percibir, y creo que dice mucho de nosotros. Al final, es una forma de respeto hacia nosotros mismos y hacia nuestro tiempo. Si algo vale la pena hacerlo, vale la pena hacerlo bien.
+
+{{< box_info >}}
+En inglés existe el término ***craft***, que expresa mejor a lo que me refiero, y que se traduce al español (no con mucha precisión, en mi opinión) como "oficio/trabajo/artesanía".
+
+Con trabajo me refiero especialmente a aquellas cosas que hemos creado. El trabajo es solo un medio para lograr algo, mientras que crear algo, requiere de muchísimas más cosas. Requiere de atención, esfuerzo, cariño, intención, habilidad, etc. Lo siento como una forma de mostrar quienes somos a través de lo que creamos.
+
+Creo que al final somos el tiempo y el cariño que le dedicamos a alguien o a algo.
+{{< /box_info >}}
 
 <!-- One of the things I personally value the most, is personality. Not trying to be a copycat, a clone of a clone. I think is hard to create something unique, since well, feels like everything is already invented. But I think is easy to make something with personality. -->
 Una de las cosas que más valoro, es la **personalidad**. No intentar ser una copia, un clon de otro clon. Creo que es difícil crear algo único, pues parece que casi todo ya está inventado. Pero creo que es fácil hacer algo con personalidad, simplemente siendo honestos con nosotros mismos.
