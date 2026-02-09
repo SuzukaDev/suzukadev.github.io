@@ -1957,7 +1957,7 @@ hgroup.articles-content > ol{
 // }
 
 // hgroup.articles-content p a:not([class]){
-hgroup.articles-content p a:not([class]), hgroup.articles-content ul a, hgroup.articles-content ol a{
+hgroup.articles-content p a:not([class]), hgroup.articles-content ul a, hgroup.articles-content ol a, .text-align-center a{
 	color: var(--hover-color);
 	&:hover{
 		text-decoration: underline !important;

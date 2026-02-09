@@ -106,7 +106,7 @@ He tenido la suerte de que algunas de mis herramientas han sido adoptadas por ar
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/1000293272?h=6e4a561de1" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen style="width:80%; aspect-ratio: 16 / 9;" ></iframe>
 
 {{< text_centered >}}
-[**Popo**](https://vimeo.com/1000293272), por [Electric Studios](https://electrictheatre.tv/work/popo-electric-studios)
+[***Popo***](https://vimeo.com/1000293272), por [Electric Studios](https://electrictheatre.tv/work/popo-electric-studios)
 {{< /text_centered >}}
 
 {{< img_caption "clients-2026-02-09.png" "Usuarios (Actualizado el 2026-02-09)" >}}
