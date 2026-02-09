@@ -105,7 +105,7 @@ A **personal highlight** for me is that some of my **tools** have been picked up
 You can [check some of **these tools here**]({{< relref "articles/manuals" >}}).
 
 <!-- {{< img_caption "k-sprite.png" "K-Sprite. <br>Some people — like me — say it's probably the best pixel art editor ever. And those who haven't said that, they probably think it silently. 👍">}} -->
-{{< img_caption "k-sprite.png" "K-Sprite" >}}
+{{< img_caption "k-sprite-dex.png" "K-Sprite" >}}
 
 <!-- --- -->
 

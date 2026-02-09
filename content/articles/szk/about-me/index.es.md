@@ -116,7 +116,7 @@ Puedes ver [algunas de **mis herramientas** aquí]({{< relref "articles/manuals"
 
 <!-- {{< img_caption "k-sprite.png" "K-Sprite. <br>Some people — like me — say it's probably the best pixel art editor ever. And those who haven't said that, they probably think it silently. 👍">}} -->
 <!-- {{< img_caption "k-sprite.png" "K-Sprite. <br>Mucha gente — como yo — asegura que es el mejor editor de Pixel Art del mundo. Y los que no lo aseguran, muy probablemente lo piensen silenciosamente. 👍">}} -->
-{{< img_caption "k-sprite.png" "K-Sprite">}}
+{{< img_caption "k-sprite-dex.png" "K-Sprite">}}
 
 <!-- --- -->
 
