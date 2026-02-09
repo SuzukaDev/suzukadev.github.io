@@ -47,7 +47,8 @@ show_right_bar = true
 
 
 
-> 🚧 Página **{{< text_wavy2 "en construcción" 0.5 0.05 10 >}}** {{< text_wavy "🚧" 0.2 2 >}}
+<!-- > 🚧 Página **{{< text_wavy2 "en construcción" 0.5 0.05 10 >}}** {{< text_wavy "🚧" 0.2 2 >}} -->
+> 🚧 Página **{{< text_wavy2 "en construcción" 0.5 0.05 10 >}}** 🚧
 
 <!-- Some of my most admired artists (Mike Oldfield, Yann Tiersen, Sufjan Stevens, John Frusciante, etc.) have in common that they are all very eclectic. They are not tied to a genre, they like to experiment, to try different things. I think is a trait that is derived of simply being curious.
 
