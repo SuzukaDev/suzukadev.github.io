@@ -53,7 +53,8 @@ Si tienes una idea o algo que creas que sería genial implementar, ¡estoy abier
 <!-- Current version: 1.4.8 (Updated 13 July 2024) (Works for Blender 4.2 and below. Currently being updated to 4.3) -->
 Versión actual: 1.4.8
 
-Funciona con Blender 4.2 y versiones anteriores. Actualmente está siendo actualizado a Grease Pencil 3.0.
+<!-- Funciona con Blender 4.2 y versiones anteriores. Actualmente está siendo actualizado a Grease Pencil 3.0. -->
+Funciona con Blender 4.2 y versiones anteriores.
 {{< /box_info >}}
 
 ## Instalación 💻
@@ -381,10 +382,40 @@ Atajos para las nuevas funcionalidades.
 
 ## Preguntas Frecuentes❔
 
-- ***¿Por qué escribes una sección de Preguntas Frecuentes si nadie te ha hecho una sola pregunta relacionada con el complemento?***
+<!-- - ***¿Por qué escribes una sección de Preguntas Frecuentes si nadie te ha hecho una sola pregunta relacionada con el complemento?***
     
-    Esa es una muy buena pregunta. No lo sé. Supongo que si alguna vez me preguntan algo “frecuentemente” (más de 0 veces), lo aclararé aquí por si es útil para otros 🐢.
-    
+    Esa es una muy buena pregunta. No lo sé. Supongo que si alguna vez me preguntan algo “frecuentemente” (más de 0 veces), lo aclararé aquí por si es útil para otros 🐢. -->
+
+### Acerca del soporte de Grease Pencil 3.0
+
+{{< details "Acerca del soporte de Grease Pencil 3.0" true >}}
+#### Estado actual
+
+<!-- El *addon* funciona correctamente con versiones de Blender anteriores a Grease Pencil 3.0 (Blender 4.2 y anteriores). -->
+**Grase Pencil Groups ++** funciona correctamente en versiones de Blender anteriores a Grease Pencil 3.0 (es decir, Blender 4.2 y versiones previas).
+
+<!-- Con la introducción de GP 3.0 (Blender 4.3 y posteriores), Blender incluye compatibilidad nativa con grupos, una de las principales funcionalidades más importantes que originalmente proporcionaba este *addon*. -->
+Con la introducción de GP 3.0 (Blender 4.3 y posteriores), Blender incluye grupos de forma nativa, lo cual era una de las principales funcionalidades más importantes que originalmente proporcionaba este *addon*.
+
+<!-- Pese a que también incluye varias herramientas y flujos de trabajo adicionales, esta implementación nativa del sistema de grupos reduce significativamente su propósito e importancia original en las versiones más recientes de Blender. -->
+Pese a que **Grase Pencil Groups ++** incluye muchas otras herramientas y flujos de trabajo adicionales, esta implementación nativa del sistema de grupos reduce significativamente su propósito e importancia original en las versiones más recientes de Blender.
+
+Además, el *addon* implementaba los grupos mediante su propio sistema personalizado. Dado que GP 3.0 introduce una nueva estructura de carpetas y capas, adaptar el *addon* directamente es técnicamente complejo y puede limitar o romper algunas de sus funciones originales, como el alfa heredado y ciertas herramientas de personalización.
+
+Una alternativa teórica sería portar el *addon* ignorando la nueva estructura de GP 3.0 y continuar usando el sistema original. Sin embargo, esto no sería una solución correcta ni preparada para el futuro, y en la práctica no existe una forma sencilla de realizar un port directo.
+
+Por estas razones, actualmente estoy evaluando si el port sigue teniendo sentido.
+
+Mientras tanto, el *addon* sigue siendo una herramienta muy útil si trabajas con versiones de Blender anteriores a GP 3.0.
+
+#### Sobre el futuro
+
+<!-- Mientras trabajo con GP 3.0, sigo echando mucho de menos varias capacidades que originalmente proporcionaba este complemento (como la personalización, algunos operadores de grupo/capa, el alfa heredado y otras mejoras de flujo de trabajo). -->
+Personalmente, cuando uso el Grease Pencil 3.0, sigo echando mucho de menos varias funcionalidades que proporcionaba este *addon* (como la personalización, algunos operadores de grupo/capa, el alfa heredado y otras mejoras de flujo de trabajo), por lo que portar parte de sus funcionalidades sigue siendo una opción.
+
+El enfoque más razonable a largo plazo sería reconstruir las funcionalidades que faltan desde cero, adaptándolas correctamente a la arquitectura de GP 3.0. Ya he empezado a explorar esta posibilidad, pero por el momento no puedo garantizar que todas las funciones sean técnicamente viables ni puedo prometer una fecha.
+{{< /details >}}
+
 - ***¿Por qué pusiste iconos en el encabezado?***
     
     Personalmente me gusta cuando puedo distinguir claramente cuando alguna funcionalidad viene de un complemento que tengo instalado y no es algo nativo de Blender. Además, como decidí no sobrescribir el panel original de Capas (por si alguien quiere seguir usándolo mientras tiene este complemento instalado), quise hacer que el panel destaque del otro.

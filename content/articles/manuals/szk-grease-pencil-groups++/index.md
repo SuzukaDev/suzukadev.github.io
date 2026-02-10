@@ -60,7 +60,19 @@ If you have an idea or something that you think will be cool to be implemented, 
 <!-- Current version: 1.4.8 (Updated 13 July 2024) (Works for Blender 4.2 and below. Currently being updated to 4.3) -->
 Current version: 1.4.8
 
-Works for Blender 4.2 and below. Currently being updated to Grease Pencil 3.0.
+<!-- Works for **Blender 4.2 and below**. Currently being updated to Grease Pencil 3.0. -->
+Works for **Blender 4.2 and below**. 
+
+
+
+
+
+
+
+
+
+
+
 {{< /box_info >}}
 
 ## Installation 💻
@@ -420,11 +432,82 @@ The colors are being sampled directly from the letters while painting (No need t
 ![OPH.webp](/images/OPH.webp)
 
 ## FAQ❔
-
+<!-- 
 - ***Why do you write a FAQ section if no one has asked you a single question related the add-on?***
     
-    Thats a very good question. I don’t know. I guess that if I ever got asked about something “frequently” (more than 0 times), I’ll clarify it here in case it’s useful for others 🐢.
-    
+    Thats a very good question. I don’t know. I guess that if I ever got asked about something “frequently” (more than 0 times), I’ll clarify it here in case it’s useful for others 🐢. -->
+
+
+<!-- RAW OPEN MIND (es muy honesto, y además es largo... descartado. -->
+<!-- 
+### About Grease Pencil 3.0
+{{< details "About updating to Blender's Grease Pencil 3.0 (Blender 4.3 and above)" true >}}
+#### Current State
+The addon works perfectly with Blender's version prior to Grease Pencil 3.0 (4.2 and below).
+
+I would like to update to Blender's new Grease Pencil 3.0 (GP3.0), but I want to be honest about it, since I'm hesitating:
+
+Since GP3.0 (**Blender 4.3 and above**), Blender already supports groups natively. 
+My addon included lots of other features, but this was the main one, the group's support.
+
+I added them in some *"hacky way"*, writing my own system. But now GP3.0 integrates them and this makes my addon:
+- **A)** Not as useful/important as it used to be.
+    - I worked a lot (really, a lot...) in this addon, and that is kinda sad/demotivating, to be honest.
+- **B)** Specially harder to port into the new's GP folders and layers system, since in some way, by adapting to it I lose the control I had in my own system.
+    - This makes it specially hard to implement some cool features my addon originally had, like the inherited alpha, and others.
+
+An alternative to B) would be to *""""directly port \*""""* to GP3.0 and ignore new's folders and layers and still using my system. But this is not the most elegant and logical solution, specially thinking about the future.
+
+
+
+
+{{< details "*Also, there is no way to easily \"directly port\" the changes" >}}
+I already ported some more simpler addon to Grease Pencil 3.0 ([Grease Pencil Particles](https://orb91.gumroad.com/l/grease-pencil-particles?layout=profile)) to GP3.0, and the changes were HUGE, it took me more than I planned. And this (the GP Groups++ addon) is way more bigger and complex).
+{{< /details >}}
+
+Another discouraging thing is that Blender introduced natively some features my addon added (to be honest, makes me wonder if it was a coincidence, or they were aware about my addon and it inspired them those changes).
+
+Due to all of this, and specially A), makes me hesitate if I should do the port or not, and just accept that the project doesn't have anymore the sense/importance it had.
+
+
+
+#### About the future
+
+To be honest, when I work with GP3.0 I miss (a lot!) some of the features. Like the customization, some operators to work with the groups/layers, the inherited alpha, etc.
+
+**The most logical alternative would be to rebuild everything from zero**, and to try to figure out to add all the functionalities that are missing into GP3.0. I already started working on it, but I can't guaranteed is possible (like I said in B), nor the date.
+
+
+
+{{< /details >}} -->
+
+### About Supporting Grease Pencil 3.0
+{{< details "About Updating to Blender’s Grease Pencil 3.0 (Blender 4.3 and Above)" false >}}
+#### Current State
+
+The addon works correctly with Blender versions prior to Grease Pencil 3.0 (Blender 4.2 and below).
+
+With the introduction of GP3.0 (Blender 4.3 and above), Blender now includes native support for groups—one of the main features originally provided by this addon.
+
+While the addon also includes several additional tools and workflows, this native implementation significantly reduces its original purpose and importance in newer versions of Blender.
+
+Additionally, the addon implemented groups through its own custom system. Because GP3.0 introduces a new folders and layers structure, adapting the addon directly is technically complex and may limit or break some of its original features, such as inherited alpha and certain customization tools.
+
+One theoretical alternative would be to port the addon while ignoring the new GP3.0 structure and continuing to use the original system. However, this would not be an elegant or future-proof solution, and in practice there is no straightforward way to do a direct port.
+
+For these reasons, I am currently evaluating if a port still makes sense.
+
+Meanwhile, the addon stills a very useful tool if you are working on Blender's versions prior to GP3.0.
+
+#### About the Future
+
+While working with GP3.0, I still strongly miss several capabilities originally provided by this addon (like the customization, some group/layer operators, the inherited alpha, and other workflow improvements).
+
+The most reasonable long-term approach would be to rebuild the functionality from scratch, adapting it properly to GP3.0’s architecture. I have already started exploring this possibility, but at the moment I cannot guarantee that all features will be technically achievable, nor provide a timeline.
+
+{{< /details >}}
+
+
 - ***Why did you put icons on the header?***
     
     I personally like when I can distinguish clearly when some functionality comes from an addon I have installed and is not something native from Blender. Also, since I decided not to override the original Layer panel (in case someone would like to continue using it while having this addon installed), I wanted to make the panel to stand out from the other one. 
