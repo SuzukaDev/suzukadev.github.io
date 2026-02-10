@@ -482,7 +482,7 @@ To be honest, when I work with GP3.0 I miss (a lot!) some of the features. Like 
 {{< /details >}} -->
 
 ### About Supporting Grease Pencil 3.0
-{{< details "About Updating to Blender’s Grease Pencil 3.0 (Blender 4.3 and Above)" false >}}
+{{< details "About Updating to Blender’s Grease Pencil 3.0 (Blender 4.3 and Above)" true >}}
 #### Current State
 
 The addon works correctly with Blender versions prior to Grease Pencil 3.0 (Blender 4.2 and below).
