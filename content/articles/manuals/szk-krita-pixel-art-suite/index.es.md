@@ -410,6 +410,10 @@ Atajo | Acción
 **Consejo**: Mantén el ratón sobre una celda (**o cualquier elemento de la interfaz!**) para ver un cuadro de información con dichos shortcuts.
 {{< /box_info >}}
 
+
+> **ℹ️ NOTA**: Puedes usar esta **matriz** para **pintar patrones** de manera muy sencilla con [**K-Sprite!**](#k-sprite). ([Ver *Opciones de la herramienta*](#opciones-de-la-herramienta) para más información)
+
+
 - {{< cell "9" >}} **Crear grupo de Pintura Indexada**: Pulsa para generar un grupo de Pintura Indexada a partir de la capa/grupo seleccionada.
 
 - {{< cell "10" >}} **Actualizar la capa de dithering**: Vuelve a pintar la capa con el patrón de *dithering*. Viene bien para ver los cambios despues de pintar la matriz.
@@ -677,6 +681,23 @@ Option | | Shortcut
 {{< cell "5" >}} Espejo X/Y |  | {{< shortcut "M" >}} / {{< shortcut "N" >}}
 
 
+{{< video v="pattern-primitives.mp4" autoplay=true loop=true c=false >}}
+
+{{< box_green >}}
+En el *Modo Dither*, pudes presionar **las teclas de los cursores** {{< shortcut "←" >}} {{< shortcut "↑" >}} {{< shortcut "↓" >}} {{< shortcut "→" >}} **para desplazar el patrón de *dither***:
+
+<!-- {{< video v="pattern-primitives-offset-lowQ.mp4" c=false loop=true autoplay=true >}} -->
+{{< video v="pattern-primitives-offset-cut.mp4" c=false loop=true autoplay=true >}}
+> Personalment lo uso mucho a la hora de dibujar fondos y otros elementos repetitivos!
+> {{< video v="pattern-joker-gif-v4-lowQ.mp4" c=false loop=true autoplay=true >}}
+
+{{< box_info >}}
+Si mueves el patrón sin mover el cursor, la textura previa se filtrará usando la nueva textura desplazada. ¡Esto es util para obtener resultados distintos usando el mismo patrón!
+
+> Para dibujar la **textura original** completa con el desplazamiento aplicado, simplemente **mueve el cursor para redibujarla por completo**. 
+
+{{< /box_info >}}
+{{< /box_green >}}
 
 <!-- {{< header t="Acciones" h=3 align="left" class="underline" >}}
 #### Acciones {.no-display} -->

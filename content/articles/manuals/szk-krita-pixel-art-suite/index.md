@@ -431,6 +431,8 @@ Shortcut | Action
 **TIP**: Hover a cell (or any UI element) to see its tooltip with its information.
 {{< /box_info >}}
 
+> **ℹ️ NOTE**: You can use this **matrix** for easily **painting patterns** with [**K-Sprite!**](#k-sprite). ([See *Tool Options*](#tool-options) for more info)
+
 - {{< cell "9" >}} **Create Index Painting**: Press to generate an Index Painting folder for the selected layer/group.
 
 - {{< cell "10" >}} **Repaint the dithering layer**: Updates the dither pattern. Useful to call it after drawing on the matrix.
@@ -695,7 +697,21 @@ Option | | Shortcut
 {{< cell "4" >}} Fill Mode | Fill a primitive with color. | {{< shortcut "ALT+F" >}}
 {{< cell "5" >}} X/Y Mirror |  | {{< shortcut "M" >}} / {{< shortcut "N" >}}
 
+{{< video v="pattern-primitives.mp4" autoplay=true loop=true c=false >}}
 
+{{< box_green >}}
+When using the *Dither Mode*, you can use the **arrow keys** {{< shortcut "←" >}} {{< shortcut "↑" >}} {{< shortcut "↓" >}} {{< shortcut "→" >}} **to offset the dither pattern**:
+
+<!-- {{< video v="pattern-primitives-offset-lowQ.mp4" c=false loop=true autoplay=true >}} -->
+{{< video v="pattern-primitives-offset-cut.mp4" c=false loop=true autoplay=true >}}
+> I personally love using this tool when creating backgrounds and repetitive elements! 
+> {{< video v="pattern-joker-gif-v4-lowQ.mp4" c=false loop=true autoplay=true >}}
+
+{{< box_info >}}
+Offseting the pattern without moving the cursor/mouse will filter the previous pattern with the new offseted pattern. You can use this to came up with different results using with the same pattern! 
+> To draw the **original pattern with the offset** applied, simply **move the cursor to redraw it**.
+{{< /box_info >}}
+{{< /box_green >}}
 
 <!-- {{< header t="Actions" h=3 align="left" class="underline" >}}
 #### Actions {.no-display} -->
