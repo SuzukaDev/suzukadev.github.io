@@ -20,6 +20,10 @@ menus:
 
 <!-- {{< img_caption img="suzuka-ka-logo-white.png" class="bloom-shadow" >}} -->
 {{< img_caption img="suzuka-ka-logo-white.png" class="bloom-shadow link-no-decoration" style="margin-top:-40px; margin-bottom:-23px;" url="about" alt="Suzuka Ka Logo" >}}
+<!-- {{< img_caption img="suzuka-ka-cb.png" class="bloom-shadow link-no-decoration" style="margin-top:-40px; margin-bottom:-23px;" url="about" alt="Suzuka Ka Logo" >}} -->
+<!-- {{< img_caption img="suzuka-ka-cb-small.png" class="bloom-shadow link-no-decoration" style="margin-top:-40px; margin-bottom:-23px;" url="about" alt="Suzuka Ka Logo" >}} -->
+<!-- {{< img_caption img="sign-squared.png" class="bloom-shadow link-no-decoration" style="margin-top:-40px; margin-bottom:-13px;" url="about" alt="Suzuka Ka Logo" >}} -->
+<!-- {{< img_caption img="sign-suzuka-ka-suzukadev.png" class="bloom-shadow link-no-decoration" style="margin-top:-40px; margin-bottom:-23px;" url="about" alt="Suzuka Ka Logo" >}} -->
 
 
 <!-- {{< img_caption img="suzuka-ka-logo-white-rotated.png" class="bloom-shadow" >}} -->
