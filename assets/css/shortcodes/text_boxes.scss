@@ -12,7 +12,7 @@ $error-color-dark: rgba(255, 46, 9, 0.192);
 $green-color-light:rgba(79, 255, 9, 0.281);
 $green-color-dark: rgba(87, 255, 9, 0.13);
 
-
+$box-borders-size: 7px;
 
 
 .text-box{
@@ -22,7 +22,7 @@ $green-color-dark: rgba(87, 255, 9, 0.13);
 	// width: fit-content;
 	border-radius: 6px;
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-	
+
 	& > * {
 		padding-bottom: 1rem;
 		// gap: 20px;
@@ -41,31 +41,37 @@ $green-color-dark: rgba(87, 255, 9, 0.13);
 }
 
 // REFACTOR
-// DELETE
+// DELETE No se usa!
 // DEPRECATED
 /*#region DEPRECATED*/
 // Info ℹ
 .dark .info-background-color{
 	background-color: $info-color-dark;
+	// border-left: $box-borders-size solid $info-color-dark;
 }
 .light .info-background-color{
 	background-color: $info-color-light;
+	// border-left: $box-borders-size solid $info-color-light;
 }
 
 // Warning ⚠
 .dark .warning-background-color{
 	background-color: $warning-color-dark;
+	// border-left: $box-borders-size solid $warning-color-dark;
 }
 .light .warning-background-color{
 	background-color: $warning-color-light;
+	// border-left: $box-borders-size solid $warning-color-light;
 }
 
 // Error ❌
 .dark .error-background-color{
 	background-color: $error-color-dark;
+	// border-left: $box-borders-size solid $error-color-dark;
 }
 .light .error-background-color{
 	background-color: $error-color-light;
+	// border-left: $box-borders-size solid $error-color-light;
 }
 /*#endregion DEPRECATED*/
 
@@ -80,42 +86,52 @@ $green-color-dark: rgba(87, 255, 9, 0.13);
 // Green ✅
 .light .green-box{
 	background-color: $green-color-light;
+	border-left: $box-borders-size solid $green-color-light;
 	// text-indent: 20px;
 }
 .dark .green-box{
-	background-color: $green-color-dark
+	background-color: $green-color-dark;
+	border-left: $box-borders-size solid $green-color-dark;
 	// text-indent: 20px;
 }
 
 // Info ℹ
 .dark .info-box{
 	background-color: $info-color-dark;
+	border-left: $box-borders-size solid $info-color-dark;
 }
 .light .info-box{
 	background-color: $info-color-light;
+	border-left: $box-borders-size solid $info-color-light;
 }
 
 // Warning ⚠️
 .dark .warning-box{
 	background-color: $warning-color-dark;
+	border-left: $box-borders-size solid $warning-color-dark;
 }
 .light .warning-box{
 	background-color: $warning-color-light;
+	border-left: $box-borders-size solid $warning-color-light;
 }
 
 // Error ❌
 .dark .error-box{
 	background-color: $error-color-dark;
+	border-left: $box-borders-size solid $error-color-dark;
 }
 .light .error-box{
 	background-color: $error-color-light;
+	border-left: $box-borders-size solid $error-color-light;
 }
 
 
 // Custom box
 .dark .custom-box{
 	background-color: var(--custom-box-color-dark);
+	border-left: $box-borders-size solid var(--custom-box-color-dark);
 }
 .light .custom-box{
 	background-color: var(--custom-box-color-light);
+	border-left: $box-borders-size solid var(--custom-box-color-light);
 }
