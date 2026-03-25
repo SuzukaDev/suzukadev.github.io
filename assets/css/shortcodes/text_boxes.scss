@@ -2,16 +2,26 @@
 // Colors
 $info-color-light: rgb(219, 234, 254);
 $info-color-dark: rgba(27, 102, 199, 0.425);
+$info-color-border-light: rgba(16, 96, 201, 0.507);
+$info-color-border-dark: rgba(13, 104, 224, 0.863);
 
 $warning-color-light:rgba(255, 189, 9, 0.342);
 $warning-color-dark: rgba(255, 189, 9, 0.192);
+$warning-color-border-light:rgba(255, 189, 9, 0.529);
+$warning-color-border-dark: rgba(255, 189, 9, 0.514);
 
 $error-color-light:rgba(255, 46, 9, 0.281);
 $error-color-dark: rgba(255, 46, 9, 0.192);
+$error-color-border-light:rgba(255, 46, 9, 0.356);
+$error-color-border-dark: rgba(255, 46, 9, 0.363);
 
 $green-color-light:rgba(79, 255, 9, 0.281);
 $green-color-dark: rgba(87, 255, 9, 0.13);
+$green-color-border-light:rgba(79, 255, 9, 0.363);
+$green-color-border-dark: rgba(87, 255, 9, 0.356);
 
+// Border inspired this style for the info boxes:
+// https://dd3d.dmitriysalnikov.ru/docs/1.7.1/classDebugDraw3D.html
 $box-borders-size: 7px;
 
 
@@ -86,43 +96,43 @@ $box-borders-size: 7px;
 // Green ✅
 .light .green-box{
 	background-color: $green-color-light;
-	border-left: $box-borders-size solid $green-color-light;
+	border-left: $box-borders-size solid $green-color-border-light;
 	// text-indent: 20px;
 }
 .dark .green-box{
 	background-color: $green-color-dark;
-	border-left: $box-borders-size solid $green-color-dark;
+	border-left: $box-borders-size solid $green-color-border-dark;
 	// text-indent: 20px;
 }
 
 // Info ℹ
 .dark .info-box{
 	background-color: $info-color-dark;
-	border-left: $box-borders-size solid $info-color-dark;
+	border-left: $box-borders-size solid $info-color-border-dark;
 }
 .light .info-box{
 	background-color: $info-color-light;
-	border-left: $box-borders-size solid $info-color-light;
+	border-left: $box-borders-size solid $info-color-border-light;
 }
 
 // Warning ⚠️
 .dark .warning-box{
 	background-color: $warning-color-dark;
-	border-left: $box-borders-size solid $warning-color-dark;
+	border-left: $box-borders-size solid $warning-color-border-dark;
 }
 .light .warning-box{
 	background-color: $warning-color-light;
-	border-left: $box-borders-size solid $warning-color-light;
+	border-left: $box-borders-size solid $warning-color-border-light;
 }
 
 // Error ❌
 .dark .error-box{
 	background-color: $error-color-dark;
-	border-left: $box-borders-size solid $error-color-dark;
+	border-left: $box-borders-size solid $error-color-border-dark;
 }
 .light .error-box{
 	background-color: $error-color-light;
-	border-left: $box-borders-size solid $error-color-light;
+	border-left: $box-borders-size solid $error-color-border-light;
 }
 
 
