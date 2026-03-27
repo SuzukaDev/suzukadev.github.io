@@ -8,6 +8,18 @@ description: Suzuka Ka's Game Development Portfolio
 #       cover: true # cover of the home page is used for OpenGraph cards, etc.
 # profile_picture: "/images/profile-pictures/yo.jpg"
 # profile_picture: "/images/profile-pictures/yo.jpg" # DEPRECATED This is not used
+# main_classes : 'soft-triangles' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
+# background_video_filename: "blue-abstract.mp4"
+# background_video_filename: "cosmos-lq.mp4"
+# background_video_filename: "blue-abstract-lq.mp4"
+# background_video_filename: "triangles-lq.mp4"
+background_video_filename: "triangles-looped-lq.mp4"
+# background_video_filename: "constellation-bw-lq.mp4"
+# background_video_filename: "water-stars-lq.mp4"
+# background_video_filename: "sea-lq.mp4"
+# background_video_filename: "pink-room-lq.mp4"
+# background_video_opacity: .1
+background_video_opacity: .06
 
 menus:
   main:

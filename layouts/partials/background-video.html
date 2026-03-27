@@ -1,0 +1,15 @@
+{{ with .Params.background_video_filename -}}
+  {{- $vid := or (resources.GetMatch (printf "**/*%s*" .) ) ($.Page.Resources.Get .) -}}
+  {{- /*  {{- $vid_opacity := 0.5 -}}
+  {{- if $.Page.Params.background_video_opacity -}}
+    {{- $vid_opacity = $.Page.Params.background_video_opacity -}}
+  {{- end -}}  */ -}}
+  
+  {{- if $.Page.Params.background_video_opacity -}}
+    {{- $vid_opacity := $.Page.Params.background_video_opacity -}}
+  {{- end -}}
+
+  <video autoplay muted loop id="background-video" {{- with $.Page.Params.background_video_opacity -}}style="opacity: {{.}};"{{- end -}}>
+    <source src="{{$vid.RelPermalink}}" type="video/mp4">
+  </video> 
+{{- end -}}

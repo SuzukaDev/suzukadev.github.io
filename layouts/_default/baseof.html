@@ -11,6 +11,10 @@
   <body {{ partial "utils/get-accent-color-style.html" . -}}>
     {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
     <main {{ with .Params.main_classes -}} class="{{- . -}}" {{- end -}}>
+      
+      {{- /*  VIDEO  */ -}}
+      {{- partial "background-video.html" . -}}
+
       {{ if .Site.Params.is_debug}}
         {{ partial "debug" . }}
       {{ end }}
