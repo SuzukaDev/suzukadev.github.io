@@ -37,6 +37,8 @@ transparent_bg_for_gifs: true # si es verdadero, el fondo de los .gif será tran
 transparent_bg_for_pngs: true # si es verdadero, el fondo de los .png será transparente
 # show_text_on_top: true # si es verdadero, muestra el texto markdown encima de la galería. Si es falso o NO se establece, muestra el markdown debajo
 # content_centered: true # si es verdadero, el contenido markdown (texto) de una galería estará centrado (recomendado solo si planeas agregar muy poco texto)
+# background_video_filename: "triangles-looped-lq.mp4"
+# background_video_opacity: .06
 
 # CONFIGURACIONES DE ORDENACIÓN
 # weight: 1 # puede usarse para ajustar el orden de aparición.
