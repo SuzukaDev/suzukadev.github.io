@@ -75,9 +75,11 @@ Lee más [**sobre mí**]({{< relref "about-me.md" >}}) o [**echa un vistazo a mi
 
 {{< featured_articles "the-resilence-of-memory, szk-krita-pixel-art-suite" >}}
 
-{{< link_box "galleries" "*ALBUMS*" false "sans-font" >}} 
-{{< link_box "articles" "*ARTÍCULOS*" false "sans-font" >}} 
-{{< link_box "my-music" "MI MÚSICA" false "sans-font" >}} 
+{{< link_box page="galleries" text="*ALBUMS*" class="sans-font" >}} 
+{{< link_box page="articles" text="*ARTÍCULOS*" class="sans-font" >}} 
+{{< link_box page="my-music" text="*MI MÚSICA*" class="sans-font" >}} 
+{{< link_box page="manuals" text="*MANUALES*" class="sans-font" >}} 
+<!-- {{< link_box page="manuals" text="**MANUALES** 📘" class="sans-font" radius="1em" >}}  -->
 
 ---
 <!-- <br> -->

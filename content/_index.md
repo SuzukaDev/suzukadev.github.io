@@ -82,6 +82,7 @@ Read more **[about me]({{< relref "about-me.md" >}})** or [**check my work here*
 {{< link_box "galleries" "ALBUMS" false "sans-font" >}} 
 {{< link_box "articles" "ARTICLES" false "sans-font" >}} 
 {{< link_box "my-music" "MY MUSIC" false "sans-font" >}} 
+{{< link_box page="manuals" text="MANUALS" class="sans-font" >}} 
 <!-- {{< link_box "galleries" "INTERVIEWS" false "sans-font" >}}  -->
 
 ---
