@@ -42,7 +42,12 @@ show_related_articles = false # If false, it wont show the related articles at t
 
 > Escribo esto para mí, a modo de "terapia". Y porque esta es mi página personal, y gran parte de lo que soy a día de hoy es gracias a mi mejor amigo, Dexter, y quiero que tenga su propio espacio por aquí, para siempre (o por lo menos hasta que se caiga el servidor donde se hospeda esto).
 >
-> Probablemente nadie lea esto, pero me hace ilusión dejar constancia de lo muchísimo que lo quise y le quiero. De nuevo, lo hago por y para mí.
+> Probablemente nadie lea esto. Y puede que si alguien lo lee, tal vez no comprenda cómo de importante puede ser un perro. Pero me hace ilusión y también me siento orgulloso de dejar constancia por aquí de lo muchísimo que lo quise y le quiero. 
+>
+> De nuevo, lo hago por y para mí.
+
+<!-- > Probablemente nadie lea esto, pero me hace ilusión dejar constancia de lo muchísimo que lo quise y le quiero. De nuevo, lo hago por y para mí. -->
+
 
 <!-- Probablemente nadie lea esto, pero me hace ilusión dejar constancia de lo muchísimo que quise y quiero a mi lobo. -->
 
@@ -230,6 +235,12 @@ Daria lo que fuera por volver a dar un paseo contigo. Solo nosotros dos, la mús
 Gracias por todos los paseos que tuvimos.
 
 Te he querido mucho, te quiero mucho, y siempre te voy a querer un montón. Te echo de menos, y sé que te voy a echar siempre de menos, Dexter.
+
+Cuando alguien cercano se va, inevitablemente surgen pensamientos sobre la muerte. De alguna forma, uno desea que no sea la última vez que vamos a ver a ese alguien que ha sido tan importante para nosotros, y que tal vez haya "algo más". Tal vez si el cerebro es "eléctrico", ese momento de que toda tu vida pasa por delante de ti, no sea más que el cerebro apagándose, y "liberando" poco a poco todas las experiencias que hemos vivido.
+
+De ser así, estoy muy seguro de que las experiencias que más "resistencia" van a dar a la hora de apagarse, serán todos aquellos momentos donde nos hemos sentido realmente felices y queridos. Esos son los únicos momentos que cuentan al final.
+
+Y muchos de esos momentos para mí van a ser estando contigo, paseando, mirándote mientras caminabas y me devolvías la mirada desde abajo, como sonriendo. Los momentos en los que estábamos jugando, durmiendo en la cama, cuando volvía de clase y venías a recibirme, y muchos más.
 
 Gracias por formar parte de mi vida y de mí.
 
