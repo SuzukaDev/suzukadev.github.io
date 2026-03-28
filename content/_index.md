@@ -14,12 +14,17 @@ description: Suzuka Ka's Game Development Portfolio
 # background_video_filename: "blue-abstract-lq.mp4"
 # background_video_filename: "triangles-lq.mp4"
 background_video_filename: "triangles-looped-lq.mp4"
+# background_video_filename: "pixel-noise-lq.mp4"
+# background_video_filename: "pixel-glitch-lq.mp4"
+# background_video_filename: "glitch-lq.mp4"
+# background_video_filename: "neon-dots-lq.mp4"
 # background_video_filename: "constellation-bw-lq.mp4"
 # background_video_filename: "water-stars-lq.mp4"
 # background_video_filename: "sea-lq.mp4"
 # background_video_filename: "pink-room-lq.mp4"
 # background_video_opacity: .1
-background_video_opacity: .06
+# background_video_opacity: .06
+background_video_opacity: .07
 
 menus:
   main:

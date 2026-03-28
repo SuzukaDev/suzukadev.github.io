@@ -26,7 +26,8 @@ background_video_filename: "triangles-looped-lq.mp4"
 # background_video_filename: "sea-lq.mp4"
 # background_video_filename: "pink-room-lq.mp4"
 # background_video_opacity: .1
-background_video_opacity: .06
+# background_video_opacity: .06
+background_video_opacity: .07
 ---
 
 
