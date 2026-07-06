@@ -491,7 +491,7 @@ With the introduction of GP3.0 (Blender 4.3 and above), Blender now includes nat
 
 While the addon also includes several additional tools and workflows, this native implementation significantly reduces its original purpose and importance in newer versions of Blender.
 
-Additionally, the addon implemented groups through its own custom system. Because GP3.0 introduces a new folders and layers structure, adapting the addon directly is technically complex and may limit or break some of its original features, such as inherited alpha and certain customization tools.
+Additionally, the addon implemented groups through its own custom system. Since GP3.0 introduces a new folders and layers structure, adapting the addon directly is technically complex and may limit or break some of its original features, such as inherited alpha and certain customization tools.
 
 One theoretical alternative would be to port the addon while ignoring the new GP3.0 structure and continuing to use the original system. However, this would not be an elegant or future-proof solution, and in practice there is no straightforward way to do a direct port.
 
