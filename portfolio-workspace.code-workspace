@@ -15,6 +15,7 @@
 			"**/node_modules/**": true,
 			"**/.vscode/**": true
 		},
-		"commentTranslate.multiLineMerge": false
+		"commentTranslate.multiLineMerge": false,
+		"commentTranslate.hover.enabled": true
 	}
 }

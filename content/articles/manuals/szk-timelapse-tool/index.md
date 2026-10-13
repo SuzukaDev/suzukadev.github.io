@@ -65,7 +65,7 @@ There are other tools that converts a series of images into .gif, but the ones I
 ## Download
 You can download it here:
 
-{{< download_file file="app/SZK Timelapse Tool (1.1.1).zip" type="windows" >}}
+{{< download_file file="app/SZK Timelapse Tool (1.2.0).zip" type="windows" >}}
 
 ## How to use it
 
@@ -73,31 +73,42 @@ You can download it here:
 
 {{< cell "1" >}} Input folder: Select the folder containing all the images and their format.
 
-{{< cell "2" >}} Select the last frame mode.
+{{< cell "2" >}} **Offset**: Delays the start of the timelapse X images. Set it to `0` to start from the beggining.
 
-{{< cell "3" >}} Manually selection for the last frame, when the mode in (2) is set to 'Selected image'.
+{{< cell "3" >}} **Maximum frames**: Limits the total frames used in the timelapse.
 
-{{< cell "4" >}} The duration of the last frame. If the checkbox is enabled, it will have a different frame duration than the other frames. 
+{{< cell "4" >}} Select the last frame mode.
+
+<!-- {{< cell "3" >}} Manually selection for the last frame, when the mode in (2) is set to 'Selected image'. -->
+
+{{< cell "5" >}} The duration of the last frame. If the checkbox is enabled, it will have a different frame duration than the other frames. 
 
 {{< box_info >}}
 This is useful if you are showing a drawing process, and want the end frame to last more (for showing the final result).
 {{< /box_info >}}
 
-{{< cell "5" >}} Interval configuration. Picks a frame every X, and set the duration of each frame.
+{{< cell "6" >}} Interval configuration. Picks a frame every X, and set the duration of each frame.
 
-{{< cell "6" >}} Info label: Displays the total frames, duration, and frames per second (fps).
+{{< cell "7" >}} Info label: Displays the total frames, duration, and frames per second (fps).
 
-{{< cell "7" >}} Scales the original images by a factor, and choose the filter for the scale.
+{{< cell "8" >}} Scales the original images by a factor, and choose the filter for the scale.
 
 {{< box_info >}}
 Depending of your needs (to scale up, scale down, mantain crips edges or not, etc) you would preffer one filter or another. For example, for scaling up pixel art, you normally would use **Box** or **Nearest**.
 {{< /box_info >}}
 
-{{< cell "8" >}} Output folder where the timelapse is saved.
+{{< cell "9" >}} Allows to crop the images of the timelapse to show an specific area.
+The image is cropped by the rectangle defined by the top-left position (*to*) and the bottm-right position (*from*).
 
-{{< cell "9" >}} Name file and format.
+{{< box_info >}}
+Set *to* point to `-1` to cover the rest of the image..
+{{< /box_info >}}
 
-{{< cell "10" >}} If checked, it appends some custom data to the saved file.
+{{< cell "10" >}} Output folder where the timelapse is saved.
+
+{{< cell "11" >}} Name file and format.
+
+{{< cell "12" >}} If checked, it appends some custom data to the saved file.
 
 |Code|Output|
 |:-|:-|
@@ -116,9 +127,11 @@ E.g:
 
 **\*** The values are according the selected settings.
 
-{{< cell "11" >}} If checked, opens the output folder after saving the timelapse.
+{{< cell "13" >}} Actions to execute after the timelapse is saved. It allows to open the output folder and/or the timelapse file.
 
-{{< cell "12" >}} Create Timelapse: Press to \*\**drum roll* 🥁🥁🥁\*\* create the timelapse.
+<!-- {{< cell "11" >}} If checked, opens the output folder after saving the timelapse. -->
+
+{{< cell "14" >}} Create Timelapse: Press to \*\**drum roll* 🥁🥁🥁\*\* create the timelapse.
 
 ## Timelapse examples
 {{< row >}}
@@ -157,6 +170,9 @@ E.g:
 	css_image="height:70vh; width:auto;" 
 	class="pixel-art" 
 >}}
+
+{{< img_caption img="dex-timelapse.webp">}}
+
 
 ## Contact 
 

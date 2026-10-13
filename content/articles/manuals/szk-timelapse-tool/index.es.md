@@ -64,7 +64,7 @@ Hay muchos programas con los que convertir una serie de imágenes a *gif*, pero 
 ## Descarga
 Puedes descargarlo aquí:
 
-{{< download_file file="app/SZK Timelapse Tool (1.1.1).zip" type="windows" >}}
+{{< download_file file="app/SZK Timelapse Tool (1.2.0).zip" type="windows" >}}
 
 ## Cómo usarlo
 
@@ -72,20 +72,24 @@ Puedes descargarlo aquí:
 
 {{< cell "1" >}} Carpeta con las imágenes: Selecciona la carpeta que contiene todas las imágenes, y el formato de éstas.
 
-{{< cell "2" >}} Elige el modo de selección de la última imagen del timelapse.
+{{< cell "2" >}} **Offset**: desplaza el comienzo del timelapse por X imágenes. Introduce `0` para que comience del inicio.
 
-{{< cell "3" >}} Selecciona manualmente el último frame del timelapse, cuando el modo (2) está seleccionado 'Selected image' (Imagen seleccionada).
+{{< cell "3" >}} **Maximum frames**: Limita los frames totales.
 
-{{< cell "4" >}} La duración del frame final. Si la casilla está seleccionada, el último frame tendrá una duración diferente al resto de frames.
+{{< cell "4" >}} Elige el modo de selección de la última imagen del timelapse.
+
+<!-- {{< cell "5" >}} Selecciona manualmente el último frame del timelapse, cuando el modo (2) está seleccionado 'Selected image' (Imagen seleccionada). -->
+
+{{< cell "5" >}} La duración del frame final. Si la casilla está seleccionada, el último frame tendrá una duración diferente al resto de frames.
 
 {{< box_info >}}
 Esto es útil, por ejemplo, si estás mostrando un proceso de dibujo y quieres que la última imagen dure más (para mostrar el resultado final).{{< /box_info >}}
 
-{{< cell "5" >}} Intervalo: Selecciona una imágen cada X imágenes, así como la duración de cada frame.
+{{< cell "6" >}} Intervalo: Selecciona una imágen cada X imágenes, así como la duración de cada frame.
 
-{{< cell "6" >}} Texto con información: Muestra los frames totales, la duración y los frames por segundo del timelapse.
+{{< cell "7" >}} Texto con información: Muestra los frames totales, la duración y los frames por segundo del timelapse.
 
-{{< cell "7" >}} Opciones para escalar el timelapse, y el filtro usado en el escalado.
+{{< cell "8" >}} Opciones para escalar el timelapse, y el filtro usado en el escalado.
 
 {{< box_info >}}
 En función de tus necesidades (agrandar, disminuir, mantener los bordes definidos o no, etc), será conveniente usar uno u otro filtro para obtener un mejor resultado.
@@ -93,11 +97,18 @@ En función de tus necesidades (agrandar, disminuir, mantener los bordes definid
 Por ejemplo, para escalar Pixel Art, normalmente querrás usar el filtro **Box** o **Nearest**, para conservar la estética Pixel Art.
 {{< /box_info >}}
 
-{{< cell "8" >}} Carpeta donde se guardará el timelapse.
+{{< cell "9" >}} Permite recortar las imagenes del timelapse para mostrar una zona específica.
+La zona se recorta en función al rectángulo delimitado por los puntos *from* (punto superior a la izquierda) y *to* (punto inferior a la derecha)
 
-{{< cell "9" >}} Nombre y formato en el que se guardará el timelapse.
+{{< box_info >}}
+Si el punto *to* queda a `-1`, se tomara el ancho/tamaño total de la imagen.
+{{< /box_info >}}
 
-{{< cell "10" >}} Si está marcada, añadirá un texto personalizable al nombre del archivo, con distinta información.
+{{< cell "10" >}} Carpeta donde se guardará el timelapse.
+
+{{< cell "11" >}} Nombre y formato en el que se guardará el timelapse.
+
+{{< cell "12" >}} Si *Add info* está marcado, añadirá un texto personalizable al nombre del archivo, con distinta información.
 
 |Código|Resultado|
 |:-|:-|
@@ -116,9 +127,11 @@ Ejemplo:
 
 **\*** Los números cambiarán en función de los valores seleccionados en el proyecto.
 
-{{< cell "11" >}} Si está marcada, al acabar de grabar el timelapse abre la carpeta donde ha sido guardado.
+{{< cell "13" >}} Acciones que se ejecutan al grabar el timelapse. Permite abrir el archivo que contiene el timelapse y/o ejecutar el timelapse al acabar de procesarse.
 
-{{< cell "12" >}} Crea el timelapse.
+<!-- {{< cell "11" >}} Si está marcada, al acabar de grabar el timelapse abre la carpeta donde ha sido guardado. -->
+
+{{< cell "14" >}} Crea el timelapse.
 
 ## Ejemplos de Timelapses
 {{< row >}}
@@ -146,6 +159,7 @@ Ejemplo:
 	css_image="height:70vh; width:auto;" 
 	class="pixel-art" 
 >}}
+{{< img_caption img="dex-timelapse.webp">}}
 
 ## Contacto
 
