@@ -48,3 +48,7 @@ show_right_bar = true
 Página no traducida (de momento). Para leer el artículo, [visita la página en inglés]({{% relref path="devlogs" lang="en" %}}).
 {{< /box_warning >}}
  -->
+
+<!-- > Basically, any lesson, thought, etc. that comes to my mind as I'm working on something that I want to register. -->
+
+> Cualquier **aprendizaje**, **pensamiento**, etc. que se me viene a la cabeza mientras estoy trabajando en algo, y que **quiero dejar escrito**.

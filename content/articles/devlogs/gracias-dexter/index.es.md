@@ -6,7 +6,7 @@ lastmod = '2026-01-20T13:01:18+01:00'
 # draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
 # keywords = ["SZK", "Suzuka", "Suzuka Ka", "SuzukaKDev"] # custom keywords for the page
-# tags = [""]
+tags = ["ilustración", "proceso", "pixel art"]
 # main_classes = 'pixel-font' # classes for <main> element. Allows customization of each page. Example of use: add a class from `fonts.scss` to change the page font. (consolas-font, handwritten-font, etc).
 
 # # -------- DISPLAY OPTIONS --------

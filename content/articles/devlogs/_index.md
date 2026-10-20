@@ -3,6 +3,7 @@ title = 'Devlogs 📐'
 date = '2025-08-07T02:39:35+02:00'
 # description = "Processes, art tutorials, blog, etc."
 description = "Blog posts on art, code, and making things."
+# description = "Blog posts on art, code, and making things.<br>Basically, any thing that comes to my mind as I'm working on something."
 lastmod = '2025-08-07T02:39:35+02:00'
 # draft = true # if true (or not set), the page will be excluded in build
 private = false # If true, the article wont be listed and will only be visible by knowing its url
@@ -48,3 +49,9 @@ show_right_bar = true
 <!-- {{< box_warning >}}
 Page not translated (at the moment). For reading the article, [visit the spanish version]({{% relref path="devlogs" lang="es" %}}).
 {{< /box_warning >}} -->
+
+<!-- > Basically, any thing that comes to my mind as I'm working on something. -->
+
+> Basically, any **lesson**, **thought**, etc. that comes to my mind as I'm working on something **that I want to write down**.
+
+<!-- Basically, any thing (lesson, thought, etc.) that comes to my mind as I'm working on something that I want to register. -->
