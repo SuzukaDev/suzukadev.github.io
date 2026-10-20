@@ -1,6 +1,12 @@
 {{ define "main" }}
   {{- /*  {{ partial "title.html" . }}  */ -}}
   {{ partial "title-articles-list.html" . }}
+  {{- /*  Shows content if its not technically empty (ignores comments)  */ -}}
+  {{ if (strings.TrimSpace (.Content | plainify)) }}
+  <hgroup style="margin-bottom: 1%; margin-top: 0%; padding-top:0%;">
+    {{ .Content | markdownify }}
+  </hgroup>
+  {{- end -}}
   <section class="galleries">
     {{- $articles := where .Pages "Params.private" "ne" true -}}
     {{- $articles = sort $articles (.Params.sort_by | default "Date") (.Params.sort_order | default "desc") -}}
@@ -20,7 +26,6 @@
   </section>
   <hr class="full-separator">
   <hgroup>
-    {{ .Content | markdownify }}
     {{/*  {{ .Content }}  */}}
     {{/*  TODO show all tags  */}}
     {{ $tags_page := .Site.GetPage "/tags/" }}
