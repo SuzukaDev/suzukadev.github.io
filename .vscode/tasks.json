@@ -44,14 +44,14 @@
 			}
 		},
 		{
-			"label": "Run server only (no cache)",
+			"label": "Run server (with drafts and no cache)",
 			"type": "shell",
-			"command": "hugo server -D --noHTTPCache",
+			"command": "explorer http://localhost:1313/; hugo server -D --noHTTPCache",
 			"options": {
 				"statusbar": {
 					"label": "$(broadcast) Server (-D, No cache)",
 					"color": "#27b0ff",
-					"detail": "Runs the server only (no opening explorer) with drafts included"
+					"detail": "Runs the server (opening explorer) with drafts included"
 				}
 			}
 		},
