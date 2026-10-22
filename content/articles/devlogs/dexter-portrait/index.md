@@ -174,6 +174,7 @@ I made some variations to the brush, related rotation mostly that made me able t
 
 
 ## Timelapse
+
 {{< img_caption "25f x0.3 4481 (1.67fps - 18.0s).webp" >}}
 
 {{< box_info >}}
@@ -202,8 +203,11 @@ It was very hard for me to decide between these 3:
 > But placing them was a bit tricky since I didn't want to hide some key-features of him, like his characteristic hair on the sides, kinda like a lynx:
 > {{< img_caption "dex-lynx-hair-flow.jpg" "I added on purppose some matching rythm/flow between them" >}}
 
+{{< box_info >}}
+While moving the flowers and changing the composition, the 'Clone Layer' feature in Krita, and the Transform Mask was SUPER useful for experimenting with different variations without loosing the reference to the original layer/group that I was cloning and moving to try different variations. This helps to keep the document organized.
+{{< /box_info >}}
 
-
+<br>
 {{< img_caption "Dexter Portrait (final con letras)).png" >}}
 {{< /details >}}
 
