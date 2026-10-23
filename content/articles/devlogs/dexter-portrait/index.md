@@ -95,9 +95,36 @@ Digital makes it so easy to track your progress (in traditional art is also doab
 {{< details "Some comparison pictures I did" true >}}
 
 {{< img_caption "antes y despues.jpg" >}}
-{{< img_caption "2026-10-10 23.03.21.812.png" >}}
+
+{{< img_caption "2026-10-10 23.03.21.812.png" "As the painting progress, changes are harder to notice" >}}
 
 {{< /details >}}
+
+
+
+## The goal is to trust your intuition (and to cultivate an intuition worth trusting)
+
+Something kinda "revelating" for me happened as I was working on this.
+I always do all my sketches by eye, I dislike taking measures or using grids. Is not that I'm against anyone who uses them, but for me doing everything by eye is part of the "training". I think it "educates" the eye to be more critical, to notice when things are off, etc.
+This always makes the start of a painting the most frustrating part for me. But it's also funny, like solving a puzzle (is funstrating, I guess). 
+I need to feel the sketch is, maybe not perfect cause that is impossible, but in a state that is **CLEARLY** recognizable and that catches the "essence" of what I'm drawing/painting. If not, I'm not moving into painting.
+
+At some point I noticed that I messed up the distance between the eyes and the snout. I made the gap bigger in my painting:
+{{< img_caption "bad-measure-but-cool.jpg" >}}
+
+Probably there were waaay more things that were not "perfect". But this was for me was the most important one, since the eyes-nose/snout area is always critical. And it got me thinking about changing it or not. 
+I ended not changing it. And to be honest, I personally recognize more my dog in my final painting than in that picture. Maybe it could be due that I'm more used to see him from above.
+
+<!-- But I guess that at some point I simply drew him from the image I have of him. And being aware of that, that technically was wrong (by comparing the measure with the original image), but despite that, I was able to recognize him (even more than in the pic), was a beautiful and a powerful thing to know. It made me realize to not be so hard, strict. That is ok to push things. And that ultimately, we need to trust our intuition. -->
+
+I guess that at some point I simply drew him from the image I have of him. And being aware of that, that despite of being technically wrong (by comparing the measure with the original image) I was still able to recognize him (even more than in the pic), was a beautiful and a powerful thing to acknowledge. It made me realize to not be so hard, strict. That **is ok to push things. And that ultimately, we need to trust our intuition, what feels good.**
+
+At the end, drawing/painting is a very meditative thing. It has some moments where we can stop and analyze, but most of the time, we are just "flowing", solving problems without necessarily thinking logically about how to tackle those issues. I think, deep inside, we are still thinking, but in a lower state of mind that simply does not takes much resources/energy because we are just executing things that are simply "very well integrated in our roots" and we made them almost automatically. Just like when we like or dislike something. We can rationalize that process and think about why we like something or not. But deep inside, we simply know, without needing to put words. 
+I think the ultimate goal is to cultivate that intuition, to stay in that state of mind.
+
+{{< box_green >}}
+Do not be scared about making mistakes or to distort things, even if you think those things are important (like in my case I thought it was the proportions). It may lead to better results, and will make painting more fun, since you will be less "tied".
+{{< /box_green >}}
 
 
 
@@ -172,14 +199,62 @@ I made some variations to the brush, related rotation mostly that made me able t
 > For that reason, I decided to keep it raw, with big shapes, and to suggest the fur with not so many strokes and only detail some specific areas.
 
 
+## Some thoughts about color
 
-## Timelapse
+My initial goal with the colors in this painting was to use some "unusual" colors. I simply thought about green, because I noticed some subtle greens in the picture, and I kinda wanted to push them. I literally threw all the colors I wanted, I focused on the values mainly. 
+I realized that at some point, by throwing colors like a mad man, the painting ended being like a palette where I literally already had all the colors I needed. On for that reason, was super easy to achive something cohesive without too much thought.
 
-{{< img_caption "25f x0.3 4481 (1.67fps - 18.0s).webp" >}}
+{{< box_green >}}
+Throw all the colors you want. Preferably in the early stages of a painting (is always harder to achive verations in final stages).
+{{< /box_green >}}
 
+{{< details "While painting this, I've been reading the book Color and Light, by James Gurney (**highly recommended**)." >}}
+<!-- While painting this, I've been reading the book Color and Light, by James Gurney (**highly recommended**). I remember a painting that captured my attention, and I read that by the time, the pigments were very limited. I thought that inevitably that makes lots -->
+I remember a painting that took my attention, and I read that by the time this painting was made, the pigments were (understandably) very limited. I thought that inevitably that makes a painting cohesive when it comes to colors:
+
+<!-- {{< img_caption "https://historia-arte.com/_/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbSI6WyJcL2FydHdvcmtcL2ltYWdlRmlsZVwvdmVsYXpxdWV6LWxhLWZyYWd1YS1kZS12dWxjYW5vLW11c2VvLWRlbC1wcmFkby0xNjMwLmpwZyIsInJlc2l6ZSwxNTAwfGZvcm1hdCx3ZWJwIl19.n_rZl1knxR/bYIBYVcgqOM8WGeIQJtT5JnGtcRMr0Unk.webp" "La Fragua de Vulcano (Diego Velazquez)" >}} -->
+{{< img_caption "gurney-velazquez-fragua-de-vulcano.jpg" "La Fragua de Vulcano (Diego Velazquez)" >}}
+
+I kept that thought in mind a lot, when I said that I ended considering the colors I already threw in the painting as my palette.
+{{< /details >}}
+
+And I recalled [this video by Marco Bucci](https://youtu.be/4LhcNbFMkTw?t=20), and these quotes:
+
+{{< quote "I don't know what I'm mixing. The colours on my palette are like a piano... and I'm just hittin' the keys" "Morgan Weistling" >}} 
+{{< quote "I don't look at the colours on my palette. There's a warm side, a cool side, and a few odds and ends in the middle." "Joseph Zbukvic" >}} 
+
+I felt like this when adding the colors. Color theory is always hard, because colors are deeply tied to their context/surrounding. So at some point, yes, is like hitting the keys of a piano to find the note for a melody.
+
+{{< box_green >}}
+Don't be afraid to choose and use any color you want. Once you put it in the canvas, you will know if it works or not (and if not, just by making some changes (changing its value, saturation, etc) will probably make it work). Don't be afraid to paint over, digital paint is free!
+{{< /box_green >}}
+
+## Process Timelapse
+
+{{< video "dex-timelapse-5 (Half).mp4" >}}
+
+
+{{< details "Grid" >}}
+{{< img_caption "process-grid-resized.jpg" >}}
+
+{{< /details >}}
+
+
+{{< details "Gifs" true >}}
+
+{{< img_caption "25f x0.3 4481 (1.67fps - 18.0s).webp" "25 frames, 18s" >}}
+<br>
+{{< img_caption "Timelapse-selection 29f x0.3 (28) (1.67fps - 20.4s).webp" "29 frames, 20.4s" >}}
+
+<br>
 {{< box_info >}}
-This timelapse was **made using my own tool for timelapses**! [**SZK Timelapse Tool**]({{< ref "szk-timelapse-tool" >}})!
+<!-- This timelapse was **made using my own tool for timelapses**! [**SZK Timelapse Tool**]({{< ref "szk-timelapse-tool" >}})! -->
+These timelapses were **made using my own tool for timelapses**! [**SZK Timelapse Tool**]({{< ref "szk-timelapse-tool" >}})!
 {{< /box_info >}}
+
+{{< /details >}}
+
+
 
 
 
