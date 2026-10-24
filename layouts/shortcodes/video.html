@@ -26,8 +26,10 @@ Example:
 {{- $autoplay_flag := (or (.Get 1) (.Get "autoplay") (.Get "auto")) | default false -}}
 {{- /*  {{- $controls_flag := (or (.Get 2) (.Get "controls") (.Get "c")) | default true -}}  */ -}}
 {{- /*  {{- $controls_flag := (or (.Get 2) (.Get "controls") (.Get "c")) | default "yes"}}  */ -}}
-{{- $controlsParam := or (.Get 2) (.Get "controls") (.Get "c") -}}
-{{- $controls_flag := cond (eq $controlsParam false) false true -}}
+
+{{- /*  {{- $controlsParam := or (.Get 2) (.Get "controls") (.Get "c") -}}  */ -}}
+{{- /*  {{- $controls_flag := cond (eq $controlsParam false) false true -}}  */ -}}
+{{- $controls_flag := (or (.Get 2) (.Get "controls") (.Get "c")) | default false -}}
 
 {{- $loop_flag := (or (.Get 3) (.Get "loop") (.Get "l")) | default false -}}
 {{- $muted_flag := (or (.Get 4) (.Get "muted") (.Get "m")) | default false -}}
