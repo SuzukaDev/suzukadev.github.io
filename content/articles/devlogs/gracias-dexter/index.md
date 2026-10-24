@@ -89,6 +89,18 @@ So, whenever you feel lost or unmotivated, having a clear vision of the "core", 
 
 I did all the drawing with [Krita](https://krita.org/), as I always do, combined with my [SZK Pixel Art Suite plugin](https://orb91.gumroad.com/l/szk-krita-pixel-art-suite) that makes making pixel art in Krita better, and then I animated everything, do some shader magic, etc. in [Godot](https://godotengine.org/).
 
+{{< link_card 
+  url="https://orb91.gumroad.com/l/szk-krita-pixel-art-suite"
+  cover="k-sprite-editor.png"
+  title="SZK Pixel Art Suite"
+  subtitle="Improves making Pixel Art in *Krita*!"
+  url_text="orb91.gumroad.com"
+  color="#cd5b06"
+  hover_color="#ff83f1"
+  text_color="#f0f0f0"
+  cover_position="90% 0%"
+>}}
+
 Despite its simplicity, the illustration had lots of layers (mostly grass/vegetation that I wanted to animate later with shaders), and I refused to place each sprite by hand directly on Godot, since it would have taken a lot of time.
 
 I saw a cool addon for importing `.kra` files into Godot that was very handy, but I wanted to have access to the original textures for some shader effects I had in mind, so I decided to make my own solution.
