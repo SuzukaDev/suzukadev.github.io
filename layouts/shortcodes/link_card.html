@@ -40,12 +40,31 @@ Usage:
 {{- $url_link := partial "utils/get-link.html" (dict "context" . "url" $url) -}}
 
 {{- $cover_link := $cover -}}
-{{- $cover_resource := or (.Page.Resources.Get $cover) (resources.Get $cover) (.Page.Resources.GetMatch (printf "**%s**" $cover )) -}}
+{{- /*  {{- $cover_resource := or (.Page.Resources.Get $cover) (resources.Get $cover) (.Page.Resources.GetMatch (printf "**%s**" $cover )) -}}  */ -}}
+{{- $cover_resource := or (.Page.Resources.Get $cover) (resources.Get $cover) (resources.GetMatch (printf "**%s**" $cover )) (.Page.Resources.GetMatch (printf "**%s**" $cover )) -}}
+
+
+
+{{- /*  {{- with $cover_resource -}}
+  {{- warnf "Resource name: %s" .Name -}}
+  {{- warnf "Resource type: %s" .ResourceType -}}
+  {{- warnf "Media type: %s" .MediaType -}}
+  {{- warnf "Resource permalink: %s" .RelPermalink -}}
+{{- else -}}
+  {{- warnf "NO RESOURCE FOUND for cover: %s" $cover -}}
+{{- end -}}
+<pre>$cover_resource = {{ debug.Dump $cover_resource }}</pre>  */ -}}
 
 {{- if $cover_resource -}}
-  {{- $cover_link = $cover_resource.RelPermalink -}}
+  {{- /*  {{- $cover_link = $cover_resource.RelPermalink -}}  */ -}}
+  {{- $cover_link = $cover_resource.Permalink -}}
   {{- if not $background_color -}}
-    {{$background_color = index $cover_resource.Colors 0}}
+    {{- /*  {{- with $cover_resource -}}
+      {{- warnf "FALLITO Resource name: %s" .Name -}}
+    {{- end -}}  */ -}}
+    {{ if and $cover_resource (eq $cover_resource.ResourceType "image") }}
+      {{$background_color = index $cover_resource.Colors 0}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 
