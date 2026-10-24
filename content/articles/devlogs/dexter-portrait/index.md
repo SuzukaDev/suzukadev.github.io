@@ -286,6 +286,10 @@ While moving the flowers and changing the composition, the 'Clone Layer' feature
 {{< img_caption "Dexter Portrait (final con letras)).png" >}}
 {{< /details >}}
 
+### Iddle Animation
+
+{{< video video="dex-flowers-still-animation.mp4" auto=true loop=true c=false >}}
+
 {{< text_centered >}}
 🍀🖤🖤🖤🍀
 
