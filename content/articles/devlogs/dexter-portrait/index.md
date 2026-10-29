@@ -112,12 +112,12 @@ I need to feel the sketch is, maybe not perfect cause that is impossible, but in
 At some point I noticed that I messed up the distance between the eyes and the snout. I made the gap bigger in my painting:
 {{< img_caption "bad-measure-but-cool.jpg" >}}
 
-Probably there were waaay more things that were not "perfect". But this was for me was the most important one, since the eyes-nose/snout area is always critical. And it got me thinking about changing it or not. 
-I ended not changing it. And to be honest, I personally recognize more my dog in my final painting than in that picture. Maybe it could be due that I'm more used to see him from above.
+Probably there were {{< text_wavy2 "waaaaaaaaay" >}} more things that were not "perfect". But this was for me was the most important one, since the eyes-nose/snout area is always critical. And it got me thinking about changing it or not. 
+I ended **not** changing it. And to be honest, I personally recognize more my dog in my final painting than in that picture. Maybe it could be due that I'm more used to see him from above.
 
 <!-- But I guess that at some point I simply drew him from the image I have of him. And being aware of that, that technically was wrong (by comparing the measure with the original image), but despite that, I was able to recognize him (even more than in the pic), was a beautiful and a powerful thing to know. It made me realize to not be so hard, strict. That is ok to push things. And that ultimately, we need to trust our intuition. -->
 
-I guess that at some point I simply drew him from the image I have of him. And being aware of that, that despite of being technically wrong (by comparing the measure with the original image) I was still able to recognize him (even more than in the pic), was a beautiful and a powerful thing to acknowledge. It made me realize to not be so hard, strict. That **is ok to push things. And that ultimately, we need to trust our intuition, what feels good.**
+I guess that at some point I simply drew him from the image I have of him. And being aware of that, that despite of being *technically wrong* (by comparing the measure with the original image) I was still able to recognize him (even more than in the pic), was a **beautiful and a powerful thing to acknowledge.** It made me realize to not be so hard, strict. That **is ok to push things. And that ultimately, we need to trust our intuition, what feels good.**
 
 At the end, drawing/painting is a very meditative thing. It has some moments where we can stop and analyze, but most of the time, we are just "flowing", solving problems without necessarily thinking logically about how to tackle those issues. I think, deep inside, we are still thinking, but in a lower state of mind that simply does not takes much resources/energy because we are just executing things that are simply "very well integrated in our roots" and we made them almost automatically. Just like when we like or dislike something. We can rationalize that process and think about why we like something or not. But deep inside, we simply know, without needing to put words. 
 I think the ultimate goal is to cultivate that intuition, to stay in that state of mind.
@@ -126,6 +126,39 @@ I think the ultimate goal is to cultivate that intuition, to stay in that state 
 Do not be scared about making mistakes or to distort things, even if you think those things are important (like in my case I thought it was the proportions). It may lead to better results, and will make painting more fun, since you will be less "tied".
 {{< /box_green >}}
 
+### How to cultivate an intuition worth trusting
+I think this depends of the person, but I personally think that by being critic with what we think and by trying to put words about the thoughts that happens in our head when it's in "automatic mode".
+
+I like writing these blog entries and writing all these thoughts I have while working on something, because at the end they serve me as a link between the things I feel, and the things I think. It helps me to realize that the decissions I take without thinking that much, are supported by a logic.
+
+Personally, I don't think that I'm "good" at drawing or painting, but I know that I'm very critic, and I trust that after every iteration, things will get better and better.
+
+
+## Is about making it look better than it actually is
+While painting this, I recalled a thing I used to say a lot while drawing at school/highschool when I got some positive comment:
+
+> I just know how to make it look better than it actually is.
+
+I truly think this is one is key. I guess it simply comes down to "push things". This is were the fun of painting/drawing actually is in my opinion!
+
+I had that idea during the whole process. Some examples:
+
+{{< img_caption "make-it-look-cooler.jpg" >}}
+
+- I increased the light reflection from the floor (is most visible in Dexter's chin and snout).
+- I exagerated the light bleeding through the flower, making the shadow a bit red.
+- I thought it was cool to make the shadow of the flower's filaments.
+
+I made the other day this 40' min pomegranate study:
+{{< img_caption "pomegranate-comparison-2" "Pomegranate study. Reference (left) and my study (right)" >}}
+
+In the original image, the floor absorbs the light and barely reflects it. But I still thought it was cool to add that little bounce light at the bottom, simply because it looked cool.
+
+Maybe any of these decissions were the most physical accurate, but they were cooler decissions than the ones that "real life physics took".
+
+{{< box_green >}}
+Don't be afraid to make it look cooler (in your own way) than it actually is!
+{{< /box_green >}}
 
 
 ## About brushes
@@ -225,6 +258,11 @@ And I recalled [this video by Marco Bucci](https://youtu.be/4LhcNbFMkTw?t=20), a
 
 I felt like this when adding the colors. Color theory is always hard, because colors are deeply tied to their context/surrounding. So at some point, yes, is like hitting the keys of a piano to find the note for a melody.
 
+At the end it's as simple as to **judge** a color from its 3 basic "dimensions"; tone, value, and saturation. If we judge the colors by being aware of which element/*dimension* is not working, is always much easier to fine tune to find the color we want. 
+{{< box_info >}}
+The value is usually the most important one most of the times since it conveys the depth. It could be like the pitch of a note when making a song or a melody. Saturation could be like the volume that a note is played, how much attention do you want it to gather. We don't want all the notes in a melody to scream at our ears. The tone/hue, the timbre of the instrument that plays the note.
+{{< /box_info >}}
+
 {{< box_green >}}
 Don't be afraid to choose and use any color you want. Once you put it in the canvas, you will know if it works or not (and if not, just by making some changes (changing its value, saturation, etc) will probably make it work). Don't be afraid to paint over, digital paint is free!
 {{< /box_green >}}
@@ -302,6 +340,16 @@ I used some awesome tools in my [**SZK Pixel Art Suite**]({{< ref "szk-krita-pix
   cover_position="90% 0%"
 >}}
 
+Specially the spritesheet packer along with my Godot plugin, [SZK SpritePacker Importer](https://github.com/SuzukaDev/SZK-SpritePacker-Importer), that allows to quickly build complex scenes made in Krita, directly to Godot.
+
+
+{{< details "And animate them from there." >}}
+
+{{< img_caption "szk-spritepacker.jpg" >}}
+{{< img_caption "godot-dex.jpg" >}}
+
+
+{{< /details >}}
 <!-- {{< video video="dex-flowers-still-animation.mp4" auto=true loop=true c=false >}}
 #### V2
 {{< video video="iddle-v2.mp4" auto=true loop=true c=false >}}
