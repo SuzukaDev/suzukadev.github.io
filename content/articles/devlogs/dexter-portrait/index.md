@@ -288,7 +288,29 @@ While moving the flowers and changing the composition, the 'Clone Layer' feature
 
 ### Iddle Animation
 
-{{< video video="dex-flowers-still-animation.mp4" auto=true loop=true c=false >}}
+I used some awesome tools in my [**SZK Pixel Art Suite**]({{< ref "szk-krita-pixel-art-suite.md" >}}) plugin for *Krita* that makes it super easy to export the illustration into Godot, and animate it from there:
+
+{{< link_card 
+  url="https://orb91.gumroad.com/l/szk-krita-pixel-art-suite"
+  cover="k-sprite-editor.png"
+  title="SZK Pixel Art Suite"
+  subtitle="Improves making Pixel Art in *Krita*!"
+  url_text="orb91.gumroad.com"
+  color="#cd5b06"
+  hover_color="#ff83f1"
+  text_color="#f0f0f0"
+  cover_position="90% 0%"
+>}}
+
+<!-- {{< video video="dex-flowers-still-animation.mp4" auto=true loop=true c=false >}}
+#### V2
+{{< video video="iddle-v2.mp4" auto=true loop=true c=false >}}
+{{< video video="iddle-v2-colorgrading.mp4" auto=true loop=true c=false >}}
+#### V22
+{{< video video="Dexter-idle-animation-V2.mp4" auto=true loop=true c=false >}}
+{{< video video="Dexter-idle-animation-V2-ColorGrading.mp4" auto=true loop=true c=false >}}
+{{< video video="Dexter-idle-animation-V2-ColorGrading-contrast (half).mp4" auto=true loop=true c=false >}} -->
+{{< video video="Dexter-idle-animation-V2-ColorGrading-contrast.mp4" auto=true loop=true c=false >}}
 
 {{< text_centered >}}
 🍀🖤🖤🖤🍀
