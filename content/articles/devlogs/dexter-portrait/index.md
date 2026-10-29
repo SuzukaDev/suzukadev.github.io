@@ -277,6 +277,8 @@ Don't be afraid to choose and use any color you want. Once you put it in the can
 
 {{< /details >}}
 
+> Seeing the process made me realize that it's a good example of the [Pareto Principle](https://en.wikipedia.org/wiki/Pareto_principle), since basically all the most crucial things were painted at very early stages 🐛.
+
 
 {{< details "Gifs" true >}}
 

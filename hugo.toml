@@ -8,6 +8,8 @@ theme = 'gallery'
 
 enableRobotsTXT = true
 
+timeout = "120s"
+
 # Multilingual
 # INFO https://gohugo.io/content-management/multilingual/
 defaultContentLanguage = 'en'
