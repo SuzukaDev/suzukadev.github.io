@@ -235,7 +235,7 @@ I made some variations to the brush, related rotation mostly that made me able t
 ## Some thoughts about color
 
 My initial goal with the colors in this painting was to use some "unusual" colors. I simply thought about green, because I noticed some subtle greens in the picture, and I kinda wanted to push them. I literally threw all the colors I wanted, I focused on the values mainly. 
-I realized that at some point, by throwing colors like a mad man, the painting ended being like a palette where I literally already had all the colors I needed. On for that reason, was super easy to achive something cohesive without too much thought.
+I realized that at some point, by throwing colors like a mad person, the painting ended being like a palette where I literally already had all the colors I needed. And for that reason, was super easy to achive something cohesive without too much thought.
 
 {{< box_green >}}
 Throw all the colors you want. Preferably in the early stages of a painting (is always harder to achive verations in final stages).

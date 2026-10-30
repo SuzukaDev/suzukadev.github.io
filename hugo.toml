@@ -8,6 +8,7 @@ theme = 'gallery'
 
 enableRobotsTXT = true
 
+# Avoid github builds to fail
 timeout = "120s"
 
 # Multilingual
