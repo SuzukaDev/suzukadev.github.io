@@ -151,6 +151,7 @@ I had that idea during the whole process. Some examples:
 
 I made the other day this 40' min pomegranate study:
 {{< img_caption "pomegranate-comparison-2" "Pomegranate study. Reference (left) and my study (right)" >}}
+<!-- {{< img_caption "Granada-comparison-3 (2).jpg" "Pomegranate study. Reference (left) and my study (right)" >}} -->
 
 In the original image, the floor absorbs the light and barely reflects it. But I still thought it was cool to add that little bounce light at the bottom, simply because it looked cool.
 
