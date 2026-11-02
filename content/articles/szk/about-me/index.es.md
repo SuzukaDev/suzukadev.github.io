@@ -263,11 +263,31 @@ Una de las cosas que más valoro, es la **personalidad**. No intentar ser una co
 
 
 <!-- As a person... I think I tend to be insecure (always (absolutely always) questioning myself, the things I do, asking myself how to do it better, etc). I think this leads sometimes into that kind of analysis-paralysis. I might revisit this text a few times in case it sounds silly for me. I can also be sometimes a scatterbrain, when I'm thinking about a problem or anything. -->
-En lo **personal**, creo que tiendo a ser inseguro (siempre (absolutamente siempre) me cuestiono mucho, acerca de las cosas que hago, lo que digo... siempre me estoy preguntándome cómo puedo hacerlo mejor, etc.). Soy muy crítico. Creo que esto a veces conduce a ese tipo de parálisis por análisis. Puede que vuelva a leer este texto unas cuantas veces en caso de que me parezca una chorrada. También puedo ser a veces un poco despistado, cuando estoy muy metido en algún pensamiento.
+<!-- En lo **personal**, creo que tiendo a ser inseguro (siempre (absolutamente siempre) me cuestiono mucho, acerca de las cosas que hago, lo que digo... siempre me estoy preguntándome cómo puedo hacerlo mejor, etc.). Soy muy crítico. Creo que esto a veces conduce a ese tipo de parálisis por análisis. Puede que vuelva a leer este texto unas cuantas veces en caso de que me parezca una chorrada. También puedo ser a veces un poco despistado, cuando estoy muy metido en algún pensamiento. -->
+En lo **personal**, creo que tiendo a ser muy crítico (siempre (absolutamente siempre) me cuestiono mucho, acerca de las cosas que hago, lo que digo... siempre me estoy preguntándome cómo puedo hacerlo mejor, etc.). Soy muy crítico. Creo que esto a veces conduce a ese tipo de parálisis por análisis. Puede que vuelva a leer este texto unas cuantas veces en caso de que me parezca una chorrada. También puedo ser a veces un poco despistado, cuando estoy muy metido en algún pensamiento.
 
 <!-- I think I'm adding this because I personally dislike when in a portfolio someone is trying to fake or prettend to be a much better version of themselves. -->
-Creo que estoy añadiendo esto porque personalmente no me gusta cuando en un *portfolio* alguien intenta mostrar una versión perfecta y sin aristas, or ir de algo/alguien que no se es.
+> Creo que estoy añadiendo esto porque personalmente no me gusta cuando en un *portfolio* alguien intenta mostrar una versión perfecta y sin aristas, or ir de algo/alguien que no se es.
 
+
+## Sobre la IA
+Dado el contexto, creo que no está de más que añada lo que pienso de la IA.
+Creo que es una herramienta muy poderosa (creo que nadie puede negarlo), pero creo que tiene que ser usada "sabiamente".
+
+Uno de mis mayores problemas con la IA, es que cuanto más la usamos, más tenemos que seguir usándola, porque nos ahorra el tener que aprender las habilidades necesarias para hacer cosas sin ella.
+
+En mi opinión, creo que está bien usarla para buscar información, o como una especie de asistente para tareas pequeñas. Por lo demás, no soy muy fan de la IA.
+
+Para mí, lo bueno de "hacer cosas" no es solo el resultado final, lo que obtienes tras el proceso. Es el proceso en sí, todo lo que aprendes durante el desarrollo, y el sentimiento de sentirte orgulloso una vez lo has acabado.
+
+Trabajar en un proyecto (sin importar su naturaleza o medio) al final es una oportunidad para aprender cosas nuevas (ya sea una habilidad, algún tema en cuestión, o incluso acerca de ti mismo). La curiosidad es muy importante para mí, es una especie de combustible que te ayuda a ver el mundo con asombro. Y es dicho asombro lo que nos mantiene con ganas de crear.
+
+Estoy bastante en contra de la creación de contenido con IA. No solo porque ésta haya sido entrenada con material robado, sino porque su uso emite la sensación de "esto me importa tres pepinos", y pese a que haga cosas correctas, suelen ser cosas sin alma, genéricas.
+Y no puedo esperar que alguien se preocupe de algo que yo haya hecho si yo mismo soy el primero al que le ha importado tres pepinos. 
+
+<!-- Además, creo que jamás me sentiré orgulloso o cómodo de decir -->
+
+Al final somos aquello o aquell@s a l@s que dedicamos nuestro tiempo. Si todo es posible, y todo se hace fácil, al final nada cuesta. Si nuestra mayor labor es crear un 'prompt' para que la IA lo haga todo, al final todos somos tremendamente reemplazables y el crear ya no tendría sentido, porque para mi el crear implica dejar un pedacito de ti, de tu personalidad, de tu forma de ver el mundo, etc, con el fin de conectar con los demás. En ese aspecto, la IA es y será siempre inservible, pues siempre carecerá de personalidad.
 
 <!-- If you have got until here, thank you, I appreciate it. -->
 Si has llegado hasta aquí, **te lo agradezco**.

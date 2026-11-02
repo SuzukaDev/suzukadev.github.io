@@ -213,9 +213,40 @@ One of the things I personally value the most, is personality. Not trying to be 
 <!-- - Some milestones of my work (rick morty ) -->
 
 
-As a person... I think I tend to be insecure (always (absolutely always) questioning myself, the things I do, asking myself how to do it better, etc). I think this leads sometimes into that kind of analysis-paralysis. I might revisit this text a few times in case it sounds silly for me. I can also be sometimes a scatterbrain, when I'm thinking about a problem or anything.
+<!-- As a person... I think I tend to be insecure (always (absolutely always) questioning myself, the things I do, asking myself how to do it better, etc). I think this leads sometimes into that kind of analysis-paralysis. I might revisit this text a few times in case it sounds silly for me. I can also be sometimes a scatterbrain, when I'm thinking about a problem or anything. -->
+As a person, I think I tend to be very self-critical. Aalways (absolutely always) questioning myself, the things I do, asking myself how to do it better, etc. I think this leads sometimes into that kind of analysis-paralysis. I might revisit this text a few times in case it sounds silly for me. I can also be sometimes a scatterbrain, when I'm thinking about a problem or anything.
 
-I think I'm adding this because I personally dislike when in a portfolio someone is trying to fake or prettend to be a much better version of themselves.
+> I think I'm adding this because I personally dislike when in a portfolio someone is trying to fake or prettend to be a much better version of themselves.
+
+
+## Thoughts about AI
+I think that our current context makes it propper that I add some lines about AI.
+Personally, I think it's a powerful tool (and I think no one can deny it), but I think it has to be used wisely.
+
+One of my maing problems with AI, is that the more we use it, the more we have to use it, because by using it we avoid learning the skills to make things without it.
+
+I think is nice for using it for research or as an assistant for little tasks, but for more than that... I'm not a big fan.
+
+
+For me, the joy of "creating things" is not only about "to obtain something" as a result. Is about the "journey", the new things I learn during the process, and the feeling of being proud about it at the end. The feeling of "well, I struggled a lot while doing this, but I was finally able to do it!".
+
+<!-- To solve a problem coding -->
+
+
+<!-- Working on a project (no matter its nature/form/medium) is a great opportunity to learn new things (to learn about skill, about a topic, about yourself, etc). Curiosity plays a big role in my life since at the end it's some kind of fuel that makes you see the world with awe.is a big -->
+
+Working on a project, regardless of its nature, form, or medium, is a great opportunity to learn new things, whether it's about a particular skill, a specific topic, or even yourself. Curiosity plays a big role in my life because, ultimately, it's a kind of fuel that allows me to see the world with a sense of wonder. And is that sense of wonder what keeps us creating.
+
+Personally I'm deeply against generative content made with AI. Not only because it was trained with stolen material, but also because it screams "I don't care about this".
+And I can't expect anyone else to "care" about something I created if I'm the first one that didn't care about it, by using generative content.
+<!-- I would neither feel comfortable or proud to say I did something, if in reality it was made by AI. -->
+
+At the end, we become what or those to whom we dedicate our time. If everything is possible, and everything is easy, then nothing costs anything. If our greatest task is to create a prompt for AI to do everything, then we are all incredibly replaceable, and creating would no longer have any meaning, because for me, creating means leaving a piece of yourself, your personality, your worldview, etc., in order to connect with others. In that respect, AI is and always will be useless, because it will always lack of personality.
+
+---
+
+
+
 
 
 If you have got until here, thank you, **I appreciate it**.
