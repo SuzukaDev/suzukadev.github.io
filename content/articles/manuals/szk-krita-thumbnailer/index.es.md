@@ -114,6 +114,8 @@ Esto viene bien para ayudar a lograr un resultado diferente (textura, formas, et
 Esto es útil para tener **2 presets diferentes para cada miniatura** (y alterarlas con el atajo *'Switch to Previous Preset'*).
 {{< /box_info >}}
 - <u>**Show progress bar**</u>: Muestra una barra con el tiempo que queda para acabar la miniatura actual.
+- <u>**Auto-pan**</u>: Centra la vista en el *thumbnail* activo cada vez que cambie.
+
 
 {{< img_caption "tab3.png" >}}
 

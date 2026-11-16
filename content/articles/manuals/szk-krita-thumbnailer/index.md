@@ -103,6 +103,8 @@ This is for helping achieving a different result/"brushwork" (texture, shapes, e
 This is useful for having **2 different presets for each thumbnai**l (and alter them with *'Switch to Previous Preset'* shortcut).
 {{< /box_info >}}
 - <u>**Show progress bar**</u>: Shows a bar below that shows the time remaining for the current thumbnail.
+- <u>**Auto-pan**</u>: Center the view automatically into the new *thumbnail* each time it changes.
+
 
 {{< img_caption "tab3.png" >}}
 
