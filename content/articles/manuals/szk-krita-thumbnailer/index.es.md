@@ -145,6 +145,7 @@ Select Random Brush | (*Sin asignar*)
 
 Versión | Cambios
 :-- | :--
+2.0.3 | - Añadido la opción 'Auto-pan' para centrar automáticamente la vista en el thumbnail que se encuentra activo.
 2.0.2 | - Añadido un botón para seleccionar todos los *thumbnails* actuales.
 2.0.1 | - Resetea el timer al seleccionar manualmente el siguiente/previo thumbnail.
 2.0.0 | - Añadidos nuevos layouts (Custom Grid, Random) <br> - Optimización al cambiar de thumbnail <br> - Padding/margen relativo al tamaño del documento (para obtener márgenes consistentes entre distintos tamaños de lienzo) <br> - Opción para guardar presets
